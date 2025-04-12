@@ -1,11 +1,10 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Map from '../map/index'
 
 async function func254(this: any) {
         Adap.dbgprt(254);
-        await Map.func294();
+        await Func.func294();
         Gvar.var_764 = 0;
         Gvar.var_1075 = 0;
         for (let cnt1 = 0; cnt1 < Gvar.var_32; ++cnt1) {

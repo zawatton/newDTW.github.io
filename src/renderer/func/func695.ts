@@ -23,13 +23,13 @@ async function func695(this: any) {
             Gvar.var_1396 = Gvar.var_83[Gvar.var_673].Var1;
             Gvar.var_1397 = Gvar.var_83[Gvar.var_673].Var2;
             Gvar.var_83[Gvar.var_673].Var8 = 1;
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1552 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1552++;
             }
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1552 = 0;
             Gvar.var_403 = "" + Gvar.var_3100 + "がダメージを反射した！";
             Gvar.var_3098 = 1;
@@ -43,9 +43,7 @@ async function func695(this: any) {
             }
             await Func.func705();
             Gvar.var_3098 = 0;
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(5);
         }
         return;
 }

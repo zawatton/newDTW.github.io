@@ -34,16 +34,16 @@ async function func227(this: any) {
                 Gvar.belongings_item_list = Gvar.var_233[Gvar.var_553]["Var" + Gvar.var_982];
                 await Func.func492(); // アイテムリスト呼び出し
                 if (Gvar.var_812 == 1) {
-                    Gvar.var_979 = Gvar.var_979 + "　[攻]" + Gvar.item_ability_description + "\n";
+                    Gvar.var_979 = Gvar.var_979 + "  [攻]" + Gvar.item_ability_description + "\n";
                 }
                 if (Gvar.var_812 == 2) {
-                    Gvar.var_979 = Gvar.var_979 + "　[防]" + Gvar.item_ability_description + "\n";
+                    Gvar.var_979 = Gvar.var_979 + "  [防]" + Gvar.item_ability_description + "\n";
                 }
                 if (Gvar.var_812 == 3) {
-                    Gvar.var_979 = Gvar.var_979 + "　[－]" + Gvar.item_ability_description + "\n";
+                    Gvar.var_979 = Gvar.var_979 + "  [－]" + Gvar.item_ability_description + "\n";
                 }
                 if (Gvar.var_812 == 4) {
-                    Gvar.var_979 = Gvar.var_979 + "　[能]" + Gvar.item_ability_description + "\n";
+                    Gvar.var_979 = Gvar.var_979 + "  [能]" + Gvar.item_ability_description + "\n";
                 }
                 Gvar.var_982++;
             }
@@ -73,16 +73,16 @@ async function func227(this: any) {
                 Gvar.belongings_item_list = Gvar.var_233[Gvar.var_554]["Var" + Gvar.var_982];
                 await Func.func492(); // アイテムリスト呼び出し
                 if (Gvar.var_812 == 1) {
-                    Gvar.var_979 = Gvar.var_979 + "　[攻]" + Gvar.item_ability_description + "\n";
+                    Gvar.var_979 = Gvar.var_979 + "  [攻]" + Gvar.item_ability_description + "\n";
                 }
                 if (Gvar.var_812 == 2) {
-                    Gvar.var_979 = Gvar.var_979 + "　[防]" + Gvar.item_ability_description + "\n";
+                    Gvar.var_979 = Gvar.var_979 + "  [防]" + Gvar.item_ability_description + "\n";
                 }
                 if (Gvar.var_812 == 3) {
-                    Gvar.var_979 = Gvar.var_979 + "　[－]" + Gvar.item_ability_description + "\n";
+                    Gvar.var_979 = Gvar.var_979 + "  [－]" + Gvar.item_ability_description + "\n";
                 }
                 if (Gvar.var_812 == 4) {
-                    Gvar.var_979 = Gvar.var_979 + "　[能]" + Gvar.item_ability_description + "\n";
+                    Gvar.var_979 = Gvar.var_979 + "  [能]" + Gvar.item_ability_description + "\n";
                 }
                 Gvar.var_982++;
             }
@@ -112,16 +112,16 @@ async function func227(this: any) {
                 Gvar.belongings_item_list = Gvar.var_233[Gvar.var_555]["Var" + Gvar.var_982];
                 await Func.func492(); // アイテムリスト呼び出し
                 if (Gvar.var_812 == 1) {
-                    Gvar.var_979 = Gvar.var_979 + "　[攻]" + Gvar.item_ability_description + "\n";
+                    Gvar.var_979 = Gvar.var_979 + "  [攻]" + Gvar.item_ability_description + "\n";
                 }
                 if (Gvar.var_812 == 2) {
-                    Gvar.var_979 = Gvar.var_979 + "　[防]" + Gvar.item_ability_description + "\n";
+                    Gvar.var_979 = Gvar.var_979 + "  [防]" + Gvar.item_ability_description + "\n";
                 }
                 if (Gvar.var_812 == 3) {
-                    Gvar.var_979 = Gvar.var_979 + "　[－]" + Gvar.item_ability_description + "\n";
+                    Gvar.var_979 = Gvar.var_979 + "  [－]" + Gvar.item_ability_description + "\n";
                 }
                 if (Gvar.var_812 == 4) {
-                    Gvar.var_979 = Gvar.var_979 + "　[能]" + Gvar.item_ability_description + "\n";
+                    Gvar.var_979 = Gvar.var_979 + "  [能]" + Gvar.item_ability_description + "\n";
                 }
                 Gvar.var_982++;
             }

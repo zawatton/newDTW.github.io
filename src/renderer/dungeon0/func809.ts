@@ -1,0 +1,74 @@
+import { Gvar } from '../variable'
+import * as Adap from '../adapter/index'
+import * as Func from '../func/index'
+
+async function func809(this: any) {
+        Adap.dbgprt(809);
+        Adap.DSPLAY(210);
+        Gvar.var_783 = 1;
+        await Func.AutoDraw(1);
+        Gvar.var_783 = 2;
+        await Func.AutoDraw(1);
+        Gvar.var_783 = 3;
+        await Func.AutoDraw(1);
+        Gvar.var_783 = 4;
+        await Func.AutoDraw(5);
+        Gvar.var_783 = 5;
+        await Func.AutoDraw(1);
+        Gvar.var_783 = 6;
+        await Func.AutoDraw(1);
+        Gvar.var_783 = 7;
+        await Func.AutoDraw(1);
+        Gvar.var_783 = 5;
+        await Func.AutoDraw(1);
+        Gvar.var_783 = 12;
+        await Func.AutoDraw(1);
+        Gvar.var_783 = 13;
+        if (Gvar.var_1039 == 0) {
+            await Func.setMessage1("ﾎﾟﾙﾎﾟ「ブフゥ～～～～…」",
+                                  "", 7, true, false, true);
+      
+            await Func.setMessage1("「ボス…ダンジョンの一人旅は危険です」",
+                                  "", 7, true, false, true);
+  
+            await Func.setMessage1("「ダンジョン内で仲間と出会えれば",
+                                  "  冒険がグッと楽になるでしょう…」", 7, true, false, true);
+    
+            await Func.setMessage1("「ブフゥ～～～…」",
+                                  "", 7, true, false, true);
+    
+            await Func.setMessage1("「しかし問題は、",
+                                  "  毎回必ず出会えるわけではないところ」", 7, true, false, true);
+    
+            await Func.setMessage1("「私ならば、有能な人材を",
+                                  "  あらかじめ１階に呼ぶことが可能です」", 7, true, false, true);
+    
+            await Func.setMessage1("「そのための費用として",
+                                  "  2000Gかかってしまいますが…」", 7, true, false, true);
+    
+            await Func.setMessage1("「ブフゥ～～～…」",
+                                  "", 7, true, false, true);
+
+            Gvar.var_1039 = 1;
+        }
+        if (Gvar.var_1040 == 1) {    
+            await Func.setMessage1("ﾎﾟﾙﾎﾟ「ﾚｸｲｴﾑの大迷宮１階に",
+                                  "      ヒマなやつを呼んであります」", 7, true, false, true);
+            await Func.func812();
+            return;
+        }
+
+        await Func.setMessage1("ﾎﾟﾙﾎﾟ「ボス…  2000Gで",
+                              "      仲間を１階に呼んでおきますか？」", 7, true, false, true);
+
+        await Func.func051(); // キー入力待ち処理
+        Gvar.var_245 = 19;
+        Gvar.var_246 = 45;
+        Gvar.var_546 = 1;
+        Gvar.var_3193 = 1;
+        Gvar.var_548 = 1; // 選択肢処理フラグON
+        await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        return;
+}
+
+export {func809}

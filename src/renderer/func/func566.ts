@@ -1174,7 +1174,7 @@ async function func566(this: any) {
         if (Gvar.var_83[Gvar.var_1641].Var32 == 99) {
             Adap.pos(Gvar.var_764 * Gvar.var_35 - 1, Gvar.var_763 * Gvar.var_36 - 10);
         }
-        if (Gvar.var_163 == 1) {
+        if (Gvar.time_paused == 1) { // 時止め(時消し飛ばし)状態の場合
             if (Gvar.var_199 == 4) {
                 Adap.pos(Gvar.var_764 * Gvar.var_35 - Gvar.var_2577, Gvar.var_763 * Gvar.var_36 - 10);
             }
@@ -1242,7 +1242,7 @@ async function func566(this: any) {
             Gvar.var_2592 = 0;
         }
         Gvar.var_1642 = 1;
-        await Func.func567();　// 敵キャラアイコンの指定 (各imageからドットを指定する)
+        await Func.func567();  // 敵キャラアイコンの指定 (各imageからドットを指定する)
 }
 
 export {func566}

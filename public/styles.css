@@ -1,0 +1,30 @@
+/* 全体要素の基本設定 */
+html,
+body {
+  background-color: #fff;
+  margin: 0;
+  overflow: hidden;
+
+  /* Windows では効果薄めですが、一応指定しておく */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* 推奨フォント設定（例） */
+  font-family: sans-serif;
+}
+
+/* pad 要素 */
+#pad {
+  position: absolute;
+  /* 文字を transform しない → 拡大縮小でギザギザを防ぐ */
+  font-size: 12px; /* 旧 <font size="1"> 相当。サイズは適宜調整 */
+  line-height: 1.5; /* 読みやすさ向上のため */
+}
+
+/* canvas 要素 */
+canvas {
+  max-width: 100%;
+  user-select: none;
+  transform-origin: 0 0; /* 拡大するならここを基点に */
+  /* もし canvas だけ拡大したいなら、JavaScript で transform を適用する */
+}

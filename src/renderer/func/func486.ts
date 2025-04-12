@@ -82,13 +82,13 @@ async function func486(this: any) {
                 Gvar.var_2133[Gvar.var_2135] = "や";
             }
             if (Gvar.var_2131 == 36) {
-                Gvar.var_2133[Gvar.var_2135] = "　";
+                Gvar.var_2133[Gvar.var_2135] = "  ";
             }
             if (Gvar.var_2131 == 37) {
                 Gvar.var_2133[Gvar.var_2135] = "ゆ";
             }
             if (Gvar.var_2131 == 38) {
-                Gvar.var_2133[Gvar.var_2135] = "　";
+                Gvar.var_2133[Gvar.var_2135] = "  ";
             }
             if (Gvar.var_2131 == 39) {
                 Gvar.var_2133[Gvar.var_2135] = "よ";
@@ -241,7 +241,7 @@ async function func486(this: any) {
                 Gvar.var_2133[Gvar.var_2135] = "～";
             }
             if (Gvar.var_2131 == 89) {
-                Gvar.var_2133[Gvar.var_2135] = "　";
+                Gvar.var_2133[Gvar.var_2135] = "  ";
             }
         }
         if (Gvar.var_2132 == 1) {
@@ -324,13 +324,13 @@ async function func486(this: any) {
                 Gvar.var_2133[Gvar.var_2135] = "ヤ";
             }
             if (Gvar.var_2131 == 36) {
-                Gvar.var_2133[Gvar.var_2135] = "　";
+                Gvar.var_2133[Gvar.var_2135] = "  ";
             }
             if (Gvar.var_2131 == 37) {
                 Gvar.var_2133[Gvar.var_2135] = "ユ";
             }
             if (Gvar.var_2131 == 38) {
-                Gvar.var_2133[Gvar.var_2135] = "　";
+                Gvar.var_2133[Gvar.var_2135] = "  ";
             }
             if (Gvar.var_2131 == 39) {
                 Gvar.var_2133[Gvar.var_2135] = "ヨ";
@@ -483,7 +483,7 @@ async function func486(this: any) {
                 Gvar.var_2133[Gvar.var_2135] = "～";
             }
             if (Gvar.var_2131 == 89) {
-                Gvar.var_2133[Gvar.var_2135] = "　";
+                Gvar.var_2133[Gvar.var_2135] = "  ";
             }
         }
         if (Gvar.var_2132 == 2) {

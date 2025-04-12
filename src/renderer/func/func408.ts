@@ -27,7 +27,7 @@ async function func408(this: any) {
         Gvar.Y_axis_item_position = 45;
         Gvar.var_1885 = Gvar.item_page_number;
         Gvar.item_page_number = 1;
-        await Func.func051();
+        await Func.func051(); // キー入力待ち処理
         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
         return;
 }

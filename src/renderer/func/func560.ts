@@ -15,7 +15,7 @@ async function func560(this: any) {
                     Gvar.var_348 = Gvar.var_449;
                     Gvar.var_2542 = 1;
                     Gvar.var_1845 = 4;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                     Gvar.var_1845 = 0;
                     Gvar.var_2542 = 0;
                 }

@@ -120,7 +120,7 @@ async function func349(this: any) {
         }
         if (Gvar.var_177 >= 1) {
     
-            Adap.font("MS ゴシック", 16, 1);
+            Adap.font(Gvar.font_type, 16, 1);
             Gvar.var_1274 = await Adap.ginfo(22) + 16;
             Gvar.var_1275 = await Adap.ginfo(23) - 10;
             Gvar.var_1276 = 11 - Gvar.var_177;

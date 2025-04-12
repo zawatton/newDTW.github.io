@@ -32,7 +32,7 @@ async function func363(this: any) {
         }
         Adap.color(255, 255, 255);
 
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         Adap.mes(Gvar.var_1607);
         Adap.color(255, 255, 255);
         Adap.line(19, 127, 320, 127);
@@ -52,30 +52,30 @@ async function func363(this: any) {
         if (Gvar.var_1609 == 0) {
             Adap.color(255, 255, 255);
     
-            Adap.font("ＭＳ ゴシック", 12, 1);
+            Adap.font("メイリオ", 12, 1);
             Adap.pos(20, 43);
             if (Gvar.var_1613 == 1) {
-                Adap.mes("第一部　ﾌｧﾝﾄﾑ･ﾌﾞﾗｯﾄﾞ");
+                Adap.mes("第一部  ﾌｧﾝﾄﾑ･ﾌﾞﾗｯﾄﾞ");
                 Adap.mes("" + Gvar.var_1614 + "/15");
             }
             if (Gvar.var_1613 == 2) {
-                Adap.mes("第二部　戦闘潮流");
+                Adap.mes("第二部  戦闘潮流");
                 Adap.mes("" + Gvar.var_1614 + "/15");
             }
             if (Gvar.var_1613 == 3) {
-                Adap.mes("第三部　ｽﾀｰﾀﾞｽﾄ･ｸﾙｾｲﾀﾞｰｽ");
+                Adap.mes("第三部  ｽﾀｰﾀﾞｽﾄ･ｸﾙｾｲﾀﾞｰｽ");
                 Adap.mes("" + Gvar.var_1614 + "/41");
             }
             if (Gvar.var_1613 == 4) {
-                Adap.mes("第四部　ﾀﾞｲﾔﾓﾝﾄﾞは砕けない");
+                Adap.mes("第四部  ﾀﾞｲﾔﾓﾝﾄﾞは砕けない");
                 Adap.mes("" + Gvar.var_1614 + "/39");
             }
             if (Gvar.var_1613 == 5) {
-                Adap.mes("第五部　黄金の風");
+                Adap.mes("第五部  黄金の風");
                 Adap.mes("" + Gvar.var_1614 + "/24");
             }
             if (Gvar.var_1613 == 6) {
-                Adap.mes("第六部　ｽﾄｰﾝ･ｵｰｼｬﾝ");
+                Adap.mes("第六部  ｽﾄｰﾝ･ｵｰｼｬﾝ");
                 Adap.mes("" + Gvar.var_1614 + "/23");
             }
             if (Gvar.var_1613 == 7) {
@@ -120,13 +120,13 @@ async function func363(this: any) {
         Adap.pos(35, 135);
         Adap.color(0, 255, 0);
 
-        Adap.font("ＭＳ Ｐゴシック", 14, 1);
+        Adap.font(Gvar.font_type, 14, 1);
         Adap.mes("【 " + Gvar.var_1643 + " 】");
         Adap.color(255, 255, 255);
 
-        Adap.font("ＭＳ ゴシック", 12, 1);
+        Adap.font("メイリオ", 12, 1);
         Adap.pos(35, 160);
-        Adap.mes("体力　：" + Gvar.var_1644);
+        Adap.mes("体力  ：" + Gvar.var_1644);
         Adap.pos(135, 160);
         Adap.mes("攻撃力：" + Gvar.var_1645);
         Adap.pos(235, 160);

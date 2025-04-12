@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Music from '../music/index'
 
 async function func655(this: any) {
         Adap.dbgprt(655);
@@ -48,23 +49,8 @@ async function func655(this: any) {
         }
         if (Gvar.var_3041 == 0) {
             await Func.func656();
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "" + Gvar.var_3040 + "の攻撃は外れた";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("" + Gvar.var_3040 + "の攻撃は外れた", "", 8, false, false, false);
+            await Func.AutoDraw(3);
             return;
         }
         if (Gvar.var_83[Gvar.var_402].Var0 == 53) {
@@ -127,13 +113,13 @@ async function func655(this: any) {
         }
         Gvar.var_742 = 1;
         Gvar.var_83[Gvar.var_2819].Var7 = 1;
-        // await Func.func337(); // メッセージ関係呼び出し
-        await Func.func337(); // メッセージ関係呼び出し
+        // await Func.func337(); // メッセージ表示処理(自動)
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_672 = Gvar.var_83[Gvar.var_673].Var0;
-        await Func.func093();
-        // await Func.func337(); // メッセージ関係呼び出し
-        // await Func.func337(); // メッセージ関係呼び出し
-        await Func.func337(); // メッセージ関係呼び出し
+        await Music.func093();
+        // await Func.func337(); // メッセージ表示処理(自動)
+        // await Func.func337(); // メッセージ表示処理(自動)
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
         Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
         Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8

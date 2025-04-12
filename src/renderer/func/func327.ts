@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// スーパーフライの鉄塔描写処理
 async function func327(this: any) {
         Adap.dbgprt(327);
         if (Gvar.var_447 == Gvar.var_147 && Gvar.var_449 == Gvar.var_148) {

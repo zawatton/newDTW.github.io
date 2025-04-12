@@ -4,12 +4,12 @@ import * as Func from '../func/index'
 
 // No = 573 重ちーのdiscの効果
 async function item573(this: any) {
-        for (let cnt2 = 0; cnt2 < 12; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(12);
         Gvar.var_1264 = 0;
         if (Gvar.var_262 == 1) { // Gvar.var_262 == 1 なので、Gvar.dungeon_number = 0 であれば
-            Gvar.item_message1 = "しかし何も起こらなかった…"; // Gvar.var_262 = 1でなければ "ｱｲﾃﾑの場所がわかった！"
+            // Gvar.var_262 = 1でなければ "ｱｲﾃﾑの場所がわかった！"
+            await Func.setMessage1("しかし何も起こらなかった…",
+                                   "", 7, false, false, false);
             return;
         }
         Adap.DSPLAY(184);

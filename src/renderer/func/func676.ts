@@ -13,7 +13,7 @@ async function func676(this: any) {
         Gvar.var_447 = Gvar.var_448;
         Gvar.var_449 = Gvar.var_450;
         Gvar.var_314 = Gvar.var_82[Gvar.var_347][Gvar.var_348];
-        Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var0;
+        Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
         await Func.func626(); // 敵リスト
         if (Gvar.var_83[Gvar.var_314].Var26 >= 1) {
             if (Gvar.var_83[Gvar.var_314].Var0 == 144) {
@@ -166,7 +166,7 @@ async function func676(this: any) {
                     Gvar.var_1758 = 1;
                 }
             }
-            await Func.func384(); // アイテムをフロアへ追加する処理
+            await Func.func384();
             Gvar.var_1765 = 0;
             Gvar.var_1763 = 0;
             Gvar.var_1752 = 0;

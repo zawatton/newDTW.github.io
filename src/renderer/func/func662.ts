@@ -1,18 +1,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Enemy from '../enemy/index'
 
 async function func662(this: any) {
         Adap.dbgprt(662);
         Gvar.var_1162 = 1;
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1238 = 1;
         Gvar.var_1971 = Gvar.var_199;
-        for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(5);
         for (let cnt1 = 0; cnt1 < 60; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1238 = Gvar.var_1238 + 1;
             if (Gvar.var_1238 == 10) {
         
@@ -59,12 +58,10 @@ async function func662(this: any) {
         if (Gvar.var_314 == Gvar.var_114) {
             Gvar.var_114 = 0;
         }
-        for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(5);
         Gvar.var_83[Gvar.var_314].Var11 = 0;
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1238 = Gvar.var_1238 + 1;
             if (Gvar.var_1238 == 65) {
         
@@ -79,7 +76,7 @@ async function func662(this: any) {
                 Gvar.var_199 = 2;
             }
         }
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1238 = 0;
         Gvar.var_1162 = 0;
         Gvar.var_199 = Gvar.var_1971;
@@ -87,7 +84,7 @@ async function func662(this: any) {
         Gvar.var_3070 = Gvar.var_83[Gvar.var_314].Var2;
         if (Gvar.var_71[Gvar.var_3069][Gvar.var_3070] == 0 || Gvar.var_71[Gvar.var_3069][Gvar.var_3070] == 13) {
             if (Gvar.var_71[Gvar.var_3069][Gvar.var_3070] == 13 && Gvar.var_83[Gvar.var_314].Var0 == 44) {
-                await Func.func670();
+                await Enemy.func670();
                 if (Gvar.var_3071 == 1) {
                     Gvar.var_3071 = 0;
                     return;

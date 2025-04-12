@@ -16,7 +16,7 @@ async function func196(this: any) {
         Adap.pset(45, 255);
         Adap.pset(151, 255);
 
-        Adap.font("ＭＳ　Ｐゴシック", 16, 1);
+        Adap.font(Gvar.font_type, 16, 1);
         Adap.color(255, 255, 255);
         Adap.pos(85, 150);
         Adap.mes("超速");

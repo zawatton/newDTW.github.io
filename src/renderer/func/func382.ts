@@ -25,7 +25,7 @@ async function func382(this: any) {
         Adap.pos(173, 310);
         Adap.color(255, 255, 255);
 
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         if (Gvar.var_1707 >= 15) {
             Adap.mes(Gvar.var_1721);
         }
@@ -34,7 +34,7 @@ async function func382(this: any) {
         }
         Adap.color(0, 255, 0);
 
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 14, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 14, Gvar.font_style = 1);
         if (Gvar.var_1721 == 1) {
             Gvar.var_1722 = 1;
         }

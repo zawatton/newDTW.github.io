@@ -1,26 +1,25 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Dung from '../dungeon/index'
-import * as Main from '../newdtw/index'
 
+// ダンジョンの階段を先に進んだ時の動作処理
 async function func060(this: any) {
         Adap.dbgprt(60);
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         await Func.func080(); // 各キー入力確認
         if (Gvar.var_259 == 1 && Gvar.var_406 == 1) { // var_259:入力判定[↓]
             Gvar.var_246 = Gvar.var_246 + 19;
             Gvar.var_406 = 0;
             Adap.DSPLAY(100); // アイテム選択時の効果音
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         if (Gvar.var_255 == 1 && Gvar.var_406 == 0) { // var_255:入力判定[↑]
             Gvar.var_246 = Gvar.var_246 - 19;
             Gvar.var_406 = 1;
             Adap.DSPLAY(100); // アイテム選択時の効果音
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         if (Gvar.key_Z_on == 1 || Gvar.key_A_on == 1) {
             if (Gvar.var_406 == 1) {
@@ -64,58 +63,31 @@ async function func060(this: any) {
                     Gvar.var_527 = 0; // 階段を降りれなくなるフラグOFF
                 }
                 if (Gvar.var_527 == 1) { // グリーン・ディが同じ部屋に居る状態のフラグ?がONであれば
-                    Gvar.comments_row1 = "";
-                    Gvar.comments_row2 = "";
-                    Gvar.var_295 = "";
-                    Gvar.comments_row1a = "";
-                    Gvar.comments_row2a = "";
-                    Gvar.var_298 = "";
-                    Gvar.var_299 = 0;
-                    Gvar.comments_row1 = "ｸﾞﾘｰﾝ･ﾃﾞｨが同じ部屋にいるぞ";
-                    Gvar.comments_row2 = "このままでは降りられないぞ";
-                    Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_198 = 1;
-                    Gvar.var_300 = 0;
-                    await Func.func047();
+                    await Func.setMessage1("ｸﾞﾘｰﾝ･ﾃﾞｨが同じ部屋にいるぞ",
+                                           "このままでは降りられないぞ", 7, false, false, false)
                     Adap.gsel(19);
                     Adap.color(10, 100, 10);
                     Adap.boxf(0, 0, 340, 340);
                     Adap.gsel(0);
                     Gvar.var_529 = 1;
-                    for (let cnt4 = 0; cnt4 < 20; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(20);
                     Gvar.var_529 = 0;
-                    await Main.func009(); // ゲーム基本動作フレーム処理
+                    await Func.func009(); // ディアボロ側ターン処理(ループ処理)
                     return;
                 }
                 if (Gvar.var_527 == 2) { // DIOが同じ部屋に居る状態のフラグ?がONの場合
                     Gvar.var_373 = 5;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 4;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 3;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 2;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 1;
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(10);
                     Adap.DSPLAY(101); // 階段を昇るor降りる時の効果音
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(10);
                     Gvar.var_373 = 0;
                     if (Gvar.var_199 == 2) {
                         Gvar.var_530 = 8;
@@ -143,100 +115,52 @@ async function func060(this: any) {
                     }
                     Gvar.var_199 = Gvar.var_530;
                     Adap.DSPLAY(185);
-                    Gvar.var_271 = 1;
+                    Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                     Gvar.var_531 = 1;
                     for (let cnt4 = 0; cnt4 < 20; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_531++;
                     }
-                    Gvar.var_271 = 0;
+                    Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                     Gvar.var_531 = 0;
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
-                    await Func.func094(); // メッセージ送りの際の効果音
-                    Gvar.comments_row1 = "";
-                    Gvar.comments_row2 = "";
-                    Gvar.var_295 = "";
-                    Gvar.comments_row1a = "";
-                    Gvar.comments_row2a = "";
-                    Gvar.var_298 = "";
-                    Gvar.var_299 = 0;
-                    Gvar.comments_row1 = "「ありのまま起こったことを話すぜ！」";
-                    Gvar.comments_row2 = "";
-                    Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_198 = 1;
-                    Gvar.var_300 = 0;
-                    await Func.func047();
-                    await Func.func340(); // キー入力による選択処理
-                    await Func.func094(); // メッセージ送りの際の効果音
-                    Gvar.comments_row1 = Gvar.comments_row1a;
-                    Gvar.comments_row2 = Gvar.comments_row2a;
-                    Gvar.comments_row1a = "「おれは階段を降りたと思ったら";
-                    Gvar.comments_row2a = "　いつの間にか上っていた」";
+                    await Func.AutoDraw(10);
+                    await Func.setMessage1("「ありのまま起こったことを話すぜ！」",
+                                          "", 7, true, false, true);
+
+                    await Func.setMessage1("「おれは階段を降りたと思ったら",
+                                           "  いつの間にか上っていた」", 7, false, false, true);
+
                     if (Gvar.var_73[Gvar.var_66][Gvar.var_67] == 2) {
-                        Gvar.comments_row1a = "「おれは階段を上ったと思ったら";
-                        Gvar.comments_row2a = "　いつの間にか降りていた」";
+                        await Func.setMessage1("「おれは階段を上ったと思ったら",
+                                               "  いつの間にか降りていた」", 7, false, false, true);
                     }
-                    await Func.func050();
-                    Gvar.var_198 = 1;
-                    Gvar.var_300 = 0;
-                    await Func.func047();
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
-                    await Main.func009(); // ゲーム基本動作フレーム処理
+                    await Func.AutoDraw(10);
+                    await Func.func009(); // ディアボロ側ターン処理(ループ処理)
                     return;
                 }
                 if (Gvar.var_114 >= 1) {
-                    Gvar.comments_row1 = "";
-                    Gvar.comments_row2 = "";
-                    Gvar.var_295 = "";
-                    Gvar.comments_row1a = "";
-                    Gvar.comments_row2a = "";
-                    Gvar.var_298 = "";
-                    Gvar.var_299 = 0;
-                    Gvar.comments_row1 = "掴まれていて降りられない！";
+                    await Func.setMessage1("掴まれていて降りられない！",
+                                           "", 7, false, false, false);
                     if (Gvar.var_73[Gvar.var_66][Gvar.var_67] == 2) {
-                        Gvar.comments_row1 = "掴まれていて上れない！";
+                        await Func.setMessage1("掴まれていて上れない！",
+                                               "", 7, false, false, false);
                     }
-                    Gvar.comments_row2 = "";
-                    Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_198 = 1;
-                    Gvar.var_300 = 0;
-                    await Func.func047();
-                    for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
-                    await Main.func009(); // ゲーム基本動作フレーム処理
+                    await Func.AutoDraw(9);
+                    await Func.func009(); // ディアボロ側ターン処理(ループ処理)
                     return;
                 }
                 // No = 1 なので、ホテルの外
                 if (Gvar.dungeon_number == 1 && Gvar.current_floor == 12) {
                     Gvar.var_373 = 5;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 4;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 3;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 2;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 1;
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(10);
                     Gvar.var_373 = 0;
                     Gvar.special_floor = 0;
                     if (Gvar.var_404 == 0) {
@@ -267,25 +191,15 @@ async function func060(this: any) {
                 // No = 2 なので、レクイエムの大迷宮
                 if (Gvar.dungeon_number == 2 && Gvar.current_floor == 30) {
                     Gvar.var_373 = 5;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 4;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 3;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 2;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 1;
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(10);
                     Gvar.var_373 = 0;
                     Gvar.special_floor = 0;
                     Gvar.var_532 = 1;
@@ -315,25 +229,15 @@ async function func060(this: any) {
                 // No = 3 なので、ディアボロの試練
                 if (Gvar.dungeon_number == 3 && Gvar.current_floor == 99) {
                     Gvar.var_373 = 5;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 4;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 3;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 2;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 1;
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(10);
                     Gvar.var_373 = 0;
                     Gvar.special_floor = 0;
                     Gvar.var_532 = 1;
@@ -353,25 +257,15 @@ async function func060(this: any) {
                 //if (Gvar.dungeon_number == 5 && Gvar.current_floor == Gvar.var_20 && Gvar.var_73[Gvar.var_66][Gvar.var_67] == 1) {
                 if (Gvar.dungeon_number == 5 && Gvar.current_floor == Gvar.var_20) {
                     Gvar.var_373 = 5;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 4;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 3;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 2;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 1;
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(10);
                     Gvar.var_373 = 0;
                     Gvar.special_floor = 0;
                     Gvar.var_532 = 1;
@@ -390,53 +284,33 @@ async function func060(this: any) {
                 Adap.DSPLAY(101); // 階段を昇るor降りる時の効果音
                 if (Gvar.var_375 == 1) {
                     Gvar.var_373 = 5;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 4;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 3;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 2;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_373 = 1;
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(10);
                     Gvar.var_373 = 0;
                     Gvar.special_floor = 0;
                     Gvar.var_539 = 1;
-                    await Func.func233();
+                    await Func.func233(); // ダンジョンへ入った際の全ステータス初期化処理
                     await Func.func880();
                     return;
                 }
                 await Func.func061();
                 Gvar.var_373 = 5;
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 Gvar.var_373 = 4;
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 Gvar.var_373 = 3;
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 Gvar.var_373 = 2;
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 Gvar.var_373 = 1;
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(10);
                 Gvar.var_373 = 0;
                 if (Gvar.var_73[Gvar.var_66][Gvar.var_67] == 1) {
                     Gvar.current_floor = Gvar.current_floor + 1;
@@ -468,9 +342,9 @@ async function func060(this: any) {
                     Gvar.current_floor = Gvar.current_floor - 1;
                 }
                 Gvar.special_floor = 0;
-                await Dung.func059(); // ホテルの外の最終フロア、エンヤホテル以外確定処理
+                await Func.func059(); // ホテルの外の最終フロア、エンヤホテル以外確定処理
                 Gvar.var_205 = 1;
-                await Func.func231();
+                await Func.func231(); // プレイデータを保存するセーブ機能
                 if (Gvar.var_407 == 1) {
                     await Func.func904();
                 }
@@ -481,7 +355,7 @@ async function func060(this: any) {
                 for (let cnt3 = 0; cnt3 < 80; ++cnt3) {
                     await Func.func339();
                 }
-                await Main.func006();
+                await Func.func006(); // 一巡後の世界のみのフラグ処理
                 return;
             }
         }
@@ -489,16 +363,16 @@ async function func060(this: any) {
             if (Gvar.var_406 == 0) {
                 Gvar.var_405 = 0;
                 Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                await Func.func051();
-                await Main.func009(); // ゲーム基本動作フレーム処理
+                await Func.func051(); // キー入力待ち処理
+                await Func.func009(); // ディアボロ側ターン処理(ループ処理)
                 return;
             }
         }
         if (Gvar.key_X_on == 1) {
             Gvar.var_405 = 0;
             Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-            await Func.func051();
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.func051(); // キー入力待ち処理
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         await Func.func060(); // ダンジョンの階段を先に進んだ時の動作処理

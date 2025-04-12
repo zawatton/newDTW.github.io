@@ -1,30 +1,15 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 // No = 395 バイツァ・ダストの発動処理
 async function item395(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        await Func.func094(); // メッセージ送りの際の効果音
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "キラークィーン【第３の爆弾】";
-        Gvar.comments_row2 = "「BITE THE DUST」（負けて死ね）！！";
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
+        await Func.setMessage1("キラークィーン【第３の爆弾】",
+                               "「BITE THE DUST」（負けて死ね）！！", 7, false, false, true);
         for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-            Gvar.var_198 = 1;
+            await Func.func337(); // メッセージ表示処理(自動)
+            Gvar.var_198 = 1; // メッセージウィンドウ開く
             Gvar.var_300 = 0;
         }
         Gvar.var_2314 = 0;
@@ -153,46 +138,21 @@ async function item395(this: any) {
             Gvar.var_2194 = Gvar.var_2194 + 1;
         }
         if (Gvar.var_2314 == 1) {
-            await Func.func340(); // キー入力による選択処理
-            await Func.func094(); // メッセージ送りの際の効果音
-            Gvar.comments_row1 = Gvar.comments_row1a;
-            Gvar.comments_row2 = Gvar.comments_row2a;
-            Gvar.comments_row1a = "すでに「瞳」の中に入っている！";
-            Gvar.comments_row2a = "";
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func050();
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("すでに「瞳」の中に入っている！",
+                                   "", 7, true, true, true);
+            await Func.AutoDraw(10);
         }
         if (Gvar.var_2314 == 0) {
-            await Func.func340(); // キー入力による選択処理
-            Gvar.comments_row1 = Gvar.comments_row1a;
-            Gvar.comments_row2 = Gvar.comments_row2a;
-            Gvar.comments_row1a = "しかし何もおこらなかった…";
-            Gvar.comments_row2a = "";
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func050();
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("しかし何もおこらなかった…",
+                                   "", 7, true, true, false);
+            await Func.AutoDraw(10);
         }
         if (Gvar.var_2254 == 1) {
             Gvar.var_2254 = 0;
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

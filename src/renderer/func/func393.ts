@@ -7,7 +7,7 @@ async function func393(this: any) {
         if (Gvar.current_floor == 20 && Gvar.dungeon_number != 5) {
             Gvar.var_452 = 1;
             Gvar.var_1748 = 1;
-            await Func.func384(); // アイテムをフロアへ追加する処理
+            await Func.func384();
             Gvar.var_1748 = 0;
             Gvar.var_452 = 0;
         }
@@ -16,7 +16,7 @@ async function func393(this: any) {
             Gvar.var_1732 = 1;
             Gvar.var_452 = 1;
             for (let cnt2 = 0; cnt2 < Gvar.var_1037; ++cnt2) {
-                await Func.func384(); // アイテムをフロアへ追加する処理
+                await Func.func384();
                 Gvar.var_1732++;
             }
             Gvar.var_452 = 0;
@@ -27,7 +27,7 @@ async function func393(this: any) {
         if (Gvar.dungeon_number == 3 && Gvar.current_floor == 99 && Gvar.var_537 >= 1) {
             Gvar.var_452 = 1;
             Gvar.var_1766 = 1;
-            await Func.func384(); // アイテムをフロアへ追加する処理
+            await Func.func384();
             Gvar.var_1766 = 0;
             Gvar.var_452 = 0;
         }
@@ -35,7 +35,7 @@ async function func393(this: any) {
         if (Gvar.dungeon_number == 4 && Gvar.current_floor == 99) {
             Gvar.var_452 = 1;
             Gvar.var_1751 = 1;
-            await Func.func384(); // アイテムをフロアへ追加する処理
+            await Func.func384();
             Gvar.var_1751 = 0;
             Gvar.var_452 = 0;
         }

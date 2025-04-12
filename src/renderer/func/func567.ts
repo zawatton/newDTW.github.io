@@ -86,10 +86,10 @@ async function func567(this: any) {
                 }
                 if (Gvar.var_83[Gvar.var_1641].Var0 == 118) {
                     if (Gvar.var_83[Gvar.var_1641].Var21 == 0) {
-                        Adap.gcopy(3, 1560, 0, 40, 45);
+                        Adap.gcopy(3, 1560, 0, 40, 45); // "img_mychara.gif" の1行目の一番右側にあるディアボロの影(黒い丸)
                     }
                     if (Gvar.var_83[Gvar.var_1641].Var21 == 1 && Gvar.var_411 < 6) {
-                        Adap.gcopy(3, 1560, 0, 40, 45);
+                        Adap.gcopy(3, 1560, 0, 40, 45); // "img_mychara.gif" の1行目の一番右側にあるディアボロの影(黒い丸)
                     }
                     if (Gvar.var_83[Gvar.var_1641].Var21 == 1 && Gvar.var_411 >= 6 && Gvar.var_411 <= 7) {
                         Adap.gmode(2, null, null, null);
@@ -103,7 +103,7 @@ async function func567(this: any) {
                     }
                     return;
                 }
-                Adap.gcopy(3, 1560, 0, 40, 45);
+                Adap.gcopy(3, 1560, 0, 40, 45); // "img_mychara.gif" の1行目の一番右側にあるディアボロの影(黒い丸)
                 return;
             }
             if (Gvar.var_83[Gvar.var_1641].Var30 >= 1 && Gvar.var_83[Gvar.var_1641].Var8 == 0) {

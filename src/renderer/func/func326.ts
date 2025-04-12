@@ -9,7 +9,7 @@ async function func326(this: any) {
             Gvar.var_447 = Gvar.var_66 - 5;
             for (let cnt2 = 0; cnt2 < 11; ++cnt2) {
                 if (Gvar.var_73[Gvar.var_447][Gvar.var_449] >= 1) {
-                    await Func.func553();
+                    await Func.func553(); // ダンジョン毎の階段処理
                 }
                 if (Gvar.var_127 == 0 && Gvar.var_132 == 0) {
                     if (Gvar.var_77[Gvar.var_447][Gvar.var_449] != 0) {

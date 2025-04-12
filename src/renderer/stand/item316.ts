@@ -1,7 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
+import * as Music from '../music/index'
 
 // No = 316 サバイバーの発動処理
 async function item316(this: any) {
@@ -19,53 +19,23 @@ async function item316(this: any) {
             Gvar.bufferid_stand_disc = 29; // Adap.buffer(29)は"img_stand3.gif"
         }
         if (Gvar.var_172 == 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "発動能力がパワーアップしている！";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            await Func.func340(); // キー入力による選択処理
+            await Func.setMessage1("「迫り来る危険を感知できる…！」",
+                                   "", 7, true, false, false);
         }
         if (Gvar.var_174 == 1) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "地面が濡れて伝達力が上がっている！";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            await Func.func340(); // キー入力による選択処理
+            await Func.setMessage1("地面が濡れて伝達力が上がっている！",
+                                   "", 7, true, false, false);
         }
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1520 = 1;
         Adap.DSPLAY(161);
         for (let cnt2 = 0; cnt2 < 26; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1520++;
         }
         Gvar.var_1520 = 0;
-        Gvar.var_271 = 0;
-        for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
+        await Func.AutoDraw(10);
         Gvar.var_1992 = 1;
         Gvar.var_1993 = Gvar.var_66 - 1;
         Gvar.var_1994 = Gvar.var_66 + 1;
@@ -150,32 +120,17 @@ async function item316(this: any) {
             }
             Gvar.var_1992 = Gvar.var_1992 + 1;
         }
-        await Func.func135();
+        await Music.func135();
         Gvar.var_114 = 0;
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "ファイトクラブだっ！！";
-        Gvar.comments_row2 = "";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
-        for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.setMessage1("ファイトクラブだっ！！",
+                               "", 7, false, false, false);
+        await Func.AutoDraw(5);
         if (Gvar.var_2254 == 1) {
             Gvar.var_2254 = 0;
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

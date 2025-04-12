@@ -16,7 +16,7 @@ async function func840(this: any) {
         Adap.pset(121, 40);
         Adap.pset(15, 85);
         Adap.pset(121, 85);
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         Adap.color(255, 255, 255);
         Adap.pos(33, 47);
         if (Gvar.go_to_hotel == 0 && Gvar.var_3198 == 0 && Gvar.var_3192 == 0 && Gvar.var_3147 == 0 && Gvar.var_3136 == 0 && Gvar.var_3163 != 2 && Gvar.var_3163 != 3) {
@@ -51,7 +51,7 @@ async function func840(this: any) {
             Adap.mes("断る");
         }
         Adap.color(255, 255, 255);
-        Adap.font("MS ゴシック", 16, 1);
+        Adap.font(Gvar.font_type, 16, 1);
         Adap.pos(Gvar.var_245, Gvar.var_246);
         Adap.mes(">");
         Adap.pos(Gvar.var_245 + 1, Gvar.var_246);

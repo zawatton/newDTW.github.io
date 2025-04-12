@@ -13,8 +13,8 @@ async function func209(this: any) {
                 Gvar.var_911 = 1;
             }
             Adap.DSPLAY(100); // アイテム選択時の効果音
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         if (Gvar.var_255 == 1) { // var_255:入力判定[↑]
             Gvar.Y_axis_item_position = Gvar.Y_axis_item_position - 20;
@@ -24,13 +24,13 @@ async function func209(this: any) {
                 Gvar.var_911 = 8;
             }
             Adap.DSPLAY(100); // アイテム選択時の効果音
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         if (Gvar.key_Z_on == 1 || Gvar.key_A_on == 1) {
             if (Gvar.var_911 == 7) {
                 await Func.func214();
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
             if (Gvar.var_911 == 8) {
                 Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
@@ -41,9 +41,9 @@ async function func209(this: any) {
                 Gvar.var_691[5] = Gvar.var_659;
                 Gvar.var_691[6] = Gvar.var_660;
                 await Adap.bsave("00.dat", Gvar.data = Gvar.var_691, null, 1000);
-                await Func.func051();
+                await Func.func051(); // キー入力待ち処理
                 Gvar.var_902 = 0;
-                await Func.func193();
+                await Func.func193(); // メニュー画面 "システム" 設定処理
                 return;
             }
         }
@@ -54,9 +54,9 @@ async function func209(this: any) {
                 if (Gvar.conf_keyon == 1) {
                     Gvar.var_912 = Gvar.var_447;
                     await Func.func213();
-                    await Func.func051();
+                    await Func.func051(); // キー入力待ち処理
                     await Func.func212();
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     break;
                 }
                 Gvar.var_447++;
@@ -67,9 +67,9 @@ async function func209(this: any) {
                 if (Gvar.conf_keyon == 1) {
                     Gvar.var_912 = Gvar.var_447;
                     await Func.func213();
-                    await Func.func051();
+                    await Func.func051(); // キー入力待ち処理
                     await Func.func212();
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     break;
                 }
                 Gvar.var_447++;
@@ -78,9 +78,9 @@ async function func209(this: any) {
             if (Gvar.conf_keyon == 1) {
                 Gvar.var_912 = 16;
                 await Func.func213();
-                await Func.func051();
+                await Func.func051(); // キー入力待ち処理
                 await Func.func212();
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func209();
                 return;
             }
@@ -88,9 +88,9 @@ async function func209(this: any) {
             if (Gvar.conf_keyon == 1) {
                 Gvar.var_912 = 13;
                 await Func.func213();
-                await Func.func051();
+                await Func.func051(); // キー入力待ち処理
                 await Func.func212();
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func209();
                 return;
             }
@@ -98,14 +98,14 @@ async function func209(this: any) {
             if (Gvar.conf_keyon == 1) {
                 Gvar.var_912 = 17;
                 await Func.func213();
-                await Func.func051();
+                await Func.func051(); // キー入力待ち処理
                 await Func.func212();
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func209();
                 return;
             }
         }
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         await Func.func209();
         return;
 }

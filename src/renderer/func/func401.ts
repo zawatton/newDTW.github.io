@@ -19,21 +19,8 @@ async function func401(this: any) {
             Gvar.var_1841 = Gvar.var_1841 + 1;
         }
         if (Gvar.var_1839 == 1) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "" + Gvar.item_name + "(" + Gvar.var_78[Gvar.var_321].Var3 + ")を拾った";
-            Gvar.comments_row2 = "回数をまとめた";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
+            await Func.setMessage1("" + Gvar.item_name + "(" + Gvar.var_78[Gvar.var_321].Var3 + ")を拾った",
+                                    "回数をまとめた", 7, false, false, false);
             Gvar.var_77[Gvar.var_66][Gvar.var_67] = 0;
             Gvar.var_78[Gvar.var_321].Var0 = 0;
             Gvar.var_78[Gvar.var_321].Var1 = 0;

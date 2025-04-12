@@ -1,11 +1,12 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Music from '../music/index'
 
 async function func562(this: any) {
         Adap.dbgprt(562);
         if (Gvar.var_681 != 0) {
-            await Func.func111();
+            await Music.func111();
         }
         if (Gvar.var_541 >= 1) {
             Gvar.var_2566 = 1;
@@ -69,7 +70,7 @@ async function func562(this: any) {
                     if (Gvar.var_83[Gvar.var_97].Var0 == 107) {
                         Gvar.var_83[Gvar.var_97].Var0 = 106;
                         if (Gvar.receive_bgm_id == 992) {
-                            await Func.func126();
+                            await Music.func126();
                         }
                     }
                     Gvar.var_83[Gvar.var_97].Var1 = Gvar.var_440;
@@ -157,7 +158,7 @@ async function func562(this: any) {
             if (Gvar.var_2527 == 8) {
                 Gvar.var_1042 = Adap.rnd(7);
             }
-            await Func.func556(); // 敵をフロアへ出現させる処理
+            await Func.func556();
             Gvar.var_2570 = 0;
             Gvar.var_2527 = 0;
             Gvar.var_2571 = 0;

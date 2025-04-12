@@ -1,18 +1,17 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Dung from '../dungeon/index'
 
 async function func673(this: any) {
         Adap.dbgprt(673);
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         await Func.func080(); // 各キー入力確認
         if (Gvar.key_Z_on == 1 || Gvar.key_A_on == 1) {
             Gvar.var_1200 = 0;
-            await Func.func051();
+            await Func.func051(); // キー入力待ち処理
             Gvar.var_1061 = 0;
             Gvar.var_1601 = 0;
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_3080 = 1;
             if (Gvar.var_375 == 0) {
                 await Func.func227();
@@ -24,13 +23,13 @@ async function func673(this: any) {
             }
             if (Gvar.dungeon_number == 0) {
                 await Func.func182();
-                await Func.func233();
+                await Func.func233(); // ダンジョンへ入った際の全ステータス初期化処理
                 Gvar.var_755 = 0;
                 Gvar.var_205 = 1;
                 Gvar.var_1049 = 1;
-                await Func.func231();
+                await Func.func231(); // プレイデータを保存するセーブ機能
                 Gvar.var_1049 = 0;
-                await Dung.func159(); // ヴェネチアホテルでのイベントフラグ管理処理
+                await Func.func159(); // ヴェネチアホテルでのイベントフラグ管理処理
                 return;
             }
             if (Gvar.var_375 == 0) {
@@ -39,7 +38,7 @@ async function func673(this: any) {
                 return;
             }
             if (Gvar.var_375 == 1) {
-                await Func.func233();
+                await Func.func233(); // ダンジョンへ入った際の全ステータス初期化処理
                 Gvar.var_539 = 0;
                 await Func.func880();
                 return;

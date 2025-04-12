@@ -52,7 +52,7 @@ async function func377(this: any) {
             }
             Adap.pos(Gvar.var_1680 + 80, Gvar.var_1682 + 13 + Gvar.var_1684);
     
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 14, Gvar.font_style = 1);
+            Adap.font(Gvar.font_type, Gvar.font_size = 14, Gvar.font_style = 1);
             if (Gvar.var_988[Gvar.var_1697] >= 1) {
                 Adap.color(255, 255, 255);
             }

@@ -26,41 +26,15 @@ async function func400(this: any) {
         // Gvar.var_224 は持っているアイテム数と思われる。アイテムは20個まで持てる。
         // 所持アイテム数が20個以上になる場合
         if (Gvar.var_224 >= 20) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "" + Gvar.disp_item_name + "に乗った";
-            Gvar.comments_row2 = "持ち物が多くて拾えない";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("" + Gvar.disp_item_name + "に乗った",
+                                    "持ち物が多くて拾えない", 7, false, false, false);
+            await Func.func047(); // メッセージ履歴追加処理
+            await Func.AutoDraw(5);
             return;
         }
-        // 所持アイテムが20個未満の場合
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "" + Gvar.disp_item_name + "を拾った";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
+        // 所持アイテムが20個未満の場合'
+        await Func.setMessage1("" + Gvar.disp_item_name + "を拾った", "", 7, false, false, false);
+        await Func.func047(); // メッセージ履歴追加処理
         if (Gvar.belongings_item_list >= 900 && Gvar.belongings_item_list < 1000) {
             Gvar.var_1840 = Gvar.belongings_item_list - 900;
             Gvar.var_988[Gvar.var_1840] = 1;
@@ -137,7 +111,7 @@ async function func400(this: any) {
         Adap.DSPLAY(108); // アイテムを拾った時の効果音
         if (Gvar.var_362 == 1) {
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
         }
         return;

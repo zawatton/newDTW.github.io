@@ -1,5 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
 // おそらく射撃攻撃のモーション設定
 async function func350(this: any) {
         Adap.dbgprt(350);

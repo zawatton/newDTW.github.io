@@ -9,7 +9,7 @@ function width(width, height) {
     Adap.chgdisp(1, newWidth, newHeight);
     Adap.bgscr(37, newWidth, newHeight, 1, 0, 0);
     Adap.title("");
-    //Adap.cls(4);
+    //Adap.cls(4); // 黒く薄いフィルターがかかる
 
     // ウィンドウの現在の位置を取得
     const currentX = window.screenX;

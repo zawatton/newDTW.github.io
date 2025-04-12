@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function func853(this: any) {
         Adap.dbgprt(853);
         Adap.gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
-        Adap.font("ＭＳ Ｐゴシック", 12);
+        Adap.font(Gvar.font_type, 12);
         Adap.color(236, 233, 216);
         Adap.boxf(680, 0, 680, 680);
         if (Gvar.var_3279 <= Gvar.var_31 && Gvar.var_3280 <= Gvar.var_32) {
@@ -115,7 +115,7 @@ async function func853(this: any) {
         Gvar.var_888 = Gvar.var_3300[Gvar.var_3249];
         await Func.func539();
         Adap.gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
-        Adap.font("ＭＳ Ｐゴシック", 11);
+        Adap.font(Gvar.font_type, 11);
         Adap.color(255, 255, 255);
         Gvar.var_3301 = Gvar.var_3245;
         if (Gvar.var_3301 == 0) {

@@ -59,7 +59,7 @@ async function func170(this: any) {
         Adap.pos(20, 50);
         Adap.gcopy(Gvar.buffer_id, Gvar.buffer_x_axis, Gvar.buffer_y_axis, 40, 40);
         Adap.pos(70, 65);
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         Adap.color(0, 255, 0);
         if (Gvar.item_modified_value == 0 && Gvar.number_of_abilities <= 1) {
             Adap.mes(Gvar.item_name);
@@ -88,16 +88,16 @@ async function func170(this: any) {
             Adap.gcopy(8, 40, 80, 10, 10);
         }
         Adap.color(255, 255, 255);
-        Adap.font("ＭＳ Ｐゴシック", 14, 1);
+        Adap.font(Gvar.font_type, 14, 1);
         Adap.pos(30, 100);
-        Adap.mes("" + Gvar.item_description1 + "　空き容量 " + Gvar.free_space_value);
+        Adap.mes("" + Gvar.item_description1 + "  空き容量 " + Gvar.free_space_value);
         Adap.pos(30, 120);
         Adap.mes(Gvar.effects_message);
         Gvar.track_number = 1;
         for (let cnt1 = 0; cnt1 < Gvar.var_810 + Gvar.free_space_value; ++cnt1) {
             Adap.pos(30, Gvar.track_number * 20 + 120);
             Adap.color(255, 255, 255);
-            Adap.font("MS UI ゴシック", 12, 1);
+            Adap.font(Gvar.font_type, 12, 1);
             Adap.mes("Track" + Gvar.track_number + ":");
             Gvar.track_number = Gvar.track_number + 1;
         } 
@@ -122,7 +122,7 @@ async function func170(this: any) {
             if (Gvar.var_812 == 4) {
                 Adap.color(240, 0, 240);
             }
-            Adap.font("ＭＳ ゴシック", 14, 1);
+            Adap.font("メイリオ", 14, 1);
             if (Gvar.var_813[Gvar.track_number] != "") {
                 Adap.mes("" + Gvar.var_813[Gvar.track_number]);
             }

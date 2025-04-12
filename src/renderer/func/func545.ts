@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 async function func545(this: any) {
         Adap.dbgprt(545);
-        if (Gvar.var_163 != 0 || Gvar.var_151 != 0) {
+        if (Gvar.time_paused!= 0 || Gvar.time_paused_count != 0) {
             return;
         }
         Gvar.var_2479 = 1;

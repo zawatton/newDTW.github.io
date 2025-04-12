@@ -28,10 +28,10 @@ async function func518(this: any) {
         if (Gvar.var_1396 < Gvar.var_2361 || Gvar.var_1396 > Gvar.var_2362 || Gvar.var_1397 < Gvar.var_2364 || Gvar.var_1397 > Gvar.var_2363) {
             return;
         }
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1527 = 1;
         for (let cnt1 = 0; cnt1 < 7; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1527++;
         }
         Gvar.var_1527 = 0;

@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 // Ver0.1402にて追加。No = 3 敵タワーオブグレーの特殊能力。瞬間移動。
 async function enemy003(this: any) {
-        if (Gvar.var_201 != 14 && Gvar.var_83[Gvar.var_314].Var10 == Gvar.var_201) { // 部屋にいる時のみ発動
+        if (Gvar.var_201 != 14 && Gvar.var_83[Gvar.var_314].Var10 == Gvar.var_201) { // 幻惑の迷宮(var_201 = 14)でないかつ部屋にいる時のみ発動
             Gvar.var_2672 = Gvar.var_83[Gvar.var_314].Var1;
             Gvar.var_2673 = Gvar.var_83[Gvar.var_314].Var2;
             Gvar.var_1349 = 0;
@@ -39,21 +39,19 @@ async function enemy003(this: any) {
         }
         // 瞬間移動後の画像処理
         Gvar.var_83[Gvar.var_314].Var11 = 0;
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1306 = 1;
         Gvar.var_1286 = (Gvar.var_83[Gvar.var_314].Var1 - Gvar.var_66 + 4) * 40;
         Gvar.var_1287 = (Gvar.var_83[Gvar.var_314].Var2 - Gvar.var_67 + 4) * 40 - 50;
         Adap.DSPLAY(190);
         for (let cnt4 = 0; cnt4 < 5; ++cnt4) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1306 = Gvar.var_1306 + 1;
         }
         Gvar.var_1306 = 0;
-        Gvar.var_271 = 0;// ここまで (瞬間移動後の画像処理)
-        await Func.func047();
-        for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF// ここまで (瞬間移動後の画像処理)
+        await Func.func047(); // メッセージ履歴追加処理
+        await Func.AutoDraw(10);
         Gvar.var_2197 = 1;
         return;
 }

@@ -2,7 +2,6 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
-// アイテムをフロアへ追加する処理
 async function func384(this: any) {
         Adap.dbgprt(384);
         if (Gvar.var_336 >= 200) {

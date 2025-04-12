@@ -17,7 +17,7 @@ async function func200(this: any) {
         Adap.pset(45, 315);
         Adap.pset(251, 315);
 
-        Adap.font("ＭＳ　Ｐゴシック", 16, 1);
+        Adap.font(Gvar.font_type, 16, 1);
         Adap.color(255, 255, 255);
         Adap.pos(85, 250);
         Adap.mes("マップの色を変更");

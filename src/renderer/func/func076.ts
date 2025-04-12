@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 各ダンジョンの絵文字読込処理
 async function func076(this: any) {
         Adap.dbgprt(76);
         Adap.redraw(2);

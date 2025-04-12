@@ -2,7 +2,6 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
-// 敵をフロアへ出現させる処理
 async function func556(this: any) {
         Adap.dbgprt(556);
         // No = 1 なので、ホテルの外

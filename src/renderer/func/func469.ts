@@ -1,7 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
+import * as Music from '../music/index'
 
 async function func469(this: any) {
         Adap.dbgprt(469);
@@ -9,27 +9,13 @@ async function func469(this: any) {
         if (Gvar.var_233[Gvar.var_225].Var0 >= 800 && Gvar.var_233[Gvar.var_225].Var0 < 900) {
             Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             Gvar.var_1866 = 0;
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "これを入れることはできない";
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("これを入れることはできない",
+                                    "", 7, false, false, false);
+            await Func.AutoDraw(3);
             Gvar.var_231 = 0;
             Gvar.var_234 = 0;
             Gvar.var_2040 = 0;
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         // No = 801:形兆のDISCｹｰｽ、No = 802:ﾄﾗｸﾀｰのﾀｲﾔの時
@@ -44,27 +30,13 @@ async function func469(this: any) {
             if (Gvar.var_2084 == 1) {
                 Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                 Gvar.var_1866 = 0;
-                Gvar.comments_row1 = "";
-                Gvar.comments_row2 = "";
-                Gvar.var_295 = "";
-                Gvar.comments_row1a = "";
-                Gvar.comments_row2a = "";
-                Gvar.var_298 = "";
-                Gvar.var_299 = 0;
-                Gvar.comments_row1 = "DISCしか入れることはできない";
-                Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                await Func.func047();
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.setMessage1("DISCしか入れることはできない",
+                                        "", 7, false, false, false);
+                await Func.AutoDraw(3);
                 Gvar.var_231 = 0;
                 Gvar.var_234 = 0;
                 Gvar.var_2040 = 0;
-                await Main.func009(); // ゲーム基本動作フレーム処理
+                await Func.func009(); // ディアボロ側ターン処理(ループ処理)
                 return;
             }
         }
@@ -76,27 +48,13 @@ async function func469(this: any) {
             if (Gvar.var_2084 == 1) {
                 Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                 Gvar.var_1866 = 0;
-                Gvar.comments_row1 = "";
-                Gvar.comments_row2 = "";
-                Gvar.var_295 = "";
-                Gvar.comments_row1a = "";
-                Gvar.comments_row2a = "";
-                Gvar.var_298 = "";
-                Gvar.var_299 = 0;
-                Gvar.comments_row1 = "食べ物しか入れることはできない";
-                Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                await Func.func047();
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.setMessage1("食べ物しか入れることはできない",
+                                        "", 7, false, false, false);
+                await Func.AutoDraw(3);
                 Gvar.var_231 = 0;
                 Gvar.var_234 = 0;
                 Gvar.var_2040 = 0;
-                await Main.func009(); // ゲーム基本動作フレーム処理
+                await Func.func009(); // ディアボロ側ターン処理(ループ処理)
                 return;
             }
         }
@@ -111,54 +69,26 @@ async function func469(this: any) {
             if (Gvar.var_2084 == 1) {
                 Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                 Gvar.var_1866 = 0;
-                Gvar.comments_row1 = "";
-                Gvar.comments_row2 = "";
-                Gvar.var_295 = "";
-                Gvar.comments_row1a = "";
-                Gvar.comments_row2a = "";
-                Gvar.var_298 = "";
-                Gvar.var_299 = 0;
-                Gvar.comments_row1 = "本しか入れることはできない";
-                Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                await Func.func047();
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.setMessage1("本しか入れることはできない",
+                                        "", 7, false, false, false);
+                await Func.AutoDraw(3);
                 Gvar.var_231 = 0;
                 Gvar.var_234 = 0;
                 Gvar.var_2040 = 0;
-                await Main.func009(); // ゲーム基本動作フレーム処理
+                await Func.func009(); // ディアボロ側ターン処理(ループ処理)
                 return;
             }
         }
         if (Gvar.var_233[Gvar.var_1876].Var7 == 0) {
             Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             Gvar.var_1866 = 0;
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "これ以上入れられない";
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("これ以上入れられない",
+                                    "", 7, false, false, false);
+            await Func.AutoDraw(3);
             Gvar.var_231 = 0;
             Gvar.var_234 = 0;
             Gvar.var_2040 = 0;
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         Gvar.var_2084 = 0;
@@ -183,27 +113,13 @@ async function func469(this: any) {
         if (Gvar.var_2084 == 1) {
             Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             Gvar.var_1866 = 0;
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "呪われていて外せない！";
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("" + Gvar.item_name + "を",
+                                    "", 7, false, false, false);
+            await Func.AutoDraw(3);
             Gvar.var_231 = 0;
             Gvar.var_234 = 0;
             Gvar.var_2040 = 0;
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         Gvar.var_2085 = Gvar.var_233[Gvar.var_225].Var0;
@@ -274,7 +190,7 @@ async function func469(this: any) {
         }
         if (Gvar.var_1977 == 1 && Gvar.yabaimono_id != 805) {
             Gvar.belongings_item_list = Gvar.var_2085;
-            await Func.func106(); // BGM選曲呼び出し割り振り
+            await Music.func106(); // BGM選曲呼び出し割り振り
         }
         Gvar.belongings_item_list = Gvar.var_2085;
         await Func.func492(); // アイテムリスト呼び出し
@@ -283,87 +199,72 @@ async function func469(this: any) {
         }
         Adap.DSPLAY(130);
         Gvar.var_1866 = 0;
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
         if (Gvar.yabaimono_id == 801) {
-            Gvar.comments_row1 = "" + Gvar.item_name + "を";
-            Gvar.comments_row2 = "形兆のDISCｹｰｽに入れた";
+            await Func.setMessage1("" + Gvar.item_name + "を",
+                                    "形兆のDISCｹｰｽに入れた", 7, false, false, false);
         }
         if (Gvar.yabaimono_id == 802) {
-            Gvar.comments_row1 = "" + Gvar.item_name + "を";
-            Gvar.comments_row2 = "ﾄﾗｸﾀｰのﾀｲﾔに入れた";
+            await Func.setMessage1("" + Gvar.item_name + "を",
+                                    "ﾄﾗｸﾀｰのﾀｲﾔに入れた", 7, false, false, false);
         }
         if (Gvar.yabaimono_id == 803) {
-            Gvar.comments_row1 = "" + Gvar.item_name + "を";
-            Gvar.comments_row2 = "ｻﾝｼﾞｪﾙﾏﾝの紙袋に入れた";
+            await Func.setMessage1("" + Gvar.item_name + "を",
+                                    "ｻﾝｼﾞｪﾙﾏﾝの紙袋に入れた", 7, false, false, false);
         }
         if (Gvar.yabaimono_id == 804) {
-            Gvar.comments_row1 = "" + Gvar.item_name + "を";
-            Gvar.comments_row2 = "露伴のｶﾊﾞﾝに入れた";
+            await Func.setMessage1("" + Gvar.item_name + "を",
+                                    "露伴のｶﾊﾞﾝに入れた", 7, false, false, false);
         }
         if (Gvar.yabaimono_id >= 805 || Gvar.yabaimono_id == 800) {
             if (Gvar.var_862[Gvar.yabaimono_id][0] == 0) {
-                Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                Gvar.comments_row2 = "ヤバイものに入れた";
+                await Func.setMessage1("" + Gvar.item_name + "を",
+                                        "ヤバイものに入れた", 7, false, false, false);
             }
             if (Gvar.var_862[Gvar.yabaimono_id][0] == 1) {
                 if (Gvar.yabaimono_id == 800) {
-                    Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                    Gvar.comments_row2 = "紙の中に入れた";
+                    await Func.setMessage1("" + Gvar.item_name + "を",
+                                            "紙の中に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 805) {
-                    Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                    Gvar.comments_row2 = "ｸﾞｯﾁｮの死体に入れた";
+                    await Func.setMessage1("" + Gvar.item_name + "を",
+                                            "ｸﾞｯﾁｮの死体に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 806) {
-                    Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                    Gvar.comments_row2 = "ｶﾙﾈの死体に入れた";
+                    await Func.setMessage1("" + Gvar.item_name + "を",
+                                            "ｶﾙﾈの死体に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 807) {
-                    Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                    Gvar.comments_row2 = "DIOの骨に入れた";
+                    await Func.setMessage1("" + Gvar.item_name + "を",
+                                            "DIOの骨に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 808) {
-                    Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                    Gvar.comments_row2 = "聖人の眼球に入れた";
+                    await Func.setMessage1("" + Gvar.item_name + "を",
+                                            "聖人の眼球に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 809) {
-                    Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                    Gvar.comments_row2 = "聖人の左腕に入れた";
+                    await Func.setMessage1("" + Gvar.item_name + "を",
+                                            "聖人の左腕に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 815) {
-                    Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                    Gvar.comments_row2 = "ｴﾙﾒｪｽのｱﾚに入れた";
+                    await Func.setMessage1("" + Gvar.item_name + "を",
+                                            "ｴﾙﾒｪｽのｱﾚに入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 816) {
-                    Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                    Gvar.comments_row2 = "ﾐｷﾀｶのｶﾊﾞﾝに入れた";
+                    await Func.setMessage1("" + Gvar.item_name + "を",
+                                            "ﾐｷﾀｶのｶﾊﾞﾝに入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 817) {
-                    Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                    Gvar.comments_row2 = "乳母車に入れた";
+                    await Func.setMessage1("" + Gvar.item_name + "を",
+                                            "乳母車に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 818) {
-                    Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                    Gvar.comments_row2 = "送信壷に入れた";
+                    await Func.setMessage1("" + Gvar.item_name + "を",
+                                            "送信壷に入れた", 7, false, false, false);
                 }
             }
         }
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        await Func.func047();
-        for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
-        await Func.func051();
+        await Func.AutoDraw(3);
+        await Func.func051(); // キー入力待ち処理
         if (Gvar.yabaimono_id == 805 && Gvar.var_2085 == 631 && Gvar.var_683 >= 2) {
             Gvar.var_2086 = Gvar.var_683 - 1;
             if (Gvar.var_486[Gvar.var_682][Gvar.var_2086][0] >= 600 && Gvar.var_486[Gvar.var_682][Gvar.var_2086][0] <= 605) {
@@ -393,7 +294,7 @@ async function func469(this: any) {
         Gvar.var_234 = 0;
         Gvar.var_2040 = 0;
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

@@ -220,7 +220,7 @@ async function func380(this: any) {
             Gvar.var_1706[Gvar.var_1707][1] = "攻撃を喰らうと後ろに弾むぞ";
             Gvar.var_1707++;
         }
-        if (Gvar.var_151 != 0) {
+        if (Gvar.time_paused_count != 0) {
             Gvar.var_1706[Gvar.var_1707][2] = "0";
             Gvar.var_1706[Gvar.var_1707][1] = "時間が止まっているぞ";
             Gvar.var_1707++;
@@ -867,7 +867,7 @@ async function func380(this: any) {
             }
             Gvar.var_1706[Gvar.var_1707][2] = "8";
             if (Gvar.var_1719 >= 1) {
-                Gvar.var_1706[Gvar.var_1707][1] = "残りの特別な敵　" + Gvar.var_1719 + " 体";
+                Gvar.var_1706[Gvar.var_1707][1] = "残りの特別な敵  " + Gvar.var_1719 + " 体";
             }
             if (Gvar.var_1719 == 0) {
                 Gvar.var_1706[Gvar.var_1707][1] = "特別な敵を全て倒しているぞ";

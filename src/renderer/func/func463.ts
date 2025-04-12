@@ -1,17 +1,16 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 async function func463(this: any) {
         Adap.dbgprt(463);
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         await Func.func080(); // 各キー入力確認
         if (Gvar.key_X_on == 1) {
             Gvar.var_221 = 0;
             Gvar.var_231 = 0;
             Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-            await Func.func051();
+            await Func.func051(); // キー入力待ち処理
             await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
             return;
         }
@@ -46,8 +45,8 @@ async function func463(this: any) {
                     Gvar.var_222 = 1;
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -77,8 +76,8 @@ async function func463(this: any) {
                     Gvar.var_222 = 5;
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -86,8 +85,8 @@ async function func463(this: any) {
                 Gvar.var_229 = Gvar.var_229 + Gvar.var_2041;
                 Gvar.var_222 = 3;
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -95,8 +94,8 @@ async function func463(this: any) {
                 Gvar.var_229 = Gvar.var_229 + Gvar.var_2041;
                 Gvar.var_222 = 5;
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -104,8 +103,8 @@ async function func463(this: any) {
                 Gvar.var_229 = Gvar.var_229 + Gvar.var_2041;
                 Gvar.var_222 = 5;
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -134,8 +133,8 @@ async function func463(this: any) {
                     Gvar.var_222 = 9;
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -143,8 +142,8 @@ async function func463(this: any) {
                 Gvar.var_229 = Gvar.var_229 + Gvar.var_2041;
                 Gvar.var_222 = 6;
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -174,8 +173,8 @@ async function func463(this: any) {
                     }
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -188,8 +187,8 @@ async function func463(this: any) {
                     Gvar.var_222 = 11;
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -197,8 +196,8 @@ async function func463(this: any) {
                 Gvar.var_229 = Gvar.var_229 + Gvar.var_2041;
                 Gvar.var_222 = 8;
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -224,8 +223,8 @@ async function func463(this: any) {
                     Gvar.var_222 = 2;
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -305,8 +304,8 @@ async function func463(this: any) {
                     }
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -448,8 +447,8 @@ async function func463(this: any) {
                     }
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -467,8 +466,8 @@ async function func463(this: any) {
                     Gvar.var_229 = 44 + Gvar.var_2041 * 5;
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -500,8 +499,8 @@ async function func463(this: any) {
                     Gvar.var_222 = 2;
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -509,8 +508,8 @@ async function func463(this: any) {
                 Gvar.var_229 = Gvar.var_229 - Gvar.var_2041;
                 Gvar.var_222 = 1;
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -554,8 +553,8 @@ async function func463(this: any) {
                     Gvar.var_222 = 1;
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -563,8 +562,8 @@ async function func463(this: any) {
                 Gvar.var_229 = Gvar.var_229 - Gvar.var_2041;
                 Gvar.var_222 = 5;
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -575,8 +574,8 @@ async function func463(this: any) {
                     Gvar.var_222 = 9;
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -587,8 +586,8 @@ async function func463(this: any) {
                     Gvar.var_222 = 5;
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -614,8 +613,8 @@ async function func463(this: any) {
                     }
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -644,8 +643,8 @@ async function func463(this: any) {
                     Gvar.var_222 = 11;
                 }
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func463();
                 return;
             }
@@ -656,7 +655,7 @@ async function func463(this: any) {
                 if (Gvar.var_222 == 1) {
                     if (Gvar.item_class1 == 1) {
                         Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                        await Func.func051();
+                        await Func.func051(); // キー入力待ち処理
                         Gvar.var_221 = 2;
                         Gvar.var_246 = 44;
                         Gvar.var_2043 = 1;
@@ -696,7 +695,7 @@ async function func463(this: any) {
                     return;
                 }
                 if (Gvar.var_222 == 3 && Gvar.item_class1 == 1) {
-                    await Func.func051();
+                    await Func.func051(); // キー入力待ち処理
                     Gvar.var_221 = 3;
                     Gvar.var_246 = 44;
                     Gvar.var_2043 = 1;
@@ -705,7 +704,7 @@ async function func463(this: any) {
                     return;
                 }
                 if (Gvar.var_222 == 3 && Gvar.item_class1 == 2) {
-                    await Func.func051();
+                    await Func.func051(); // キー入力待ち処理
                     Gvar.var_221 = 3;
                     Gvar.var_246 = 44;
                     Gvar.var_2043 = 1;
@@ -770,7 +769,7 @@ async function func463(this: any) {
                 Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
                 if (Gvar.var_222 == 10) {
                     Gvar.var_231 = 0;
-                    Gvar.var_198 = 0;
+                    Gvar.var_198 = 0; // メッセージウィンドウ閉じる
                     Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                     Gvar.var_221 = 0;
                     // 所持アイテム数が20個以上になる場合
@@ -778,7 +777,7 @@ async function func463(this: any) {
                         await Func.func401(); // 射撃discを拾った際、同じものを既に所持していた時にまとめる動作処理
                         if (Gvar.var_1839 == 1) {
                             Gvar.var_217 = 1;
-                            await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+                            await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
                             return;
                         }
                     }
@@ -789,7 +788,7 @@ async function func463(this: any) {
                     }
                     await Func.func400(); // アイテムを拾う際の動作処理
                     Gvar.var_217 = 1;
-                    await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+                    await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
                     return;
                 }
                 if (Gvar.var_222 == 1) {
@@ -797,13 +796,13 @@ async function func463(this: any) {
                         Gvar.var_221 = 2;
                         Gvar.var_246 = 44;
                         Gvar.var_2043 = 1;
-                        await Func.func051();
+                        await Func.func051(); // キー入力待ち処理
                         await Func.func464();
                         return;
                     }
                     if (Gvar.item_class1 == 2) {
                         Gvar.var_231 = 0;
-                        Gvar.var_198 = 0;
+                        Gvar.var_198 = 0; // メッセージウィンドウ閉じる
                         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                         Gvar.var_221 = 0;
                         // 所持アイテム数が20個以上になる場合
@@ -825,7 +824,7 @@ async function func463(this: any) {
                         return;
                     }
                     Gvar.var_231 = 0;
-                    Gvar.var_198 = 0;
+                    Gvar.var_198 = 0; // メッセージウィンドウ閉じる
                     Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                     Gvar.var_221 = 0;
                     Gvar.var_234 = 1;
@@ -844,7 +843,7 @@ async function func463(this: any) {
                     return;
                 }
                 if (Gvar.var_222 == 3 && Gvar.item_class1 == 1) {
-                    await Func.func051();
+                    await Func.func051(); // キー入力待ち処理
                     Gvar.var_221 = 3;
                     Gvar.var_246 = 44;
                     Gvar.var_2043 = 1;
@@ -854,7 +853,7 @@ async function func463(this: any) {
                     return;
                 }
                 if (Gvar.var_222 == 3 && Gvar.item_class1 == 2) {
-                    await Func.func051();
+                    await Func.func051(); // キー入力待ち処理
                     Gvar.var_221 = 3;
                     Gvar.var_246 = 44;
                     Gvar.var_2043 = 1;
@@ -875,7 +874,7 @@ async function func463(this: any) {
                 if (Gvar.var_222 == 5) { // 消費形アイテム (Gvar.var_222 = 5) であれば
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     Gvar.var_231 = 0;
-                    Gvar.var_198 = 0;
+                    Gvar.var_198 = 0; // メッセージウィンドウ閉じる
                     Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                     Gvar.var_221 = 0;
                     Gvar.var_234 = 1;
@@ -889,7 +888,7 @@ async function func463(this: any) {
                 }
                 if (Gvar.var_222 == 7) {
                     Gvar.var_231 = 0;
-                    Gvar.var_198 = 0;
+                    Gvar.var_198 = 0; // メッセージウィンドウ閉じる
                     Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                     Gvar.var_221 = 0;
                     Gvar.var_2005 = 1;
@@ -900,13 +899,13 @@ async function func463(this: any) {
                     Gvar.var_223 = Gvar.var_224 + 10;
                     Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Func.func051();
+                    await Func.func051(); // キー入力待ち処理
                     Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                     await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return;
                 }
                 if (Gvar.var_222 == 8) {
-                    Gvar.var_198 = 0;
+                    Gvar.var_198 = 0; // メッセージウィンドウ閉じる
                     Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                     Gvar.var_221 = 0;
                     Gvar.var_2045 = 1;
@@ -950,7 +949,7 @@ async function func463(this: any) {
                     return;
                 }
                 if (Gvar.var_222 == 3 && Gvar.item_class1 == 1) {
-                    await Func.func051();
+                    await Func.func051(); // キー入力待ち処理
                     Gvar.var_221 = 3;
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     Gvar.var_246 = 44;
@@ -959,7 +958,7 @@ async function func463(this: any) {
                     return;
                 }
                 if (Gvar.var_222 == 3 && Gvar.item_class1 == 2) {
-                    await Func.func051();
+                    await Func.func051(); // キー入力待ち処理
                     Gvar.var_221 = 3;
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
                     Gvar.var_246 = 44;

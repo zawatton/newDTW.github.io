@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// 各ダンジョンの背景描写処理ではなさそう
 async function func077(this: any) {
         Adap.dbgprt(77);
         if (Gvar.var_599 == 0) {

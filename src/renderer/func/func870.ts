@@ -273,102 +273,102 @@ async function func870(this: any) {
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 65) {
                     Gvar.var_2548 = Gvar.var_3421;
                     Gvar.var_2547 = Gvar.var_3422;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 66) {
                     Gvar.var_2548 = Gvar.var_3423;
                     Gvar.var_2547 = Gvar.var_3424;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 67) {
                     Gvar.var_2548 = Gvar.var_3425;
                     Gvar.var_2547 = Gvar.var_3426;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 68) {
                     Gvar.var_2548 = Gvar.var_3427;
                     Gvar.var_2547 = Gvar.var_3428;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 69) {
                     Gvar.var_2548 = Gvar.var_3429;
                     Gvar.var_2547 = Gvar.var_3430;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 70) {
                     Gvar.var_2548 = Gvar.var_3431;
                     Gvar.var_2547 = Gvar.var_3432;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 71) {
                     Gvar.var_2548 = Gvar.var_3433;
                     Gvar.var_2547 = Gvar.var_3434;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 72) {
                     Gvar.var_2548 = Gvar.var_3435;
                     Gvar.var_2547 = Gvar.var_3436;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 73) {
                     Gvar.var_2548 = Gvar.var_3437;
                     Gvar.var_2547 = Gvar.var_3438;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 74) {
                     Gvar.var_2548 = Gvar.var_3439;
                     Gvar.var_2547 = Gvar.var_3440;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 75) {
                     Gvar.var_2548 = Gvar.var_3441;
                     Gvar.var_2547 = Gvar.var_3442;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 76) {
                     Gvar.var_2548 = Gvar.var_3443;
                     Gvar.var_2547 = Gvar.var_3444;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 77) {
                     Gvar.var_2548 = Gvar.var_3445;
                     Gvar.var_2547 = Gvar.var_3446;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 78) {
                     Gvar.var_2548 = Gvar.var_3447;
                     Gvar.var_2547 = Gvar.var_3448;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 79) {
                     Gvar.var_2548 = Gvar.var_3449;
                     Gvar.var_2547 = Gvar.var_3450;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 80) {
                     Gvar.var_2548 = Gvar.var_3451;
                     Gvar.var_2547 = Gvar.var_3452;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 81) {
                     Gvar.var_2548 = Gvar.var_3453;
                     Gvar.var_2547 = Gvar.var_3454;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 82) {
                     Gvar.var_2548 = Gvar.var_3455;
                     Gvar.var_2547 = Gvar.var_3456;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 83) {
                     Gvar.var_2548 = Gvar.var_3457;
                     Gvar.var_2547 = Gvar.var_3458;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 if (Adap.peek(Gvar.var_983, Gvar.var_764) == 84) {
                     Gvar.var_2548 = Gvar.var_3459;
                     Gvar.var_2547 = Gvar.var_3460;
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 Gvar.var_1076 = Gvar.var_1076 + 1;
                 Gvar.var_764 = Gvar.var_764 + 1;

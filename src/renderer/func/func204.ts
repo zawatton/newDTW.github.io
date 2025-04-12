@@ -17,7 +17,7 @@ async function func204(this: any) {
         Adap.pset(251, 100);
         Adap.pset(45, 295);
         Adap.pset(251, 295);
-        Adap.font("ＭＳ　Ｐゴシック", 16, 1);
+        Adap.font(Gvar.font_type, 16, 1);
         Adap.color(255, 255, 255);
         Adap.pos(85, 110);
         Adap.mes("色設定を使用しない");
@@ -25,25 +25,25 @@ async function func204(this: any) {
         Adap.mes("以下の色設定を使用");
         Adap.pos(85, 150);
         Adap.color(Gvar.var_25[7], Gvar.var_26[7], Gvar.var_27[7]);
-        Adap.mes("　　【ﾃﾞｨｱﾎﾞﾛの行動】");
+        Adap.mes("    【ﾃﾞｨｱﾎﾞﾛの行動】");
         Adap.pos(85, 170);
         Adap.color(Gvar.var_25[8], Gvar.var_26[8], Gvar.var_27[8]);
-        Adap.mes("　　【敵の行動】");
+        Adap.mes("    【敵の行動】");
         Adap.pos(85, 190);
         Adap.color(Gvar.var_25[12], Gvar.var_26[12], Gvar.var_27[12]);
-        Adap.mes("　　【会心の一撃】");
+        Adap.mes("    【会心の一撃】");
         Adap.pos(85, 210);
         Adap.color(Gvar.var_25[9], Gvar.var_26[9], Gvar.var_27[9]);
-        Adap.mes("　　【痛恨の一撃】");
+        Adap.mes("    【痛恨の一撃】");
         Adap.pos(85, 230);
         Adap.color(Gvar.var_25[10], Gvar.var_26[10], Gvar.var_27[10]);
-        Adap.mes("　　【罠メッセージ】");
+        Adap.mes("    【罠メッセージ】");
         Adap.pos(85, 250);
         Adap.color(Gvar.var_25[11], Gvar.var_26[11], Gvar.var_27[11]);
-        Adap.mes("　　【状態変化等】");
+        Adap.mes("    【状態変化等】");
         Adap.pos(85, 270);
         Adap.color(255, 255, 255);
-        Adap.mes("　　初期設定に戻す");
+        Adap.mes("    初期設定に戻す");
         if (Gvar.var_702 == 0) {
             Adap.pos(50, 107);
         }

@@ -134,7 +134,7 @@ async function func460(this: any) {
             // Gvar.var_220 はヤバいものの中を見た時に1になる
             if (Gvar.var_220 == 1 && Gvar.var_1620 <= Gvar.var_233[Gvar.var_1882].Var7 && Gvar.var_233[Gvar.var_1882].Var0 >= 850 && Gvar.var_233[Gvar.var_1882].Var0 < 860 && Gvar.var_233[Gvar.var_1882].Var0 != 851) {
         
-                Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+                Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
                 Adap.color(255, 255, 255);
                 Adap.pos(40, Gvar.var_230);
                 Adap.mes("何か");
@@ -142,7 +142,7 @@ async function func460(this: any) {
             // ヤバいもの No = 851「ホルマジオのビン」 
             if (Gvar.var_220 == 1 && Gvar.var_233[Gvar.var_1882].Var0 == 851) {
         
-                Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+                Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
                 Adap.color(255, 255, 255);
                 Adap.pos(40, Gvar.var_230);
                 if (Gvar.var_862[851][0] == 0) {
@@ -166,7 +166,7 @@ async function func460(this: any) {
             if (Gvar.var_220 != 1 || Gvar.var_233[Gvar.var_1882].Var0 != 851) {
 
                 if (Gvar.var_2010 > 0) {
-                    Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+                    Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
                     Adap.color(255, 255, 255);
                     Adap.pos(40, Gvar.var_230);
                     if (Gvar.belongings_item_list == 1) {
@@ -220,10 +220,10 @@ async function func460(this: any) {
                                 if (Gvar.var_476[Gvar.var_1620] == 1) {
                                     Adap.color(255, 255, 0);
                                     Adap.pos(32, Gvar.var_230);
-                                    Adap.font("MS ゴシック", 8);
+                                    Adap.font(Gvar.font_type, 8);
                                     Adap.mes("E");
                             
-                                    Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+                                    Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
                                     Adap.pos(40, Gvar.var_230);
                                     if (Gvar.var_2012 == 0 && Gvar.var_2020 <= 1) {
                                         Adap.mes("" + Gvar.item_name);
@@ -241,10 +241,10 @@ async function func460(this: any) {
                                 if (Gvar.var_477[Gvar.var_1620] == 1) {
                                     Adap.color(255, 180, 90);
                                     Adap.pos(32, Gvar.var_230);
-                                    Adap.font("MS ゴシック", 8);
+                                    Adap.font(Gvar.font_type, 8);
                                     Adap.mes("E");
                             
-                                    Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+                                    Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
                                     Adap.pos(40, Gvar.var_230);
                                     if (Gvar.var_2012 == 0 && Gvar.var_2020 <= 1) {
                                         Adap.mes("" + Gvar.item_name);
@@ -262,10 +262,10 @@ async function func460(this: any) {
                                 if (Gvar.var_478[Gvar.var_1620] == 1) {
                                     Adap.color(240, 0, 240);
                                     Adap.pos(32, Gvar.var_230);
-                                    Adap.font("MS ゴシック", 8);
+                                    Adap.font(Gvar.font_type, 8);
                                     Adap.mes("E");
                             
-                                    Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+                                    Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
                                     Adap.pos(40, Gvar.var_230);
                                     if (Gvar.var_2012 == 0 && Gvar.var_2020 <= 1) {
                                         Adap.mes("" + Gvar.item_name);
@@ -292,10 +292,10 @@ async function func460(this: any) {
                         if (Gvar.var_479[Gvar.var_1620] == 1 && Gvar.var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
                             Adap.color(225, 195, 145);
                             Adap.pos(32, Gvar.var_230);
-                            Adap.font("MS ゴシック", 8);
+                            Adap.font(Gvar.font_type, 8);
                             Adap.mes("E");
                     
-                            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+                            Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
                             Adap.pos(40, Gvar.var_230);
                             Adap.mes("" + Gvar.item_name + "(" + Gvar.var_2011 + ")");
                         }
@@ -334,10 +334,10 @@ async function func460(this: any) {
                             Adap.pos(155, Gvar.var_230 + 3);
                             Adap.color(255, 255, 255);
                     
-                            Adap.font("ＭＳ Ｐゴシック", 12, 1);
+                            Adap.font(Gvar.font_type, 12, 1);
                             Adap.mes(Gvar.var_1924);
                     
-                            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+                            Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
                         }
                     } 
                     // コミック スティールボールラン 7 ~ 15, 装備+99
@@ -429,7 +429,7 @@ async function func460(this: any) {
             }
             await Func.func492(); // アイテムリスト呼び出し
     
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 14, Gvar.font_style = 1);
+            Adap.font(Gvar.font_type, Gvar.font_size = 14, Gvar.font_style = 1);
             if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400 && Gvar.var_2025 == 1 && Gvar.var_2027 == 1 && Gvar.var_862[Gvar.belongings_item_list][0] == 1) {
                 Adap.pos(225, 283);
                 Adap.color(255, 0, 0);
@@ -451,7 +451,7 @@ async function func460(this: any) {
                 Adap.mes("" + Gvar.item_description1);
             }
             if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400 && Gvar.var_2027 == 1) {
-                Adap.mes("" + Gvar.item_description1 + "　空き容量 " + Gvar.var_2024);
+                Adap.mes("" + Gvar.item_description1 + "  空き容量 " + Gvar.var_2024);
             }
             Adap.color(255, 255, 255);
             Adap.mes(Gvar.effects_message);
@@ -473,25 +473,25 @@ async function func460(this: any) {
 
         if (Gvar.var_1880 == 1) {
             Adap.pos(15, 283);
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 14, Gvar.font_style = 1);
+            Adap.font(Gvar.font_type, Gvar.font_size = 14, Gvar.font_style = 1);
             Adap.color(255, 255, 255);
             Adap.mes("");
             if (Gvar.var_233[Gvar.var_1882].Var0 < 850 || Gvar.var_233[Gvar.var_1882].Var0 >= 860) {
-                Adap.mes("　　　　　　　　　何も入っていないぞ");
+                Adap.mes("                  何も入っていないぞ");
             }
             if (Gvar.var_233[Gvar.var_1882].Var0 >= 850 && Gvar.var_233[Gvar.var_1882].Var0 < 860 && Gvar.var_233[Gvar.var_1882].Var7 == 0 && Gvar.var_233[Gvar.var_1882].Var0 != 851) {
-                Adap.mes("　　　　　　　　　何も入っていないぞ");
+                Adap.mes("                  何も入っていないぞ");
             }
             if (Gvar.var_233[Gvar.var_1882].Var0 >= 850 && Gvar.var_233[Gvar.var_1882].Var0 < 860 && Gvar.var_233[Gvar.var_1882].Var7 != 0 && Gvar.var_233[Gvar.var_1882].Var0 != 851) {
-                Adap.mes("　　　　　　　　　　　何かが見える");
+                Adap.mes("                      何かが見える");
             }
             if (Gvar.var_233[Gvar.var_1882].Var0 == 851) {
                 Gvar.var_1916 = Gvar.var_233[Gvar.var_1882].Var6;
                 if (Gvar.var_486[Gvar.var_1916][1][15] == 0 || Gvar.var_233[Gvar.var_1882].Var7 == 0) {
-                    Adap.mes("　　　　　　　　　何も入っていないぞ");
+                    Adap.mes("                  何も入っていないぞ");
                 }
                 if (Gvar.var_486[Gvar.var_1916][1][15] != 0 && Gvar.var_233[Gvar.var_1882].Var7 != 0) {
-                    Adap.mes("　　　　　　　　　何かが見える");
+                    Adap.mes("                  何かが見える");
                 }
             }
             Adap.mes("");
@@ -499,23 +499,23 @@ async function func460(this: any) {
 
         if (Gvar.var_1880 == 2) {
             Adap.pos(15, 283);
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 14, Gvar.font_style = 1);
+            Adap.font(Gvar.font_type, Gvar.font_size = 14, Gvar.font_style = 1);
             Adap.color(255, 255, 255);
             Adap.mes("");
             if (Gvar.var_233[Gvar.var_1882].Var0 != 817) {
-                Adap.mes("　　　　　　　取り出すことはできないぞ");
+                Adap.mes("              取り出すことはできないぞ");
             }
             if (Gvar.var_233[Gvar.var_1882].Var0 == 817) {
                 if (Gvar.var_119 == 0) {
-                    Adap.mes("　　　　　　　　　何も入っていないぞ");
+                    Adap.mes("                  何も入っていないぞ");
                 }
                 if (Gvar.var_119 >= 1) {
-                    Adap.mes("　　　　　　　取り出すことはできないぞ");
+                    Adap.mes("              取り出すことはできないぞ");
                 }
             }
             Adap.mes("");
         }
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         Adap.pos(160, 269);
         Adap.color(255, 255, 255);
         if (Gvar.var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
@@ -561,13 +561,13 @@ async function func460(this: any) {
             }
             if (Gvar.item_page_number == 3) {
                 Adap.pos(168, 71);
-                Adap.font("ＭＳ Ｐゴシック", 12, 1);
+                Adap.font(Gvar.font_type, 12, 1);
                 Adap.mes("足元");
             }
         }
         if (Gvar.var_1880 == 0) {
             Adap.color(255, 255, 255);
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+            Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
             Adap.pos(15, Gvar.Y_axis_item_position);
             Adap.mes(">");
             Adap.pos(16, Gvar.Y_axis_item_position);
@@ -614,8 +614,8 @@ async function func460(this: any) {
             Adap.pset(327, 42);
             Adap.pset(255, Gvar.var_1822 + 1);
             Adap.pset(327, Gvar.var_1822 + 1);
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
-            Adap.pos(275, 46);
+            Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
+            Adap.pos(277, 46);
             Adap.color(255, 255, 255);
             if (Gvar.var_231 == 1) {
                 Adap.color(255, 255, 255);
@@ -737,12 +737,12 @@ async function func460(this: any) {
                 Adap.color(150, 150, 150);
             }
     
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
-            Adap.pos(262, Gvar.var_229);
+            Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
+            Adap.pos(260, Gvar.var_229);
             Adap.mes(">");
-            Adap.pos(263, Gvar.var_229);
+            Adap.pos(260, Gvar.var_229);
             Adap.mes(">");
-            Adap.pos(264, Gvar.var_229);
+            Adap.pos(260, Gvar.var_229);
             Adap.mes(">");
         }
         if (Gvar.var_221 == 2) {
@@ -765,8 +765,8 @@ async function func460(this: any) {
             Adap.pset(255 - Gvar.var_2036, 75 + Gvar.var_2037 + Gvar.var_2038);
             Adap.pset(327 - Gvar.var_2036, 75 + Gvar.var_2037 + Gvar.var_2038);
     
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
-            Adap.pos(275 - Gvar.var_2036, 46 + Gvar.var_2037);
+            Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
+            Adap.pos(277 - Gvar.var_2036, 46 + Gvar.var_2037);
             if (Gvar.var_2032 != 1) {
                 Adap.color(255, 255, 0);
                 Adap.mes("攻撃");
@@ -781,12 +781,12 @@ async function func460(this: any) {
             }
             Adap.color(255, 255, 255);
     
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
-            Adap.pos(262 - Gvar.var_2036, Gvar.var_246 + Gvar.var_2037);
+            Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
+            Adap.pos(260 - Gvar.var_2036, Gvar.var_246 + Gvar.var_2037);
             Adap.mes(">");
-            Adap.pos(263 - Gvar.var_2036, Gvar.var_246 + Gvar.var_2037);
+            Adap.pos(260 - Gvar.var_2036, Gvar.var_246 + Gvar.var_2037);
             Adap.mes(">");
-            Adap.pos(264 - Gvar.var_2036, Gvar.var_246 + Gvar.var_2037);
+            Adap.pos(260 - Gvar.var_2036, Gvar.var_246 + Gvar.var_2037);
             Adap.mes(">");
         }
         if (Gvar.var_221 == 3) {
@@ -804,19 +804,19 @@ async function func460(this: any) {
             Adap.pset(327, 42 + Gvar.var_2037);
             Adap.pset(255 - Gvar.var_2036, 85 + Gvar.var_2037);
             Adap.pset(327, 85 + Gvar.var_2037);
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+            Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
             Adap.color(255, 255, 255);
-            Adap.pos(275 - Gvar.var_2036, 48 + Gvar.var_2037);
+            Adap.pos(277 - Gvar.var_2036, 48 + Gvar.var_2037);
             await Func.func492(); // アイテムリスト呼び出し
             Adap.mes("" + Gvar.var_2039);
             Adap.mes("やめる");
             Adap.color(255, 255, 255);
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
-            Adap.pos(262 - Gvar.var_2036, Gvar.var_246 + Gvar.var_2037 + 2);
+            Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
+            Adap.pos(260 - Gvar.var_2036, Gvar.var_246 + Gvar.var_2037 + 2);
             Adap.mes(">");
-            Adap.pos(263 - Gvar.var_2036, Gvar.var_246 + Gvar.var_2037 + 2);
+            Adap.pos(260 - Gvar.var_2036, Gvar.var_246 + Gvar.var_2037 + 2);
             Adap.mes(">");
-            Adap.pos(264 - Gvar.var_2036, Gvar.var_246 + Gvar.var_2037 + 2);
+            Adap.pos(260 - Gvar.var_2036, Gvar.var_246 + Gvar.var_2037 + 2);
             Adap.mes(">");
         }
         return;

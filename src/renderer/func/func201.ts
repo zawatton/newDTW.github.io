@@ -4,15 +4,15 @@ import * as Func from '../func/index'
 
 async function func201(this: any) {
         Adap.dbgprt(201);
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         await Func.func080(); // 各キー入力確認
         if (Gvar.var_254 == 1) {
             Adap.DSPLAY(100); // アイテム選択時の効果音
             if (Gvar.var_690 != 10) {
                 Gvar.var_690 = Gvar.var_690 - 10;
             }
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
             await Func.func201();
             return;
         }
@@ -21,8 +21,8 @@ async function func201(this: any) {
             if (Gvar.var_690 != 90) {
                 Gvar.var_690 = Gvar.var_690 + 10;
             }
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
             await Func.func201();
             return;
         }
@@ -32,8 +32,8 @@ async function func201(this: any) {
             Gvar.var_25[14] = Gvar.var_690;
     
             await Adap.bsave("00.dat", Gvar.var_25, null, 200);
-            await Func.func337(); // メッセージ関係呼び出し
-            await Func.func051();
+            await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func051(); // キー入力待ち処理
             await Func.func199();
             return;
         }

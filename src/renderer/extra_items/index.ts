@@ -7,28 +7,12 @@ export {item714} from "./item714"
 export {item715} from "./item715"
 export {item716} from "./item716"
 
-// 聖なる弓矢
 export {item718} from "./item718"
-export {func530} from "./item718"
-
 export {item719} from "./item719"
 export {item720} from "./item720"
 
 export {item722} from "./item722"
-// 魔法のランプ
 export {item723} from "./item723"
-export {func447} from "./item723"
-export {func448} from "./item723"
-export {func449} from "./item723"
-export {func450} from "./item723"
-export {func451} from "./item723"
-export {func452} from "./item723"
-export {func453} from "./item723"
-export {func454} from "./item723"
-export {func455} from "./item723"
-export {func456} from "./item723"
-export {func457} from "./item723"
-
 export {item724} from "./item724"
 export {item725} from "./item725"
 export {item726} from "./item726"

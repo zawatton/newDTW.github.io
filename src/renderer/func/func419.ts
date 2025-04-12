@@ -14,25 +14,22 @@ async function func419(this: any) {
         Gvar.disc_rarity = Gvar.var_78[Gvar.var_321].Var13;
         await Func.func492(); // アイテムリスト呼び出し
         await Func.func398(); // 道具(メニュー画面/道具)へ直接表示されるアイテム表示
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
+
         if (Gvar.var_78[Gvar.var_321].Var11 == 0) {
-            Gvar.comments_row1 = "" + Gvar.disp_item_name + "に乗った";
             if (Gvar.belongings_item_list == 800) {
                 Gvar.var_1922 = Gvar.var_78[Gvar.var_321].Var6;
                 if (Gvar.var_862[800][0] == 1 && Gvar.var_990[Gvar.var_1922] == 1) {
                     Gvar.var_1923 = Gvar.var_1922;
                     await Func.func490();
                     if (Gvar.var_1924 != "") {
-                        Gvar.comments_row2 = "【" + Gvar.var_1924 + "】";
+                        await Func.setMessage1("" + Gvar.disp_item_name + "に乗った",
+                                                "【" + Gvar.var_1924 + "】", 7, false, false, false);
                     }
                 }
             }
+            else
+                await Func.setMessage1("" + Gvar.disp_item_name + "に乗った",
+                                        "", 7, false, false, false);
         }
 
         if (Gvar.var_78[Gvar.var_321].Var11 == 1) { // お店で発動した場合？
@@ -63,18 +60,10 @@ async function func419(this: any) {
                     Gvar.var_484 = Gvar.var_484 + 1;
                 }
             }
-            Gvar.comments_row1 = "" + Gvar.disp_item_name;
-            Gvar.comments_row2 = "値段 " + Gvar.var_1925 + " G";
+            await Func.setMessage1("" + Gvar.disp_item_name,
+                                    "値段 " + Gvar.var_1925 + " G", 7, false, false, false);
         }
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
-        for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(5);
         return;
 }
 

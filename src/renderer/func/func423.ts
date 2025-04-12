@@ -10,27 +10,11 @@ async function func423(this: any) {
             Gvar.count_buying_price = Gvar.count_buying_price + 50;
         }
         if (Gvar.var_486[Gvar.var_682][Gvar.var_225][0] >= 400 && Gvar.var_486[Gvar.var_682][Gvar.var_225][0] < 500 && Gvar.var_486[Gvar.var_682][Gvar.var_225][3] <= 0) {
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(10);
             Gvar.belongings_item_list = Gvar.var_486[Gvar.var_682][Gvar.var_225][0];
             await Func.func492(); // アイテムリスト呼び出し
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.comments_row1 = "" + Gvar.item_name + "は";
-            Gvar.comments_row2 = "ｽﾀﾝﾄﾞﾊﾟﾜｰが尽きて消滅した";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-
+            await Func.setMessage1("" + Gvar.item_name + "は",
+                                    "ｽﾀﾝﾄﾞﾊﾟﾜｰが尽きて消滅した", 7, false, false, false);
             if (Gvar.var_486[Gvar.var_682][Gvar.var_225][11] == 1) {
                 Gvar.var_106 = 1;
                 Gvar.count_buying_price = Gvar.count_buying_price + Gvar.buying_price;

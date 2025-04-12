@@ -12,7 +12,7 @@ async function func383(this: any) {
             Gvar.var_336 = Gvar.var_336 + 6;
         }
         Gvar.var_1727 = 0;
-        await Func.func384(); // アイテムをフロアへ追加する処理
+        await Func.func384();
 }
 
 export {func383}

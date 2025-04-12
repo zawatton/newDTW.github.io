@@ -1,59 +1,29 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 // No = 109 マジシャンズレッドの発動処理
 async function item109(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (Gvar.var_172 == 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "発動能力がパワーアップしている！";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            await Func.func340(); // キー入力による選択処理
+            await Func.setMessage1("発動能力がパワーアップしている！",
+                                   "", 7, true, false, false);
         }
         Gvar.var_199 = 2;
-        for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
-        Gvar.var_271 = 1;
+        await Func.AutoDraw(10);
+
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1545 = 1;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_1545 = 2;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_1545 = 3;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_1545 = 4;
-        for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "クロスファイヤーハリケーンスペシャル！";
-        Gvar.comments_row2 = "";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
+        await Func.AutoDraw(10);
+
+        await Func.setMessage1("クロスファイヤーハリケーンスペシャル！",
+                               "", 7, false, false, false);
         Adap.gsel(19);
         Adap.color(255, 0, 0);
 
@@ -63,18 +33,18 @@ async function item109(this: any) {
 
         Adap.DSPLAY(128);
         Gvar.var_1548 = 7;
-        // await Func.func337(); // メッセージ関係呼び出し
-        await Func.func337(); // メッセージ関係呼び出し
+        // await Func.func337(); // メッセージ表示処理(自動)
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_1548 = 8;
-        // await Func.func337(); // メッセージ関係呼び出し
-        await Func.func337(); // メッセージ関係呼び出し
+        // await Func.func337(); // メッセージ表示処理(自動)
+        await Func.func337(); // メッセージ表示処理(自動)
         for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
     
             Adap.DSPLAY(128);
             Gvar.var_1548 = 1;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1548 = 2;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         Gvar.var_1548 = 0;
         for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
@@ -83,10 +53,10 @@ async function item109(this: any) {
                 Gvar.var_230 = Adap.rnd(Gvar.var_34);
                 if (Gvar.var_71[Gvar.var_1550][Gvar.var_230] == Gvar.var_201 && Gvar.var_82[Gvar.var_1550][Gvar.var_230] != 0 && Gvar.var_71[Gvar.var_1550][Gvar.var_230] != 14) {
                     Gvar.var_421 = Gvar.var_82[Gvar.var_1550][Gvar.var_230];
-                    Gvar.var_271 = 1;
+                    Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                     Gvar.var_1549 = 1;
                     for (let cnt5 = 0; cnt5 < 10; ++cnt5) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_1549++;
                     }
                     Gvar.var_1549 = 0;
@@ -105,10 +75,10 @@ async function item109(this: any) {
                     break;
                 }
                 if (Gvar.var_71[Gvar.var_1550][Gvar.var_230] == Gvar.var_201 && Gvar.var_77[Gvar.var_1550][Gvar.var_230] == 0 && Gvar.var_80[Gvar.var_1550][Gvar.var_230] == 0 && Gvar.var_73[Gvar.var_1550][Gvar.var_230] == 0 && Gvar.var_65[Gvar.var_1550][Gvar.var_230] == 0 && Gvar.var_82[Gvar.var_1550][Gvar.var_230] == 0 && Gvar.var_71[Gvar.var_1550][Gvar.var_230] != 14) {
-                    Gvar.var_271 = 1;
+                    Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                     Gvar.var_1549 = 1;
                     for (let cnt5 = 0; cnt5 < 10; ++cnt5) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_1549++;
                     }
                     Gvar.var_1549 = 0;
@@ -118,11 +88,11 @@ async function item109(this: any) {
                     Gvar.var_1396 = Gvar.var_1550;
                     Gvar.var_1397 = Gvar.var_230;
                     Gvar.var_1547 = 1;
-                    Gvar.var_271 = 1;
+                    Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             
                     Adap.DSPLAY(128);
                     for (let cnt5 = 0; cnt5 < 7; ++cnt5) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_1547++;
                     }
                     Gvar.var_1547 = 0;
@@ -134,20 +104,20 @@ async function item109(this: any) {
             }
         }
         Gvar.var_1545 = 3;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_1545 = 2;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_1545 = 1;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_1545 = 0;
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_529 = 0;
         if (Gvar.var_2254 == 1) {
             Gvar.var_2254 = 0;
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

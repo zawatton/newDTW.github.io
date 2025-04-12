@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 async function func225(this: any) {
         Adap.dbgprt(225);
@@ -9,7 +8,7 @@ async function func225(this: any) {
         Adap.redraw(0);
         Adap.color(0, 0, 0);
         Adap.boxf();
-        Adap.font("ＭＳ ゴシック", 14);
+        Adap.font("メイリオ", 14);
         Adap.color(255, 255, 255);
         Adap.gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         Adap.pos(10, 10);
@@ -34,7 +33,7 @@ async function func225(this: any) {
         Gvar.var_962 = Gvar.var_955;
         Gvar.var_963 = 30;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            Adap.font("ＭＳ ゴシック", 14);
+            Adap.font("メイリオ", 14);
             Adap.color(255, 255, 255);
             Adap.pos(10, Gvar.var_963);
             Adap.mes("" + Gvar.var_962 + " 階");
@@ -64,7 +63,7 @@ async function func225(this: any) {
                     Adap.gcopy(Gvar.var_965, 40, Gvar.var_966 * 40, 40, 40);
                     Gvar.enemy_list = Gvar.var_958[Gvar.var_961];
                     await Func.func626(); // 敵リスト
-                    Adap.font("ＭＳ ゴシック", 12);
+                    Adap.font("メイリオ", 12);
                     if (Gvar.var_957 <= 1) {
                         Adap.pos(Gvar.var_964, Gvar.var_963 + 42);
                         Adap.color(255, 255, 255);
@@ -108,7 +107,7 @@ async function func225(this: any) {
         Adap.redraw(1);
         await Func.func080(); // 各キー入力確認
         if (Gvar.key_X_on == 1) {
-            await Main.func140();
+            await Func.func140(); // 不明(タイトル画面処理？)
             return;
         }
         if (Gvar.var_259 == 1 && Gvar.var_955 != 90) { // var_259:入力判定[↓]

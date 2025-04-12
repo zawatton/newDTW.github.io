@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 // No = 103 エコーズAct3の発動能力
 async function item103(this: any) {
@@ -19,21 +18,10 @@ async function item103(this: any) {
             Gvar.bufferid_stand_disc = 29; // Adap.buffer(29)は"img_stand3.gif"
         }
         Gvar.var_1283 = 1;
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "ACT ３ FREEZE　！！";
-        Gvar.comments_row2 = "";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
+
+        await Func.setMessage1("ACT ３ FREEZE  ！！",
+                               "", 7, false, false, false);
+        
         Gvar.var_2261 = Gvar.kougeki_disc_id ;
         Gvar.kougeki_disc_id  = 103;
         Gvar.var_243 = 1;
@@ -68,9 +56,9 @@ async function item103(this: any) {
             Gvar.var_348 = Gvar.var_348 - 1;
         }
         Adap.DSPLAY(122);
-        for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+
+        await Func.AutoDraw(2);
+
         if (Gvar.var_82[Gvar.var_347][Gvar.var_348] != 0) {
             Gvar.var_2231 = Gvar.var_82[Gvar.var_347][Gvar.var_348];
             if (Gvar.var_83[Gvar.var_2231].Var0 != 50) {
@@ -90,9 +78,9 @@ async function item103(this: any) {
                 Gvar.var_747 = 1;
             }
         }
-        for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+
+        await Func.AutoDraw(10);
+
         Gvar.var_1283 = 0;
         Gvar.kougeki_disc_id  = Gvar.var_2261;
         if (Gvar.var_2254 == 1) {
@@ -100,7 +88,7 @@ async function item103(this: any) {
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

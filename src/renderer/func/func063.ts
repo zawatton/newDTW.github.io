@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// ダンジョン内の階段機能
 async function func063(this: any) {
         Adap.dbgprt(63);
         Adap.color(0, 0, 0);
@@ -33,7 +35,7 @@ async function func063(this: any) {
             Adap.pset(15, 145);
             Adap.pset(211, 145);
         }
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         Adap.color(255, 255, 255);
         Adap.pos(33, 47);
         if (Gvar.var_262 == 0) { // Gvar.var_262 == 0 なので、Gvar.dungeon_number = 0 でなければ
@@ -69,7 +71,7 @@ async function func063(this: any) {
             }
         }
         Adap.color(255, 255, 255);
-        Adap.font("MS ゴシック", 16, 1);
+        Adap.font(Gvar.font_type, 16, 1);
         Adap.pos(Gvar.var_245, Gvar.var_246);
         Adap.mes(">");
         Adap.pos(Gvar.var_245 + 1, Gvar.var_246);

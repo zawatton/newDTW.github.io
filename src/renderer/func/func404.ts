@@ -1,8 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Map from '../map/index'
-import * as Main from '../newdtw/index'
 
 // アイテムを置く時の動作処理
 async function func404(this: any) {
@@ -11,44 +9,16 @@ async function func404(this: any) {
             Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             Gvar.var_1866 = 0;
             Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "ここには置くことができない。";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.setMessage1("ここには置くことができない。", "", 7, false, false, false);
+            await Func.AutoDraw(3);
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         await Func.func405();
         // No = 0 なので、拠点(ホテル、亀、)
         if (Gvar.dungeon_number == 0 && Gvar.var_66 == 15 && Gvar.var_67 == 21) {
             Gvar.var_1867 = Gvar.belongings_item_list;
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "" + Gvar.item_name + "を捨てた";
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
+            await Func.setMessage1("" + Gvar.item_name + "を捨てた", "", 7, false, false, false);
             if (Gvar.var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
                 await Func.func430();
             }
@@ -56,7 +26,7 @@ async function func404(this: any) {
             Adap.DSPLAY(148);
             Gvar.var_557 = 1;
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_557++;
             }
             Gvar.var_557 = 0;
@@ -86,69 +56,46 @@ async function func404(this: any) {
                 Gvar.var_558 = 1;
             }
             if (Gvar.var_558 == 1) {
-                await Map.func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
+                await Func.func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
                 Gvar.var_560 = 1;
                 Gvar.var_561 = 5; // マップX軸原点の初期値5 (安易に変更すると壁の中になるのでワープしてしまう)
                 Gvar.var_562 = 5; // Ver0.1404にて修正。0 → 5。実験中に0へ変更したのを戻し忘れ。マップY軸原点の初期値5 (安易に変更すると壁の中になるのでワープしてしまう)
                 if (Gvar.var_559 == 0) {
-                    await Map.func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
+                    await Func.func288(); // ヴェネチアホテル+亀初期マップ+ローマ・ティベレ河マップ配置処理(亀の成長0)
                 }
                 if (Gvar.var_559 == 1) {
-                    await Map.func289(); // ヴェネチアホテル+亀マップ配置処理(亀の成長1)
+                    await Func.func289(); // ヴェネチアホテル+亀マップ配置処理(亀の成長1)
                 }
                 if (Gvar.var_559 == 2) {
-                    await Map.func290(); // ヴェネチアホテル+亀マップ配置処理(亀の成長2)
+                    await Func.func290(); // ヴェネチアホテル+亀マップ配置処理(亀の成長2)
                 }
                 if (Gvar.var_559 == 3) {
-                    await Map.func291(); // ヴェネチアホテル+亀マップ配置処理(亀の成長3)
+                    await Func.func291(); // ヴェネチアホテル+亀マップ配置処理(亀の成長3)
                 }
                 if (Gvar.var_559 == 4) {
-                    await Map.func292(); // ヴェネチアホテル+亀マップ配置処理(亀の成長4)
+                    await Func.func292(); // ヴェネチアホテル+亀マップ配置処理(亀の成長4)
                 }
                 await Func.func248();
-                Gvar.comments_row1 = Gvar.comments_row1a;
-                Gvar.comments_row2 = Gvar.comments_row2a;
-                Gvar.comments_row1a = "亀はアイテムを養分として";
-                Gvar.comments_row2a = "成長したようだ。";
+
+                await Func.setMessage1("亀はアイテムを養分として", "成長したようだ。", 7, false, false, false);
+
                 if (Gvar.var_559 == 4) {
-                    Gvar.comments_row1a = "亀はアイテムを養分として";
-                    Gvar.comments_row2a = "最大まで成長したようだ。";
+                    await Func.setMessage1("亀はアイテムを養分として", "最大まで成長したようだ。", 7, false, false, false);
                 }
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                await Func.func047();
-                await Func.func050();
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(5);
             }
             Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
             
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         if (Gvar.var_446 == 0) {
             Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             Gvar.var_1866 = 0;
             Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "アイテムを置くところが無いぞ";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.setMessage1("アイテムを置くところが無いぞ", "", 7, false, false, false);
+            await Func.AutoDraw(3);
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         await Func.func724();
@@ -191,24 +138,9 @@ async function func404(this: any) {
             await Func.func430();
         }
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "" + Gvar.disp_item_name + " を置いた";
-        Gvar.comments_row2 = "";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        
-        await Func.func047();
+        await Func.setMessage1("" + Gvar.disp_item_name + " を置いた", "", 7, false, false, false);
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

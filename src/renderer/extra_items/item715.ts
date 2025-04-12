@@ -4,12 +4,10 @@ import * as Func from '../func/index'
 
 // No = 715 アイテム「点滴」を使用した時の効果
 async function item715(this: any) {
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1242 = 1;
-        for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
-        Gvar.var_271 = 0;
+        await Func.AutoDraw(20);
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1242 = 0;
         Gvar.var_360 = 0;
         Gvar.var_2211 = 0;
@@ -25,10 +23,12 @@ async function item715(this: any) {
             Gvar.var_350 = Gvar.var_567;
         }
         if (Gvar.var_350 == Gvar.var_567) {
-            Gvar.item_message1 = "「栄養補給させてもらったぜ！」";
+            await Func.setMessage1("「栄養補給させてもらったぜ！」",
+                                   "", 7, false, false, false);
         }
         if (Gvar.var_2211 == 1) {
-            Gvar.item_message1 = "最大満腹度が" + Gvar.var_567 + "になった。";
+            await Func.setMessage1("最大満腹度が" + Gvar.var_567 + "になった。",
+                                   "", 7, false, false, false);
         }
         return;
 }

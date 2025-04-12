@@ -1,6 +1,5 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
-
 async function func251(this: any) {
         Adap.dbgprt(251);
         Gvar.var_1114 = Gvar.var_76[Gvar.var_1109][4][1];

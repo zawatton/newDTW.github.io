@@ -6,25 +6,15 @@ async function func549(this: any) {
         Adap.dbgprt(549);
         Adap.DSPLAY(101); // 階段を昇るor降りる時の効果音
         Gvar.var_373 = 5;
-        for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(2);
         Gvar.var_373 = 4;
-        for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(2);
         Gvar.var_373 = 3;
-        for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(2);
         Gvar.var_373 = 2;
-        for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(2);
         Gvar.var_373 = 1;
-        for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(10);
         Gvar.var_373 = 0;
         Gvar.special_floor = 0;
         Gvar.var_532 = 1;

@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+ // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
 async function func331(this: any) {
         Adap.dbgprt(331);
         Gvar.var_1170 = "";

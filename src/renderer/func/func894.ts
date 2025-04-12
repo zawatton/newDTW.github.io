@@ -46,7 +46,7 @@ async function func894(this: any) {
 
         Adap.gsel(await Adap.ginfo(3), 1);
         Adap.title("ログイン");
-        Adap.cls(4);
+        Adap.cls(4); // 黒く薄いフィルターがかかる
         Adap.gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         Adap.pos(35, 35);
         Adap.gcopy(17, 0, 560, 280, 120);
@@ -54,7 +54,7 @@ async function func894(this: any) {
         Adap.gmode(4, null, null, 80);
         Adap.pos(0, 0);
         Adap.gcopy(12, 0, 0, 320, 200);
-        Adap.font("MS ゴシック", 12);
+        Adap.font(Gvar.font_type, 12);
         Adap.color(255, 255, 255);
         Adap.pos(10, 10);
         Adap.mes("ニックネーム");

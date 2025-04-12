@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Music from '../music/index'
 
 async function func653(this: any) {
         Adap.dbgprt(653);
@@ -113,13 +114,9 @@ async function func653(this: any) {
                 Gvar.var_1451 = Gvar.var_1715;
             }
             Gvar.var_2985 = 1;
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
-            await Func.func089(); // 各装備discごとの攻撃音設定
-            for (let cnt2 = 0; cnt2 < 6; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(3);
+            await Music.func089(); // 各装備discごとの攻撃音設定
+            await Func.AutoDraw(6);
             Gvar.var_1450 = (Gvar.var_1450 - Gvar.var_66 + 4) * 40;
             Gvar.var_1451 = (Gvar.var_1451 - Gvar.var_67 + 4) * 40 - 10;
             Gvar.var_402 = Gvar.var_3024;
@@ -135,7 +132,7 @@ async function func653(this: any) {
                 Gvar.var_2267[3] = Gvar.var_2267[2];
                 Gvar.var_2267[2] = Gvar.var_2267[1];
                 Gvar.var_2267[1] = Gvar.var_2267[0];
-                Gvar.var_2267[0] = Gvar.var_83[Gvar.var_314].Var0;
+                Gvar.var_2267[0] = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
                 if (Gvar.var_2267[0] != 0 && Gvar.var_2267[0] == Gvar.var_2267[1]) {
                     Gvar.var_143 = 2;
                 }
@@ -165,9 +162,9 @@ async function func653(this: any) {
                 }
             }
             Gvar.var_1447 = 1;
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1447 = Gvar.var_1447 + 1;
                 if (Gvar.var_1447 == 4) {
                     Gvar.var_2867 = Adap.rnd(12);
@@ -186,15 +183,15 @@ async function func653(this: any) {
                         Gvar.var_3014 = 1;
                     }
                     if (Gvar.var_2867 == 0) {
-                        await Func.func090();
+                        await Music.func090();
                         for (let cnt5 = 0; cnt5 < 3; ++cnt5) {
-                            await Func.func337(); // メッセージ関係呼び出し
+                            await Func.func337(); // メッセージ表示処理(自動)
                         }
                     }
                 }
             }
             Gvar.var_1447 = 0;
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_3022 = 1;
         }
         return;

@@ -4,7 +4,7 @@ async function func867(this: any) {
         Adap.dbgprt(867);
         Adap.color(0, 0, 0);
         Adap.boxf(50, 200, 330, 250);
-        Adap.font("ＭＳ Ｐゴシック", 12);
+        Adap.font(Gvar.font_type, 12);
         Adap.color(255, 255, 255);
         Adap.pos(60, 210);
         if (Gvar.var_3294 == 1) {

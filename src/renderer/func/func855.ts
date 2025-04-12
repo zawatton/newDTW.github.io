@@ -1,6 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
-import * as Func from '../func/index'
+import * as Func from './index'
 
 async function func855(this: any) {
         Adap.dbgprt(855);
@@ -90,7 +90,7 @@ async function func855(this: any) {
                 if (Gvar.var_71[Gvar.var_447][Gvar.var_449] >= 1 && Gvar.var_71[Gvar.var_447][Gvar.var_449] <= 12) {
                     Adap.gcopy(5, 0, Gvar.y_axis_map_image * 40, 40, 40);
                     Adap.pos(Gvar.var_1150 + 3, Gvar.var_1151 + 30);
-                    Adap.font("ＭＳ Ｐゴシック", 11);
+                    Adap.font(Gvar.font_type, 11);
                     Adap.color(155, 155, 155);
                     Adap.mes(Gvar.var_71[Gvar.var_447][Gvar.var_449]);
                 }
@@ -301,7 +301,7 @@ async function func855(this: any) {
                 }
                 if (Gvar.var_71[Gvar.var_447][Gvar.var_449] >= 21 && Gvar.var_71[Gvar.var_447][Gvar.var_449] <= 24) {
                     Adap.pos(Gvar.var_1150 + 3, Gvar.var_1151 + 20);
-                    Adap.font("ＭＳ Ｐゴシック", 11);
+                    Adap.font(Gvar.font_type, 11);
                     Adap.color(155, 155, 155);
                     if (Gvar.var_71[Gvar.var_447][Gvar.var_449] == 21) {
                         Adap.mes("上出口");

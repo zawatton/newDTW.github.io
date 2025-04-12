@@ -2,7 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func920(this: any) {
         Adap.dbgprt(920);
-        if (Gvar.var_83[Gvar.var_2194].Var31 == 4 || Gvar.var_83[Gvar.var_2194].Var31 == 5 || Gvar.var_83[Gvar.var_2194].Var13 != 0 || Gvar.var_151 != 0 || Gvar.var_163 != 0) {
+        if (Gvar.var_83[Gvar.var_2194].Var31 == 4 || Gvar.var_83[Gvar.var_2194].Var31 == 5 || Gvar.var_83[Gvar.var_2194].Var13 != 0 || Gvar.time_paused_count != 0 || Gvar.time_paused!= 0) {
             return;
         }
         if (Gvar.var_83[Gvar.var_2194].Var0 == 20 || Gvar.var_83[Gvar.var_2194].Var0 == 132 || Gvar.var_83[Gvar.var_2194].Var0 == 143 || Gvar.var_83[Gvar.var_2194].Var0 == 90 || Gvar.var_83[Gvar.var_2194].Var0 == 96 || Gvar.var_83[Gvar.var_2194].Var0 == 91 || Gvar.var_83[Gvar.var_2194].Var0 == 92) {

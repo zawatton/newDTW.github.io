@@ -2,7 +2,6 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Stand from '../stand/index'
-import * as Main from '../newdtw/index'
 
 async function func511(this: any) {
         Adap.dbgprt(511);
@@ -46,24 +45,10 @@ async function func511(this: any) {
 
             await Func.func492(); // アイテムリスト呼び出し
             Gvar.identified_disc_name = Gvar.item_name;
-
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "なんと" + Gvar.unidentified_disc_name + "は";
-            Gvar.comments_row2 = "" + Gvar.identified_disc_name + "だった！";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
+            await Func.setMessage1("なんと" + Gvar.unidentified_disc_name + "は",
+                                    "" + Gvar.identified_disc_name + "だった！", 7, false, false, false);
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
         }
         // No = 100 スタープラチナの発動処理
@@ -446,24 +431,12 @@ async function func511(this: any) {
             await Stand.item415();
             return;
         }
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "しかし何も起こらなかった";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
+        await Func.setMessage1("しかし何も起こらなかった",
+                                "", 7, false, false, false);
         Gvar.var_234 = 0;
         Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

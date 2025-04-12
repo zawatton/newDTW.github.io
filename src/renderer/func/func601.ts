@@ -25,7 +25,7 @@ async function func601(this: any) {
         Gvar.var_2817 = Adap.rnd(33);
         Gvar.var_2817 = Gvar.var_2817 + 111;
         Gvar.var_209 = Math.floor(Gvar.var_949 * Gvar.var_2817 / 128);
-        if (Gvar.to_freeze >= 1) {
+        if (Gvar.var_128 >= 1) {
             Gvar.var_209 = Math.floor(Gvar.var_209 * 3 / 2);
         }
         if (Gvar.var_113 == 1) {

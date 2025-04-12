@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 async function func499(this: any) {
         Adap.dbgprt(499);
@@ -14,16 +13,14 @@ async function func499(this: any) {
             Gvar.var_374 = 1;
             Gvar.var_774 = 160;
             Gvar.var_1576 = 1;
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_774 = Gvar.var_774 - 20;
             }
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1576 = 0;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(10);
             Gvar.var_374 = 0;
             Gvar.var_216 = 0;
         }
@@ -68,9 +65,9 @@ async function func499(this: any) {
         if (Gvar.var_2112 == 0) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 Gvar.var_374 = 1;
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_374 = 0;
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
         }
         if (Gvar.var_2237 == 0) {
@@ -98,9 +95,9 @@ async function func499(this: any) {
         if (Gvar.var_71[Gvar.var_66][Gvar.var_292] != 13 && Gvar.var_71[Gvar.var_66][Gvar.var_292] != 0 && Gvar.var_71[Gvar.var_66][Gvar.var_292] != 14) {
             Gvar.var_201 = Gvar.var_71[Gvar.var_66][Gvar.var_292];
         }
-        await Main.func016();
-        await Main.func017();
-        await Main.func018();
+        await Func.func016();
+        await Func.func017();
+        await Func.func018();
         if (Gvar.var_200 == Gvar.var_201 && Gvar.special_floor != 8) {
             Gvar.var_98 = 1;
         }
@@ -111,19 +108,17 @@ async function func499(this: any) {
             Gvar.var_374 = 1;
             Gvar.var_774 = 0;
             Gvar.var_1578 = 1;
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_774 = Gvar.var_774 + 20;
             }
             Adap.DSPLAY(217);
             Gvar.var_1578 = 0;
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_374 = 0;
             Gvar.var_199 = 2;
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(10);
         }
         Gvar.var_2238 = 1;
         for (let cnt1 = 0; cnt1 < Gvar.var_97; ++cnt1) {
@@ -133,9 +128,7 @@ async function func499(this: any) {
         }
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         if (Gvar.var_2112 == 1) {
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(10);
         }
         Gvar.var_2112 = 0;
         if (Gvar.var_96 >= 1 && Gvar.var_201 == Gvar.var_204) {

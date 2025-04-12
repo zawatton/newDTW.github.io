@@ -10,7 +10,7 @@ async function func195(this: any) {
 
             Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
             await Func.func051();
-            await Adap.bsave("00.dat", Gvar.data = Gvar.var_686, null, 0);
+            await Adap.bsave("00.dat", Gvar.data = Gvar.animationDelay, null, 0);
             Gvar.var_900 = 0;
             await Func.func193();
             return;
@@ -24,13 +24,13 @@ async function func195(this: any) {
         if (Gvar.var_255 == 1) { // var_255:入力判定[↑]
             if (Gvar.var_906 == 0) {
                 Gvar.var_906 = 0;
-                Gvar.var_686 = 30;
+                Gvar.animationDelay = 30;
                 // await Func.func337(); // メッセージ関係呼び出し
                 await Func.func337(); // メッセージ関係呼び出し
             }
             if (Gvar.var_906 == 1) {
                 Gvar.var_906 = 0;
-                Gvar.var_686 = 30;
+                Gvar.animationDelay = 30;
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
                 // await Func.func337(); // メッセージ関係呼び出し
@@ -38,7 +38,7 @@ async function func195(this: any) {
             }
             if (Gvar.var_906 == 2) {
                 Gvar.var_906 = 1;
-                Gvar.var_686 = 40;
+                Gvar.animationDelay = 40;
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
                 // await Func.func337(); // メッセージ関係呼び出し
@@ -46,7 +46,7 @@ async function func195(this: any) {
             }
             if (Gvar.var_906 == 3) {
                 Gvar.var_906 = 2;
-                Gvar.var_686 = 50;
+                Gvar.animationDelay = 50;
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
                 // await Func.func337(); // メッセージ関係呼び出し
@@ -54,7 +54,7 @@ async function func195(this: any) {
             }
             if (Gvar.var_906 == 4) {
                 Gvar.var_906 = 3;
-                Gvar.var_686 = 60;
+                Gvar.animationDelay = 60;
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
                 // await Func.func337(); // メッセージ関係呼び出し
@@ -64,13 +64,13 @@ async function func195(this: any) {
         if (Gvar.var_259 == 1) { // var_259:入力判定[↓]
             if (Gvar.var_906 == 4) {
                 Gvar.var_906 = 4;
-                Gvar.var_686 = 70;
+                Gvar.animationDelay = 70;
                 // await Func.func337(); // メッセージ関係呼び出し
                 await Func.func337(); // メッセージ関係呼び出し
             }
             if (Gvar.var_906 == 3) {
                 Gvar.var_906 = 4;
-                Gvar.var_686 = 70;
+                Gvar.animationDelay = 70;
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
                 // await Func.func337(); // メッセージ関係呼び出し
@@ -78,7 +78,7 @@ async function func195(this: any) {
             }
             if (Gvar.var_906 == 2) {
                 Gvar.var_906 = 3;
-                Gvar.var_686 = 60;
+                Gvar.animationDelay = 60;
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
                 // await Func.func337(); // メッセージ関係呼び出し
@@ -86,7 +86,7 @@ async function func195(this: any) {
             }
             if (Gvar.var_906 == 1) {
                 Gvar.var_906 = 2;
-                Gvar.var_686 = 50;
+                Gvar.animationDelay = 50;
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
                 // await Func.func337(); // メッセージ関係呼び出し
@@ -94,7 +94,7 @@ async function func195(this: any) {
             }
             if (Gvar.var_906 == 0) {
                 Gvar.var_906 = 1;
-                Gvar.var_686 = 40;
+                Gvar.animationDelay = 40;
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
                 // await Func.func337(); // メッセージ関係呼び出し

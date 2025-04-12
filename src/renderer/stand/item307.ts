@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 // No = 307 不明disc(オシリス神?) の発動処理 
 async function item307(this: any) {
@@ -19,22 +18,8 @@ async function item307(this: any) {
             Gvar.bufferid_stand_disc = 29; // Adap.buffer(29)は"img_stand3.gif"
         }
         Gvar.var_1283 = 1;
-        await Func.func094(); // メッセージ送りの際の効果音
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "お前は敗北を認めた！";
-        Gvar.comments_row2 = "";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
+        await Func.setMessage1("お前は敗北を認めた！",
+                               "", 7, false, false, true);
         Gvar.var_2261 = Gvar.kougeki_disc_id ;
         Gvar.kougeki_disc_id  = 307;
         Gvar.var_243 = 1;
@@ -92,7 +77,7 @@ async function item307(this: any) {
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

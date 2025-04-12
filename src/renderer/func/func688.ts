@@ -39,9 +39,9 @@ async function func688(this: any) {
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         Gvar.var_312 = 1;
         for (let cnt1 = 0; cnt1 < 51; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_311 = Gvar.var_311 - 5;
-            Gvar.var_198 = 1;
+            Gvar.var_198 = 1; // メッセージウィンドウ開く
             Gvar.var_300 = 0;
         }
         Gvar.var_312 = 0;

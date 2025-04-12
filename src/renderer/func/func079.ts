@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 async function func079(this: any) {
         Adap.dbgprt(79);
@@ -13,99 +12,74 @@ async function func079(this: any) {
         }
         // 仗助のdiscを使用した際のランダム動作処理
         if (Gvar.var_139 == 10 || Gvar.var_139 == 20 || Gvar.var_139 == 30 || Gvar.var_139 == 40) {
-            await Func.func094(); // メッセージ送りの際の効果音
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
             if (Gvar.var_139 == 10) {
                 if (Gvar.var_601 == 0) {
-                    Gvar.comments_row1 = "「このヘアースタイルが";
-                    Gvar.comments_row2 = "　チンケな髪だとォ？」";
+                    await Func.setMessage1("「このヘアースタイルが",
+                                            "  チンケな髪だとォ？」", 7, false, false, true);
                 }
                 if (Gvar.var_601 == 1) {
-                    Gvar.comments_row1 = "「このヘアースタイルが";
-                    Gvar.comments_row2 = "　サザエさんみてェーだとォ？」";
+                    await Func.setMessage1("「このヘアースタイルが",
+                                            "  サザエさんみてェーだとォ？」", 7, false, false, true);
                 }
                 if (Gvar.var_601 == 2) {
-                    Gvar.comments_row1 = "「このヘアースタイルが";
-                    Gvar.comments_row2 = "　くだらねーだとォ？」";
+                    await Func.setMessage1("「このヘアースタイルが",
+                                            "  くだらねーだとォ？」", 7, false, false, true);
                 }
                 if (Gvar.var_601 == 3) {
-                    Gvar.comments_row1 = "「このヘアースタイルが";
-                    Gvar.comments_row2 = "　古くさいセンスだとォ？」";
+                    await Func.setMessage1("「このヘアースタイルが",
+                                            "  古くさいセンスだとォ？」", 7, false, false, true);
                 }
             }
             if (Gvar.var_139 == 20) {
-                Gvar.comments_row1 = "「たしかに聞いたぞ";
-                Gvar.comments_row2 = "　コラ―――――――ッ！」";
+                await Func.setMessage1("「たしかに聞いたぞ",
+                                        "  コラ―――――――ッ！」", 7, false, false, true);
             }
             if (Gvar.var_139 == 30) {
-                Gvar.comments_row1 = "「どこ隠れやがったあ――――";
-                Gvar.comments_row2 = "　スッタコがぁ～～～～ッ」";
+                await Func.setMessage1("「どこ隠れやがったあ――――",
+                                        "  スッタコがぁ～～～～ッ」", 7, false, false, true);
             }
             if (Gvar.var_139 == 40) {
-                Gvar.comments_row1 = "「けなすやつあ　ゆるさねえ～～～～";
-                Gvar.comments_row2 = "　何者ﾝだろーと黙っちゃあいねえッ！」";
+                await Func.setMessage1("「けなすやつあ  ゆるさねえ～～～～",
+                                        "  何者ﾝだろーと黙っちゃあいねえッ！」", 7, false, false, true);
             }
-            Gvar.var_198 = 1;
+            Gvar.var_198 = 1; // メッセージウィンドウ開く
             Gvar.var_300 = 0;
-            await Func.func047();
+            await Func.func047(); // メッセージ履歴追加処理
         }
         // ドッピオのdiscを使用した際のランダム動作処理
         if (Gvar.var_144 == 10 || Gvar.var_144 == 15 || Gvar.var_144 == 20 || Gvar.var_144 == 25 || Gvar.var_144 == 30 || Gvar.var_144 == 35 || Gvar.var_144 == 40 || Gvar.var_144 == 45) {
-            await Func.func094(); // メッセージ送りの際の効果音
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
             if (Gvar.var_144 == 10) {
-                Gvar.comments_row1 = "ﾄﾞｯﾋﾟｵ「今 ボスから電話があったんだ…";
-                Gvar.comments_row2 = "　　　　僕の任務は…」";
+                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「今 ボスから電話があったんだ…",
+                                        "        僕の任務は…」", 7, false, false, true);
             }
             if (Gvar.var_144 == 15) {
-                Gvar.comments_row1 = "ﾄﾞｯﾋﾟｵ「えーと…　なんだっけ…」";
-                Gvar.comments_row2 = "";
+                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「えーと…  なんだっけ…」",
+                                        "", 7, false, false, true);
             }
             if (Gvar.var_144 == 20) {
-                Gvar.comments_row1 = "ﾄﾞｯﾋﾟｵ「…やばい…！ このままここに";
-                Gvar.comments_row2 = "　　　　ボケッとしてるのはやばいぞッ！」";
+                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「…やばい…！ このままここに",
+                                        "        ボケッとしてるのはやばいぞッ！」", 7, false, false, true);
             }
             if (Gvar.var_144 == 25) {
-                Gvar.comments_row1 = "ﾄﾞｯﾋﾟｵ「すぐにも襲われそうだッ！」";
-                Gvar.comments_row2 = "";
+                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「すぐにも襲われそうだッ！」",
+                                        "", 7, false, false, true);
             }
             if (Gvar.var_144 == 30) {
-                Gvar.comments_row1 = "ﾄﾞｯﾋﾟｵ「ど…どこにいるんですか？";
-                Gvar.comments_row2 = "　　　　ボス！！」";
+                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「ど…どこにいるんですか？",
+                                        "        ボス！！」", 7, false, false, true);
             }
             if (Gvar.var_144 == 35) {
-                Gvar.comments_row1 = "ﾄﾞｯﾋﾟｵ「オレの近くにいるのですかッ？」";
-                Gvar.comments_row2 = "";
+                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「オレの近くにいるのですかッ？」",
+                                        "", 7, false, false, true);
             }
             if (Gvar.var_144 == 40) {
-                Gvar.comments_row1 = "ﾄﾞｯﾋﾟｵ「いるならすぐに来て下さい！」";
-                Gvar.comments_row2 = "";
+                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「いるならすぐに来て下さい！」",
+                                        "", 7, false, false, true);
             }
             if (Gvar.var_144 == 45) {
-                Gvar.comments_row1 = "ﾄﾞｯﾋﾟｵ「足に力が入らないんです…」";
-                Gvar.comments_row2 = "";
+                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「足に力が入らないんです…」",
+                                        "", 7, false, false, true);
             }
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
         }
         if (Gvar.var_201 == 14) {
             if (Gvar.var_199 == 1) {
@@ -862,11 +836,11 @@ async function func079(this: any) {
                     Gvar.var_618 = 1;
                 }
                 Gvar.var_217 = 1;
-                await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+                await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
                 return;
             }
         }
-        await Main.func015(); // ディアボロの移動処理(座標計算処理)
+        await Func.func015(); // ディアボロの移動処理(座標計算処理)
         return;
 }
 

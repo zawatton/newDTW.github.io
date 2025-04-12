@@ -29,7 +29,9 @@ async function enemy045(this: any) {
         await Func.func492(); // アイテムリスト呼び出し
         Gvar.var_2886 = Gvar.item_name;
         Gvar.var_2887 = 0;
+        // discが漆黒のオーラを纏っていない場合
         if (Gvar.var_233[Gvar.var_475].Var12 != 2) {
+            // もし射撃discにエコーズAct2以外を装備していた場合
             if (Gvar.shageki_disc_id != 405) {
                 Gvar.var_233[Gvar.var_475].Var12 = 1;
                 Gvar.var_233[Gvar.var_475].Var14 = 1;
@@ -46,6 +48,7 @@ async function enemy045(this: any) {
                     Gvar.var_898 = 1;
                 }
             }
+            // もし射撃discにエコーズAct2を装備していた場合
             if (Gvar.shageki_disc_id == 405) {
                 await Func.func426();
                 await Func.func427();
@@ -59,6 +62,7 @@ async function enemy045(this: any) {
                 }
             }
         }
+        // discが漆黒のオーラを纏っていた場合
         if (Gvar.var_233[Gvar.var_475].Var12 == 2) {
             Gvar.var_2887 = 1;
         }
@@ -92,89 +96,40 @@ async function enemy045(this: any) {
         Adap.DSPLAY(220);
         for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
             Gvar.var_2578 = 1;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_2578 = 0;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
         }
-        for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(5);
         Gvar.var_411 = 0;
         Gvar.var_83[Gvar.var_412].Var21 = 0;
         Gvar.var_389 = 0;
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "" + Gvar.var_2886 + "が";
-        Gvar.comments_row2 = "呪われた！";
-        Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        await Func.func047();
+        await Func.setMessage1("" + Gvar.var_2886 + "が",
+                               "呪われた！", 8, true, false, false);
         if (Gvar.var_2887 == 1) {
-            await Func.func340(); // キー入力による選択処理
-            Gvar.comments_row1 = Gvar.comments_row1a;
-            Gvar.comments_row2 = Gvar.comments_row2a;
-            Gvar.comments_row1a = "･･･と思ったが、";
-            Gvar.comments_row2a = "漆黒のオーラに守られて無事だった。";
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func050();
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
+            await Func.setMessage1("･･･と思ったが、",
+                                   "漆黒のオーラに守られて無事だった。", 7, false, false, false);
         }
         if (Gvar.var_2887 == 2) {
-            await Func.func340(); // キー入力による選択処理
-            Gvar.comments_row1 = Gvar.comments_row1a;
-            Gvar.comments_row2 = Gvar.comments_row2a;
-            Gvar.comments_row1a = "･･･と思ったが、";
-            Gvar.comments_row2a = "装備DISCの効果によって呪いを防いだ！";
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func050();
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            await Func.func340(); // キー入力による選択処理
-            Gvar.comments_row1 = Gvar.comments_row1a;
-            Gvar.comments_row2 = Gvar.comments_row2a;
+            await Func.setMessage1("･･･と思ったが、",
+                                   "装備DISCの効果によって呪いを防いだ！", 7, true, true, false);
             Gvar.var_1073 = Adap.rnd(4);
             if (Gvar.var_1073 == 0) {
-                Gvar.comments_row1a = "君はもう「エコーズact2」の能力に";
-                Gvar.comments_row2a = "勝つことはできない！";
+                await Func.setMessage1("君はもう「エコーズact2」の能力に",
+                                       "勝つことはできない！", 7, false, false, false);
             }
             if (Gvar.var_1073 == 1) {
-                Gvar.comments_row1a = "「大嫌い」だ！";
-                Gvar.comments_row2a = "";
+                await Func.setMessage1("「大嫌い」だ！", "", 7, false, false, false);
             }
             if (Gvar.var_1073 == 2) {
-                Gvar.comments_row1a = "言ったってわからないから";
-                Gvar.comments_row2a = "こんな目に遭ったんだよ！";
+                await Func.setMessage1("言ったってわからないから",
+                                       "こんな目に遭ったんだよ！", 7, false, false, false);
             }
             if (Gvar.var_1073 == 3) {
-                Gvar.comments_row1a = "僕を捕まえることはできない…！";
-                Gvar.comments_row2a = "";
+                await Func.setMessage1("僕を捕まえることはできない…！", "", 7, false, false, false);
             }
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func050();
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
         }
-        for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(10);
         Gvar.var_2197 = 1;
         return;
 }

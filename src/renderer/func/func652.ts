@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Music from '../music/index'
 
 async function func652(this: any) {
         Adap.dbgprt(652);
@@ -237,7 +238,7 @@ async function func652(this: any) {
                     Gvar.var_314 = Gvar.var_3024;
                     Gvar.var_402 = Gvar.var_3024;
                     Gvar.enemy_list = Gvar.var_83[Gvar.var_3024].Var0;
-                    Gvar.var_403 = "「クラッシュ！　食い破れ！」";
+                    Gvar.var_403 = "「クラッシュ！  食い破れ！」";
                     if (Gvar.var_143 >= 1) {
                         Gvar.var_2267[8] = Gvar.var_2267[7];
                         Gvar.var_2267[7] = Gvar.var_2267[6];
@@ -247,7 +248,7 @@ async function func652(this: any) {
                         Gvar.var_2267[3] = Gvar.var_2267[2];
                         Gvar.var_2267[2] = Gvar.var_2267[1];
                         Gvar.var_2267[1] = Gvar.var_2267[0];
-                        Gvar.var_2267[0] = Gvar.var_83[Gvar.var_314].Var0;
+                        Gvar.var_2267[0] = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
                         if (Gvar.var_2267[0] != 0 && Gvar.var_2267[0] == Gvar.var_2267[1]) {
                             Gvar.var_143 = 2;
                         }
@@ -277,9 +278,9 @@ async function func652(this: any) {
                         }
                     }
                     Gvar.var_1452 = 1;
-                    Gvar.var_271 = 1;
+                    Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_1452++;
                         if (Gvar.var_1452 == 4) {
                             Gvar.var_2867 = Adap.rnd(12);
@@ -297,15 +298,15 @@ async function func652(this: any) {
                                 await Func.func705();
                             }
                             if (Gvar.var_2867 == 0) {
-                                await Func.func090();
+                                await Music.func090();
                                 for (let cnt7 = 0; cnt7 < 3; ++cnt7) {
-                                    await Func.func337(); // メッセージ関係呼び出し
+                                    await Func.func337(); // メッセージ表示処理(自動)
                                 }
                             }
                         }
                     }
                     Gvar.var_1452 = 0;
-                    Gvar.var_271 = 0;
+                    Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                     if (Gvar.var_211 <= 0) {
                         break;
                     }

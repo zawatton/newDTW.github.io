@@ -21,7 +21,7 @@ async function func407(this: any) {
         Gvar.Y_axis_item_position = 45;
         Gvar.var_225 = 1;
         Gvar.var_223 = Gvar.var_224 + 10;
-        await Func.func051();
+        await Func.func051(); // キー入力待ち処理
         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
         return;
 }

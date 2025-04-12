@@ -2,6 +2,10 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// メッセージ履歴追加処理
+// Gvar.var_494[] という配列を使って、過去のメッセージをずらしたり、最新のメッセージを追記したりしている。
+// もともと「何行かのメッセージ履歴を持ったり」「一定の行数がたまったらスクロールしたり」といった機能を想定している可能性が高い。
+// 実際、長い Gvar.var_494[...] = Gvar.var_494[...] のコピー処理は「配列の末尾から先頭へのシフト」「古い行を1つ上にずらしていく」ような動きです。
 async function func047(this: any) {
         Adap.dbgprt(47);
         Gvar.var_494[39] = Gvar.var_494[37];
@@ -47,6 +51,7 @@ async function func047(this: any) {
         Gvar.var_495 = 1;
         Gvar.var_494[1] = "";
         Gvar.var_494[2] = "";
+
         if (Gvar.comments_row1 != "" && Gvar.comments_row1a == "" && Gvar.comments_row2a == "") {
             Gvar.var_494[Gvar.var_495] = Gvar.comments_row1;
             Gvar.var_495++;

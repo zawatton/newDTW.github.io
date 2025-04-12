@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 // No = 131 ジョルノの特殊能力
 async function enemy131(this: any) {
@@ -28,89 +27,42 @@ async function enemy131(this: any) {
         if (Gvar.var_474 == 0) {
             return;
         }
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "「ゴールド・エクスペリエンス！」";
-        Gvar.comments_row2 = "";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-        await Func.func047();
-        for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.setMessage1("「ゴールド・エクスペリエンス！」", "", 8, false, false, false);
+        await Func.AutoDraw(15);
         Adap.DSPLAY(121);
         Gvar.var_742 = 1;
         Gvar.var_83[Gvar.var_412].Var7 = 1;
         Gvar.var_743 = 1; //スタンド像付与フラグON
         Gvar.var_389 = 3;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 3;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 1;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 3;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 1;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 3;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 1;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 3;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 1;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_83[Gvar.var_412].Var7 = 0;
         Gvar.var_742 = 0;
         Gvar.var_743 = 0; //スタンド像付与フラグOFF
         if (Gvar.nouryoku_disc_id == 202) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "ﾎﾜｲﾄｱﾙﾊﾞﾑの能力によって";
-            Gvar.comments_row2 = "生命が生まれるのを防いだ！";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("ﾎﾜｲﾄｱﾙﾊﾞﾑの能力によって", "生命が生まれるのを防いだ！", 7, false, false, false);
+            await Func.AutoDraw(10);
             Gvar.var_2197 = 1;
             return;
         }
         if (Gvar.equip_disc[360] == 1) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "装備DISCの効果で きかなかった";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("装備DISCの効果で きかなかった", "", 7, false, false, false);
+            await Func.AutoDraw(10);
             Gvar.var_2197 = 1;
             return;
         }
@@ -135,27 +87,11 @@ async function enemy131(this: any) {
         Gvar.var_233[Gvar.var_475].Var0 = 650;
         Gvar.var_2892 = "ｶｴﾙ";
         Adap.DSPLAY(200);
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "" + Gvar.target_item_name + "は";
-        Gvar.comments_row2 = "" + Gvar.var_2892 + "に生まれ変わった！";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-        await Func.func047();
-        if (Gvar.to_freeze >= 1) {
-            await Main.func023();
+        await Func.setMessage1("" + Gvar.target_item_name + "は", "" + Gvar.var_2892 + "に生まれ変わった！", 8, false, false, false);
+        if (Gvar.var_128 >= 1) {
+            await Func.func023();
         }
-        for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(10);
         Gvar.var_2197 = 1;
         return;
 }

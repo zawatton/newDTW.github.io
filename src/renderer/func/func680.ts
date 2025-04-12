@@ -1,7 +1,9 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Music from '../music/index'
 
+// ディアボロのレベルが上がる際の処理
 async function func680(this: any) {
         Adap.dbgprt(680);
         Gvar.var_839 = Gvar.var_839 + 1;
@@ -37,22 +39,9 @@ async function func680(this: any) {
             }
         }
         if (Gvar.var_2201 == 1) {
-            await Func.func099();
-            await Func.func340(); // キー入力による選択処理
-            Gvar.comments_row1 = Gvar.comments_row1a;
-            Gvar.comments_row2 = Gvar.comments_row2a;
-            Gvar.comments_row1a = "ﾃﾞｨｱﾎﾞﾛはﾚﾍﾞﾙ" + Gvar.current_level + "に上がった！";
-            Gvar.comments_row2a = "";
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func050();
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Music.func099();
+            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛはﾚﾍﾞﾙ" + Gvar.current_level + "に上がった！", "", 7, true, false, false);
+            await Func.AutoDraw(5);
         }
         Gvar.var_2201 = 0;
         return;

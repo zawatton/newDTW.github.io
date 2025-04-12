@@ -17,7 +17,7 @@ async function func694(this: any) {
         await Func.func705();
         Gvar.var_3097 = 0;
         await Func.func340(); // キー入力による選択処理
-        await Func.func051();
+        await Func.func051(); // キー入力待ち処理
         return;
 }
 

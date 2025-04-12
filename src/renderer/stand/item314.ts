@@ -8,29 +8,13 @@ async function item314(this: any) {
         if (Gvar.var_2254 == 1) {
             Gvar.var_2254 = 0;
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
-            for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(10);
         }
         Gvar.var_2329 = 0;
         Adap.DSPLAY(159);
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "「うにゃあ」";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
-        for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.setMessage1("「うにゃあ」",
+                               "", 7, false, false, false);
+        await Func.AutoDraw(10);
         Gvar.var_2106 = 1;
         await Func.func647(); // 射撃攻撃動作処理
         return;

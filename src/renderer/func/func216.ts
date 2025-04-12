@@ -13,8 +13,8 @@ async function func216(this: any) {
                 Gvar.var_925 = 1;
             }
             Adap.DSPLAY(100); // アイテム選択時の効果音
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         if (Gvar.var_255 == 1) { // var_255:入力判定[↑]
             Gvar.Y_axis_item_position = Gvar.Y_axis_item_position - 20;
@@ -24,8 +24,8 @@ async function func216(this: any) {
                 Gvar.var_925 = 9;
             }
             Adap.DSPLAY(100); // アイテム選択時の効果音
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         if (Gvar.var_925 >= 1 && Gvar.var_925 <= 7) {
             Adap.ck_joystick(Gvar.var_929, Gvar.var_662);
@@ -67,9 +67,7 @@ async function func216(this: any) {
                 }
                 await Func.func217();
                 await Func.func218();
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 await Func.func216();
                 return;
             }
@@ -111,9 +109,7 @@ async function func216(this: any) {
                 }
                 await Func.func217();
                 await Func.func218();
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 await Func.func216();
                 return;
             }
@@ -155,9 +151,7 @@ async function func216(this: any) {
                 }
                 await Func.func217();
                 await Func.func218();
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 await Func.func216();
                 return;
             }
@@ -199,9 +193,7 @@ async function func216(this: any) {
                 }
                 await Func.func217();
                 await Func.func218();
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 await Func.func216();
                 return;
             }
@@ -243,9 +235,7 @@ async function func216(this: any) {
                 }
                 await Func.func217();
                 await Func.func218();
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 await Func.func216();
                 return;
             }
@@ -287,9 +277,7 @@ async function func216(this: any) {
                 }
                 await Func.func217();
                 await Func.func218();
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 await Func.func216();
                 return;
             }
@@ -331,9 +319,7 @@ async function func216(this: any) {
                 }
                 await Func.func217();
                 await Func.func218();
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 await Func.func216();
                 return;
             }
@@ -375,9 +361,7 @@ async function func216(this: any) {
                 }
                 await Func.func217();
                 await Func.func218();
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 await Func.func216();
                 return;
             }
@@ -419,9 +403,7 @@ async function func216(this: any) {
                 }
                 await Func.func217();
                 await Func.func218();
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 await Func.func216();
                 return;
             }
@@ -463,9 +445,7 @@ async function func216(this: any) {
                 }
                 await Func.func217();
                 await Func.func218();
-                for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(2);
                 await Func.func216();
                 return;
             }
@@ -484,7 +464,7 @@ async function func216(this: any) {
                 Gvar.var_700 = 524288;
                 Gvar.var_701 = 1048576;
                 await Func.func217();
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 await Func.func216();
                 return;
             }
@@ -504,12 +484,12 @@ async function func216(this: any) {
                 Gvar.var_664[10] = Gvar.var_701;
                 await Adap.bsave("00.dat", Gvar.data = Gvar.var_664, null, 1500);
                 Gvar.var_903 = 0;
-                await Func.func051();
-                await Func.func193();
+                await Func.func051(); // キー入力待ち処理
+                await Func.func193(); // メニュー画面 "システム" 設定処理
                 return;
             }
         }
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         await Func.func216();
         return;
 }

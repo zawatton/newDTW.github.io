@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 async function func480(this: any) {
         Adap.dbgprt(480);
@@ -20,26 +19,8 @@ async function func480(this: any) {
             Gvar.var_2116 = 1;
         }
         if (Gvar.var_2116 == 1) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "呪われていて外せない！";
-            Gvar.comments_row2 = "";
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
-            await Func.func340(); // キー入力による選択処理
-            Gvar.var_198 = 0;
+            await Func.setMessage1("呪われていて外せない！", "", 7, true, false, false);
+            await Func.AutoDraw(3);
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             if (Gvar.var_2005 == 1) {
                 await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
@@ -146,26 +127,10 @@ async function func480(this: any) {
         Gvar.var_2005 = 0;
         await Func.func430();
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "足元の" + Gvar.var_2118 + "と";
-        Gvar.comments_row2 = "" + Gvar.var_2119 + "を交換した。";
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        await Func.func047();
-        for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.setMessage1("足元の" + Gvar.var_2118 + "と", "" + Gvar.var_2119 + "を交換した。", 7, true, false, false);
+        await Func.AutoDraw(3);
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

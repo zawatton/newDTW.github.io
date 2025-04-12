@@ -1035,7 +1035,7 @@ async function func385(this: any) {
                     await Func.func386(); // 床に落ちているアイテムを「消し炭」にする
                 }
             }*/
-            if (Gvar.dungeon_number != 4) { // 一巡後の世界以外では No = 815 エルメェスのあれ を　No = 800 エニグマの紙へ置き換える
+            if (Gvar.dungeon_number != 4) { // 一巡後の世界以外では No = 815 エルメェスのあれ を  No = 800 エニグマの紙へ置き換える
                 if (Gvar.var_78[Gvar.var_866].Var0 == 815) { // No = 815 エルメェスのあれ
                     Gvar.var_78[Gvar.var_866].Var0 = 800; // No = 800 エニグマの紙
                 }

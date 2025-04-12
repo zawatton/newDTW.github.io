@@ -21,7 +21,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[1];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -30,7 +30,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[2];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -39,7 +39,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[3];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -48,7 +48,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[4];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -57,7 +57,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[5];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -66,7 +66,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[6];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -75,7 +75,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[7];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -84,7 +84,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[8];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -93,7 +93,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[9];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -102,7 +102,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[10];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -111,7 +111,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[11];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -120,7 +120,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[12];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -129,7 +129,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[13];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -138,7 +138,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[14];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -147,7 +147,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[15];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -156,7 +156,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[16];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -165,7 +165,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[17];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -174,7 +174,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[18];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -183,7 +183,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[19];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }
@@ -192,7 +192,7 @@ async function func564(this: any) {
             Gvar.var_2574 = Adap.rnd(Gvar.var_2572);
             if (Gvar.var_2574 == 1) {
                 Gvar.var_2544 = Gvar.var_992[20];
-                await Func.func556(); // 敵をフロアへ出現させる処理
+                await Func.func556();
                 Gvar.var_2544 = 0;
                 Gvar.var_2573++;
             }

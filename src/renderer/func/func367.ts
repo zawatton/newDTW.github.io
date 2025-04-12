@@ -68,7 +68,7 @@ async function func367(this: any) {
             }
         }
         Adap.pos(70, 65);
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         if (Gvar.var_802 == 1) {
             Adap.color(255, 255, 255);
             Adap.mes("" + Gvar.var_1660 + "G");
@@ -139,7 +139,7 @@ async function func367(this: any) {
             Adap.gcopy(8, 40, 80, 10, 10);
         }
         Adap.color(255, 255, 255);
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 14, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 14, Gvar.font_style = 1);
         Adap.pos(30, 100);
 
         if (Gvar.var_802 < 100 || Gvar.var_802 >= 400) {
@@ -150,7 +150,7 @@ async function func367(this: any) {
                 Adap.mes("" + Gvar.item_description1);
             }
             if (Gvar.var_1661 == 1) {
-                Adap.mes("" + Gvar.item_description1 + "　空き容量 " + Gvar.free_space_value);
+                Adap.mes("" + Gvar.item_description1 + "  空き容量 " + Gvar.free_space_value);
             }
         }
         // 装備、射撃disc
@@ -176,7 +176,7 @@ async function func367(this: any) {
             for (let cnt2 = 0; cnt2 < Gvar.var_810 + Gvar.free_space_value; ++cnt2) {
                 Adap.pos(30, Gvar.track_number * 20 + 120);
                 Adap.color(255, 255, 255);
-                Adap.font("MS UI ゴシック", 12, 1);
+                Adap.font(Gvar.font_type, 12, 1);
                 Adap.mes("Track" + Gvar.track_number + ":");
                 Gvar.track_number = Gvar.track_number + 1;
             }
@@ -221,7 +221,7 @@ async function func367(this: any) {
                     }
                 }
         
-                Adap.font("ＭＳ ゴシック", 14, 1);
+                Adap.font("メイリオ", 14, 1);
                 if (Gvar.var_1664 == 0) {
                     if (Gvar.var_813[Gvar.track_number] != "") {
                         Adap.mes("" + Gvar.var_813[Gvar.track_number]);

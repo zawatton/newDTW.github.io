@@ -11,7 +11,7 @@ async function func203(this: any) {
         console.log("key_A_on:", Gvar.key_A_on);
         //Gvar.key_Z_on = 0;
         //Gvar.key_A_on = 0;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         await Func.func080(); // 各キー入力確認
         if (Gvar.stat == 0) {
             //ipcRenderer.send('close-color-picker');
@@ -38,7 +38,7 @@ async function func203(this: any) {
             if (Gvar.var_702 == 0 || Gvar.var_702 == 1) {
                 if (Gvar.key_Z_on == 1 || Gvar.key_A_on == 1) {
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Func.func051();
+                    await Func.func051(); // キー入力待ち処理
                     if (Gvar.var_702 == 0) { // 色設定を使わないを選択
                         Gvar.var_25[1] = 255;
                         Gvar.var_26[1] = 255;
@@ -104,7 +104,7 @@ async function func203(this: any) {
                     await Adap.bsave("00.dat", Gvar.data = Gvar.var_26, null, 300);
                     await Adap.bsave("00.dat", Gvar.data = Gvar.var_27, null, 400);
                     Gvar.var_901 = 0;
-                    await Func.func193();
+                    await Func.func193(); // メニュー画面 "システム" 設定処理
                     return;
                 }
             }
@@ -249,9 +249,9 @@ async function func203(this: any) {
         }
         if (Gvar.key_X_on == 1) {
             Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-            await Func.func051();
+            await Func.func051(); // キー入力待ち処理
             Gvar.var_901 = 0;
-            await Func.func193();
+            await Func.func193(); // メニュー画面 "システム" 設定処理
             return;
         }
         if (Gvar.var_255 == 1) { // var_255:入力判定[↑]
@@ -260,8 +260,8 @@ async function func203(this: any) {
             if (Gvar.var_702 < 0) {
                 Gvar.var_702 = 0;
             }
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         if (Gvar.var_259 == 1) { // var_259:入力判定[↓]
             Adap.DSPLAY(100); // アイテム選択時の効果音
@@ -269,8 +269,8 @@ async function func203(this: any) {
             if (Gvar.var_702 == 9) {
                 Gvar.var_702 = 8;
             }
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         await Func.func203(); // メッセージ色設定処理
         return;

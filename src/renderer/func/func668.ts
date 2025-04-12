@@ -126,20 +126,20 @@ async function func668(this: any) {
         }
 
         Adap.DSPLAY(180);
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1388 = 1;
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             Gvar.var_585 = 3;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_585 = 0;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1388++;
         }
         for (let cnt1 = 0; cnt1 < 14; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1388++;
         }
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1388 = 0;
         Gvar.var_403 = "";
         Gvar.var_2194 = 1;
@@ -184,7 +184,7 @@ async function func668(this: any) {
                 Gvar.var_211 = 0;
                 Gvar.var_356 = 248;
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
                 Gvar.var_389 = 0;
                 return;
@@ -201,7 +201,7 @@ async function func668(this: any) {
                 Gvar.var_208 = Gvar.var_2198 + Gvar.var_208;
             }
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
             Gvar.var_389 = 0;
         }

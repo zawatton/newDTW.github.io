@@ -22,7 +22,7 @@ async function func871(this: any) {
         Adap.chdir(Gvar.var_30);
         Adap.objsel(0);
         Adap.clrobj();
-        await Func.func233();
+        await Func.func233(); // ダンジョンへ入った際の全ステータス初期化処理
         if (Gvar.var_10 == 0) {
             Adap.width(340, 340);
         }

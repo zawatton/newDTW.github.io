@@ -13,7 +13,7 @@ async function func416(this: any) {
         if (Gvar.var_111 == 1 || Gvar.var_138 == 1) { // Gvar.var_111 命中率を上げるフラグがONであれば
             Gvar.var_1900 = 1;
         }
-        // 共鳴ID = 136 「はっはっは　狙え狙え」(投影命中率上昇)
+        // 共鳴ID = 136 「はっはっは  狙え狙え」(投影命中率上昇)
         if (Gvar.sympathy_id == 136) {
             Gvar.var_1900 = 1;
         }

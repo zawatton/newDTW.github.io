@@ -1,6 +1,8 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Music from '../music/index'
+import * as Enemy from '../enemy/index'
 
 async function func581(this: any) {
         Adap.dbgprt(581);
@@ -8,22 +10,22 @@ async function func581(this: any) {
         if (Gvar.var_83[Gvar.var_673].Var0 == 15) {
             Gvar.var_1360 = Gvar.var_83[Gvar.var_673].Var1;
             Gvar.var_1361 = Gvar.var_83[Gvar.var_673].Var2;
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1363 = 1;
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1363 = Gvar.var_1363 + 1;
             }
             Gvar.var_1363 = 0;
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         }
         // Gvar.enemy_list = 21 ストレイキャット
         if (Gvar.var_83[Gvar.var_673].Var0 == 21) {
             Adap.DSPLAY(159);
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_742 = 3;
             }
         }
@@ -31,7 +33,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 46 ホル・ホース と Gvar.enemy_list = 30 禁煙中ホル・ホースは共通設定。Ver0.1403にて分離
         if (Gvar.var_83[Gvar.var_673].Var0 == 46) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func604();
+                await Enemy.func604();
                 return;
             }
             return;
@@ -40,7 +42,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 134 ジョリーン と Gvar.enemy_list = 35 仗助は共通設定。Ver0.1403にて分離
         if (Gvar.var_83[Gvar.var_673].Var0 == 35) {
             if (Gvar.var_83[Gvar.var_673].Var18 >= 1) {
-                await Func.func602();
+                await Enemy.func602();
                 return;
             }
             return;
@@ -49,7 +51,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 46 ホル・ホース と Gvar.enemy_list = 30 禁煙中ホル・ホースは共通設定。Ver0.1403にて分離
         if (Gvar.var_83[Gvar.var_673].Var0 == 46) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func604();
+                await Enemy.func604();
                 return;
             }
             return;
@@ -146,22 +148,22 @@ async function func581(this: any) {
             Gvar.var_743 = 1; //スタンド像付与フラグON
             Gvar.var_748 = (Gvar.var_83[Gvar.var_673].Var1 - Gvar.var_66 + 4) * 40;
             Gvar.var_749 = (Gvar.var_83[Gvar.var_673].Var2 - Gvar.var_67 + 4) * 40;
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1357 = 1;
             Adap.DSPLAY(189);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1357++;
             }
             Gvar.var_1357 = 0;
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_83[Gvar.var_673].Var7 = 0;
             Gvar.var_743 = 0; //スタンド像付与フラグOFF
         }
         // Gvar.enemy_list = 63 プロシュート兄貴
         if (Gvar.var_83[Gvar.var_673].Var0 == 63) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func613();
+                await Enemy.func613();
                 return;
             }
             return;
@@ -169,7 +171,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 65 虹村形兆
         if (Gvar.var_83[Gvar.var_673].Var0 == 65) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func618();
+                await Enemy.func618();
                 return;
             }
             return;
@@ -266,22 +268,22 @@ async function func581(this: any) {
             Gvar.var_743 = 1; //スタンド像付与フラグON
             Gvar.var_748 = (Gvar.var_83[Gvar.var_673].Var1 - Gvar.var_66 + 4) * 40;
             Gvar.var_749 = (Gvar.var_83[Gvar.var_673].Var2 - Gvar.var_67 + 4) * 40;
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1357 = 1;
             Adap.DSPLAY(189);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1357++;
             }
             Gvar.var_1357 = 0;
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_83[Gvar.var_673].Var7 = 0;
             Gvar.var_743 = 0; //スタンド像付与フラグOFF
         }
         // Gvar.enemy_list = 72 ケンゾー
         if (Gvar.var_83[Gvar.var_673].Var0 == 72) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func617();
+                await Enemy.func617();
                 return;
             }
             return;
@@ -294,19 +296,19 @@ async function func581(this: any) {
             Gvar.var_83[Gvar.var_673].Var21 = 1;
             Gvar.var_411 = 2;
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_742 = 2;
             }
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1301 = 1;
             Adap.DSPLAY(123);
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                // await Func.func337(); // メッセージ関係呼び出し
-                await Func.func337(); // メッセージ関係呼び出し
+                // await Func.func337(); // メッセージ表示処理(自動)
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_742 = 2;
                 Gvar.var_1301++;
             }
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1301 = 0;
             Gvar.var_83[Gvar.var_673].Var21 = 0;
             Gvar.var_411 = 0;
@@ -314,7 +316,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 84 チョコラータ
         if (Gvar.var_83[Gvar.var_673].Var0 == 84) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func589();
+                await Enemy.func589();
                 return;
             }
             return;
@@ -322,7 +324,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 85 リゾット
         if (Gvar.var_83[Gvar.var_673].Var0 == 85) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func596();
+                await Enemy.func596();
                 return;
             }
             return;
@@ -330,7 +332,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 98 エンポリオ(ウェザー付)
         if (Gvar.var_83[Gvar.var_673].Var0 == 98) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func610();
+                await Enemy.func610();
                 return;
             }
             return;
@@ -338,7 +340,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 99 マンハッタントランスファー
         if (Gvar.var_83[Gvar.var_673].Var0 == 99) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func606();
+                await Enemy.func606();
                 return;
             }
             return;
@@ -371,7 +373,7 @@ async function func581(this: any) {
         // No = 113 DIO、No = 114 最高にハイなDIO、No = 128 承太郎(4部)は共通設定。Ver0.1403にて分離
         if (Gvar.var_83[Gvar.var_673].Var0 == 113) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func614(); // 敵キャラの時止め能力処理
+                await Enemy.func614(); // 敵キャラの時止め能力処理
                 return;
             }
             if (Gvar.var_83[Gvar.var_673].Var18 == 2) {
@@ -382,7 +384,7 @@ async function func581(this: any) {
         // No = 113 DIO、No = 114 最高にハイなDIO、No = 128 承太郎(4部)は共通設定。Ver0.1403にて分離
         if (Gvar.var_83[Gvar.var_673].Var0 == 114) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func614(); // 敵キャラの時止め能力処理
+                await Enemy.func614(); // 敵キャラの時止め能力処理
                 return;
             }
             if (Gvar.var_83[Gvar.var_673].Var18 == 2) {
@@ -403,21 +405,21 @@ async function func581(this: any) {
             if (Gvar.var_83[Gvar.var_673].Var0 == 151 || Gvar.var_83[Gvar.var_673].Var0 == 172) {
                 Adap.DSPLAY(160);
             }
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1313 = 1;
             Gvar.var_1314 = Gvar.var_673;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1313++;
                 Gvar.var_742 = 3;
             }
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1313 = 0;
         }
         // Gvar.enemy_list = 123 ブチャラティ
         if (Gvar.var_83[Gvar.var_673].Var0 == 123) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func598();
+                await Enemy.func598();
                 return;
             }
             return;
@@ -425,7 +427,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 124 ミスタ
         if (Gvar.var_83[Gvar.var_673].Var0 == 124) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func607();
+                await Enemy.func607();
                 return;
             }
             return;
@@ -433,7 +435,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 125 フーゴ
         if (Gvar.var_83[Gvar.var_673].Var0 == 125) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func609();
+                await Enemy.func609();
                 return;
             }
             return;
@@ -444,22 +446,22 @@ async function func581(this: any) {
             if (Gvar.var_83[Gvar.var_673].Var0 == 151 || Gvar.var_83[Gvar.var_673].Var0 == 172) {
                 Adap.DSPLAY(160);
             }
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1313 = 1;
             Gvar.var_1314 = Gvar.var_673;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1313++;
                 Gvar.var_742 = 3;
             }
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1313 = 0;
         }
         // No = 128 承太郎(4部)
         // No = 113 DIO、No = 114 最高にハイなDIO、No = 128 承太郎(4部)は共通設定。Ver0.1403にて分離
         if (Gvar.var_83[Gvar.var_673].Var0 == 128) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func614(); // 敵キャラの時止め能力処理
+                await Enemy.func614(); // 敵キャラの時止め能力処理
                 return;
             }
             if (Gvar.var_83[Gvar.var_673].Var18 == 2) {
@@ -470,7 +472,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 134 ジョリーン と Gvar.enemy_list = 35 仗助は共通設定。Ver0.1403にて分離
         if (Gvar.var_83[Gvar.var_673].Var0 == 134) {
             if (Gvar.var_83[Gvar.var_673].Var18 >= 1) {
-                await Func.func602();
+                await Enemy.func602();
                 return;
             }
             return;
@@ -479,14 +481,14 @@ async function func581(this: any) {
         if (Gvar.var_83[Gvar.var_673].Var0 == 136) {
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
                 Gvar.var_1198 = 1;
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_742 = 2;
             }
         }
         // Gvar.enemy_list = 137 成長した吉良
         if (Gvar.var_83[Gvar.var_673].Var0 == 137) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func590();
+                await Enemy.func590();
                 return;
             }
             return;
@@ -494,7 +496,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 140 ジョナサン
         if (Gvar.var_83[Gvar.var_673].Var0 == 140) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func599();
+                await Enemy.func599();
                 return;
             }
             return;
@@ -502,14 +504,14 @@ async function func581(this: any) {
         // Gvar.enemy_list = 141 F・F
         if (Gvar.var_83[Gvar.var_673].Var0 == 141) {
             for (let cnt2 = 0; cnt2 < 7; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_742 = 2;
             }
         }
         // Gvar.enemy_list = 143 ウンガロ
         if (Gvar.var_83[Gvar.var_673].Var0 == 143) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func595();
+                await Enemy.func595();
                 return;
             }
             return;
@@ -517,7 +519,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 145 康一
         if (Gvar.var_83[Gvar.var_673].Var0 == 145) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func592();
+                await Enemy.func592();
                 return;
             }
             return;
@@ -527,11 +529,11 @@ async function func581(this: any) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
                 Gvar.var_1073 = Adap.rnd(10);
                 if (Gvar.var_1073 < 3) {
-                    await Func.func592();
+                    await Enemy.func592();
                     return;
                 }
                 if (Gvar.var_1073 >= 3) {
-                    await Func.func593();
+                    await Enemy.func593();
                     return;
                 }
             }
@@ -543,21 +545,21 @@ async function func581(this: any) {
             if (Gvar.var_83[Gvar.var_673].Var0 == 151 || Gvar.var_83[Gvar.var_673].Var0 == 172) {
                 Adap.DSPLAY(160);
             }
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1313 = 1;
             Gvar.var_1314 = Gvar.var_673;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1313++;
                 Gvar.var_742 = 3;
             }
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1313 = 0;
         }
         // Gvar.enemy_list = 153 マックイィーン
         if (Gvar.var_83[Gvar.var_673].Var0 == 153) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func597();
+                await Enemy.func597();
                 return;
             }
             return;
@@ -565,7 +567,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 154 スポーツマックス
         if (Gvar.var_83[Gvar.var_673].Var0 == 154) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func594();
+                await Enemy.func594();
                 return;
             }
             return;
@@ -573,7 +575,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 157 アナスイ
         if (Gvar.var_83[Gvar.var_673].Var0 == 157) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func605();
+                await Enemy.func605();
                 return;
             }
             return;
@@ -581,7 +583,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 159 記憶が戻ったウェザー
         if (Gvar.var_83[Gvar.var_673].Var0 == 159) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func591(); // 記憶が戻ったウェザーの発動能力「鈍足のカタツムリの召喚」動作処理
+                await Enemy.func591(); // 記憶が戻ったウェザーの発動能力「鈍足のカタツムリの召喚」動作処理
                 return;
             }
             return;
@@ -590,7 +592,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 164 エシディシの脳 と Gvar.enemy_list = 165 エボニーデビルは共通設定。Ver0.1403にて分離
         if (Gvar.var_83[Gvar.var_673].Var0 == 164) {
             if (Gvar.var_83[Gvar.var_673].Var18 >= 1) {
-                await Func.func603();
+                await Enemy.func603();
                 return;
             }
             return;
@@ -599,7 +601,7 @@ async function func581(this: any) {
         // Gvar.enemy_list = 164 エシディシの脳 と Gvar.enemy_list = 165 エボニーデビルは共通設定。Ver0.1403にて分離
         if (Gvar.var_83[Gvar.var_673].Var0 == 165) {
             if (Gvar.var_83[Gvar.var_673].Var18 >= 1) {
-                await Func.func603();
+                await Enemy.func603();
                 return;
             }
             return;
@@ -607,11 +609,11 @@ async function func581(this: any) {
         // Gvar.enemy_list = 168 警備員の西戸
         if (Gvar.var_83[Gvar.var_673].Var0 == 168) {
             if (Gvar.var_83[Gvar.var_673].Var18 == 2) {
-                await Func.func612();
+                await Enemy.func612();
                 return;
             }
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func600();
+                await Enemy.func600();
                 return;
             }
             return;
@@ -621,12 +623,12 @@ async function func581(this: any) {
 
             //var_83[Gvar.var_673].Var7 = 1;
             for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_742 = 1;
             }
 
             if (Gvar.var_83[Gvar.var_673].Var18 == 1) {
-                await Func.func614(); // 敵キャラの時止め能力処理
+                await Enemy.func614(); // 敵キャラの時止め能力処理
                 return;
             }
             if (Gvar.var_83[Gvar.var_673].Var18 == 2) {
@@ -639,15 +641,15 @@ async function func581(this: any) {
             if (Gvar.var_83[Gvar.var_673].Var0 == 151 || Gvar.var_83[Gvar.var_673].Var0 == 172) {
                 Adap.DSPLAY(160);
             }
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1313 = 1;
             Gvar.var_1314 = Gvar.var_673;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1313++;
                 Gvar.var_742 = 3;
             }
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1313 = 0;
         }
         Gvar.var_240 = 0;
@@ -684,8 +686,8 @@ async function func581(this: any) {
 
         Gvar.var_1192 = 1;
         Gvar.var_1198 = 1;
-        await Func.func095();
-        await Func.func337(); // メッセージ関係呼び出し
+        await Music.func095();
+        await Func.func337(); // メッセージ表示処理(自動)
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             Gvar.var_1894 = Gvar.var_455;
             Gvar.var_1895 = Gvar.var_456;
@@ -755,7 +757,7 @@ async function func581(this: any) {
                     Gvar.var_748 = Gvar.var_455 - Gvar.var_66 + 4;
                     Gvar.var_749 = Gvar.var_456 - Gvar.var_67 + 4;
                     for (let cnt4 = 0; cnt4 < 5; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                     }
                     Gvar.var_750 = 0;
                     Gvar.var_1212 = 0;
@@ -775,10 +777,10 @@ async function func581(this: any) {
                 break;
             }
             Gvar.var_2802 = 1;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_2802 = 0;
             Gvar.var_1192 = 2;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         Gvar.var_83[Gvar.var_673].Var7 = 0;
         Gvar.var_1192 = 0;

@@ -2,7 +2,6 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Enemy from '../enemy/index'
 
-// 各敵の特殊能力(ディアボロへの攻撃)割り振り処理
 async function func620(this: any) {
         Adap.dbgprt(620);
         if (Gvar.var_83[Gvar.var_673].Var17 != 0 || Gvar.var_83[Gvar.var_673].Var23 != 0) {

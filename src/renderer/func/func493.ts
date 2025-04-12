@@ -1,7 +1,5 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
-
-// 装備disc能力値の設定
 async function func493(this: any) {
         Adap.dbgprt(493);
         if (Gvar.disc_class == 1 && Gvar.var_476[Gvar.var_225] == 1) {

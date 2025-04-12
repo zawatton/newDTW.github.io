@@ -2,7 +2,6 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Stand from '../stand/index'
-import * as Main from '../newdtw/index'
 
 async function func461(this: any) {
         Adap.dbgprt(461);
@@ -11,8 +10,8 @@ async function func461(this: any) {
             await Func.func459(); // 道具画面(所持数0)の表示(メニュー画面/道具)
             return;
         }
-        Gvar.var_198 = 0;
-        await Func.func337(); // メッセージ関係呼び出し
+        Gvar.var_198 = 0; // メッセージウィンドウ閉じる
+        await Func.func337(); // メッセージ表示処理(自動)
         await Func.func080(); // 各キー入力確認
 
         if (Gvar.var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
@@ -28,8 +27,8 @@ async function func461(this: any) {
                         Gvar.var_225 = Gvar.var_225 + 1;
                         
                         Adap.DSPLAY(100); // アイテム選択時の効果音
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -40,8 +39,8 @@ async function func461(this: any) {
                         Gvar.var_225 = Gvar.var_225 + 1;
 
                         Adap.DSPLAY(100); // アイテム選択時の効果音
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -52,8 +51,8 @@ async function func461(this: any) {
                         Gvar.var_225 = 1;
 
                         Adap.DSPLAY(100); // アイテム選択時の効果音
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
@@ -68,8 +67,8 @@ async function func461(this: any) {
                         Gvar.var_225 = Gvar.var_225 + 1;
                         
                         Adap.DSPLAY(100); // アイテム選択時の効果音
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -80,8 +79,8 @@ async function func461(this: any) {
                         Gvar.var_225 = 11;
 
                         Adap.DSPLAY(100); // アイテム選択時の効果音
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -97,8 +96,8 @@ async function func461(this: any) {
                     Gvar.var_225 = Gvar.var_225 - 1;
 
                     Adap.DSPLAY(100); // アイテム選択時の効果音
-                    // await Func.func337(); // メッセージ関係呼び出し
-                    await Func.func337(); // メッセージ関係呼び出し
+                    // await Func.func337(); // メッセージ表示処理(自動)
+                    await Func.func337(); // メッセージ表示処理(自動)
                     await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return;
                 }
@@ -114,8 +113,8 @@ async function func461(this: any) {
                             Gvar.var_225 = Gvar.var_224;
 
                             Adap.DSPLAY(100); // アイテム選択時の効果音
-                            // await Func.func337(); // メッセージ関係呼び出し
-                            await Func.func337(); // メッセージ関係呼び出し
+                            // await Func.func337(); // メッセージ表示処理(自動)
+                            await Func.func337(); // メッセージ表示処理(自動)
                             await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                             return;
                         }
@@ -126,8 +125,8 @@ async function func461(this: any) {
                             Gvar.var_225 = 10;
 
                             Adap.DSPLAY(100); // アイテム選択時の効果音
-                            // await Func.func337(); // メッセージ関係呼び出し
-                            await Func.func337(); // メッセージ関係呼び出し
+                            // await Func.func337(); // メッセージ表示処理(自動)
+                            await Func.func337(); // メッセージ表示処理(自動)
                             await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                             return;
                         }
@@ -139,8 +138,8 @@ async function func461(this: any) {
                         Gvar.var_225 = Gvar.var_224;
 
                         Adap.DSPLAY(100); // アイテム選択時の効果音
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -158,8 +157,8 @@ async function func461(this: any) {
 
                         Adap.DSPLAY(100); // アイテム選択時の効果音
                         await Func.func478();
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -171,8 +170,8 @@ async function func461(this: any) {
                         Gvar.Y_axis_item_position = 45;
                         
                         Adap.DSPLAY(100); // アイテム選択時の効果音 
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -185,8 +184,8 @@ async function func461(this: any) {
                     Gvar.Y_axis_item_position = 45;
                     
                     Adap.DSPLAY(100); // アイテム選択時の効果音
-                    // await Func.func337(); // メッセージ関係呼び出し
-                    await Func.func337(); // メッセージ関係呼び出し
+                    // await Func.func337(); // メッセージ表示処理(自動)
+                    await Func.func337(); // メッセージ表示処理(自動)
                     await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return;
                 }
@@ -200,8 +199,8 @@ async function func461(this: any) {
                         Gvar.var_231 = 0;
 
                         Adap.DSPLAY(100); // アイテム選択時の効果音
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -214,8 +213,8 @@ async function func461(this: any) {
                         Gvar.var_231 = 0;
 
                         Adap.DSPLAY(100); // アイテム選択時の効果音
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -230,8 +229,8 @@ async function func461(this: any) {
                     Gvar.Y_axis_item_position = 45;
                     
                     Adap.DSPLAY(100); // アイテム選択時の効果音
-                    // await Func.func337(); // メッセージ関係呼び出し
-                    await Func.func337(); // メッセージ関係呼び出し
+                    // await Func.func337(); // メッセージ表示処理(自動)
+                    await Func.func337(); // メッセージ表示処理(自動)
                     await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return;
                 }
@@ -245,8 +244,8 @@ async function func461(this: any) {
 
                         Adap.DSPLAY(100); // アイテム選択時の効果音
                         await Func.func478();
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -259,8 +258,8 @@ async function func461(this: any) {
 
                         Adap.DSPLAY(100); // アイテム選択時の効果音
                         await Func.func478();
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -274,8 +273,8 @@ async function func461(this: any) {
                         Gvar.Y_axis_item_position = 45;
                         
                         Adap.DSPLAY(100); // アイテム選択時の効果音
-                        // await Func.func337(); // メッセージ関係呼び出し
-                        await Func.func337(); // メッセージ関係呼び出し
+                        // await Func.func337(); // メッセージ表示処理(自動)
+                        await Func.func337(); // メッセージ表示処理(自動)
                         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                         return;
                     }
@@ -288,8 +287,8 @@ async function func461(this: any) {
                     Gvar.Y_axis_item_position = 45;
                     
                     Adap.DSPLAY(100); // アイテム選択時の効果音
-                    // await Func.func337(); // メッセージ関係呼び出し
-                    await Func.func337(); // メッセージ関係呼び出し
+                    // await Func.func337(); // メッセージ表示処理(自動)
+                    await Func.func337(); // メッセージ表示処理(自動)
                     
                     await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return;
@@ -302,8 +301,8 @@ async function func461(this: any) {
                     Gvar.Y_axis_item_position = 45;
                     
                     Adap.DSPLAY(100);
-                    // await Func.func337(); // メッセージ関係呼び出し
-                    await Func.func337(); // メッセージ関係呼び出し
+                    // await Func.func337(); // メッセージ表示処理(自動)
+                    await Func.func337(); // メッセージ表示処理(自動)
                     
                     await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return;
@@ -317,8 +316,8 @@ async function func461(this: any) {
                     Gvar.var_231 = 0;
 
                     Adap.DSPLAY(100);
-                    // await Func.func337(); // メッセージ関係呼び出し
-                    await Func.func337(); // メッセージ関係呼び出し
+                    // await Func.func337(); // メッセージ表示処理(自動)
+                    await Func.func337(); // メッセージ表示処理(自動)
                     await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return;
                 }
@@ -343,8 +342,8 @@ async function func461(this: any) {
                     //Gvar.Y_axis_item_position = Gvar.var_233[Gvar.var_1876].Var8 + 22;  
                     //var_225 = Gvar.var_233[Gvar.var_1876].Var8 + 1;
                     Adap.DSPLAY(100);
-                    // await Func.func337(); // メッセージ関係呼び出し
-                    await Func.func337(); // メッセージ関係呼び出し
+                    // await Func.func337(); // メッセージ表示処理(自動)
+                    await Func.func337(); // メッセージ表示処理(自動)
                     await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return;
                 }
@@ -354,8 +353,8 @@ async function func461(this: any) {
                     Gvar.var_225 = 1;
 
                     Adap.DSPLAY(100);
-                    // await Func.func337(); // メッセージ関係呼び出し
-                    await Func.func337(); // メッセージ関係呼び出し
+                    // await Func.func337(); // メッセージ表示処理(自動)
+                    await Func.func337(); // メッセージ表示処理(自動)
                     await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return;
                 }
@@ -367,8 +366,8 @@ async function func461(this: any) {
                     Gvar.var_225 = Gvar.var_225 - 1;
 
                     Adap.DSPLAY(100);
-                    // await Func.func337(); // メッセージ関係呼び出し
-                    await Func.func337(); // メッセージ関係呼び出し
+                    // await Func.func337(); // メッセージ表示処理(自動)
+                    await Func.func337(); // メッセージ表示処理(自動)
                     await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return;
                 }
@@ -378,8 +377,8 @@ async function func461(this: any) {
                     Gvar.var_225 = Gvar.var_233[Gvar.var_1876].Var8;
 
                     Adap.DSPLAY(100);
-                    // await Func.func337(); // メッセージ関係呼び出し
-                    await Func.func337(); // メッセージ関係呼び出し
+                    // await Func.func337(); // メッセージ表示処理(自動)
+                    await Func.func337(); // メッセージ表示処理(自動)
                     await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                     return;
                 }
@@ -389,13 +388,13 @@ async function func461(this: any) {
         if (Gvar.key_Z_on == 1 || Gvar.key_A_on == 1) {
             // No != 3 なので、アイテム個数 Gvar.var_225 が0でなければ
             if (Gvar.var_1866 == 1 && Gvar.item_page_number != 3) {
-                Adap.DSPLAY(　212);
+                Adap.DSPLAY(  212);
                 await Func.func469(); // ヤバいものへの "入れる" 選択
                 return;
             }
             // No != 3 なので、アイテム個数 Gvar.var_225 が0であれば
             if (Gvar.var_1866 == 1 && Gvar.item_page_number == 3) {
-                Adap.DSPLAY(　212);
+                Adap.DSPLAY(  212);
                 Gvar.var_2040 = 1;
                 await Func.func469(); // ヤバいものへの "入れる" 選択
                 return;
@@ -412,12 +411,12 @@ async function func461(this: any) {
             if (Gvar.var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
                 if (Gvar.var_1240 == 1) { // クレイジーD発動フラグ。道具画面処理を読み込む度にフラグが上がり、次へ進んでいく
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Stand.func522(); //disc同士の合成関数(クレイジーDの発動能力)1 何故か関数が二つある
+                    await Func.func522(); //disc同士の合成関数(クレイジーDの発動能力)1 何故か関数が二つある
                     return;
                 }
                 if (Gvar.var_1240 == 2) {
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Stand.func523(); //disc同士の合成関数(クレイジーDの発動能力)2　何故か関数が二つある
+                    await Func.func523(); //disc同士の合成関数(クレイジーDの発動能力)2  何故か関数が二つある
                     return;
                 }
                 if (Gvar.var_2000 == 1) {
@@ -462,7 +461,7 @@ async function func461(this: any) {
                 }
                 if (Gvar.var_2006 == 1) {
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Stand.func525(); // ボーイⅡマンの発動能力
+                    await Func.func525(); // ボーイⅡマンの発動能力
                     return;
                 }
                 if (Gvar.var_2007 == 1) {
@@ -505,7 +504,7 @@ async function func461(this: any) {
                 Gvar.var_1880 = 0;
                 Gvar.item_page_number = Gvar.var_1885;
                 Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                await Func.func051();
+                await Func.func051(); // キー入力待ち処理
                 await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
                 return;
             }
@@ -535,7 +534,7 @@ async function func461(this: any) {
                     Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                     Gvar.var_1965 = 0;
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Main.func009(); // ゲーム基本動作フレーム処理
+                    await Func.func009(); // ディアボロ側ターン処理(ループ処理)
                     return;
                 }
                 if (Gvar.var_1866 == 1) {
@@ -551,7 +550,7 @@ async function func461(this: any) {
                         Gvar.var_222 = 10;
                     }
                     Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-                    await Func.func051();
+                    await Func.func051(); // キー入力待ち処理
                     await Func.func462(); // アイテムidごとに区分分け関数
                     return;
                 }

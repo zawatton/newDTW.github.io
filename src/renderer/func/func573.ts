@@ -86,34 +86,20 @@ async function func573(this: any) {
                     Gvar.var_78[Gvar.var_419].Var15 = 0;
                     Gvar.var_412 = Gvar.var_2694;
                     Gvar.var_83[Gvar.var_2694].Var11 = 1;
-                    Gvar.var_271 = 1;
+                    Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                     Gvar.var_1345 = 1;
                     for (let cnt4 = 0; cnt4 < 14; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_1345 = Gvar.var_1345 + 1;
                     }
-                    Gvar.var_271 = 0;
+                    Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                     Gvar.var_1345 = 0;
                     Gvar.var_83[Gvar.var_2694].Var11 = 0;
                     Gvar.belongings_item_list = Gvar.var_78[Gvar.var_419].Var0;
                     Gvar.disc_rarity = Gvar.var_78[Gvar.var_419].Var13;
                     await Func.func492(); // アイテムリスト呼び出し
                     Gvar.target_item_name = Gvar.item_name;
-                    Gvar.comments_row1 = "";
-                    Gvar.comments_row2 = "";
-                    Gvar.var_295 = "";
-                    Gvar.comments_row1a = "";
-                    Gvar.comments_row2a = "";
-                    Gvar.var_298 = "";
-                    Gvar.var_299 = 0;
-                    Gvar.comments_row1 = "" + Gvar.target_item_name + "が";
-                    Gvar.comments_row2 = "爆発した！";
-                    Gvar.var_198 = 1;
-                    Gvar.var_300 = 0;
-                    Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                    await Func.func047();
+                    await Func.setMessage1("" + Gvar.target_item_name + "が", "爆発した！", 7, false, false, false);
                     Gvar.var_455 = Gvar.var_83[Gvar.var_2694].Var1;
                     Gvar.var_456 = Gvar.var_83[Gvar.var_2694].Var2;
                     Gvar.var_83[Gvar.var_2694].Var8 = 1;
@@ -134,13 +120,13 @@ async function func573(this: any) {
                     Gvar.var_83[Gvar.var_2694].Var5 = 2;
                     Gvar.var_1347 = Gvar.var_2695;
                     Gvar.var_1348 = Gvar.var_2696;
-                    Gvar.var_271 = 1;
+                    Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                     Gvar.var_1346 = 1;
                     for (let cnt4 = 0; cnt4 < 14; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_1346++;
                     }
-                    Gvar.var_271 = 0;
+                    Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                     Gvar.var_1346 = 0;
                     Gvar.var_83[Gvar.var_412].Var11 = 0;
                     return;
@@ -165,17 +151,17 @@ async function func573(this: any) {
                     Gvar.var_83[Gvar.var_412].Var11 = 1;
                     Gvar.var_1347 = Gvar.var_2695;
                     Gvar.var_1348 = Gvar.var_2696;
-                    Gvar.var_271 = 1;
+                    Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                     Gvar.var_1346 = 1;
                     for (let cnt4 = 0; cnt4 < 20; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_1346++;
                         if (Gvar.var_1346 == 16) {
                 
                             Adap.DSPLAY(216); // ワープして逃げる時の効果音
                         }
                     }
-                    Gvar.var_271 = 0;
+                    Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                     Gvar.var_1346 = 0;
                     Gvar.var_83[Gvar.var_412].Var11 = 0;
                 }

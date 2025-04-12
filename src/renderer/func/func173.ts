@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Dung from '../dungeon/index'
 
 async function func173(this: any) {
         Adap.dbgprt(173);
@@ -54,11 +53,11 @@ async function func173(this: any) {
         await Func.func176();
         Gvar.var_836 = Gvar.dungeon_number;
         Gvar.var_837 = Gvar.current_floor;
-        await Dung.func808();
+        await Func.func808();
         Gvar.var_356 = 0;
-        await Func.func233();
+        await Func.func233(); // ダンジョンへ入った際の全ステータス初期化処理
         Gvar.var_205 = 1;
-        await Func.func231();
+        await Func.func231(); // プレイデータを保存するセーブ機能
         Adap.onexit(0);
         Gvar.var_767 = 1;
         Gvar.var_791 = Gvar.var_790;

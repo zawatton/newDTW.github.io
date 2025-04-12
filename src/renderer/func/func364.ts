@@ -19,7 +19,7 @@ async function func364(this: any) {
         Adap.pos(55, 150);
         Adap.color(255, 255, 255);
 
-        Adap.font("ＭＳ Ｐゴシック", 14, 1);
+        Adap.font(Gvar.font_type, 14, 1);
         Adap.mes("敵の情報は、まだひとつもありません。");
         Adap.mes("「ﾍﾌﾞﾝｽﾞ･ﾄﾞｱｰのDISC」の発動能力を");
         Adap.mes("使うと、目の前にいる敵の情報が");

@@ -1,0 +1,37 @@
+import { Gvar } from '../variable'
+import * as Adap from '../adapter/index'
+import * as Func from '../func/index'
+
+// ボインゴに話しかけた時のメッセージ処理
+async function func758(this: any) {
+        Adap.dbgprt(758);
+        Gvar.var_243 = 0;
+
+        await Func.setMessage1("ボインゴ「新しいページが現れたぞ…」",
+                               "", 7, true, false, true);
+
+        await Func.setMessage1("「ディアボロは次の階で…",
+                               "", 7, true, true, true);                               
+
+        Gvar.var_3143 = Gvar.current_floor;
+        Gvar.current_floor = Gvar.current_floor + 1;
+        await Func.func627(); // 各ダンジョンごとの出現敵設定
+        Gvar.var_356 = Gvar.var_977[Gvar.var_2569];
+        await Func.func177(); // 死因原因
+        Gvar.current_floor = Gvar.var_3143;
+
+        await Func.setMessage1("" + Gvar.var_849,
+                               "リタイアだァ―ッ！」", 7, true, true, true);         
+
+        await Func.setMessage1("ｳｸｹｺ ｳﾋｺ ｳｹｹｹ ｳｹｺｹｺｹﾛｵ ",
+                                "ｳｹﾛｵｵｵﾌﾊﾎｯ！", 7, true, true, true);                                  
+        
+        await Func.AutoDraw(5);
+
+        await Func.func051(); // キー入力待ち処理
+        Gvar.var_198 = 0; // メッセージウィンドウ閉じる
+        await Func.func009(); // ディアボロ側ターン処理(ループ処理)
+        return;
+}
+
+export {func758}

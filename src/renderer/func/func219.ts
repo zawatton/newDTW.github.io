@@ -5,7 +5,6 @@ import * as Func from '../func/index'
 async function func219(this: any) {
         Adap.dbgprt(219);
         Adap.color(0, 0, 0);
-
         Adap.gmode(4, null, null, 100);
         Adap.pos(5, 35);
         Adap.gcopy(12, 0, 0, 332, 85);
@@ -31,12 +30,11 @@ async function func219(this: any) {
         Adap.pos(120, 45);
         Adap.gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
         Adap.gcopy(17, 0, 850, 110, 65);
-
-        Adap.font("ＭＳ ゴシック", 16, 1);
+        Adap.font("メイリオ", 16, 1);
         Adap.color(255, 255, 255);
         Adap.pos(200, Gvar.var_928);
         Adap.color(255, 255, 255);
-        Adap.mes("【　　　　　】");
+        Adap.mes("【          】");
         Adap.pos(40, Gvar.var_928);
         Adap.color(255, 255, 255);
         Adap.mes("攻撃・決定");
@@ -48,7 +46,7 @@ async function func219(this: any) {
         await Func.func220();
         Adap.pos(200, Gvar.var_928 + 20);
         Adap.color(255, 255, 255);
-        Adap.mes("【　　　　　】");
+        Adap.mes("【          】");
         Adap.pos(40, Gvar.var_928 + 20);
         Adap.color(255, 255, 255);
         Adap.mes("ﾀﾞｯｼｭ・ｷｬﾝｾﾙ");
@@ -60,7 +58,7 @@ async function func219(this: any) {
         await Func.func220();
         Adap.pos(200, Gvar.var_928 + 40);
         Adap.color(255, 255, 255);
-        Adap.mes("【　　　　　】");
+        Adap.mes("【          】");
         Adap.pos(40, Gvar.var_928 + 40);
         Adap.color(255, 255, 255);
         Adap.mes("コマンド");
@@ -72,7 +70,7 @@ async function func219(this: any) {
         await Func.func220();
         Adap.pos(200, Gvar.var_928 + 60);
         Adap.color(255, 255, 255);
-        Adap.mes("【　　　　　】");
+        Adap.mes("【          】");
         Adap.pos(40, Gvar.var_928 + 60);
         Adap.color(255, 255, 255);
         Adap.mes("方向転換");
@@ -84,7 +82,7 @@ async function func219(this: any) {
         await Func.func220();
         Adap.pos(200, Gvar.var_928 + 80);
         Adap.color(255, 255, 255);
-        Adap.mes("【　　　　　】");
+        Adap.mes("【          】");
         Adap.pos(40, Gvar.var_928 + 80);
         Adap.color(255, 255, 255);
         Adap.mes("斜め移動");
@@ -96,7 +94,7 @@ async function func219(this: any) {
         await Func.func220();
         Adap.pos(200, Gvar.var_928 + 100);
         Adap.color(255, 255, 255);
-        Adap.mes("【　　　　　】");
+        Adap.mes("【          】");
         Adap.pos(40, Gvar.var_928 + 100);
         Adap.color(255, 255, 255);
         Adap.mes("射撃");
@@ -108,7 +106,7 @@ async function func219(this: any) {
         await Func.func220();
         Adap.pos(200, Gvar.var_928 + 120);
         Adap.color(255, 255, 255);
-        Adap.mes("【　　　　　】");
+        Adap.mes("【          】");
         Adap.pos(40, Gvar.var_928 + 120);
         Adap.color(255, 255, 255);
         Adap.mes("マップ");
@@ -126,7 +124,7 @@ async function func219(this: any) {
         Adap.mes("ゲームに戻る");
         Adap.color(255, 255, 255);
 
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         Adap.pos(25, Gvar.Y_axis_item_position);
         Adap.mes(">");
         Adap.pos(26, Gvar.Y_axis_item_position);

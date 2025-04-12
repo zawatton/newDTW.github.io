@@ -40,7 +40,7 @@ async function func168(this: any) {
         Adap.pset(326, 199);
         Adap.color(255, 255, 255);
 
-        Adap.font("ＭＳ Ｐゴシック", 18, 1);
+        Adap.font(Gvar.font_type, 18, 1);
         if (Gvar.var_793 == 1) {
             Adap.pos(130, 5);
             Adap.mes("ホテルの外");
@@ -62,7 +62,7 @@ async function func168(this: any) {
             Adap.mes("" + Gvar.var_21);
         }
 
-        Adap.font("ＭＳ Ｐゴシック", 12, 1);
+        Adap.font(Gvar.font_type, 12, 1);
         Adap.pos(130, 195);
         Adap.color(255, 255, 255);
         if (Gvar.var_794 != 0) {
@@ -87,7 +87,7 @@ async function func168(this: any) {
         }
         Gvar.var_797 = 1;
 
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 14, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 14, Gvar.font_style = 1);
         for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
             if (Gvar.var_796 < 20) {
                 Adap.color(255, 255, 255);
@@ -103,7 +103,7 @@ async function func168(this: any) {
                     Adap.pos(70, Gvar.var_797 * 31);
                     Adap.mes("" + Gvar.var_792[Gvar.var_793][Gvar.var_796][1] + " 階");
                     Adap.pos(120, Gvar.var_797 * 31);
-                    Adap.mes("スコア　" + Gvar.var_792[Gvar.var_793][Gvar.var_796][3]);
+                    Adap.mes("スコア  " + Gvar.var_792[Gvar.var_793][Gvar.var_796][3]);
                     Adap.color(0, 255, 0);
                     if (Gvar.var_794 != 0) {
                         Adap.color(0, 190, 0);
@@ -135,7 +135,7 @@ async function func168(this: any) {
                     Adap.pos(70, Gvar.var_797 * 31);
                     Adap.mes("" + Gvar.var_792[Gvar.var_793][Gvar.var_796][1] + " 階");
                     Adap.pos(120, Gvar.var_797 * 31);
-                    Adap.mes("スコア　" + Gvar.var_792[Gvar.var_793][Gvar.var_796][3]);
+                    Adap.mes("スコア  " + Gvar.var_792[Gvar.var_793][Gvar.var_796][3]);
                     Adap.color(0, 255, 0);
                     if (Gvar.var_794 != 0) {
                         Adap.color(0, 190, 0);
@@ -160,7 +160,7 @@ async function func168(this: any) {
                 Adap.pos(70, Gvar.var_797 * 31);
                 Adap.mes("" + Gvar.var_792[Gvar.var_793][0][1] + " 階");
                 Adap.pos(120, Gvar.var_797 * 31);
-                Adap.mes("スコア　" + Gvar.var_792[Gvar.var_793][0][3]);
+                Adap.mes("スコア  " + Gvar.var_792[Gvar.var_793][0][3]);
                 Adap.color(255, 0, 0);
                 Adap.pos(30, Gvar.var_797 * 31 + 16);
                 Gvar.var_356 = Gvar.var_792[Gvar.var_793][0][2];
@@ -172,7 +172,7 @@ async function func168(this: any) {
         }
         if (Gvar.var_767 == 0) {
     
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 14, Gvar.font_style = 1);
+            Adap.font(Gvar.font_type, Gvar.font_size = 14, Gvar.font_style = 1);
             Adap.color(255, 255, 255);
             if (Gvar.var_794 != 0) {
                 Adap.color(150, 150, 150);
@@ -194,7 +194,7 @@ async function func168(this: any) {
         Adap.pset(10, 331);
         Adap.pset(326, 331);
 
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 14, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 14, Gvar.font_style = 1);
         Adap.color(255, 255, 255);
         if (Gvar.var_792[Gvar.var_793][Gvar.var_786][3] != 0) {
             Gvar.disc_rarity = 0;
@@ -295,7 +295,7 @@ async function func168(this: any) {
                 Adap.mes("能力：なし");
             }
     
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 14, Gvar.font_style = 1);
+            Adap.font(Gvar.font_type, Gvar.font_size = 14, Gvar.font_style = 1);
             Adap.color(255, 255, 255);
             Adap.pos(40, 276);
             Adap.mes("レベル：" + Gvar.var_792[Gvar.var_793][Gvar.var_786][14]);
@@ -314,7 +314,7 @@ async function func168(this: any) {
             if (Gvar.var_794 >= 1) {
                 Adap.color(255, 255, 255);
         
-                Adap.font("MS ゴシック", 16, 1);
+                Adap.font(Gvar.font_type, 16, 1);
                 Adap.pos(13, Gvar.var_795);
                 Adap.mes(">");
                 Adap.pos(14, Gvar.var_795);

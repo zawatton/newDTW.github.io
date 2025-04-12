@@ -1,13 +1,11 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Dung from '../dungeon/index'
-import * as Main from '../newdtw/index'
 
 async function func513(this: any) {
         Adap.dbgprt(513);
         if (Gvar.var_2357 == 1) {
-            await Dung.func817();
+            await Func.func817();
             return;
         }
         if (Gvar.var_1949 == 0) {
@@ -16,46 +14,31 @@ async function func513(this: any) {
             Gvar.kougeki_disc_id  = Gvar.var_2261;
         }
         Gvar.var_1254 = 0;
-        await Func.func094(); // メッセージ送りの際の効果音
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
         Gvar.var_2358 = Adap.rnd(5);
         if (Gvar.var_2358 == 0) {
-            Gvar.comments_row1 = "よし。";
-            Gvar.comments_row2 = "「今起こったことはすべて忘れる」…と。";
+            await Func.setMessage1("よし。",
+                                    "「今起こったことはすべて忘れる」…と。", 7, true, false, true);
         }
         if (Gvar.var_2358 == 1) {
-            Gvar.comments_row1 = "最低なヤツだな……";
-            Gvar.comments_row2 = "おまえは使えんな…";
+            await Func.setMessage1("最低なヤツだな……",
+                                    "おまえは使えんな…", 7, true, false, true);
         }
         if (Gvar.var_2358 == 2) {
-            Gvar.comments_row1 = "実にいいッ！";
-            Gvar.comments_row2 = "実に気に入ったよ！";
+            await Func.setMessage1("実にいいッ！",
+                                    "実に気に入ったよ！", 7, true, false, true);
         }
         if (Gvar.var_2358 == 3) {
-            Gvar.comments_row1 = "君の性格……";
-            Gvar.comments_row2 = "読者からもきっと好かれると思うよ";
+            await Func.setMessage1("君の性格……",
+                                    "読者からもきっと好かれると思うよ", 7, true, false, true);
         }
         if (Gvar.var_2358 == 4) {
-            Gvar.comments_row1 = "たとえ平凡でも";
-            Gvar.comments_row2 = "人の人生を見るのはおもしろい……";
+            await Func.setMessage1("たとえ平凡でも",
+                                    "人の人生を見るのはおもしろい……", 7, true, false, true);
         }
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
-        await Func.func340(); // キー入力による選択処理
         Gvar.var_83[Gvar.var_2231].Var8 = 0;
         Gvar.var_1949 = 0;
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

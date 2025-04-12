@@ -60,3 +60,51 @@ export {enemy170} from "./enemy170"
 
 export {enemy999} from "./enemy999"
 export {enemy9999} from "./enemy9999"
+
+export {func580} from "./func580"
+
+export {func587} from "./func587"
+export {func588} from "./func588"
+export {func589} from "./func589"
+export {func590} from "./func590"
+export {func591} from "./func591"
+export {func592} from "./func592"
+export {func593} from "./func593"
+export {func594} from "./func594"
+export {func595} from "./func595"
+export {func596} from "./func596"
+export {func597} from "./func597"
+export {func598} from "./func598"
+export {func599} from "./func599"
+export {func600} from "./func600"
+
+export {func602} from "./func602"
+export {func603} from "./func603"
+export {func604} from "./func604"
+export {func605} from "./func605"
+export {func606} from "./func606"
+export {func607} from "./func607"
+export {func608} from "./func608"
+export {func609} from "./func609"
+export {func610} from "./func610"
+export {func611} from "./func611"
+export {func612} from "./func612"
+export {func613} from "./func613"
+export {func614} from "./func614"
+
+export {func617} from "./func617"
+export {func618} from "./func618"
+
+export {func623} from "./func623"
+
+export {func657} from "./func657"
+
+export {func663} from "./func663"
+export {func664} from "./func664"
+export {func665} from "./func665"
+export {func666} from "./func666"
+
+export {func670} from "./func670"
+
+export {func702} from "./func702"
+export {func703} from "../func/func703"

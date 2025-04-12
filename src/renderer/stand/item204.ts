@@ -1,48 +1,22 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 // No = 204 シアハートアタックの発動処理
 async function item204(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(5);
         Adap.DSPLAY(165);
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "カチリ";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-        await Func.func047();
-        for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.setMessage1("カチリ",
+                               "", 8, false, false, false);
+        await Func.AutoDraw(15);
+
         Gvar.var_1389 = Gvar.var_66;
         Gvar.var_1390 = Gvar.var_67;
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！";
-        Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        await Func.func047();
+
+        await Func.setMessage1("ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！",
+                               "", 8, false, false, false);
+
         Gvar.var_1993 = Gvar.var_1389 - 1;
         if (Gvar.var_1993 < 0) {
             Gvar.var_1993 = 0;
@@ -124,23 +98,23 @@ async function item204(this: any) {
         Gvar.var_389 = 2;
         Gvar.var_1263 = 1;
         Adap.DSPLAY(180);
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1388 = 1;
         for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
             Gvar.var_585 = 3;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_585 = 0;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1388++;
         }
         for (let cnt2 = 0; cnt2 < 24; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             if (cnt2 == 25) {
                 Gvar.var_1263 = 0;
             }
             Gvar.var_1388++;
         }
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1388 = 0;
         Gvar.var_1263 = 0;
         Gvar.var_403 = "ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！";
@@ -180,9 +154,7 @@ async function item204(this: any) {
         if (Gvar.var_211 == 1) {
             Gvar.var_211 = 0;
             Gvar.var_356 = 209;
-            for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(9);
         }
         if (Gvar.var_211 > 1) {
             Gvar.var_2198 = Math.floor(Gvar.var_211 / 2);
@@ -211,7 +183,7 @@ async function item204(this: any) {
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

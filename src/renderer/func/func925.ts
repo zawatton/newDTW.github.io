@@ -11,7 +11,7 @@ async function func925(this: any) {
             Adap.gsel( Gvar.window_id = 33, Gvar.window_mode = -1);
             Adap.gsel( Gvar.window_id = 30, Gvar.window_mode = -1);
             Adap.gsel( Gvar.window_id = 0, Gvar.window_mode = 1);
-            await Func.func193();
+            await Func.func193(); // メニュー画面 "システム" 設定処理
             return;
         }
         if (Gvar.var_407 == 0) {

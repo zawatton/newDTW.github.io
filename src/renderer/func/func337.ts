@@ -1,23 +1,23 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Stand from '../stand/index'
-import * as Dung from '../dungeon/index'
-import * as Ex from '../extra_items/index'
+import * as Music from '../music/index'
 
+// メッセージ処理関係呼び出し
 async function func337(this: any) {
         Adap.dbgprt(337);
-        await Adap.await_(Gvar.var_686);
+        await Adap.await_(Gvar.animationDelay);
         Adap.redraw(2);
-        if (Gvar.var_163 == 1 || Gvar.var_151 >= 1) {
+        if (Gvar.time_paused == 1 || Gvar.time_paused_count >= 1) { // 時止め(時消し飛ばし)状態の場合
             Adap.gsel(24);
         }
-        await Func.func324();
+        await Func.func324X(); // マップ背景画像の描写処理
+
         await Func.func326();
         if (Gvar.var_772 == 1) {
             await Func.func353();
         }
-        await Func.func330();
+        await Func.func330(); // ディアボロの周りの暗視エフェクト処理
         await Func.func328();
         if (Gvar.var_243 >= 1) {
             await Func.func352();
@@ -25,8 +25,9 @@ async function func337(this: any) {
         if (Gvar.var_1189 >= 1) {
             await Func.func355();
         }
+        // エフェクト "キラキラ" 表示フラグがON
         if (Gvar.var_271 == 1) {
-            await Func.func354();
+            await Func.func354(); // エフェクト "キラキラ" 表示処理
         }
         if (Gvar.var_1190 >= 1) {
             await Func.func413();
@@ -59,10 +60,10 @@ async function func337(this: any) {
         if (Gvar.var_127 == 1 || Gvar.var_132 >= 1) {
             await Func.func329(); // 画面全体に黒いブラインドをかける処理
         }
-        await Stand.func325();
-        await Func.func342();
+        await Func.func325(); // 画面上にマップを表示する機能
+        await Func.func342(); // 画面上部のステータス表示(フロア, レベル, HP現在値, HP最大値, 所持金)
         await Func.func343();
-        if (Gvar.var_163 == 1) {
+        if (Gvar.time_paused == 1) { // 時止め(時消し飛ばし)状態の場合
             Adap.gsel(25);
             Adap.pos(0, 0);
             Adap.gcopy(24, 0, 0, 340, 340);
@@ -77,7 +78,7 @@ async function func337(this: any) {
                 await Func.func352();
             }
         }
-        if (Gvar.var_151 >= 1) {
+        if (Gvar.time_paused_count >= 1) {
             Adap.gsel(25);
             Adap.pos(0, 0);
             Adap.gcopy(24, 0, 0, 340, 340);
@@ -104,10 +105,10 @@ async function func337(this: any) {
             await Func.func674();
         }
         if (Gvar.var_198 == 1) {
-            await Func.func048();
+            await Func.func048(); // メッセージ表示処理
         }
         if (Gvar.var_634 >= 10 || Gvar.var_635 >= 1 || Gvar.var_636 >= 1 || Gvar.var_633 >= 1 || Gvar.var_632 >= 1 || Gvar.var_1201 >= 1) {
-            await Func.func102(); // 各ボリューム調整キーを押した時の表示
+            await Music.func102(); // 各ボリューム調整キーを押した時の表示
         }
         if (Gvar.open_item_menue == 1) { // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             await Func.func460(); // 道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具)
@@ -119,33 +120,34 @@ async function func337(this: any) {
             await Func.func485();
         }
         if (Gvar.var_195 == 1) {
-            await Func.func068();
-            await Func.func069();
+            await Func.func068(); // メニュー画面各コンディション表示
+            await Func.func069(); // 現在装備しているdisc表示欄の設定？
         }
         if (Gvar.var_196 == 1) { // Mフラグ:メニュー画面 Func.func054
             await Func.func054(); // メニュー画面を開いた時の表示(道具、足元、状態、設定)
         }
         if (Gvar.var_405 == 1) {
-            await Func.func063();
+            await Func.func063(); // ダンジョン内の階段機能
         }
         if (Gvar.var_548 == 1) { // 選択肢処理フラグONであれば
             await Func.func840(); // 選択肢処理(はい、いいえ & 買う、やめる等)
         }
         if (Gvar.var_1204 == 1) {
-            await Dung.func823();
+            await Func.func823();
         }
         if (Gvar.var_1205 >= 1) {
-            await Dung.func800();
+            await Func.func800();
         }
         if (Gvar.var_1206 == 1) {
-            await Dung.func804();
+            await Func.func804();
         }
         if (Gvar.var_499 == 1) { // Mフラグ:設定画面 Func.func056
             await Func.func056(); // メニュー画面の"設定"の表示 (マップON、履歴、資料、システム、終了)
         }
         if (Gvar.var_1207 == 1) {
-            await Ex.func449(); // 魔法のランプでジャッジメントを召喚した時のメッセージ
+            await Func.func449(); // 魔法のランプでジャッジメントを召喚した時のメッセージ
         }
+        // メッセージ自動送りキャンセルフラグが ON の場合
         if (Gvar.var_765 == 1) {
             if (Gvar.var_766 == 0 || Gvar.var_766 == 1 || Gvar.var_766 == 2) {
                 await Func.func341();
@@ -170,7 +172,7 @@ async function func337(this: any) {
             await Func.func360();
         }
         if (Gvar.var_1208 == 1) {
-            await Stand.func528(); // ボーイIIマン発動時の能力消去選択処理
+            await Func.func528();
         }
         if (Gvar.var_498 == 1) {
             await Func.func382();
@@ -178,17 +180,17 @@ async function func337(this: any) {
         if (Gvar.var_1209 == 1) {
             await Func.func367(); // アイテムの名前や説明表示
         }
-        if (Gvar.var_68 == 1) {
-            await Func.func077();
-        }
+        //if (Gvar.var_68 == 1) {
+        //    await Func.func077(); // 各ダンジョンの背景描写処理ではなさそう
+        //}
         if (Gvar.var_373 >= 1) {
-            await Func.func078();
+            await Func.func078(); // ディアボロの試練クリア時の「完」メッセージ
         }
         if (Gvar.var_509 == 1) {
             await Func.func197();
         }
         if (Gvar.var_900 == 1) {
-            await Func.func196();
+            await Func.func196(); // ゲームスピード設定項目
         }
         if (Gvar.var_901 == 1) {
             await Func.func204(); // メッセージ色設定変更表示
@@ -270,13 +272,14 @@ async function func337(this: any) {
         if (Gvar.var_784 == 6) {
             Gvar.var_784 = 0;
         }
-        if (Gvar.var_163 == 0 && Gvar.var_151 == 0) {
+        if (Gvar.time_paused == 0 && Gvar.time_paused_count == 0) {
             Gvar.var_1153 = Gvar.var_1153 + 1;
             if (Gvar.var_1153 == 12) {
                 Gvar.var_1153 = 0;
             }
         }
-        if (Gvar.var_163 == 0 && Gvar.var_151 == 0) {
+        // 時止め(時消し飛ばし)状態でない場合
+        if (Gvar.time_paused == 0 && Gvar.time_paused_count == 0) {
             Gvar.var_1164 = Gvar.var_1164 + 1;
             if (Gvar.var_1164 == 6) {
                 Gvar.var_1164 = 0;
@@ -368,23 +371,23 @@ async function func337(this: any) {
                 Gvar.var_630 = 0;
             }
         }
-        if (Gvar.var_151 == 0) {
+        if (Gvar.time_paused_count == 0) {
             Gvar.var_1226 = Gvar.var_1226 + 1;
             if (Gvar.var_1226 == 12) {
                 Gvar.var_1226 = 0;
             }
         }
-        if (Gvar.var_163 == 0) {
+        if (Gvar.time_paused == 0) { // 時止め(時消し飛ばし)状態でない場合
             Gvar.var_1227 = 1;
             for (let cnt2 = 0; cnt2 < Gvar.var_97; ++cnt2) {
                 if (Gvar.var_83[Gvar.var_1227].Var0 != 0) {
-                    if (Gvar.var_151 != 0 && Gvar.var_152 == Gvar.var_1227) {
+                    if (Gvar.time_paused_count != 0 && Gvar.var_152 == Gvar.var_1227) {
                         Gvar.var_83[Gvar.var_1227].Var32 = Gvar.var_83[Gvar.var_1227].Var32 + 1;
                         if (Gvar.var_83[Gvar.var_1227].Var32 >= 12) {
                             Gvar.var_83[Gvar.var_1227].Var32 = 0;
                         }
                     }
-                    if (Gvar.var_151 == 0) {
+                    if (Gvar.time_paused_count == 0) {
                         Gvar.var_83[Gvar.var_1227].Var32 = Gvar.var_83[Gvar.var_1227].Var32 + 1;
                         if (Gvar.var_83[Gvar.var_1227].Var32 >= 12) {
                             Gvar.var_83[Gvar.var_1227].Var32 = 0;
@@ -394,11 +397,12 @@ async function func337(this: any) {
                 Gvar.var_1227 = Gvar.var_1227 + 1;
             }
         }
+        // メッセージ自動送りキャンセルフラグが OFF の場合
         if (Gvar.var_765 == 0) {
             Gvar.var_300 = Gvar.var_300 + 1;
             if (Gvar.var_300 > 40) {
                 Gvar.var_300 = 0;
-                Gvar.var_198 = 0;
+                Gvar.var_198 = 0; // メッセージウィンドウ閉じる
                 Gvar.comments_row1 = "";
                 Gvar.comments_row2 = "";
                 Gvar.var_295 = "";

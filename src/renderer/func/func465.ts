@@ -4,13 +4,13 @@ import * as Func from '../func/index'
 
 async function func465(this: any) {
         Adap.dbgprt(465);
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         await Func.func080(); // 各キー入力確認
         if (Gvar.key_X_on == 1) {
             Gvar.var_221 = 1;
             Gvar.var_234 = 0;
             Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-            await Func.func051();
+            await Func.func051(); // キー入力待ち処理
             await Func.func462(); // アイテムidごとに区分分け関数
             return;
         }
@@ -18,15 +18,15 @@ async function func465(this: any) {
             Gvar.var_246 = Gvar.var_246 + 17;
             Gvar.var_2043 = 2;
             Adap.DSPLAY(100); // アイテム選択時の効果音
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         if (Gvar.var_255 == 1 && Gvar.var_2043 == 2) { // var_255:入力判定[↑]
             Gvar.var_246 = Gvar.var_246 - 17;
             Gvar.var_2043 = 1;
             Adap.DSPLAY(100); // アイテム選択時の効果音
-            // await Func.func337(); // メッセージ関係呼び出し
-            await Func.func337(); // メッセージ関係呼び出し
+            // await Func.func337(); // メッセージ表示処理(自動)
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         if (Gvar.key_Z_on == 1 || Gvar.key_A_on == 1) {
             Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
@@ -40,7 +40,7 @@ async function func465(this: any) {
             if (Gvar.var_2043 == 2) {
                 Gvar.var_221 = 1;
                 Gvar.var_234 = 0;
-                await Func.func051();
+                await Func.func051(); // キー入力待ち処理
                 await Func.func462(); // アイテムidごとに区分分け関数
                 return;
             }

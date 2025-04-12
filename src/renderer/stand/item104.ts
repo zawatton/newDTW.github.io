@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 // No = 104 ザ・ハンドの発動処理
 async function item104(this: any) {
@@ -25,28 +24,14 @@ async function item104(this: any) {
         Gvar.var_1194 = 1;
 
         Adap.DSPLAY(121);
-        for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "空間をけずりとる！ ";
-        Gvar.comments_row2 = "……するとお～～～～っ！";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
-        for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
-        await Func.func340(); // キー入力による選択処理
+
+        await Func.AutoDraw(15);
+
+        await Func.setMessage1("空間をけずりとる！ ",
+                               "……するとお～～～～っ！", 7, true, false, false);
+        
+        await Func.AutoDraw(5);
+
         Gvar.var_455 = Gvar.var_66;
         Gvar.var_456 = Gvar.var_67;
         if (Gvar.var_199 == 4) {
@@ -221,10 +206,8 @@ async function item104(this: any) {
                     Gvar.var_78[Gvar.var_2293].Var2 = Gvar.var_2292;
                     Gvar.var_77[Gvar.var_2291][Gvar.var_2292] = Gvar.var_2293;
                 }
-                Gvar.var_198 = 0;
-                for (let cnt4 = 0; cnt4 < 20; ++cnt4) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                Gvar.var_198 = 0; // メッセージウィンドウ閉じる
+                await Func.AutoDraw(20);
                 break;
             }
         }
@@ -234,11 +217,12 @@ async function item104(this: any) {
             Gvar.var_2254 = 0;
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
-        if (Gvar.var_72[Gvar.var_66][Gvar.var_67] == 0 && Gvar.var_85 == 0 && Gvar.var_163 == 0) {
+        // 時止め(時消し飛ばし)状態でない場合
+        if (Gvar.var_72[Gvar.var_66][Gvar.var_67] == 0 && Gvar.var_85 == 0 && Gvar.time_paused == 0) {
             await Func.func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
         }
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

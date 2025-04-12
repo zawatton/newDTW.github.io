@@ -170,7 +170,7 @@ async function func462(this: any) {
             Gvar.item_class2++;
             Gvar.var_2042 = Gvar.var_225;
         }
-        await Func.func051();
+        await Func.func051(); // キー入力待ち処理
         if (Gvar.var_1667 >= 1) {
             Gvar.var_1668 = 0;
             Gvar.var_1669 = 0;

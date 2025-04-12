@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Class from '../classes'
 
+// ダンジョン(魔少年の問題のみ)へ入った際の全ステータス初期化処理
 async function func235(this: any) {
         Adap.dbgprt(235);
         Gvar.var_233 = Class.ItemInfo.dim(100);
@@ -12,7 +13,7 @@ async function func235(this: any) {
         Gvar.var_989 = Adap.dim(400);
         Gvar.var_990 = Adap.dim(100);
         Gvar.var_726 = 0;
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.current_floor = 0;
         Gvar.var_376 = 0;
         Gvar.current_level = 0;
@@ -44,7 +45,7 @@ async function func235(this: any) {
         Gvar.var_129 = 0;
         Gvar.var_218 = 0;
         Gvar.var_374 = 0;
-        Gvar.to_freeze = 0;
+        Gvar.var_128 = 0;
         Gvar.var_389 = 0;
         Gvar.kougeki_disc_id  = 0;
         Gvar.bougyo_disc_id = 0;
@@ -129,7 +130,7 @@ async function func235(this: any) {
         Gvar.var_172 = 0; // Gvar.var_172 発動効果が向上するフラグOFF
         Gvar.var_1015 = 0;
         Gvar.var_159 = 0;
-        Gvar.var_163 = 0;
+        Gvar.time_paused = 0; // 時止め(時消し飛ばし)状態フラグOFF
         Gvar.var_164 = 0;
         Gvar.var_132 = 0; // 記憶DISC「ンドゥール」の効果発動フラグOFF
         Gvar.var_120 = 0;
@@ -176,7 +177,7 @@ async function func235(this: any) {
         Gvar.var_387 = 0;
         Gvar.var_150 = 0;
         Gvar.sympathy_id = 0;
-        Gvar.var_151 = 0;
+        Gvar.time_paused_count = 0;
         Gvar.var_152 = 0;
         Gvar.var_154 = 0;
         Gvar.var_155 = 0;

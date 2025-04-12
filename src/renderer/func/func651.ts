@@ -2,7 +2,8 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Enemy from '../enemy/index'
-import * as Main from '../newdtw/index'
+import * as Music from '../music/index'
+import * as Stand from '../stand/index'
 
 async function func651(this: any) {
         Adap.dbgprt(651);
@@ -42,7 +43,7 @@ async function func651(this: any) {
                             Gvar.var_71[Gvar.var_347][Gvar.var_348] = Gvar.var_71[Gvar.var_303][Gvar.var_307];
                         }
                         Gvar.var_1194 = 1;
-                        await Func.func646();
+                        await Stand.func646();
                     }
                 }
             }
@@ -53,7 +54,7 @@ async function func651(this: any) {
                     if (Gvar.var_81[Gvar.var_3015][0] != 31) {
                         Gvar.var_80[Gvar.var_347][Gvar.var_348] = 0;
                         Gvar.var_1194 = 1;
-                        await Func.func646();
+                        await Stand.func646();
                     }
                 }
             }
@@ -178,41 +179,41 @@ async function func651(this: any) {
                     Gvar.var_83[Gvar.var_314].Var5 = 1;
                     Gvar.var_83[Gvar.var_314].Var7 = 1;
                 }
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                     Gvar.var_83[Gvar.var_314].Var5 = 2;
                 }
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                     Gvar.var_83[Gvar.var_314].Var5 = 3;
                 }
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 if (Gvar.var_2985 == 0) {
-                    await Func.func089(); // 各装備discごとの攻撃音設定
+                    await Music.func089(); // 各装備discごとの攻撃音設定
                 }
                 if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                     Gvar.var_83[Gvar.var_314].Var5 = 6;
                 }
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                     Gvar.var_83[Gvar.var_314].Var5 = 9;
                 }
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                     Gvar.var_83[Gvar.var_314].Var5 = 8;
                 }
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 if (Gvar.var_2939 == 1) {
-                    await Func.func090();
+                    await Music.func090();
                 }
                 if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                     Gvar.var_83[Gvar.var_314].Var5 = 7;
                 }
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                     Gvar.var_83[Gvar.var_314].Var5 = 4;
                 }
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                     Gvar.var_83[Gvar.var_314].Var5 = Gvar.var_2657;
                     Gvar.var_83[Gvar.var_314].Var7 = 0;
@@ -220,7 +221,7 @@ async function func651(this: any) {
             }
             // Ver0.1402にて追加。
             if (Gvar.var_83[Gvar.var_314].Var0 == 3) {
-                if (Gvar.var_201 != 14 && Gvar.var_83[Gvar.var_314].Var10 == Gvar.var_201) { // 部屋にいる時のみ発動
+                if (Gvar.var_201 != 14 && Gvar.var_83[Gvar.var_314].Var10 == Gvar.var_201) { // 幻惑の迷宮(var_201 = 14)でないかつ部屋にいる時のみ発動
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_2657 = Gvar.var_83[Gvar.var_314].Var5;
                     }
@@ -228,57 +229,57 @@ async function func651(this: any) {
                         Gvar.var_83[Gvar.var_314].Var5 = 1;
                         Gvar.var_83[Gvar.var_314].Var7 = 1;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 2;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 3;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2985 == 0) {
-                        await Func.func089(); // 各装備discごとの攻撃音設定
+                        await Music.func089(); // 各装備discごとの攻撃音設定
                     }
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 6;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 9;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 8;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2939 == 1) {
-                        await Func.func090();
+                        await Music.func090();
                     }
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 7;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 4;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = Gvar.var_2657;
                         Gvar.var_83[Gvar.var_314].Var7 = 0;
                     }
                     // 下記のようにすることで、部屋内でヒラリ回避をした後に瞬間移動をする。
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         await Enemy.enemy003(); // No = 3 敵タワーオブグレーの特殊能力。瞬間移動。
                         // ヒラリ回避→瞬間移動をした後に攻撃をさせない処理
-                        //await Main.func009(); // ゲーム基本動作フレーム処理
+                        //await Func.func009(); // ディアボロ側ターン処理(ループ処理)
                     }
                     // 下記のようにすることで、部屋内でヒラリ回避をした後に瞬間移動をする。
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         // ヒラリ回避→瞬間移動をした後に攻撃をさせない処理
-                        await Main.func009(); // ゲーム基本動作フレーム処理
+                        await Func.func009(); // ディアボロ側ターン処理(ループ処理)
                     }
                 }
                 else { // 通路にいる場合の動作処理
@@ -289,91 +290,72 @@ async function func651(this: any) {
                         Gvar.var_83[Gvar.var_314].Var5 = 1;
                         Gvar.var_83[Gvar.var_314].Var7 = 1;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 2;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 3;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2985 == 0) {
-                        await Func.func089(); // 各装備discごとの攻撃音設定
+                        await Music.func089(); // 各装備discごとの攻撃音設定
                     }
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 6;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 9;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 8;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2939 == 1) {
-                        await Func.func090();
+                        await Music.func090();
                     }
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 7;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = 4;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
                         Gvar.var_83[Gvar.var_314].Var5 = Gvar.var_2657;
                         Gvar.var_83[Gvar.var_314].Var7 = 0;
                     }
                     // 下記を設定することで、ヒラリ回避を実行した時のみターン消費させられる。
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     if (Gvar.var_2938 == 1) {
-                        await Main.func009(); // ゲーム基本動作フレーム処理
+                        await Func.func009(); // ディアボロ側ターン処理(ループ処理)
                     }
                 }
             }
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         // No = 105 チリペッパーを攻撃装備している場合
         if (Gvar.equip_disc[105] == 1 && Gvar.var_1030 >= 2 && Gvar.var_2939 == 1) {
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
     
             Adap.DSPLAY(227);
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
-            Gvar.var_271 = 1;
+            await Func.AutoDraw(2);
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1265 = 1;
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1265++;
             }
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1265 = 0;
-            await Func.func094(); // メッセージ送りの際の効果音
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "おれは・・・";
-            Gvar.comments_row2 = "反省すると強いぜ・・・";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("おれは・・・", "反省すると強いぜ・・・", 7, false, false, true);
+            await Func.AutoDraw(20);
         }
         Gvar.var_3022 = 0;
         Gvar.var_2939 = 0;
@@ -399,7 +381,7 @@ async function func651(this: any) {
             }
         }
         // No = 101 シルバーチャリオッツのDISCを攻撃装備している場合
-        if (Gvar.equip_disc[101] == 1 && Gvar.var_2925 == 0 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0 && Gvar.to_freeze == 0 && Gvar.var_178 == 0) {
+        if (Gvar.equip_disc[101] == 1 && Gvar.var_2925 == 0 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0 && Gvar.var_128 == 0 && Gvar.var_178 == 0) {
             Gvar.var_2966 = Gvar.var_83[Gvar.var_314].Var1;
             Gvar.var_2967 = Gvar.var_83[Gvar.var_314].Var2;
             if (Gvar.var_82[Gvar.var_2966][Gvar.var_2967] != 0) {
@@ -410,7 +392,7 @@ async function func651(this: any) {
             }
         }
         // No = 135 「達人二刀流」が発動している場合 (「シルバーチャリオッツ」 & 「アヌビス神」を装備)
-        if (Gvar.sympathy_id == 135 && Gvar.var_341 == 1 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0 && Gvar.to_freeze == 0 && Gvar.var_178 == 0) {
+        if (Gvar.sympathy_id == 135 && Gvar.var_341 == 1 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0 && Gvar.var_128 == 0 && Gvar.var_178 == 0) {
             Gvar.var_2966 = Gvar.var_83[Gvar.var_314].Var1;
             Gvar.var_2967 = Gvar.var_83[Gvar.var_314].Var2;
             if (Gvar.var_82[Gvar.var_2966][Gvar.var_2967] != 0) {
@@ -435,7 +417,7 @@ async function func651(this: any) {
             Gvar.kougeki_disc_id  = Gvar.var_2923;
         }
         // No = 101 シルバーチャリオッツのDISCを攻撃装備している場合
-        if (Gvar.equip_disc[120] == 1 && Gvar.var_2926 == 1 && Gvar.to_freeze == 0 && Gvar.var_178 == 0) {
+        if (Gvar.equip_disc[120] == 1 && Gvar.var_2926 == 1 && Gvar.var_128 == 0 && Gvar.var_178 == 0) {
             if (Gvar.kougeki_disc_id  != 100 && Gvar.kougeki_disc_id  != 398) {
                 Gvar.var_2926 = 0;
                 await Func.func641();
@@ -458,7 +440,7 @@ async function func651(this: any) {
                 }
             }
         }
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

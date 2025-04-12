@@ -1,8 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Ex from '../extra_items/index'
-import * as Main from '../newdtw/index'
+import * as Music from '../music/index'
 
 // 各アイテムを使った際、item_listのIDに応じて効果を割り振り
 async function func420(this: any) {
@@ -115,150 +114,167 @@ async function func420(this: any) {
                 Gvar.comments_row1a = "";
                 Gvar.comments_row2a = "";
                 Gvar.var_298 = "";
-                Gvar.var_299 = 0;
+                Gvar.animationStep = 0;
                 Gvar.comments_row1 = "呪われていてはずせない！";
-                Gvar.var_198 = 1;
+                Gvar.var_198 = 1; // メッセージウィンドウ開く
                 Gvar.var_300 = 0;
                 Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
                 Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
                 Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                await Func.func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.func047(); // メッセージ履歴追加処理
+                await Func.AutoDraw(10);
                 await Func.func340(); // キー入力による選択処理
                 Gvar.var_1264 = 0;
                 Gvar.var_217 = 1;
                 Gvar.disc_class = 0;
                 Gvar.var_1933 = 0;
-                await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+                await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
                 return;
             }*/
         }
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
         if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400) {
             if (Gvar.var_233[Gvar.var_225].Var4 != 0) {
-                Gvar.comments_row1 = "" + Gvar.item_name + "+" + Gvar.var_233[Gvar.var_225].Var4 + "を";
-                Gvar.var_1936 = 0;
+                Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message表示)
+                if (Gvar.disc_class == 1 && Gvar.var_476[Gvar.var_225] == 0) {
+                    await Func.setMessage1("" + Gvar.item_name + "+" + Gvar.var_233[Gvar.var_225].Var4 + "を", "攻撃用に装備した", 7, false, false, false);
+                    Gvar.var_1927 = Gvar.belongings_item_list;
+                    Gvar.var_1926 = 1;
+                    await Music.func105(); // discを装備した際のBGM選曲
+                }
+                if (Gvar.disc_class == 2 && Gvar.var_477[Gvar.var_225] == 0) {
+                    await Func.setMessage1("" + Gvar.item_name + "+" + Gvar.var_233[Gvar.var_225].Var4 + "を", "防御用に装備した", 7, false, false, false);
+                    Gvar.var_1928 = Gvar.belongings_item_list;
+                    Gvar.var_1926 = 1;
+                    await Music.func105(); // discを装備した際のBGM選曲
+                }
+                if (Gvar.disc_class == 3 && Gvar.var_478[Gvar.var_225] == 0) {
+                    await Func.setMessage1("" + Gvar.item_name + "+" + Gvar.var_233[Gvar.var_225].Var4 + "を", "能力用に装備した", 7, false, false, false);
+                    Gvar.var_1929 = Gvar.belongings_item_list;
+                    Gvar.var_1926 = 1;
+                    await Music.func105(); // discを装備した際のBGM選曲
+                }
             }
             if (Gvar.var_233[Gvar.var_225].Var4 == 0) {
-                Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                Gvar.var_1936 = 0;
+                Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message表示)
+                if (Gvar.disc_class == 1 && Gvar.var_476[Gvar.var_225] == 0) {
+                    await Func.setMessage1("" + Gvar.item_name + "を", "攻撃用に装備した", 7, false, false, false);
+                    Gvar.var_1927 = Gvar.belongings_item_list;
+                    Gvar.var_1926 = 1;
+                    await Music.func105(); // discを装備した際のBGM選曲
+                }
+                if (Gvar.disc_class == 2 && Gvar.var_477[Gvar.var_225] == 0) {
+                    await Func.setMessage1("" + Gvar.item_name + "を", "防御用に装備した", 7, false, false, false);
+                    Gvar.var_1928 = Gvar.belongings_item_list;
+                    Gvar.var_1926 = 1;
+                    await Music.func105(); // discを装備した際のBGM選曲
+                }
+                if (Gvar.disc_class == 3 && Gvar.var_478[Gvar.var_225] == 0) {
+                    await Func.setMessage1("" + Gvar.item_name + "を", "能力用に装備した", 7, false, false, false);
+                    Gvar.var_1929 = Gvar.belongings_item_list;
+                    Gvar.var_1926 = 1;
+                    await Music.func105(); // discを装備した際のBGM選曲
+                }
             }
             if (Gvar.var_862[Gvar.belongings_item_list][0] == 0) {
-                Gvar.comments_row1 = "" + Gvar.item_name + "を";
-                Gvar.var_1936 = 0;
-            }
-            if (Gvar.disc_class == 1 && Gvar.var_476[Gvar.var_225] == 0) {
-                Gvar.comments_row2 = "攻撃用に装備した";
-                Gvar.var_1927 = Gvar.belongings_item_list;
-                Gvar.var_1926 = 1;
-                await Func.func105(); // discを装備した際のBGM選曲
-            }
-            if (Gvar.disc_class == 2 && Gvar.var_477[Gvar.var_225] == 0) {
-                Gvar.comments_row2 = "防御用に装備した";
-                Gvar.var_1928 = Gvar.belongings_item_list;
-                Gvar.var_1926 = 1;
-                await Func.func105(); // discを装備した際のBGM選曲
-            }
-            if (Gvar.disc_class == 3 && Gvar.var_478[Gvar.var_225] == 0) {
-                Gvar.comments_row2 = "能力用に装備した";
-                Gvar.var_1929 = Gvar.belongings_item_list;
-                Gvar.var_1926 = 1;
-                await Func.func105(); // discを装備した際のBGM選曲
+                Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message表示)
+                if (Gvar.disc_class == 1 && Gvar.var_476[Gvar.var_225] == 0) {
+                    await Func.setMessage1("" + Gvar.item_name + "を", "攻撃用に装備した", 7, false, false, false);
+                    Gvar.var_1927 = Gvar.belongings_item_list;
+                    Gvar.var_1926 = 1;
+                    await Music.func105(); // discを装備した際のBGM選曲
+                }
+                if (Gvar.disc_class == 2 && Gvar.var_477[Gvar.var_225] == 0) {
+                    await Func.setMessage1("" + Gvar.item_name + "を", "防御用に装備した", 7, false, false, false);
+                    Gvar.var_1928 = Gvar.belongings_item_list;
+                    Gvar.var_1926 = 1;
+                    await Music.func105(); // discを装備した際のBGM選曲
+                }
+                if (Gvar.disc_class == 3 && Gvar.var_478[Gvar.var_225] == 0) {
+                    await Func.setMessage1("" + Gvar.item_name + "を", "能力用に装備した", 7, false, false, false);
+                    Gvar.var_1929 = Gvar.belongings_item_list;
+                    Gvar.var_1926 = 1;
+                    await Music.func105(); // discを装備した際のBGM選曲
+                }
             }
             if (Gvar.disc_class == 1 && Gvar.var_476[Gvar.var_225] == 1) {
-                Gvar.comments_row1 = Gvar.comments_row1 + "はずした";
-                await Func.func106(); // BGM選曲呼び出し割り振り
+                await Func.setMessage1("" + Gvar.item_name + "をはずした", "", 7, false, false, false);
+                await Music.func106(); // BGM選曲呼び出し割り振り
             }
             if (Gvar.disc_class == 2 && Gvar.var_477[Gvar.var_225] == 1) {
-                Gvar.comments_row1 = Gvar.comments_row1 + "はずした";
-                await Func.func106(); // BGM選曲呼び出し割り振り
+                await Func.setMessage1("" + Gvar.item_name + "をはずした", "", 7, false, false, false);
+                await Music.func106(); // BGM選曲呼び出し割り振り
             }
             if (Gvar.disc_class == 3 && Gvar.var_478[Gvar.var_225] == 1) {
-                Gvar.comments_row1 = Gvar.comments_row1 + "はずした";
-                await Func.func106(); // BGM選曲呼び出し割り振り
+                await Func.setMessage1("" + Gvar.item_name + "をはずした", "", 7, false, false, false);
+                await Music.func106(); // BGM選曲呼び出し割り振り
             }
         }
         if (Gvar.belongings_item_list >= 400 && Gvar.belongings_item_list < 450 && Gvar.var_479[Gvar.var_225] == 0) {
-            Gvar.comments_row1 = "" + Gvar.item_name + "(" + Gvar.var_233[Gvar.var_225].Var3 + ")を装備した";
-            Gvar.var_1936 = 0;
-            await Func.func105(); // discを装備した際のBGM選曲
+            await Func.setMessage1("" + Gvar.item_name + "(" + Gvar.var_233[Gvar.var_225].Var3 + ")を装備した", "", 7, false, false, false);
+            Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message表示)
+            await Music.func105(); // discを装備した際のBGM選曲
         }
         if (Gvar.belongings_item_list >= 400 && Gvar.belongings_item_list < 450 && Gvar.var_479[Gvar.var_225] == 1) {
-            Gvar.comments_row1 = "" + Gvar.item_name + "(" + Gvar.var_233[Gvar.var_225].Var3 + ")をはずした";
-            Gvar.var_1936 = 0;
-            await Func.func106(); // BGM選曲呼び出し割り振り
+            await Func.setMessage1("" + Gvar.item_name + "(" + Gvar.var_233[Gvar.var_225].Var3 + ")をはずした", "", 7, false, false, false);
+            Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message表示)
+            await Music.func106(); // BGM選曲呼び出し割り振り
         }
         if (Gvar.belongings_item_list >= 500 && Gvar.belongings_item_list < 600) {
-            Gvar.comments_row1 = "" + Gvar.item_name + " を使った";
-            Gvar.var_1936 = 1;
+            await Func.setMessage1("" + Gvar.item_name + " を使った", "", 7, false, false, false);
+            Gvar.var_1936 = 1; // アイテム毎の自動メッセージ表示(item_message表示)
         }
         if (Gvar.belongings_item_list >= 600 && Gvar.belongings_item_list < 700) {
-            Gvar.comments_row1 = "" + Gvar.item_name + " を食べた";
-            Gvar.var_1936 = 1;
+            await Func.setMessage1("" + Gvar.item_name + " を食べた", "", 7, false, false, false);
+            Gvar.var_1936 = 1; // アイテム毎の自動メッセージ表示(item_message表示)
         }
         if (Gvar.belongings_item_list == 632 || Gvar.belongings_item_list == 646) {
-            Gvar.comments_row1 = "" + Gvar.item_name + " を飲んだ";
+            await Func.setMessage1("" + Gvar.item_name + " を飲んだ", "", 7, false, false, false);
         }
         if (Gvar.belongings_item_list >= 700 && Gvar.belongings_item_list < 750) {
-            Gvar.comments_row1 = "" + Gvar.item_name + " を使った";
-            Gvar.var_1936 = 1;
+            await Func.setMessage1("" + Gvar.item_name + " を使った", "", 7, false, false, false);
+            Gvar.var_1936 = 1; // アイテム毎の自動メッセージ表示(item_message表示)
         }
         if (Gvar.belongings_item_list >= 750 && Gvar.belongings_item_list < 800) {
-            Gvar.comments_row1 = "" + Gvar.item_name + " を読んだ";
-            Gvar.var_1936 = 1;
+            await Func.setMessage1("" + Gvar.item_name + " を読んだ", "", 7, false, false, false);
+            Gvar.var_1936 = 1; // アイテム毎の自動メッセージ表示(item_message表示)
             Gvar.var_1253 = Gvar.belongings_item_list;
         }
         if (Gvar.belongings_item_list >= 900 && Gvar.belongings_item_list < 1000) {
-            Gvar.comments_row1 = "" + Gvar.item_name + " を読んだ";
-            Gvar.var_1936 = 1;
+            await Func.setMessage1("" + Gvar.item_name + " を読んだ", "", 7, false, false, false);
+            Gvar.var_1936 = 1; // アイテム毎の自動メッセージ表示(item_message表示)
             Gvar.var_1253 = Gvar.belongings_item_list;
         }
         if (Gvar.belongings_item_list >= 912 && Gvar.belongings_item_list <= 986 && Gvar.var_1930 == 0) {
-            Gvar.comments_row1 = "どのスタンドを研究しますか？";
-            Gvar.var_1936 = 0;
+            await Func.setMessage1("どのスタンドを研究しますか？", "", 7, false, false, false);
+            Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message表示)
             Gvar.var_1937 = Gvar.item_name;
         }
         if (Gvar.belongings_item_list >= 993 && Gvar.belongings_item_list <= 994 && Gvar.var_1930 == 0) {
-            Gvar.comments_row1 = "どのスタンドを研究しますか？";
-            Gvar.var_1936 = 0;
+            await Func.setMessage1("どのスタンドを研究しますか？", "", 7, false, false, false);
+            Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message表示)
             Gvar.var_1937 = Gvar.item_name;
         }
         if (Gvar.belongings_item_list >= 750 && Gvar.belongings_item_list <= 770 && Gvar.var_1930 == 0) {
-            Gvar.comments_row1 = "どのスタンドを研究しますか？";
-            Gvar.var_1936 = 0;
+            await Func.setMessage1("どのスタンドを研究しますか？", "", 7, false, false, false);
+            Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message表示)
             Gvar.var_1937 = Gvar.item_name;
         }
         if (Gvar.belongings_item_list >= 912 && Gvar.belongings_item_list <= 986 && Gvar.var_1930 == 1) {
-            Gvar.comments_row1 = "" + Gvar.item_name + " を読んだ";
-            Gvar.var_1936 = 0;
+            await Func.setMessage1("" + Gvar.item_name + " を読んだ", "", 7, false, false, false);
+            Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message表示)
             Gvar.var_1937 = Gvar.item_name;
         }
         if (Gvar.belongings_item_list >= 993 && Gvar.belongings_item_list <= 994 && Gvar.var_1930 == 1) {
-            Gvar.comments_row1 = "" + Gvar.item_name + " を読んだ";
-            Gvar.var_1936 = 0;
+            await Func.setMessage1("" + Gvar.item_name + " を読んだ", "", 7, false, false, false);
+            Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message表示)
             Gvar.var_1937 = Gvar.item_name;
         }
         if (Gvar.belongings_item_list >= 750 && Gvar.belongings_item_list <= 770 && Gvar.var_1930 == 1) {
-            Gvar.comments_row1 = "" + Gvar.item_name + " を読んだ";
-            Gvar.var_1936 = 0;
+            await Func.setMessage1("" + Gvar.item_name + " を読んだ", "", 7, false, false, false);
+            Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message表示)
             Gvar.var_1937 = Gvar.item_name;
         }
         Gvar.var_1938 = Gvar.item_name;
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
-        
         if (Gvar.var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
             Gvar.belongings_item_list = Gvar.var_233[Gvar.var_225].Var0;
             Gvar.var_233[Gvar.var_225].Var14 = 1;
@@ -296,14 +312,7 @@ async function func420(this: any) {
             // No = 565 ピッチ神父のdisc出ない場合
             if (Gvar.var_862[Gvar.belongings_item_list][0] == 0 && Gvar.var_1939 == 1 && Gvar.belongings_item_list != 567 && Gvar.belongings_item_list != 590 && Gvar.belongings_item_list != 565) {
                 if (Gvar.var_375 == 0) {
-                    Gvar.var_198 = 1;
-                    Gvar.var_300 = 0;
-                    for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
-                    Gvar.comments_row1 = Gvar.comments_row1a;
-                    Gvar.comments_row2 = Gvar.comments_row2a;
-                    Gvar.comments_row1a = "なんと" + Gvar.item_name + "は";
+                    await Func.AutoDraw(9);
                     if (Gvar.var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
                         Gvar.belongings_item_list = Gvar.var_233[Gvar.var_225].Var0;
                     }
@@ -312,20 +321,13 @@ async function func420(this: any) {
                     }
                     Gvar.var_862[Gvar.belongings_item_list][0] = 1;
                     await Func.func492(); // アイテムリスト呼び出し
-                    Gvar.comments_row2a = "" + Gvar.item_name + "だった！";
                     if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400 && Gvar.var_233[Gvar.var_225].Var4 != 0) {
-                        Gvar.comments_row2a = "" + Gvar.item_name + "+" + Gvar.var_233[Gvar.var_225].Var4 + "だった！";
+                        await Func.setMessage1("なんと" + Gvar.item_name + "は", "" + Gvar.item_name + "+" + Gvar.var_233[Gvar.var_225].Var4 + "だった！", 7, false, false, false);
                     }
-                    Gvar.var_198 = 1;
-                    Gvar.var_300 = 0;
-                    Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                    Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                    await Func.func047();
-                    await Func.func050();
-                    for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                    else {
+                        await Func.setMessage1("なんと" + Gvar.item_name + "は", "" + Gvar.item_name + "だった！", 7, false, false, false);
                     }
+                    await Func.AutoDraw(9);
                 }
             }
         }
@@ -337,10 +339,10 @@ async function func420(this: any) {
         }
         // 装備discの場合
         if (Gvar.var_233[Gvar.var_225].Var12 == 1 && Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400) {
-            Gvar.var_198 = 1;
+            Gvar.var_198 = 1; // メッセージウィンドウ開く
             Gvar.var_300 = 0;
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
             if (Gvar.disc_class == 1) {
                 Gvar.var_896 = 1;
@@ -351,17 +353,7 @@ async function func420(this: any) {
             if (Gvar.disc_class == 3) {
                 Gvar.var_898 = 1;
             }
-            Gvar.comments_row1 = Gvar.comments_row1a;
-            Gvar.comments_row2 = Gvar.comments_row2a;
-            Gvar.comments_row1a = "" + Gvar.item_name + "は";
-            Gvar.comments_row2a = "呪われていた！！";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            await Func.func050();
+            await Func.setMessage1("" + Gvar.item_name + "は", "呪われていた！！", 7, false, false, false);
             Gvar.var_1940 = Gvar.var_199;
             Gvar.var_199 = 2;
             Gvar.var_1264 = 0;
@@ -370,18 +362,16 @@ async function func420(this: any) {
             Adap.DSPLAY(127);
             Gvar.var_389 = 2;
             Gvar.var_1498 = 1;
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1498 = 1;
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1498 = 2;
             }
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(10);
             Gvar.var_1498 = 0;
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_389 = 0;
             Gvar.var_199 = Gvar.var_1940;
         }
@@ -434,7 +424,7 @@ async function func420(this: any) {
 
         await Func.func492(); // アイテムリスト呼び出し
         if (Gvar.belongings_item_list == 700 || Gvar.belongings_item_list == 571 || Gvar.belongings_item_list == 579 || Gvar.belongings_item_list == 729 || Gvar.belongings_item_list == 730 || Gvar.belongings_item_list == 731 || Gvar.belongings_item_list == 701 || Gvar.belongings_item_list == 995) {
-            Gvar.var_1936 = 0;
+            Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message表示)
         }
         if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400) {
             await Func.func493(); // 装備disc能力値の設定
@@ -481,27 +471,14 @@ async function func420(this: any) {
                 await Func.func432(); // disc関係の配列宣言処理 or それ以外は初期化処理
             }
         }
-        for (let cnt1 = 0; cnt1 < 9; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(9);
         if (Gvar.var_1945 == 4) {
-            Gvar.var_1936 = 0;
+            Gvar.var_1936 = 0; // アイテム毎の自動メッセージ非表示(item_message非表示)
         }
+        // アイテム使用時のメッセージ表示処理
         if (Gvar.var_1936 == 1) {
-            Gvar.comments_row1 = Gvar.comments_row1a;
-            Gvar.comments_row2 = Gvar.comments_row2a;
-            Gvar.comments_row1a = Gvar.item_message1;
-            Gvar.comments_row2a = Gvar.item_message2;
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            await Func.func050();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1(Gvar.item_message1, Gvar.item_message2, 7, false, false, false);
+            await Func.AutoDraw(5);
         }
         Gvar.var_1948 = 0;
         Gvar.var_1264 = 0;
@@ -519,15 +496,15 @@ async function func420(this: any) {
             return;
         }
         if (Gvar.var_1945 >= 1) {
-            await Func.func438(); // キーの入力　？
+            await Func.func438(); // キーの入力  ？
             return;
         }
         if (Gvar.var_1950 > 0) {
-            await Func.func443(); // キーの入力　？
+            await Func.func443(); // キーの入力  ？
             return;
         }
         if (Gvar.var_1055 == 1) {
-            await Ex.func447(); // 魔法のランプを使用した際の動作処理
+            await Func.func447(); // 魔法のランプを使用した際の動作処理
             return;
         }
         if (Gvar.var_1951 == 1) {
@@ -550,10 +527,10 @@ async function func420(this: any) {
         if (Gvar.var_1952 == 1) {
             Gvar.var_1952 = 0;
             Gvar.var_217 = 0;
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

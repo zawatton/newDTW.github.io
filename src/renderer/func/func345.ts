@@ -1,7 +1,8 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
-import * as Func from '../func/index'
+import * as Func from './index'
 
+ // ディアボロ本体の描画処理
 async function func345(this: any) {
         Adap.dbgprt(345);
         if (Gvar.var_123 >= 1) {
@@ -821,7 +822,7 @@ async function func345(this: any) {
             Adap.gmode(2, null, null, null);
             return;
         }
-        if (Gvar.to_freeze >= 1) {
+        if (Gvar.var_128 >= 1) {
             Adap.gcopy(3, 960, 0, 40, 40);
             Adap.color(0, 0, 0);
 
@@ -1083,10 +1084,10 @@ async function func345(this: any) {
                 }
                 if (Gvar.var_199 == 2) { // ディアボロの正面ドット設定
                     if (Gvar.var_1226 == Gvar.var_1067[0] || Gvar.var_1226 == Gvar.var_1067[1] || Gvar.var_1226 == Gvar.var_1067[2] || Gvar.var_1226 == Gvar.var_1067[3]) {
-                        Adap.gcopy(3, 0, 0, 40, 40); // buffer_id = 3 なので img_mychara.gif 主にディアボロの動作関係ドット絵
+                        Adap.gcopy(3, 0, 0, 40, 40); // buffer_id = 3 なので "img_mychara.gif" の1行目の一番左(ディアボロ正面)
                     }
                     if (Gvar.var_1226 == Gvar.var_1067[4] || Gvar.var_1226 == Gvar.var_1067[5] || Gvar.var_1226 == Gvar.var_1067[10] || Gvar.var_1226 == Gvar.var_1067[11]) {
-                        Adap.gcopy(3, 40, 0, 40, 40); // buffer_id = 3 なので img_mychara.gif 主にディアボロの動作関係ドット絵
+                        Adap.gcopy(3, 40, 0, 40, 40); // buffer_id = 3 なので "img_mychara.gif" の2行目の一番左(ディアボロ正面)
                     }
                     if (Gvar.var_1226 == Gvar.var_1067[6] || Gvar.var_1226 == Gvar.var_1067[7] || Gvar.var_1226 == Gvar.var_1067[8] || Gvar.var_1226 == Gvar.var_1067[9]) {
                         Adap.gcopy(3, 80, 0, 40, 40); // buffer_id = 3 なので img_mychara.gif 主にディアボロの動作関係ドット絵
@@ -1094,10 +1095,10 @@ async function func345(this: any) {
                 }
                 if (Gvar.var_199 == 4) {
                     if (Gvar.var_1226 == Gvar.var_1067[0] || Gvar.var_1226 == Gvar.var_1067[1] || Gvar.var_1226 == Gvar.var_1067[2] || Gvar.var_1226 == Gvar.var_1067[3]) {
-                        Adap.gcopy(3, 120, 0, 40, 40);
+                        Adap.gcopy(3, 120, 0, 40, 40); // buffer_id = 3 なので "img_mychara.gif" の1行目4列目(ディアボロ右)
                     }
                     if (Gvar.var_1226 == Gvar.var_1067[4] || Gvar.var_1226 == Gvar.var_1067[5] || Gvar.var_1226 == Gvar.var_1067[10] || Gvar.var_1226 == Gvar.var_1067[11]) {
-                        Adap.gcopy(3, 160, 0, 40, 40);
+                        Adap.gcopy(3, 160, 0, 40, 40); // buffer_id = 3 なので "img_mychara.gif" の1行目5列目(ディアボロ右)
                     }
                     if (Gvar.var_1226 == Gvar.var_1067[6] || Gvar.var_1226 == Gvar.var_1067[7] || Gvar.var_1226 == Gvar.var_1067[8] || Gvar.var_1226 == Gvar.var_1067[9]) {
                         Adap.gcopy(3, 200, 0, 40, 40);

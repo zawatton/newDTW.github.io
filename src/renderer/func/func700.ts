@@ -27,9 +27,7 @@ async function func700(this: any) {
             if (Gvar.var_83[Gvar.var_2194].Var0 == 17) {
                 Gvar.var_83[Gvar.var_2194].Var3 = 5;
                 Gvar.var_83[Gvar.var_2194].Var8 = 1;
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(5);
                 Gvar.var_83[Gvar.var_2194].Var8 = 0;
                 Gvar.var_83[Gvar.var_2194].Var29 = 1;
                 return;

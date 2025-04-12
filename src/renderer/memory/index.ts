@@ -19,11 +19,7 @@ export {item576} from "./item576"
 export {item577} from "./item577"
 export {item578} from "./item578"
 export {item579} from "./item579"
-// ドッピオのdisc
 export {item580} from "./item580"
-export {func031} from "./item580"
-export {func041} from "./item580"
-export {func042} from "./item580"
 
 export {item582} from "./item582"
 export {item583} from "./item583"

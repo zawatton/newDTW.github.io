@@ -477,7 +477,7 @@ async function func626(this: any) {
             Gvar.var_1619 = 444;
             Gvar.enemy_description = "・フワフワと動いているぞ。";
             Gvar.var_1656 = "・親父がいる部屋は写真の中だ。";
-            Gvar.var_1657 = "　倒さないと出られないぞ。";
+            Gvar.var_1657 = "  倒さないと出られないぞ。";
             Gvar.var_1658 = "・弓矢を落とすことがあるぞ。";
         }
         if (Gvar.enemy_list == 32) {
@@ -838,7 +838,7 @@ async function func626(this: any) {
             Gvar.enemy_description = "・中に部屋があるぞ。";
             Gvar.var_1656 = "・アイテムを保管しておけるぞ。";
             Gvar.var_1657 = "・ジッパーにアイテムを捨てると成長し、";
-            Gvar.var_1658 = "　部屋がさらに広くなるぞ。";
+            Gvar.var_1658 = "  部屋がさらに広くなるぞ。";
         }
         if (Gvar.enemy_list == 56) {
             Gvar.enemy_name = "ｼｭﾄﾛﾊｲﾑ";
@@ -1302,7 +1302,7 @@ async function func626(this: any) {
             Gvar.var_1619 = 205;
             Gvar.enemy_description = "・空気供給管を通って瞬時に移動するぞ。";
             Gvar.var_1656 = "・同じ部屋に吸血鬼やゾンビがいると攻撃し、";
-            Gvar.var_1657 = "　やっつけるとレベルが上がるぞ。";
+            Gvar.var_1657 = "  やっつけるとレベルが上がるぞ。";
             Gvar.var_1658 = "";
         }
         if (Gvar.enemy_list == 87) {
@@ -2529,9 +2529,9 @@ async function func626(this: any) {
             Gvar.var_972 = 1; // 人間
             Gvar.var_1619 = 804;
             Gvar.enemy_description = "・オレはこのデパートの影の支配者だ！";
-            Gvar.var_1656 = "　悪さをするヤツはゆるさねえ！";
+            Gvar.var_1656 = "  悪さをするヤツはゆるさねえ！";
             Gvar.var_1657 = "・ウワハハハハハ！";
-            Gvar.var_1658 = "・クチャ　クチャ　　ペッ";
+            Gvar.var_1658 = "・クチャ  クチャ    ペッ";
         }
         if (Gvar.enemy_list == 169) { // Ver0.1401にて追加。
             Gvar.enemy_name = "ナランチャ";

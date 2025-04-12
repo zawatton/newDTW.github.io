@@ -31,7 +31,7 @@ async function func343(this: any) {
             }
             Adap.boxf(Gvar.var_1235, 25, Gvar.var_211 + Gvar.var_1235, 30);
         }
-        Adap.font("MS ゴシック", 11);
+        Adap.font(Gvar.font_type, 11);
         Adap.color(255, 255, 255);
         Adap.pos(Gvar.var_1235 - 18, 24);
         Adap.mes("HP");

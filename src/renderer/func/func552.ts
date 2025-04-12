@@ -1,32 +1,21 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 async function func552(this: any) {
         Adap.dbgprt(552);
         Adap.DSPLAY(101); // 階段を昇るor降りる時の効果音
         await Func.func061();
         Gvar.var_373 = 5;
-        for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(2);
         Gvar.var_373 = 4;
-        for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(2);
         Gvar.var_373 = 3;
-        for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(2);
         Gvar.var_373 = 2;
-        for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(2);
         Gvar.var_373 = 1;
-        for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(10);
         Gvar.var_373 = 0;
         Gvar.var_2496 = Adap.rnd(9);
         Gvar.var_2496 = Gvar.var_2496 + 1;
@@ -58,12 +47,12 @@ async function func552(this: any) {
             Gvar.special_floor = 9;
         }
         Gvar.var_205 = 1;
-        await Func.func231();
+        await Func.func231(); // プレイデータを保存するセーブ機能
         await Func.func076(); // 各ダンジョンの絵文字読込処理
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             await Func.func339();
         }
-        await Main.func006();
+        await Func.func006(); // 一巡後の世界のみのフラグ処理
         return;
 }
 

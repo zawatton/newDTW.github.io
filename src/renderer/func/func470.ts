@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Music from '../music/index'
 
 async function func470(this: any) {
         Adap.dbgprt(470);
@@ -8,7 +9,7 @@ async function func470(this: any) {
         // No = 805 グッチョの死体の動作処理
         // 入れたdiscに応じてBGMがかかる
         if (Gvar.yabaimono_id == 805) {
-            await Func.func115(); // グッチョの死体へdiscを入れた際の選曲処理
+            await Music.func115(); // グッチョの死体へdiscを入れた際の選曲処理
             return;
         }
 

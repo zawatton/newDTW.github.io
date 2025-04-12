@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// ディアボロの試練クリア時の「完」メッセージ
 async function func078(this: any) {
         Adap.dbgprt(78);
         if (Gvar.var_373 == 1) {

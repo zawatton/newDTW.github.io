@@ -18,7 +18,7 @@ async function func696(this: any) {
         Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
         await Func.func705();
         await Func.func340(); // キー入力による選択処理
-        await Func.func051();
+        await Func.func051(); // キー入力待ち処理
         return;
 }
 

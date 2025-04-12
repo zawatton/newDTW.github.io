@@ -1,6 +1,8 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Enemy from '../enemy/index'
+
 
 async function func579(this: any) {
         Adap.dbgprt(579);
@@ -89,17 +91,17 @@ async function func579(this: any) {
                 if (Gvar.var_131 == 0 && Gvar.var_123 == 0 && Gvar.var_83[Gvar.var_673].Var20 == 0 && Gvar.var_144 == 0) {
                     // No = 19 アラビアファッツ
                     if (Gvar.var_83[Gvar.var_673].Var0 == 19 && Gvar.var_201 != 14 && Gvar.var_201 == Gvar.var_83[Gvar.var_673].Var10 && Gvar.var_157 != 1) {
-                        await Func.func608();
+                        await Enemy.func608();
                     }
                     // No = 61 ヨーヨーマッ
                     if (Gvar.var_83[Gvar.var_673].Var0 == 61 && Gvar.var_201 != 14 && Gvar.var_201 == Gvar.var_83[Gvar.var_673].Var10 && Gvar.var_157 != 1) {
-                        await Func.func611();
+                        await Enemy.func611();
                     }
                 }
                 // No = 91 ACT1さなぎ、No = 92 ACT2さなぎ
                 if (Gvar.var_83[Gvar.var_673].Var0 == 91 || Gvar.var_83[Gvar.var_673].Var0 == 92) {
                     if (Gvar.var_157 != 1 && Gvar.var_83[Gvar.var_673].Var20 == 0) {
-                        await Func.func580();
+                        await Enemy.func580();
                     }
                 }
             }

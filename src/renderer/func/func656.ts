@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Music from '../music/index'
 
 async function func656(this: any) {
         Adap.dbgprt(656);
@@ -15,11 +16,9 @@ async function func656(this: any) {
         if (Gvar.var_2868 == 1) {
             Gvar.var_2869 = Gvar.var_199;
         }
-        for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(2);
         Gvar.var_672 = Gvar.var_83[Gvar.var_673].Var0;
-        await Func.func093();
+        await Music.func093();
         for (let cnt1 = 0; cnt1 < 7; ++cnt1) {
             if (Gvar.var_2868 == 1) {
                 if (Gvar.var_199 == 1) {
@@ -51,7 +50,7 @@ async function func656(this: any) {
                     Gvar.var_199 = Gvar.var_2869;
                 }
             }
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         Gvar.var_83[Gvar.var_673].Var7 = 0;
         Gvar.var_389 = 0;

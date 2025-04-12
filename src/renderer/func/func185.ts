@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 async function func185(this: any) {
         Adap.dbgprt(185);
@@ -31,7 +30,7 @@ async function func185(this: any) {
         for (let cnt1 = 0; cnt1 < 80; ++cnt1) {
             await Func.func339();
         }
-        await Main.func006();
+        await Func.func006(); // 一巡後の世界のみのフラグ処理
         return;
 }
 

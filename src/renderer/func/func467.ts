@@ -318,7 +318,7 @@ async function func467(this: any) {
             Gvar.var_1956 = Gvar.var_1956 + 1;
         }
         Gvar.item_page_number = 1;
-        await Func.func052();
+        await Func.func052(); // Shiftキー入力待ち処理
         await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
         return;
 }

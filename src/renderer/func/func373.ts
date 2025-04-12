@@ -30,7 +30,7 @@ async function func373(this: any) {
         }
         Adap.color(255, 255, 255);
 
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         Adap.mes(Gvar.var_1679);
         Gvar.var_1685 = 0;
         Gvar.var_1686 = 0;
@@ -47,10 +47,10 @@ async function func373(this: any) {
             Adap.pos(Gvar.var_1680 + 10, Gvar.var_1682 + Gvar.var_1685 + 20);
             Adap.color(255, 255, 255);
     
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 14, Gvar.font_style = 1);
+            Adap.font(Gvar.font_type, Gvar.font_size = 14, Gvar.font_style = 1);
             if (Gvar.var_1687 == 0) {
                 Adap.color(0, 255, 0);
-                Adap.mes("　死因リスト");
+                Adap.mes("  死因リスト");
             }
             if (Gvar.var_1687 != 0) {
                 if (Gvar.var_835[Gvar.var_1687] == 0) {

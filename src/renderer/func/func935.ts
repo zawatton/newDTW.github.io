@@ -19,7 +19,7 @@ async function func935(this: any) {
         Gvar.var_230 = 45;
         for (let cnt1 = 0; cnt1 < Gvar.var_2324; ++cnt1) {
     
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+            Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
             Adap.pos(40, Gvar.var_230);
             Adap.color(255, 255, 255);
             Gvar.var_3572 = 0;
@@ -63,7 +63,7 @@ async function func935(this: any) {
         }
         Adap.color(255, 255, 255);
 
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         Adap.pos(15, Gvar.Y_axis_item_position);
         Adap.mes(">");
         Adap.pos(16, Gvar.Y_axis_item_position);

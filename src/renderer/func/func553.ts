@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// ダンジョン毎の階段処理
 async function func553(this: any) {
         Adap.dbgprt(553);
         if (Gvar.var_262 != 0) { // Gvar.var_262 != 0 なので、Gvar.dungeon_number = 0 であれば
@@ -78,7 +80,7 @@ async function func553(this: any) {
             }
         }
         Adap.gmode(2, null, null, null);
-        if (Gvar.var_73[Gvar.var_447][Gvar.var_449] == 1) {
+        if (Gvar.var_73[Gvar.var_447][Gvar.var_449] == 1) { // 各ダンジョンの最終フロア毎の階段処理？
             Gvar.var_2497 = 0;
             // No = 1 なので、ホテルの外
             if (Gvar.dungeon_number == 1 && Gvar.current_floor == 12) {
@@ -97,14 +99,14 @@ async function func553(this: any) {
                 Gvar.var_2497 = 1;
             }
             if (Gvar.var_2497 == 1) {
-                Adap.gcopy(5, 1200, 0, 40, 40);
+                Adap.gcopy(5, 1200, 0, 40, 40); // buffer_id = 5 なので "img_map.gif" の1行目にある上り階段
             }
             if (Gvar.var_2497 == 0) {
-                Adap.gcopy(5, 1200, Gvar.y_axis_map_image * 40, 40, 40);
+                Adap.gcopy(5, 1200, Gvar.y_axis_map_image * 40, 40, 40); // buffer_id = 5 なので "img_map.gif" にあるマップ毎の下り階段
             }
         }
-        if (Gvar.var_73[Gvar.var_447][Gvar.var_449] == 2) {
-            Adap.gcopy(5, 1640, Gvar.y_axis_map_image * 40, 40, 40);
+        if (Gvar.var_73[Gvar.var_447][Gvar.var_449] == 2) { // 各ダンジョンの最終フロア以外の階段処理？
+            Adap.gcopy(5, 1640, Gvar.y_axis_map_image * 40, 40, 40);// buffer_id = 5 なので "img_map.gif" にあるマップ毎の上り階段
         }
         return;
 }

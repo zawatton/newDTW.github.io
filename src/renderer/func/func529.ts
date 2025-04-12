@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 async function func529(this: any) {
         Adap.dbgprt(529);
@@ -62,20 +61,18 @@ async function func529(this: any) {
             Gvar.var_237 = Gvar.var_2386;
             Gvar.var_65[Gvar.var_66][Gvar.var_67] = 1;
             Gvar.var_65[Gvar.var_236][Gvar.var_237] = 0;
-            await Main.func016();
+            await Func.func016();
             if (Gvar.var_72[Gvar.var_236][Gvar.var_237] >= 1 && Gvar.var_72[Gvar.var_66][Gvar.var_67] == 0 && Gvar.var_85 == 0) {
                 await Func.func722(); // アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
             }
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         Gvar.var_374 = 1;
         Gvar.var_1580 = 1;
-        Gvar.var_271 = 1;
-        for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
+        await Func.AutoDraw(2);
         Gvar.var_1580 = 0;
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_374 = 0;
         if (Gvar.var_2384 == 1) {
             Gvar.var_66 = Gvar.var_2381;
@@ -139,7 +136,7 @@ async function func529(this: any) {
             Gvar.var_237 = Gvar.var_2386;
             Gvar.var_65[Gvar.var_66][Gvar.var_67] = 1;
             Gvar.var_65[Gvar.var_236][Gvar.var_237] = 0;
-            await Main.func016();
+            await Func.func016();
             Gvar.var_402 = Gvar.var_82[Gvar.var_2381][Gvar.var_2382];
             if (Gvar.var_199 == 2) {
                 Gvar.var_83[Gvar.var_402].Var5 = 2;
@@ -177,17 +174,7 @@ async function func529(this: any) {
             }
         }
         if (Gvar.var_2383 == 1) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "ﾃﾞｨｱﾎﾞﾛは5のダメージ！";
-            await Func.func047();
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
+            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは5のダメージ！", "", 8, false, false, false);
             Gvar.var_211 = Gvar.var_211 - 5;
             Gvar.var_208 = Gvar.var_208 + 5;
             if (Gvar.var_211 <= 0) {
@@ -206,9 +193,7 @@ async function func529(this: any) {
             Gvar.var_462 = 0;
         }
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-        for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(5);
         if (Gvar.var_2379 != Gvar.var_66 || Gvar.var_2380 != Gvar.var_67) {
             Gvar.var_2392 = 1;
             for (let cnt2 = 0; cnt2 < Gvar.var_97; ++cnt2) {

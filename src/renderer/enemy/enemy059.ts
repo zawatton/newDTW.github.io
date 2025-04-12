@@ -1,7 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
+import * as Music from '../music/index'
 
 // No = 59 プッチ神父の特殊能力
 async function enemy059(this: any) {
@@ -102,7 +102,7 @@ async function enemy059(this: any) {
                         Gvar.var_411 = 3;
                     }
                 }
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
             Gvar.var_743 = 0; //スタンド像付与フラグOFF
             Gvar.var_742 = 0;
@@ -110,28 +110,13 @@ async function enemy059(this: any) {
             Gvar.var_83[Gvar.var_412].Var21 = 0;
             Gvar.var_411 = 0;
             Gvar.var_2902 = 0;
-            if (Gvar.to_freeze >= 1) {
-                await Main.func023();
+            if (Gvar.var_128 >= 1) {
+                await Func.func023();
             }
             if (Gvar.equip_disc[361] == 1) {
-                Gvar.comments_row1 = "";
-                Gvar.comments_row2 = "";
-                Gvar.var_295 = "";
-                Gvar.comments_row1a = "";
-                Gvar.comments_row2a = "";
-                Gvar.var_298 = "";
-                Gvar.var_299 = 0;
-                Gvar.comments_row1 = "装備スタンドの効果のおかげで";
-                Gvar.comments_row2 = "DISCを抜き取られなかった。";
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                await Func.func047();
-                for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.setMessage1("装備スタンドの効果のおかげで",
+                                       "DISCを抜き取られなかった。", 7, false, false, false);
+                await Func.AutoDraw(10);
                 Gvar.var_2197 = 1;
                 return;
             }
@@ -219,7 +204,7 @@ async function enemy059(this: any) {
             }
             Gvar.var_83[Gvar.var_412].Var26 = 1;
             Gvar.belongings_item_list = Gvar.var_233[Gvar.var_475].Var0;
-            await Func.func106(); // BGM選曲呼び出し割り振り
+            await Music.func106(); // BGM選曲呼び出し割り振り
             await Func.func492(); // アイテムリスト呼び出し
             Gvar.target_item_name = Gvar.item_name;
             Gvar.var_419 = Gvar.var_412 + 200;
@@ -255,25 +240,10 @@ async function enemy059(this: any) {
             Gvar.var_78[Gvar.var_419].Var29 = Gvar.var_233[Gvar.var_475].Var29;
             Gvar.var_225 = Gvar.var_475;
             await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "装備中の" + Gvar.target_item_name + "を";
-            Gvar.comments_row2 = "抜き取られてしまった！";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-            await Func.func047();
+            await Func.setMessage1("装備中の" + Gvar.target_item_name + "を",
+                                   "抜き取られてしまった！", 8, false, false, false);
             await Func.func619();
-            for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(10);
             Gvar.var_2197 = 1;
         }
         return;

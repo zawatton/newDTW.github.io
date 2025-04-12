@@ -4,16 +4,14 @@ import * as Func from '../func/index'
 
 async function func358(this: any) {
         Adap.dbgprt(358);
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         await Func.func080(); // 各キー入力確認
         if (Gvar.var_255 == 1 && Gvar.var_1613 > 1) { // var_255:入力判定[↑]
 
             Adap.DSPLAY(100); // アイテム選択時の効果音
             Gvar.var_1613 = Gvar.var_1613 - 1;
             Gvar.var_1612 = Gvar.var_1612 - 16;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(2);
             await Func.func358();
             return;
         }
@@ -22,9 +20,7 @@ async function func358(this: any) {
             Adap.DSPLAY(100); // アイテム選択時の効果音
             Gvar.var_1613 = 7;
             Gvar.var_1612 = 141;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(2);
             await Func.func358();
             return;
         }
@@ -33,9 +29,7 @@ async function func358(this: any) {
             Adap.DSPLAY(100); // アイテム選択時の効果音
             Gvar.var_1613 = Gvar.var_1613 + 1;
             Gvar.var_1612 = Gvar.var_1612 + 16;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(2);
             await Func.func358();
             return;
         }
@@ -44,9 +38,7 @@ async function func358(this: any) {
             Adap.DSPLAY(100); // アイテム選択時の効果音
             Gvar.var_1613 = 1;
             Gvar.var_1612 = 45;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(2);
             await Func.func358();
             return;
         }
@@ -54,11 +46,11 @@ async function func358(this: any) {
 
             Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
             await Func.func359();
-            await Func.func051();
+            await Func.func051(); // キー入力待ち処理
             if (Gvar.var_1614 == 0) {
                 Gvar.var_1615 = 1;
                 for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
                 Gvar.var_1615 = 0;
                 await Func.func358();
@@ -77,8 +69,8 @@ async function func358(this: any) {
             Gvar.var_508 = 1; // Mフラグ:資料(設定画面) Func.func058
             Gvar.var_499 = 1; // Mフラグ:設定画面 Func.func056
             Gvar.var_511 = 0;
-            await Func.func051();
-            await Func.func057();
+            await Func.func051(); // キー入力待ち処理
+            await Func.func057(); // メニュー画面の"資料"の処理 (ハイスコア、コミックス、死因リスト、敵図鑑)
             return;
         }
         await Func.func358();

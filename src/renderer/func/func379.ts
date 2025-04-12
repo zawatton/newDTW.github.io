@@ -25,19 +25,19 @@ async function func379(this: any) {
             Adap.pset(Gvar.var_1701, Gvar.var_1704 - 1);
             Adap.pset(Gvar.var_1702 + 1, Gvar.var_1704 - 1);
     
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+            Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
             Adap.color(255, 255, 255);
             Adap.pos(Gvar.var_1701 + 5, Gvar.var_1703 + 7);
             Adap.mes(Gvar.var_494[Gvar.var_1699]);
             Adap.mes(Gvar.var_494[Gvar.var_1700]);
             if (cnt1 != 0) {
-                Adap.font("ＭＳ ゴシック", 12);
+                Adap.font("メイリオ", 12);
                 Adap.color(255, 255, 255);
                 Adap.pos(Gvar.var_1701 + 150, Gvar.var_1704);
                 Adap.mes("▼");
             }
             if (cnt1 == 0 && Gvar.var_503 != 1) {
-                Adap.font("ＭＳ ゴシック", 12);
+                Adap.font("メイリオ", 12);
                 Adap.color(255, 255, 255);
                 Adap.pos(Gvar.var_1701 + 150, Gvar.var_1704);
                 Adap.mes("▼");
@@ -51,7 +51,7 @@ async function func379(this: any) {
             Gvar.var_1705 = Gvar.var_1705 - 60;
         }
         if (Gvar.var_503 < 31) {
-            Adap.font("ＭＳ ゴシック", 12);
+            Adap.font("メイリオ", 12);
             Adap.color(255, 255, 255);
             Adap.pos(Gvar.var_1701 + 150, Gvar.var_1704);
             Adap.mes("▼");

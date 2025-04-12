@@ -1,7 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
+import * as Music from '../music/index'
 
 // ヤバいもの関係の容量設定？？
 async function func414(this: any) {
@@ -26,17 +26,17 @@ async function func414(this: any) {
             return;
         }
         Gvar.var_488 = Gvar.var_1846;
-        await Func.func100();
-        Gvar.var_271 = 1;
+        await Music.func100(); // 効果音
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1521 = 1;
         Gvar.var_1522 = Gvar.var_233[Gvar.var_225].Var0;
         Gvar.var_1396 = Gvar.var_455;
         Gvar.var_1397 = Gvar.var_456;
         for (let cnt1 = 0; cnt1 < 7; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1521++;
         }
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1521 = 0;
         Gvar.var_1904 = Gvar.var_233[Gvar.var_225].Var6;
         Gvar.var_1905 = Gvar.var_233[Gvar.var_225].Var8;
@@ -92,7 +92,7 @@ async function func414(this: any) {
                 Gvar.var_78[Gvar.var_854].Var29 = Gvar.var_486[Gvar.var_1904][Gvar.var_1910][29];
                 Gvar.var_1910++;
             }
-            await Main.func018();
+            await Func.func018();
         }
         Gvar.var_1270 = 0;
         // No = 806 ヤバいもの「カルネの死体」の場合
@@ -105,7 +105,7 @@ async function func414(this: any) {
                 Gvar.var_1914 = Gvar.var_1908;
                 Gvar.var_1915 = Gvar.var_1909;
                 for (let cnt3 = 0; cnt3 < Gvar.var_1911; ++cnt3) {
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 Gvar.var_1913 = 0;
                 Gvar.var_1845 = 0;
@@ -126,7 +126,7 @@ async function func414(this: any) {
                     Gvar.var_1918 = Gvar.var_486[Gvar.var_1916][Gvar.var_1917][15];
                     Gvar.var_1919 = Gvar.var_486[Gvar.var_1916][Gvar.var_1917][18];
                     if (Gvar.var_1918 != 0) {
-                        await Func.func556(); // 敵をフロアへ出現させる処理
+                        await Func.func556();
                     }
                     Gvar.var_1917++;
                 }
@@ -145,7 +145,7 @@ async function func414(this: any) {
                 Gvar.var_1914 = Gvar.var_1908;
                 Gvar.var_1915 = Gvar.var_1909;
                 for (let cnt3 = 0; cnt3 < Gvar.var_1911; ++cnt3) {
-                    await Func.func556(); // 敵をフロアへ出現させる処理
+                    await Func.func556();
                 }
                 Gvar.var_1920 = 0;
                 Gvar.var_1845 = 0;
@@ -157,11 +157,9 @@ async function func414(this: any) {
             return;
         }
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-        for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(3);
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

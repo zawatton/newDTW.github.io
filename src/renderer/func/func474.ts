@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 async function func474(this: any) {
         Adap.dbgprt(474);
@@ -9,28 +8,13 @@ async function func474(this: any) {
         if (Gvar.var_224 >= 20) {
             Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             Gvar.var_1866 = 0;
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "持ち物がいっぱいで出せない";
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("持ち物がいっぱいで出せない", "", 7, false, false, false);
+            await Func.AutoDraw(3);
             if (Gvar.var_234 == 1) {
                 Gvar.var_234 = 0;
             }
             Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         // 所持アイテム数が20個未満であれば場合
@@ -70,28 +54,13 @@ async function func474(this: any) {
         await Func.func492(); // アイテムリスト呼び出し
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
         Gvar.var_1866 = 0;
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "" + Gvar.item_name + "を出した";
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        await Func.func047();
-        for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
-        await Func.func051();
+        await Func.setMessage1("" + Gvar.item_name + "を出した", "", 7, false, false, false);
+        await Func.AutoDraw(3);
+        await Func.func051(); // キー入力待ち処理
         Gvar.var_213 = 1;
         Gvar.var_226 = Gvar.var_1876;
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

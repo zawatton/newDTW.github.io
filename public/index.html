@@ -1,86 +1,139 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <style type="text/css">
-        body, canvas, #pad {
-            background-color: rgb(255, 255, 255);
-            transform-origin: 0 0; /* 左上を変形の原点として指定 */
-            margin: 0;
-            overflow: hidden;
-        }
-        #pad {
-            position: absolute;
-        }
-        canvas {
-            max-width: 100%;
-            user-select: none;
-            transform-origin: 0 0; /* 左上を変形の原点として指定 */
-        }
-    </style>	
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <!-- 外部CSSファイルを読み込む -->
+  <link rel="stylesheet" href="./styles.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    /* メインキャンバスをウィンドウ左上に固定 */
+    #c0 {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    /* オフスクリーンキャンバスは画面外に配置 */
+    #buffer10 {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+    }
+  </style>
 </head>
-
 <body>
-    <canvas id="c0"></canvas>
-    <div id="pad">
-        <font size="1">
-            <iframe id="bgm" width="48" height="27" src="" frameborder="0"></iframe>
-            <a id="bgmlink" href="" target="_blank"></a>
-        </font>
-    </div>
-	<script src="lib/jscolor.js"></script>
-    <script id="return_r" value=""></script>
-    <script id="return_g" value=""></script>
-    <script id="return_b" value=""></script>
-    <script src="bundle/main.js"></script>
-    <script>
-        var scale = 1;
-        var change_scale = {
-            "container": 340,
-            "percent": 1,
-            "function": function() {
-                "use strict";
-                var scaleValue = document.documentElement.clientWidth;
-                scaleValue = scaleValue / change_scale.container;
-                var scaleStyle = "scale(" + scaleValue + ")";
-                document.getElementById("c0").style.transform = scaleStyle;
-                document.getElementById("pad").style.transform = scaleStyle;
-            }
-        };
-        window.addEventListener("resize", function(event) {
-            "use strict";
-            change_scale.function();
+  <!-- メインキャンバス -->
+  <canvas id="c0"></canvas>
+  <!-- オフスクリーンキャンバス（バッファID 10） -->
+  <canvas id="buffer10"></canvas>
+  
+  <!-- ここからテキスト表示要素 -->
+  <div id="pad">
+    <iframe id="bgm" width="48" height="27" src="" frameborder="0"></iframe>
+    <a id="bgmlink" href="" target="_blank"></a>
+  </div>
+  
+  <!-- JS ファイルたち -->
+  <script src="lib/jscolor.js"></script>
+  <script id="return_r" value=""></script>
+  <script id="return_g" value=""></script>
+  <script id="return_b" value=""></script>
+  <script src="bundle/main.js"></script>
+  <script>
+    // 設計上の基準サイズ（メインキャンバスは 340×340、バッファID 10 は 340×200）
+    const designSizes = {
+      0: { width: 340, height: 340 },
+      10: { width: 340, height: 200 }
+    };
 
-            const canvasElement = document.getElementById("c0");
-            const context = canvasElement.getContext("2d");
-            context.clearRect(0, 0, canvasElement.width, canvasElement.height);
-        });
+    // updateBufferResolution: 各キャンバスの内部解像度を更新
+    function updateBufferResolution(canvas, designWidth, designHeight) {
+      const context = canvas.getContext("2d");
+      if (!context) return;
+      // clientWidth が取得できなければ設計サイズを使う
+      const cw = canvas.clientWidth || designWidth;
+      const userScale = cw / designWidth;
+      const displayWidth = designWidth * userScale;
+      const displayHeight = designHeight * userScale;
+      const dpr = window.devicePixelRatio || 1;
+      
+      canvas.width = displayWidth * dpr;
+      canvas.height = displayHeight * dpr;
+      canvas.style.width = displayWidth + "px";
+      canvas.style.height = displayHeight + "px";
+      
+      // 描画時の変換行列
+      context.setTransform(dpr * userScale, 0, 0, dpr * userScale, 0, 0);
+    }
 
-        const { ipcRenderer } = require('electron');
-
-        //document.getElementById('showColorPicker').addEventListener('click', () => {
-        //    ipcRenderer.send('show-color-picker');
-        //});
-
-        ipcRenderer.on('color-changed', (event, color) => {
-			console.log('Received color:', color);  // デバッグ用のログ
-            document.getElementById("return_r").value = color.r;
-            document.getElementById("return_g").value = color.g;
-            document.getElementById("return_b").value = color.b;
-        });
-
-        function update(picker) {
-            let color_r = picker.channel('R');
-            let color_g = picker.channel('G');
-            let color_b = picker.channel('B');
-            document.getElementById("return_r").value = color_r;
-            document.getElementById("return_g").value = color_g;
-            document.getElementById("return_b").value = color_b;
-        }
-        //jscolor.trigger('input');
-    </script>
+    // updateMainCanvas: メインキャンバス（ID "c0"）の更新
+    const DESIGN_SIZE = 340;
+    function updateMainCanvas() {
+      const canvas = document.getElementById("c0");
+      const context = canvas.getContext("2d");
+      const userScale = document.documentElement.clientWidth / DESIGN_SIZE;
+      const displayWidth = DESIGN_SIZE * userScale;
+      const displayHeight = DESIGN_SIZE * userScale;
+      const dpr = window.devicePixelRatio || 1;
+      
+      canvas.width = displayWidth * dpr;
+      canvas.height = displayHeight * dpr;
+      canvas.style.width = displayWidth + "px";
+      canvas.style.height = displayHeight + "px";
+      
+      context.setTransform(dpr * userScale, 0, 0, dpr * userScale, 0, 0);
+    }
+    
+    // updateAllBuffers: メインキャンバスとオフスクリーンキャンバス両方を更新
+    function updateAllBuffers() {
+      updateMainCanvas();
+      const offCanvas = document.getElementById("buffer10");
+      updateBufferResolution(offCanvas, designSizes[10].width, designSizes[10].height);
+    }
+    
+    // redrawBuffer10Content: オフスクリーンキャンバスにテキストを描画（func049用の例）
+    function redrawBuffer10Content() {
+      const canvas = document.getElementById("buffer10");
+      if (!canvas) return;
+      const context = canvas.getContext("2d");
+      context.clearRect(0, 0, designSizes[10].width, designSizes[10].height);
+      // ここでは通常通り "16px sans-serif" として描画
+      context.font = "16px sans-serif";
+      context.fillStyle = "#000";
+    }
+    
+    // composeBuffer10ToMain: オフスクリーンキャンバスをメインキャンバスに合成する際に補間を無効化
+    function composeBuffer10ToMain() {
+      const mainCanvas = document.getElementById("c0");
+      const mainCtx = mainCanvas.getContext("2d");
+      // ここで画像補間を無効にする
+      mainCtx.imageSmoothingEnabled = false;
+      
+      const offCanvas = document.getElementById("buffer10");
+      // オフスクリーンキャンバスの CSS サイズ（340×200）で合成
+      mainCtx.drawImage(offCanvas, 0, 0, designSizes[10].width, designSizes[10].height);
+    }
+    
+    // 初回ロード時：バッファ更新、オフスクリーン描画、そして合成
+    window.addEventListener("load", function() {
+      console.log("【Renderer】 window loaded");
+      setTimeout(function() {
+        updateAllBuffers();
+        redrawBuffer10Content();
+        composeBuffer10ToMain();
+      }, 300);
+    });
+    
+    // リサイズ時も同様に更新・再描画・合成
+    window.addEventListener("resize", function() {
+      updateAllBuffers();
+      redrawBuffer10Content();
+      composeBuffer10ToMain();
+    });
+  </script>
 </body>
-
 </html>

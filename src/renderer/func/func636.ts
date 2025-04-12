@@ -1,10 +1,10 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Stand from '../stand/index'
-import * as Dung from '../dungeon/index'
-import * as Main from '../newdtw/index'
+import * as Music from '../music/index'
+import * as Enemy from '../enemy/index'
 
+// ディアボロの攻撃(話しかけ)動作処理 (対象毎フラグ処理)
 // ディアボロが攻撃or話しかけた時の動作処理
 async function func636(this: any) {
         Adap.dbgprt(636);
@@ -115,6 +115,7 @@ async function func636(this: any) {
         Gvar.var_2929 = Gvar.var_347 + 1;
         Gvar.var_2930 = Gvar.var_348 + 1;
         Gvar.var_2931 = Gvar.var_348 - 1;
+        // No = 108 スティッキー・フィンガーズでない場合
         if (Gvar.kougeki_disc_id  != 108 && Gvar.var_71[Gvar.var_66][Gvar.var_67] != 0) {
             Gvar.var_2932 = 0;
             if (Gvar.var_199 == 1 && Gvar.var_71[Gvar.var_347][Gvar.var_67] == 0) {
@@ -159,13 +160,14 @@ async function func636(this: any) {
             }
         }
         Gvar.var_314 = Gvar.var_82[Gvar.var_347][Gvar.var_348];
+        // ヴェネチアホテルでのフラグ処理
         if (Gvar.dungeon_number == 0) {
             if (Gvar.var_66 == 16 && Gvar.var_67 == 21 && Gvar.var_199 == 8) {
                 await Func.func786(); // 亀の倉庫の取説へ話しかけた時のメッセージ処理
                 return;
             }
             if (Gvar.var_66 == 17 && Gvar.var_67 == 7 && Gvar.var_199 == 8) {
-                await Dung.func818(); // ヴェネチアホテルのPCへ話しかけた時のメッセージ処理
+                await Func.func818(); // ヴェネチアホテルのPCへ話しかけた時のメッセージ処理
                 return;
             }
             if (Gvar.var_66 == 16 && Gvar.var_67 == 7 && Gvar.var_199 == 8) {
@@ -202,15 +204,17 @@ async function func636(this: any) {
             }
             // Gvar.var_526 >= 1 ディアボロの試練解放フラグがON
             if (Gvar.var_526 >= 1 && Gvar.var_66 == 12 && Gvar.var_67 == 8 && Gvar.var_199 == 8 && Gvar.var_759 >= 2) {
-                await Dung.func832(); // NPC プッチ神父との会話メッセージ
+                await Func.func832(); // NPC プッチ神父との会話メッセージ
                 return;
             }
             // Gvar.var_526 >= 1 ディアボロの試練解放フラグがON
             if (Gvar.var_526 >= 1 && Gvar.var_66 == 13 && Gvar.var_67 == 8 && Gvar.var_199 == 8 && Gvar.var_759 >= 2) {
-                await Dung.func833(); // NPC DIOとの会話メッセージ
+                await Func.func833(); // NPC DIOとの会話メッセージ
                 return;
             }
         }
+        // おそらくキャラに話しかけた場合のフラグ処理
+        // Gvar.var_139 == 0 && Gvar.var_82[Gvar.var_347][Gvar.var_348] != 0 の条件が正面に誰もいないということか？
         if (Gvar.var_139 == 0 && Gvar.var_82[Gvar.var_347][Gvar.var_348] != 0) {
             if (Gvar.var_83[Gvar.var_314].Var31 == 4 || Gvar.var_83[Gvar.var_314].Var31 == 5) {
                 if (Gvar.var_83[Gvar.var_314].Var12 != 0 || Gvar.var_83[Gvar.var_314].Var13 != 0 || Gvar.var_83[Gvar.var_314].Var17 != 0) {
@@ -218,7 +222,7 @@ async function func636(this: any) {
                     return;
                 }
             }
-            if (Gvar.var_163 != 0 || Gvar.var_123 != 0) {
+            if (Gvar.time_paused!= 0 || Gvar.var_123 != 0) {
                 // No = 61 ヨーヨーマッ
                 if (Gvar.var_83[Gvar.var_314].Var31 == 4 || Gvar.var_83[Gvar.var_314].Var31 == 5 || Gvar.var_83[Gvar.var_314].Var0 == 61) {
                     if (Gvar.var_83[Gvar.var_314].Var0 != 50) {
@@ -269,7 +273,7 @@ async function func636(this: any) {
             // Gvar.enemy_list = 33 トニオさん
             if (Gvar.var_83[Gvar.var_314].Var0 == 33) {
                 await Func.func640();
-                await Func.func707();
+                await Func.func707(); // トニオさんに話しかけた際のメッセージ処理
                 return;
             }
             // Gvar.enemy_list = 36 スピードワゴン
@@ -281,60 +285,70 @@ async function func636(this: any) {
             // Gvar.enemy_list = 105 ツェッペリさん
             if (Gvar.var_83[Gvar.var_314].Var0 == 105) {
                 await Func.func640();
-                await Func.func743();
+                await Func.func743(); // 仲間でない状態のツェッペリさんへ話しかけた際の処理
                 return;
             }
-            if (Gvar.var_83[Gvar.var_314].Var0 == 106) { // Gvar.enemy_list = 106 なのでペッシ
+            // Gvar.enemy_list = 106 なのでペッシ
+            if (Gvar.var_83[Gvar.var_314].Var0 == 106) {
                 await Func.func640();
-                await Func.func748();
+                await Func.func748(); // 仲間でない状態のペッシへ話しかけた際の処理
                 return;
             }
-            if (Gvar.var_83[Gvar.var_314].Var0 == 107) { // Gvar.enemy_list = 107 なので成長したペッシ
+            // Gvar.enemy_list = 107 なので成長したペッシ
+            if (Gvar.var_83[Gvar.var_314].Var0 == 107) {
                 await Func.func640();
                 await Func.func753(); // ダンジョン内で仲間の成長したペッシに話しかけた時のメッセージ処理
                 return;
             }
-            if (Gvar.var_83[Gvar.var_314].Var0 == 57) { // Gvar.enemy_list = 57 なのでSPW財団の男
+            // Gvar.enemy_list = 57 なのでSPW財団の男
+            if (Gvar.var_83[Gvar.var_314].Var0 == 57) {
                 await Func.func640();
                 await Func.func755(); // ダンジョンをうろついているSPW財団の男に話しかけた時のメッセージ処理
                 return;
             }
-            if (Gvar.var_83[Gvar.var_314].Var0 == 58) { // Gvar.enemy_list = 58 なのでボインゴ
+            // Gvar.enemy_list = 58 なのでボインゴ
+            if (Gvar.var_83[Gvar.var_314].Var0 == 58) {
                 await Func.func640();
                 await Func.func758(); // ダンジョンをうろついているボインゴに話しかけた時のメッセージ処理
                 return;
             }
-            if (Gvar.var_83[Gvar.var_314].Var0 == 61) { // No = 61 ヨーヨーマッ
+            // No = 61 ヨーヨーマッ
+            if (Gvar.var_83[Gvar.var_314].Var0 == 61) {
                 await Func.func640();
                 await Func.func759();
                 return;
             }
-            if (Gvar.var_83[Gvar.var_314].Var0 == 163) { // No = 163 ヤク中の少年
+            // No = 163 ヤク中の少年
+            if (Gvar.var_83[Gvar.var_314].Var0 == 163) {
                 await Func.func794();
                 return;
             }
-            if (Gvar.var_83[Gvar.var_314].Var0 == 70) { // No = 70 ダービー 没キャラ?
+            // No = 70 ダービー 没キャラ?
+            if (Gvar.var_83[Gvar.var_314].Var0 == 70) {
                 // await Func.func761(); // 現在未使用。D・ダービーのみのコメント設定をしようとしていたと思われる。
                 await Func.func757();// キャラに話しかけた時のメッセージ(コメントなし)
                 return;
             }
-            if (Gvar.var_83[Gvar.var_314].Var0 == 74) { // No = 74 サヴェジガーデン
+            // No = 74 サヴェジガーデン
+            if (Gvar.var_83[Gvar.var_314].Var0 == 74) {
                 await Func.func640();
                 await Func.func769(); // ダンジョンをうろついているサヴェジガーデン作戦の鳩へ話しかけた時の動作処理
                 return;
             }
-            if (Gvar.var_83[Gvar.var_314].Var0 == 75) { // No = 75 鮮血のシャボン
+            // No = 75 鮮血のシャボン
+            if (Gvar.var_83[Gvar.var_314].Var0 == 75) {
                 await Func.func773(); // 鮮血のシャボンへ話しかけた時のメッセージ処理
                 return;
             }
-            if (Gvar.var_83[Gvar.var_314].Var0 == 55) { // Gvar.enemy_list = 55 なので亀
+            // Gvar.enemy_list = 55 なので亀
+            if (Gvar.var_83[Gvar.var_314].Var0 == 55) {
                 await Func.func640();
-                await Dung.func161(); //亀の中に入った時の表示
+                await Func.func161(); // 亀の中に入った時の表示
                 return;
             }
             if (Gvar.var_83[Gvar.var_314].Var0 == 81) { // Gvar.enemy_list = 81 なのでアバッキオ
                 await Func.func640();
-                await Func.func787();
+                await Func.func787(); // アバッキオセリフ
                 return;
             }
             if (Gvar.var_83[Gvar.var_314].Var0 == 82) { // Gvar.enemy_list = 82 なのでバーのバーテンダー 没キャラ?
@@ -372,14 +386,17 @@ async function func636(this: any) {
                 return;
             }
         }
+        // 誰も対象でない(正面に誰もいない)場合
         if (Gvar.var_71[Gvar.var_347][Gvar.var_348] == 0) {
             await Func.func651(); // 攻撃動作処理
             return;
         }
+        // No = 108 スティッキー・フィンガーズ でない場合
         if (Gvar.var_82[Gvar.var_347][Gvar.var_348] == 0 && Gvar.equip_disc[108] == 0) {
             await Func.func651(); // 攻撃動作処理
             return;
         }
+        // No = 108 スティッキー・フィンガーズ の場合
         if (Gvar.var_82[Gvar.var_347][Gvar.var_348] == 0 && Gvar.equip_disc[108] == 1) {
             Gvar.var_2933 = Gvar.var_347;
             Gvar.var_2934 = Gvar.var_348;
@@ -472,26 +489,8 @@ async function func636(this: any) {
             Gvar.var_2936 = Adap.rnd(8);
             if (Gvar.var_2936 == 0) {
                 Gvar.var_747 = 1;
-                Gvar.comments_row1 = "";
-                Gvar.comments_row2 = "";
-                Gvar.var_295 = "";
-                Gvar.comments_row1a = "";
-                Gvar.comments_row2a = "";
-                Gvar.var_298 = "";
-                Gvar.var_299 = 0;
-                Gvar.comments_row1 = "「ジャンピン・ジャック・フラッシュ！」";
-                Gvar.comments_row2 = "";
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                await Func.func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.setMessage1("「ジャンピン・ジャック・フラッシュ！」", "", 7, false, false, false);
+                await Func.AutoDraw(10);
                 Gvar.var_83[Gvar.var_314].Var17 = 1;
                 Gvar.var_2937 = 1;
                 Gvar.var_455 = Gvar.var_347;
@@ -508,32 +507,14 @@ async function func636(this: any) {
         }
         if (Gvar.var_1035 >= 1) {
             Gvar.var_243 = 0;
-            await Func.func094(); // メッセージ送りの際の効果音
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "この恨み はらさでおくべきかァ―！";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("この恨み はらさでおくべきかァ―！", "", 7, false, false, false);
+            await Music.func094(); // メッセージ送りの際の効果音
+            await Func.AutoDraw(10);
             Gvar.var_243 = 1;
         }
         if (Gvar.var_143 >= 1) {
             Gvar.var_314 = Gvar.var_82[Gvar.var_347][Gvar.var_348];
-            Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var0;
+            Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
             await Func.func626(); // 敵リスト
             Gvar.var_2267[8] = Gvar.var_2267[7];
             Gvar.var_2267[7] = Gvar.var_2267[6];
@@ -543,7 +524,7 @@ async function func636(this: any) {
             Gvar.var_2267[3] = Gvar.var_2267[2];
             Gvar.var_2267[2] = Gvar.var_2267[1];
             Gvar.var_2267[1] = Gvar.var_2267[0];
-            Gvar.var_2267[0] = Gvar.var_83[Gvar.var_314].Var0;
+            Gvar.var_2267[0] = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
             if (Gvar.var_2267[0] != 0 && Gvar.var_2267[0] == Gvar.var_2267[1]) {
                 Gvar.var_143 = 2;
             }
@@ -573,79 +554,42 @@ async function func636(this: any) {
             }
             if (Gvar.var_143 >= 2) {
                 Gvar.var_243 = 0;
-                Gvar.comments_row1 = "";
-                Gvar.comments_row2 = "";
-                Gvar.var_295 = "";
-                Gvar.comments_row1a = "";
-                Gvar.comments_row2a = "";
-                Gvar.var_298 = "";
-                Gvar.var_299 = 0;
-                await Func.func094(); // メッセージ送りの際の効果音
                 if (Gvar.var_143 == 2) {
-                    Gvar.comments_row1 = "きさまの 動きやパワーは";
-                    Gvar.comments_row2 = "さっきしっかり とりこんだ！";
+                    await Func.setMessage1("きさまの 動きやパワーは", "さっきしっかり とりこんだ！", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 3) {
-                    Gvar.comments_row1 = "ウシャア―――――――ッ！！";
-                    Gvar.comments_row2 = "";
+                    await Func.setMessage1("ウシャア―――――――ッ！！", "", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 4) {
-                    Gvar.comments_row1 = "絶っ～～～～～～～～～対に！";
-                    Gvar.comments_row2 = "負けなあああああああいィィィ";
+                    await Func.setMessage1("絶っ～～～～～～～～～対に！", "負けなあああああああいィィィ", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 5) {
-                    Gvar.comments_row1 = "さすが" + Gvar.enemy_name + "…";
-                    Gvar.comments_row2 = "しかしその動き… スデに憶えた！";
+                    await Func.setMessage1("さすが" + Gvar.enemy_name + "…", "しかしその動き… スデに憶えた！", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 6) {
-                    Gvar.comments_row1 = "さて～～～　今度の攻撃には";
-                    Gvar.comments_row2 = "\t耐えられるかな？";
+                    await Func.setMessage1("さて～～～  今度の攻撃には", "\t耐えられるかな？", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 7) {
-                    Gvar.comments_row1 = "ウシャアアアアアア―――ッ";
-                    Gvar.comments_row2 = "死ねエエエイ――っ！！";
+                    await Func.setMessage1("ウシャアアアアアア―――ッ", "死ねエエエイ――っ！！", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 8) {
-                    Gvar.comments_row1 = "とどめの とっておきのダメ押しだッ！";
-                    Gvar.comments_row2 = "";
+                    await Func.setMessage1("とどめの とっておきのダメ押しだッ！", "", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 9) {
-                    Gvar.comments_row1 = "この首 もらったァ―――ッ!!";
-                    Gvar.comments_row2 = "";
+                    await Func.setMessage1("この首 もらったァ―――ッ!!", "", 7, false, false, true);
                 }
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                await Func.func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(10);
                 Gvar.var_243 = 1;
             }
         }
         await Func.func639(); // 敵の回避処理
         if (Gvar.var_2867 == 0) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "ﾃﾞｨｱﾎﾞﾛの攻撃は外れた";
-            if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
-                Gvar.comments_row1 = "ヒラリと攻撃をかわされた";
+            if (Gvar.var_2938 != 1) { // ヒラリ回避発動フラグOFF
+                await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛの攻撃は外れた", "", 7, false, false, false);
             }
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
+            if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
+                await Func.setMessage1("ヒラリと攻撃をかわされた", "", 7, false, false, false);
+            }
             Gvar.var_2939 = 1;
             if (Gvar.equip_disc[105] == 1) { // No = 105 チリペッパーのDISCを装備している場合
                 Gvar.var_1030 = Gvar.var_1030 + 1;
@@ -653,14 +597,14 @@ async function func636(this: any) {
             await Func.func651(); // 攻撃動作処理
             return;
         }
-        if (Gvar.var_83[Gvar.var_314].Var0 == 152) { // Gvar.enemy_list == 152 トリッシュ
+        // Gvar.enemy_list == 152 トリッシュへ攻撃した際の処理
+        if (Gvar.var_83[Gvar.var_314].Var0 == 152) {
             Gvar.var_2936 = Adap.rnd(4);
             if (Gvar.var_2936 == 0) {
                 Gvar.var_243 = 1;
-                await Func.func089(); // 各装備discごとの攻撃音設定
-                for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Music.func089(); // 各装備discごとの攻撃音設定
+                await Func.AutoDraw(3);
+
                 if (Gvar.var_83[Gvar.var_314].Var0 != 79 && Gvar.var_83[Gvar.var_314].Var23 == 0) {
                     if (Gvar.var_83[Gvar.var_314].Var1 == Gvar.var_66 && Gvar.var_83[Gvar.var_314].Var2 > Gvar.var_67) {
                         Gvar.var_83[Gvar.var_314].Var5 = 8;
@@ -687,27 +631,9 @@ async function func636(this: any) {
                         Gvar.var_83[Gvar.var_314].Var5 = 3;
                     }
                 }
-                await Func.func091();
-                Gvar.comments_row1 = "";
-                Gvar.comments_row2 = "";
-                Gvar.var_295 = "";
-                Gvar.comments_row1a = "";
-                Gvar.comments_row2a = "";
-                Gvar.var_298 = "";
-                Gvar.var_299 = 0;
-                Gvar.comments_row1 = "ﾄﾘｯｼｭはｺﾞﾑのように柔らかくなっている！";
-                Gvar.comments_row2 = "";
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                await Func.func047();
-                for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Music.func091();
+                await Func.setMessage1("ﾄﾘｯｼｭはｺﾞﾑのように柔らかくなっている！", "", 7, false, false, false);
+                await Func.AutoDraw(10);
                 Gvar.var_243 = 0;
                 await Func.func529();
                 Gvar.var_217 = 1;
@@ -716,7 +642,7 @@ async function func636(this: any) {
             }
         }
         Gvar.var_314 = Gvar.var_82[Gvar.var_347][Gvar.var_348];
-        Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var0;
+        Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
         await Func.func626(); // 敵リスト
         await Func.func638();
         Gvar.var_2940 = Adap.rnd(22);
@@ -725,18 +651,22 @@ async function func636(this: any) {
                 Gvar.var_2940 = 0;
             }
         }
+
         if (Gvar.equip_disc[106] == 1 && Gvar.var_2940 == 1) {
             Gvar.var_2940 = 0;
         }
+
         if (Gvar.kougeki_disc_id  == 104 && Gvar.var_129 == 0) {
             Gvar.var_2940 = 0;
         }
         if (Gvar.var_2927 == 1) {
             Gvar.var_2940 = 0;
         }
+
         if (Gvar.kougeki_disc_id  == 106 && Gvar.var_139 >= 1) {
             Gvar.var_2940 = 0;
         }
+        
         if (Gvar.equip_disc[105] == 1 && Gvar.var_1030 >= 2) {
             Gvar.var_2940 = 0;
         }
@@ -753,54 +683,29 @@ async function func636(this: any) {
         if (Gvar.var_1194 == 1 && Gvar.var_162 == 1) {
             Gvar.var_2941 = 0;
             Gvar.var_243 = 0;
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
             Gvar.var_2915 = Adap.rnd(5);
-            await Func.func094(); // メッセージ送りの際の効果音
             if (Gvar.var_2915 == 0) {
-                Gvar.comments_row1 = "なにかわからんが喰らえッ！";
-                Gvar.comments_row2 = "";
+                await Func.setMessage1("なにかわからんが喰らえッ！", "", 7, false, false, true);
             }
             if (Gvar.var_2915 == 1) {
-                Gvar.comments_row1 = "帝王はこのディアボロだッ！";
-                Gvar.comments_row2 = "";
+                await Func.setMessage1("帝王はこのディアボロだッ！", "", 7, false, false, true);
             }
             if (Gvar.var_2915 == 2) {
-                Gvar.comments_row1 = "お前はわたしを本気で怒らせたッ！！";
-                Gvar.comments_row2 = "";
+                await Func.setMessage1("お前はわたしを本気で怒らせたッ！！", "", 7, false, false, true);
             }
             if (Gvar.var_2915 == 3) {
-                Gvar.comments_row1 = "とどめだァ――――ッ！";
-                Gvar.comments_row2 = "";
+                await Func.setMessage1("とどめだァ――――ッ！", "", 7, false, false, true);
             }
             if (Gvar.var_2915 == 4) {
-                Gvar.comments_row1 = "死んだことを後悔する時間をも";
-                Gvar.comments_row2 = "与えんッ！！";
+                await Func.setMessage1("死んだことを後悔する時間をも", "与えんッ！！", 7, false, false, true);
             }
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(10);
             Gvar.var_243 = 1;
         }
         Gvar.var_83[Gvar.var_314].Var3 = Gvar.var_83[Gvar.var_314].Var3 - Gvar.var_209;
         Gvar.var_243 = 1;
-        await Func.func089(); // 各装備discごとの攻撃音設定
-        for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Music.func089(); // 各装備discごとの攻撃音設定
+        await Func.AutoDraw(3);
         if (Gvar.var_83[Gvar.var_314].Var0 != 79 && Gvar.var_83[Gvar.var_314].Var23 == 0) {
             Gvar.var_2942 = Gvar.var_83[Gvar.var_314].Var5;
             if (Gvar.var_83[Gvar.var_314].Var1 == Gvar.var_66 && Gvar.var_83[Gvar.var_314].Var2 > Gvar.var_67) {
@@ -828,21 +733,17 @@ async function func636(this: any) {
                 Gvar.var_83[Gvar.var_314].Var5 = 3;
             }
         }
-        await Func.func091();
+        await Music.func091();
         Gvar.var_747 = 1;
         Gvar.var_83[Gvar.var_314].Var8 = 1;
         for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
             Gvar.var_83[Gvar.var_314].Var8 = 0;
-            for (let cnt2 = 0; cnt2 < 1; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(1);
             Gvar.var_83[Gvar.var_314].Var8 = 1;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(2);
         }
         Gvar.var_314 = Gvar.var_82[Gvar.var_347][Gvar.var_348];
-        Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var0;
+        Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
         if (Gvar.var_83[Gvar.var_314].Var0 == 97 && Gvar.var_83[Gvar.var_314].Var31 >= 11) {
             Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var31;
         }
@@ -852,35 +753,24 @@ async function func636(this: any) {
         if (Gvar.var_127 != 0 || Gvar.var_132 != 0) {
             Gvar.enemy_name = "何者か";
         }
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
+        if (Gvar.var_1194 != 1) {
+            if (Gvar.var_209 != 999) {
+                await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "" + Gvar.var_209 + "のダメージ！", 7, false, false, false);
+            }
+            if (Gvar.var_209 == 999) {
+                await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "致命的なダメージ！", 7, false, false, false);
+            }
+        }
         if (Gvar.var_1194 == 1) {
-            Gvar.var_25_x = Gvar.var_25[12]; // Ver0.1310で値修正 6 → 12
-            Gvar.var_26_x = Gvar.var_26[12]; // Ver0.1310で値修正 6 → 12
-            Gvar.var_27_x = Gvar.var_27[12]; // Ver0.1310で値修正 6 → 12
+            if (Gvar.var_209 != 999) {
+                await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "" + Gvar.var_209 + "のダメージ！", 12, false, false, false);
+            }
+            if (Gvar.var_209 == 999) {
+                await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "致命的なダメージ！", 12, false, false, false);
+            }
         }
-        for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
-        Gvar.comments_row2 = "" + Gvar.var_209 + "のダメージ！";
-        if (Gvar.var_209 == 999) {
-            Gvar.comments_row2 = "致命的なダメージ！";
-        }
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        await Func.func047();
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.AutoDraw(3);
+        await Func.func337(); // メッセージ表示処理(自動)
         // Gvar.enemy_list == 159 記憶が戻ったウェザー
         if (Gvar.var_83[Gvar.var_314].Var0 == 159 && Gvar.var_83[Gvar.var_314].Var20 == 0) {
             Gvar.var_1550 = Gvar.var_83[Gvar.var_314].Var1;
@@ -900,37 +790,28 @@ async function func636(this: any) {
         
                 Adap.DSPLAY(161);
                 Gvar.var_1299 = 0;
-                Gvar.var_271 = 1;
+                Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                 Gvar.var_1297 = 1;
                 for (let cnt3 = 0; cnt3 < 20; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     Gvar.var_1297++;
                 }
-                Gvar.var_271 = 0;
+                Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                 Gvar.var_1297 = 0;
                 Gvar.var_211 = Gvar.var_211 + Gvar.var_209;
                 if (Gvar.var_211 >= Gvar.var_352) {
                     Gvar.var_211 = Gvar.var_352;
                 }
-                Gvar.comments_row1a = "" + Gvar.var_209 + "の養分を吸収した。";
-                Gvar.comments_row2a = "";
-                Gvar.var_2945 = Gvar.enemy_list;
-                Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                await Func.func050();
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                await Func.func047();
+                await Func.setMessage1("" + Gvar.var_209 + "の養分を吸収した。", "", 7, false, false, false);
             }
         }
         // No = 61 ヨーヨーマッ
         if (Gvar.var_83[Gvar.var_314].Var0 == 61 && Gvar.var_139 >= 1) {
             Gvar.var_139 = 0;
-            await Main.func038();
+            await Func.func038();
         }
         if (Gvar.var_83[Gvar.var_314].Var0 == 101 || Gvar.var_83[Gvar.var_314].Var0 == 102 || Gvar.var_83[Gvar.var_314].Var0 == 103 || Gvar.var_83[Gvar.var_314].Var0 == 104) {
-            Gvar.var_2946 = Gvar.var_83[Gvar.var_314].Var0;
+            Gvar.var_2946 = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
             Gvar.var_2947 = Gvar.var_83[Gvar.var_314].Var1;
             Gvar.var_2948 = Gvar.var_83[Gvar.var_314].Var2;
             Gvar.var_2949 = Gvar.var_83[Gvar.var_314].Var1 + 1;
@@ -942,7 +823,7 @@ async function func636(this: any) {
             Gvar.var_2953 = Adap.rnd(4);
             if (Gvar.var_2953 == 0) {
                 Gvar.var_83[Gvar.var_314].Var8 = 1;
-                await Func.func623();
+                await Enemy.func623();
                 Gvar.var_83[Gvar.var_314].Var8 = 0;
             }
         }
@@ -952,7 +833,7 @@ async function func636(this: any) {
         if (Gvar.equip_disc[317] == 1 && Gvar.var_83[Gvar.var_314].Var0 != 13 && Gvar.var_83[Gvar.var_314].Var0 != 171 && Gvar.var_83[Gvar.var_314].Var0 != 143 && Gvar.var_83[Gvar.var_314].Var0 != 132 && Gvar.var_83[Gvar.var_314].Var0 != 20 && Gvar.var_83[Gvar.var_314].Var31 != 4 && Gvar.var_83[Gvar.var_314].Var31 != 5) {
             Gvar.var_2953 = Adap.rnd(8);
             if (Gvar.var_2953 == 0) {
-                Gvar.var_1374 = Gvar.var_83[Gvar.var_314].Var0;
+                Gvar.var_1374 = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
                 if (Gvar.var_1374 == 19) {
                     Gvar.var_1374 = 90;
                 }
@@ -967,32 +848,32 @@ async function func636(this: any) {
             }
         }
         Gvar.var_314 = Gvar.var_82[Gvar.var_347][Gvar.var_348];
-        Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var0;
+        Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
         await Func.func626(); // 敵リスト
         if (Gvar.var_83[Gvar.var_314].Var3 <= 0) {
             // No = 1 なので、ホテルの外
             if (Gvar.dungeon_number == 1 && Gvar.var_83[Gvar.var_314].Var0 == 20) { // No = 20 エンヤ婆
-                await Dung.func685(); // エンヤ婆を倒した時のメッセージ処理
+                await Func.func685(); // エンヤ婆を倒した時のメッセージ処理
             }
             // No = 2 なので、レクイエムの大迷宮
             if (Gvar.dungeon_number == 2 && Gvar.var_83[Gvar.var_314].Var0 == 132) { // No = 132 レクイエムジョルノ
-                await Dung.func686(); // レクイエムジョルノを倒した時のメッセージ処理
+                await Func.func686(); // レクイエムジョルノを倒した時のメッセージ処理
             }
             // No = 3 なので、ディアボロの試練
             if (Gvar.dungeon_number == 3 && Gvar.var_83[Gvar.var_314].Var0 == 143) { // No = 143 ウンガロ
-                await Dung.func687(); // ウンガロを倒した時のメッセージ処理
+                await Func.func687(); // ウンガロを倒した時のメッセージ処理
             }
             // No = 5 なので、鉄獄(鉄の牢獄)
             if (Gvar.dungeon_number == 5 && Gvar.var_83[Gvar.var_314].Var0 == 171) { // Ver0.1403にて修正。.Var16 >= 1000 → .Var0 == 171。No = 171 離婚した承太郎
-                // Gvar.var_2921 = Gvar.var_83[Gvar.var_314].Var0; Ver 0.1403にてコメントアウト
-                await Dung.func633(); // 承太郎を倒した時のメッセージ処理
+                // Gvar.var_2921 = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list, Ver 0.1403にてコメントアウト
+                await Func.func633();
             }
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 Gvar.var_83[Gvar.var_314].Var11 = 1;
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_83[Gvar.var_314].Var11 = 0;
                 Gvar.var_83[Gvar.var_314].Var8 = 1;
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
             if (Gvar.var_114 >= 1 && Gvar.var_314 == Gvar.var_114) {
                 Gvar.var_114 = 0;
@@ -1020,13 +901,13 @@ async function func636(this: any) {
             if (Gvar.equip_disc[307] == 1) {
                 Gvar.var_2955 = Adap.rnd(2);
                 if (Gvar.var_2955 == 1) {
-                    Gvar.var_2263 = Gvar.var_83[Gvar.var_314].Var0;
+                    Gvar.var_2263 = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
                 }
             }
             await Func.func676();
             await Func.func340(); // キー入力による選択処理
             Gvar.var_314 = Gvar.var_82[Gvar.var_347][Gvar.var_348];
-            Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var0;
+            Gvar.enemy_list = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
             await Func.func626(); // 敵リスト
             Gvar.var_2956 = Gvar.enemy_exp_point;
             if (Gvar.var_83[Gvar.var_314].Var39 >= 2) {
@@ -1038,19 +919,9 @@ async function func636(this: any) {
             if (Gvar.var_127 != 0 || Gvar.var_132 != 0) {
                 Gvar.enemy_name = "何者か";
             }
-            Gvar.comments_row1 = Gvar.comments_row1a;
-            Gvar.comments_row2 = Gvar.comments_row2a;
-            Gvar.comments_row1a = "" + Gvar.enemy_name + "をやっつけた";
-            Gvar.comments_row2a = "" + Gvar.var_2956 + "の経験値を手に入れた";
+            await Func.setMessage1("" + Gvar.enemy_name + "をやっつけた", "" + Gvar.var_2956 + "の経験値を手に入れた", 7, false, false, false);
             Gvar.var_2945 = Gvar.enemy_list;
             Gvar.var_1034 = Gvar.enemy_list;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func050();
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
             // No = 1 なので、ホテルの外
             if (Gvar.dungeon_number == 1 && Gvar.var_83[Gvar.var_314].Var0 == 20) { // No = 20 エンヤ婆
                 await Func.func689();
@@ -1071,7 +942,7 @@ async function func636(this: any) {
                 await Func.func688();
             }
             if (Gvar.var_175 >= 1 || Gvar.var_176 >= 1) {
-                await Stand.func703();
+                await Enemy.func703();
             }
             if (Gvar.var_83[Gvar.var_314].Var20 == 0) {
                 if (Gvar.var_83[Gvar.var_314].Var0 == 79) {
@@ -1116,11 +987,9 @@ async function func636(this: any) {
             Gvar.var_82[Gvar.var_347][Gvar.var_348] = 0;
             Gvar.var_83[Gvar.var_314].Var0 = 0;
             await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(2);
             Gvar.var_568 = Gvar.var_568 + Gvar.var_2956;
-            await Func.func680();
+            await Func.func680(); // ディアボロのレベルが上がる際の処理
             if (Gvar.var_2957 >= 1) {
                 await Func.func690();
             }
@@ -1131,7 +1000,7 @@ async function func636(this: any) {
         Gvar.var_83[Gvar.var_314].Var8 = 0;
         if (Gvar.var_83[Gvar.var_314].Var13 != 0) {
             Gvar.var_460 = Gvar.var_314;
-            await Main.func024();
+            await Func.func024();
         }
         if (Gvar.var_83[Gvar.var_314].Var12 == 99) {
             Gvar.var_83[Gvar.var_314].Var12 = 0;
@@ -1193,63 +1062,53 @@ async function func636(this: any) {
                 }
             }
             if (Gvar.var_2960 == 1 || Gvar.var_2961 == 1 || Gvar.var_2962 == 1) {
-                for (let cnt3 = 0; cnt3 < 8; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
-                Gvar.comments_row1 = Gvar.comments_row1a;
-                Gvar.comments_row2 = Gvar.comments_row2a;
+                await Func.AutoDraw(8);
                 if (Gvar.var_2960 == 1 && Gvar.var_2961 == 0 && Gvar.var_2962 == 0) {
-                    Gvar.comments_row1a = "" + Gvar.var_2943 + "を重くした！";
-                    Gvar.comments_row2a = "";
+                    await Func.setMessage1("" + Gvar.var_2943 + "を重くした！", "", 7, false, false, false);
                 }
                 if (Gvar.var_2960 == 1 && Gvar.var_2961 == 1 && Gvar.var_2962 == 0) {
-                    Gvar.comments_row1a = "" + Gvar.var_2943 + "を";
-                    Gvar.comments_row2a = "重くして能力を封じた！";
+                    if (Gvar.var_83[Gvar.var_314].Var20 != 2) {
+                        await Func.setMessage1("" + Gvar.var_2943 + "を", "重くして能力を封じた！", 7, false, false, false);
+                    }
                     if (Gvar.var_83[Gvar.var_314].Var20 == 2) {
-                        Gvar.comments_row2a = "重くして攻撃を封じた！";
+                        await Func.setMessage1("" + Gvar.var_2943 + "を", "重くして攻撃を封じた！", 7, false, false, false);
                     }
                 }
                 if (Gvar.var_2960 == 1 && Gvar.var_2961 == 0 && Gvar.var_2962 == 1) {
-                    Gvar.comments_row1a = "" + Gvar.var_2943 + "を";
-                    Gvar.comments_row2a = "重くして凍らせた！";
+                    await Func.setMessage1("" + Gvar.var_2943 + "を", "重くして凍らせた！", 7, false, false, false);
                 }
                 if (Gvar.var_2960 == 1 && Gvar.var_2961 == 1 && Gvar.var_2962 == 1) {
-                    Gvar.comments_row1a = "" + Gvar.var_2943 + "を";
-                    Gvar.comments_row2a = "重くして能力を封じて凍らせた！";
+                    if (Gvar.var_83[Gvar.var_314].Var20 != 2) {
+                        await Func.setMessage1("" + Gvar.var_2943 + "を", "重くして能力を封じて凍らせた！", 7, false, false, false);
+                    }
                     if (Gvar.var_83[Gvar.var_314].Var20 == 2) {
-                        Gvar.comments_row2a = "重くして攻撃を封じて凍らせた！";
+                        await Func.setMessage1("" + Gvar.var_2943 + "を", "重くして攻撃を封じて凍らせた！", 7, false, false, false);
                     }
                 }
                 if (Gvar.var_2960 == 0 && Gvar.var_2961 == 1 && Gvar.var_2962 == 0) {
-                    Gvar.comments_row1a = "" + Gvar.var_2943 + "の能力を封じた！";
-                    Gvar.comments_row2a = "";
+                    if (Gvar.var_83[Gvar.var_314].Var20 != 2) {
+                        await Func.setMessage1("" + Gvar.var_2943 + "の能力を封じた！", "", 7, false, false, false);
+                    }
                     if (Gvar.var_83[Gvar.var_314].Var20 == 2) {
-                        Gvar.comments_row1a = "" + Gvar.var_2943 + "の攻撃を封じた！";
-                        Gvar.comments_row2a = "";
+                        await Func.setMessage1("" + Gvar.var_2943 + "の攻撃を封じた！", "", 7, false, false, false);
                     }
                 }
                 if (Gvar.var_2960 == 0 && Gvar.var_2961 == 1 && Gvar.var_2962 == 1) {
-                    Gvar.comments_row1a = "" + Gvar.var_2943 + "の";
-                    Gvar.comments_row2a = "能力を封じて凍らせた！";
+                    if (Gvar.var_83[Gvar.var_314].Var20 != 2) {
+                        await Func.setMessage1("" + Gvar.var_2943 + "の", "能力を封じて凍らせた！", 7, false, false, false);
+                    }
                     if (Gvar.var_83[Gvar.var_314].Var20 == 2) {
-                        Gvar.comments_row2a = "攻撃を封じて凍らせた！";
+                        await Func.setMessage1("" + Gvar.var_2943 + "の", "攻撃を封じて凍らせた！", 7, false, false, false);
                     }
                 }
                 if (Gvar.var_2960 == 0 && Gvar.var_2961 == 0 && Gvar.var_2962 == 1) {
-                    Gvar.comments_row1a = "" + Gvar.var_2943 + "を凍らせた！";
-                    Gvar.comments_row2a = "";
+                    await Func.setMessage1("" + Gvar.var_2943 + "を凍らせた！", "", 7, false, false, false);
                 }
-                Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-                Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-                await Func.func050();
-                Gvar.var_198 = 1;
-                Gvar.var_300 = 0;
-                await Func.func047();
             }
         }
         Gvar.var_1194 = 0;
-        if (Gvar.var_83[Gvar.var_314].Var20 == 0 && Gvar.var_83[Gvar.var_314].Var12 == 0 && Gvar.var_83[Gvar.var_314].Var13 == 0 && Gvar.var_83[Gvar.var_314].Var17 == 0 && Gvar.var_163 == 0 && Gvar.var_123 == 0 && Gvar.var_151 == 0) {
+        // 時止め(時消し飛ばし)状態でない場合
+        if (Gvar.var_83[Gvar.var_314].Var20 == 0 && Gvar.var_83[Gvar.var_314].Var12 == 0 && Gvar.var_83[Gvar.var_314].Var13 == 0 && Gvar.var_83[Gvar.var_314].Var17 == 0 && Gvar.time_paused == 0 && Gvar.var_123 == 0 && Gvar.time_paused_count == 0) {
             if (Gvar.var_83[Gvar.var_314].Var0 == 121 && Gvar.var_83[Gvar.var_314].Var29 == 1) {
                 await Func.func658(); // 敵が攻撃を受けた時の動作処理
             }
@@ -1263,7 +1122,7 @@ async function func636(this: any) {
                 await Func.func658(); // 敵が攻撃を受けた時の動作処理
             }
             if (Gvar.var_83[Gvar.var_314].Var0 == 116) {
-                await Func.func657();
+                await Enemy.func657();
             }
             if (Gvar.var_83[Gvar.var_314].Var0 == 17 && Gvar.var_83[Gvar.var_314].Var3 < 2) {
                 Gvar.var_2890 = Gvar.var_314;
@@ -1283,7 +1142,7 @@ async function func636(this: any) {
         }
         if (Gvar.var_83[Gvar.var_314].Var0 == 116 && Gvar.var_139 >= 1) {
             Gvar.var_139 = 0;
-            await Main.func039();
+            await Func.func039();
         }
         if (Gvar.var_83[Gvar.var_314].Var0 == 33) {
             Gvar.var_83[Gvar.var_314].Var0 = 34;
@@ -1291,7 +1150,7 @@ async function func636(this: any) {
         }
         if (Gvar.var_2946 == 101 || Gvar.var_2946 == 102 || Gvar.var_2946 == 103 || Gvar.var_2946 == 104) {
             if (Gvar.var_83[Gvar.var_314].Var20 == 0 && Gvar.var_83[Gvar.var_314].Var12 != 1 && Gvar.var_83[Gvar.var_314].Var12 != 2 && Gvar.var_83[Gvar.var_314].Var12 != 3 && Gvar.var_83[Gvar.var_314].Var12 != 4 && Gvar.var_83[Gvar.var_314].Var12 != 5) {
-                await Func.func702(); // 吸血鬼4兄弟に攻撃した際のメッセージ表示
+                await Enemy.func702(); // 吸血鬼4兄弟に攻撃した際のメッセージ表示
             }
         }
         Gvar.var_217 = 1;
@@ -1299,7 +1158,8 @@ async function func636(this: any) {
             Gvar.kougeki_disc_id  = 108;
             Gvar.var_750 = 0;
         }
-        if (Gvar.equip_disc[101] == 1 && Gvar.var_2925 == 0 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0 && Gvar.to_freeze == 0 && Gvar.var_178 == 0) {
+        // No = 101 シルバーチャリオッツ
+        if (Gvar.equip_disc[101] == 1 && Gvar.var_2925 == 0 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0 && Gvar.var_128 == 0 && Gvar.var_178 == 0) {
             Gvar.var_2966 = Gvar.var_83[Gvar.var_314].Var1;
             Gvar.var_2967 = Gvar.var_83[Gvar.var_314].Var2;
             if (Gvar.var_82[Gvar.var_2966][Gvar.var_2967] != 0) {
@@ -1309,10 +1169,12 @@ async function func636(this: any) {
                 return;
             }
         }
+        // No = 135 共鳴で2回攻撃
         if (Gvar.sympathy_id == 135 && Gvar.var_341 == 1 && Gvar.var_83[Gvar.var_314].Var0 > 0 && Gvar.var_2924 == 0 && Gvar.var_2965 == 0) {
             Gvar.var_2966 = Gvar.var_83[Gvar.var_314].Var1;
             Gvar.var_2967 = Gvar.var_83[Gvar.var_314].Var2;
-            if (Gvar.var_82[Gvar.var_2966][Gvar.var_2967] != 0 && Gvar.to_freeze == 0 && Gvar.var_178 == 0) {
+            if (Gvar.var_82[Gvar.var_2966][Gvar.var_2967] != 0 && Gvar.var_128 == 0 && Gvar.var_178 == 0) {
+                // No = 101 シルバーチャリオッツ
                 if (Gvar.kougeki_disc_id  == 101) {
                     Gvar.var_341 = 2;
                     Gvar.var_243 = 1;
@@ -1320,6 +1182,7 @@ async function func636(this: any) {
                     await Func.func636(); // ディアボロが攻撃or話しかけた時の動作処理
                     return;
                 }
+                // No = 122 アヌビス神
                 if (Gvar.kougeki_disc_id  == 122) {
                     Gvar.var_341 = 2;
                     Gvar.var_243 = 1;
@@ -1331,6 +1194,7 @@ async function func636(this: any) {
         }
         Gvar.var_2924 = 0;
         Gvar.var_2965 = 0;
+        // No = 122 アヌビス神 かつ No = 101 シルバーチャリオッツを装備している場合
         if (Gvar.kougeki_disc_id  == 122 || Gvar.kougeki_disc_id  == 101) {
             Gvar.kougeki_disc_id  = Gvar.var_2923;
         }
@@ -1340,7 +1204,9 @@ async function func636(this: any) {
         if (Gvar.var_83[Gvar.var_314].Var0 == 164 || Gvar.var_83[Gvar.var_314].Var0 == 165) {
             Gvar.var_83[Gvar.var_314].Var5 = Gvar.var_2942;
         }
-        if (Gvar.equip_disc[120] == 1 && Gvar.var_2926 == 1 && Gvar.to_freeze == 0 && Gvar.var_178 == 0) {
+        // No = 120 ストーンフリーを装備している場合
+        if (Gvar.equip_disc[120] == 1 && Gvar.var_2926 == 1 && Gvar.var_128 == 0 && Gvar.var_178 == 0) {
+            // No = 100 スタープラチナ、またはNo = 398 スタプラ・ザ・ワールド でない場合
             if (Gvar.kougeki_disc_id  != 100 && Gvar.kougeki_disc_id  != 398) {
                 Gvar.var_2926 = 0;
                 await Func.func641();
@@ -1351,6 +1217,7 @@ async function func636(this: any) {
                     return;
                 }
             }
+            // No = 100 スタープラチナ、またはNo = 398 スタプラ・ザ・ワールド である場合
             if (Gvar.kougeki_disc_id  == 100 || Gvar.kougeki_disc_id  == 398) {
                 Gvar.var_2926 = 0;
                 await Func.func642();
@@ -1362,7 +1229,7 @@ async function func636(this: any) {
                 }
             }
         }
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

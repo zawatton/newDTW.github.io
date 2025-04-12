@@ -30,7 +30,7 @@ async function func485(this: any) {
         if (Gvar.var_2123 == 1) {
             Adap.color(255, 255, 255);
     
-            Adap.font("ＭＳ ゴシック", 16, 1);
+            Adap.font("メイリオ", 16, 1);
             Adap.notesel(Gvar.var_754);
             Gvar.var_2145 = 0;
             Gvar.var_2146 = 120;
@@ -48,7 +48,7 @@ async function func485(this: any) {
                 Gvar.var_2146 = Gvar.var_2146 + 20;
             }
     
-            Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+            Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
             Adap.pos(13, Gvar.var_2140 * 20 + 120);
             Adap.mes(">");
             Adap.pos(14, Gvar.var_2140 * 20 + 120);
@@ -79,7 +79,7 @@ async function func485(this: any) {
             Adap.line(165, 331, 191, 331);
             Adap.color(255, 0, 0);
     
-            Adap.font("ＭＳ ゴシック", 16, 1);
+            Adap.font("メイリオ", 16, 1);
             Gvar.var_2149 = Math.floor(Gvar.var_2131 / 10);
             Gvar.var_2150 = Gvar.var_2149 * 10;
             Gvar.var_2149 = Gvar.var_2131 - Gvar.var_2150;
@@ -161,95 +161,95 @@ async function func485(this: any) {
             }
             Adap.pos(Gvar.var_2128, Gvar.var_2129);
             if (Gvar.var_2131 >= 10) {
-                Adap.mes("[　]");
+                Adap.mes("[  ]");
             }
             if (Gvar.var_2131 == 0) {
-                Adap.mes("[　　　　]");
+                Adap.mes("[        ]");
             }
             if (Gvar.var_2131 == 1) {
-                Adap.mes("[　　]");
+                Adap.mes("[    ]");
             }
             if (Gvar.var_2131 == 2) {
-                Adap.mes("[　　　]");
+                Adap.mes("[      ]");
             }
             if (Gvar.var_2131 == 3) {
-                Adap.mes("[　　]");
+                Adap.mes("[    ]");
             }
             if (Gvar.var_2131 == 4) {
-                Adap.mes("[　　]");
+                Adap.mes("[    ]");
             }
             Adap.color(255, 255, 255);
     
-            Adap.font("ＭＳ ゴシック", 16, 1);
+            Adap.font("メイリオ", 16, 1);
             if (Gvar.var_2132 == 0) {
                 Adap.pos(Gvar.var_2125, Gvar.var_2126);
-                Adap.mes("全角カナ　消す　やめる　履歴　決定");
+                Adap.mes("全角カナ  消す  やめる  履歴  決定");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 1 + Gvar.var_2126);
                 Adap.mes("");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 2 + Gvar.var_2126);
-                Adap.mes("あ い う え お　　　は ひ ふ へ ほ");
+                Adap.mes("あ い う え お      は ひ ふ へ ほ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 3 + Gvar.var_2126);
-                Adap.mes("か き く け こ　　　ま み む め も");
+                Adap.mes("か き く け こ      ま み む め も");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 4 + Gvar.var_2126);
-                Adap.mes("さ し す せ そ　　　や 　 ゆ 　 よ");
+                Adap.mes("さ し す せ そ      や    ゆ    よ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 5 + Gvar.var_2126);
-                Adap.mes("た ち つ て と　　　ら り る れ ろ");
+                Adap.mes("た ち つ て と      ら り る れ ろ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 6 + Gvar.var_2126);
-                Adap.mes("な に ぬ ね の　　　わ を ん ﾞ  ﾟ ");
+                Adap.mes("な に ぬ ね の      わ を ん ﾞ  ﾟ ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 7 + Gvar.var_2126);
-                Adap.mes("ぁ ぃ ぅ ぇ ぉ　　　ゃ ゅ ょ っ ー");
+                Adap.mes("ぁ ぃ ぅ ぇ ぉ      ゃ ゅ ょ っ ー");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 8 + Gvar.var_2126);
-                Adap.mes("１ ２ ３ ４ ５　　　６ ７ ８ ９ ０");
+                Adap.mes("１ ２ ３ ４ ５      ６ ７ ８ ９ ０");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 9 + Gvar.var_2126);
-                Adap.mes("＋ － ？ ！ ／　　　（ ） ・ ～ 　");
+                Adap.mes("＋ － ？ ！ ／      （ ） ・ ～   ");
             }
             if (Gvar.var_2132 == 1) {
                 Adap.pos(Gvar.var_2125, Gvar.var_2126);
-                Adap.mes("半角カナ　消す　やめる　履歴　決定");
+                Adap.mes("半角カナ  消す  やめる  履歴  決定");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 1 + Gvar.var_2126);
                 Adap.mes("");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 2 + Gvar.var_2126);
-                Adap.mes("ア イ ウ エ オ　　　ハ ヒ フ ヘ ホ");
+                Adap.mes("ア イ ウ エ オ      ハ ヒ フ ヘ ホ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 3 + Gvar.var_2126);
-                Adap.mes("カ キ ク ケ コ　　　マ ミ ム メ モ");
+                Adap.mes("カ キ ク ケ コ      マ ミ ム メ モ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 4 + Gvar.var_2126);
-                Adap.mes("サ シ ス セ ソ　　　ヤ 　 ユ 　 ヨ");
+                Adap.mes("サ シ ス セ ソ      ヤ    ユ    ヨ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 5 + Gvar.var_2126);
-                Adap.mes("タ チ ツ テ ト　　　ラ リ ル レ ロ");
+                Adap.mes("タ チ ツ テ ト      ラ リ ル レ ロ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 6 + Gvar.var_2126);
-                Adap.mes("ナ ニ ヌ ネ ノ　　　ワ ヲ ン ﾞ  ﾟ ");
+                Adap.mes("ナ ニ ヌ ネ ノ      ワ ヲ ン ﾞ  ﾟ ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 7 + Gvar.var_2126);
-                Adap.mes("ァ ィ ゥ ェ ォ　　　ャ ュ ョ ッ ―");
+                Adap.mes("ァ ィ ゥ ェ ォ      ャ ュ ョ ッ ―");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 8 + Gvar.var_2126);
-                Adap.mes("１ ２ ３ ４ ５　　　６ ７ ８ ９ ０");
+                Adap.mes("１ ２ ３ ４ ５      ６ ７ ８ ９ ０");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 9 + Gvar.var_2126);
-                Adap.mes("＋ － ？ ！ ／　　　（ ） ・ ～ 　");
+                Adap.mes("＋ － ？ ！ ／      （ ） ・ ～   ");
             }
             if (Gvar.var_2132 == 2) {
                 Adap.pos(Gvar.var_2125, Gvar.var_2126);
-                Adap.mes("全角かな　消す　やめる　履歴　決定");
+                Adap.mes("全角かな  消す  やめる  履歴  決定");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 1 + Gvar.var_2126);
                 Adap.mes("");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 2 + Gvar.var_2126);
-                Adap.mes("ｱ  ｲ  ｳ  ｴ  ｵ 　　　ﾊ  ﾋ  ﾌ  ﾍ  ﾎ");
+                Adap.mes("ｱ  ｲ  ｳ  ｴ  ｵ       ﾊ  ﾋ  ﾌ  ﾍ  ﾎ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 3 + Gvar.var_2126);
-                Adap.mes("ｶ  ｷ  ｸ  ｹ  ｺ 　　　ﾏ  ﾐ  ﾑ  ﾒ  ﾓ");
+                Adap.mes("ｶ  ｷ  ｸ  ｹ  ｺ       ﾏ  ﾐ  ﾑ  ﾒ  ﾓ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 4 + Gvar.var_2126);
-                Adap.mes("ｻ  ｼ  ｽ  ｾ  ｿ 　　　ﾔ 　  ﾕ 　  ﾖ");
+                Adap.mes("ｻ  ｼ  ｽ  ｾ  ｿ       ﾔ     ﾕ     ﾖ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 5 + Gvar.var_2126);
-                Adap.mes("ﾀ  ﾁ  ﾂ  ﾃ  ﾄ 　　　ﾗ  ﾘ  ﾙ  ﾚ  ﾛ");
+                Adap.mes("ﾀ  ﾁ  ﾂ  ﾃ  ﾄ       ﾗ  ﾘ  ﾙ  ﾚ  ﾛ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 6 + Gvar.var_2126);
-                Adap.mes("ﾅ  ﾆ  ﾇ  ﾈ  ﾉ 　　　ﾜ  ｦ  ﾝ ﾞ  ﾟ ");
+                Adap.mes("ﾅ  ﾆ  ﾇ  ﾈ  ﾉ       ﾜ  ｦ  ﾝ ﾞ  ﾟ ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 7 + Gvar.var_2126);
-                Adap.mes("ｧ  ｨ  ｩ  ｪ  ｫ 　　　ｬ  ｭ  ｮ  ｯ  ｰ");
+                Adap.mes("ｧ  ｨ  ｩ  ｪ  ｫ       ｬ  ｭ  ｮ  ｯ  ｰ");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 8 + Gvar.var_2126);
-                Adap.mes("1  2  3  4  5 　　　6  7  8  9  0");
+                Adap.mes("1  2  3  4  5       6  7  8  9  0");
                 Adap.pos(Gvar.var_2125, Gvar.var_2127 * 9 + Gvar.var_2126);
-                Adap.mes("+  -  ?  !  / 　　　(  )  ･  ~ 　");
+                Adap.mes("+  -  ?  !  /       (  )  ･  ~   ");
             }
         }
 
-        Adap.font("ＭＳ ゴシック", 18, 1);
+        Adap.font("メイリオ", 18, 1);
         Gvar.var_2151 = 0;
         Gvar.var_2152 = 1;
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {

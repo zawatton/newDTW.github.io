@@ -57,7 +57,7 @@ async function func574(this: any) {
                             Gvar.var_2676 = Gvar.var_71[Gvar.var_2677][Gvar.var_2678];
                         }
                     }
-                    Gvar.var_271 = 1;
+                    Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                     Gvar.var_1357 = 1;
                     Gvar.var_748 = (Gvar.var_83[Gvar.var_2694].Var1 - Gvar.var_66 + 4) * 40;
                     Gvar.var_749 = (Gvar.var_83[Gvar.var_2694].Var2 - Gvar.var_67 + 4) * 40 + 20;
@@ -67,24 +67,18 @@ async function func574(this: any) {
                     Gvar.var_411 = 6;
                     Adap.DSPLAY(189);
                     for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_1357 = Gvar.var_1357 + 1;
                     }
                     Gvar.var_1357 = 0;
-                    Gvar.var_271 = 0;
+                    Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                     Gvar.var_411 = 7;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_411 = 8;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_411 = 0;
                     Gvar.var_83[Gvar.var_2694].Var21 = 0;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_2705 = Gvar.var_83[Gvar.var_2694].Var1;
                     Gvar.var_2706 = Gvar.var_83[Gvar.var_2694].Var2;
                     if (Gvar.var_66 < Gvar.var_2705 && Gvar.var_67 > Gvar.var_2706) {
@@ -111,28 +105,26 @@ async function func574(this: any) {
                     if (Gvar.var_67 == Gvar.var_2706 && Gvar.var_66 > Gvar.var_2705) {
                         Gvar.var_83[Gvar.var_2694].Var5 = 6;
                     }
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                 }
                 // 瞬間移動後の画像処理
                 if (Gvar.var_83[Gvar.var_2694].Var0 == 3) { // Gvar.enemy_list = 3 タワーオブグレー
                     Gvar.var_83[Gvar.var_2694].Var11 = 0;
-                    Gvar.var_271 = 1;
+                    Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                     Gvar.var_1306 = 1;
                     Gvar.var_1286 = (Gvar.var_83[Gvar.var_2694].Var1 - Gvar.var_66 + 4) * 40;
                     Gvar.var_1287 = (Gvar.var_83[Gvar.var_2694].Var2 - Gvar.var_67 + 4) * 40 - 50;
                     Adap.DSPLAY(190);
                     for (let cnt4 = 0; cnt4 < 5; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_1306 = Gvar.var_1306 + 1;
                     }
                     Gvar.var_1306 = 0;
-                    Gvar.var_271 = 0;
+                    Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                 }
                 if (Gvar.var_83[Gvar.var_2694].Var0 == 48) {
                     Gvar.var_83[Gvar.var_2694].Var11 = 0;
-                    Gvar.var_271 = 1;
+                    Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                     Gvar.var_1307 = 1;
                     Gvar.var_1308 = Adap.rnd(2);
                     Gvar.var_1308++;
@@ -140,16 +132,16 @@ async function func574(this: any) {
                     Gvar.var_1287 = (Gvar.var_83[Gvar.var_2694].Var2 - Gvar.var_67 + 4) * 40 - 50;
                     Adap.DSPLAY(191);
                     for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_1307 = Gvar.var_1307 + 1;
                     }
                     Gvar.var_1307 = 0;
-                    Gvar.var_271 = 0;
+                    Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                 }
                 if (Gvar.var_83[Gvar.var_2694].Var0 == 15) {
                     Gvar.var_83[Gvar.var_2694].Var11 = 1;
                     if (Gvar.var_127 == 0 && Gvar.var_83[Gvar.var_2694].Var30 == 0) {
-                        Gvar.var_271 = 1;
+                        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                     }
                     Gvar.var_1453 = 1;
                     Adap.DSPLAY(219);
@@ -157,15 +149,15 @@ async function func574(this: any) {
                     Gvar.var_1287 = (Gvar.var_83[Gvar.var_2694].Var2 - Gvar.var_67 + 4) * 40 - 10;
                     Adap.DSPLAY(191);
                     for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_1453 = Gvar.var_1453 + 1;
                     }
                     Gvar.var_1453 = 0;
-                    Gvar.var_271 = 0;
+                    Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                     Gvar.var_83[Gvar.var_2694].Var11 = 0;
                 }
                 if (Gvar.var_83[Gvar.var_2694].Var0 == 115 || Gvar.var_83[Gvar.var_2694].Var0 == 27 || Gvar.var_83[Gvar.var_2694].Var0 == 18 || Gvar.var_83[Gvar.var_2694].Var0 == 86 || Gvar.var_83[Gvar.var_2694].Var0 == 44) {
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     Gvar.var_83[Gvar.var_2694].Var11 = 0;
                     if (Gvar.var_83[Gvar.var_2694].Var0 == 115) {
                         Adap.DSPLAY(183);
@@ -183,15 +175,15 @@ async function func574(this: any) {
                     }
                     Gvar.var_83[Gvar.var_2694].Var21 = 1;
                     Gvar.var_411 = 1;
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     Gvar.var_411 = 2;
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     Gvar.var_411 = 3;
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     Gvar.var_411 = 4;
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     Gvar.var_411 = 5;
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     Gvar.var_411 = 0;
                     Gvar.var_83[Gvar.var_2694].Var21 = 0;
                 }
@@ -204,9 +196,7 @@ async function func574(this: any) {
                     if (Gvar.var_83[Gvar.var_2694].Var0 == 65) {
                         Adap.DSPLAY(230);
                     }
-                    for (let cnt4 = 0; cnt4 < 10; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(10);
                     Gvar.var_83[Gvar.var_2694].Var21 = 0;
                     Gvar.var_411 = 0;
                 }
@@ -215,13 +205,13 @@ async function func574(this: any) {
                     Adap.DSPLAY(229);
                     for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
                         Gvar.var_411 = 1;
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_411 = 2;
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_411 = 1;
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                         Gvar.var_411 = 3;
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                     }
                     Gvar.var_768 = 1;
                     Gvar.var_1728 = 1;
@@ -241,17 +231,13 @@ async function func574(this: any) {
                 if (Gvar.var_83[Gvar.var_2694].Var0 == 148) {
                     Gvar.var_83[Gvar.var_2694].Var21 = 1;
                     Gvar.var_411 = 1;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Adap.DSPLAY(231);
                     Gvar.var_411 = 2;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_411 = 3;
                     for (let cnt4 = 0; cnt4 < 5; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
+                        await Func.func337(); // メッセージ表示処理(自動)
                     }
                     Gvar.var_768 = 1;
                     Gvar.var_1728 = 1;
@@ -267,17 +253,11 @@ async function func574(this: any) {
                     Gvar.var_1728 = 0;
                     Gvar.var_2425 = 0;
                     Gvar.var_411 = 4;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_411 = 5;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_411 = 4;
-                    for (let cnt4 = 0; cnt4 < 2; ++cnt4) {
-                        await Func.func337(); // メッセージ関係呼び出し
-                    }
+                    await Func.AutoDraw(2);
                     Gvar.var_83[Gvar.var_2694].Var21 = 0;
                     Gvar.var_411 = 0;
                 }

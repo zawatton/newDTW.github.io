@@ -1,13 +1,12 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Map from '../map/index'
 
 async function func246(this: any) {
         Adap.dbgprt(246);
         Gvar.var_95 = 0;
         Gvar.var_994 = 0;
-        await Map.func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
+        await Func.func293(); // ダンジョンマップ初期化処理(+ヴェネチアホテル)
         Gvar.var_1052 = 0;
         Gvar.var_96 = 0;
         Gvar.var_1052 = Adap.rnd(6);

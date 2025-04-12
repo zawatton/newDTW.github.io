@@ -21,7 +21,7 @@ async function func197(this: any) {
         Adap.pset(110, 218 + Gvar.var_907);
         Adap.pset(304, 218 + Gvar.var_907);
 
-        Adap.font("ＭＳ　Ｐゴシック", 16, 1);
+        Adap.font(Gvar.font_type, 16, 1);
         Adap.color(255, 255, 255);
         if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1) {
             Adap.color(150, 150, 150);
@@ -48,19 +48,19 @@ async function func197(this: any) {
             Adap.color(150, 150, 150); //灰色
         }
         Adap.pos(265, 90);
-        if (Gvar.var_686 == 30) {
+        if (Gvar.animationDelay == 30) {
             Adap.mes("超速");
         }
-        if (Gvar.var_686 == 40) {
+        if (Gvar.animationDelay == 40) {
             Adap.mes("速い");
         }
-        if (Gvar.var_686 == 50) {
+        if (Gvar.animationDelay == 50) {
             Adap.mes("標準");
         }
-        if (Gvar.var_686 == 60) {
+        if (Gvar.animationDelay == 60) {
             Adap.mes("遅い");
         }
-        if (Gvar.var_686 == 70) {
+        if (Gvar.animationDelay == 70) {
             Adap.mes("超遅");
         }
         Adap.color(255, 255, 255);

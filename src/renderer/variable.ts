@@ -1,5 +1,8 @@
 export interface GlobalVars {
     isColorPickerShown: boolean, // カラーピッカーが表示されているかどうかのフラグ
+    desiredWidth?: number, // index.html に記述。F12でスケール変更
+    desiredHeight?: number, // index.html に記述。F12でスケール変更
+    currentScale: number,
     var_25_x: any,
     var_26_x: any,
     var_27_x: any,
@@ -51,9 +54,9 @@ export interface GlobalVars {
     length2: number,
     length3: number,
     length4: number,
-    font_type: any,
-    font_size: any,
-    font_style: any,
+    font_type: string,
+    font_size: number,
+    font_style: number,
     mode: any,
     data0: any,
     data1: any,
@@ -77,7 +80,7 @@ export interface GlobalVars {
     var_9 :any,
     var_10 :any,
     var_11 :any,
-    var_12 :any, //
+    var_12 :any, // デバッグフラグ？？
     version_number :string, // 起動時、画面下に表示されるバージョン名
     game_title :string, // ウィンドウタイトルに表示される名前
     var_15 :any,
@@ -193,7 +196,7 @@ export interface GlobalVars {
     var_125 :any,
     var_126 :any,
     var_127 :number, // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグ
-    to_freeze :number,// 氷状態になった時のフラグ
+    var_128 :any,
     var_129 :any,
     var_130 :any,
     var_131 :any,
@@ -216,7 +219,7 @@ export interface GlobalVars {
     var_148 :any,
     var_149 :any,
     var_150 :any,
-    var_151 :number, // 敵時止め経過ターン
+    time_paused_count :number, // 敵時止め経過ターン
     var_152 :any,
     var_153 :any,
     var_154 :any,
@@ -228,7 +231,7 @@ export interface GlobalVars {
     var_160 :any,
     var_161 :any,
     var_162 :any,
-    var_163 :any,
+    time_paused:any,
     var_164 :number, // 時止め経過時のターン数？
     var_165 :number, // 現フロアに出現する敵の増加数。0 = 増えない。
     var_166 :any,
@@ -341,7 +344,7 @@ export interface GlobalVars {
     var_268 :any,
     var_269 :any,
     sympathy_id :number, // 装備discの組み合わせにより発動する共鳴効果。そのID list
-    var_271 :any,
+    var_271 :number, // エフェクト "キラキラ" 表示フラグ
     var_272 :any,
     var_273 :any,
     var_274 :any,
@@ -369,7 +372,7 @@ export interface GlobalVars {
     comments_row1a :string,
     comments_row2a :string,
     var_298 :any,
-    var_299 :any,
+    animationStep :number, // 0 から 5 まで変化しアニメーションステップや描画の段階を示す変数
     var_300 :any,
     var_301 :any,
     var_302 :any,
@@ -566,7 +569,7 @@ export interface GlobalVars {
     var_493 :any,
     var_494 :any,
     var_495 :any,
-    var_496 :any,
+    animationOffset :number, // 変数 animationStep の値に応じた描画オフセット
     var_497 :any,
     var_498 :any,
     var_499 :number, // Mフラグ:設定画面 Func.func056
@@ -756,7 +759,7 @@ export interface GlobalVars {
     var_683 :any,
     var_684 :any,
     var_685 :any,
-    var_686 :any,
+    animationDelay :number, // 待機時間(ミリ秒 or フレーム間隔?)。全体の描画フレーム速度を調整するための変数
     var_687 :any,
     var_688 :any,
     var_689 :any,
@@ -835,7 +838,7 @@ export interface GlobalVars {
     var_762 :any,
     var_763 :any,
     var_764 :any,
-    var_765 :any,
+    var_765 :number, // メッセージ自動送りキャンセルフラグ
     var_766 :any,
     var_767 :any,
     var_768 :any,
@@ -3701,6 +3704,9 @@ export interface GlobalVars {
 
 export let Gvar: GlobalVars = {
     isColorPickerShown: false,  // カラーピッカーが表示されているかどうかのフラグ
+    desiredWidth: 0,
+    desiredHeight: 0,
+    currentScale: 0,
     var_25_x: 0,
     var_26_x: 0,
     var_27_x: 0,
@@ -3752,7 +3758,7 @@ export let Gvar: GlobalVars = {
     length2: 0,
     length3: 0,
     length4: 0,
-    font_type: 0,
+    font_type: null,
     font_size: 0,
     font_style: 0,
     mode: 0,
@@ -3894,7 +3900,7 @@ export let Gvar: GlobalVars = {
     var_125: 0,
     var_126: 0,
     var_127: 0, // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグ
-    to_freeze: 0, // 氷状態になった時のフラグ
+    var_128: 0,
     var_129: 0,
     var_130: 0,
     var_131: 0,
@@ -3917,7 +3923,7 @@ export let Gvar: GlobalVars = {
     var_148: 0,
     var_149: 0,
     var_150: 0,
-    var_151: 0, // 敵時止め経過ターン
+    time_paused_count: 0, // 敵時止め経過ターン
     var_152: 0,
     var_153: 0,
     var_154: 0,
@@ -3929,7 +3935,7 @@ export let Gvar: GlobalVars = {
     var_160: 0,
     var_161: 0,
     var_162: 0,
-    var_163: 0,
+    time_paused: 0, // 時止め(時消し飛ばし)状態フラグ
     var_164: 0, // 時止め経過時のターン数？
     var_165: 0, // 現フロアに出現する敵の増加数。0: 増えない。
     var_166: 0,
@@ -4042,7 +4048,7 @@ export let Gvar: GlobalVars = {
     var_268: 0,
     var_269: 0,
     sympathy_id: 0, // 装備discの組み合わせにより発動する共鳴効果。そのID list
-    var_271: 0,
+    var_271: 0, // エフェクト "キラキラ" 表示フラグ
     var_272: 0,
     var_273: 0,
     var_274: 0,
@@ -4070,7 +4076,7 @@ export let Gvar: GlobalVars = {
     comments_row1a: null,
     comments_row2a: null,
     var_298: 0,
-    var_299: 0,
+    animationStep: 0,
     var_300: 0,
     var_301: 0,
     var_302: 0,
@@ -4267,7 +4273,7 @@ export let Gvar: GlobalVars = {
     var_493: 0,
     var_494: 0,
     var_495: 0,
-    var_496: 0,
+    animationOffset: 0,
     var_497: 0,
     var_498: 0,
     var_499: 0, // Mフラグ:設定画面 Func.func056
@@ -4457,7 +4463,7 @@ export let Gvar: GlobalVars = {
     var_683: 0,
     var_684: 0,
     var_685: 0,
-    var_686: 0,
+    animationDelay: 0,
     var_687: 0,
     var_688: 0,
     var_689: 0,

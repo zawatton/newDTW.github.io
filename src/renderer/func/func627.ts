@@ -1,30 +1,29 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Dung from '../dungeon/index'
 
 async function func627(this: any) {
         Adap.dbgprt(627);
         Gvar.var_977 = Adap.dim(20);
         // No = 1 なので、ホテルの外
         if (Gvar.dungeon_number == 1) {
-            await Dung.func628(); // ホテルの外のボス以外の出現敵設定
+            await Func.func628(); // ホテルの外のボス以外の出現敵設定
         }
         // No = 2 なので、レクイエムの大迷宮
         if (Gvar.dungeon_number == 2) {
-            await Dung.func629(); // レクイエムの大迷宮のボス以外の出現敵設定
+            await Func.func629(); // レクイエムの大迷宮のボス以外の出現敵設定
         }
         // No = 3 なので、ディアボロの試練
         if (Gvar.dungeon_number == 3) {
-            await Dung.func630(); // ディアボロの試練のボス以外の出現敵設定
+            await Func.func630(); // ディアボロの試練のボス以外の出現敵設定
         }
         // No = 4 なので、一巡後の世界
         if (Gvar.dungeon_number == 4) {
-            await Dung.func634(); // 一巡後の世界のボス以外の出現敵設定
+            await Func.func634(); // 一巡後の世界のボス以外の出現敵設定
         }
         // No = 5 なので、鉄獄(鉄の牢獄)
         if (Gvar.dungeon_number == 5) {
-            await Dung.func631(); // 鉄の牢獄のボス以外の出現敵設定
+            await Func.func631(); // 鉄の牢獄のボス以外の出現敵設定
         }
         if (Gvar.special_floor == 1) { // 虹村屋敷
             Gvar.var_977 = [40, 41, 42, 54, 47, 79];

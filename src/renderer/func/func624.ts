@@ -85,24 +85,24 @@ async function func624(this: any) {
             Gvar.var_1367 = 2;
             Gvar.var_1369 = Gvar.var_2905 - Gvar.var_66 + 4;
             Gvar.var_1370 = Gvar.var_2906 - Gvar.var_67 + 4;
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1373 = 1;
             Gvar.var_1371 = 1;
     
             Adap.DSPLAY(156);
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1373 = 0;
             Gvar.var_440 = Gvar.var_2912;
             Gvar.var_441 = Gvar.var_2913;
             Gvar.var_2499 = Gvar.var_2914;
-            await Func.func556(); // 敵をフロアへ出現させる処理
+            await Func.func556();
             Gvar.var_1371 = 0;
             Gvar.var_1374 = 0;
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
         }
         Gvar.var_1371 = 0;

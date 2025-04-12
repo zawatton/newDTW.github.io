@@ -54,7 +54,7 @@ async function func861(this: any) {
         if (Gvar.var_3266 == 0) {
 
             Adap.pos(Gvar.mousex + 3, Gvar.mousey + 20 + 10 - 5);
-            Adap.font("ＭＳ Ｐゴシック", 11);
+            Adap.font(Gvar.font_type, 11);
             Adap.color(255, 255, 255);
             if (Gvar.var_3270 < 10) {
                 Adap.mes("部屋 " + Gvar.var_3270);
@@ -66,21 +66,21 @@ async function func861(this: any) {
         if (Gvar.var_3266 == 1) {
 
             Adap.pos(Gvar.mousex + 3, Gvar.mousey + 20 + 10 - 5);
-            Adap.font("ＭＳ Ｐゴシック", 11);
+            Adap.font(Gvar.font_type, 11);
             Adap.color(255, 255, 255);
             Adap.mes("通路");
         }
         if (Gvar.var_3266 == 2) {
 
             Adap.pos(Gvar.mousex + 3, Gvar.mousey + 20 + 10 - 5);
-            Adap.font("ＭＳ Ｐゴシック", 11);
+            Adap.font(Gvar.font_type, 11);
             Adap.color(255, 255, 255);
             Adap.mes("壁");
         }
         if (Gvar.var_3266 == 3) {
 
             Adap.pos(Gvar.mousex + 3, Gvar.mousey + 20 + 10 - 5);
-            Adap.font("ＭＳ Ｐゴシック", 11);
+            Adap.font(Gvar.font_type, 11);
             Adap.color(255, 255, 255);
             Adap.mes("水");
         }

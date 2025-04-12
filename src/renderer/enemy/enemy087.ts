@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 // No = 87 エシディシの特殊能力
 async function enemy087(this: any) {
@@ -28,89 +27,42 @@ async function enemy087(this: any) {
         if (Gvar.var_474 == 0) {
             return;
         }
-        await Func.func094(); // メッセージ送りの際の効果音
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "くらってくたばれ";
-        Gvar.comments_row2 = "「怪焔王」の流法！！";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-        await Func.func047();
-        for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.setMessage1("くらってくたばれ", "「怪焔王」の流法！！", 8, false, false, true);
+        await Func.AutoDraw(5);
         Gvar.var_742 = 1;
         Gvar.var_83[Gvar.var_412].Var7 = 1;
         Gvar.var_83[Gvar.var_412].Var21 = 1;
         Gvar.var_411 = 1;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_411 = 2;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_411 = 3;
         Adap.DSPLAY(128);
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         for (let cnt2 = 0; cnt2 < 6; ++cnt2) {
             Gvar.var_389 = 1;
             Gvar.var_1305++;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_389 = 3;
             Gvar.var_1305++;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         Gvar.var_411 = 0;
         Gvar.var_83[Gvar.var_412].Var21 = 0;
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1305 = 0;
         Gvar.var_389 = 0;
         Gvar.var_83[Gvar.var_412].Var7 = 0;
         Gvar.var_742 = 0;
         if (Gvar.var_173 == 1) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "燃やす攻撃に強くなっていて平気だった";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("燃やす攻撃に強くなっていて平気だった", "", 7, false, false, false);
+            await Func.AutoDraw(10);
             Gvar.var_2197 = 1;
             return;
         }
         if (Gvar.nouryoku_disc_id == 109) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "装備DISCの効果で燃やされなかった";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("装備DISCの効果で燃やされなかった", "", 7, false, false, false);
+            await Func.AutoDraw(10);
             Gvar.var_2197 = 1;
             return;
         }
@@ -132,27 +84,11 @@ async function enemy087(this: any) {
             Gvar.var_233[Gvar.var_475]["Var" + cnt2] = 0;
         }
         Gvar.var_233[Gvar.var_475].Var0 = 641;
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "" + Gvar.target_item_name + "は";
-        Gvar.comments_row2 = "消し炭になった！";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-        await Func.func047();
-        if (Gvar.to_freeze >= 1) {
-            await Main.func023();
+        await Func.setMessage1("" + Gvar.target_item_name + "は", "消し炭になった！", 8, false, false, false);
+        if (Gvar.var_128 >= 1) {
+            await Func.func023();
         }
-        for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(10);
         Gvar.var_2197 = 1;
         return;
 }

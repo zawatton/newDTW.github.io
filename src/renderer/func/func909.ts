@@ -195,14 +195,14 @@ async function func909(this: any) {
             }
     
             Adap.DSPLAY(107);
-            Gvar.var_271 = 1;
+            Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1511 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1511++;
             }
             Gvar.var_1511 = 0;
-            Gvar.var_271 = 0;
+            Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_77[Gvar.var_1512][Gvar.var_1513] = Gvar.var_2171;
             Gvar.var_731 = 0;
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {

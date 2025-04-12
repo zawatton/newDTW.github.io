@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
-import * as Func from '../func/index'
-import * as Dung from '../dungeon/index'
+import * as Func from './index'
 
 async function func324(this: any) {
         Adap.dbgprt(324);
@@ -89,6 +88,7 @@ async function func324(this: any) {
                     Gvar.var_1151 = Gvar.var_763 * Gvar.var_36 - Gvar.var_778 + Gvar.var_1145;
                 }
                 Adap.pos(Gvar.var_1150, Gvar.var_1151);
+                // 床の描写
                 if (Gvar.var_71[Gvar.var_447][Gvar.var_449] != 0 && Gvar.var_71[Gvar.var_447][Gvar.var_449] <= 12) {
                     if (Gvar.var_87[Gvar.var_447][Gvar.var_449] <= 4) {
                         Adap.gcopy(5, 0, Gvar.y_axis_map_image * 40, 40, 40);
@@ -140,6 +140,7 @@ async function func324(this: any) {
                     if (Gvar.var_346[9][1] == Gvar.var_447 && Gvar.var_346[9][2] == Gvar.var_449) {
                         Gvar.var_1152 = 1;
                     }
+                    // "img_mychara.gif" の5行目の右側にある土塊
                     if (Gvar.var_1152 == 1) {
                         if (Gvar.var_349 == 1) {
                             Adap.gcopy(3, 1320, 160, 40, 40);
@@ -158,6 +159,7 @@ async function func324(this: any) {
                         }
                     }
                 }
+                // 壁の描写 (明るい箇所と暗い箇所両方)
                 if (Gvar.var_71[Gvar.var_447][Gvar.var_449] == 0) {
                     if (Gvar.var_87[Gvar.var_447][Gvar.var_449] <= 5) {
                         Adap.gcopy(5, 240, Gvar.y_axis_map_image * 40, 40, 40);
@@ -365,45 +367,18 @@ async function func324(this: any) {
         }
         // Ver0.1403にて修正。
         if (Gvar.var_262 == 1 && Gvar.var_595 != 2) { // Gvar.var_262 == 1 なので、Gvar.dungeon_number = 0 であれば
-            await Dung.func163(); // ヴェネチアホテルのアイテム配置
+            await Func.func163(); // ヴェネチアホテルのアイテム配置
         }
         // Ver0.1403にて追加。
         if (Gvar.var_262 == 1 && Gvar.var_595 == 2) { // Gvar.var_262 == 1 なので、Gvar.dungeon_number = 0 であれば
-            await Dung.func163b(); // 酒場の配置(マップ読み込み)
+            await Func.func163b(); // 酒場の配置(マップ読み込み)
         }
         if (Gvar.special_floor == 9) { // 幽霊部屋
             await Func.func164(); // 幽霊部屋の配置(マップ読み込み)
         }
-        Adap.gsel(36);
-        if (Gvar.var_163 == 0 && Gvar.var_151 == 0) {
-            Gvar.var_1154 = 0;
-            for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
-                Gvar.var_1155 = 0;
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    Adap.pos(Gvar.var_1155, Gvar.var_1154);
-                    Adap.gcopy(0, Gvar.var_1155, Gvar.var_1154, 40, 40);
-                    Gvar.var_1155 = Gvar.var_1155 + 40;
-                }
-                Gvar.var_1154 = Gvar.var_1154 + 40;
-            }
-            Adap.gsel(0);
-            return;
-        }
-        if (Gvar.var_163 == 1 || Gvar.var_151 >= 1) {
-            Gvar.var_1154 = 0;
-            for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
-                Gvar.var_1155 = 0;
-                for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    Adap.pos(Gvar.var_1155, Gvar.var_1154);
-                    Adap.gcopy(24, Gvar.var_1155, Gvar.var_1154, 40, 40);
-                    Gvar.var_1155 = Gvar.var_1155 + 40;
-                }
-                Gvar.var_1154 = Gvar.var_1154 + 40;
-            }
-            Adap.gsel(24);
-            return;
-        }
+
         return;
 }
 
 export {func324}
+  

@@ -44,14 +44,13 @@ async function func344(this: any) {
             }
         }
         Adap.color(0, 0, 0);
-
         Adap.gmode(4, null, null, 100);
         if (Gvar.var_71[Gvar.var_66][Gvar.var_67] != 13 && Gvar.var_71[Gvar.var_66][Gvar.var_67] != 0 && Gvar.var_1238 == 0 && Gvar.var_159 == 0) {
-            Adap.gcopy(3, 1560, 0, 40, 45);
+            Adap.gcopy(3, 1560, 0, 40, 45); // "img_mychara.gif" の1行目の一番右側にあるディアボロの影(黒い丸)
         }
         if (Gvar.var_1238 > 0) {
             if (Gvar.var_1238 < 5 || Gvar.var_1238 > 83) {
-                Adap.gcopy(3, 1560, 0, 40, 45);
+                Adap.gcopy(3, 1560, 0, 40, 45); // "img_mychara.gif" の1行目の一番右側にあるディアボロの影(黒い丸)
             }
         }
         if (Gvar.var_71[Gvar.var_66][Gvar.var_67] == 13) {

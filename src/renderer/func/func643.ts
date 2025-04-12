@@ -185,16 +185,16 @@ async function func643(this: any) {
         Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
 
         Adap.DSPLAY(121);
-        // await Func.func337(); // メッセージ関係呼び出し
-        await Func.func337(); // メッセージ関係呼び出し
+        // await Func.func337(); // メッセージ表示処理(自動)
+        await Func.func337(); // メッセージ表示処理(自動)
 
         Adap.DSPLAY(121);
-        // await Func.func337(); // メッセージ関係呼び出し
-        await Func.func337(); // メッセージ関係呼び出し
+        // await Func.func337(); // メッセージ表示処理(自動)
+        await Func.func337(); // メッセージ表示処理(自動)
 
         Adap.DSPLAY(121);
-        // await Func.func337(); // メッセージ関係呼び出し
-        await Func.func337(); // メッセージ関係呼び出し
+        // await Func.func337(); // メッセージ表示処理(自動)
+        await Func.func337(); // メッセージ表示処理(自動)
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             if (Gvar.var_199 == 4) {
                 if (Gvar.var_82[Gvar.var_2928][Gvar.var_2931] > 0 && Gvar.var_71[Gvar.var_2928][Gvar.var_2931] != 0 && Gvar.var_2981 == 0) {
@@ -209,7 +209,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -226,7 +226,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -259,7 +259,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -276,7 +276,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -309,7 +309,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -326,7 +326,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -359,7 +359,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -376,7 +376,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -409,7 +409,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -426,7 +426,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -459,7 +459,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -476,7 +476,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -509,7 +509,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -526,7 +526,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -559,7 +559,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }
@@ -576,7 +576,7 @@ async function func643(this: any) {
                             await Func.func638();
                             await Func.func705();
                             for (let cnt6 = 0; cnt6 < 3; ++cnt6) {
-                                await Func.func337(); // メッセージ関係呼び出し
+                                await Func.func337(); // メッセージ表示処理(自動)
                             }
                         }
                     }

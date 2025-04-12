@@ -1,30 +1,14 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 // No = 410 不明disc(没ハイウェイスター。かつては射撃discだった?)の発動処理
 async function item410(this: any) {
         if (Gvar.var_73[Gvar.var_66][Gvar.var_67] != 0 || Gvar.var_80[Gvar.var_66][Gvar.var_67] != 0 || Gvar.var_77[Gvar.var_66][Gvar.var_67] != 0) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "ここには潜ませられない。";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.setMessage1("ここには潜ませられない。",
+                                   "", 7, false, false, false);
+            await Func.AutoDraw(5);
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         Gvar.var_337 = Gvar.var_337 + 1;
@@ -35,25 +19,11 @@ async function item410(this: any) {
         Gvar.var_81[Gvar.var_2330][2] = Gvar.var_67;
         Gvar.var_81[Gvar.var_2330][4] = 1;
         Gvar.var_81[Gvar.var_2330][5] = Gvar.var_201;
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "ﾊｲｳｪｲ･ｽﾀｰを潜ませた。";
-        Gvar.comments_row2 = "";
+
         Adap.DSPLAY(165);
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
-        for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.setMessage1("ﾊｲｳｪｲ･ｽﾀｰを潜ませた。",
+                               "", 7, false, false, false);
+        await Func.AutoDraw(5);
         Gvar.belongings_item_list = Gvar.activated_disc_id;
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (Gvar.var_2254 == 1) {
@@ -61,7 +31,7 @@ async function item410(this: any) {
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

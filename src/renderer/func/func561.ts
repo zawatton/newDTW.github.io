@@ -6,7 +6,7 @@ async function func561(this: any) {
         Adap.dbgprt(561);
         Gvar.var_1728 = 1;
         for (let cnt1 = 0; cnt1 < 20; ++cnt1) {
-            await Func.func556(); // 敵をフロアへ出現させる処理
+            await Func.func556();
         }
         Gvar.var_1728 = 0;
         return;

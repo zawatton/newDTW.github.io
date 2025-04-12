@@ -21,19 +21,19 @@ async function func360(this: any) {
         Adap.pset(15 + Gvar.var_1629, 135 + Gvar.var_1627 + Gvar.var_1630);
         Adap.pset(221 + Gvar.var_1628 + Gvar.var_1629, 135 + Gvar.var_1627 + Gvar.var_1630);
 
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         Adap.color(255, 255, 255);
         Adap.pos(33 + Gvar.var_1629, 47 + Gvar.var_1630);
-        Adap.mes("第一部　ﾌｧﾝﾄﾑ･ﾌﾞﾗｯﾄﾞ");
-        Adap.mes("第二部　戦闘潮流");
-        Adap.mes("第三部　ｽﾀｰﾀﾞｽﾄ･ｸﾙｾｲﾀﾞｰｽ");
-        Adap.mes("第四部　ﾀﾞｲﾔﾓﾝﾄﾞは砕けない");
-        Adap.mes("第五部　黄金の風");
-        Adap.mes("第六部　ｽﾄｰﾝ･ｵｰｼｬﾝ");
+        Adap.mes("第一部  ﾌｧﾝﾄﾑ･ﾌﾞﾗｯﾄﾞ");
+        Adap.mes("第二部  戦闘潮流");
+        Adap.mes("第三部  ｽﾀｰﾀﾞｽﾄ･ｸﾙｾｲﾀﾞｰｽ");
+        Adap.mes("第四部  ﾀﾞｲﾔﾓﾝﾄﾞは砕けない");
+        Adap.mes("第五部  黄金の風");
+        Adap.mes("第六部  ｽﾄｰﾝ･ｵｰｼｬﾝ");
         Adap.mes("その他");
         Adap.color(255, 255, 255);
 
-        Adap.font("MS ゴシック", 16, 1);
+        Adap.font(Gvar.font_type, 16, 1);
         Adap.pos(Gvar.var_1611 + Gvar.var_1629, Gvar.var_1612 + Gvar.var_1630);
         Adap.mes(">");
         Adap.pos(Gvar.var_1611 + 1 + Gvar.var_1629, Gvar.var_1612 + Gvar.var_1630);
@@ -64,7 +64,7 @@ async function func360(this: any) {
             Adap.pos(Gvar.var_1631 + 10, Gvar.var_1632 + 5);
             Adap.color(255, 0, 0);
     
-            Adap.font("ＭＳ Ｐゴシック", 14, 1);
+            Adap.font(Gvar.font_type, 14, 1);
             Adap.mes("登録されているキャラクターがいません");
         }
         return;

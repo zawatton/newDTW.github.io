@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+ // 幽霊部屋の配置(マップ読み込み)
 async function func164(this: any) {
         Adap.dbgprt(164);
         if (Gvar.var_409 == 0) {

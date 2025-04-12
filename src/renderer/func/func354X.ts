@@ -154,7 +154,7 @@ async function func354X(this: any) {
             Adap.gmode(2, null, null, null);
             Adap.pos(160, 112);
             Adap.gcopy(3, 880, 400, 40, 40);
-            Adap.font("ＭＳ ゴシック", 7);
+            Adap.font("メイリオ", 7);
             Adap.color(0, 255, 0);
             Adap.pos(176, 117);
             if (Gvar.var_1455 >= 10) {
@@ -340,9 +340,8 @@ async function func354X(this: any) {
             if (Gvar.var_1470 == 1) {
                 Adap.pos(200, 150);
                 Adap.color(0, 0, 0);
-
                 Adap.gmode(4, null, null, 100);
-                Adap.gcopy(3, 1560, 0, 40, 45);
+                Adap.gcopy(3, 1560, 0, 40, 45); // "img_mychara.gif" の1行目の一番右側にあるディアボロの影(黒い丸)
                 Adap.gmode(2, null, null, null);
                 Adap.pos(200, 150);
                 Adap.gcopy(3, 600, 240, 40, 40);
@@ -350,9 +349,8 @@ async function func354X(this: any) {
             if (Gvar.var_1470 == 2) {
                 Adap.pos(190, 150);
                 Adap.color(0, 0, 0);
-
                 Adap.gmode(4, null, null, 100);
-                Adap.gcopy(3, 1560, 0, 40, 45);
+                Adap.gcopy(3, 1560, 0, 40, 45); // "img_mychara.gif" の1行目の一番右側にあるディアボロの影(黒い丸)
                 Adap.gmode(2, null, null, null);
                 Adap.pos(190, 150);
                 Adap.gcopy(3, 640, 240, 40, 40);
@@ -360,9 +358,8 @@ async function func354X(this: any) {
             if (Gvar.var_1470 == 3) {
                 Adap.pos(180, 150);
                 Adap.color(0, 0, 0);
-
                 Adap.gmode(4, null, null, 100);
-                Adap.gcopy(3, 1560, 0, 40, 45);
+                Adap.gcopy(3, 1560, 0, 40, 45); // "img_mychara.gif" の1行目の一番右側にあるディアボロの影(黒い丸)
                 Adap.gmode(2, null, null, null);
                 Adap.pos(180, 150);
                 Adap.gcopy(3, 680, 240, 40, 40);
@@ -370,9 +367,8 @@ async function func354X(this: any) {
             if (Gvar.var_1470 == 4) {
                 Adap.pos(190, 150);
                 Adap.color(0, 0, 0);
-
                 Adap.gmode(4, null, null, 100);
-                Adap.gcopy(3, 1560, 0, 40, 45);
+                Adap.gcopy(3, 1560, 0, 40, 45); // "img_mychara.gif" の1行目の一番右側にあるディアボロの影(黒い丸)
                 Adap.gmode(2, null, null, null);
                 Adap.pos(190, 150);
                 Adap.gcopy(3, 680, 240, 40, 40);
@@ -380,9 +376,8 @@ async function func354X(this: any) {
             if (Gvar.var_1470 == 5) {
                 Adap.pos(200, 150);
                 Adap.color(0, 0, 0);
-
                 Adap.gmode(4, null, null, 100);
-                Adap.gcopy(3, 1560, 0, 40, 45);
+                Adap.gcopy(3, 1560, 0, 40, 45); // "img_mychara.gif" の1行目の一番右側にあるディアボロの影(黒い丸)
                 Adap.gmode(2, null, null, null);
                 Adap.pos(200, 150);
                 Adap.gcopy(3, 720, 240, 40, 40);
@@ -390,9 +385,8 @@ async function func354X(this: any) {
             if (Gvar.var_1470 == 6) {
                 Adap.pos(200, 150);
                 Adap.color(0, 0, 0);
-
                 Adap.gmode(4, null, null, 100);
-                Adap.gcopy(3, 1560, 0, 40, 45);
+                Adap.gcopy(3, 1560, 0, 40, 45); // "img_mychara.gif" の1行目の一番右側にあるディアボロの影(黒い丸)
                 Adap.gmode(2, null, null, null);
                 Adap.pos(200, 150);
                 Adap.gcopy(3, 760, 240, 40, 40);
@@ -406,7 +400,6 @@ async function func354X(this: any) {
             }
             if (Gvar.var_1470 == 4) {
                 Adap.color(0, 0, 0);
-
                 Adap.gmode(4, null, null, 100);
                 Adap.pos(160, 120);
                 Gvar.belongings_item_list = Gvar.var_1471;

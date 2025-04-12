@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import * as Music from '../music/index'
 
 async function func659(this: any) {
         Adap.dbgprt(659);
@@ -24,32 +25,14 @@ async function func659(this: any) {
         if (Gvar.var_83[Gvar.var_314].Var0 == 171 && Gvar.var_83[Gvar.var_314].Var20 == 0 && Gvar.var_83[Gvar.var_314].Var12 == 0 && Gvar.var_83[Gvar.var_314].Var13 == 0 && Gvar.var_83[Gvar.var_314].Var14 == 0 && Gvar.var_83[Gvar.var_314].Var17 == 0 && Gvar.var_83[Gvar.var_314].Var23 == 0 && Gvar.var_83[Gvar.var_314].Var19 == 0 && Gvar.var_83[Gvar.var_314].Var25 <= 50) {
             return;
         }
-        for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(10);
         Gvar.var_3055 = 0;
         if (Gvar.var_83[Gvar.var_314].Var20 != 0 || Gvar.var_83[Gvar.var_314].Var12 != 0 || Gvar.var_83[Gvar.var_314].Var13 != 0 || Gvar.var_83[Gvar.var_314].Var14 != 0 || Gvar.var_83[Gvar.var_314].Var17 != 0 || Gvar.var_83[Gvar.var_314].Var23 != 0 || Gvar.var_83[Gvar.var_314].Var19 != 0 || Gvar.var_83[Gvar.var_314].Var25 != 0) {
             Gvar.var_3055 = 1;
         }
         // No = 132 レクイエムジョルノの状態異常無効化能力
         if (Gvar.var_83[Gvar.var_314].Var0 == 132) {  // No = 132 レクイエムジョルノ
-            await Func.func094(); // メッセージ送りの際の効果音
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ！！」";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-            await Func.func047();
-            await Func.func340(); // キー入力による選択処理
+            await Func.setMessage1("「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ！！」", "", 8, true, false, true);
             if (Gvar.var_2712 == 1) {
                 Gvar.var_421 = 1;
                 for (let cnt3 = 0; cnt3 < Gvar.var_97; ++cnt3) {
@@ -77,7 +60,7 @@ async function func659(this: any) {
                             Gvar.var_452 = 1;
                             Gvar.var_453 = 1;
                             Gvar.var_454 = 1;
-                            await Func.func384(); // アイテムをフロアへ追加する処理
+                            await Func.func384();
                             Gvar.var_454 = 0;
                             Gvar.var_451 = 0;
                             Gvar.var_452 = 0;
@@ -95,7 +78,7 @@ async function func659(this: any) {
             Gvar.var_312 = 1;
             Adap.DSPLAY(161);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_311 = Gvar.var_311 - 25;
                 if (Gvar.var_311 <= 0) {
                     Gvar.var_311 = 0;
@@ -111,55 +94,21 @@ async function func659(this: any) {
             Gvar.var_83[Gvar.var_314].Var19 = 0;
             Gvar.var_83[Gvar.var_314].Var25 = 0;
             Gvar.var_83[Gvar.var_314].Var4 = 3;
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
             if (Gvar.var_3055 == 1 && Gvar.var_2712 == 0) {
-                Gvar.comments_row1 = "ｼﾞｮﾙﾉの状態異常が治った！";
-                Gvar.comments_row2 = "";
+                await Func.setMessage1("ｼﾞｮﾙﾉの状態異常が治った！", "", 8, false, false, false);
             }
             if (Gvar.var_3055 == 0 && Gvar.var_2712 == 1) {
-                Gvar.comments_row1 = "サーフィスが人形に戻された！";
-                Gvar.comments_row2 = "";
+                await Func.setMessage1("サーフィスが人形に戻された！", "", 8, false, false, false);
             }
             if (Gvar.var_3055 == 1 && Gvar.var_2712 == 1) {
-                Gvar.comments_row1 = "ｼﾞｮﾙﾉの状態異常が治った！";
-                Gvar.comments_row2 = "サーフィスが人形に戻された！";
+                await Func.setMessage1("ｼﾞｮﾙﾉの状態異常が治った！", "サーフィスが人形に戻された！", 8, false, false, false);
             }
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(10);
             return;
         }
         // No = 143 ウンガロの状態異常無効化能力
         if (Gvar.var_83[Gvar.var_314].Var0 == 143) { // No = 143 ウンガロ
-            await Func.func094(); // メッセージ送りの際の効果音
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "「ボヘミアン・ラプソディ」！！";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-            await Func.func047();
-            await Func.func340(); // キー入力による選択処理
+            await Func.setMessage1("「ボヘミアン・ラプソディ」！！", "", 8, true, false, true);
             Adap.gsel(19);
             Adap.color(255, 255, 255);
             Adap.boxf(0, 0, 680, 680);
@@ -168,7 +117,7 @@ async function func659(this: any) {
             Gvar.var_312 = 1;
             Adap.DSPLAY(161);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_311 = Gvar.var_311 - 25;
                 if (Gvar.var_311 <= 0) {
                     Gvar.var_311 = 0;
@@ -184,46 +133,13 @@ async function func659(this: any) {
             Gvar.var_83[Gvar.var_314].Var19 = 0;
             Gvar.var_83[Gvar.var_314].Var25 = 0;
             Gvar.var_83[Gvar.var_314].Var4 = 3;
-            await Func.func094(); // メッセージ送りの際の効果音
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "精神と肉体は分離され…";
-            Gvar.comments_row2 = "スタンド能力は無効となる！";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("精神と肉体は分離され…", "スタンド能力は無効となる！", 8, false, false, true);
+            await Func.AutoDraw(10);
             return;
         }
         // Ver0.1403にて追加。No = 171 離婚した承太郎の状態異常無効化能力
         if (Gvar.var_83[Gvar.var_314].Var0 == 171) { // No = 171 離婚した承太郎
-            await Func.func094(); // メッセージ送りの際の効果音
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "「スタープラチナ・ザ・ワールド」！！";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-            await Func.func047();
-            await Func.func340(); // キー入力による選択処理
+            await Func.setMessage1("「スタープラチナ・ザ・ワールド」！！", "", 8, true, false, true);
             Adap.gsel(19);
             Adap.color(255, 255, 255);
             Adap.boxf(0, 0, 680, 680);
@@ -232,7 +148,7 @@ async function func659(this: any) {
             Gvar.var_312 = 1;
             Adap.DSPLAY(161);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_311 = Gvar.var_311 - 25;
                 if (Gvar.var_311 <= 0) {
                     Gvar.var_311 = 0;
@@ -248,25 +164,8 @@ async function func659(this: any) {
             Gvar.var_83[Gvar.var_314].Var19 = 0;
             Gvar.var_83[Gvar.var_314].Var25 = 0;
             Gvar.var_83[Gvar.var_314].Var4 = 3;
-            await Func.func094(); // メッセージ送りの際の効果音
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "承太郎は時止めにより";
-            Gvar.comments_row2 = "ギリギリで見切った！";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-            Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("承太郎は時止めにより", "ギリギリで見切った！", 8, false, false, true);
+            await Func.AutoDraw(10);
             return;
         }
         return;

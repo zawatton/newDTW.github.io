@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 async function func697(this: any) {
         Adap.dbgprt(697);
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1440 = 1;
         if (Gvar.var_1441 == 1) {
             if (Gvar.var_83[Gvar.var_2194].Var1 > Gvar.var_66) {
@@ -34,7 +34,7 @@ async function func697(this: any) {
             }
         }
         for (let cnt1 = 0; cnt1 < 7; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             if (Gvar.var_1442 == 0) {
                 Gvar.var_1427 = Gvar.var_1427 + 20;
                 Gvar.var_1428 = Gvar.var_1428 + 20;
@@ -45,7 +45,7 @@ async function func697(this: any) {
             }
             Gvar.var_1440 = Gvar.var_1440 + 1;
         }
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1440 = 0;
         return;
 }

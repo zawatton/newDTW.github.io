@@ -39,7 +39,7 @@ async function func638(this: any) {
         }
         // No = 111 ザ・ワールドのDISCを装備している時
         if (Gvar.equip_disc[111] == 1) {
-            Gvar.var_1337 = Gvar.var_83[Gvar.var_314].Var0;
+            Gvar.var_1337 = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
              // No = 132 レクイエムジョルノ
              // Ver0.1403にて追加。No = 171 離婚した承太郎
             if (Gvar.var_1337 == 147 || Gvar.var_1337 == 134 || Gvar.var_1337 == 119 || Gvar.var_1337 == 35 || Gvar.var_1337 == 135 || Gvar.var_1337 == 120 || Gvar.var_1337 == 128 || Gvar.var_1337 == 140 || Gvar.var_1337 == 68 || Gvar.var_1337 == 131 || Gvar.var_1337 == 132 || Gvar.var_1337 == 171) {
@@ -48,14 +48,14 @@ async function func638(this: any) {
         }
         // No = 114 ホワイトスイネイクのDISCを装備している時
         if (Gvar.equip_disc[114] == 1) {
-            Gvar.var_1337 = Gvar.var_83[Gvar.var_314].Var0;
+            Gvar.var_1337 = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
             if (Gvar.var_1337 == 141 || Gvar.var_1337 == 134 || Gvar.var_1337 == 99 || Gvar.var_1337 == 72 || Gvar.var_1337 == 80 || Gvar.var_1337 == 148 || Gvar.var_1337 == 153 || Gvar.var_1337 == 154 || Gvar.var_1337 == 156 || Gvar.var_1337 == 157 || Gvar.var_1337 == 159 || Gvar.var_1337 == 93 || Gvar.var_1337 == 96 || Gvar.var_1337 == 98) {
                 Gvar.var_209 = Math.floor(Gvar.var_209 * 3 / 2);
             }
         }
         // No = 368 能力「暗殺倍打」をDISCへ合成している時
         if (Gvar.equip_disc[369] == 1) {
-            Gvar.var_1337 = Gvar.var_83[Gvar.var_314].Var0;
+            Gvar.var_1337 = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
             // 暗殺チーム設定
             if (Gvar.var_1337 == 62 || Gvar.var_1337 == 63 || Gvar.var_1337 == 85 || Gvar.var_1337 == 64 || Gvar.var_1337 == 106 || Gvar.var_1337 == 107) {
                 Gvar.var_209 = Math.floor(Gvar.var_209 * 3 / 2);
@@ -63,7 +63,7 @@ async function func638(this: any) {
         }
         // No = 370 能力「九柱神倍打」をDISCへ合成している時
         if (Gvar.equip_disc[370] == 1) {
-            Gvar.var_1337 = Gvar.var_83[Gvar.var_314].Var0;
+            Gvar.var_1337 = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
             if (Gvar.var_1337 == 27 || Gvar.var_1337 == 97 || Gvar.var_1337 == 58 || Gvar.var_1337 == 14 || Gvar.var_1337 == 15 || Gvar.var_1337 == 38 || Gvar.var_1337 == 155 || Gvar.var_1337 == 129) {
                 Gvar.var_209 = Math.floor(Gvar.var_209 * 3 / 2);
             }

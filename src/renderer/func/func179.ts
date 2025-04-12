@@ -38,7 +38,7 @@ async function func179(this: any) {
                     break;
                 }
             }
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
         }
         return;
 }

@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 async function func565(this: any) {
         Adap.dbgprt(565);
         Gvar.var_1641 = Gvar.var_82[Gvar.var_447][Gvar.var_449];
-        if (Gvar.var_151 >= 1 && Gvar.var_1199 == 1) {
+        if (Gvar.time_paused_count >= 1 && Gvar.var_1199 == 1) {
             Gvar.var_1641 = Gvar.var_152;
         }
         Gvar.var_764 = Gvar.var_83[Gvar.var_1641].Var1 - Gvar.var_66 + 4;

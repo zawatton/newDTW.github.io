@@ -1,7 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
 
 // No = 144 川尻浩作の特殊能力
 async function enemy144(this: any) {
@@ -18,23 +17,23 @@ async function enemy144(this: any) {
         Gvar.var_743 = 1; //スタンド像付与フラグON
         Gvar.var_83[Gvar.var_412].Var7 = 1;
         Gvar.var_389 = 3;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 3;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 1;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 3;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 1;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 3;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 1;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 3;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_389 = 1;
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_83[Gvar.var_412].Var7 = 0;
         Gvar.var_742 = 0;
         Gvar.var_743 = 0; //スタンド像付与フラグOFF
@@ -78,30 +77,15 @@ async function enemy144(this: any) {
         Gvar.var_78[Gvar.var_419].Var27 = 0;
         Gvar.var_78[Gvar.var_419].Var28 = 0;
         Gvar.var_78[Gvar.var_419].Var29 = 0;
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "川尻浩作に";
         if (Gvar.var_127 == 1 || Gvar.var_132 >= 1) {
-            Gvar.comments_row1 = "何者かに";
+            await Func.setMessage1("何者かに", "" + Gvar.target_item_name + "を盗まれた！", 8, false, false, false);
         }
-        Gvar.comments_row2 = "" + Gvar.target_item_name + "を盗まれた！";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-        await Func.func047();
-        if (Gvar.to_freeze >= 1) {
-            await Main.func023();
+        else
+            await Func.setMessage1("川尻浩作に", "" + Gvar.target_item_name + "を盗まれた！", 8, false, false, false);
+        if (Gvar.var_128 >= 1) {
+            await Func.func023();
         }
-        for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(10);
         Gvar.var_2197 = 1;
         return;
 }

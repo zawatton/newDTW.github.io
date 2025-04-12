@@ -12,7 +12,7 @@ async function func928(this: any) {
             Gvar.var_3601 = "大迷宮 ";
         }
         if (Gvar.var_3600 == 3) {
-            Gvar.var_3601 = "試練　";
+            Gvar.var_3601 = "試練  ";
         }
         if (Gvar.var_3600 == 4) {
             Gvar.var_3601 = "一巡後 ";

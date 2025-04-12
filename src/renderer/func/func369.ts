@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 async function func369(this: any) {
         Adap.dbgprt(369);
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         await Func.func080(); // 各キー入力確認
         if (Gvar.key_X_on == 1) {
             Gvar.var_1209 = 0;
@@ -33,9 +33,7 @@ async function func369(this: any) {
                 }
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(5);
                 await Func.func369();
                 return;
             }
@@ -56,9 +54,7 @@ async function func369(this: any) {
                 }
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
-                for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
-                }
+                await Func.AutoDraw(5);
                 await Func.func369();
                 return;
             }

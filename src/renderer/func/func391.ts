@@ -12,11 +12,11 @@ async function func391(this: any) {
             Gvar.var_447 = 0;
             for (let cnt2 = 0; cnt2 < Gvar.var_31; ++cnt2) {
                 if (Gvar.var_79[Gvar.var_447][Gvar.var_449] == 1) {
-                    await Func.func384(); // アイテムをフロアへ追加する処理
+                    await Func.func384();
                 }
                 if (Gvar.var_79[Gvar.var_447][Gvar.var_449] == 2) {
                     Gvar.var_1734 = 0;
-                    await Func.func384(); // アイテムをフロアへ追加する処理
+                    await Func.func384();
                     Gvar.var_1734 = 1;
                 }
                 Gvar.var_447 = Gvar.var_447 + 1;

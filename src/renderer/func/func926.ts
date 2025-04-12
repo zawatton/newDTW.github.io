@@ -12,21 +12,8 @@ async function func926(this: any) {
             Adap.gsel( Gvar.window_id = 30, Gvar.window_mode = -1);
             Adap.gsel( Gvar.window_id = 0, Gvar.window_mode = 1);           
             Adap.onkey(0);
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "接続が切断された。";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("接続が切断された。", "", 7, false, false, false);
+            await Func.AutoDraw(5);
             return;
         }
         Adap.tcpcount(Gvar.var_3538, Gvar.var_1050);
@@ -211,7 +198,7 @@ async function func926(this: any) {
                                 await Func.func934();
                             }
                         }
-                        Adap.font("MS ゴシック", 12);
+                        Adap.font(Gvar.font_type, 12);
                         Gvar.var_3595 = 0;
                         Gvar.var_3596 = 58;
                         Gvar.var_3597 = Gvar.var_624 - 1;
@@ -255,7 +242,7 @@ async function func926(this: any) {
                                 if (Gvar.var_3544 == 9) {
                                     Adap.color(255, 255, 255);
                                 }
-                                Adap.font("MS ゴシック", 12);
+                                Adap.font(Gvar.font_type, 12);
                                 Adap.mes(Gvar.var_3539);
                             }
                             Adap.color(0, 0, 80);
@@ -562,7 +549,7 @@ async function func926(this: any) {
                     if (Gvar.var_624 == 0) {
                         Adap.color(1, 1, 1);
                         Adap.boxf();
-                        Adap.font("MS ゴシック", 12);
+                        Adap.font(Gvar.font_type, 12);
                         Gvar.var_3595 = 0;
                         Gvar.var_3597 = 0;
                         for (let cnt5 = 0; cnt5 < 8; ++cnt5) {

@@ -25,7 +25,7 @@ async function func210(this: any) {
         Adap.pset(331, 246);
         Adap.pset(9, 331);
         Adap.pset(331, 331);
-        Adap.font("ＭＳ ゴシック", 16, 1);
+        Adap.font("メイリオ", 16, 1);
         Adap.color(255, 255, 255);
         if (Gvar.var_911 == 1) {
             Adap.color(0, 255, 0);
@@ -86,16 +86,16 @@ async function func210(this: any) {
         }
         Adap.pos(40, 195);
         Adap.mes("ゲームに戻る");
-        Adap.font("ＭＳ Ｐゴシック", 12, 1);
+        Adap.font(Gvar.font_type, 12, 1);
         Adap.color(255, 255, 255);
         Adap.pos(20, 250);
         Adap.mes("※0～9・A～Z・ENTER・SHIFT・CTRL");
-        Adap.mes("　を使用することができます。");
+        Adap.mes("  を使用することができます。");
         Adap.mes("※キーボードにより、３つボタン同時押しが");
-        Adap.mes("　無効となることがあるため、斜め移動は");
-        Adap.mes("　SHIFTキーのままをお勧めします。");
+        Adap.mes("  無効となることがあるため、斜め移動は");
+        Adap.mes("  SHIFTキーのままをお勧めします。");
         Adap.color(255, 255, 255);
-        Adap.font(Gvar.font_type = "ＭＳ Ｐゴシック", Gvar.font_size = 16, Gvar.font_style = 1);
+        Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         Adap.pos(15, Gvar.Y_axis_item_position);
         Adap.mes(">");
         Adap.pos(16, Gvar.Y_axis_item_position);

@@ -22,9 +22,9 @@ async function func183(this: any) {
         }
         Adap.screen_(31, 350, 250, 10);
         Adap.title("デバッグウィンドウ");
-        Adap.cls(1);
+        Adap.cls(1); // 黒く薄いフィルターがかかる
         Adap.objmode(1, 1);
-        Adap.font("MS UI ゴシック", 10);
+        Adap.font(Gvar.font_type, 10);
         Adap.color(0, 0, 0);
         Adap.pos(10, 5);
         Adap.mes("階層");

@@ -1,32 +1,18 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
+import * as Music from '../music/index'
 
 async function func441(this: any) {
         Adap.dbgprt(441);
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
         if (Gvar.var_225 == Gvar.var_1967 && Gvar.var_1965 == 0) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "それは今使っているDISCです。";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
+            await Func.setMessage1("それは今使っているDISCです。",
+                                    "", 7, true, false, false);
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
-            await Func.func340(); // キー入力による選択処理
-            await Func.func051();
+            await Func.func051(); // キー入力待ち処理
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
             return;
@@ -47,102 +33,60 @@ async function func441(this: any) {
         await Func.func437();
         Gvar.var_225 = Gvar.var_1966;
         if (Gvar.var_862[590][0] == 0 && Gvar.var_375 == 0) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "なんと" + Gvar.var_1938 + "は";
             Gvar.var_862[590][0] = 1;
             await Func.func492(); // アイテムリスト呼び出し
-            Gvar.comments_row2 = "ｷﾞｱｯﾁｮのDISCだった！";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            await Func.func340(); // キー入力による選択処理
+            await Func.setMessage1("なんと" + Gvar.var_1938 + "は",
+                                    "ｷﾞｱｯﾁｮのDISCだった！", 7, true, false, false);
         }
         Gvar.var_1940 = Gvar.var_199;
         Gvar.var_199 = 2;
-        await Func.func094(); // メッセージ送りの際の効果音
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
+
         Gvar.var_1073 = Adap.rnd(4);
         if (Gvar.var_1073 == 0) {
-            Gvar.comments_row1 = "「どういう事だ！";
-            Gvar.comments_row2 = "　どういう事だよッ！　クソッ！」";
+            await Func.setMessage1("「どういう事だ！",
+                                    "  どういう事だよッ！  クソッ！」", 7, true, false, true);
         }
         if (Gvar.var_1073 == 1) {
-            Gvar.comments_row1 = "「なめてんのかァ――ッ　このオレをッ！";
-            Gvar.comments_row2 = "　クソッ！　クソッ！」";
+            await Func.setMessage1("「なめてんのかァ――ッ  このオレをッ！",
+                                    "  クソッ！  クソッ！」", 7, true, false, true);
         }
         if (Gvar.var_1073 == 2) {
-            Gvar.comments_row1 = "「ナメやがって　この言葉ァ";
-            Gvar.comments_row2 = "　超イラつくぜぇ～～～ッ！！」";
+            await Func.setMessage1("「ナメやがって  この言葉ァ",
+                                    "  超イラつくぜぇ～～～ッ！！」", 7, true, false, true);
         }
         if (Gvar.var_1073 == 3) {
-            Gvar.comments_row1 = "「チクショオ――　ムカつくんだよ！";
-            Gvar.comments_row2 = "　コケにしやがって！ボケがッ！」";
+            await Func.setMessage1("「チクショオ――  ムカつくんだよ！",
+                                    "  コケにしやがって！ボケがッ！」", 7, true, false, true);
         }
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        await Func.func047();
-        await Func.func340(); // キー入力による選択処理
         if (Gvar.var_1973 == 1 && Gvar.equip_disc[119] == 0) {
             Gvar.var_77[Gvar.var_66][Gvar.var_67] = 0;
         }
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1353 = 1;
         Gvar.var_1244 = 1;
         Gvar.var_1975 = 1;
         for (let cnt1 = 0; cnt1 < 15; ++cnt1) {
             Adap.DSPLAY(103); // 殴られた時の効果音
             Gvar.var_1353 = 1;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1353 = 2;
-            await Func.func337(); // メッセージ関係呼び出し
-            Gvar.var_198 = 1;
+            await Func.func337(); // メッセージ表示処理(自動)
+            Gvar.var_198 = 1; // メッセージウィンドウ開く
             Gvar.var_300 = 0;
             Gvar.var_1975++;
         }
         Gvar.var_1975 = 0;
         Gvar.var_1353 = 0;
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1244 = 0;
         if (Gvar.equip_disc[119] == 1) {
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "やわらかくなっていて壊れなかった。";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-            Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 6; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("やわらかくなっていて壊れなかった。",
+                                    "", 7, false, false, false);
+            await Func.AutoDraw(6);
             Gvar.var_199 = Gvar.var_1940;
             Gvar.var_1973 = 0;
             Gvar.var_1974 = 0;
-            await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+            await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
             return;
         }
         Gvar.var_488 = Gvar.var_233[Gvar.var_225].Var0;
@@ -217,7 +161,7 @@ async function func441(this: any) {
             }
             if (Gvar.var_1977 == 1) {
                 Gvar.belongings_item_list = Gvar.var_233[Gvar.var_225].Var0;
-                await Func.func106(); // BGM選曲呼び出し割り振り
+                await Music.func106(); // BGM選曲呼び出し割り振り
             }
             await Func.func433(); // アイテム配列(所持アイテム)初期化関数
         }
@@ -237,25 +181,14 @@ async function func441(this: any) {
             Gvar.var_78[Gvar.var_1978].Var2 = 0;
             Gvar.var_77[Gvar.var_66][Gvar.var_67] = 0;
         }
-        await Func.func100();
-        Gvar.comments_row1 = Gvar.comments_row1a;
-        Gvar.comments_row2 = Gvar.comments_row2a;
-        Gvar.comments_row1a = "" + Gvar.var_1976 + "は";
-        Gvar.comments_row2a = "粉々に壊れた。";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_26_x = Gvar.var_26[7]; // Ver0.1310で値修正 1 → 7
-        Gvar.var_27_x = Gvar.var_27[7]; // Ver0.1310で値修正 1 → 7
-        await Func.func047();
-        await Func.func050();
-        for (let cnt1 = 0; cnt1 < 6; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Music.func100(); // 効果音
+        await Func.setMessage1("" + Gvar.var_1976 + "は",
+                                "粉々に壊れた。", 7, false, false, false);
+        await Func.AutoDraw(6);
         Gvar.var_199 = Gvar.var_1940;
         Gvar.var_1973 = 0;
         Gvar.var_1974 = 0;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

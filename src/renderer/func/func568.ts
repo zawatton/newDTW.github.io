@@ -112,7 +112,7 @@ async function func568(this: any) {
         }
         if (Gvar.var_83[Gvar.var_1641].Var39 >= 2 && Gvar.var_83[Gvar.var_1641].Var0 != 50) {
     
-            Adap.font("MS ゴシック", 16, 1);
+            Adap.font(Gvar.font_type, 16, 1);
             if (Gvar.var_83[Gvar.var_1641].Var39 < 10) {
                 Gvar.var_2607 = Gvar.var_1274 + 30;
                 Gvar.var_2608 = Gvar.var_1275 + 24;
@@ -121,13 +121,13 @@ async function func568(this: any) {
                 Gvar.var_2607 = Gvar.var_1274 + 20;
                 Gvar.var_2608 = Gvar.var_1275 + 24;
         
-                Adap.font("MS ゴシック", 16, 1);
+                Adap.font(Gvar.font_type, 16, 1);
             }
             if (Gvar.var_83[Gvar.var_1641].Var39 >= 100) {
                 Gvar.var_2607 = Gvar.var_1274 + 10;
                 Gvar.var_2608 = Gvar.var_1275 + 24;
         
-                Adap.font("MS ゴシック", 16, 1);
+                Adap.font(Gvar.font_type, 16, 1);
             }
             Adap.color(1, 1, 1);
             Adap.pos(Gvar.var_2607 - 1, Gvar.var_2608);
@@ -144,7 +144,7 @@ async function func568(this: any) {
         }
         if (Gvar.var_83[Gvar.var_1641].Var24 >= 1) {
     
-            Adap.font("MS ゴシック", 16, 1);
+            Adap.font(Gvar.font_type, 16, 1);
             Gvar.var_2609 = Gvar.var_1274 + 16;
             Gvar.var_2610 = Gvar.var_1275 - 10;
             Gvar.var_1276 = Gvar.var_83[Gvar.var_1641].Var24;

@@ -7,15 +7,15 @@ async function item727(this: any) {
         Adap.DSPLAY(143);
         Gvar.var_1558 = 160;
         Gvar.var_1559 = 160;
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1557 = 1;
         for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1557++;
-            Gvar.var_198 = 1;
+            Gvar.var_198 = 1; // メッセージウィンドウ開く
             Gvar.var_300 = 0;
         }
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1557 = 0;
         Gvar.var_211 = Gvar.var_352;
         return;

@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// ダンジョン開始時にアイテム欄へ「ネアポリスのピッツァ」を追加
 async function func062(this: any) {
         Adap.dbgprt(62);
         Gvar.var_224 = Gvar.var_224 + 1;

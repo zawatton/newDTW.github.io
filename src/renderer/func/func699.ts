@@ -5,31 +5,15 @@ import * as Func from '../func/index'
 async function func699(this: any) {
         Adap.dbgprt(699);
         Gvar.var_2890 = Gvar.var_2199;
-
         Adap.DSPLAY(165);
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "カチリ";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-        await Func.func047();
+        await Func.setMessage1("カチリ", "", 8, false, false, false);
         Gvar.var_1343 = Gvar.var_83[Gvar.var_2890].Var1;
         Gvar.var_1344 = Gvar.var_83[Gvar.var_2890].Var2;
         Gvar.var_1342 = 1;
-        Gvar.var_271 = 1;
-        for (let cnt1 = 0; cnt1 < 15; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
+        await Func.AutoDraw(15);
         Gvar.var_1342 = 0;
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1389 = Gvar.var_83[Gvar.var_2890].Var1;
         Gvar.var_1390 = Gvar.var_83[Gvar.var_2890].Var2;
         Gvar.var_82[Gvar.var_1389][Gvar.var_1390] = 0;
@@ -44,20 +28,7 @@ async function func699(this: any) {
         Gvar.var_83[Gvar.var_2890].Var19 = 0;
         Gvar.var_83[Gvar.var_2890].Var27 = 0;
         Gvar.var_83[Gvar.var_2890].Var28 = 0;
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！";
-        Gvar.var_25_x = Gvar.var_25[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_26_x = Gvar.var_26[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_27_x = Gvar.var_27[8]; // Ver0.1310で値修正 2 → 8
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
-        await Func.func047();
+        await Func.setMessage1("ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！", "", 8, false, false, false);
         Gvar.var_1993 = Gvar.var_1389 - 1;
         if (Gvar.var_1993 < 0) {
             Gvar.var_1993 = 0;
@@ -137,20 +108,20 @@ async function func699(this: any) {
         }
 
         Adap.DSPLAY(180);
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1388 = 1;
         for (let cnt1 = 0; cnt1 < 3; ++cnt1) {
             Gvar.var_585 = 3;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_585 = 0;
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1388++;
         }
         for (let cnt1 = 0; cnt1 < 14; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1388++;
         }
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1388 = 0;
         if (Gvar.var_65[Gvar.var_1993][Gvar.var_1390] == 1 || Gvar.var_65[Gvar.var_1994][Gvar.var_1390] == 1 || Gvar.var_65[Gvar.var_1389][Gvar.var_1995] == 1 || Gvar.var_65[Gvar.var_1389][Gvar.var_1996] == 1 || Gvar.var_65[Gvar.var_1993][Gvar.var_1995] == 1 || Gvar.var_65[Gvar.var_1994][Gvar.var_1995] == 1 || Gvar.var_65[Gvar.var_1993][Gvar.var_1996] == 1 || Gvar.var_65[Gvar.var_1994][Gvar.var_1996] == 1) {
             Gvar.var_389 = 2;
@@ -160,7 +131,7 @@ async function func699(this: any) {
                 Gvar.var_211 = 0;
                 Gvar.var_356 = 209;
                 for (let cnt3 = 0; cnt3 < 9; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
                 Gvar.var_389 = 0;
                 Gvar.var_2197 = 1;
@@ -178,7 +149,7 @@ async function func699(this: any) {
                 Gvar.var_208 = Gvar.var_2198 + Gvar.var_208;
             }
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
             Gvar.var_389 = 0;
         }

@@ -13,21 +13,8 @@ async function func899(this: any) {
     
             Adap.gsel(0, 1);
             Adap.onkey(0);
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "接続が切断された。";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.setMessage1("接続が切断された。", "", 7, false, false, false);
+            await Func.AutoDraw(5);
             return;
         }
         Adap.tcpcount(Gvar.var_3538, Gvar.var_1050);
@@ -184,7 +171,7 @@ async function func899(this: any) {
                     if (Gvar.var_3544 == 9) {
                         Adap.color(255, 255, 255);
                     }
-                    Adap.font("MS ゴシック", 12);
+                    Adap.font(Gvar.font_type, 12);
                     Adap.mes(Gvar.var_3539);
                 }
                 if (Gvar.var_3540 == 0) {
@@ -316,7 +303,7 @@ async function func899(this: any) {
                         Gvar.var_2607 = Gvar.var_2607 - 5;
                     }
             
-                    Adap.font("MS ゴシック", 16, 1);
+                    Adap.font(Gvar.font_type, 16, 1);
                     Adap.color(1, 1, 1);
                     Adap.pos(Gvar.var_2607 - 1, Gvar.var_2608);
                     Adap.mes(Gvar.var_1068[3]);
@@ -329,7 +316,7 @@ async function func899(this: any) {
                     Adap.color(255, 255, 255);
                     Adap.pos(Gvar.var_2607, Gvar.var_2608);
                     Adap.mes(Gvar.var_1068[3]);
-                    Adap.font("MS ゴシック", 12);
+                    Adap.font(Gvar.font_type, 12);
                     Adap.pos(Gvar.var_1631 + 55, Gvar.var_1632 + 7);
                     Adap.color(255, 255, 255);
                     Adap.mes("");
@@ -343,7 +330,7 @@ async function func899(this: any) {
                         Adap.mes("大迷宮 " + Gvar.var_1068[10] + "階");
                     }
                     if (Adap.int(Gvar.var_1068[12]) == 3) {
-                        Adap.mes("試練　" + Gvar.var_1068[10] + "階");
+                        Adap.mes("試練  " + Gvar.var_1068[10] + "階");
                     }
                     if (Adap.int(Gvar.var_1068[12]) == 4) {
                         Adap.mes("一巡後 " + Gvar.var_1068[10] + "階");
@@ -403,11 +390,11 @@ async function func899(this: any) {
                     if (Adap.int(Gvar.var_1068[5]) == 0) {
                         Adap.color(255, 255, 255);
                     }
-                    Adap.mes("ＨＰ　　" + Gvar.var_1068[5] + "/" + Gvar.var_1068[4]);
+                    Adap.mes("ＨＰ    " + Gvar.var_1068[5] + "/" + Gvar.var_1068[4]);
                     Adap.color(255, 255, 255);
-                    Adap.mes("精神力　" + Gvar.var_1068[7] + "/" + Gvar.var_1068[6]);
-                    Adap.mes("満腹度　" + Gvar.var_1068[9] + "/" + Gvar.var_1068[8]);
-                    Adap.mes("お金　　" + Gvar.var_1068[11] + " G");
+                    Adap.mes("精神力  " + Gvar.var_1068[7] + "/" + Gvar.var_1068[6]);
+                    Adap.mes("満腹度  " + Gvar.var_1068[9] + "/" + Gvar.var_1068[8]);
+                    Adap.mes("お金    " + Gvar.var_1068[11] + " G");
                     Gvar.var_1631 = Gvar.var_1631 + 4;
                     Gvar.var_1632 = Gvar.var_1632 + 5;
                     Gvar.var_1633 = 120;

@@ -17,7 +17,7 @@ async function func575(this: any) {
                 Gvar.var_673 = Gvar.var_673 + 1;
                 continue;
             }
-            if (Gvar.var_151 >= 1 && Gvar.var_673 != Gvar.var_152) {
+            if (Gvar.time_paused_count >= 1 && Gvar.var_673 != Gvar.var_152) {
                 Gvar.var_673 = Gvar.var_673 + 1;
                 continue;
             }
@@ -701,7 +701,7 @@ async function func575(this: any) {
                                 }
                             }
                         }
-                        if (Gvar.var_151 != 0) {
+                        if (Gvar.time_paused_count != 0) {
                              Gvar.var_2720 = 0; // 敵の特殊能力発動フラグOFF
                         }
                         if (Gvar.var_2720 == 1) { // 敵の特殊能力発動フラグがONの場合

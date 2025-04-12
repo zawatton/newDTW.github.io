@@ -15,7 +15,7 @@ async function func402(this: any) {
                 Gvar.var_1844 = 2;
             }
             Gvar.var_1845 = 2;
-            await Func.func556(); // 敵をフロアへ出現させる処理
+            await Func.func556();
             Gvar.var_1844 = 0;
             Gvar.var_1845 = 0;
             Gvar.var_83[Gvar.var_673].Var21 = 1;
@@ -70,7 +70,7 @@ async function func402(this: any) {
                     if (cnt3 == 6) {
                         Gvar.var_411 = 4;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
             }
             if (Gvar.current_floor >= 19) {
@@ -99,7 +99,7 @@ async function func402(this: any) {
                     if (cnt3 == 8) {
                         Gvar.var_411 = 8;
                     }
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
             }
             Gvar.var_83[Gvar.var_673].Var21 = 0;

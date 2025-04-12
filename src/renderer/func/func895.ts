@@ -1,7 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
+
 
 async function func895(this: any) {
         Adap.dbgprt(895);
@@ -23,24 +23,10 @@ async function func895(this: any) {
         Adap.tcpopen(Gvar.var_1050, Gvar.var_39, Gvar.var_3511);
         if (Gvar.stat) {
             Adap.gsel( Gvar.window_id = 33, Gvar.window_mode = -1);
-    
             Adap.gsel(0, 1);
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "接続に失敗した。";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.setMessage1("接続に失敗した。", "", 7, false, false, false);
+            await Func.AutoDraw(5);
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         for (let cnt1 = 0; true; ++cnt1) {
@@ -52,24 +38,10 @@ async function func895(this: any) {
         }
         if (Gvar.stat != 1) {
             Adap.gsel( Gvar.window_id = 33, Gvar.window_mode = -1);
-    
             Adap.gsel(0, 1);
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "接続に失敗した。";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.setMessage1("接続に失敗した。", "", 7, false, false, false);
+            await Func.AutoDraw(5);
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         Adap.clrobj();
@@ -88,7 +60,7 @@ async function func895(this: any) {
 
         Adap.gsel(await Adap.ginfo(3), 1);
         Adap.title("チャットウィンドウ");
-        Adap.cls(4);
+        Adap.cls(4); // 黒く薄いフィルターがかかる
         Adap.color(0, 0, 0);
         Adap.boxf();
         Gvar.var_3526 = Adap.sdim(10000);
@@ -105,24 +77,10 @@ async function func895(this: any) {
         if (Gvar.var_3530 == 1) {
             Adap.gsel( Gvar.window_id = 33, Gvar.window_mode = -1);
             Adap.gsel( Gvar.window_id = 30, Gvar.window_mode = -1);
-    
             Adap.gsel(0, 1);
-            Gvar.comments_row1 = "";
-            Gvar.comments_row2 = "";
-            Gvar.var_295 = "";
-            Gvar.comments_row1a = "";
-            Gvar.comments_row2a = "";
-            Gvar.var_298 = "";
-            Gvar.var_299 = 0;
-            Gvar.comments_row1 = "ここは満員だ・・・";
-            Gvar.comments_row2 = "";
-            Gvar.var_198 = 1;
-            Gvar.var_300 = 0;
-            await Func.func047();
-            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.setMessage1("ここは満員だ・・・", "", 7, false, false, false);
+            await Func.AutoDraw(5);
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         if (Gvar.var_3531 == 1) {
@@ -144,7 +102,7 @@ async function func895(this: any) {
             await Func.func929();
             Gvar.var_3517 = "＃ログイン＃";
             await Func.func900();
-            await Main.func009(); // ゲーム基本動作フレーム処理
+            await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         Gvar.var_407 = 1;
@@ -155,7 +113,7 @@ async function func895(this: any) {
         Adap.gsel(0, 1);
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         await Func.func907();
-        await Main.func009(); // ゲーム基本動作フレーム処理
+        await Func.func009(); // ディアボロ側ターン処理(ループ処理)
         return;
 }
 

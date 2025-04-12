@@ -45,7 +45,7 @@ async function func903(this: any) {
         if (Adap.instr(Gvar.var_3560, 0, "地面に何か書いてある。") != (-1)) {
             Gvar.var_3562 = "行茶";
         }
-        if (Adap.instr(Gvar.var_3560, 0, "ﾃﾞｨｱﾎﾞﾛ　再起不能") != (-1)) {
+        if (Adap.instr(Gvar.var_3560, 0, "ﾃﾞｨｱﾎﾞﾛ  再起不能") != (-1)) {
             Gvar.var_3562 = "行赤";
         }
         if (Adap.instr(Gvar.var_3560, 0, "ﾃﾞｨｱﾎﾞﾛは考えるのをやめた。") != (-1)) {

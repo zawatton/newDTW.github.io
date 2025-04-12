@@ -18,18 +18,18 @@ async function func669(this: any) {
         }
         Gvar.var_83[Gvar.var_314].Var11 = 1;
         Gvar.var_1351 = Gvar.var_314;
-        Gvar.var_1352 = Gvar.var_83[Gvar.var_314].Var0;
-        Gvar.var_271 = 1;
+        Gvar.var_1352 = Gvar.var_83[Gvar.var_314].Var0; // Gvar.var_83[Gvar.var_314].Var0 は enemy list
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1350 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             if (Gvar.var_1350 == 2) {
     
                 Adap.DSPLAY(216); // ワープして逃げる時の効果音
             }
             Gvar.var_1350 = Gvar.var_1350 + 1;
         }
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1350 = 0;
         Gvar.var_1349 = 0;
         for (let cnt1 = 0; cnt1 < 500; ++cnt1) {
@@ -54,9 +54,7 @@ async function func669(this: any) {
             Gvar.var_83[Gvar.var_314].Var18 = 0;
         }
         Gvar.var_83[Gvar.var_314].Var11 = 0;
-        for (let cnt1 = 0; cnt1 < 5; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(5);
         return;
 }
 

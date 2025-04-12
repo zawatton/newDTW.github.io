@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// エフェクト "キラキラ" 表示処理
 async function func354(this: any) {
         Adap.dbgprt(354);
         Adap.pos(Gvar.var_1286, Gvar.var_1287);
@@ -37,6 +38,8 @@ async function func354(this: any) {
             if (Gvar.var_1299 == 10) {
                 Adap.pos(148, 128);
             }
+
+
             if (Gvar.var_1297 == 1) {
                 Adap.gcopy(35, 0, Gvar.var_1298, 64, 64);
             }
@@ -844,7 +847,7 @@ async function func354(this: any) {
                 }
                 Gvar.var_1332 = Math.floor(Gvar.var_83[Gvar.var_268].Var3 * 100 / Gvar.var_1331);
                 Adap.color(0, 255, 0);
-                Adap.font("MS ゴシック", 12);
+                Adap.font(Gvar.font_type, 12);
                 Gvar.var_1333 = "" + Gvar.var_1332 + " %";
                 if (Gvar.var_83[Gvar.var_268].Var0 == 36 || Gvar.var_83[Gvar.var_268].Var0 == 105 || Gvar.var_83[Gvar.var_268].Var0 == 106 || Gvar.var_83[Gvar.var_268].Var0 == 107 || Gvar.var_83[Gvar.var_268].Var0 == 108) {
                     Gvar.var_1333 = Gvar.var_1333 + "  EXP : " + Gvar.var_83[Gvar.var_268].Var16;
@@ -906,7 +909,7 @@ async function func354(this: any) {
                         Gvar.var_1338 = Math.floor(Gvar.var_1338 * 3 / 2);
                     }
                     Adap.color(0, 255, 0);
-                    Adap.font("MS ゴシック", 12);
+                    Adap.font(Gvar.font_type, 12);
                     Adap.mes("" + Gvar.var_1336 + " ～ " + Gvar.var_1338);
                 }
                 if (Gvar.enemy_list == 46 || Gvar.enemy_list == 30 || Gvar.enemy_list == 124 || Gvar.enemy_list == 85 || Gvar.enemy_list == 99 || Gvar.enemy_list == 153) {
@@ -948,7 +951,7 @@ async function func354(this: any) {
                         Gvar.var_1338 = Math.floor(Gvar.var_1338 * 2 / 3);
                     }
                     Adap.color(0, 255, 0);
-                    Adap.font("MS ゴシック", 12);
+                    Adap.font(Gvar.font_type, 12);
                     Adap.mes("" + Gvar.var_1336 + " ～ " + Gvar.var_1338);
                 }
             }

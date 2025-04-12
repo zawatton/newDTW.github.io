@@ -4,12 +4,10 @@ import * as Func from '../func/index'
 
 async function func438(this: any) {
         Adap.dbgprt(438);
-        for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
-        }
+        await Func.AutoDraw(2);
         await Func.func340(); // キー入力による選択処理
-        await Func.func051();
-        Gvar.var_198 = 0;
+        await Func.func051(); // キー入力待ち処理
+        Gvar.var_198 = 0; // メッセージウィンドウ閉じる
         if (Gvar.var_220 == 1) { // 道具画面(メニュー画面/道具)が開いている状態
             Gvar.var_1965 = 1;
         }

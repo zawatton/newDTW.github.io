@@ -1,7 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import * as Main from '../newdtw/index'
+import * as Music from '../music/index'
 
 async function func911(this: any) {
         Adap.dbgprt(911);
@@ -122,35 +122,22 @@ async function func911(this: any) {
         }
         if (Gvar.var_1977 == 1) {
             Gvar.belongings_item_list = Gvar.var_233[Gvar.var_225].Var0;
-            await Func.func106(); // BGM選曲呼び出し割り振り
+            await Music.func106(); // BGM選曲呼び出し割り振り
         }
         await Func.func430();
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-        Gvar.comments_row1 = "";
-        Gvar.comments_row2 = "";
-        Gvar.var_295 = "";
-        Gvar.comments_row1a = "";
-        Gvar.comments_row2a = "";
-        Gvar.var_298 = "";
-        Gvar.var_299 = 0;
-        Gvar.comments_row1 = "「" + Gvar.var_3580 + "」は";
-        Gvar.comments_row2 = "ﾑｰﾃﾞｨｰﾌﾞﾙｰｽの手で運ばれていった";
-        Gvar.var_198 = 1;
-        Gvar.var_300 = 0;
+        await Func.setMessage1("「" + Gvar.var_3580 + "」は", "ﾑｰﾃﾞｨｰﾌﾞﾙｰｽの手で運ばれていった", 7, false, false, false);
         Adap.tcpput(Gvar.var_3579, Gvar.var_1050);
         Adap.tcpput("\n", Gvar.var_1050);
-        await Func.func047();
-        Gvar.var_198 = 0;
-        Gvar.var_300 = 0;
         Gvar.var_1457 = Gvar.var_66;
         Gvar.var_1458 = Gvar.var_67;
-        Gvar.var_271 = 1;
+        Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1460 = 1;
         for (let cnt1 = 0; cnt1 < 12; ++cnt1) {
-            await Func.func337(); // メッセージ関係呼び出し
+            await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1460++;
         }
-        Gvar.var_271 = 0;
+        Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1460 = 0;
         if (Gvar.var_225 < Gvar.var_2300 && Gvar.var_2301 == 0) {
             Gvar.var_2300 = Gvar.var_2300 - 1;
@@ -172,7 +159,7 @@ async function func911(this: any) {
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
         }
         Gvar.var_217 = 1;
-        await Main.func019(); // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
+        await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;
 }
 

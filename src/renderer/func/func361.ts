@@ -5,7 +5,8 @@ import * as Func from '../func/index'
 async function func361(this: any) {
         Adap.dbgprt(361);
         await Func.func080(); // 各キー入力確認
-        if (Gvar.var_12 == 1) {
+
+        if (Gvar.var_12 == 1) { // 通信サーバーフラグ？？
             Gvar.conf_keyon = Adap.getkey(121); // キーF10入力確認
             if (Gvar.conf_keyon == 1) {
                 Gvar.var_1038 = 200;
@@ -17,11 +18,12 @@ async function func361(this: any) {
                 Gvar.var_1608 = 1;
                 await Func.func365();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
                 await Func.func361();
                 return;
             }
+
             Gvar.conf_keyon = Adap.getkey(122); // キーF11入力確認
             if (Gvar.conf_keyon == 1) {
                 Gvar.var_1038 = 1;
@@ -34,7 +36,7 @@ async function func361(this: any) {
                 Gvar.var_1608 = 1;
                 await Func.func365();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
                 await Func.func361();
                 return;
@@ -48,7 +50,7 @@ async function func361(this: any) {
                 Gvar.var_1608 = 1;
                 await Func.func365();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
                 await Func.func361();
                 return;
@@ -60,7 +62,7 @@ async function func361(this: any) {
                 Gvar.var_1608 = 1;
                 await Func.func365();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
                 await Func.func361();
                 return;
@@ -72,7 +74,7 @@ async function func361(this: any) {
                 Gvar.var_1608 = 1;
                 await Func.func365();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
                 await Func.func361();
                 return;
@@ -84,7 +86,7 @@ async function func361(this: any) {
                 Gvar.var_1608 = 1;
                 await Func.func365();
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
                 await Func.func361();
                 return;
@@ -97,7 +99,7 @@ async function func361(this: any) {
             Gvar.var_508 = 1; // Mフラグ:資料(設定画面) Func.func058
             Gvar.var_499 = 1; // Mフラグ:設定画面 Func.func056
             Gvar.var_511 = 1;
-            await Func.func051();
+            await Func.func051(); // キー入力待ち処理
             await Func.func358();
             return;
         }
@@ -111,12 +113,10 @@ async function func361(this: any) {
         if (Gvar.key_A_on == 1) {
             Gvar.var_83[299].Var8 = 1;
             for (let cnt2 = 0; cnt2 < 8; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
             Gvar.var_83[299].Var8 = 0;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(2);
             await Func.func361();
             return;
         }
@@ -131,12 +131,12 @@ async function func361(this: any) {
                 Gvar.var_83[299].Var21 = 1;
                 for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                     Gvar.var_411 = 2;
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                     Gvar.var_411 = 3;
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
                 Gvar.var_411 = 1;
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_83[299].Var21 = 0;
                 Gvar.var_411 = 0;
             }
@@ -151,24 +151,22 @@ async function func361(this: any) {
                 Gvar.var_83[299].Var18 = 1;
             }
             for (let cnt2 = 0; cnt2 < 11; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
+                await Func.func337(); // メッセージ表示処理(自動)
             }
             if (Gvar.var_83[299].Var0 == 22 || Gvar.var_83[299].Var0 == 17 || Gvar.var_83[299].Var0 == 71) {
                 for (let cnt3 = 0; cnt3 < 4; ++cnt3) {
-                    await Func.func337(); // メッセージ関係呼び出し
+                    await Func.func337(); // メッセージ表示処理(自動)
                 }
             }
             Gvar.var_83[299].Var7 = 0;
             Gvar.var_83[299].Var18 = 0;
             Gvar.var_743 = 0; //スタンド像付与フラグOFF
             Gvar.var_742 = 0;
-            for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
-                await Func.func337(); // メッセージ関係呼び出し
-            }
+            await Func.AutoDraw(2);
             await Func.func361();
             return;
         }
-        await Func.func337(); // メッセージ関係呼び出し
+        await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_83[299].Var32 = Gvar.var_83[299].Var32 + 1;
         if (Gvar.var_83[299].Var32 == 12) {
             Gvar.var_83[299].Var32 = 0;
