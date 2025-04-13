@@ -11,7 +11,7 @@ async function func585(this: any) {
         if (Gvar.var_83[Gvar.var_673].Var0 == 80) {
             Adap.DSPLAY(183);
             Gvar.var_389 = 1;
-            await Func.setMessage1("ﾗﾝｸﾞ･ﾗﾝｸﾞﾗｰに唾をかけられた！", "思うように動けなくなった！", 8, false, false, false);
+            await Func.setMessage("ﾗﾝｸﾞ･ﾗﾝｸﾞﾗｰに唾をかけられた！", "思うように動けなくなった！", 8, false, false, false);
             await Func.AutoDraw(6);
             Gvar.var_389 = 0;
             Adap.DSPLAY(134);
@@ -21,7 +21,7 @@ async function func585(this: any) {
         if (Gvar.var_83[Gvar.var_673].Var0 == 45 || Gvar.var_83[Gvar.var_673].Var0 == 158) {
             Adap.DSPLAY(193);
             Gvar.var_389 = 1;
-            await Func.setMessage1("由花子の髪の毛が刺さった！", "思うように動けなくなった！", 8, false, false, false);
+            await Func.setMessage("由花子の髪の毛が刺さった！", "思うように動けなくなった！", 8, false, false, false);
             await Func.AutoDraw(6);
             Gvar.var_389 = 0;
             Adap.DSPLAY(134);
@@ -69,7 +69,7 @@ async function func585(this: any) {
             }
             if (Gvar.var_116 == 0 && Gvar.var_2804 == 0) {
                 Gvar.var_389 = 1;
-                await Func.setMessage1("空気弾が体にまとわりついた。", "体が動かない！", 8, false, false, false);
+                await Func.setMessage("空気弾が体にまとわりついた。", "体が動かない！", 8, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_389 = 0;
                 Gvar.var_116 = 1;
@@ -90,7 +90,7 @@ async function func585(this: any) {
             Gvar.var_1241 = 1;
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1311 = 1;
-            await Func.setMessage1("これで安心して熟睡できる…", "", 8, true, false, false);
+            await Func.setMessage("これで安心して熟睡できる…", "", 8, true, false, false);
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1311 = 0;
             Gvar.var_1241 = 0;
@@ -104,7 +104,7 @@ async function func585(this: any) {
                 Gvar.var_389 = 2;
                 Gvar.var_1300 = 2;
                 Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
-                await Func.setMessage1("「ドッグォン」の文字が貼りついた！", "", 8, true, false, false);
+                await Func.setMessage("「ドッグォン」の文字が貼りついた！", "", 8, true, false, false);
                 Gvar.var_114 = 0;
                 Gvar.var_463 = 0;
                 Gvar.var_464 = 0;
@@ -151,7 +151,7 @@ async function func585(this: any) {
                 Gvar.var_389 = 2;
                 Gvar.var_1300 = 1;
                 Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
-                await Func.setMessage1("「ドジュウ」の文字が貼りついた！", "", 8, true, false, false);
+                await Func.setMessage("「ドジュウ」の文字が貼りついた！", "", 8, true, false, false);
                 Adap.DSPLAY(175);
                 Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                 Gvar.var_458 = 1;
@@ -206,10 +206,10 @@ async function func585(this: any) {
                 await Func.func492(); // アイテムリスト呼び出し
                 Gvar.var_2814 = Gvar.item_name;
                 if (Gvar.var_2460 != 0) {
-                    await Func.setMessage1("" + Gvar.var_2813 + "は", "" + Gvar.var_2814 + "になった！", 8, false, false, false);
+                    await Func.setMessage("" + Gvar.var_2813 + "は", "" + Gvar.var_2814 + "になった！", 8, false, false, false);
                 }
                 if (Gvar.var_2460 == 0) {
-                    await Func.setMessage1("しかし何も起こらなかった。", "", 8, false, false, false);
+                    await Func.setMessage("しかし何も起こらなかった。", "", 8, false, false, false);
                 }
                 Gvar.var_389 = 0;
                 Gvar.var_199 = Gvar.var_1971;
@@ -464,13 +464,13 @@ async function func585(this: any) {
                 }
             }
         }
-        await Func.setMessage1("" + Gvar.var_2816 + " を喰らった！", "" + Gvar.var_209 + "のダメージをうけた。", 8, false, false, false);
+        await Func.setMessage("" + Gvar.var_2816 + " を喰らった！", "" + Gvar.var_209 + "のダメージをうけた。", 8, false, false, false);
         if (Gvar.var_83[Gvar.var_673].Var0 == 136 && Gvar.var_211 >= 1) {
             Gvar.var_1073 = Adap.rnd(4);
             if (Gvar.var_1073 == 0 && Gvar.var_178 == 0 && Gvar.nouryoku_disc_id != 116 && Gvar.var_125 == 0) {
                 Adap.DSPLAY(120);
                 Gvar.var_178 = 1;
-                await Func.setMessage1("ビリっときたあああああ！！", "", 8, true, false, false);
+                await Func.setMessage("ビリっときたあああああ！！", "", 8, true, false, false);
             }
         }
         await Func.AutoDraw(9);

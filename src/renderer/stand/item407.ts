@@ -131,14 +131,14 @@ async function item407(this: any) {
             Gvar.var_2331 = 1;
         }
         if (Gvar.var_2331 == 0) {
-            await Func.setMessage1("この辺りには仕掛けられない。",
+            await Func.setMessage("この辺りには仕掛けられない。",
                                    "", 7, false, false, false);
             await Func.AutoDraw(5);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
         Adap.DSPLAY(165);
-        await Func.setMessage1("法王の結界を仕掛けた。",
+        await Func.setMessage("法王の結界を仕掛けた。",
                                "", 7, false, false, false);
         await Func.AutoDraw(5);
         Gvar.belongings_item_list = Gvar.activated_disc_id;

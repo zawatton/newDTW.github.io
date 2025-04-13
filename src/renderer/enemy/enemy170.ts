@@ -24,11 +24,11 @@ async function enemy170(this: any) {
                     Gvar.var_158 = 0;
                 }
             }
-            await Func.setMessage1("動作がノロくなってしまった！", "", 8, false, false, false);
+            await Func.setMessage("動作がノロくなってしまった！", "", 8, false, false, false);
             await Func.AutoDraw(10);
             // No = 396 メイドインヘヴンのDISCを装備している場合
             if (Gvar.equip_disc[396] == 1) {
-                await Func.setMessage1("しかし装備スタンドの効果で", "速度は遅くならない！", 7, true, false, true);
+                await Func.setMessage("しかし装備スタンドの効果で", "速度は遅くならない！", 7, true, false, true);
             }
         }
         Gvar.var_2197 = 1;

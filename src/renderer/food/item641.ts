@@ -10,7 +10,7 @@ async function item641(this: any) {
     Gvar.var_389 = 2;
     Adap.DSPLAY(164);
     await Func.AutoDraw(10);
-    await Func.setMessage1("お腹が痛い…", "", 7, false, false, false);
+    await Func.setMessage("お腹が痛い…", "", 7, false, false, false);
     Gvar.var_389 = 0;
     Gvar.var_360 = 0;
     Gvar.var_567 = Gvar.var_567 - 10;

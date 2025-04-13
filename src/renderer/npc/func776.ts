@@ -76,7 +76,7 @@ async function func776(this: any) {
         }
         await Func.func430();
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-        await Func.setMessage1("" + Gvar.var_3153 + "を入れた。",
+        await Func.setMessage("" + Gvar.var_3153 + "を入れた。",
                                 "", 7, true, false, false);
 
         Gvar.var_198 = 0; // メッセージウィンドウ閉じる

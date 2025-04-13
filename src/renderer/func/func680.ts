@@ -40,7 +40,7 @@ async function func680(this: any) {
         }
         if (Gvar.var_2201 == 1) {
             await Music.func099();
-            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛはﾚﾍﾞﾙ" + Gvar.current_level + "に上がった！", "", 7, true, false, false);
+            await Func.setMessage("ﾃﾞｨｱﾎﾞﾛはﾚﾍﾞﾙ" + Gvar.current_level + "に上がった！", "", 7, true, false, false);
             await Func.AutoDraw(5);
         }
         Gvar.var_2201 = 0;

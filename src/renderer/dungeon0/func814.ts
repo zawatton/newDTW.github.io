@@ -13,11 +13,11 @@ async function func814(this: any) {
             return;
         }
         if (Gvar.wallet < 1000) {
-            await Func.setMessage1("「おや…",
+            await Func.setMessage("「おや…",
                                     "  お金が足りないようです」", 7, true, false, true);
             Gvar.var_3190 = 1000 - Gvar.wallet;
             if (Gvar.var_3190 <= Gvar.var_1032) {
-                await Func.setMessage1("「口座のお金を足しますか？」",
+                await Func.setMessage("「口座のお金を足しますか？」",
                                         "", 7, false, false, true);
                 await Func.func050(); // メッセージをアニメーション風送り表示(連続描画)
                 Gvar.var_245 = 19;

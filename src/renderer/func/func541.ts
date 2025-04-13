@@ -27,7 +27,7 @@ async function func541(this: any) {
         Gvar.var_2446 = Gvar.var_81[Gvar.var_2442][6];
         await Func.func554();
         if (Gvar.var_888 != 19 && Gvar.var_888 != 97 && Gvar.var_81[Gvar.var_2442][0] != 80 && Gvar.var_81[Gvar.var_2442][0] != 82 && Gvar.var_81[Gvar.var_2442][0] != 84 && Gvar.var_81[Gvar.var_2442][0] != 85 && Gvar.var_81[Gvar.var_2442][0] != 86 && Gvar.var_81[Gvar.var_2442][0] != 87 && Gvar.var_81[Gvar.var_2442][0] != 88 && Gvar.var_81[Gvar.var_2442][0] != 89 && Gvar.var_81[Gvar.var_2442][0] != 90 && Gvar.var_81[Gvar.var_2442][0] != 91 && Gvar.var_81[Gvar.var_2442][0] != 92 && Gvar.var_81[Gvar.var_2442][0] != 93 && Gvar.var_81[Gvar.var_2442][0] != 94 && Gvar.var_81[Gvar.var_2442][0] != 79 || Gvar.var_81[Gvar.var_2442][0] == 78 || Gvar.var_81[Gvar.var_2442][0] == 77) {
-            await Func.setMessage1("" + Gvar.var_889 + "を踏んだ", "", 10, false, false, false);
+            await Func.setMessage("" + Gvar.var_889 + "を踏んだ", "", 10, false, false, false);
             if (Gvar.var_888 != 5) {
                 Adap.DSPLAY(165);
             }
@@ -37,18 +37,18 @@ async function func541(this: any) {
             }
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 80 || Gvar.var_81[Gvar.var_2442][0] == 82 || Gvar.var_81[Gvar.var_2442][0] == 84 || Gvar.var_81[Gvar.var_2442][0] == 86 || Gvar.var_81[Gvar.var_2442][0] == 87 || Gvar.var_81[Gvar.var_2442][0] == 88 || Gvar.var_81[Gvar.var_2442][0] == 89 || Gvar.var_81[Gvar.var_2442][0] == 90 || Gvar.var_81[Gvar.var_2442][0] == 91 || Gvar.var_81[Gvar.var_2442][0] == 92 || Gvar.var_81[Gvar.var_2442][0] == 93 || Gvar.var_81[Gvar.var_2442][0] == 94 || Gvar.var_81[Gvar.var_2442][0] == 79 || Gvar.var_81[Gvar.var_2442][0] == 81 || Gvar.var_81[Gvar.var_2442][0] == 78 || Gvar.var_81[Gvar.var_2442][0] == 77) {
-            await Func.setMessage1("地面を調べた。", "", 10, true, false, false);
+            await Func.setMessage("地面を調べた。", "", 10, true, false, false);
         }
         if (Gvar.var_888 == 97 || Gvar.var_888 == 19) {
-            await Func.setMessage1("地面に何か書いてある。", "", 10, true, false, false);
+            await Func.setMessage("地面に何か書いてある。", "", 10, true, false, false);
         }
         if (Gvar.var_888 == 85) {
-            await Func.setMessage1("幽霊部屋に入った。", "", 10, true, false, false);
+            await Func.setMessage("幽霊部屋に入った。", "", 10, true, false, false);
         }
         await Func.AutoDraw(10);
         // 時止め(時消し飛ばし)状態でない場合
         if (Gvar.sympathy_id == 139 && Gvar.var_545 == 0 && Gvar.time_paused == 0) {
-            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「キング・クリムゾン！」", "", 7, true, false, false);
+            await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「キング・クリムゾン！」", "", 7, true, false, false);
             Gvar.time_paused = 1; // 時止め(時消し飛ばし)状態フラグON
             Adap.DSPLAY(185);
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
@@ -59,8 +59,8 @@ async function func541(this: any) {
             }
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1491 = 0;
-            await Func.setMessage1("未来という目の前に………", "「" + Gvar.var_889 + "」を見つけ！", 7, true, false, false);
-            await Func.setMessage1("それに引っかかる事がなければ", "「絶頂」のままでいられる  わたしは！…", 7, true, false, false);
+            await Func.setMessage("未来という目の前に………", "「" + Gvar.var_889 + "」を見つけ！", 7, true, false, false);
+            await Func.setMessage("それに引っかかる事がなければ", "「絶頂」のままでいられる  わたしは！…", 7, true, false, false);
             await Func.AutoDraw(10);
             Gvar.time_paused = 0; // 時止め(時消し飛ばし)状態フラグOFF
             return;
@@ -87,10 +87,10 @@ async function func541(this: any) {
         }
         if (Gvar.var_2447 == 0) {
             if (Gvar.var_81[Gvar.var_2442][0] == 19) {
-                await Func.setMessage1("", "しかし何も起こらなかった…", 7, false, false, false);
+                await Func.setMessage("", "しかし何も起こらなかった…", 7, false, false, false);
             }
             else {
-                await Func.setMessage1("", "しかし読まなかった。", 7, false, false, false);
+                await Func.setMessage("", "しかし読まなかった。", 7, false, false, false);
             }
             await Func.AutoDraw(10);
             return;
@@ -111,13 +111,13 @@ async function func541(this: any) {
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1593 = 0;
             Gvar.var_81[Gvar.var_2442][3] = 0;
-            await Func.setMessage1("", "精神力が退化してしまった！", 7, false, false, false);
+            await Func.setMessage("", "精神力が退化してしまった！", 7, false, false, false);
             Adap.DSPLAY(164);
             await Func.AutoDraw(10);
             Gvar.var_108 = 0;
             if (Gvar.equip_disc[207] == 1) {
                 Adap.DSPLAY(163);
-                await Func.setMessage1("と思ったが、装備中のDISCによって", "若返りを防いだ！", 7, false, false, false);
+                await Func.setMessage("と思ったが、装備中のDISCによって", "若返りを防いだ！", 7, false, false, false);
             }
             if (Gvar.equip_disc[207] == 0) {
                 Gvar.var_565 = Gvar.var_565 - 1;
@@ -163,7 +163,7 @@ async function func541(this: any) {
                     Gvar.var_2450++;
                 }
                 if (Gvar.var_2449 != 0) {
-                    await Func.setMessage1("", "識別したｱｲﾃﾑを１つ忘れてしまった！", 7, false, false, false);            
+                    await Func.setMessage("", "識別したｱｲﾃﾑを１つ忘れてしまった！", 7, false, false, false);            
                     Adap.DSPLAY(164);
                 }
                 if (Gvar.var_2449 == 0) {
@@ -177,7 +177,7 @@ async function func541(this: any) {
                 }
             }
             if (Gvar.var_179 == 0) {
-                await Func.setMessage1("", "地形とｱｲﾃﾑの位置を忘れてしまった！", 7, false, false, false);        
+                await Func.setMessage("", "地形とｱｲﾃﾑの位置を忘れてしまった！", 7, false, false, false);        
                 Gvar.var_74 = Adap.dim(70, 70, Gvar.length3 = null, null);
                 Gvar.var_75 = Adap.dim(20);
                 Gvar.var_98 = 0;
@@ -232,7 +232,7 @@ async function func541(this: any) {
                 Gvar.var_356 = 230;
                 Gvar.var_199 = 2;
             }
-            await Func.setMessage1("", "" + Gvar.var_2455 + "のダメージをうけた！", 7, false, false, false);
+            await Func.setMessage("", "" + Gvar.var_2455 + "のダメージをうけた！", 7, false, false, false);
             await Func.AutoDraw(11);
         }
         // No = 4 アンダーワールドの罠を踏んだ時の動作処理
@@ -241,7 +241,7 @@ async function func541(this: any) {
             await Func.AutoDraw(10);
             Gvar.var_108 = 0;
             Gvar.var_81[Gvar.var_2442][3] = 0;
-            await Func.setMessage1("", "地面の記憶を呼び出した！", 7, false, false, false);
+            await Func.setMessage("", "地面の記憶を呼び出した！", 7, false, false, false);
             Adap.DSPLAY(166);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 await Func.func337(); // メッセージ表示処理(自動)
@@ -260,7 +260,7 @@ async function func541(this: any) {
                 await Func.func536();
             }
             Gvar.var_768 = 0;
-            await Func.setMessage1("罠がたくさん現れたようだ…", "", 7, false, false, false);
+            await Func.setMessage("罠がたくさん現れたようだ…", "", 7, false, false, false);
             await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             await Func.AutoDraw(10);
             Gvar.var_80[Gvar.var_66][Gvar.var_67] = 0;
@@ -270,7 +270,7 @@ async function func541(this: any) {
         }
         // No = 5 猫袋の罠を踏んだ時の動作処理
         if (Gvar.var_81[Gvar.var_2442][0] == 5) {
-            await Func.setMessage1("", "「ボ ﾑ ギ ！」", 7, false, false, false);
+            await Func.setMessage("", "「ボ ﾑ ギ ！」", 7, false, false, false);
             await Func.AutoDraw(20);
             Gvar.var_2456 = 1;
             Gvar.var_1845 = 1;
@@ -279,11 +279,11 @@ async function func541(this: any) {
             Gvar.var_2456 = 0;
             Gvar.var_1845 = 0;
             if (Gvar.var_2110 == 0) {
-                await Func.setMessage1("しかし何も起こらなかった。", "", 7, false, false, false);
+                await Func.setMessage("しかし何も起こらなかった。", "", 7, false, false, false);
             }
             if (Gvar.var_2110 == 1) {
                 await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-                await Func.setMessage1("俺のネコ殺しといて", "タダで行っちまうつもりかよ！", 7, false, false, false);
+                await Func.setMessage("俺のネコ殺しといて", "タダで行っちまうつもりかよ！", 7, false, false, false);
                 Gvar.var_80[Gvar.var_66][Gvar.var_67] = 0;
                 Gvar.var_81[Gvar.var_2442][0] = 0;
                 Gvar.var_81[Gvar.var_2442][1] = 0;
@@ -314,7 +314,7 @@ async function func541(this: any) {
                     await Func.func337(); // メッセージ表示処理(自動)
                     Gvar.var_1543++;
                 }
-                await Func.setMessage1("", "下の階に引きずり込まれた！", 7, false, false, false);
+                await Func.setMessage("", "下の階に引きずり込まれた！", 7, false, false, false);
                 Adap.DSPLAY(135);
                 for (let cnt3 = 0; cnt3 < 8; ++cnt3) {
                     await Func.func337(); // メッセージ表示処理(自動)
@@ -333,7 +333,7 @@ async function func541(this: any) {
                     await Func.func337(); // メッセージ表示処理(自動)
                     Gvar.var_1544++;
                 }
-                await Func.setMessage1("", "「ブーーーン」", 7, false, false, false);
+                await Func.setMessage("", "「ブーーーン」", 7, false, false, false);
                 for (let cnt3 = 0; cnt3 < 13; ++cnt3) {
                     await Func.func337(); // メッセージ表示処理(自動)
                     Gvar.var_1544++;
@@ -382,9 +382,9 @@ async function func541(this: any) {
                 Gvar.var_356 = 231;
                 Gvar.var_199 = 2;
             }
-            await Func.setMessage1("", "巨大な岩に押しつぶされた！", 7, false, false, false);
+            await Func.setMessage("", "巨大な岩に押しつぶされた！", 7, false, false, false);
             if (Gvar.shageki_disc_id == 403) {
-                await Func.setMessage1("しかし、装備中のDISCのおかげで", "ダメージが少なかった。", 7, true, false, false);
+                await Func.setMessage("しかし、装備中のDISCのおかげで", "ダメージが少なかった。", 7, true, false, false);
             }
             await Func.AutoDraw(14);
             Gvar.var_81[Gvar.var_2442][3] = 0;
@@ -398,7 +398,7 @@ async function func541(this: any) {
             Gvar.var_1212 = 1;
             Gvar.var_128 = 1;
             Adap.DSPLAY(126);
-            await Func.setMessage1("", "体が凍ってしまった！", 7, false, false, false);
+            await Func.setMessage("", "体が凍ってしまった！", 7, false, false, false);
             Adap.DSPLAY(126);
             await Func.AutoDraw(10);
             Gvar.var_108 = 0;
@@ -407,17 +407,17 @@ async function func541(this: any) {
             if (Gvar.nouryoku_disc_id == 109 || Gvar.nouryoku_disc_id == 202 || Gvar.shageki_disc_id == 404 || Gvar.var_173 == 1) {
                 Gvar.var_128 = 0;
                 if (Gvar.nouryoku_disc_id == 109 || Gvar.nouryoku_disc_id == 202 || Gvar.shageki_disc_id == 404) {
-                    await Func.setMessage1("しかし、装備中のDISCのおかげで", "氷漬けを解除できた。", 7, true, false, false);
+                    await Func.setMessage("しかし、装備中のDISCのおかげで", "氷漬けを解除できた。", 7, true, false, false);
                 }
                 if (Gvar.var_173 == 1) {
-                    await Func.setMessage1("しかし、冷たいのに強くなっていて", "氷漬けを解除できた。", 7, true, false, false);
+                    await Func.setMessage("しかし、冷たいのに強くなっていて", "氷漬けを解除できた。", 7, true, false, false);
                 }
             }
         }
         // No = 9, 31 エコーズACT2の罠(ボヨヨン)を踏んだ時の動作処理
         if (Gvar.var_81[Gvar.var_2442][0] == 9 || Gvar.var_81[Gvar.var_2442][0] == 31) {
             Gvar.var_300 = 0;
-            await Func.setMessage1("", "地面に「ボョヨオン」と書かれていた！", 7, false, false, false);
+            await Func.setMessage("", "地面に「ボョヨオン」と書かれていた！", 7, false, false, false);
             await Func.AutoDraw(15);
             Adap.DSPLAY(169);
             Gvar.var_81[Gvar.var_2442][3] = 1;
@@ -459,7 +459,7 @@ async function func541(this: any) {
             }
             Gvar.var_1598 = 0;
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
-            await Func.setMessage1("", "地面に固定された！", 7, false, false, false);
+            await Func.setMessage("", "地面に固定された！", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_108 = 0;
             Gvar.var_81[Gvar.var_2442][3] = 0;
@@ -488,7 +488,7 @@ async function func541(this: any) {
                 Gvar.var_356 = 232;
                 Gvar.var_199 = 2;
             }
-            await Func.setMessage1("", "" + Gvar.var_2455 + "のダメージをうけた！", 7, false, false, false);
+            await Func.setMessage("", "" + Gvar.var_2455 + "のダメージをうけた！", 7, false, false, false);
             await Func.AutoDraw(5);
             if (Gvar.var_224 == 0) {
                 await Func.func540();
@@ -623,10 +623,10 @@ async function func541(this: any) {
                 if (Gvar.equip_disc[119] == 0) {
                     await Music.func100();
                 }
-                await Func.setMessage1("" + Gvar.target_item_name + "が壊された！", "", 7, false, false, false);
+                await Func.setMessage("" + Gvar.target_item_name + "が壊された！", "", 7, false, false, false);
                 await Func.AutoDraw(5);
                 if (Gvar.equip_disc[119] == 1) {
-                    await Func.setMessage1("…と思ったが、ｽﾊﾟｲｽｶﾞｰﾙで", "柔らかくして防いだ！", 7, true, false, false);
+                    await Func.setMessage("…と思ったが、ｽﾊﾟｲｽｶﾞｰﾙで", "柔らかくして防いだ！", 7, true, false, false);
                 }
                 await Func.AutoDraw(5);
             }
@@ -636,7 +636,7 @@ async function func541(this: any) {
             Gvar.var_81[Gvar.var_2442][3] = 1;
             Gvar.var_108 = 1;
             Gvar.var_300 = 0;
-            await Func.setMessage1("", "「ロードローラーだッ！」", 7, false, false, false);
+            await Func.setMessage("", "「ロードローラーだッ！」", 7, false, false, false);
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1536 = 1;
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {
@@ -778,7 +778,7 @@ async function func541(this: any) {
             Gvar.var_2195 = 0;
             if (Gvar.var_211 != 0) {
                 if (Gvar.nouryoku_disc_id == 100 || Gvar.nouryoku_disc_id == 398) {
-                    await Func.setMessage1("しかし、ｽﾀｰﾌﾟﾗﾁﾅのｶﾞｰﾄﾞのおかげで", "ダメージを抑えられた！", 7, true, false, false);
+                    await Func.setMessage("しかし、ｽﾀｰﾌﾟﾗﾁﾅのｶﾞｰﾄﾞのおかげで", "ダメージを抑えられた！", 7, true, false, false);
                 }
             }
             Gvar.var_108 = 0;
@@ -798,7 +798,7 @@ async function func541(this: any) {
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1537 = 0;
             Gvar.var_300 = 0;
-            await Func.setMessage1("", "まぶたがスト――ンと落ちてきた！", 7, false, false, false);
+            await Func.setMessage("", "まぶたがスト――ンと落ちてきた！", 7, false, false, false);
             Adap.DSPLAY(153);
             Gvar.var_108 = 0;
             Gvar.var_81[Gvar.var_2442][3] = 0;
@@ -836,7 +836,7 @@ async function func541(this: any) {
             }
             Gvar.var_81[Gvar.var_2442][3] = 1;
             Gvar.var_108 = 1;
-            await Func.setMessage1("", "地面に「ドジュｩウ」と書かれていた！", 7, false, false, false);
+            await Func.setMessage("", "地面に「ドジュｩウ」と書かれていた！", 7, false, false, false);
             Adap.DSPLAY(175);
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_458 = 1;
@@ -847,10 +847,10 @@ async function func541(this: any) {
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_458 = 0;
             if (Gvar.var_2460 == 1) {
-                await Func.setMessage1("食べ物がすべて焦げてしまった！", "", 7, false, false, false);
+                await Func.setMessage("食べ物がすべて焦げてしまった！", "", 7, false, false, false);
             }
             if (Gvar.var_2460 == 0) {
-                await Func.setMessage1("しかし何も起こらなかった。", "", 7, false, false, false);
+                await Func.setMessage("しかし何も起こらなかった。", "", 7, false, false, false);
             }
             Gvar.var_108 = 0;
             Gvar.var_81[Gvar.var_2442][3] = 0;
@@ -860,7 +860,7 @@ async function func541(this: any) {
         if (Gvar.var_81[Gvar.var_2442][0] == 15) {
             Gvar.var_108 = 1;
             Gvar.var_81[Gvar.var_2442][3] = 1;
-            await Func.setMessage1("", "", 7, false, false, false);
+            await Func.setMessage("", "", 7, false, false, false);
             Adap.DSPLAY(161);
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1542 = 1;
@@ -873,7 +873,7 @@ async function func541(this: any) {
                 Gvar.var_2462 = 99;
             }
             if (Gvar.var_2462 == 99) {
-                await Func.setMessage1("見えなくて平気だった", "", 7, true, false, false);
+                await Func.setMessage("見えなくて平気だった", "", 7, true, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_108 = 0;
                 Gvar.var_81[Gvar.var_2442][3] = 0;
@@ -892,16 +892,16 @@ async function func541(this: any) {
                 }
                 Gvar.var_1073 = Adap.rnd(3);
                 if (Gvar.var_1073 == 0) {
-                    await Func.setMessage1("「今すぐ装備DISCを全てはずす！」", "と書き込まれた", 7, false, false, false);
+                    await Func.setMessage("「今すぐ装備DISCを全てはずす！」", "と書き込まれた", 7, false, false, false);
                 }
                 if (Gvar.var_1073 == 1) {
-                    await Func.setMessage1("「思うように動けなくなる！」", "と書き込まれた", 7, false, false, false);
+                    await Func.setMessage("「思うように動けなくなる！」", "と書き込まれた", 7, false, false, false);
                 }
                 if (Gvar.var_1073 == 2) {
-                    await Func.setMessage1("「私は焼身自殺します」", "と書き込まれた", 7, false, false, false);
+                    await Func.setMessage("「私は焼身自殺します」", "と書き込まれた", 7, false, false, false);
                 }
                 if (Gvar.var_1073 == 3) {
-                    await Func.setMessage1("「何も見えなくなってすっ飛ぶ！」", "と書き込まれた", 7, false, false, false);
+                    await Func.setMessage("「何も見えなくなってすっ飛ぶ！」", "と書き込まれた", 7, false, false, false);
                 }
                 Adap.DSPLAY(118);
                 await Func.AutoDraw(10);
@@ -909,10 +909,10 @@ async function func541(this: any) {
                 await Func.AutoDraw(5);
                 Gvar.var_1073 = Adap.rnd(2);
                 if (Gvar.var_1073 == 0) {
-                    await Func.setMessage1("しかし無理やり「体力が回復する！」", "と書き換えた！", 7, false, false, false);
+                    await Func.setMessage("しかし無理やり「体力が回復する！」", "と書き換えた！", 7, false, false, false);
                 }
                 if (Gvar.var_1073 == 1) {
-                    await Func.setMessage1("しかし無理やり「満腹度が回復する！」", "と書き換えた！", 7, false, false, false);
+                    await Func.setMessage("しかし無理やり「満腹度が回復する！」", "と書き換えた！", 7, false, false, false);
                 }
                 if (Gvar.var_1073 == 0) {
                     Gvar.var_211 = Gvar.var_352;
@@ -953,10 +953,10 @@ async function func541(this: any) {
                     Gvar.var_1542++;
                 }
                 if (Gvar.var_2463 == 0) {
-                    await Func.setMessage1("「今すぐ装備DISCを全てはずす！」", "と書き込まれた", 7, false, false, false);
+                    await Func.setMessage("「今すぐ装備DISCを全てはずす！」", "と書き込まれた", 7, false, false, false);
                 }
                 if (Gvar.var_2463 == 1) {
-                    await Func.setMessage1("「思うように動けなくなる！」", "と書き込まれた", 7, false, false, false);
+                    await Func.setMessage("「思うように動けなくなる！」", "と書き込まれた", 7, false, false, false);
                     Gvar.var_126 = 1;
                     Gvar.var_166 = 0;
                 }
@@ -1003,14 +1003,14 @@ async function func541(this: any) {
                     Gvar.var_1542++;
                 }
                 Adap.DSPLAY(118);
-                await Func.setMessage1("恥ずかしい記憶を読まれた…", "", 7, true, false, false);
+                await Func.setMessage("恥ずかしい記憶を読まれた…", "", 7, true, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_108 = 0;
                 Gvar.var_81[Gvar.var_2442][3] = 0;
                 Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                 Gvar.var_1542 = 0;
                 Adap.DSPLAY(164);
-                await Func.setMessage1("精神力が下がってしまった。", "", 7, false, false, false);
+                await Func.setMessage("精神力が下がってしまった。", "", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_565 = Gvar.var_565 - 1;
                 if (Gvar.var_565 < 0) {
@@ -1025,7 +1025,7 @@ async function func541(this: any) {
                     Gvar.var_1542++;
                 }
                 Adap.DSPLAY(118);
-                await Func.setMessage1("「私は焼身自殺します」", "と書き込まれた", 7, true, false, false);
+                await Func.setMessage("「私は焼身自殺します」", "と書き込まれた", 7, true, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_108 = 0;
                 Gvar.var_81[Gvar.var_2442][3] = 0;
@@ -1065,7 +1065,7 @@ async function func541(this: any) {
                     Gvar.var_1542++;
                 }
                 Adap.DSPLAY(118);
-                await Func.setMessage1("「何も見えなくなってすっ飛ぶ！」", "と書き込まれた", 7, true, false, false);
+                await Func.setMessage("「何も見えなくなってすっ飛ぶ！」", "と書き込まれた", 7, true, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_108 = 0;
                 Gvar.var_81[Gvar.var_2442][3] = 0;
@@ -1082,7 +1082,7 @@ async function func541(this: any) {
             Gvar.var_108 = 1;
             await Func.AutoDraw(10);
             Adap.DSPLAY(134);
-            await Func.setMessage1("", "思うように動けなくなった！", 7, false, false, false);
+            await Func.setMessage("", "思うように動けなくなった！", 7, false, false, false);
             await Func.AutoDraw(15);
             Gvar.var_108 = 0;
             Gvar.var_81[Gvar.var_2442][3] = 0;
@@ -1092,7 +1092,7 @@ async function func541(this: any) {
                 Gvar.var_126 = 0;
                 await Func.AutoDraw(10);
                 Adap.DSPLAY(163);
-                await Func.setMessage1("と思ったが、装備中のDISCに反応して", "能力が解除された！", 7, false, false, false);
+                await Func.setMessage("と思ったが、装備中のDISCに反応して", "能力が解除された！", 7, false, false, false);
             }
         }
         // No = 17 バッドカンパニーの地雷を踏んだ時の動作処理
@@ -1116,11 +1116,11 @@ async function func541(this: any) {
                 Gvar.var_356 = 234;
                 Gvar.var_199 = 2;
             }
-            await Func.setMessage1("", "5のダメージをうけた！", 7, false, false, false);
+            await Func.setMessage("", "5のダメージをうけた！", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_108 = 0;
             if (Gvar.equip_disc[396] == 0) {
-                await Func.setMessage1("足を負傷して 動きが遅くなってしまった！", "", 7, false, false, false);
+                await Func.setMessage("足を負傷して 動きが遅くなってしまった！", "", 7, false, false, false);
                 if (Gvar.var_157 == 0) { // Gvar.var_157 倍速移動フラグOFF
                     Gvar.var_133 = 1;
                     Gvar.var_397 = 0;
@@ -1131,7 +1131,7 @@ async function func541(this: any) {
                 }
             }
             if (Gvar.equip_disc[396] == 1) {
-                await Func.setMessage1("足を負傷したが、", "装備ｽﾀﾝﾄﾞの効果で速度は変わらない！", 7, false, false, false);
+                await Func.setMessage("足を負傷したが、", "装備ｽﾀﾝﾄﾞの効果で速度は変わらない！", 7, false, false, false);
             }
         }
         // No = 18 バステト女神の罠を踏んだ時の動作処理
@@ -1144,13 +1144,13 @@ async function func541(this: any) {
             await Func.AutoDraw(10);
             Gvar.var_108 = 0;
             if (Gvar.var_140 == 1) {
-                await Func.setMessage1("", "磁力体質になってしまった！", 7, false, false, false);
+                await Func.setMessage("", "磁力体質になってしまった！", 7, false, false, false);
             }
             if (Gvar.var_140 >= 2 && Gvar.var_140 <= 6) {
-                await Func.setMessage1("", "磁力がさらに強くなった！", 7, false, false, false);
+                await Func.setMessage("", "磁力がさらに強くなった！", 7, false, false, false);
             }
             if (Gvar.var_140 == 7 && Gvar.equip_disc[396] == 0) {
-                await Func.setMessage1("", "磁力が強力すぎて体が重い！", 7, false, false, false);
+                await Func.setMessage("", "磁力が強力すぎて体が重い！", 7, false, false, false);
                 Gvar.var_157 = 0; // Gvar.var_157 倍速移動フラグOFF
                 Gvar.var_158 = 0;
                 Gvar.var_133 = 1;
@@ -1163,7 +1163,7 @@ async function func541(this: any) {
             await Func.AutoDraw(10);
             if (Gvar.equip_disc[320] == 1) {
                 Adap.DSPLAY(163);
-                await Func.setMessage1("しかし、ﾒﾀﾘｶのDISCのおかげで", "磁力を解除できた。", 7, true, false, false);
+                await Func.setMessage("しかし、ﾒﾀﾘｶのDISCのおかげで", "磁力を解除できた。", 7, true, false, false);
                 Gvar.var_140 = 0;
             }
             if (Gvar.var_140 >= 1) {
@@ -1180,7 +1180,7 @@ async function func541(this: any) {
             Gvar.var_1845 = 0;
             Gvar.var_2465 = 0;
             if (Gvar.var_1731 == 0) {
-                await Func.setMessage1("", "「LUCKY LAND COMMUNICATIONS」", 7, false, false, false);
+                await Func.setMessage("", "「LUCKY LAND COMMUNICATIONS」", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_81[Gvar.var_2442][3] = 0;
                 Gvar.var_108 = 0;
@@ -1189,10 +1189,10 @@ async function func541(this: any) {
                 Gvar.var_81[Gvar.var_2442][2] = 0;
                 return;
             }
-            await Func.setMessage1("", "", 7, true, false, false);
+            await Func.setMessage("", "", 7, true, false, false);
             Adap.DSPLAY(173);
-            await Func.setMessage1("    このラクガキを見て    うしろを", "    ふり向いた時    おまえらは", 7, true, false, false);
-            await Func.setMessage1("", "                      死ぬ", 7, false, false, false);
+            await Func.setMessage("    このラクガキを見て    うしろを", "    ふり向いた時    おまえらは", 7, true, false, false);
+            await Func.setMessage("", "                      死ぬ", 7, false, false, false);
             Adap.DSPLAY(173);
             Adap.DSPLAY(178);
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
@@ -1215,7 +1215,7 @@ async function func541(this: any) {
         if (Gvar.var_81[Gvar.var_2442][0] == 20) {
             Gvar.var_81[Gvar.var_2442][3] = 1;
             await Func.AutoDraw(10);
-            await Func.setMessage1("", "地面に「ドヒュｩウ」と書かれていた！", 7, false, false, false);
+            await Func.setMessage("", "地面に「ドヒュｩウ」と書かれていた！", 7, false, false, false);
             await Func.AutoDraw(10);
             await Func.func529();
             Gvar.var_81[Gvar.var_2442][3] = 0;
@@ -1225,10 +1225,10 @@ async function func541(this: any) {
             Gvar.var_81[Gvar.var_2442][3] = 1;
             Gvar.var_108 = 1;
             Adap.DSPLAY(173);
-            await Func.setMessage1("", "「チュミミ～～～ン！」", 7, false, false, false);
+            await Func.setMessage("", "「チュミミ～～～ン！」", 7, false, false, false);
             await Func.AutoDraw(10);
             Adap.DSPLAY(173);
-            await Func.setMessage1("ｴﾝﾌﾟﾚｽ「ﾃﾞｨｱﾎﾞﾛはここよッ！", "      ここにいるわよォ―――ッ」", 7, true, false, false);
+            await Func.setMessage("ｴﾝﾌﾟﾚｽ「ﾃﾞｨｱﾎﾞﾛはここよッ！", "      ここにいるわよォ―――ッ」", 7, true, false, false);
             await Func.AutoDraw(3);
             Gvar.var_108 = 0;
             Gvar.var_390 = 1;
@@ -1237,13 +1237,13 @@ async function func541(this: any) {
                 Gvar.var_390 = Gvar.var_390 + 1;
             }
             Gvar.var_81[Gvar.var_2442][3] = 0;
-            await Func.setMessage1("フロアの敵が全員 目を覚ました！", "", 7, false, false, false);
+            await Func.setMessage("フロアの敵が全員 目を覚ました！", "", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         // No = 22 ハイウェイ・スターの罠を踏んだ時の動作処理
         if (Gvar.var_81[Gvar.var_2442][0] == 22) {
             Gvar.var_108 = 1;
-            await Func.setMessage1("", "", 7, false, false, false);
+            await Func.setMessage("", "", 7, false, false, false);
             Adap.DSPLAY(161);
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1481 = 1;
@@ -1254,7 +1254,7 @@ async function func541(this: any) {
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1481 = 0;
             if (Gvar.equip_disc[352] == 0) {
-                await Func.setMessage1("養分を吸い取られて、", "お腹がとても減ってしまった！", 7, false, false, false);
+                await Func.setMessage("養分を吸い取られて、", "お腹がとても減ってしまった！", 7, false, false, false);
                 Adap.DSPLAY(129);
                 Gvar.var_350 = Gvar.var_350 - 20;
                 if (Gvar.var_350 <= 0) {
@@ -1262,7 +1262,7 @@ async function func541(this: any) {
                 }
             }
             if (Gvar.equip_disc[352] == 1) {
-                await Func.setMessage1("しかし装備DISCの効果によって", "腹ヘリを防いだ！", 7, false, false, false);
+                await Func.setMessage("しかし装備DISCの効果によって", "腹ヘリを防いだ！", 7, false, false, false);
             }
             await Func.AutoDraw(10);
             Gvar.var_108 = 0;
@@ -1276,8 +1276,8 @@ async function func541(this: any) {
                 Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
                 Gvar.var_1529 = 1;
                 await Func.AutoDraw(3);
-                await Func.setMessage1("", "「奪うのは！」", 7, true, false, false);
-                await Func.setMessage1("「ジオシュッターを先に殺してからで", "  いいって事だァァ―――――――ッ」", 7, true, false, false);
+                await Func.setMessage("", "「奪うのは！」", 7, true, false, false);
+                await Func.setMessage("「ジオシュッターを先に殺してからで", "  いいって事だァァ―――――――ッ」", 7, true, false, false);
                 Adap.DSPLAY(174);
                 Gvar.var_774 = 160;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
@@ -1300,7 +1300,7 @@ async function func541(this: any) {
             }
             Gvar.var_2467 = 0;
             if (Gvar.var_224 == 0) {
-                await Func.setMessage1("", "しかし何も起こらなかった…", 7, false, false, false);
+                await Func.setMessage("", "しかし何も起こらなかった…", 7, false, false, false);
                 return;
             }
             Gvar.var_1531 = 0;
@@ -1320,9 +1320,9 @@ async function func541(this: any) {
             await Func.func492(); // アイテムリスト呼び出し
             Gvar.var_2469 = Gvar.item_name;
             Gvar.var_300 = 0;
-            await Func.setMessage1("", "" + Gvar.var_2469 + "を釣られた！", 7, false, false, false);
+            await Func.setMessage("", "" + Gvar.var_2469 + "を釣られた！", 7, false, false, false);
             if (Gvar.var_1531 == 0) {
-                await Func.setMessage1("", "しかし何も起こらなかった…", 7, false, false, false);
+                await Func.setMessage("", "しかし何も起こらなかった…", 7, false, false, false);
             }
             if (Gvar.var_1531 == 0) {
                 return;
@@ -1378,7 +1378,7 @@ async function func541(this: any) {
             if (Gvar.var_233[Gvar.var_1531].Var0 >= 800 && Gvar.var_233[Gvar.var_1531].Var0 < 900) {
                 Gvar.var_2458 = 1;
                 if (Gvar.equip_disc[119] == 1 && Gvar.var_2458 == 1) {
-                    await Func.setMessage1("破壊されそうになったが", "柔らかくしていて平気だった。", 7, true, false, false);
+                    await Func.setMessage("破壊されそうになったが", "柔らかくしていて平気だった。", 7, true, false, false);
                     await Func.AutoDraw(10);
                     Gvar.var_2458 = 0;
                 }
@@ -1541,10 +1541,10 @@ async function func541(this: any) {
                 await Func.func018();
                 await Music.func100();
                 if (Gvar.var_2467 == 1) {
-                    await Func.setMessage1("" + Gvar.var_2469 + "は破壊され", "中身をバラ撒かれた。", 7, true, false, false);
+                    await Func.setMessage("" + Gvar.var_2469 + "は破壊され", "中身をバラ撒かれた。", 7, true, false, false);
                 }
                 if (Gvar.var_2467 == 0) {
-                    await Func.setMessage1("限界なく明るくなるッ！！", "", 7, true, false, false);
+                    await Func.setMessage("限界なく明るくなるッ！！", "", 7, true, false, false);
                 }
                 Gvar.var_2467 = 0;
                 await Func.AutoDraw(10);
@@ -1555,7 +1555,7 @@ async function func541(this: any) {
         // No = 24 リンプ・ビズキットの罠を踏んだ時の動作処理
         if (Gvar.var_81[Gvar.var_2442][0] == 24) {
             Gvar.var_108 = 1;
-            await Func.setMessage1("透明な何者かを呼んでしまった！", "", 7, false, false, false);
+            await Func.setMessage("透明な何者かを呼んでしまった！", "", 7, false, false, false);
             Adap.DSPLAY(170);
             await Func.AutoDraw(10);
             Gvar.var_108 = 0;
@@ -1590,7 +1590,7 @@ async function func541(this: any) {
                 Gvar.var_356 = 261;
                 Gvar.var_199 = 2;
             }
-            await Func.setMessage1("", "10のダメージを受けた", 7, false, false, false);
+            await Func.setMessage("", "10のダメージを受けた", 7, false, false, false);
             await Func.AutoDraw(5);
             Gvar.var_81[Gvar.var_2442][3] = 0;
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
@@ -1669,15 +1669,15 @@ async function func541(this: any) {
                 await Func.func492(); // アイテムリスト呼び出し
             }
             if (Gvar.var_2473 == 1) {
-                await Func.setMessage1("スタンドが溶かされている！", "", 7, true, false, false);
+                await Func.setMessage("スタンドが溶かされている！", "", 7, true, false, false);
                 Adap.DSPLAY(164);
-                await Func.setMessage1("" + Gvar.item_name + "は", "弱くなってしまった…", 7, true, false, false);
+                await Func.setMessage("" + Gvar.item_name + "は", "弱くなってしまった…", 7, true, false, false);
             }
             if (Gvar.var_2473 == 2) {
-                await Func.setMessage1("スタンドが溶かされそうになったが", "装備中のラットの能力で無事だった。", 7, true, false, false);
+                await Func.setMessage("スタンドが溶かされそうになったが", "装備中のラットの能力で無事だった。", 7, true, false, false);
             }
             if (Gvar.var_2473 == 3) {
-                await Func.setMessage1("スタンドが溶かされそうになったが", "漆黒のオーラに包まれていて無事だった", 7, true, false, false);
+                await Func.setMessage("スタンドが溶かされそうになったが", "漆黒のオーラに包まれていて無事だった", 7, true, false, false);
             }
             await Func.AutoDraw(10);
             Gvar.var_108 = 0;
@@ -1686,7 +1686,7 @@ async function func541(this: any) {
         if (Gvar.var_81[Gvar.var_2442][0] == 26) {
             Gvar.var_108 = 1;
             Gvar.var_81[Gvar.var_2442][3] = 1;
-            await Func.setMessage1("", "", 7, false, false, false);
+            await Func.setMessage("", "", 7, false, false, false);
             Gvar.var_2463 = 0;
             if (Gvar.kougeki_disc_id  == 0 && Gvar.bougyo_disc_id == 0 && Gvar.nouryoku_disc_id == 0 && Gvar.shageki_disc_id != 0) {
                 Gvar.var_2463 = 99;
@@ -1727,7 +1727,7 @@ async function func541(this: any) {
                     Gvar.belongings_item_list = 401;
                     await Music.func106(); // BGM選曲呼び出し割り振り
                 }
-                await Func.setMessage1("ﾌｰ･ﾌｧｲﾀｰｽﾞのDISCを外された！", "", 7, false, false, false);
+                await Func.setMessage("ﾌｰ･ﾌｧｲﾀｰｽﾞのDISCを外された！", "", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_1262 = 0;
                 Gvar.var_81[Gvar.var_2442][3] = 0;
@@ -1742,16 +1742,16 @@ async function func541(this: any) {
                 await Music.func106(); // BGM選曲呼び出し割り振り
             }
             if (Gvar.var_2463 == 0) {
-                await Func.setMessage1("装備が全て外れてしまった！", "", 7, false, false, false);
+                await Func.setMessage("装備が全て外れてしまった！", "", 7, false, false, false);
             }
             if (Gvar.var_2463 == 1) {
-                await Func.setMessage1("しかし何も起こらなかった。", "", 7, false, false, false);
+                await Func.setMessage("しかし何も起こらなかった。", "", 7, false, false, false);
             }
             if (Gvar.var_2463 == 2) {
-                await Func.setMessage1("しかし装備DISCの効果によって", "DISCを抜き取られなかった。", 7, false, false, false);
+                await Func.setMessage("しかし装備DISCの効果によって", "DISCを抜き取られなかった。", 7, false, false, false);
             }
             if (Gvar.var_2463 == 99) {
-                await Func.setMessage1("装備が全て外れてしまった！", "", 7, false, false, false);
+                await Func.setMessage("装備が全て外れてしまった！", "", 7, false, false, false);
             }
             await Func.AutoDraw(10);
             Gvar.var_1262 = 0;
@@ -1785,7 +1785,7 @@ async function func541(this: any) {
             Gvar.var_108 = 1;
             await Func.AutoDraw(10);
             if (Gvar.var_224 == 0) {
-                await Func.setMessage1("しかし何も起こらなかった…", "", 7, false, false, false);
+                await Func.setMessage("しかし何も起こらなかった…", "", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_81[Gvar.var_2442][3] = 0;
                 Gvar.var_108 = 0;
@@ -1797,7 +1797,7 @@ async function func541(this: any) {
             Gvar.var_1845 = 0;
             Gvar.var_1470 = 0;
             if (Gvar.var_2110 == 0) {
-                await Func.setMessage1("しかし何も起こらなかった…", "", 7, false, false, false);
+                await Func.setMessage("しかし何も起こらなかった…", "", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_81[Gvar.var_2442][3] = 0;
                 Gvar.var_108 = 0;
@@ -1843,11 +1843,11 @@ async function func541(this: any) {
                 }
                 Gvar.var_480 = Gvar.var_480 + 1;
             }
-            await Func.setMessage1("オマエがコノダンジョンで", "カッテに拾ッタアイテムの価値ハ！", 7, true, false, false);
+            await Func.setMessage("オマエがコノダンジョンで", "カッテに拾ッタアイテムの価値ハ！", 7, true, false, false);
             await Func.AutoDraw(2);
-            await Func.setMessage1("合計で", "" + Gvar.payment_amount + " G！", 7, true, false, false);
+            await Func.setMessage("合計で", "" + Gvar.payment_amount + " G！", 7, true, false, false);
             await Func.AutoDraw(2);
-            await Func.setMessage1("スベテ支払ってモラウ！", "", 7, true, false, false);
+            await Func.setMessage("スベテ支払ってモラウ！", "", 7, true, false, false);
             await Func.AutoDraw(2);
             Gvar.var_169 = Gvar.payment_amount;
             await Func.AutoDraw(10);
@@ -1864,7 +1864,7 @@ async function func541(this: any) {
             await Func.AutoDraw(3);
             if (Gvar.var_224 == 0) {
                 await Func.AutoDraw(7);
-                await Func.setMessage1("", "しかし何も起こらなかった…", 7, false, false, false);
+                await Func.setMessage("", "しかし何も起こらなかった…", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_81[Gvar.var_2442][3] = 0;
                 Gvar.var_108 = 0;
@@ -1900,11 +1900,11 @@ async function func541(this: any) {
             }
             if (Gvar.var_474 == 1) {
                 Gvar.var_233[Gvar.var_475].Var15 = 2;
-                await Func.setMessage1("", "何かが爆弾にされた！", 7, false, false, false);
+                await Func.setMessage("", "何かが爆弾にされた！", 7, false, false, false);
             }
             if (Gvar.var_474 == 0) {
                 await Func.AutoDraw(7);
-                await Func.setMessage1("", "しかし何も起こらなかった…", 7, false, false, false);
+                await Func.setMessage("", "しかし何も起こらなかった…", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_81[Gvar.var_2442][3] = 0;
                 Gvar.var_108 = 0;
@@ -1938,39 +1938,39 @@ async function func541(this: any) {
                 Gvar.var_356 = 282;
                 Gvar.var_199 = 2;
             }
-            await Func.setMessage1("", "" + Gvar.var_2455 + "のダメージをうけた！", 7, false, false, false);
+            await Func.setMessage("", "" + Gvar.var_2455 + "のダメージをうけた！", 7, false, false, false);
             await Func.AutoDraw(11);
         }
         // No = 77 ディアボロが仕掛けた罠を踏んだ時の動作処理
         if (Gvar.var_81[Gvar.var_2442][0] == 77) {
-            await Func.setMessage1("", "" + Gvar.var_889 + "がいるぞ。", 7, false, false, false);
+            await Func.setMessage("", "" + Gvar.var_889 + "がいるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 78) {
-            await Func.setMessage1("", "ｿﾌﾄ･ﾏｼｰﾝを潜ませてあるぞ。", 7, false, false, false);
+            await Func.setMessage("", "ｿﾌﾄ･ﾏｼｰﾝを潜ませてあるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 79) {
-            await Func.setMessage1("", "タスクの穴が開いているぞ。", 7, false, false, false);
+            await Func.setMessage("", "タスクの穴が開いているぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 80) {
-            await Func.setMessage1("", "砂のDIOが潜んでいるぞ。", 7, false, false, false);
+            await Func.setMessage("", "砂のDIOが潜んでいるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 81) {
-            await Func.setMessage1("", "ｷｯｽのｼｰﾙが貼ってあるぞ。", 7, false, false, false);
+            await Func.setMessage("", "ｷｯｽのｼｰﾙが貼ってあるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 82) {
-            await Func.setMessage1("", "ﾏｼﾞｼｬﾝｽﾞﾚｯﾄﾞが作った穴があるぞ。", 7, false, false, false);
+            await Func.setMessage("", "ﾏｼﾞｼｬﾝｽﾞﾚｯﾄﾞが作った穴があるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 83) {
             Gvar.var_81[Gvar.var_2442][3] = 1;
             Gvar.var_108 = 1;
             await Func.AutoDraw(10);
-            await Func.setMessage1("", "波紋で体が焼かれている！", 7, false, false, false);
+            await Func.setMessage("", "波紋で体が焼かれている！", 7, false, false, false);
             await Func.AutoDraw(11);
             Gvar.var_108 = 0;
             Gvar.var_81[Gvar.var_2442][3] = 0;
@@ -1981,56 +1981,56 @@ async function func541(this: any) {
             Gvar.var_134 = 1;
             if (Gvar.nouryoku_disc_id == 116 || Gvar.var_125 >= 1) {
                 Gvar.var_134 = 0;
-                await Func.setMessage1("しかし、", "波紋に強くなっていて平気だった。", 7, true, false, false);
+                await Func.setMessage("しかし、", "波紋に強くなっていて平気だった。", 7, true, false, false);
                 await Func.AutoDraw(11);
             }
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 84) {
-            await Func.setMessage1("", "ここには『上り階段の記憶』があるぞ。", 7, false, false, false);
+            await Func.setMessage("", "ここには『上り階段の記憶』があるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_370 = 1;
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 85) {
             await Func.AutoDraw(10);
-            await Func.setMessage1("", "", 7, false, false, false);
+            await Func.setMessage("", "", 7, false, false, false);
             Gvar.var_372 = 1;
             Gvar.var_70 = 0;
             Gvar.var_1031 = 1;
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 86) {
-            await Func.setMessage1("", "ここには『悪魔の虹』があるぞ。", 7, false, false, false);
+            await Func.setMessage("", "ここには『悪魔の虹』があるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 87) {
-            await Func.setMessage1("", "ここにはｴｺｰｽﾞの音が仕掛けてあるぞ。", 7, false, false, false);
+            await Func.setMessage("", "ここにはｴｺｰｽﾞの音が仕掛けてあるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 88) {
-            await Func.setMessage1("", "鏡が置いてあるぞ。", 7, false, false, false);
+            await Func.setMessage("", "鏡が置いてあるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 89) {
-            await Func.setMessage1("", "ﾊｲｳｪｲｽﾀｰを潜ませてあるぞ。", 7, false, false, false);
+            await Func.setMessage("", "ﾊｲｳｪｲｽﾀｰを潜ませてあるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 90) {
-            await Func.setMessage1("", "『ドッグォン』と書いてあるぞ。", 7, false, false, false);
+            await Func.setMessage("", "『ドッグォン』と書いてあるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 91) {
-            await Func.setMessage1("", "ここにはﾗﾊﾞｰｽﾞを潜ませてあるぞ。", 7, false, false, false);
+            await Func.setMessage("", "ここにはﾗﾊﾞｰｽﾞを潜ませてあるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 92) {
-            await Func.setMessage1("", "法王の結界が仕掛けてあるぞ。", 7, false, false, false);
+            await Func.setMessage("", "法王の結界が仕掛けてあるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 93) {
-            await Func.setMessage1("", "ホルス神の罠が仕掛けてあるぞ。", 7, false, false, false);
+            await Func.setMessage("", "ホルス神の罠が仕掛けてあるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 94) {
-            await Func.setMessage1("", "ﾀﾞｲﾊﾞｰﾀﾞｳﾝを潜ませてあるぞ。", 7, false, false, false);
+            await Func.setMessage("", "ﾀﾞｲﾊﾞｰﾀﾞｳﾝを潜ませてあるぞ。", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_81[Gvar.var_2442][0] == 95) {
@@ -2045,13 +2045,13 @@ async function func541(this: any) {
                     Adap.DSPLAY(111);
                 }
             }
-            await Func.setMessage1("", "波紋で体が焼かれている！", 7, true, false, false);
+            await Func.setMessage("", "波紋で体が焼かれている！", 7, true, false, false);
             for (let cnt2 = 0; cnt2 < 3; ++cnt2) {
                 await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_1540++;
             }
             Adap.DSPLAY(173);
-            await Func.setMessage1("ﾀﾞｲｱｰさん「フフ……は…波紋入りの", "          薔薇の棘は 痛か…ろう…」", 7, false, false, false);
+            await Func.setMessage("ﾀﾞｲｱｰさん「フフ……は…波紋入りの", "          薔薇の棘は 痛か…ろう…」", 7, false, false, false);
             await Func.AutoDraw(11);
             for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
                 Gvar.var_2440 = 1;
@@ -2071,7 +2071,7 @@ async function func541(this: any) {
             Gvar.var_134 = 1;
             if (Gvar.nouryoku_disc_id == 116 || Gvar.var_125 >= 1) {
                 Gvar.var_134 = 0;
-                await Func.setMessage1("しかし気の毒なことに、", "波紋に強くなっていて平気だった。", 7, true, false, false);
+                await Func.setMessage("しかし気の毒なことに、", "波紋に強くなっていて平気だった。", 7, true, false, false);
                 await Func.AutoDraw(11);
             }
         }
@@ -2099,7 +2099,7 @@ async function func541(this: any) {
                 Gvar.var_356 = 238;
                 Gvar.var_199 = 2;
             }
-            await Func.setMessage1("", "ﾊﾝｸﾞﾄﾞﾏﾝから" + Gvar.var_2455 + "のﾀﾞﾒｰｼﾞをうけた！", 7, false, false, false);
+            await Func.setMessage("", "ﾊﾝｸﾞﾄﾞﾏﾝから" + Gvar.var_2455 + "のﾀﾞﾒｰｼﾞをうけた！", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_80[Gvar.var_66][Gvar.var_67] = 0;
             Gvar.var_81[Gvar.var_2442][0] = 0;
@@ -2111,7 +2111,7 @@ async function func541(this: any) {
             Gvar.var_81[Gvar.var_2442][3] = 1;
             Adap.DSPLAY(148);
             await Func.AutoDraw(10);
-            await Func.setMessage1("", "下の階に落ちた！", 7, false, false, false);
+            await Func.setMessage("", "下の階に落ちた！", 7, false, false, false);
             await Func.AutoDraw(8);
             Gvar.var_372 = 1;
         }
@@ -2120,10 +2120,10 @@ async function func541(this: any) {
             Gvar.var_81[Gvar.var_2442][3] = 1;
             Gvar.var_108 = 1;
             Adap.DSPLAY(173);
-            await Func.setMessage1("", "「」", 7, false, false, false);
+            await Func.setMessage("", "「」", 7, false, false, false);
             await Func.AutoDraw(10);
             Adap.DSPLAY(173);
-            await Func.setMessage1("", "", 7, true, false, false);
+            await Func.setMessage("", "", 7, true, false, false);
             await Func.AutoDraw(3);
             await Func.func340(); // キー入力による選択処理
             Gvar.var_108 = 0;
@@ -2133,7 +2133,7 @@ async function func541(this: any) {
                 Gvar.var_390 = Gvar.var_390 + 1;
             }
             Gvar.var_81[Gvar.var_2442][3] = 0;
-            await Func.setMessage1("", "", 7, false, false, false);
+            await Func.setMessage("", "", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         await Func.func540();

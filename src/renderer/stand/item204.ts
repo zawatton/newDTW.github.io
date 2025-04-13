@@ -7,14 +7,14 @@ async function item204(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         await Func.AutoDraw(5);
         Adap.DSPLAY(165);
-        await Func.setMessage1("カチリ",
+        await Func.setMessage("カチリ",
                                "", 8, false, false, false);
         await Func.AutoDraw(15);
 
         Gvar.var_1389 = Gvar.var_66;
         Gvar.var_1390 = Gvar.var_67;
 
-        await Func.setMessage1("ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！",
+        await Func.setMessage("ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！",
                                "", 8, false, false, false);
 
         Gvar.var_1993 = Gvar.var_1389 - 1;

@@ -5,9 +5,9 @@ import * as Func from '../func/index'
 async function func452(this: any) {
         Adap.dbgprt(452);
         Adap.DSPLAY(166);
-        await Func.setMessage1("ザグッ！  ザグッ！  ザグッ！",
+        await Func.setMessage("ザグッ！  ザグッ！  ザグッ！",
                                 "", 7, true, false, false);
-        await Func.setMessage1("このフロアにお金が出現した！",
+        await Func.setMessage("このフロアにお金が出現した！",
                                     "", 7, true, false, false);
         Gvar.var_1759 = 1;
         Gvar.var_452 = 1;

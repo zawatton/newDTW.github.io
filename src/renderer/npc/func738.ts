@@ -10,10 +10,10 @@ async function func738(this: any) {
             await Func.func741();
             return;
         }
-        await Func.setMessage1("「イギー」",
+        await Func.setMessage("「イギー」",
                                "", 7, true, false, true);
 
-        await Func.setMessage1("（しょうがないからついて行ってやるか）",
+        await Func.setMessage("（しょうがないからついて行ってやるか）",
                                "と考えているようだ。", 7, true, false, false);  
 
         await Func.func051(); // キー入力待ち処理

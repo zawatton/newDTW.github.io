@@ -28,7 +28,7 @@ async function enemy157(this: any) {
         if (Gvar.var_474 == 0) {
             return;
         }
-        await Func.setMessage1("いいもの持ってるな…", "解体してやる！", 8, false, false, true);
+        await Func.setMessage("いいもの持ってるな…", "解体してやる！", 8, false, false, true);
         await Func.AutoDraw(15);
         Adap.DSPLAY(122);
         Gvar.var_742 = 1;
@@ -54,7 +54,7 @@ async function enemy157(this: any) {
         Gvar.var_83[Gvar.var_412].Var7 = 0;
         Gvar.var_742 = 0;
         if (Gvar.equip_disc[119]) {
-            await Func.setMessage1("破壊されそうになったが", "柔らかくしていて平気だった。", 7, false, false, false);
+            await Func.setMessage("破壊されそうになったが", "柔らかくしていて平気だった。", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_2197 = 1;
             return;
@@ -76,7 +76,7 @@ async function enemy157(this: any) {
         Gvar.target_item_name = Gvar.item_name;
         Gvar.var_225 = Gvar.var_475;
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-        await Func.setMessage1("" + Gvar.target_item_name + "は", "バラバラにされてしまった！", 8, false, false, true);
+        await Func.setMessage("" + Gvar.target_item_name + "は", "バラバラにされてしまった！", 8, false, false, true);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

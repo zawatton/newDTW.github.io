@@ -8,7 +8,7 @@ async function func766(this: any) {
         Gvar.var_243 = 0;
         Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
 
-        await Func.setMessage1("ベッドの上に本が置いてある。",
+        await Func.setMessage("ベッドの上に本が置いてある。",
                                "", 7, true, false, false);
 
         await Func.func051(); // キー入力待ち処理

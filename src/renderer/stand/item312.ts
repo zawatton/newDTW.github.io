@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item312(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (Gvar.var_172 == 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-            await Func.setMessage1("発動能力がパワーアップしている！",
+            await Func.setMessage("発動能力がパワーアップしている！",
                                    "", 7, true, false, false);
         }
         Gvar.var_2311 = Adap.dim(300);

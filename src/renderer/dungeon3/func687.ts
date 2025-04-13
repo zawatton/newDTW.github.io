@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // ウンガロを倒した時のメッセージ処理
 async function func687(this: any) {
     Adap.dbgprt(687);
-    await Func.setMessage1("ｳﾝｶﾞﾛ「ウッガァ―――ッ！！」", "", 8, true, false, true);
+    await Func.setMessage("ｳﾝｶﾞﾛ「ウッガァ―――ッ！！」", "", 8, true, false, true);
 
     Gvar.var_3092 = 1;
     for (let cnt1 = 0; cnt1 < Gvar.var_97; ++cnt1) {
@@ -40,16 +40,16 @@ async function func687(this: any) {
         Gvar.var_300 = 0;
     }
     Gvar.var_312 = 0;
-    await Func.setMessage1("ｳﾝｶﾞﾛ「オ…オレのスタンド",
+    await Func.setMessage("ｳﾝｶﾞﾛ「オ…オレのスタンド",
                             "【ﾎﾞﾍﾐｱﾝﾗﾌﾟｿﾃﾞｨｰ】…」", 8, true, false, true);
 
-    await Func.setMessage1("ｳﾝｶﾞﾛ「この能力で、ダンジョン内を",
+    await Func.setMessage("ｳﾝｶﾞﾛ「この能力で、ダンジョン内を",
                             "ジョジョのキャラクターで」", 8, true, false, true);
 
-    await Func.setMessage1("ｳﾝｶﾞﾛ「埋め尽くしてやろうと",
+    await Func.setMessage("ｳﾝｶﾞﾛ「埋め尽くしてやろうと",
                             "思っていたのによォ～～」", 8, true, false, true);
 
-    await Func.setMessage1("ｳﾝｶﾞﾛ「もうこの世界には…",
+    await Func.setMessage("ｳﾝｶﾞﾛ「もうこの世界には…",
                             "希望も何もねえッ…」", 8, true, false, true);
 
     return;

@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function func824b(this: any) {
         Adap.dbgprt(824);
         Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-        await Func.setMessage1("どこへ行きますか？", "", 7, false, false, false);
+        await Func.setMessage("どこへ行きますか？", "", 7, false, false, false);
         Gvar.var_245 = 19;
         Gvar.var_246 = 45;
         Gvar.var_546 = 1;

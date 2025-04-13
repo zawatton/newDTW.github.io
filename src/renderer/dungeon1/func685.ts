@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // エンヤ婆を倒した時のメッセージ処理
 async function func685(this: any) {
     Adap.dbgprt(685);
-    await Func.setMessage1("ｴﾝﾔ婆「うぽわあ―――ッ！！」", "", 8, true, false, true);
+    await Func.setMessage("ｴﾝﾔ婆「うぽわあ―――ッ！！」", "", 8, true, false, true);
 
     if (Gvar.var_123 == 0) {
         Gvar.y_axis_map_image = 10;
@@ -52,13 +52,13 @@ async function func685(this: any) {
     if (Gvar.var_404 >= 1) {
         return;
     }
-    await Func.setMessage1("ｴﾝﾔ婆「う…  うそじゃ",
+    await Func.setMessage("ｴﾝﾔ婆「う…  うそじゃ",
                             "このわしが  こんなこと……」", 8, true, false, true);
 
-    await Func.setMessage1("ｴﾝﾔ婆「しかし…おまえが求める物など", 
+    await Func.setMessage("ｴﾝﾔ婆「しかし…おまえが求める物など", 
                             "こんなところにはないッ！」", 8, true, false, true);
 
-    await Func.setMessage1("ｴﾝﾔ婆「せいぜい他の場所を",
+    await Func.setMessage("ｴﾝﾔ婆「せいぜい他の場所を",
                             "探すんじゃなああああああ！」", 8, false, false, true);
     return;
 }

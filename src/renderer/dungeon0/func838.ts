@@ -34,14 +34,14 @@ async function func838(this: any) {
     }
     // 店の商品を持っているか否かでメッセージを設定
     if (Gvar.var_3204 == 0) {
-        await Func.setMessage1("ﾏﾘﾘﾝﾏﾝｿﾝ「店ノ売リ物ヲ持ッテイルナ？」", "", 8, false, false, true);
+        await Func.setMessage("ﾏﾘﾘﾝﾏﾝｿﾝ「店ノ売リ物ヲ持ッテイルナ？」", "", 8, false, false, true);
     }
     if (Gvar.var_3204 == 1) {
-        await Func.setMessage1("ﾏﾘﾘﾝﾏﾝｿﾝ「マダ持ッテイルナ？」", "", 8, false, false, true);
+        await Func.setMessage("ﾏﾘﾘﾝﾏﾝｿﾝ「マダ持ッテイルナ？」", "", 8, false, false, true);
     }
     await Func.AutoDraw(15);
 
-    await Func.setMessage1("ﾏﾘﾘﾝﾏﾝｿﾝ「返シテモラウ！」", "", 8, false, false, true);
+    await Func.setMessage("ﾏﾘﾘﾝﾏﾝｿﾝ「返シテモラウ！」", "", 8, false, false, true);
 
     Gvar.var_389 = 2;
     Gvar.var_199 = 6;
@@ -55,7 +55,7 @@ async function func838(this: any) {
     await Func.AutoDraw(2);
     Gvar.var_1470 = 1;
 
-    await Func.setMessage1("" + Gvar.var_3207 + "を奪われた", "", 8, false, false, false);
+    await Func.setMessage("" + Gvar.var_3207 + "を奪われた", "", 8, false, false, false);
     await Func.AutoDraw(10);
     return;
 }

@@ -7,7 +7,7 @@ async function func042(this: any) {
         Gvar.var_472 = 1;
         await Func.AutoDraw(30);
         Gvar.var_472 = 0;
-        await Func.setMessage1("ﾄﾞｯﾋﾟｵと交代した。", "", 7, false, false, false);
+        await Func.setMessage("ﾄﾞｯﾋﾟｵと交代した。", "", 7, false, false, false);
         Gvar.var_144 = 0;
         Gvar.var_199 = 2;
         await Func.AutoDraw(9);

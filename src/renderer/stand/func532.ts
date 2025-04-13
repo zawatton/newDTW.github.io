@@ -6,14 +6,14 @@ async function func532(this: any) {
         Adap.dbgprt(532);
         await Func.func335();
         await Func.func337(); // メッセージ表示処理(自動)
-        await Func.setMessage1("ディアボロは思った…", "", 7, true, false, false);
-        await Func.setMessage1("幸福と言うのはこういうことだ…", "", 7, true, false, false);
+        await Func.setMessage("ディアボロは思った…", "", 7, true, false, false);
+        await Func.setMessage("幸福と言うのはこういうことだ…", "", 7, true, false, false);
         await Func.AutoDraw(2);
-        await Func.setMessage1("そうなるべきだったところに…", "", 7, true, false, false);
+        await Func.setMessage("そうなるべきだったところに…", "", 7, true, false, false);
         await Func.AutoDraw(2);
-        await Func.setMessage1("戻るだけなんだ…", "", 7, true, false, false);
+        await Func.setMessage("戻るだけなんだ…", "", 7, true, false, false);
         await Func.AutoDraw(2);
-        await Func.setMessage1("ただ元に…", "", 7, true, false, false);
+        await Func.setMessage("ただ元に…", "", 7, true, false, false);
         await Func.AutoDraw(2);
         Gvar.var_770 = 1;
         if (Gvar.var_190 == 1) {
@@ -36,7 +36,7 @@ async function func532(this: any) {
         Gvar.var_213 = 0;
         Gvar.var_214 = 0;
         await Func.AutoDraw(10);
-        await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ  再起不能", "", 7, true, false, false);
+        await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ  再起不能", "", 7, true, false, false);
         await Func.AutoDraw(40);
         Gvar.var_1200 = 1;
         Gvar.var_2400 = 345;

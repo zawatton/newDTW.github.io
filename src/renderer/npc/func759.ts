@@ -8,40 +8,40 @@ async function func759(this: any) {
 
         Gvar.var_2877 = Adap.rnd(8);
         if (Gvar.var_2877 == 0) {
-            await Func.setMessage1("ﾖｰﾖｰﾏｯ「もっとおお わたしを叱ってええ」",
+            await Func.setMessage("ﾖｰﾖｰﾏｯ「もっとおお わたしを叱ってええ」",
                                     "", 7, true, false, true);
         }
         if (Gvar.var_2877 == 1) {
-            await Func.setMessage1("ﾖｰﾖｰﾏｯ「わたしが おくつを磨きましょう」",
+            await Func.setMessage("ﾖｰﾖｰﾏｯ「わたしが おくつを磨きましょう」",
                                     "", 7, true, false, true);
         }
         if (Gvar.var_2877 == 2) {
-            await Func.setMessage1("ﾖｰﾖｰﾏｯ「マンガお読みになられますか」",
+            await Func.setMessage("ﾖｰﾖｰﾏｯ「マンガお読みになられますか」",
                                     "", 7, true, false, true);
         }
         if (Gvar.var_2877 == 3) {
-            await Func.setMessage1("ﾖｰﾖｰﾏｯ「マッチ棒パズルやります？」",
+            await Func.setMessage("ﾖｰﾖｰﾏｯ「マッチ棒パズルやります？」",
                                     "", 7, true, false, true);
         }
         if (Gvar.var_2877 == 4) {
-            await Func.setMessage1("ﾖｰﾖｰﾏｯ「黄色い花はヘビイチゴ」",
+            await Func.setMessage("ﾖｰﾖｰﾏｯ「黄色い花はヘビイチゴ」",
                                     "", 7, true, false, true);
         }
         if (Gvar.var_2877 == 5) {
-            await Func.setMessage1("ﾖｰﾖｰﾏｯ「だんな様あああ～」",
+            await Func.setMessage("ﾖｰﾖｰﾏｯ「だんな様あああ～」",
                                     "", 7, true, false, true);
         }
         if (Gvar.var_2877 == 6) {
-            await Func.setMessage1("ﾖｰﾖｰﾏｯ「お逃げになりますか？」",
+            await Func.setMessage("ﾖｰﾖｰﾏｯ「お逃げになりますか？」",
                                     "", 7, true, false, true);
         }
         if (Gvar.var_2877 == 7) {
-            await Func.setMessage1("ﾖｰﾖｰﾏｯ「おっしゃるとおりに いたします」",
+            await Func.setMessage("ﾖｰﾖｰﾏｯ「おっしゃるとおりに いたします」",
                                     "", 7, true, false, true);
         }
         Gvar.var_3146 = Gvar.var_77[Gvar.var_347][Gvar.var_348];
         if (Gvar.var_78[Gvar.var_3146].Var0 == 650 || Gvar.var_78[Gvar.var_3146].Var0 == 651 || Gvar.var_78[Gvar.var_3146].Var0 == 652 || Gvar.var_78[Gvar.var_3146].Var0 == 653) {
-            await Func.setMessage1("ﾖｰﾖｰﾏｯ「のっかりてぇ―のっかりてェ―」",
+            await Func.setMessage("ﾖｰﾖｰﾏｯ「のっかりてぇ―のっかりてェ―」",
                                     "", 7, true, false, true);
         }
         await Func.func051(); // キー入力待ち処理

@@ -45,7 +45,7 @@ async function item728(this: any) {
         Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         await Func.AutoDraw(10);
         Gvar.var_182 = 1;
-        await Func.setMessage1("「究極の生命体ﾃﾞｨｱﾎﾞﾛの誕生だッーっ」",
+        await Func.setMessage("「究極の生命体ﾃﾞｨｱﾎﾞﾛの誕生だッーっ」",
                                "", 7, true, false, false);
         Gvar.var_1251 = 0;
         Gvar.var_199 = Gvar.var_1940;

@@ -16,7 +16,7 @@ async function item124(this: any) {
                     Gvar.var_2320++;
                 }
             }
-            await Func.setMessage1("誰に送りますか？",
+            await Func.setMessage("誰に送りますか？",
                                    "", 7, true, false, false);
             await Func.AutoDraw(4);
 
@@ -89,7 +89,7 @@ async function item124(this: any) {
             }
             Gvar.var_1210 = 0;
             if (Gvar.var_2322 == 0) {
-                await Func.setMessage1("どれを送りますか？",
+                await Func.setMessage("どれを送りますか？",
                                        "", 7, true, false, false);
                 await Func.AutoDraw(4);
                 Gvar.var_2300 = Gvar.var_225;
@@ -113,7 +113,7 @@ async function item124(this: any) {
             }
         }
         if (Gvar.var_407 == 1 && Gvar.var_536 == 1 && Gvar.dungeon_number == Adap.int(Gvar.var_1068[12])) {
-            await Func.setMessage1("どれを相手に送りますか？",
+            await Func.setMessage("どれを相手に送りますか？",
                                    "", 7, true, false, false);
             await Func.AutoDraw(4);
             Gvar.var_2300 = Gvar.var_225;
@@ -135,7 +135,7 @@ async function item124(this: any) {
             await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
             return;
         }
-        await Func.setMessage1("どれを倉庫に送りますか？",
+        await Func.setMessage("どれを倉庫に送りますか？",
                                "", 7, true, false, false);
         await Func.AutoDraw(4);
         Gvar.var_2008 = 1;

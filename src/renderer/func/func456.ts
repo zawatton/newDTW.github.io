@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 async function func456(this: any) {
         Adap.dbgprt(456);
         Adap.DSPLAY(166);
-        await Func.setMessage1("ザグッ！  ザグッ！  ザグッ！",
+        await Func.setMessage("ザグッ！  ザグッ！  ザグッ！",
                                 "", 7, true, false, false);
         Gvar.var_1998 = 1;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {

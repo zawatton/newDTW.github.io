@@ -43,7 +43,7 @@ async function item308(this: any) {
             Gvar.var_2108 = 1;
         }
         if (Gvar.var_2108 == 0) {
-            await Func.setMessage1("そこには人形を出せないぞ。",
+            await Func.setMessage("そこには人形を出せないぞ。",
                                    "", 7, false, false, false);
             await Func.AutoDraw(5);
             Gvar.var_234 = 0;
@@ -71,7 +71,7 @@ async function item308(this: any) {
         Gvar.var_1583 = 0;
         Gvar.belongings_item_list = 308;
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        await Func.setMessage1("うけけけけけけけけけけッ！！",
+        await Func.setMessage("うけけけけけけけけけけッ！！",
                                "", 7, false, false, true);
         await Func.AutoDraw(15);
         if (Gvar.var_2254 == 1) {

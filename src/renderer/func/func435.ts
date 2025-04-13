@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // お金を拾った時の動作処理
 async function func435(this: any) {
         Adap.dbgprt(435);
-        await Func.setMessage1("" + Gvar.var_78[Gvar.var_321].Var13 + " Gを拾った",
+        await Func.setMessage("" + Gvar.var_78[Gvar.var_321].Var13 + " Gを拾った",
                                 "", 7, false, false, false);
         Gvar.wallet = Gvar.wallet + Gvar.var_78[Gvar.var_321].Var13;
         if (Gvar.wallet > 999999) {

@@ -49,7 +49,7 @@ async function func655(this: any) {
         }
         if (Gvar.var_3041 == 0) {
             await Func.func656();
-            await Func.setMessage1("" + Gvar.var_3040 + "の攻撃は外れた", "", 8, false, false, false);
+            await Func.setMessage("" + Gvar.var_3040 + "の攻撃は外れた", "", 8, false, false, false);
             await Func.AutoDraw(3);
             return;
         }

@@ -8,14 +8,14 @@ async function item650(this: any) {
     Gvar.var_1936 = 0 // アイテム毎の自動メッセージ非表示(item_message非表示)
     if (Gvar.var_211 == Gvar.var_352) {
         Gvar.var_352 = Gvar.var_352 + 1;
-        await Func.setMessage1("最大HPが１あがった！", "", 7, false, false, false);
+        await Func.setMessage("最大HPが１あがった！", "", 7, false, false, false);
         if (Gvar.var_352 > 999) {
             Gvar.var_352 = 999;
-            await Func.setMessage1("最大HPは限界まで達した！", "", 7, false, false, false);
+            await Func.setMessage("最大HPは限界まで達した！", "", 7, false, false, false);
         }
     }
     if (Gvar.var_211 != Gvar.var_352) {
-        await Func.setMessage1("体力が回復した", "", 7, false, false, false);
+        await Func.setMessage("体力が回復した", "", 7, false, false, false);
     }
     Gvar.var_211 = Gvar.var_211 + 50;
     if (Gvar.var_211 > Gvar.var_352) {

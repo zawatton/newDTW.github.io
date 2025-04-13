@@ -92,12 +92,12 @@ async function func587(this: any) {
             Gvar.var_2822 = Gvar.item_name;
         }
         if (Gvar.var_2473 == 1) {
-            await Func.setMessage1("スタンドが溶かされている！", "", 8, true, false, false);
-            await Func.setMessage1("" + Gvar.var_2822 + "は", "弱くなってしまった…", 8, true, false, false);
+            await Func.setMessage("スタンドが溶かされている！", "", 8, true, false, false);
+            await Func.setMessage("" + Gvar.var_2822 + "は", "弱くなってしまった…", 8, true, false, false);
         }
         if (Gvar.var_2473 == 3) {
-            await Func.setMessage1("スタンドが溶かされている！", "", 8, true, false, false);
-            await Func.setMessage1("" + Gvar.var_2822 + "を", "守っていたオーラは消えてしまった…", 8, true, false, false);
+            await Func.setMessage("スタンドが溶かされている！", "", 8, true, false, false);
+            await Func.setMessage("" + Gvar.var_2822 + "を", "守っていたオーラは消えてしまった…", 8, true, false, false);
         }
         await Func.AutoDraw(10);
         return;

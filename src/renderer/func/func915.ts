@@ -5,7 +5,7 @@ import * as Music from '../music/index'
 
 async function func915(this: any) {
         Adap.dbgprt(915);
-        await Func.setMessage1("ディアボロはここよーッ！", "ここにいるわよォ～～～ッ！", 7, false, false, true);
+        await Func.setMessage("ディアボロはここよーッ！", "ここにいるわよォ～～～ッ！", 7, false, false, true);
         Gvar.var_3561 = "女帝";
         Adap.tcpput(Gvar.var_3561, Gvar.var_1050);
         Adap.tcpput("\n", Gvar.var_1050);

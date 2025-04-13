@@ -18,11 +18,11 @@ async function item107(this: any) {
             Gvar.bufferid_stand_disc = 29; // Adap.buffer(29)は"img_stand3.gif"
         }
         if (Gvar.var_172 == 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-            await Func.setMessage1("発動能力がパワーアップしている！",
+            await Func.setMessage("発動能力がパワーアップしている！",
                                    "", 7, true, false, false);
         }
         Adap.DSPLAY(131);
-        await Func.setMessage1("「ラリホ～～～～～っ！」",
+        await Func.setMessage("「ラリホ～～～～～っ！」",
                                "", 7, false, false, false);
 
         Gvar.var_1940 = Gvar.var_199;

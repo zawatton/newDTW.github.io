@@ -6,7 +6,7 @@ async function func439(this: any) {
         Adap.dbgprt(439);
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
         if (Gvar.var_225 == Gvar.var_1967 && Gvar.var_1965 == 0) {
-            await Func.setMessage1("それは今使っているDISCです。",
+            await Func.setMessage("それは今使っているDISCです。",
                                     "", 7, true, false, false);
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
                 await Func.func337(); // メッセージ表示処理(自動)
@@ -32,7 +32,7 @@ async function func439(this: any) {
         if (Gvar.var_862[567][0] == 0 && Gvar.var_375 == 0) {
             Gvar.var_862[567][0] = 1;
             await Func.func492(); // アイテムリスト呼び出し
-            await Func.setMessage1("なんと" + Gvar.var_1938 + "は",
+            await Func.setMessage("なんと" + Gvar.var_1938 + "は",
                                     "ｱｳﾞﾄﾞｩﾙのDISCだった！", 7, true, false, false);
         }
         Gvar.var_1970 = Adap.rnd(30);
@@ -40,16 +40,16 @@ async function func439(this: any) {
             await Func.func440(); // アヴドゥルのdisc効果(全て識別できた場合(ランダム))
             return;
         }
-        await Func.setMessage1("フーム…  このアイテムは、",
+        await Func.setMessage("フーム…  このアイテムは、",
                                 "" + Gvar.var_1969 + "のようだ", 7, true, false, true);
 
         if (Gvar.var_233[Gvar.var_1966].Var0 >= 100 && Gvar.var_233[Gvar.var_1966].Var0 < 400 && Gvar.var_233[Gvar.var_1966].Var4 >= 1) {
-            await Func.setMessage1("しかも、このDISCは基本能力に加えて",
+            await Func.setMessage("しかも、このDISCは基本能力に加えて",
                                     "＋" + Gvar.var_233[Gvar.var_1966].Var4 + "のｽﾀﾝﾄﾞﾊﾟﾜｰがついているぞ", 7, false, false, true);
         }
         // おそらく爆弾化されている？ Gvar.var_233[Gvar.var_1966].Var15 == 2
         if (Gvar.var_233[Gvar.var_1966].Var15 == 2) {
-            await Func.setMessage1("しかし…",
+            await Func.setMessage("しかし…",
                                     "なんとなく危険な感じがするな…", 7, false, false, true);
         }
         await Func.AutoDraw(5);

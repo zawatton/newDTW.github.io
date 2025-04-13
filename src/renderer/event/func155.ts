@@ -241,9 +241,9 @@ async function func155(this: any) {
         await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_83[Gvar.var_762].Var6 = 0;
 
-        await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「？」", "", 7, true, false, false);
+        await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「？」", "", 7, true, false, false);
 
-        await Func.setMessage1("露伴「まて――ッ！」", "", 7, false, false, true);
+        await Func.setMessage("露伴「まて――ッ！」", "", 7, false, false, true);
 
         Gvar.var_83[Gvar.var_761].Var6 = 1;
         Gvar.var_83[Gvar.var_761].Var1 = 10;
@@ -415,7 +415,7 @@ async function func155(this: any) {
         await Func.func337(); // メッセージ表示処理(自動)
         Gvar.var_199 = 8;
 
-        await Func.setMessage1("露伴「くそッ！あと一歩のところで…」", "", 7, true, false, true);
+        await Func.setMessage("露伴「くそッ！あと一歩のところで…」", "", 7, true, false, true);
 
         await Func.AutoDraw(20);
 
@@ -456,7 +456,7 @@ async function func155(this: any) {
         await Func.AutoDraw(20);
         Gvar.var_83[Gvar.var_761].Var6 = 0;
 
-        await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「？？？」", "", 7, false, false, false);
+        await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「？？？」", "", 7, false, false, false);
 
         await Func.AutoDraw(20);
         await Func.func336();

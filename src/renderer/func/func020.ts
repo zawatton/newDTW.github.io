@@ -114,10 +114,10 @@ async function func020(this: any) {
                     }
                 }
                 Adap.DSPLAY(162);
-                await Func.setMessage1("罪悪感で体が重くなった！",
+                await Func.setMessage("罪悪感で体が重くなった！",
                                         "", 8, true, false, false);
                 if (Gvar.equip_disc[396] == 1) {
-                    await Func.setMessage1("しかし装備スタンドの効果で",
+                    await Func.setMessage("しかし装備スタンドの効果で",
                                             "速度は遅くならない！", 7, false, false, true);
                 }
                 await Func.AutoDraw(10);
@@ -174,7 +174,7 @@ async function func020(this: any) {
                 Gvar.var_78[Gvar.var_419].Var28 = 0;
                 Gvar.var_78[Gvar.var_419].Var29 = 0;
 
-                await Func.setMessage1("罪悪感で" + Gvar.target_item_name + " 奪われた！",
+                await Func.setMessage("罪悪感で" + Gvar.target_item_name + " 奪われた！",
                                         "", 8, false, false, false);
 
                 await Func.AutoDraw(20);
@@ -203,7 +203,7 @@ async function func020(this: any) {
                     }
                 }
                 if (Gvar.var_398 == 1) {
-                    await Func.setMessage1("残像ﾁｬﾘｵｯﾂは消えた。",
+                    await Func.setMessage("残像ﾁｬﾘｵｯﾂは消えた。",
                                             "", 7, false, false, false);
                     Gvar.var_240 = 0;
                     await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
@@ -435,7 +435,7 @@ async function func020(this: any) {
                         Gvar.var_452 = 0;
                         Gvar.var_453 = 0;
                     }
-                    await Func.setMessage1("サーフィスは人形に戻った。",
+                    await Func.setMessage("サーフィスは人形に戻った。",
                                             "", 7, false, false, false);
                     Gvar.var_240 = 0;
                     await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理

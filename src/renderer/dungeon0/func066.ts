@@ -6,12 +6,12 @@ async function func066(this: any) {
         Adap.dbgprt(66);
         // 持っているアイテムの数が0の時
         if (Gvar.var_224 == 0) {
-            await Func.setMessage1("足元にジッパーが付いている。",
+            await Func.setMessage("足元にジッパーが付いている。",
                                    "", 7, false, false, false);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
-        await Func.setMessage1("持ち物全てをジッパーに捨てますか？",
+        await Func.setMessage("持ち物全てをジッパーに捨てますか？",
                                "", 7, true, false, false);
         await Func.func051(); // キー入力待ち処理
         Gvar.var_245 = 19;

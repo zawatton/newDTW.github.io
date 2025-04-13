@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 201 イエローテンパランスの発動処理
 async function item201(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        await Func.setMessage1("このオレのスタンド「黄の節制」に",
+        await Func.setMessage("このオレのスタンド「黄の節制」に",
                                "弱点はない！", 7, false, false, false);
         Adap.DSPLAY(123);
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
@@ -27,7 +27,7 @@ async function item201(this: any) {
                 Gvar.var_114 = 0;
             }
         }
-        await Func.setMessage1("このフロアで熱と冷気に強くなった！",
+        await Func.setMessage("このフロアで熱と冷気に強くなった！",
                                "", 7, true, true, false);
         Gvar.var_173 = 1;
         await Func.AutoDraw(15);

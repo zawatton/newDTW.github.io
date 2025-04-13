@@ -6,10 +6,10 @@ import * as Func from '../func/index'
 async function item202(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (Gvar.var_172 == 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-            await Func.setMessage1("発動能力がパワーアップしている！",
+            await Func.setMessage("発動能力がパワーアップしている！",
                                    "", 7, true, false, false);
         }
-        await Func.setMessage1("低温世界で動ける物質はなにもなくなる",
+        await Func.setMessage("低温世界で動ける物質はなにもなくなる",
                                "全てを止められる！", 7, false, false, false);
 
         Adap.gsel(19);

@@ -11,7 +11,7 @@ async function func675(this: any) {
         Gvar.disc_rarity = Gvar.var_233[Gvar.var_555].Var13;
         await Func.func492(); // アイテムリスト呼び出し
         Gvar.var_3082 = Gvar.item_name;
-        await Func.setMessage1("アナザーワン・バイツァ・ダスト！！", "", 7, false, false, false);
+        await Func.setMessage("アナザーワン・バイツァ・ダスト！！", "", 7, false, false, false);
         Adap.DSPLAY(180);
         Gvar.var_1389 = Gvar.var_66;
         Gvar.var_1390 = Gvar.var_67;
@@ -179,8 +179,8 @@ async function func675(this: any) {
             Gvar.var_2392 = Gvar.var_2392 + 1;
         }
         await Music.func112();
-        await Func.setMessage1("死の直前まで時間が戻った！", "", 7, true, false, false);
-        await Func.setMessage1("" + Gvar.var_3082 + "は", "ｴﾈﾙｷﾞｰを使い果たして消滅した。", 7, false, false, false);
+        await Func.setMessage("死の直前まで時間が戻った！", "", 7, true, false, false);
+        await Func.setMessage("" + Gvar.var_3082 + "は", "ｴﾈﾙｷﾞｰを使い果たして消滅した。", 7, false, false, false);
         await Func.AutoDraw(30);
         Gvar.var_217 = 0;
         await Func.func009(); // ディアボロ側ターン処理(ループ処理)

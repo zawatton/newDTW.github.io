@@ -19,7 +19,7 @@ async function func480(this: any) {
             Gvar.var_2116 = 1;
         }
         if (Gvar.var_2116 == 1) {
-            await Func.setMessage1("呪われていて外せない！", "", 7, true, false, false);
+            await Func.setMessage("呪われていて外せない！", "", 7, true, false, false);
             await Func.AutoDraw(3);
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             if (Gvar.var_2005 == 1) {
@@ -127,7 +127,7 @@ async function func480(this: any) {
         Gvar.var_2005 = 0;
         await Func.func430();
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-        await Func.setMessage1("足元の" + Gvar.var_2118 + "と", "" + Gvar.var_2119 + "を交換した。", 7, true, false, false);
+        await Func.setMessage("足元の" + Gvar.var_2118 + "と", "" + Gvar.var_2119 + "を交換した。", 7, true, false, false);
         await Func.AutoDraw(3);
         Gvar.var_217 = 1;
         await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)

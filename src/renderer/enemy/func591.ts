@@ -38,7 +38,7 @@ async function func591(this: any) {
         }
         if (Gvar.var_2838 == 1) {
             Gvar.var_2197 = 1;
-            await Func.setMessage1("ウェザーは無意識にカタツムリを呼んだ", "", 8, false, false, false);
+            await Func.setMessage("ウェザーは無意識にカタツムリを呼んだ", "", 8, false, false, false);
             await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 Gvar.var_300 = 0;

@@ -12,7 +12,7 @@ async function func610(this: any) {
         Adap.boxf(0, 0, 680, 680);
         Adap.gsel(0);
         Gvar.var_529 = 1;
-        await Func.setMessage1("ｴﾝﾎﾟﾘｵは純粋酸素を大量に集めた！", "", 8, false, false, false);
+        await Func.setMessage("ｴﾝﾎﾟﾘｵは純粋酸素を大量に集めた！", "", 8, false, false, false);
         await Func.AutoDraw(20);
         Gvar.var_403 = "酸素が細胞組織を破壊している！";
         Gvar.var_2217 = 1;
@@ -121,7 +121,7 @@ async function func610(this: any) {
         Adap.DSPLAY(104);
         Gvar.var_2852 = Gvar.var_2876;
         Gvar.var_209 = Gvar.var_2852;
-        await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+        await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

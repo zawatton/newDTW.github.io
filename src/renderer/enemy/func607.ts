@@ -120,7 +120,7 @@ async function func607(this: any) {
             Gvar.var_2852 = Math.floor(Gvar.var_2852 * 2 / 3);
         }
         Gvar.var_209 = Gvar.var_2852;
-        await Func.setMessage1("ﾋﾟｽﾄﾙｽﾞの弾丸を喰らった！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+        await Func.setMessage("ﾋﾟｽﾄﾙｽﾞの弾丸を喰らった！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

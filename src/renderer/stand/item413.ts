@@ -10,7 +10,7 @@ async function item413(this: any) {
         Gvar.var_2109 = 0;
         Gvar.var_1845 = 0;
         if (Gvar.var_2110 == 0) {
-            await Func.setMessage1("人形を置く場所が無いぞ。",
+            await Func.setMessage("人形を置く場所が無いぞ。",
                                    "", 7, false, false, false);
             await Func.AutoDraw(5);
             Gvar.var_234 = 0;

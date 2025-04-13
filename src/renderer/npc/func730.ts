@@ -10,10 +10,10 @@ async function func730(this: any) {
             await Func.func733();
             return;
         }
-        await Func.setMessage1("おれぁ おせっかい焼きのｽﾋﾟｰﾄﾞﾜｺﾞﾝ！",
+        await Func.setMessage("おれぁ おせっかい焼きのｽﾋﾟｰﾄﾞﾜｺﾞﾝ！",
                                 "", 7, true, false, true);
         
-        await Func.setMessage1("あまちゃんのあんたが好きだから",
+        await Func.setMessage("あまちゃんのあんたが好きだから",
                                "くっついて行ってもいいぜ！", 7, true, false, true);
         await Func.func051(); // キー入力待ち処理
         Gvar.var_245 = 19;

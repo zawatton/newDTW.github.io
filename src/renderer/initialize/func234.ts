@@ -25,8 +25,8 @@ async function func234(this: any) {
 
     Gvar.var_205 = 1;
     await Func.func231(); // プレイデータを保存するセーブ機能
-    await Func.setMessage1("セーブして終了します。", "", 7, true, false, false);
-    // await Func.setMessage1("", "", 7, false, false, false);
+    await Func.setMessage("セーブして終了します。", "", 7, true, false, false);
+    // await Func.setMessage("", "", 7, false, false, false);
     if (Gvar.var_407 == 1) {
         Adap.netclose(Gvar.var_1050);
     }

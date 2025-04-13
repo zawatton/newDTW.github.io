@@ -26,7 +26,7 @@ async function enemy038(this: any) {
                 await Func.func023();
             }
             if (Gvar.equip_disc[207] == 1) {
-                await Func.setMessage1("しかし 装備中のDISCによって",
+                await Func.setMessage("しかし 装備中のDISCによって",
                                        "若返りを防いだ！", 8, false, false, false);
                 await Func.AutoDraw(9);
                 Gvar.var_2197 = 1;
@@ -48,14 +48,14 @@ async function enemy038(this: any) {
                 Adap.DSPLAY(151);
                 Gvar.var_211 = 0;
                 Gvar.var_356 = 213;
-                await Func.setMessage1("胎児にまで戻された！",
+                await Func.setMessage("胎児にまで戻された！",
                                        "", 8, false, false, false);
                 await Func.AutoDraw(20);
                 Gvar.var_2197 = 1;
                 return;
             }
             Adap.DSPLAY(151);
-            await Func.setMessage1("レベルが下がってしまった！",
+            await Func.setMessage("レベルが下がってしまった！",
                                    "", 8, false, false, false);
             await Func.AutoDraw(9);
             Gvar.var_2197 = 1;

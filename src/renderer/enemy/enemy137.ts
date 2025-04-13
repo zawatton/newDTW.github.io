@@ -32,7 +32,7 @@ async function enemy137(this: any) {
                 Gvar.var_83[Gvar.var_673].Var7 = 0;
                 Gvar.var_233[Gvar.var_475].Var15 = 2;
                 Adap.DSPLAY(181);
-                await Func.setMessage1("何かが爆弾にされた！", "", 8, false, false, false);
+                await Func.setMessage("何かが爆弾にされた！", "", 8, false, false, false);
                 await Func.AutoDraw(15);
                 Gvar.var_2197 = 1;
             }
@@ -72,19 +72,19 @@ async function enemy137(this: any) {
             await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             Gvar.var_1073 = Adap.rnd(3);
             if (Gvar.var_1073 == 0) {
-                await Func.setMessage1("こォ～～ろォ～～すゥ～～っ！", "", 8, false, false, true);
+                await Func.setMessage("こォ～～ろォ～～すゥ～～っ！", "", 8, false, false, true);
             }
             if (Gvar.var_1073 == 1) {
-                await Func.setMessage1("カワイイおまえを守ってやるよ…", "", 8, false, false, true);
+                await Func.setMessage("カワイイおまえを守ってやるよ…", "", 8, false, false, true);
             }
             if (Gvar.var_1073 == 2) {
-                await Func.setMessage1("吉影や…", "", 8, false, false, true);
+                await Func.setMessage("吉影や…", "", 8, false, false, true);
             }
             for (let cnt3 = 0; cnt3 < 15; ++cnt3) {
                 Gvar.var_300 = 0;
                 await Func.func337(); // メッセージ表示処理(自動)
             }
-            await Func.setMessage1("鉄塔がカエルに変化した！", "", 8, false, false, false);
+            await Func.setMessage("鉄塔がカエルに変化した！", "", 8, false, false, false);
             await Func.AutoDraw(15);
             Gvar.var_2197 = 1;
         }

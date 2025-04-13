@@ -37,7 +37,7 @@ async function item9999(this: any) {
             Gvar.var_2103 = Gvar.var_67 - 1;
         }
         Gvar.var_2107 = 0;
-        await Func.setMessage1("ペラペラに空気を入れた。",
+        await Func.setMessage("ペラペラに空気を入れた。",
                                "", 7, false, false, false);
         await Func.AutoDraw(10);
         if (Gvar.var_71[Gvar.var_2102][Gvar.var_2103] == 0 || Gvar.var_71[Gvar.var_2102][Gvar.var_2103] == 13 || Gvar.var_82[Gvar.var_2102][Gvar.var_2103] != 0) {
@@ -57,7 +57,7 @@ async function item9999(this: any) {
                 Gvar.var_199 = Gvar.var_2111;
             }
             if (Gvar.var_2110 == 0) {
-                await Func.setMessage1("十分なスペースがないため",
+                await Func.setMessage("十分なスペースがないため",
                                        "うまくいかなかった…", 7, false, false, false);
                 Gvar.var_231 = 0;
                 Gvar.var_234 = 0;

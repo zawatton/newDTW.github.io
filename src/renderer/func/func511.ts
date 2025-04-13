@@ -45,7 +45,7 @@ async function func511(this: any) {
 
             await Func.func492(); // アイテムリスト呼び出し
             Gvar.identified_disc_name = Gvar.item_name;
-            await Func.setMessage1("なんと" + Gvar.unidentified_disc_name + "は",
+            await Func.setMessage("なんと" + Gvar.unidentified_disc_name + "は",
                                     "" + Gvar.identified_disc_name + "だった！", 7, false, false, false);
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
                 await Func.func337(); // メッセージ表示処理(自動)
@@ -431,7 +431,7 @@ async function func511(this: any) {
             await Stand.item415();
             return;
         }
-        await Func.setMessage1("しかし何も起こらなかった",
+        await Func.setMessage("しかし何も起こらなかった",
                                 "", 7, false, false, false);
         Gvar.var_234 = 0;
         Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？

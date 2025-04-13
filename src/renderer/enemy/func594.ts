@@ -5,8 +5,8 @@ import * as Music from '../music/index'
 
 async function func594(this: any) {
         Adap.dbgprt(594);
-        await Func.setMessage1("闇の中から蘇りし者…", "リンプ・ビズキッド…", 8, true, false, true);
-        await Func.setMessage1("我とともに来たれ…", "闇とともに喜びを分かち…ぶつぶつ…", 8, false, false, true);
+        await Func.setMessage("闇の中から蘇りし者…", "リンプ・ビズキッド…", 8, true, false, true);
+        await Func.setMessage("我とともに来たれ…", "闇とともに喜びを分かち…ぶつぶつ…", 8, false, false, true);
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             Gvar.var_300 = 0;
             await Func.func337(); // メッセージ表示処理(自動)
@@ -35,7 +35,7 @@ async function func594(this: any) {
             Adap.DSPLAY(170);
         }
         if (Gvar.var_2110 == 0) {
-            await Func.setMessage1("しかし何も起こらなかった…", "", 8, false, false, true);
+            await Func.setMessage("しかし何も起こらなかった…", "", 8, false, false, true);
             Gvar.var_2197 = 1;
             return;
         }

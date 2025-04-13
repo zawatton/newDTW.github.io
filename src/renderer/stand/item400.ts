@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 400 ハイエロファントグリーンの発動処理
 async function item400(this: any) {
         if (Gvar.var_73[Gvar.var_66][Gvar.var_67] != 0 || Gvar.var_80[Gvar.var_66][Gvar.var_67] != 0 || Gvar.var_77[Gvar.var_66][Gvar.var_67] != 0) {
-            await Func.setMessage1("ここには仕掛けられない。",
+            await Func.setMessage("ここには仕掛けられない。",
                                    "", 7, false, false, false);
             await Func.AutoDraw(5);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
@@ -20,7 +20,7 @@ async function item400(this: any) {
         Gvar.var_81[Gvar.var_2330][4] = 1;
         Gvar.var_81[Gvar.var_2330][5] = Gvar.var_201;
         Adap.DSPLAY(165);
-        await Func.setMessage1("法王の結界を仕掛けた。",
+        await Func.setMessage("法王の結界を仕掛けた。",
                                "", 7, false, false, false);
         // return; Ver 0.1309 return削除。これがあるがために、「法王の結界」の罠を仕掛けるとフリーズする。
         await Func.AutoDraw(5);

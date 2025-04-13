@@ -9,7 +9,7 @@ async function func151(this: any) {
     await Func.func335();
     await Func.AutoDraw(20);
 
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「ハッ？！こ…今度は何だ？」", "", 7, true, false, true);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「ハッ？！こ…今度は何だ？」", "", 7, true, false, true);
 
     Gvar.var_199 = 1;
     await Func.AutoDraw(2);
@@ -28,7 +28,7 @@ async function func151(this: any) {
     Gvar.var_199 = 2;
     await Func.AutoDraw(5);
 
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「どこから襲ってくるんだ？！」", "", 7, true, false, true);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「どこから襲ってくるんだ？！」", "", 7, true, false, true);
 
     Gvar.var_199 = 1;
     await Func.AutoDraw(2);
@@ -47,13 +47,13 @@ async function func151(this: any) {
     Gvar.var_199 = 2;
     await Func.AutoDraw(5);
 
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「………」", "", 7, true, false, false);
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「………」", "", 7, true, false, false);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「………」", "", 7, true, false, false);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「………」", "", 7, true, false, false);
 
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「おかしいな…",
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「おかしいな…",
                             "何もおこらないぞ」", 7, true, false, true);
 
-    await Func.setMessage1("ﾃﾞｱﾎﾞﾛ「何か…",
+    await Func.setMessage("ﾃﾞｱﾎﾞﾛ「何か…",
                             "何かいつもと違うようだぞ？」", 7, true, false, true);
 
     await Func.AutoDraw(20);

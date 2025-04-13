@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 701 没アイテム「ソフト・マシーンの発動によって罠にした敵」を使用した時の効果
 async function item701(this: any) {
         if (Gvar.var_77[Gvar.var_66][Gvar.var_67] != 0 || Gvar.var_80[Gvar.var_66][Gvar.var_67] != 0 || Gvar.var_73[Gvar.var_66][Gvar.var_67] != 0) {
-            await Func.setMessage1("足元のものが邪魔で",
+            await Func.setMessage("足元のものが邪魔で",
                                    "うまく使えなかった。", 7, false, false, false);
             return;
         }
@@ -21,9 +21,9 @@ async function item701(this: any) {
         await Func.func626(); // 敵リスト
         Gvar.var_2213 = Gvar.enemy_name;
 
-        await Func.setMessage1("" + Gvar.var_2213 + "を",
+        await Func.setMessage("" + Gvar.var_2213 + "を",
                                "地面に出して人質にした！", 7, true, false, false);
-        await Func.setMessage1("この上にいれば",
+        await Func.setMessage("この上にいれば",
                                "" + Gvar.var_2213 + "から攻撃されないぞ", 7, false, true, false);
         return;
 }

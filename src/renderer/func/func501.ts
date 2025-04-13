@@ -12,7 +12,7 @@ async function func501(this: any) {
         Gvar.var_747 = 1;
 
         Adap.DSPLAY(103); // 殴られた時の効果音
-        await Func.setMessage1("電気のエネルギーが散っている！", 
+        await Func.setMessage("電気のエネルギーが散っている！", 
                                 "" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを受けた", 11, false, false, false);
         for (let cnt1 = 0; cnt1 < 15; ++cnt1) {
             await Func.func337(); // メッセージ表示処理(自動)

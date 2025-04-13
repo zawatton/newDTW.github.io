@@ -18,7 +18,7 @@ async function item205(this: any) {
             Gvar.bufferid_stand_disc = 29; // Adap.buffer(29)は"img_stand3.gif"
         }
         if (Gvar.var_172 == 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-            await Func.setMessage1("発動能力がパワーアップしている！",
+            await Func.setMessage("発動能力がパワーアップしている！",
                                    "", 7, true, false, false);
         }
         await Func.AutoDraw(10);
@@ -114,12 +114,12 @@ async function item205(this: any) {
             Gvar.var_1992 = Gvar.var_1992 + 1;
         }
         if (Gvar.var_2302 == 1) {
-            await Func.setMessage1("その場所に固定するッ！",
+            await Func.setMessage("その場所に固定するッ！",
                                    "", 7, false, false, false);
             Adap.DSPLAY(126);
         }
         if (Gvar.var_2302 == 0) {
-            await Func.setMessage1("しかし何も起こらなかった…",
+            await Func.setMessage("しかし何も起こらなかった…",
                                    "", 7, false, false, false);
         }
         if (Gvar.var_2302 == 1) {

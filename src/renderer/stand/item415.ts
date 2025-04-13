@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 // No = 415 タスクact1の発動処理。Ver0.1401にて追加。
 async function item415(this: any) {
-        await Func.setMessage1("『牙』だ",
+        await Func.setMessage("『牙』だ",
                                "これからは『牙』と呼ぶ！", 7, false, true, true);
         Gvar.var_1572 = 1;
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
@@ -20,7 +20,7 @@ async function item415(this: any) {
 
         Gvar.taskact1_on = 1; // Ver0.1401にて追加。タスクact1を発動したかどうかの確認フラグ
 
-        await Func.setMessage1("素手での攻撃力が上がった！",
+        await Func.setMessage("素手での攻撃力が上がった！",
                                "", 7, false, false, false);
         await Func.AutoDraw(5);
         Gvar.belongings_item_list = Gvar.activated_disc_id;

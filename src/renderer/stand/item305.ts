@@ -6,9 +6,9 @@ import * as Func from '../func/index'
 async function item305(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         Gvar.var_1024 = 1; // 次の階の出現アイテム数＋6個するフラグON
-        await Func.setMessage1("幸運な顔のメイクをしてみた。",
+        await Func.setMessage("幸運な顔のメイクをしてみた。",
                                "", 7, true, false, false);
-        await Func.setMessage1("次のフロアでアイテムがたくさん",
+        await Func.setMessage("次のフロアでアイテムがたくさん",
                                "出現する気がする…！", 7, false, true, false);
         await Func.AutoDraw(5);
         if (Gvar.var_2254 == 1) {

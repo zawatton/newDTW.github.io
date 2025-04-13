@@ -354,7 +354,7 @@ async function func651(this: any) {
             }
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1265 = 0;
-            await Func.setMessage1("おれは・・・", "反省すると強いぜ・・・", 7, false, false, true);
+            await Func.setMessage("おれは・・・", "反省すると強いぜ・・・", 7, false, false, true);
             await Func.AutoDraw(20);
         }
         Gvar.var_3022 = 0;

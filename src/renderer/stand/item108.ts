@@ -17,7 +17,7 @@ async function item108(this: any) {
         if (Gvar.var_570 == 3) {
             Gvar.bufferid_stand_disc = 29; // Adap.buffer(29)は"img_stand3.gif"
         }
-        await Func.setMessage1("こいつ自身に見せつけるしかねえッ！",
+        await Func.setMessage("こいつ自身に見せつけるしかねえッ！",
                                "", 7, false, false, false);
         Gvar.var_199 = 2;
         Gvar.var_1600 = 1;
@@ -72,7 +72,7 @@ async function item108(this: any) {
         Gvar.var_218 = 30;
         await Func.AutoDraw(10);
 
-        await Func.setMessage1("「覚悟」ってのはこういうことだぜ…",
+        await Func.setMessage("「覚悟」ってのはこういうことだぜ…",
                                "", 7, false, false, false);
 
         Gvar.var_217 = 1;

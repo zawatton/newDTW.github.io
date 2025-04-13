@@ -8,7 +8,7 @@ async function item398(this: any) {
         Gvar.time_paused = 1; // 時止め(時消し飛ばし)状態フラグON
         Gvar.var_164 = 1;
         Gvar.var_153 = 0;
-        await Func.setMessage1("「スタープラチナ・ザ・ワールド」！！", "時よ止まれ！", 7, false, false, false);
+        await Func.setMessage("「スタープラチナ・ザ・ワールド」！！", "時よ止まれ！", 7, false, false, false);
         Gvar.var_114 = 0;
         Gvar.var_463 = 0;
         Gvar.var_464 = 0;

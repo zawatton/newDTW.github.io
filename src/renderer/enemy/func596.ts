@@ -194,13 +194,13 @@ async function func596(this: any) {
             Gvar.var_1478 = 0;
             Gvar.var_1479 = 0;
             if (Gvar.var_2849 == 0) {
-                await Func.setMessage1("床の " + Gvar.var_2848 + "から", "針が飛び出した！", 8, false, false, false);
+                await Func.setMessage("床の " + Gvar.var_2848 + "から", "針が飛び出した！", 8, false, false, false);
             }
             if (Gvar.var_2849 == 1) {
-                await Func.setMessage1("床の " + Gvar.var_2848 + "から", "ハサミが飛び出した！", 8, false, false, false);
+                await Func.setMessage("床の " + Gvar.var_2848 + "から", "ハサミが飛び出した！", 8, false, false, false);
             }
             if (Gvar.var_2849 == 2) {
-                await Func.setMessage1("床の " + Gvar.var_2848 + "から", "カミソリが飛び出した！", 8, false, false, false);
+                await Func.setMessage("床の " + Gvar.var_2848 + "から", "カミソリが飛び出した！", 8, false, false, false);
             }
             await Func.AutoDraw(6);
             return;
@@ -222,10 +222,10 @@ async function func596(this: any) {
             Gvar.var_240 = 0;
             Gvar.var_83[Gvar.var_673].Var7 = 0;
             if (Gvar.equip_disc[320] == 1) {
-                await Func.setMessage1("磁力攻撃をﾒﾀﾘｶの能力で防いだ！", "", 8, true, false, false);
+                await Func.setMessage("磁力攻撃をﾒﾀﾘｶの能力で防いだ！", "", 8, true, false, false);
             }
             if (Gvar.equip_disc[315] == 1) {
-                await Func.setMessage1("磁力攻撃を予知した！", "", 8, true, false, false);
+                await Func.setMessage("磁力攻撃を予知した！", "", 8, true, false, false);
             }
             Gvar.var_2849 = Adap.rnd(7);
             Gvar.var_2849 = Gvar.var_2849 + 1;
@@ -233,28 +233,28 @@ async function func596(this: any) {
                 Gvar.var_2849 = Adap.rnd(5);
             }
             if (Gvar.var_2849 == 0) {
-                await Func.setMessage1("ﾘｿﾞｯﾄ「おまえ『予知のような能力』", "        を持っているな」", 8, false, false, true);
+                await Func.setMessage("ﾘｿﾞｯﾄ「おまえ『予知のような能力』", "        を持っているな」", 8, false, false, true);
             }
             if (Gvar.var_2849 == 1) {
-                await Func.setMessage1("ﾘｿﾞｯﾄ「こんな近くまで突っ込んで", "        来たのは  お前が初めてだ…」", 8, false, false, true);
+                await Func.setMessage("ﾘｿﾞｯﾄ「こんな近くまで突っ込んで", "        来たのは  お前が初めてだ…」", 8, false, false, true);
             }
             if (Gvar.var_2849 == 2) {
-                await Func.setMessage1("ﾘｿﾞｯﾄ「なぜわかったのか？", "        興味が湧く」", 8, false, false, true);
+                await Func.setMessage("ﾘｿﾞｯﾄ「なぜわかったのか？", "        興味が湧く」", 8, false, false, true);
             }
             if (Gvar.var_2849 == 3) {
-                await Func.setMessage1("ﾘｿﾞｯﾄ「『磁力』を使っている…", "        『当たり』だ…」", 8, false, false, true);
+                await Func.setMessage("ﾘｿﾞｯﾄ「『磁力』を使っている…", "        『当たり』だ…」", 8, false, false, true);
             }
             if (Gvar.var_2849 == 4) {
-                await Func.setMessage1("ﾘｿﾞｯﾄ「さてと…", "      オレはこれからどうすべきかな…」", 8, false, false, true);
+                await Func.setMessage("ﾘｿﾞｯﾄ「さてと…", "      オレはこれからどうすべきかな…」", 8, false, false, true);
             }
             if (Gvar.var_2849 == 5) {
-                await Func.setMessage1("ﾘｿﾞｯﾄ「勝っていた…", "        オレは勝っていたのに…」", 8, false, false, true);
+                await Func.setMessage("ﾘｿﾞｯﾄ「勝っていた…", "        オレは勝っていたのに…」", 8, false, false, true);
             }
             if (Gvar.var_2849 == 6) {
-                await Func.setMessage1("ﾘｿﾞｯﾄ「  ひ    と  ……", "          はレ…    なな  」", 8, false, false, true);
+                await Func.setMessage("ﾘｿﾞｯﾄ「  ひ    と  ……", "          はレ…    なな  」", 8, false, false, true);
             }
             if (Gvar.var_2849 == 7) {
-                await Func.setMessage1("ﾘｿﾞｯﾄ「最後に顔を", "          見せ  てくれ    顔を…」", 8, false, false, true);
+                await Func.setMessage("ﾘｿﾞｯﾄ「最後に顔を", "          見せ  てくれ    顔を…」", 8, false, false, true);
             }
             await Func.AutoDraw(6);
             return;
@@ -304,13 +304,13 @@ async function func596(this: any) {
         }
 
         if (Gvar.var_2849 == 0) {
-            await Func.setMessage1("体から針が飛び出した！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+            await Func.setMessage("体から針が飛び出した！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
         }
         if (Gvar.var_2849 == 1) {
-            await Func.setMessage1("体からハサミが飛び出した！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+            await Func.setMessage("体からハサミが飛び出した！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
         }
         if (Gvar.var_2849 == 2) {
-            await Func.setMessage1("体からカミソリが飛び出した！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+            await Func.setMessage("体からカミソリが飛び出した！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
         }
         if (Gvar.var_128 >= 1) {
             await Func.func023();

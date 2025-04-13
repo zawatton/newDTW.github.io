@@ -21,28 +21,28 @@ async function func595(this: any) {
         }
         Adap.DSPLAY(118);
         if (Gvar.var_2352 == 0) {
-            await Func.setMessage1("ウンガロは", "「ﾌｧﾝﾄﾑ･ﾌﾞﾗｯﾄﾞ」を読んだ", 8, false, false, false);
+            await Func.setMessage("ウンガロは", "「ﾌｧﾝﾄﾑ･ﾌﾞﾗｯﾄﾞ」を読んだ", 8, false, false, false);
         }
         if (Gvar.var_2352 == 1) {
-            await Func.setMessage1("ウンガロは", "「戦闘潮流」を読んだ", 8, false, false, false);
+            await Func.setMessage("ウンガロは", "「戦闘潮流」を読んだ", 8, false, false, false);
         }
         if (Gvar.var_2352 == 2) {
-            await Func.setMessage1("ウンガロは", "「ｽﾀｰﾀﾞｽﾄ･ｸﾙｾｲﾀﾞｰｽ」を読んだ", 8, false, false, false);
+            await Func.setMessage("ウンガロは", "「ｽﾀｰﾀﾞｽﾄ･ｸﾙｾｲﾀﾞｰｽ」を読んだ", 8, false, false, false);
         }
         if (Gvar.var_2352 == 3) {
-            await Func.setMessage1("ウンガロは", "「ダイヤモンドは砕けない」を読んだ", 8, false, false, false);
+            await Func.setMessage("ウンガロは", "「ダイヤモンドは砕けない」を読んだ", 8, false, false, false);
         }
         if (Gvar.var_2352 == 4) {
-            await Func.setMessage1("ウンガロは", "「黄金の風」を読んだ", 8, false, false, false);
+            await Func.setMessage("ウンガロは", "「黄金の風」を読んだ", 8, false, false, false);
         }
         if (Gvar.var_2352 == 5) {
-            await Func.setMessage1("ウンガロは", "「ｽﾄｰﾝ･ｵｰｼｬﾝ」を読んだ", 8, false, false, false);
+            await Func.setMessage("ウンガロは", "「ｽﾄｰﾝ･ｵｰｼｬﾝ」を読んだ", 8, false, false, false);
         }
         if (Gvar.var_2352 == 6) {
-            await Func.setMessage1("ウンガロは", "「７匹のヤギ」を読んだ", 8, false, false, false);
+            await Func.setMessage("ウンガロは", "「７匹のヤギ」を読んだ", 8, false, false, false);
         }
         if (Gvar.var_2352 == 7) {
-            await Func.setMessage1("ウンガロ「これからはおれの時代だッ！」", "", 8, false, false, true);
+            await Func.setMessage("ウンガロ「これからはおれの時代だッ！」", "", 8, false, false, true);
         }
         Gvar.var_83[Gvar.var_673].Var21 = 1;
         Gvar.var_411 = 1;
@@ -119,7 +119,7 @@ async function func595(this: any) {
                 Gvar.var_2841++;
             }
             if (Gvar.var_2841 == 0) {
-                await Func.setMessage1("しかし何も起こらなかった…", "", 8, false, false, false);
+                await Func.setMessage("しかし何も起こらなかった…", "", 8, false, false, false);
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                     Gvar.var_300 = 0;
                     await Func.func337(); // メッセージ表示処理(自動)
@@ -162,18 +162,18 @@ async function func595(this: any) {
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         if (Gvar.var_2841 == 0) {
             if (Gvar.var_2352 != 6) {
-                await Func.setMessage1("マンガのキャラクターが現れた！", "", 8, false, false, false);
+                await Func.setMessage("マンガのキャラクターが現れた！", "", 8, false, false, false);
             }
             if (Gvar.var_2352 == 6) {
-                await Func.setMessage1("メェ～～", "", 8, false, false, false);
+                await Func.setMessage("メェ～～", "", 8, false, false, false);
             }
         }
         if (Gvar.var_2841 != 0) {
             if (Gvar.var_2352 != 6) {
-                await Func.setMessage1("部屋内にマンガのキャラクターが増えた！", "", 8, false, false, false);
+                await Func.setMessage("部屋内にマンガのキャラクターが増えた！", "", 8, false, false, false);
             }
             if (Gvar.var_2352 == 6) {
-                await Func.setMessage1("部屋内にヤギが増えた！", "", 8, false, false, false);
+                await Func.setMessage("部屋内にヤギが増えた！", "", 8, false, false, false);
             }
         }
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {

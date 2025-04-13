@@ -489,7 +489,7 @@ async function func636(this: any) {
             Gvar.var_2936 = Adap.rnd(8);
             if (Gvar.var_2936 == 0) {
                 Gvar.var_747 = 1;
-                await Func.setMessage1("「ジャンピン・ジャック・フラッシュ！」", "", 7, false, false, false);
+                await Func.setMessage("「ジャンピン・ジャック・フラッシュ！」", "", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_83[Gvar.var_314].Var17 = 1;
                 Gvar.var_2937 = 1;
@@ -507,7 +507,7 @@ async function func636(this: any) {
         }
         if (Gvar.var_1035 >= 1) {
             Gvar.var_243 = 0;
-            await Func.setMessage1("この恨み はらさでおくべきかァ―！", "", 7, false, false, false);
+            await Func.setMessage("この恨み はらさでおくべきかァ―！", "", 7, false, false, false);
             await Music.func094(); // メッセージ送りの際の効果音
             await Func.AutoDraw(10);
             Gvar.var_243 = 1;
@@ -555,28 +555,28 @@ async function func636(this: any) {
             if (Gvar.var_143 >= 2) {
                 Gvar.var_243 = 0;
                 if (Gvar.var_143 == 2) {
-                    await Func.setMessage1("きさまの 動きやパワーは", "さっきしっかり とりこんだ！", 7, false, false, true);
+                    await Func.setMessage("きさまの 動きやパワーは", "さっきしっかり とりこんだ！", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 3) {
-                    await Func.setMessage1("ウシャア―――――――ッ！！", "", 7, false, false, true);
+                    await Func.setMessage("ウシャア―――――――ッ！！", "", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 4) {
-                    await Func.setMessage1("絶っ～～～～～～～～～対に！", "負けなあああああああいィィィ", 7, false, false, true);
+                    await Func.setMessage("絶っ～～～～～～～～～対に！", "負けなあああああああいィィィ", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 5) {
-                    await Func.setMessage1("さすが" + Gvar.enemy_name + "…", "しかしその動き… スデに憶えた！", 7, false, false, true);
+                    await Func.setMessage("さすが" + Gvar.enemy_name + "…", "しかしその動き… スデに憶えた！", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 6) {
-                    await Func.setMessage1("さて～～～  今度の攻撃には", "\t耐えられるかな？", 7, false, false, true);
+                    await Func.setMessage("さて～～～  今度の攻撃には", "\t耐えられるかな？", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 7) {
-                    await Func.setMessage1("ウシャアアアアアア―――ッ", "死ねエエエイ――っ！！", 7, false, false, true);
+                    await Func.setMessage("ウシャアアアアアア―――ッ", "死ねエエエイ――っ！！", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 8) {
-                    await Func.setMessage1("とどめの とっておきのダメ押しだッ！", "", 7, false, false, true);
+                    await Func.setMessage("とどめの とっておきのダメ押しだッ！", "", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 9) {
-                    await Func.setMessage1("この首 もらったァ―――ッ!!", "", 7, false, false, true);
+                    await Func.setMessage("この首 もらったァ―――ッ!!", "", 7, false, false, true);
                 }
                 await Func.AutoDraw(10);
                 Gvar.var_243 = 1;
@@ -585,10 +585,10 @@ async function func636(this: any) {
         await Func.func639(); // 敵の回避処理
         if (Gvar.var_2867 == 0) {
             if (Gvar.var_2938 != 1) { // ヒラリ回避発動フラグOFF
-                await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛの攻撃は外れた", "", 7, false, false, false);
+                await Func.setMessage("ﾃﾞｨｱﾎﾞﾛの攻撃は外れた", "", 7, false, false, false);
             }
             if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
-                await Func.setMessage1("ヒラリと攻撃をかわされた", "", 7, false, false, false);
+                await Func.setMessage("ヒラリと攻撃をかわされた", "", 7, false, false, false);
             }
             Gvar.var_2939 = 1;
             if (Gvar.equip_disc[105] == 1) { // No = 105 チリペッパーのDISCを装備している場合
@@ -632,7 +632,7 @@ async function func636(this: any) {
                     }
                 }
                 await Music.func091();
-                await Func.setMessage1("ﾄﾘｯｼｭはｺﾞﾑのように柔らかくなっている！", "", 7, false, false, false);
+                await Func.setMessage("ﾄﾘｯｼｭはｺﾞﾑのように柔らかくなっている！", "", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_243 = 0;
                 await Func.func529();
@@ -685,19 +685,19 @@ async function func636(this: any) {
             Gvar.var_243 = 0;
             Gvar.var_2915 = Adap.rnd(5);
             if (Gvar.var_2915 == 0) {
-                await Func.setMessage1("なにかわからんが喰らえッ！", "", 7, false, false, true);
+                await Func.setMessage("なにかわからんが喰らえッ！", "", 7, false, false, true);
             }
             if (Gvar.var_2915 == 1) {
-                await Func.setMessage1("帝王はこのディアボロだッ！", "", 7, false, false, true);
+                await Func.setMessage("帝王はこのディアボロだッ！", "", 7, false, false, true);
             }
             if (Gvar.var_2915 == 2) {
-                await Func.setMessage1("お前はわたしを本気で怒らせたッ！！", "", 7, false, false, true);
+                await Func.setMessage("お前はわたしを本気で怒らせたッ！！", "", 7, false, false, true);
             }
             if (Gvar.var_2915 == 3) {
-                await Func.setMessage1("とどめだァ――――ッ！", "", 7, false, false, true);
+                await Func.setMessage("とどめだァ――――ッ！", "", 7, false, false, true);
             }
             if (Gvar.var_2915 == 4) {
-                await Func.setMessage1("死んだことを後悔する時間をも", "与えんッ！！", 7, false, false, true);
+                await Func.setMessage("死んだことを後悔する時間をも", "与えんッ！！", 7, false, false, true);
             }
             await Func.AutoDraw(10);
             Gvar.var_243 = 1;
@@ -755,18 +755,18 @@ async function func636(this: any) {
         }
         if (Gvar.var_1194 != 1) {
             if (Gvar.var_209 != 999) {
-                await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "" + Gvar.var_209 + "のダメージ！", 7, false, false, false);
+                await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "" + Gvar.var_209 + "のダメージ！", 7, false, false, false);
             }
             if (Gvar.var_209 == 999) {
-                await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "致命的なダメージ！", 7, false, false, false);
+                await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "致命的なダメージ！", 7, false, false, false);
             }
         }
         if (Gvar.var_1194 == 1) {
             if (Gvar.var_209 != 999) {
-                await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "" + Gvar.var_209 + "のダメージ！", 12, false, false, false);
+                await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "" + Gvar.var_209 + "のダメージ！", 12, false, false, false);
             }
             if (Gvar.var_209 == 999) {
-                await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "致命的なダメージ！", 12, false, false, false);
+                await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "致命的なダメージ！", 12, false, false, false);
             }
         }
         await Func.AutoDraw(3);
@@ -802,7 +802,7 @@ async function func636(this: any) {
                 if (Gvar.var_211 >= Gvar.var_352) {
                     Gvar.var_211 = Gvar.var_352;
                 }
-                await Func.setMessage1("" + Gvar.var_209 + "の養分を吸収した。", "", 7, false, false, false);
+                await Func.setMessage("" + Gvar.var_209 + "の養分を吸収した。", "", 7, false, false, false);
             }
         }
         // No = 61 ヨーヨーマッ
@@ -919,7 +919,7 @@ async function func636(this: any) {
             if (Gvar.var_127 != 0 || Gvar.var_132 != 0) {
                 Gvar.enemy_name = "何者か";
             }
-            await Func.setMessage1("" + Gvar.enemy_name + "をやっつけた", "" + Gvar.var_2956 + "の経験値を手に入れた", 7, false, false, false);
+            await Func.setMessage("" + Gvar.enemy_name + "をやっつけた", "" + Gvar.var_2956 + "の経験値を手に入れた", 7, false, false, false);
             Gvar.var_2945 = Gvar.enemy_list;
             Gvar.var_1034 = Gvar.enemy_list;
             // No = 1 なので、ホテルの外
@@ -1064,45 +1064,45 @@ async function func636(this: any) {
             if (Gvar.var_2960 == 1 || Gvar.var_2961 == 1 || Gvar.var_2962 == 1) {
                 await Func.AutoDraw(8);
                 if (Gvar.var_2960 == 1 && Gvar.var_2961 == 0 && Gvar.var_2962 == 0) {
-                    await Func.setMessage1("" + Gvar.var_2943 + "を重くした！", "", 7, false, false, false);
+                    await Func.setMessage("" + Gvar.var_2943 + "を重くした！", "", 7, false, false, false);
                 }
                 if (Gvar.var_2960 == 1 && Gvar.var_2961 == 1 && Gvar.var_2962 == 0) {
                     if (Gvar.var_83[Gvar.var_314].Var20 != 2) {
-                        await Func.setMessage1("" + Gvar.var_2943 + "を", "重くして能力を封じた！", 7, false, false, false);
+                        await Func.setMessage("" + Gvar.var_2943 + "を", "重くして能力を封じた！", 7, false, false, false);
                     }
                     if (Gvar.var_83[Gvar.var_314].Var20 == 2) {
-                        await Func.setMessage1("" + Gvar.var_2943 + "を", "重くして攻撃を封じた！", 7, false, false, false);
+                        await Func.setMessage("" + Gvar.var_2943 + "を", "重くして攻撃を封じた！", 7, false, false, false);
                     }
                 }
                 if (Gvar.var_2960 == 1 && Gvar.var_2961 == 0 && Gvar.var_2962 == 1) {
-                    await Func.setMessage1("" + Gvar.var_2943 + "を", "重くして凍らせた！", 7, false, false, false);
+                    await Func.setMessage("" + Gvar.var_2943 + "を", "重くして凍らせた！", 7, false, false, false);
                 }
                 if (Gvar.var_2960 == 1 && Gvar.var_2961 == 1 && Gvar.var_2962 == 1) {
                     if (Gvar.var_83[Gvar.var_314].Var20 != 2) {
-                        await Func.setMessage1("" + Gvar.var_2943 + "を", "重くして能力を封じて凍らせた！", 7, false, false, false);
+                        await Func.setMessage("" + Gvar.var_2943 + "を", "重くして能力を封じて凍らせた！", 7, false, false, false);
                     }
                     if (Gvar.var_83[Gvar.var_314].Var20 == 2) {
-                        await Func.setMessage1("" + Gvar.var_2943 + "を", "重くして攻撃を封じて凍らせた！", 7, false, false, false);
+                        await Func.setMessage("" + Gvar.var_2943 + "を", "重くして攻撃を封じて凍らせた！", 7, false, false, false);
                     }
                 }
                 if (Gvar.var_2960 == 0 && Gvar.var_2961 == 1 && Gvar.var_2962 == 0) {
                     if (Gvar.var_83[Gvar.var_314].Var20 != 2) {
-                        await Func.setMessage1("" + Gvar.var_2943 + "の能力を封じた！", "", 7, false, false, false);
+                        await Func.setMessage("" + Gvar.var_2943 + "の能力を封じた！", "", 7, false, false, false);
                     }
                     if (Gvar.var_83[Gvar.var_314].Var20 == 2) {
-                        await Func.setMessage1("" + Gvar.var_2943 + "の攻撃を封じた！", "", 7, false, false, false);
+                        await Func.setMessage("" + Gvar.var_2943 + "の攻撃を封じた！", "", 7, false, false, false);
                     }
                 }
                 if (Gvar.var_2960 == 0 && Gvar.var_2961 == 1 && Gvar.var_2962 == 1) {
                     if (Gvar.var_83[Gvar.var_314].Var20 != 2) {
-                        await Func.setMessage1("" + Gvar.var_2943 + "の", "能力を封じて凍らせた！", 7, false, false, false);
+                        await Func.setMessage("" + Gvar.var_2943 + "の", "能力を封じて凍らせた！", 7, false, false, false);
                     }
                     if (Gvar.var_83[Gvar.var_314].Var20 == 2) {
-                        await Func.setMessage1("" + Gvar.var_2943 + "の", "攻撃を封じて凍らせた！", 7, false, false, false);
+                        await Func.setMessage("" + Gvar.var_2943 + "の", "攻撃を封じて凍らせた！", 7, false, false, false);
                     }
                 }
                 if (Gvar.var_2960 == 0 && Gvar.var_2961 == 0 && Gvar.var_2962 == 1) {
-                    await Func.setMessage1("" + Gvar.var_2943 + "を凍らせた！", "", 7, false, false, false);
+                    await Func.setMessage("" + Gvar.var_2943 + "を凍らせた！", "", 7, false, false, false);
                 }
             }
         }

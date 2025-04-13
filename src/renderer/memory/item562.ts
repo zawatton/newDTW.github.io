@@ -8,17 +8,17 @@ async function item562(this: any) {
     await Func.AutoDraw(12);
     Gvar.var_1264 = 0;
     if (Gvar.current_level >= 99) {
-        await Func.setMessage1("これ以上成長できなかった…", "", 7, false, false, false);
+        await Func.setMessage("これ以上成長できなかった…", "", 7, false, false, false);
         return;
     }
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛはレベルが上がった！", "", 7, true, false, true);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛはレベルが上がった！", "", 7, true, false, true);
     Adap.DSPLAY(142); // レベルアップした時の効果音
     Gvar.var_568 = Gvar.var_948[Gvar.current_level];
     await Func.func681();
     Gvar.var_2201 = 0;
     await Func.AutoDraw(12);
-    await Func.setMessage1("「うわオッ！」", "", 7, true, false, true);
-    await Func.setMessage1("「ひょっとして成長したんですかァ！？", "ぼく！？」", 7, true, true, true);
+    await Func.setMessage("「うわオッ！」", "", 7, true, false, true);
+    await Func.setMessage("「ひょっとして成長したんですかァ！？", "ぼく！？」", 7, true, true, true);
     return;
 }
 

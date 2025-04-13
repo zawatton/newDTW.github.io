@@ -687,7 +687,7 @@ async function func019(this: any) {
                 if (Gvar.var_158 == 20) {
                     Gvar.var_240 = 0;
                     Gvar.var_157 = 0; // Gvar.var_157 倍速移動フラグOFF
-                    await Func.setMessage1("普通の速さに戻った",
+                    await Func.setMessage("普通の速さに戻った",
                                             "", 7, false, false, false);
                     await Func.AutoDraw(9);
                 }
@@ -805,7 +805,7 @@ async function func019(this: any) {
                     Gvar.var_388 = Adap.rnd(200);
                     if (Gvar.var_388 == 0) {
                         Gvar.var_240 = 0;
-                        await Func.setMessage1("ｴﾝﾌﾟﾚｽ「ﾃﾞｨｱﾎﾞﾛはここよッ！",
+                        await Func.setMessage("ｴﾝﾌﾟﾚｽ「ﾃﾞｨｱﾎﾞﾛはここよッ！",
                                                 "      ここにいるわよォ―――ッ」", 11, true, false, true);
 
                         Gvar.var_390 = 1;
@@ -814,7 +814,7 @@ async function func019(this: any) {
                             Gvar.var_390 = Gvar.var_390 + 1;
                         }
                         Gvar.var_389 = 0;
-                        await Func.setMessage1("フロアの敵が全員 目を覚ました！",
+                        await Func.setMessage("フロアの敵が全員 目を覚ました！",
                                                 "", 7, false, false, false);
                         await Func.AutoDraw(10);
                     }
@@ -824,7 +824,7 @@ async function func019(this: any) {
                     Gvar.var_388 = Adap.rnd(300);
                     if (Gvar.var_388 == 0 && Gvar.var_144 == 0 && Gvar.var_218 == 0 && Gvar.var_128 == 0 && Gvar.var_219 == 0 && Gvar.var_178 == 0 && Gvar.var_139 == 0) {
                         Gvar.var_240 = 0;
-                        await Func.setMessage1("「クンクンクン・・・」", "", 7, false, false, false);
+                        await Func.setMessage("「クンクンクン・・・」", "", 7, false, false, false);
                         Gvar.var_391 = 1;
                         Adap.DSPLAY(184);
                         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
@@ -839,12 +839,12 @@ async function func019(this: any) {
         }
         // 必要ない？？
         // if (Gvar.var_198 == 0) {
-        //     await Func.setMessage1("", "", 7, false, false, false);
+        //     await Func.setMessage("", "", 7, false, false, false);
         // }
         if (Gvar.var_123 == 0) {
             if (Gvar.time_paused == 1) { // 時止め(時消し飛ばし)状態の場合
                 Adap.DSPLAY(181);
-                await Func.setMessage1("「" + Gvar.var_164 + "秒経過！」", "", 7, false, false, false);
+                await Func.setMessage("「" + Gvar.var_164 + "秒経過！」", "", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_164++;
                 Gvar.var_392 = 0;
@@ -861,16 +861,16 @@ async function func019(this: any) {
                     Gvar.var_392 = 1;
                 }
                 if (Gvar.var_392 == 2) {
-                    await Func.setMessage1("まだまだ止めていられるぞ…", "", 7, false, false, false);
+                    await Func.setMessage("まだまだ止めていられるぞ…", "", 7, false, false, false);
                     await Func.AutoDraw(10);
                 }
                 if (Gvar.var_392 == 1) {
-                    await Func.setMessage1("そして時は動き出す…", "", 7, false, false, false);
+                    await Func.setMessage("そして時は動き出す…", "", 7, false, false, false);
                     if (Gvar.var_153 == 1) {
-                        await Func.setMessage1("パンチ一発分が限界か…", "", 7, false, false, false);
+                        await Func.setMessage("パンチ一発分が限界か…", "", 7, false, false, false);
                     }
                     if (Gvar.var_153 == 2) {
-                        await Func.setMessage1("「時」は動き出す", "", 7, false, false, false);
+                        await Func.setMessage("「時」は動き出す", "", 7, false, false, false);
                     }
                     await Func.AutoDraw(10);
                     Gvar.var_153 = 0;
@@ -891,7 +891,7 @@ async function func019(this: any) {
             Gvar.var_393[Gvar.var_123][2] = Gvar.var_67;
             Gvar.var_123++;
             if (Gvar.var_123 > 6) {
-                await Func.setMessage1("時は再び刻み始める…", "", 7, false, false, false);
+                await Func.setMessage("時は再び刻み始める…", "", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_394 = Gvar.var_83[Gvar.var_124].Var1;
                 Gvar.var_395 = Gvar.var_83[Gvar.var_124].Var2;
@@ -948,7 +948,7 @@ async function func019(this: any) {
                     }
                 }
                 if (Gvar.var_398 == 1) {
-                    await Func.setMessage1("ﾏﾘﾘﾝﾏﾝｿﾝ「マタ会オウ！」",
+                    await Func.setMessage("ﾏﾘﾘﾝﾏﾝｿﾝ「マタ会オウ！」",
                                             "", 7, false, false, true);
                     Gvar.var_240 = 0;
                     await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
@@ -1024,7 +1024,7 @@ async function func019(this: any) {
             Gvar.time_paused_count = Gvar.time_paused_count - 1;
             if (Gvar.time_paused_count == 1) {
                 await Func.AutoDraw(10);
-                await Func.setMessage1("そして時は動き出す…",
+                await Func.setMessage("そして時は動き出す…",
                                         "", 8, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.time_paused_count = 0;

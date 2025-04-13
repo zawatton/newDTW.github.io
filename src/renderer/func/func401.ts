@@ -19,7 +19,7 @@ async function func401(this: any) {
             Gvar.var_1841 = Gvar.var_1841 + 1;
         }
         if (Gvar.var_1839 == 1) {
-            await Func.setMessage1("" + Gvar.item_name + "(" + Gvar.var_78[Gvar.var_321].Var3 + ")を拾った",
+            await Func.setMessage("" + Gvar.item_name + "(" + Gvar.var_78[Gvar.var_321].Var3 + ")を拾った",
                                     "回数をまとめた", 7, false, false, false);
             Gvar.var_77[Gvar.var_66][Gvar.var_67] = 0;
             Gvar.var_78[Gvar.var_321].Var0 = 0;

@@ -19,11 +19,11 @@ async function item316(this: any) {
             Gvar.bufferid_stand_disc = 29; // Adap.buffer(29)は"img_stand3.gif"
         }
         if (Gvar.var_172 == 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-            await Func.setMessage1("「迫り来る危険を感知できる…！」",
+            await Func.setMessage("「迫り来る危険を感知できる…！」",
                                    "", 7, true, false, false);
         }
         if (Gvar.var_174 == 1) {
-            await Func.setMessage1("地面が濡れて伝達力が上がっている！",
+            await Func.setMessage("地面が濡れて伝達力が上がっている！",
                                    "", 7, true, false, false);
         }
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
@@ -122,7 +122,7 @@ async function item316(this: any) {
         }
         await Music.func135();
         Gvar.var_114 = 0;
-        await Func.setMessage1("ファイトクラブだっ！！",
+        await Func.setMessage("ファイトクラブだっ！！",
                                "", 7, false, false, false);
         await Func.AutoDraw(5);
         if (Gvar.var_2254 == 1) {

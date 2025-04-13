@@ -14,7 +14,7 @@ async function enemy158(this: any) {
         Gvar.var_463 = Gvar.var_83[Gvar.var_673].Var1;
         Gvar.var_464 = Gvar.var_83[Gvar.var_673].Var2;
         Gvar.var_114 = Gvar.var_673;
-        await Func.setMessage1("「絶対に逃がさないわッ！」", "", 8, false, false, false);
+        await Func.setMessage("「絶対に逃がさないわッ！」", "", 8, false, false, false);
         await Func.AutoDraw(3);
         Adap.DSPLAY(136);
         Gvar.var_1382 = 1;

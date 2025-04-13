@@ -8,11 +8,11 @@ async function item585(this: any) {
         Gvar.var_1264 = 0;
         Gvar.var_1073 = Adap.rnd(2);
         if (Gvar.var_1073 == 0) {
-            await Func.setMessage1("「あっ！  こりゃたまらん！",
+            await Func.setMessage("「あっ！  こりゃたまらん！",
                                    "    ヨダレ  ずびっ！」", 7, true, false, true);
         }
         if (Gvar.var_1073 == 1) {
-            await Func.setMessage1("「うわあああああ",
+            await Func.setMessage("「うわあああああ",
                                    "  はっ  腹が空いていくうよぉ～～っ」", 7, true, false, true);
         }
         Adap.DSPLAY(164);

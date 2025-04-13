@@ -19,17 +19,17 @@ async function func782(this: any) {
         await Func.AutoDraw(20);
         await Func.func335();
         await Func.AutoDraw(20);
-        await Func.setMessage1("おおっ！君が持っているのは",
+        await Func.setMessage("おおっ！君が持っているのは",
                                "「ﾎﾞﾍﾐｱﾝ･ﾗﾌﾟｿﾃﾞｨのDISC」！！", 7, true, false, true);
 
-        await Func.setMessage1("よし、お礼に…",
+        await Func.setMessage("よし、お礼に…",
                                 "君が主役のマンガを描いてやろう", 7, true, true, true);
 
 
-        await Func.setMessage1("なになに、組織のボスだった頃の",
+        await Func.setMessage("なになに、組織のボスだった頃の",
                                "絶頂だった自分を描いて欲しい？", 7, true, true, true);
 
-        await Func.setMessage1("ちょっと待っててくれよ。",
+        await Func.setMessage("ちょっと待っててくれよ。",
                                "", 7, true, true, true);
 
         Gvar.var_83[Gvar.var_761].Var21 = 1;
@@ -44,7 +44,7 @@ async function func782(this: any) {
         // await Func.func337(); // メッセージ表示処理(自動)
         await Func.func337(); // メッセージ表示処理(自動)
 
-        await Func.setMessage1("ズババッ！",
+        await Func.setMessage("ズババッ！",
                                "ジャキィン！  シュバッ！", 7, false, true, false);
 
         for (let cnt1 = 0; cnt1 < 4; ++cnt1) {
@@ -74,10 +74,10 @@ async function func782(this: any) {
         Gvar.var_83[Gvar.var_761].Var21 = 0;
         Gvar.var_411 = 0;
 
-        await Func.setMessage1("できたぜ。",
+        await Func.setMessage("できたぜ。",
                                "", 7, true, true, true);
 
-        await Func.setMessage1("タイトル？タイトルは",
+        await Func.setMessage("タイトル？タイトルは",
                                "別に決めてないな…", 7, true, true, true);
         
         Gvar.var_198 = 0; // メッセージウィンドウ閉じる
@@ -197,13 +197,13 @@ async function func782(this: any) {
         }
         Gvar.var_83[Gvar.var_762].Var6 = 0;
 
-        await Func.setMessage1("このシュトロハイムが",
+        await Func.setMessage("このシュトロハイムが",
                                "名づけ親(ｺﾞｯﾄﾞﾌｧｰｻﾞｰ)になってやるッ！", 7, true, false, true);
 
-        await Func.setMessage1("そうだな…不思議のダンジョンに",
+        await Func.setMessage("そうだな…不思議のダンジョンに",
                                "挑戦するディアボロ！という意味の", 7, true, true, true);
 
-        await Func.setMessage1("ディアボロの大冒険！というのは",
+        await Func.setMessage("ディアボロの大冒険！というのは",
                                "どうかな！？", 7, true, true, true);
 
         Gvar.var_198 = 0; // メッセージウィンドウ閉じる

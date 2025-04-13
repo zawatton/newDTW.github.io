@@ -6,7 +6,7 @@ import * as Music from '../music/index'
 async function func593(this: any) {
         Adap.dbgprt(593);
         Gvar.var_2352 = Adap.rnd(5);
-        await Func.setMessage1("康一「たいへんなんだ…", "    とにかくすぐ来てッ！」", 8, false, false, true);
+        await Func.setMessage("康一「たいへんなんだ…", "    とにかくすぐ来てッ！」", 8, false, false, true);
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
             Gvar.var_300 = 0;
             await Func.func337(); // メッセージ表示処理(自動)
@@ -49,7 +49,7 @@ async function func593(this: any) {
             Gvar.var_1583 = 0;
         }
         if (Gvar.var_2110 == 0) {
-            await Func.setMessage1("しかし仲間は来なかった…", "", 8, false, false, false);
+            await Func.setMessage("しかし仲間は来なかった…", "", 8, false, false, false);
             Gvar.var_2197 = 1;
             return;
         }

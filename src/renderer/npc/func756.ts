@@ -7,13 +7,13 @@ async function func756(this: any) {
         Adap.dbgprt(756);
         Gvar.var_243 = 0;
 
-        await Func.setMessage1("ﾎﾟﾙﾅﾚﾌ「亀の中はなかなか快適だな」",
+        await Func.setMessage("ﾎﾟﾙﾅﾚﾌ「亀の中はなかなか快適だな」",
                                 "", 7, true, false, true);
 
-        await Func.setMessage1("ﾎﾟﾙﾅﾚﾌ「ところでそこのジッパー…」",
+        await Func.setMessage("ﾎﾟﾙﾅﾚﾌ「ところでそこのジッパー…」",
                                 "", 7, true, false, true);
 
-        await Func.setMessage1("ﾎﾟﾙﾅﾚﾌ「自分が入ったら",
+        await Func.setMessage("ﾎﾟﾙﾅﾚﾌ「自分が入ったら",
                                 "            どこに行くんだろうな？」", 7, true, false, true);        
 
         await Func.func051(); // キー入力待ち処理

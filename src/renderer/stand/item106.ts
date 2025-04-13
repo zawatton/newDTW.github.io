@@ -13,7 +13,7 @@ async function item106(this: any) {
         if (Gvar.var_234 == 1) {
             Gvar.var_570 = Gvar.var_78[Gvar.var_321].Var13;
         }
-        await Func.setMessage1("ベースとなるアイテムを選んでください",
+        await Func.setMessage("ベースとなるアイテムを選んでください",
                                "", 7, true, false, false);
         await Func.AutoDraw(4);
 

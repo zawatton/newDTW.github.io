@@ -18,10 +18,10 @@ async function item207(this: any) {
             Gvar.bufferid_stand_disc = 29; // Adap.buffer(29)は"img_stand3.gif"
         }
         if (Gvar.var_172 == 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-            await Func.setMessage1("発動能力がパワーアップしている！",
+            await Func.setMessage("発動能力がパワーアップしている！",
                                    "", 7, true, false, false);
         }
-        await Func.setMessage1("「グレイトフル・デッド！！」",
+        await Func.setMessage("「グレイトフル・デッド！！」",
                                "", 7, false, false, false);
         Gvar.var_2264 = 0;
         Gvar.var_1940 = Gvar.var_199;
@@ -143,11 +143,11 @@ async function item207(this: any) {
         if (Gvar.var_2265 == 1 || Gvar.var_172 >= 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
 
             if (Gvar.var_172 == 0) { // Gvar.var_172 発動効果が向上するフラグがOFFであれば
-                await Func.setMessage1("近くにいる敵は急激に老化して",
+                await Func.setMessage("近くにいる敵は急激に老化して",
                                        "攻撃力が下がった！", 7, false, true, false);
             }
             if (Gvar.var_172 >= 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-                await Func.setMessage1("この階にいる全ての敵は",
+                await Func.setMessage("この階にいる全ての敵は",
                                        "急激に老化して攻撃力が下がった！", 7, false, true, false);
             }
             await Func.AutoDraw(10);

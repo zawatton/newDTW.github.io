@@ -37,14 +37,14 @@ async function item603(this: any) {
         }
         if (Gvar.var_2212 == 0) {
             Gvar.var_211 = 1;
-            await Func.setMessage1("グエッ！", "ひどいダメージを受けた！", 7, false, false, false);
+            await Func.setMessage("グエッ！", "ひどいダメージを受けた！", 7, false, false, false);
         }
         if (Gvar.var_2212 == 1) {
             Gvar.var_565 = Gvar.var_565 - 3;
             if (Gvar.var_565 < 0) {
                 Gvar.var_565 = 0;
             }
-            await Func.setMessage1("グエッ！", "精神力が下がってしまった！", 7, false, false, false);
+            await Func.setMessage("グエッ！", "精神力が下がってしまった！", 7, false, false, false);
         }
         if (Gvar.var_2212 == 2) {
             Gvar.var_566 = Gvar.var_566 - 1;
@@ -54,7 +54,7 @@ async function item603(this: any) {
             if (Gvar.var_565 > Gvar.var_566) {
                 Gvar.var_565 = Gvar.var_566;
             }
-            await Func.setMessage1("グエエエエッ！", "最大精神力が下がってしまった！", 7, false, false, false);
+            await Func.setMessage("グエエエエッ！", "最大精神力が下がってしまった！", 7, false, false, false);
         }
         if (Gvar.var_2212 == 3) {
             Gvar.var_352 = Gvar.var_352 - 5;
@@ -65,7 +65,7 @@ async function item603(this: any) {
             if (Gvar.var_211 <= 0) {
                 Gvar.var_211 = 1;
             }
-            await Func.setMessage1("グエエエエッ！", "最大HPが下がってしまった！", 7, false, false, false);
+            await Func.setMessage("グエエエエッ！", "最大HPが下がってしまった！", 7, false, false, false);
         }
         if (Gvar.var_2212 == 4) {
             Gvar.current_level = Gvar.current_level - 1;
@@ -81,12 +81,12 @@ async function item603(this: any) {
                 Gvar.var_211 = 1;
             }
             Gvar.var_568 = Gvar.var_948[Gvar.current_level] - 1;
-            await Func.setMessage1("グエエエエｴｴｴッ！", "レベルが下がってしまった！", 7, false, false, false);
+            await Func.setMessage("グエエエエｴｴｴッ！", "レベルが下がってしまった！", 7, false, false, false);
         }
     }
     if (Gvar.sympathy_id == 120 || Gvar.sympathy_id == 124) {
         Gvar.var_1214 = 0;
-        await Func.setMessage1("「ンまァア～～い！」", "", 7, false, false, false);
+        await Func.setMessage("「ンまァア～～い！」", "", 7, false, false, false);
         Gvar.var_360 = 0;
         Gvar.var_350 = Gvar.var_350 + 20;
         if (Gvar.var_350 > Gvar.var_567) {

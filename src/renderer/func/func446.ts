@@ -39,7 +39,7 @@ async function func446(this: any) {
             Gvar.var_1989 = 1;
         }
         Adap.DSPLAY(112);  // 刀の切れる音 or 強化した時のシャキーン 効果音
-        await Func.setMessage1("" + Gvar.strengthen_item_name + "の",
+        await Func.setMessage("" + Gvar.strengthen_item_name + "の",
                                 "雰囲気がちょっと変わったようだ。", 7, false, false, false);
         await Func.func437();
         await Func.AutoDraw(10);

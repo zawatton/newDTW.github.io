@@ -7,7 +7,7 @@ async function func445(this: any) {
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
         Gvar.var_1981 = Gvar.var_233[Gvar.var_225].Var0;
         if (Gvar.var_862[Gvar.var_1981][0] == 0 && Gvar.var_262 == 0) {
-            await Func.setMessage1("何のDISCかわからないので研究できない",
+            await Func.setMessage("何のDISCかわからないので研究できない",
                                     "", 7, true, false, false);
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
                 await Func.func337(); // メッセージ表示処理(自動)
@@ -55,10 +55,10 @@ async function func445(this: any) {
         if (Gvar.var_1950 == 7) {
             Gvar.var_1983 = 1;
         }
-        await Func.setMessage1("" + Gvar.var_1937 + "を読んだ。",
+        await Func.setMessage("" + Gvar.var_1937 + "を読んだ。",
                                 "", 7, true, false, false);
         if (Gvar.var_1983 == 0) {
-            await Func.setMessage1("" + Gvar.strengthen_item_name + "の研究は",
+            await Func.setMessage("" + Gvar.strengthen_item_name + "の研究は",
                                     "この単行本ではできなかった…", 7, false, false, false);
             await Func.AutoDraw(10);
             await Func.func437();
@@ -73,7 +73,7 @@ async function func445(this: any) {
         Gvar.strengthen_item_name = Gvar.item_name;
         Gvar.var_1988 = Gvar.var_233[Gvar.var_225].Var7 + Gvar.var_233[Gvar.var_225].Var8;
         if (Gvar.var_1988 >= 10) {
-            await Func.setMessage1("" + Gvar.strengthen_item_name + "の",
+            await Func.setMessage("" + Gvar.strengthen_item_name + "の",
                                     "容量は限界のようだ", 7, false, false, false);
             await Func.AutoDraw(10);
             await Func.func437();
@@ -97,7 +97,7 @@ async function func445(this: any) {
         Gvar.var_1297 = 0;
         Gvar.var_233[Gvar.var_225].Var7 = Gvar.var_233[Gvar.var_225].Var7 + 1;
         Adap.DSPLAY(112);  // 刀の切れる音 or 強化した時のシャキーン 効果音
-        await Func.setMessage1("" + Gvar.strengthen_item_name + "の",
+        await Func.setMessage("" + Gvar.strengthen_item_name + "の",
                                 "容量が増えた！", 7, false, false, false);
         await Func.func437();
         await Func.AutoDraw(10);

@@ -123,24 +123,24 @@ async function func705(this: any) {
             }
             if (Gvar.var_2196 == 1 && Gvar.var_83[Gvar.var_2819].Var31 != 5) {
                 if (Gvar.var_2821 == 0) {
-                    await Func.setMessage1(Gvar.var_403, "" + Gvar.enemy_name + "に" + Gvar.var_209 + "のダメージ！", 8, false, false, false);
+                    await Func.setMessage(Gvar.var_403, "" + Gvar.enemy_name + "に" + Gvar.var_209 + "のダメージ！", 8, false, false, false);
                 }
                 if (Gvar.var_209 == 999) {
-                    await Func.setMessage1(Gvar.var_403, "" + Gvar.enemy_name + "に致命的なダメージ！", 8, false, false, false);
+                    await Func.setMessage(Gvar.var_403, "" + Gvar.enemy_name + "に致命的なダメージ！", 8, false, false, false);
                 }
                 if (Gvar.var_2821 == 1) {
-                    await Func.setMessage1(Gvar.var_403, "" + Gvar.enemy_name + "の傷が埋められた", 8, false, false, false);
+                    await Func.setMessage(Gvar.var_403, "" + Gvar.enemy_name + "の傷が埋められた", 8, false, false, false);
                 }
             } 
             else {
                 if (Gvar.var_2821 == 0) {
-                    await Func.setMessage1(Gvar.var_403, "" + Gvar.enemy_name + "に" + Gvar.var_209 + "のダメージ！", 7, false, false, false);
+                    await Func.setMessage(Gvar.var_403, "" + Gvar.enemy_name + "に" + Gvar.var_209 + "のダメージ！", 7, false, false, false);
                 }
                 if (Gvar.var_209 == 999) {
-                    await Func.setMessage1(Gvar.var_403, "" + Gvar.enemy_name + "に致命的なダメージ！", 7, false, false, false);
+                    await Func.setMessage(Gvar.var_403, "" + Gvar.enemy_name + "に致命的なダメージ！", 7, false, false, false);
                 }
                 if (Gvar.var_2821 == 1) {
-                    await Func.setMessage1(Gvar.var_403, "" + Gvar.enemy_name + "の傷が埋められた", 7, false, false, false);
+                    await Func.setMessage(Gvar.var_403, "" + Gvar.enemy_name + "の傷が埋められた", 7, false, false, false);
                 }
             }
         }
@@ -326,7 +326,7 @@ async function func705(this: any) {
                 if (Gvar.var_119 == 0 && Gvar.sympathy_id != 166 && Gvar.var_83[Gvar.var_402].Var30 != 0) {
                     Gvar.enemy_name = "何者か";
                 }
-                await Func.setMessage1("" + Gvar.enemy_name + "をやっつけた", "" + Gvar.var_2956 + "の経験値を手に入れた", 7, false, false, false);
+                await Func.setMessage("" + Gvar.enemy_name + "をやっつけた", "" + Gvar.var_2956 + "の経験値を手に入れた", 7, false, false, false);
                 await Func.AutoDraw(8);
                 Gvar.var_568 = Gvar.var_568 + Gvar.var_2956;
                 await Func.func680(); // ディアボロのレベルが上がる際の処理
@@ -361,14 +361,14 @@ async function func705(this: any) {
                 if (Gvar.var_119 == 0 && Gvar.sympathy_id != 166 && Gvar.var_83[Gvar.var_402].Var30 != 0) {
                     Gvar.enemy_name = "何者か";
                 }
-                await Func.setMessage1("" + Gvar.var_3108 + "は", "" + Gvar.enemy_name + "をやっつけた", 7, false, false, false);
+                await Func.setMessage("" + Gvar.var_3108 + "は", "" + Gvar.enemy_name + "をやっつけた", 7, false, false, false);
                 Gvar.var_2945 = Gvar.enemy_list;
                 await Func.AutoDraw(6);
                 if (Gvar.var_83[Gvar.var_673].Var0 == 36 || Gvar.var_83[Gvar.var_673].Var0 == 105 || Gvar.var_83[Gvar.var_673].Var0 == 106 || Gvar.var_83[Gvar.var_673].Var0 == 107 || Gvar.var_83[Gvar.var_673].Var0 == 108) {
-                    await Func.setMessage1("ディアボロ達は", "" + Gvar.var_3109 + "の経験値を手に入れた", 7, false, false, false);
+                    await Func.setMessage("ディアボロ達は", "" + Gvar.var_3109 + "の経験値を手に入れた", 7, false, false, false);
                 }
                 else {
-                    await Func.setMessage1("ディアボロは", "" + Gvar.var_3109 + "の経験値を手に入れた", 7, false, false, false);
+                    await Func.setMessage("ディアボロは", "" + Gvar.var_3109 + "の経験値を手に入れた", 7, false, false, false);
                 }
                 await Func.AutoDraw(8);
                 Gvar.var_568 = Gvar.var_568 + Gvar.var_3109;
@@ -398,7 +398,7 @@ async function func705(this: any) {
                 if (Gvar.var_3109 == 0) {
                     Gvar.var_3109 = 1;
                 }
-                await Func.setMessage1("ディアボロは", "" + Gvar.var_3109 + "の経験値を手に入れた", 7, false, false, false);
+                await Func.setMessage("ディアボロは", "" + Gvar.var_3109 + "の経験値を手に入れた", 7, false, false, false);
                 Gvar.var_2945 = Gvar.enemy_list;
                 await Func.AutoDraw(8);
                 Gvar.var_568 = Gvar.var_568 + Gvar.var_3109;
@@ -422,7 +422,7 @@ async function func705(this: any) {
                         Gvar.enemy_list = Gvar.var_83[Gvar.var_673].Var0;
                         await Func.func626();
                         Gvar.var_83[Gvar.var_673].Var3 = Gvar.enemy_hp;
-                        await Func.setMessage1("DIO「なじむ    実に！    なじむぞ", "    フハフハフハ フハフハ フハフハハ」", 8, false, false, true);
+                        await Func.setMessage("DIO「なじむ    実に！    なじむぞ", "    フハフハフハ フハフハ フハフハハ」", 8, false, false, true);
                         Gvar.var_83[Gvar.var_673].Var21 = 1;
                         for (let cnt5 = 0; cnt5 < 10; ++cnt5) {
                             Gvar.var_411 = 1;
@@ -438,7 +438,7 @@ async function func705(this: any) {
                         }
                         Gvar.var_411 = 0;
                         Gvar.var_83[Gvar.var_673].Var21 = 0;
-                        await Func.setMessage1("DIO「最高に『ハイ！』ってやつだアアアア", "      アハハハハハハハハハハハーッ」", 8, true, false, true);
+                        await Func.setMessage("DIO「最高に『ハイ！』ってやつだアアアア", "      アハハハハハハハハハハハーッ」", 8, true, false, true);
                         await Func.AutoDraw(3);
                     }
                 }
@@ -461,7 +461,7 @@ async function func705(this: any) {
                     if (Gvar.var_127 != 0 || Gvar.var_132 != 0) {
                         Gvar.enemy_name = "何者か";
                     }
-                    await Func.setMessage1("" + Gvar.enemy_name + "は", "レベルが上がった！", 8, false, false, false);
+                    await Func.setMessage("" + Gvar.enemy_name + "は", "レベルが上がった！", 8, false, false, false);
                     await Func.AutoDraw(3);
                     if (Gvar.var_175 >= 1 || Gvar.var_176 >= 1) {
                         Gvar.var_314 = Gvar.var_402;

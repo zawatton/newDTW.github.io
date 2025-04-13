@@ -40,8 +40,8 @@ async function func722(this: any) {
 
         Adap.DSPLAY(150);
         await Music.func132();
-        await Func.setMessage1("ドロボーーー！", "", 9, true, false, true);
-        await Func.setMessage1("ただじゃあおきませンッ！", "", 9, false, false, true);
+        await Func.setMessage("ドロボーーー！", "", 9, true, false, true);
+        await Func.setMessage("ただじゃあおきませンッ！", "", 9, false, false, true);
         for (let cnt1 = 0; cnt1 < 12; ++cnt1) {
             await Func.func556();
         }

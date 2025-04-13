@@ -5,7 +5,7 @@ import * as Music from '../music/index'
 
 async function func534(this: any) {
         Adap.dbgprt(534);
-        await Func.setMessage1("オレって情けねえよなあ～～～。", "死にたくなった･･･", 7, false, false, true);
+        await Func.setMessage("オレって情けねえよなあ～～～。", "死にたくなった･･･", 7, false, false, true);
         await Func.AutoDraw(20);
         Gvar.var_1054 = 1;
         await Func.AutoDraw(10);

@@ -7,13 +7,13 @@ async function func592(this: any) {
         Adap.dbgprt(592);
         Gvar.var_2352 = Adap.rnd(3);
         if (Gvar.var_2352 == 0) {
-            await Func.setMessage1("「エコーズ  ACT１」！！", "", 8, false, false, true);
+            await Func.setMessage("「エコーズ  ACT１」！！", "", 8, false, false, true);
         }
         if (Gvar.var_2352 == 1) {
-            await Func.setMessage1("「エコーズ  ACT２」！！", "", 8, false, false, true);
+            await Func.setMessage("「エコーズ  ACT２」！！", "", 8, false, false, true);
         }
         if (Gvar.var_2352 == 2) {
-            await Func.setMessage1("「エコーズ  ACT３」！！", "", 8, false, false, true);
+            await Func.setMessage("「エコーズ  ACT３」！！", "", 8, false, false, true);
         }
         for (let cnt1 = 0; cnt1 < 16; ++cnt1) {
             Gvar.var_300 = 0;
@@ -51,7 +51,7 @@ async function func592(this: any) {
             Gvar.var_1583 = 0;
         }
         if (Gvar.var_2110 == 0) {
-            await Func.setMessage1("しかしスタンドを出せなかった…", "", 8, false, false, false);
+            await Func.setMessage("しかしスタンドを出せなかった…", "", 8, false, false, false);
             Gvar.var_2197 = 1;
             return;
         }

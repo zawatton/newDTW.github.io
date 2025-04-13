@@ -8,7 +8,7 @@ async function func474(this: any) {
         if (Gvar.var_224 >= 20) {
             Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             Gvar.var_1866 = 0;
-            await Func.setMessage1("持ち物がいっぱいで出せない", "", 7, false, false, false);
+            await Func.setMessage("持ち物がいっぱいで出せない", "", 7, false, false, false);
             await Func.AutoDraw(3);
             if (Gvar.var_234 == 1) {
                 Gvar.var_234 = 0;
@@ -54,7 +54,7 @@ async function func474(this: any) {
         await Func.func492(); // アイテムリスト呼び出し
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
         Gvar.var_1866 = 0;
-        await Func.setMessage1("" + Gvar.item_name + "を出した", "", 7, false, false, false);
+        await Func.setMessage("" + Gvar.item_name + "を出した", "", 7, false, false, false);
         await Func.AutoDraw(3);
         await Func.func051(); // キー入力待ち処理
         Gvar.var_213 = 1;

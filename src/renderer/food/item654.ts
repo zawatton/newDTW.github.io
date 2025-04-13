@@ -14,7 +14,7 @@ async function item654(this: any) {
     Gvar.var_209 = 20;
     Gvar.var_360 = 0;
     Gvar.var_350 = Gvar.var_350 + 10;
-    await Func.setMessage1("８０のダメージを受けた！", "", 7, false, false, false);
+    await Func.setMessage("８０のダメージを受けた！", "", 7, false, false, false);
     if (Gvar.var_350 > Gvar.var_567) {
         Gvar.var_350 = Gvar.var_567;
     }

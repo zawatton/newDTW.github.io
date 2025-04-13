@@ -96,7 +96,7 @@ async function func598(this: any) {
             Gvar.var_211 = 0;
             Gvar.var_356 = 123;
         }
-        await Func.setMessage1("ﾌﾞﾁｬﾗﾃｨの攻撃！", "" + Gvar.var_209 + "のダメージをうけた。", 8, false, false, false);
+        await Func.setMessage("ﾌﾞﾁｬﾗﾃｨの攻撃！", "" + Gvar.var_209 + "のダメージをうけた。", 8, false, false, false);
         await Func.AutoDraw(6);
         Gvar.var_389 = 0;
         // No = 115 G・エクスペリエンスのDISCを装備している場合

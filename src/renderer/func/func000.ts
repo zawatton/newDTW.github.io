@@ -50,70 +50,14 @@ export {imeget}
 
 
 // ここから newDTW 独自関数
-
-function setMessage(
-    row1: string,
-    row2: string = "",
-    row1a: string = "",
-    row2a: string = "",
-    colorIndex: number = 7  // 追加：デフォルトは7
-  ) {
-    // まず各種クリア
-    Gvar.comments_row1 = "";
-    Gvar.comments_row2 = "";
-    Gvar.var_295 = "";
-    Gvar.comments_row1a = "";
-    Gvar.comments_row2a = "";
-    Gvar.var_298 = "";
-    Gvar.animationStep = 0;
-  
-    // 代入
-    Gvar.comments_row1 = row1;
-    Gvar.comments_row2 = row2;
-    Gvar.comments_row1a = row1a;
-    Gvar.comments_row2a = row2a;
-  
-    // 表示に必要なフラグ等
-    Gvar.var_198 = 1; // メッセージウィンドウ開く   // メッセージウィンドウON
-    Gvar.var_300 = 0;   // 何らかの制御用（元のコードに合わせる）
-  
-    // 色の指定 (colorIndexを使う)
-    Gvar.var_25_x = Gvar.var_25[colorIndex];
-    Gvar.var_26_x = Gvar.var_26[colorIndex];
-    Gvar.var_27_x = Gvar.var_27[colorIndex];
-  }
-  
-    
-export {setMessage}
-
-
 // --------------------------------------------------
 // メッセージを画面に表示する関数 (func047呼び出し部分を共通化)
 // --------------------------------------------------
-async function showMessageAndWaitKey() {
-    await Func.func047(); // メッセージ履歴追加処理
-    await Func.func340(); // キー入力による選択処理
-  }
-
-export {showMessageAndWaitKey}
-
-// --------------------------------------------------
-// キー入力による選択処理やキー待ちをまとめて呼び出す例
-// (必要に応じて分けたり、まとめたり調整してください)
-// --------------------------------------------------
-async function showMessageWaitKeyAndAnimate() {
-    await Func.func047(); // メッセージ履歴追加処理
-    await Func.func340(); // キー入力による選択処理
-    await Func.func050(); // メッセージをアニメーション風表示(連続描画)
-  }
-
-export {showMessageWaitKeyAndAnimate}
-
 // メッセージをセットし、必要に応じてキー待ち・アニメーション表示・効果音を行う関数
 //  - doWaitKey:    trueなら func340() でキー入力待ち
 //  - doAnimation:  trueなら func050()  でアニメーション(連続描画) ※フレームレートが何故か狂うので非推奨
 //  - playSound:    trueなら func094()  でメッセージ送り効果音再生
-async function setMessage1(
+async function setMessage(
     row1: string,
     row2: string = "",
     colorIndex: number = 7,
@@ -162,7 +106,7 @@ async function setMessage1(
     }
   }
 
-export {setMessage1}
+export {setMessage}
 
 /**
  * 指定された回数だけ、func337(メッセージ表示処理)をループ呼び出しする関数

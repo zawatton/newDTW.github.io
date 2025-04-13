@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 // No = 403 セックス・ピストルズの発動処理
 async function item403(this: any) {
-        await Func.setMessage1("どれを食べますか？",
+        await Func.setMessage("どれを食べますか？",
                                "", 7, true, false, false);
         Gvar.var_2300 = Gvar.var_225;
         Gvar.var_2301 = 0;

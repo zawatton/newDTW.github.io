@@ -114,7 +114,7 @@ async function func605(this: any) {
                     Gvar.var_747 = 1;
                     Gvar.var_389 = 2;
                     Adap.DSPLAY(105);
-                    await Func.setMessage1("「ダイバー・ダウン！」", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+                    await Func.setMessage("「ダイバー・ダウン！」", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
                     if (Gvar.var_128 >= 1) {
                         await Func.func023();
                     }

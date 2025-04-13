@@ -40,13 +40,13 @@ async function func022(this: any) {
         }
         if (Gvar.var_457 == 1) {
             Gvar.var_83[Gvar.var_286].Var3 = 1;
-            await Func.setMessage1("極寒地にすむエスキモーはよお！",
+            await Func.setMessage("極寒地にすむエスキモーはよお！",
                                     "凍傷にかかった時！", 7, true, false, true);
 
-            await Func.setMessage1("アザラシの肉の体内に入って",
+            await Func.setMessage("アザラシの肉の体内に入って",
                                     "治していたぜ！", 7, true, false, true);
 
-            await Func.setMessage1("これならどうだ――っ！！",
+            await Func.setMessage("これならどうだ――っ！！",
                                     "", 7, true, false, true);
             Adap.DSPLAY(175);
             Gvar.var_458 = 1;
@@ -58,10 +58,10 @@ async function func022(this: any) {
             Gvar.var_458 = 0;
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_128 = 0;
-            await Func.setMessage1("ｽﾋﾟｰﾄﾞﾜｺﾞﾝの治療によって",
+            await Func.setMessage("ｽﾋﾟｰﾄﾞﾜｺﾞﾝの治療によって",
                                     "ﾃﾞｨｱﾎﾞﾛは動けるようになった", 7, true, false, false);
 
-            await Func.setMessage1("しかしｽﾋﾟｰﾄﾞﾜｺﾞﾝは",
+            await Func.setMessage("しかしｽﾋﾟｰﾄﾞﾜｺﾞﾝは",
                                     "ひどく憔悴してしまったようだ…", 7, false, false, false);
             await Func.AutoDraw(10);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
@@ -72,12 +72,12 @@ async function func022(this: any) {
     if (Gvar.var_128 == 10) {
         Gvar.var_217 = 0;
         Gvar.var_128 = 0;
-        await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは動けるようになった", "", 7, false, false, false);
+        await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは動けるようになった", "", 7, false, false, false);
         await Func.AutoDraw(10);
         await Func.func009(); // ディアボロ側ターン処理(ループ処理)
         return;
     }
-    await Func.setMessage1("…凍っていて動けない。", "", 7, false, false, false);
+    await Func.setMessage("…凍っていて動けない。", "", 7, false, false, false);
     await Func.AutoDraw(10);
     Gvar.var_217 = 1;
     await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)

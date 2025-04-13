@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 async function func548(this: any) {
         Adap.dbgprt(548);
         Gvar.var_370 = 0;
-        await Func.setMessage1("地上に戻りますか？", "", 7, true, false, false);
+        await Func.setMessage("地上に戻りますか？", "", 7, true, false, false);
         await Func.AutoDraw(2);
         Gvar.var_245 = 19;
         Gvar.var_246 = 45;

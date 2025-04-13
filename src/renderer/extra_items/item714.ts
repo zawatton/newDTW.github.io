@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item714(this: any) {
         Gvar.var_2216 = Gvar.var_199;
         Gvar.var_199 = 2;
-        await Func.setMessage1("そして  くらえッ！",
+        await Func.setMessage("そして  くらえッ！",
                                "新しい対吸血鬼兵器！", 7, true, false, true);
         Adap.DSPLAY(174);
         Gvar.var_1245 = 1;
@@ -18,7 +18,7 @@ async function item714(this: any) {
         Gvar.var_1245 = 4;
         await Func.AutoDraw(1);
         Gvar.var_1245 = 7;
-        await Func.setMessage1("紫外線照射装置ィィィィィィィィィィ！！",
+        await Func.setMessage("紫外線照射装置ィィィィィィィィィィ！！",
                                "", 7, false, true, false);
         Adap.DSPLAY(176);
         Gvar.var_1245 = 6;
@@ -203,7 +203,7 @@ async function item714(this: any) {
         await Func.AutoDraw(10);
         Gvar.var_199 = Gvar.var_2216;
         if (Gvar.var_2220 == 1) {
-            await Func.setMessage1("スカッとするぜーッ！！",
+            await Func.setMessage("スカッとするぜーッ！！",
                                    "", 7, false, false, false);
         }
         return;

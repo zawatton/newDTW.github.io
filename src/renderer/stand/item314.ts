@@ -12,7 +12,7 @@ async function item314(this: any) {
         }
         Gvar.var_2329 = 0;
         Adap.DSPLAY(159);
-        await Func.setMessage1("「うにゃあ」",
+        await Func.setMessage("「うにゃあ」",
                                "", 7, false, false, false);
         await Func.AutoDraw(10);
         Gvar.var_2106 = 1;

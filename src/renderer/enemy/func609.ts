@@ -12,7 +12,7 @@ async function func609(this: any) {
         Adap.boxf(0, 0, 680, 680);
         Adap.gsel(0);
         Gvar.var_529 = 1;
-        await Func.setMessage1("ﾌｰｺﾞは殺人ウイルスを撒いた！", "", 8, false, false, false);
+        await Func.setMessage("ﾌｰｺﾞは殺人ウイルスを撒いた！", "", 8, false, false, false);
         await Func.AutoDraw(20);
         Gvar.var_403 = "ウイルスが敵の体を蝕んでいる！";
         Gvar.var_2217 = 1;
@@ -131,8 +131,8 @@ async function func609(this: any) {
         Gvar.var_2196 = 0;
         Gvar.var_2217 = 0;
         if (Gvar.shageki_disc_id == 408) {
-            await Func.setMessage1("まだ遅くない…", "「マン・イン・ザ・ミラー！」", 7, true, false, false);
-            await Func.setMessage1("ウイルスは許可しないィィィィ――ッ", "", 7, false, false, false);
+            await Func.setMessage("まだ遅くない…", "「マン・イン・ザ・ミラー！」", 7, true, false, false);
+            await Func.setMessage("ウイルスは許可しないィィィィ――ッ", "", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_2876 = Math.floor(Gvar.var_2876 / 2);
             if (Gvar.var_2876 < 1) {
@@ -144,7 +144,7 @@ async function func609(this: any) {
         Adap.DSPLAY(104);
         Gvar.var_2852 = Gvar.var_2876;
         Gvar.var_209 = Gvar.var_2852;
-        await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+        await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

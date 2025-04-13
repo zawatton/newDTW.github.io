@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 303 ドラゴンズ・ドリームの発動処理
 async function item303(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        await Func.setMessage1("攻撃をかわしやすくなった！",
+        await Func.setMessage("攻撃をかわしやすくなった！",
                                "", 7, false, false, false);
         await Func.AutoDraw(5);
         Adap.DSPLAY(182);

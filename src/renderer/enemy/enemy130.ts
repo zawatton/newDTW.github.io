@@ -40,7 +40,7 @@ async function enemy130(this: any) {
         if (Gvar.wallet < 0) {
             Gvar.wallet = 0;
         }
-        await Func.setMessage1("" + Gvar.var_2888 + " G奪われた！", "", 8, false, false, false);
+        await Func.setMessage("" + Gvar.var_2888 + " G奪われた！", "", 8, false, false, false);
         await Func.AutoDraw(15);
         Gvar.var_2197 = 1;
         return;

@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 async function func781(this: any) {
         Adap.dbgprt(781);
         Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
-        await Func.setMessage1("露伴に「ﾎﾞﾍﾐｱﾝ･ﾗﾌﾟｿﾃﾞｨのDISC」を",
+        await Func.setMessage("露伴に「ﾎﾞﾍﾐｱﾝ･ﾗﾌﾟｿﾃﾞｨのDISC」を",
                                "見せてあげますか？", 7, true, false, false);
 
         await Func.func051(); // キー入力待ち処理

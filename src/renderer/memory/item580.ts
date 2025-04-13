@@ -7,7 +7,7 @@ async function item580(this: any) {
         await Func.AutoDraw(12);
         Gvar.var_1264 = 0;
         if (Gvar.var_262 == 1) { // Gvar.var_262 == 1 なので、Gvar.dungeon_number = 0 であれば
-            await Func.setMessage1("しかし何も起こらなかった…",
+            await Func.setMessage("しかし何も起こらなかった…",
                                    "", 7, false, false, false);
             return;
         }

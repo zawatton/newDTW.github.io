@@ -24,7 +24,7 @@ async function func772(this: any) {
             Gvar.var_2402 = 1;
         }
         if (Gvar.var_2402 == 1) {
-            await Func.setMessage1("倉庫にはもう置ける場所がないようだ",
+            await Func.setMessage("倉庫にはもう置ける場所がないようだ",
                                     "", 7, true, false, false);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
@@ -200,11 +200,11 @@ async function func772(this: any) {
             Gvar.var_449 = Gvar.var_449 + 1;
         }
         if (Gvar.var_2401 == 1) {
-            await Func.setMessage1("サヴェジガーデンはアイテムを持って",
+            await Func.setMessage("サヴェジガーデンはアイテムを持って",
                                    "飛び去っていった。", 7, true, false, false);
         }
         if (Gvar.var_2401 == 0) {
-            await Func.setMessage1("倉庫にはもう置ける場所がないようだ",
+            await Func.setMessage("倉庫にはもう置ける場所がないようだ",
                                    "", 7, true, false, false);
         }
         Gvar.var_198 = 0; // メッセージウィンドウ閉じる

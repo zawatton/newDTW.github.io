@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 300 パール・ジャムの発動処理
 async function item300(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        await Func.setMessage1("パールジャムを食べた。",
+        await Func.setMessage("パールジャムを食べた。",
                               "", 7, true, false, false);
         Gvar.var_1214 = 1;
         Adap.DSPLAY(119); // 食べた時の効果音
@@ -24,14 +24,14 @@ async function item300(this: any) {
         if (Gvar.var_350 > Gvar.var_567) {
             Gvar.var_350 = Gvar.var_567;
         }
-        await Func.setMessage1("お腹が少し膨らんだ",
+        await Func.setMessage("お腹が少し膨らんだ",
                                "", 7, false, true, false);
         if (Gvar.var_350 == Gvar.var_567) {
-            await Func.setMessage1("お腹がいっぱいになった。",
+            await Func.setMessage("お腹がいっぱいになった。",
                                    "", 7, false, true, false);
         }
         if (Gvar.var_2211 == 1) {
-            await Func.setMessage1("最大満腹度が" + Gvar.var_567 + "になった。",
+            await Func.setMessage("最大満腹度が" + Gvar.var_567 + "になった。",
                                    "", 7, false, true, false);
         }
         await Func.AutoDraw(5);

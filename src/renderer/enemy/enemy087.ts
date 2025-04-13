@@ -27,7 +27,7 @@ async function enemy087(this: any) {
         if (Gvar.var_474 == 0) {
             return;
         }
-        await Func.setMessage1("くらってくたばれ", "「怪焔王」の流法！！", 8, false, false, true);
+        await Func.setMessage("くらってくたばれ", "「怪焔王」の流法！！", 8, false, false, true);
         await Func.AutoDraw(5);
         Gvar.var_742 = 1;
         Gvar.var_83[Gvar.var_412].Var7 = 1;
@@ -55,13 +55,13 @@ async function enemy087(this: any) {
         Gvar.var_83[Gvar.var_412].Var7 = 0;
         Gvar.var_742 = 0;
         if (Gvar.var_173 == 1) {
-            await Func.setMessage1("燃やす攻撃に強くなっていて平気だった", "", 7, false, false, false);
+            await Func.setMessage("燃やす攻撃に強くなっていて平気だった", "", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_2197 = 1;
             return;
         }
         if (Gvar.nouryoku_disc_id == 109) {
-            await Func.setMessage1("装備DISCの効果で燃やされなかった", "", 7, false, false, false);
+            await Func.setMessage("装備DISCの効果で燃やされなかった", "", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_2197 = 1;
             return;
@@ -84,7 +84,7 @@ async function enemy087(this: any) {
             Gvar.var_233[Gvar.var_475]["Var" + cnt2] = 0;
         }
         Gvar.var_233[Gvar.var_475].Var0 = 641;
-        await Func.setMessage1("" + Gvar.target_item_name + "は", "消し炭になった！", 8, false, false, false);
+        await Func.setMessage("" + Gvar.target_item_name + "は", "消し炭になった！", 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

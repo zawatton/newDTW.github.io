@@ -27,7 +27,7 @@ async function enemy131(this: any) {
         if (Gvar.var_474 == 0) {
             return;
         }
-        await Func.setMessage1("「ゴールド・エクスペリエンス！」", "", 8, false, false, false);
+        await Func.setMessage("「ゴールド・エクスペリエンス！」", "", 8, false, false, false);
         await Func.AutoDraw(15);
         Adap.DSPLAY(121);
         Gvar.var_742 = 1;
@@ -55,13 +55,13 @@ async function enemy131(this: any) {
         Gvar.var_742 = 0;
         Gvar.var_743 = 0; //スタンド像付与フラグOFF
         if (Gvar.nouryoku_disc_id == 202) {
-            await Func.setMessage1("ﾎﾜｲﾄｱﾙﾊﾞﾑの能力によって", "生命が生まれるのを防いだ！", 7, false, false, false);
+            await Func.setMessage("ﾎﾜｲﾄｱﾙﾊﾞﾑの能力によって", "生命が生まれるのを防いだ！", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_2197 = 1;
             return;
         }
         if (Gvar.equip_disc[360] == 1) {
-            await Func.setMessage1("装備DISCの効果で きかなかった", "", 7, false, false, false);
+            await Func.setMessage("装備DISCの効果で きかなかった", "", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_2197 = 1;
             return;
@@ -87,7 +87,7 @@ async function enemy131(this: any) {
         Gvar.var_233[Gvar.var_475].Var0 = 650;
         Gvar.var_2892 = "ｶｴﾙ";
         Adap.DSPLAY(200);
-        await Func.setMessage1("" + Gvar.target_item_name + "は", "" + Gvar.var_2892 + "に生まれ変わった！", 8, false, false, false);
+        await Func.setMessage("" + Gvar.target_item_name + "は", "" + Gvar.var_2892 + "に生まれ変わった！", 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

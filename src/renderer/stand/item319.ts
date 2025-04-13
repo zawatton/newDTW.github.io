@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 // No = 319 ボーイⅡマンの発動処理
 async function item319(this: any) {
-        await Func.setMessage1("能力を消すDISCを選んでください",
+        await Func.setMessage("能力を消すDISCを選んでください",
                                "", 7, true, false, false);
         await Func.AutoDraw(4);
         Gvar.var_2300 = Gvar.var_225;

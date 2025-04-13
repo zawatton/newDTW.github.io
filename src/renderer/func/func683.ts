@@ -70,7 +70,7 @@ async function func683(this: any) {
         }
         if (Gvar.var_2201 == 1) {
             Adap.DSPLAY(142); // レベルアップした時の効果音
-            await Func.setMessage1("" + Gvar.var_3091 + "は",
+            await Func.setMessage("" + Gvar.var_3091 + "は",
                                     "レベルが上がった！", 7, true, false, false);
         }
         Gvar.var_2201 = 0;

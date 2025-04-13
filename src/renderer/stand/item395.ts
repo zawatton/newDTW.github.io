@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 395 バイツァ・ダストの発動処理
 async function item395(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        await Func.setMessage1("キラークィーン【第３の爆弾】",
+        await Func.setMessage("キラークィーン【第３の爆弾】",
                                "「BITE THE DUST」（負けて死ね）！！", 7, false, false, true);
         for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
             await Func.func337(); // メッセージ表示処理(自動)
@@ -138,12 +138,12 @@ async function item395(this: any) {
             Gvar.var_2194 = Gvar.var_2194 + 1;
         }
         if (Gvar.var_2314 == 1) {
-            await Func.setMessage1("すでに「瞳」の中に入っている！",
+            await Func.setMessage("すでに「瞳」の中に入っている！",
                                    "", 7, true, true, true);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_2314 == 0) {
-            await Func.setMessage1("しかし何もおこらなかった…",
+            await Func.setMessage("しかし何もおこらなかった…",
                                    "", 7, true, true, false);
             await Func.AutoDraw(10);
         }

@@ -26,10 +26,10 @@ async function func580(this: any) {
                 Gvar.var_83[Gvar.var_673].Var4 = 3;
             }
             if (Gvar.var_2798 == 2) {
-                await Func.setMessage1("", "ｴｺｰｽﾞはACT2に成長した！", 8, false, false, false);
+                await Func.setMessage("", "ｴｺｰｽﾞはACT2に成長した！", 8, false, false, false);
             }
             if (Gvar.var_2798 == 3) {
-                await Func.setMessage1("", "ｴｺｰｽﾞはACT3に成長した！", 8, false, false, false);
+                await Func.setMessage("", "ｴｺｰｽﾞはACT3に成長した！", 8, false, false, false);
             }
         }
         return;

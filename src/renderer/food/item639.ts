@@ -12,13 +12,13 @@ async function item639(this: any) {
             Gvar.var_567 = 999;
         }
     }
-    await Func.setMessage1("お腹が少し膨らんだ", "", 7, false, false, false);
+    await Func.setMessage("お腹が少し膨らんだ", "", 7, false, false, false);
     Gvar.var_350 = Gvar.var_350 + 20;
     if (Gvar.var_350 > Gvar.var_567) {
         Gvar.var_350 = Gvar.var_567;
     }
     if (Gvar.var_350 == Gvar.var_567) {
-        await Func.setMessage1("お腹がいっぱいになった。", "", 7, false, false, false);
+        await Func.setMessage("お腹がいっぱいになった。", "", 7, false, false, false);
     }
     return;
 }

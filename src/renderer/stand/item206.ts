@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 206 オアシスの発動処理
 async function item206(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        await Func.setMessage1("周囲がドロドロになってきた…",
+        await Func.setMessage("周囲がドロドロになってきた…",
                                "", 7, true, false, false);
         Gvar.var_159 = 1;
         Gvar.var_289 = Gvar.var_66 - 1;

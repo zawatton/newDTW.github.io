@@ -4,13 +4,13 @@ import * as Func from '../func/index'
 
 // Ver0.1401にて追加。No = 732 ベルトのバックルを使用した時の効果
 async function item732(this: any) {
-        await Func.setMessage1("できるわけがないッ！",
+        await Func.setMessage("できるわけがないッ！",
                                "", 7, true, false, true);
         // もし装備している射撃ディスクがタスクact1であれば
         if (Gvar.shageki_disc_id == 415) {
-            await Func.setMessage1("ま･･････待て･･････",
+            await Func.setMessage("ま･･････待て･･････",
                                    "本物があるはずだ！", 7, true, false, true);
-            await Func.setMessage1("「『本物』の長方形は」",
+            await Func.setMessage("「『本物』の長方形は」",
                                    "      これでいいんだな？", 7, true, false, true);            
             let shageki_kaisu: number;
 
@@ -35,7 +35,7 @@ async function item732(this: any) {
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             // Adap.DSPLAY(233);
             Adap.DSPLAY(225);
-            await Func.setMessage1("なんと、「タスクact1」のDISCは",
+            await Func.setMessage("なんと、「タスクact1」のDISCは",
                                    "「タスクact2」のDISCになった！", 7, false, false, true);        
 
             //await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
@@ -55,7 +55,7 @@ async function item732(this: any) {
             await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
             return;
         }
-        await Func.setMessage1("しかしここでは何も起こらなかった…",
+        await Func.setMessage("しかしここでは何も起こらなかった…",
                                 "", 7, false, false, false);
         Gvar.item_message1 = "しかし何も起こらなかった…";
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理

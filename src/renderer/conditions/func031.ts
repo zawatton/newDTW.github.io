@@ -26,7 +26,7 @@ async function func031(this: any) {
         Gvar.var_470 = 1;
         await Func.AutoDraw(5);
         Gvar.var_470 = 0;
-        await Func.setMessage1("変身が解除された", "", 7, false, false, false);
+        await Func.setMessage("変身が解除された", "", 7, false, false, false);
         await Func.AutoDraw(9);
         return;
 }

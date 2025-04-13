@@ -20,7 +20,7 @@ async function enemy094(this: any) {
         Gvar.var_463 = Gvar.var_83[Gvar.var_673].Var1;
         Gvar.var_464 = Gvar.var_83[Gvar.var_673].Var2;
         Gvar.var_114 = Gvar.var_673;
-        await Func.setMessage1("ブルりんにつかまった！", "", 8, false, false, false);
+        await Func.setMessage("ブルりんにつかまった！", "", 8, false, false, false);
         await Func.AutoDraw(10);
         Gvar.var_83[Gvar.var_673].Var7 = 0;
         Gvar.var_461 = Gvar.var_66;

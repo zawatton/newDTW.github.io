@@ -7,7 +7,7 @@ async function func034(this: any) {
         if (Gvar.var_132 != 0) {
             return;
         }
-        await Func.setMessage1("盲目状態が治った", "", 7, false, false, false);
+        await Func.setMessage("盲目状態が治った", "", 7, false, false, false);
         await Func.AutoDraw(9);
         return;
 }

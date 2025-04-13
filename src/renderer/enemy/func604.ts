@@ -9,7 +9,7 @@ async function func604(this: any) {
         if (Gvar.var_2862 == 0 && Gvar.var_83[Gvar.var_673].Var0 == 30 && Gvar.var_83[Gvar.var_673].Var29 == 0) {
             Gvar.var_240 = 0;
             Gvar.var_83[Gvar.var_673].Var7 = 0;
-            await Func.setMessage1("ﾎﾙ･ﾎｰｽはﾄﾄ神のﾏﾝｶﾞを読んだ。", "", 8, false, false, false);
+            await Func.setMessage("ﾎﾙ･ﾎｰｽはﾄﾄ神のﾏﾝｶﾞを読んだ。", "", 8, false, false, false);
             Adap.DSPLAY(118);
             Gvar.var_83[Gvar.var_673].Var21 = 1;
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
@@ -21,31 +21,31 @@ async function func604(this: any) {
                 Gvar.var_300 = 0;
             }
             Gvar.var_411 = 6;
-            await Func.setMessage1("ﾎﾙ･ﾎｰｽ「新しいﾍﾟｰｼﾞが現れたぞ…」", "", 8, true, false, true);
+            await Func.setMessage("ﾎﾙ･ﾎｰｽ「新しいﾍﾟｰｼﾞが現れたぞ…」", "", 8, true, false, true);
             Adap.DSPLAY(118);
-            await Func.setMessage1("【ﾎﾙ･ﾎｰｽの次の攻撃は…】", "", 8, true, false, false);
+            await Func.setMessage("【ﾎﾙ･ﾎｰｽの次の攻撃は…】", "", 8, true, false, false);
             Adap.DSPLAY(118);
             Gvar.var_1073 = Adap.rnd(4);
             if (Gvar.var_1073 <= 1) {
-                await Func.setMessage1("【ウオオン！", "    いつもの２倍のダメージだッ！】", 8, true, false, false);
+                await Func.setMessage("【ウオオン！", "    いつもの２倍のダメージだッ！】", 8, true, false, false);
                 Gvar.var_83[Gvar.var_673].Var29 = 1;
             }
             if (Gvar.var_1073 == 2) {
-                await Func.setMessage1("【いつもの３倍ダメージだッ！", "    ﾎﾙ･ﾎｰｽは本当にラッキー！】", 8, true, false, false);
+                await Func.setMessage("【いつもの３倍ダメージだッ！", "    ﾎﾙ･ﾎｰｽは本当にラッキー！】", 8, true, false, false);
                 Gvar.var_83[Gvar.var_673].Var29 = 2;
             }
             if (Gvar.var_1073 == 3) {
-                await Func.setMessage1("【いつもの半分のダメージでした…", "  でもくじけちゃダメだよ ﾎﾙ･ﾎｰｽ！】", 8, true, false, false);
+                await Func.setMessage("【いつもの半分のダメージでした…", "  でもくじけちゃダメだよ ﾎﾙ･ﾎｰｽ！】", 8, true, false, false);
                 Gvar.var_83[Gvar.var_673].Var29 = 3;
             }
             if (Gvar.var_1073 <= 1) {
-                await Func.setMessage1("ﾎﾙ･ﾎｰｽ「こ…  こいつはすげえ！」", "", 8, false, false, true);
+                await Func.setMessage("ﾎﾙ･ﾎｰｽ「こ…  こいつはすげえ！」", "", 8, false, false, true);
             }
             if (Gvar.var_1073 == 2) {
-                await Func.setMessage1("ﾎﾙ･ﾎｰｽ「おれたちは無敵だッ！」", "", 8, false, false, true);
+                await Func.setMessage("ﾎﾙ･ﾎｰｽ「おれたちは無敵だッ！」", "", 8, false, false, true);
             }
             if (Gvar.var_1073 == 3) {
-                await Func.setMessage1("ﾎﾙ･ﾎｰｽ「にゃんじゃああ～～～ッ", "      これは！？」", 8, false, false, true);
+                await Func.setMessage("ﾎﾙ･ﾎｰｽ「にゃんじゃああ～～～ッ", "      これは！？」", 8, false, false, true);
             }
             await Func.AutoDraw(6);
             Gvar.var_83[Gvar.var_673].Var21 = 0;
@@ -118,7 +118,7 @@ async function func604(this: any) {
             if (Gvar.var_2863 == 1) {
                 Gvar.var_240 = 0;
                 Adap.DSPLAY(205);
-                await Func.setMessage1("「J・ガイルの旦那！」", "", 8, false, false, false);
+                await Func.setMessage("「J・ガイルの旦那！」", "", 8, false, false, false);
                 Gvar.var_83[Gvar.var_673].Var7 = 0;
                 return;
             }
@@ -195,7 +195,7 @@ async function func604(this: any) {
             Gvar.var_2852 = Math.floor(Gvar.var_2852 * 2 / 3);
         }
         Gvar.var_209 = Gvar.var_2852;
-        await Func.setMessage1("ｴﾝﾍﾟﾗｰの弾丸を喰らった！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+        await Func.setMessage("ｴﾝﾍﾟﾗｰの弾丸を喰らった！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

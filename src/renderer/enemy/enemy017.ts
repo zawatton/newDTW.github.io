@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 17 シアハートアタックの特殊能力
 async function enemy017(this: any) {
         if (Gvar.var_83[Gvar.var_673].Var3 == 2) {
-            await Func.setMessage1("「コッチヲ見ロォ～」",
+            await Func.setMessage("「コッチヲ見ロォ～」",
                                    "", 8, false, false, true);
             Gvar.var_2197 = 1;
             return;

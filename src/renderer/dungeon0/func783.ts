@@ -6,9 +6,9 @@ import * as Func from '../func/index'
 async function func783(this: any) {
         Adap.dbgprt(783);
 
-        await Func.setMessage1("「ﾎﾞﾍﾐｱﾝ･ﾗﾌﾟｿﾃﾞｨのDISC」だ。", "", 7, true, false, true);
-        await Func.setMessage1("ぼくが行けりゃあ", "すぐに手に入るんだがな…", 7, true, true, true);
-        await Func.setMessage1("あいにく、", "まだ死にたくないんだ。", 7, true, false, true);
+        await Func.setMessage("「ﾎﾞﾍﾐｱﾝ･ﾗﾌﾟｿﾃﾞｨのDISC」だ。", "", 7, true, false, true);
+        await Func.setMessage("ぼくが行けりゃあ", "すぐに手に入るんだがな…", 7, true, true, true);
+        await Func.setMessage("あいにく、", "まだ死にたくないんだ。", 7, true, false, true);
 
         await Func.func051(); // キー入力待ち処理
         Gvar.var_198 = 0; // メッセージウィンドウ閉じる

@@ -6,12 +6,12 @@ import * as Func from '../func/index'
 async function func773(this: any) {
         Adap.dbgprt(773);
         Gvar.var_243 = 0;
-        await Func.setMessage1("鮮血のｼｬﾎﾞﾝが浮かんでいる…",
+        await Func.setMessage("鮮血のｼｬﾎﾞﾝが浮かんでいる…",
                                "", 7, true, false, false);
         if (Gvar.var_987[0] == 0) {
-            await Func.setMessage1("中には何も入っていないようだ。",
+            await Func.setMessage("中には何も入っていないようだ。",
                                    "", 7, true, true, false);
-            await Func.setMessage1("何か入れますか？",
+            await Func.setMessage("何か入れますか？",
                                    "", 7, true, false, false);
 
             await Func.func051(); // キー入力待ち処理
@@ -27,9 +27,9 @@ async function func773(this: any) {
             Gvar.belongings_item_list = Gvar.var_987[0];
             Gvar.disc_rarity = Gvar.var_987[13];
             await Func.func492(); // アイテムリスト呼び出し
-            await Func.setMessage1("" + Gvar.item_name + "が",
+            await Func.setMessage("" + Gvar.item_name + "が",
                                    "入っているようだ。", 7, true, true, false);
-            await Func.setMessage1("取り出しますか？",
+            await Func.setMessage("取り出しますか？",
                                     "", 7, true, false, false);
 
             await Func.func051(); // キー入力待ち処理

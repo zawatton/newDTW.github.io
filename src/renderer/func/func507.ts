@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function func507(this: any) {
         Adap.dbgprt(507);
         await Func.AutoDraw(10);
-        await Func.setMessage1("" + Gvar.var_2255 + "は", "ｽﾀﾝﾄﾞﾊﾟﾜｰが尽きて消滅した", 7, false, false, false);
+        await Func.setMessage("" + Gvar.var_2255 + "は", "ｽﾀﾝﾄﾞﾊﾟﾜｰが尽きて消滅した", 7, false, false, false);
         await Func.AutoDraw(10);
         return;
 }

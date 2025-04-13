@@ -133,10 +133,10 @@ async function func026(this: any) {
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_469 = 1;
         if (Gvar.var_114 == 0) {
-            await Func.setMessage1("固定されて動けない！", "", 7, false, false, false);
+            await Func.setMessage("固定されて動けない！", "", 7, false, false, false);
         }
         if (Gvar.var_114 >= 1) {
-            await Func.setMessage1("つかまれていて動けない！", "", 7, false, false, false);
+            await Func.setMessage("つかまれていて動けない！", "", 7, false, false, false);
         }
         for (let cnt1 = 0; cnt1 < 9; ++cnt1) {
             await Func.func337(); // メッセージ表示処理(自動)

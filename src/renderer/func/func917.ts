@@ -41,7 +41,7 @@ async function func917(this: any) {
         Gvar.var_1046 = 0;
         Gvar.var_1058 = Adap.dim(30, 30);
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-        await Func.setMessage1("敵が集まってしまった！", "", 7, false, false, false);
+        await Func.setMessage("敵が集まってしまった！", "", 7, false, false, false);
         return;
 }
 

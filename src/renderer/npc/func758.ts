@@ -7,10 +7,10 @@ async function func758(this: any) {
         Adap.dbgprt(758);
         Gvar.var_243 = 0;
 
-        await Func.setMessage1("ボインゴ「新しいページが現れたぞ…」",
+        await Func.setMessage("ボインゴ「新しいページが現れたぞ…」",
                                "", 7, true, false, true);
 
-        await Func.setMessage1("「ディアボロは次の階で…",
+        await Func.setMessage("「ディアボロは次の階で…",
                                "", 7, true, true, true);                               
 
         Gvar.var_3143 = Gvar.current_floor;
@@ -20,10 +20,10 @@ async function func758(this: any) {
         await Func.func177(); // 死因原因
         Gvar.current_floor = Gvar.var_3143;
 
-        await Func.setMessage1("" + Gvar.var_849,
+        await Func.setMessage("" + Gvar.var_849,
                                "リタイアだァ―ッ！」", 7, true, true, true);         
 
-        await Func.setMessage1("ｳｸｹｺ ｳﾋｺ ｳｹｹｹ ｳｹｺｹｺｹﾛｵ ",
+        await Func.setMessage("ｳｸｹｺ ｳﾋｺ ｳｹｹｹ ｳｹｺｹｺｹﾛｵ ",
                                 "ｳｹﾛｵｵｵﾌﾊﾎｯ！", 7, true, true, true);                                  
         
         await Func.AutoDraw(5);

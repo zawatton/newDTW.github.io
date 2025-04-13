@@ -25,7 +25,7 @@ async function func542(this: any) {
             Gvar.var_2477 = 7;
         }
         if (Gvar.var_2477 == 1 && Gvar.var_140 >= 1) {
-            await Func.setMessage1("磁力で カナヅチが飛んできた！", "5 のダメージを喰らった。", 10, false, false, false);
+            await Func.setMessage("磁力で カナヅチが飛んできた！", "5 のダメージを喰らった。", 10, false, false, false);
             Gvar.var_108 = 1;
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1406 = 1;
@@ -50,7 +50,7 @@ async function func542(this: any) {
             Gvar.var_108 = 0;
         }
         if (Gvar.var_2477 == 3 && Gvar.var_140 >= 1) {
-            await Func.setMessage1("磁力で カンヅメが飛んできた！", "3 のダメージを喰らった。", 10, false, false, false);
+            await Func.setMessage("磁力で カンヅメが飛んできた！", "3 のダメージを喰らった。", 10, false, false, false);
             Gvar.var_108 = 1;
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1408 = 3;
@@ -75,7 +75,7 @@ async function func542(this: any) {
             Gvar.var_108 = 0;
         }
         if (Gvar.var_2477 == 2 && Gvar.var_140 >= 2) {
-            await Func.setMessage1("磁力で ラジカセが飛んできた！", "8 のダメージを喰らった。", 10, false, false, false);
+            await Func.setMessage("磁力で ラジカセが飛んできた！", "8 のダメージを喰らった。", 10, false, false, false);
             Gvar.var_108 = 1;
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1408 = 2;
@@ -100,7 +100,7 @@ async function func542(this: any) {
             Gvar.var_108 = 0;
         }
         if (Gvar.var_2477 == 0 && Gvar.var_140 >= 2) {
-            await Func.setMessage1("磁力で 刃物が飛んできた！", "10 のダメージを喰らった。", 10, false, false, false);
+            await Func.setMessage("磁力で 刃物が飛んできた！", "10 のダメージを喰らった。", 10, false, false, false);
             Gvar.var_108 = 1;
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1405 = 1;
@@ -123,7 +123,7 @@ async function func542(this: any) {
             Gvar.var_108 = 0;
         }
         if (Gvar.var_2477 == 4 && Gvar.var_140 >= 3) {
-            await Func.setMessage1("磁力で 自転車が飛んできた！", "15 のダメージを喰らった。", 10, false, false, false);
+            await Func.setMessage("磁力で 自転車が飛んできた！", "15 のダメージを喰らった。", 10, false, false, false);
             Gvar.var_108 = 1;
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1408 = 4;
@@ -149,7 +149,7 @@ async function func542(this: any) {
             Gvar.var_108 = 0;
         }
         if (Gvar.var_2477 == 5 && Gvar.var_140 >= 4) {
-            await Func.setMessage1("磁力で アブドゥルが飛んできた！", "20 のダメージを喰らった。", 10, false, false, false);
+            await Func.setMessage("磁力で アブドゥルが飛んできた！", "20 のダメージを喰らった。", 10, false, false, false);
             Gvar.var_108 = 1;
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1408 = 5;
@@ -177,7 +177,7 @@ async function func542(this: any) {
             Gvar.var_2478 = Math.floor(Gvar.var_211 / 2);
             Gvar.var_211 = Gvar.var_211 - Gvar.var_2478;
             Gvar.var_208 = Gvar.var_2478 + Gvar.var_208;
-            await Func.setMessage1("磁力で 車が飛んできた！", "" + Gvar.var_2478 + "のダメージを喰らった。", 10, false, false, false);
+            await Func.setMessage("磁力で 車が飛んできた！", "" + Gvar.var_2478 + "のダメージを喰らった。", 10, false, false, false);
             Gvar.var_108 = 1;
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1409 = 1;
@@ -198,7 +198,7 @@ async function func542(this: any) {
             Gvar.var_108 = 0;
         }
         if (Gvar.var_2477 == 7 && Gvar.var_140 >= 6) {
-            await Func.setMessage1("はさみうちだァ――――ッ！", "「骨折の１､２本じゃあすみませんな」", 10, false, false, false);
+            await Func.setMessage("はさみうちだァ――――ッ！", "「骨折の１､２本じゃあすみませんな」", 10, false, false, false);
             Gvar.var_108 = 1;
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1410 = 1;

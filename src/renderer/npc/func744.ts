@@ -8,10 +8,10 @@ async function func744(this: any) {
         Gvar.var_83[Gvar.var_3072].Var31 = 5;
         Gvar.var_83[Gvar.var_3072].Var14 = 0;
         Gvar.var_1033 = 1;
-        await Func.setMessage1("ﾂｪﾍﾟﾘさんが仲間になった！",
+        await Func.setMessage("ﾂｪﾍﾟﾘさんが仲間になった！",
                                "", 7, true, false, false);
         await Music.func124();
-        await Func.setMessage1("君は｢仙道｣を学ばなければならんッ！",
+        await Func.setMessage("君は｢仙道｣を学ばなければならんッ！",
                                "さもないと死ぬッ！", 7, true, false, true);
         await Func.AutoDraw(5);
         await Func.func009(); // ディアボロ側ターン処理(ループ処理)

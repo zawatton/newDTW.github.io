@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function func794(this: any) {
         Adap.dbgprt(794);
         Gvar.var_243 = 0;
-        await Func.setMessage1("ﾔｸ中の少年がフラフラと歩いている。",
+        await Func.setMessage("ﾔｸ中の少年がフラフラと歩いている。",
                                "", 7, true, false, false);
 
         await Func.func051(); // キー入力待ち処理

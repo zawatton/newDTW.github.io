@@ -63,7 +63,7 @@ async function func060(this: any) {
                     Gvar.var_527 = 0; // 階段を降りれなくなるフラグOFF
                 }
                 if (Gvar.var_527 == 1) { // グリーン・ディが同じ部屋に居る状態のフラグ?がONであれば
-                    await Func.setMessage1("ｸﾞﾘｰﾝ･ﾃﾞｨが同じ部屋にいるぞ",
+                    await Func.setMessage("ｸﾞﾘｰﾝ･ﾃﾞｨが同じ部屋にいるぞ",
                                            "このままでは降りられないぞ", 7, false, false, false)
                     Adap.gsel(19);
                     Adap.color(10, 100, 10);
@@ -124,14 +124,14 @@ async function func060(this: any) {
                     Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                     Gvar.var_531 = 0;
                     await Func.AutoDraw(10);
-                    await Func.setMessage1("「ありのまま起こったことを話すぜ！」",
+                    await Func.setMessage("「ありのまま起こったことを話すぜ！」",
                                           "", 7, true, false, true);
 
-                    await Func.setMessage1("「おれは階段を降りたと思ったら",
+                    await Func.setMessage("「おれは階段を降りたと思ったら",
                                            "  いつの間にか上っていた」", 7, false, false, true);
 
                     if (Gvar.var_73[Gvar.var_66][Gvar.var_67] == 2) {
-                        await Func.setMessage1("「おれは階段を上ったと思ったら",
+                        await Func.setMessage("「おれは階段を上ったと思ったら",
                                                "  いつの間にか降りていた」", 7, false, false, true);
                     }
                     await Func.AutoDraw(10);
@@ -139,10 +139,10 @@ async function func060(this: any) {
                     return;
                 }
                 if (Gvar.var_114 >= 1) {
-                    await Func.setMessage1("掴まれていて降りられない！",
+                    await Func.setMessage("掴まれていて降りられない！",
                                            "", 7, false, false, false);
                     if (Gvar.var_73[Gvar.var_66][Gvar.var_67] == 2) {
-                        await Func.setMessage1("掴まれていて上れない！",
+                        await Func.setMessage("掴まれていて上れない！",
                                                "", 7, false, false, false);
                     }
                     await Func.AutoDraw(9);

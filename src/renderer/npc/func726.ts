@@ -7,31 +7,31 @@ async function func726(this: any) {
         Gvar.var_243 = 0;
         Gvar.var_3125 = Adap.rnd(7);
         if (Gvar.var_3125 == 0) {
-            await Func.setMessage1("ぶばはははははあ",
+            await Func.setMessage("ぶばはははははあ",
                                    "", 7, false, false, true);
         }
         if (Gvar.var_3125 == 1) {
-            await Func.setMessage1("バギィイ――ッ",
+            await Func.setMessage("バギィイ――ッ",
                                    "", 7, false, false, true);
         }
         if (Gvar.var_3125 == 2) {
-            await Func.setMessage1("ぶきィィィーッ",
+            await Func.setMessage("ぶきィィィーッ",
                                    "", 7, false, false, true);
         }
         if (Gvar.var_3125 == 3) {
-            await Func.setMessage1("ノシェーーーッ",
+            await Func.setMessage("ノシェーーーッ",
                                    "", 7, false, false, true);
         }
         if (Gvar.var_3125 == 4) {
-            await Func.setMessage1("アギ    アギ",
+            await Func.setMessage("アギ    アギ",
                                    "    アギッ  アギッ  アギィィ―――ッ", 7, false, false, true);
         }
         if (Gvar.var_3125 == 5) {
-            await Func.setMessage1("ウケッウケッウケッ",
+            await Func.setMessage("ウケッウケッウケッ",
                                    "", 7, false, false, true);
         }
         if (Gvar.var_3125 == 6) {
-            await Func.setMessage1("ガルルルルーッ",
+            await Func.setMessage("ガルルルルーッ",
                                    "", 7, false, false, true);
         }
         await Func.AutoDraw(5);

@@ -7,50 +7,50 @@ async function func835(this: any) {
     Adap.dbgprt(835);
     Gvar.var_243 = 0;
     if (Gvar.var_524 >= 1) { // 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
-        await Func.setMessage1("ﾛｯｺ･ﾊﾞﾛｯｺ所長",
+        await Func.setMessage("ﾛｯｺ･ﾊﾞﾛｯｺ所長",
                                 "「『鉄獄』に挑戦してみますか？」", 7, false, false, true);
     }
     if (Gvar.var_524 == 0) { // 鉄の牢獄へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
-        await Func.setMessage1("「私はｸﾞﾘｰﾝ･ﾄﾞﾙﾌｨﾝ･ｽﾄﾘｰﾄ刑務所の",
+        await Func.setMessage("「私はｸﾞﾘｰﾝ･ﾄﾞﾙﾌｨﾝ･ｽﾄﾘｰﾄ刑務所の",
                                 "  所長、ﾛｯｺ･ﾊﾞﾛｯｺです。", 7, true, false, true);
 
-        await Func.setMessage1("私の隣にいるこの彼女はぁー",
+        await Func.setMessage("私の隣にいるこの彼女はぁー",
                                 "ｱｼｽﾀﾝﾄの『ｼｬｰﾛｯﾄ』です。", 7, true, false, true);
 
-        await Func.setMessage1("つい先日の話ですが…", "", 7, true, false, true);
+        await Func.setMessage("つい先日の話ですが…", "", 7, true, false, true);
 
-        await Func.setMessage1("ｸﾞﾘｰﾝ･ﾄﾞﾙﾌｨﾝ･ｽﾄﾘｰﾄ刑務所から",
+        await Func.setMessage("ｸﾞﾘｰﾝ･ﾄﾞﾙﾌｨﾝ･ｽﾄﾘｰﾄ刑務所から",
                                 "囚人が何人も脱獄してしまうという", 7, true, false, true);
 
-        await Func.setMessage1("困った事件がおきてしまいました。", "", 7, true, false, true);
+        await Func.setMessage("困った事件がおきてしまいました。", "", 7, true, false, true);
 
-        await Func.setMessage1("誰であろーと逃げられないように",
+        await Func.setMessage("誰であろーと逃げられないように",
                                 "対策はとってあったのですが", 7, true, false, true);
 
-        await Func.setMessage1("どうやら不十分だったようです", "", 7, true, false, true);
+        await Func.setMessage("どうやら不十分だったようです", "", 7, true, false, true);
 
-        await Func.setMessage1("そこで私は、絶対に誰にも脱獄されない",
+        await Func.setMessage("そこで私は、絶対に誰にも脱獄されない",
                                 "牢獄を作る事にしたのです。", 7, true, false, true);
 
-        await Func.setMessage1("『石作り』では生温いようでしたので", "", 7, true, false, true);
+        await Func.setMessage("『石作り』では生温いようでしたので", "", 7, true, false, true);
 
-        await Func.setMessage1("名づけて、『鉄獄』！", "", 7, true, false, true);
+        await Func.setMessage("名づけて、『鉄獄』！", "", 7, true, false, true);
 
-        await Func.setMessage1("そこであなたにお願いですが、",
+        await Func.setMessage("そこであなたにお願いですが、",
                                 "この牢獄がどれほど強固か", 7, true, false, true);
 
-        await Func.setMessage1("ぜひ試していただきたいのです。", "", 7, true, false, true);
+        await Func.setMessage("ぜひ試していただきたいのです。", "", 7, true, false, true);
 
-        await Func.setMessage1("【ここでYes/No選択】", "", 7, true, false, true);
+        await Func.setMessage("【ここでYes/No選択】", "", 7, true, false, true);
 
-        await Func.setMessage1("それではｼｬｰﾛｯﾄ、新しく入る",
+        await Func.setMessage("それではｼｬｰﾛｯﾄ、新しく入る",
                                 "みなさんに『心構え』を", 7, true, false, true);
 
-        await Func.setMessage1("説明してください。", "", 7, true, false, true);
+        await Func.setMessage("説明してください。", "", 7, true, false, true);
 
-        await Func.setMessage1("【ここでダンジョンの説明】", "", 7, true, false, true);
+        await Func.setMessage("【ここでダンジョンの説明】", "", 7, true, false, true);
 
-        await Func.setMessage1("それでは…  『鉄獄』に",
+        await Func.setMessage("それでは…  『鉄獄』に",
                             "挑戦してみますか？", 7, true, false, true);
 
         // 最後、フラグ更新

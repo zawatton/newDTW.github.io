@@ -9,7 +9,7 @@ async function func788(this: any) {
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         Gvar.var_1455 = Gvar.current_floor;
 
-        await Func.setMessage1("ｱﾊﾞｯｷｫ「ムーディー・ブルース！」",
+        await Func.setMessage("ｱﾊﾞｯｷｫ「ムーディー・ブルース！」",
                                "", 7, true, false, true);
 
         Gvar.var_3164 = 1;

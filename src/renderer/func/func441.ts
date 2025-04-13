@@ -7,7 +7,7 @@ async function func441(this: any) {
         Adap.dbgprt(441);
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
         if (Gvar.var_225 == Gvar.var_1967 && Gvar.var_1965 == 0) {
-            await Func.setMessage1("それは今使っているDISCです。",
+            await Func.setMessage("それは今使っているDISCです。",
                                     "", 7, true, false, false);
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
                 await Func.func337(); // メッセージ表示処理(自動)
@@ -35,7 +35,7 @@ async function func441(this: any) {
         if (Gvar.var_862[590][0] == 0 && Gvar.var_375 == 0) {
             Gvar.var_862[590][0] = 1;
             await Func.func492(); // アイテムリスト呼び出し
-            await Func.setMessage1("なんと" + Gvar.var_1938 + "は",
+            await Func.setMessage("なんと" + Gvar.var_1938 + "は",
                                     "ｷﾞｱｯﾁｮのDISCだった！", 7, true, false, false);
         }
         Gvar.var_1940 = Gvar.var_199;
@@ -43,19 +43,19 @@ async function func441(this: any) {
 
         Gvar.var_1073 = Adap.rnd(4);
         if (Gvar.var_1073 == 0) {
-            await Func.setMessage1("「どういう事だ！",
+            await Func.setMessage("「どういう事だ！",
                                     "  どういう事だよッ！  クソッ！」", 7, true, false, true);
         }
         if (Gvar.var_1073 == 1) {
-            await Func.setMessage1("「なめてんのかァ――ッ  このオレをッ！",
+            await Func.setMessage("「なめてんのかァ――ッ  このオレをッ！",
                                     "  クソッ！  クソッ！」", 7, true, false, true);
         }
         if (Gvar.var_1073 == 2) {
-            await Func.setMessage1("「ナメやがって  この言葉ァ",
+            await Func.setMessage("「ナメやがって  この言葉ァ",
                                     "  超イラつくぜぇ～～～ッ！！」", 7, true, false, true);
         }
         if (Gvar.var_1073 == 3) {
-            await Func.setMessage1("「チクショオ――  ムカつくんだよ！",
+            await Func.setMessage("「チクショオ――  ムカつくんだよ！",
                                     "  コケにしやがって！ボケがッ！」", 7, true, false, true);
         }
         if (Gvar.var_1973 == 1 && Gvar.equip_disc[119] == 0) {
@@ -80,7 +80,7 @@ async function func441(this: any) {
         Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1244 = 0;
         if (Gvar.equip_disc[119] == 1) {
-            await Func.setMessage1("やわらかくなっていて壊れなかった。",
+            await Func.setMessage("やわらかくなっていて壊れなかった。",
                                     "", 7, false, false, false);
             await Func.AutoDraw(6);
             Gvar.var_199 = Gvar.var_1940;
@@ -182,7 +182,7 @@ async function func441(this: any) {
             Gvar.var_77[Gvar.var_66][Gvar.var_67] = 0;
         }
         await Music.func100(); // 効果音
-        await Func.setMessage1("" + Gvar.var_1976 + "は",
+        await Func.setMessage("" + Gvar.var_1976 + "は",
                                 "粉々に壊れた。", 7, false, false, false);
         await Func.AutoDraw(6);
         Gvar.var_199 = Gvar.var_1940;

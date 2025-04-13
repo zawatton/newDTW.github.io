@@ -15,9 +15,9 @@ async function func921(this: any) {
             await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1321 = Gvar.var_1321 + 1;
         }
-        await Func.setMessage1("「イヒヒヒヒ", "  注文しておいたよッ！」", 7, true, false, true);
-        await Func.setMessage1("「ピッツァ３枚で３００Ｇ」", "", 7, true, false, true);
-        await Func.setMessage1("「もちろんお釣りはいらないよねッ！」", "", 7, true, false, true);
+        await Func.setMessage("「イヒヒヒヒ", "  注文しておいたよッ！」", 7, true, false, true);
+        await Func.setMessage("「ピッツァ３枚で３００Ｇ」", "", 7, true, false, true);
+        await Func.setMessage("「もちろんお釣りはいらないよねッ！」", "", 7, true, false, true);
         Adap.DSPLAY(139);
         Gvar.wallet = 0;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {

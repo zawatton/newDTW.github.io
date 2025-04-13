@@ -22,7 +22,7 @@ async function func444(this: any) {
         Gvar.var_1981 = Gvar.var_233[Gvar.var_225].Var0;
         if (Gvar.var_233[Gvar.var_225].Var0 >= 100 && Gvar.var_233[Gvar.var_225].Var0 < 400 && Gvar.var_862[Gvar.var_1981][0] == 0 && Gvar.var_262 == 0) {
             Gvar.var_1980 = 0;
-            await Func.setMessage1("何のDISCかわからないので研究できない", "", 7, true, false, false);
+            await Func.setMessage("何のDISCかわからないので研究できない", "", 7, true, false, false);
             await Func.AutoDraw(4);
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             await Func.func051(); // キー入力待ち処理
@@ -31,7 +31,7 @@ async function func444(this: any) {
         }
         if (Gvar.var_1980 == 1) {
             Gvar.var_1980 = 0;
-            await Func.setMessage1("それには使えません。", "", 7, true, false, false);
+            await Func.setMessage("それには使えません。", "", 7, true, false, false);
             await Func.AutoDraw(4);
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             await Func.func051(); // キー入力待ち処理
@@ -77,13 +77,13 @@ async function func444(this: any) {
             Gvar.var_1983 = 1;
         }
         Adap.DSPLAY(118);
-        await Func.setMessage1("" + Gvar.var_1937 + "を読んだ。", "", 7, true, false, false);
+        await Func.setMessage("" + Gvar.var_1937 + "を読んだ。", "", 7, true, false, false);
         if (Gvar.var_1950 == 20) {
             await Func.func446();
             return;
         }
         if (Gvar.var_1983 == 0) {
-            await Func.setMessage1("" + Gvar.strengthen_item_name + "の研究は", "この単行本ではできなかった…", 7, true, false, false);
+            await Func.setMessage("" + Gvar.strengthen_item_name + "の研究は", "この単行本ではできなかった…", 7, true, false, false);
             await Func.AutoDraw(10);
             Gvar.var_1950 = 0;
             await Func.func437();
@@ -103,7 +103,7 @@ async function func444(this: any) {
         }
         if (Gvar.var_1985 == 1) {
             Gvar.var_233[Gvar.var_225].Var14 = 1;
-            await Func.setMessage1("" + Gvar.strengthen_item_name + "は", "スデに強さの限界のようだ", 7, true, false, false);
+            await Func.setMessage("" + Gvar.strengthen_item_name + "は", "スデに強さの限界のようだ", 7, true, false, false);
             if (Gvar.var_233[Gvar.var_225].Var12 == 1) {
                 Gvar.var_233[Gvar.var_225].Var12 = 0;
                 await Func.func426();
@@ -118,12 +118,12 @@ async function func444(this: any) {
                 if (Gvar.var_225 == Gvar.var_555) {
                     Gvar.var_898 = 0;
                 }
-                await Func.setMessage1("DISCの呪いは解除された！", "", 7, false, false, false);
+                await Func.setMessage("DISCの呪いは解除された！", "", 7, false, false, false);
             }
             if (Gvar.var_1950 == 7) {
                 await Func.func340(); // キー入力による選択処理
                 Gvar.var_233[Gvar.var_225].Var12 = 2;
-                await Func.setMessage1("" + Gvar.strengthen_item_name + "は", "漆黒のオーラに包まれた！", 7, false, false, false);
+                await Func.setMessage("" + Gvar.strengthen_item_name + "は", "漆黒のオーラに包まれた！", 7, false, false, false);
             }
             await Func.AutoDraw(10);
             Gvar.var_1950 = 0;
@@ -183,18 +183,18 @@ async function func444(this: any) {
         Adap.DSPLAY(112);  // 刀の切れる音 or 強化した時のシャキーン 効果音
         if (Gvar.var_1986 == 1) {
             if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400) {
-                await Func.setMessage1("" + Gvar.strengthen_item_name + "が", "強くなった！", 7, false, false, false);
+                await Func.setMessage("" + Gvar.strengthen_item_name + "が", "強くなった！", 7, false, false, false);
             }
             if (Gvar.belongings_item_list >= 400 && Gvar.belongings_item_list < 500) {
-                await Func.setMessage1("" + Gvar.strengthen_item_name + "の", "エネルギーが増えた！", 7, false, false, false);
+                await Func.setMessage("" + Gvar.strengthen_item_name + "の", "エネルギーが増えた！", 7, false, false, false);
             }
         }
         if (Gvar.var_1986 == 3) {
             if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400) {
-                await Func.setMessage1("" + Gvar.strengthen_item_name + "が", "ものすごく強くなった！", 7, false, false, false);
+                await Func.setMessage("" + Gvar.strengthen_item_name + "が", "ものすごく強くなった！", 7, false, false, false);
             }
             if (Gvar.belongings_item_list >= 400 && Gvar.belongings_item_list < 500) {
-                await Func.setMessage1("" + Gvar.strengthen_item_name + "の", "エネルギーがたくさん増えた！", 7, false, false, false);
+                await Func.setMessage("" + Gvar.strengthen_item_name + "の", "エネルギーがたくさん増えた！", 7, false, false, false);
             }
         }
         if (Gvar.var_233[Gvar.var_225].Var12 == 1) {
@@ -213,11 +213,11 @@ async function func444(this: any) {
             if (Gvar.var_225 == Gvar.var_555) {
                 Gvar.var_898 = 0;
             }
-            await Func.setMessage1("DISCの呪いが解除された！", "", 7, false, false, false);
+            await Func.setMessage("DISCの呪いが解除された！", "", 7, false, false, false);
         }
         if (Gvar.var_1950 == 7) {
             Gvar.var_233[Gvar.var_225].Var12 = 2;
-            await Func.setMessage1("" + Gvar.strengthen_item_name + "は", "漆黒のオーラに包まれた！", 7, true, false, false);
+            await Func.setMessage("" + Gvar.strengthen_item_name + "は", "漆黒のオーラに包まれた！", 7, true, false, false);
         }
         await Func.func437();
         await Func.AutoDraw(10);

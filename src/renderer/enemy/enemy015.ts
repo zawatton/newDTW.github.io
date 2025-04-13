@@ -23,14 +23,14 @@ async function enemy015(this: any) {
             Gvar.var_1358 = 0;
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             if (Gvar.var_173 == 1) {
-                await Func.setMessage1("冷やされる攻撃に強くなっていて",
+                await Func.setMessage("冷やされる攻撃に強くなっていて",
                                        "冷凍攻撃を防いだ！", 7, false, false, false);
                 await Func.AutoDraw(9);
                 Gvar.var_2197 = 1;
                 return;
             }
             if (Gvar.nouryoku_disc_id == 109 || Gvar.shageki_disc_id == 404 || Gvar.nouryoku_disc_id == 202) {
-                await Func.setMessage1("装備中のDISCの効果で",
+                await Func.setMessage("装備中のDISCの効果で",
                                        "冷凍攻撃を防いだ！", 7, false, false, false);
                 await Func.AutoDraw(9);
                 Gvar.var_2197 = 1;
@@ -38,7 +38,7 @@ async function enemy015(this: any) {
             }
             Gvar.var_128 = 1;
             Adap.DSPLAY(126);
-            await Func.setMessage1("体を凍らされてしまった！", "", 7, false, false, false);
+            await Func.setMessage("体を凍らされてしまった！", "", 7, false, false, false);
             await Func.AutoDraw(9);
             Gvar.var_2197 = 1;
         }

@@ -5,7 +5,7 @@ import * as Music from '../music/index'
 
 async function func590(this: any) {
         Adap.dbgprt(590);
-        await Func.setMessage1("「命」を「運」んでくると書いて", "「運命」！", 8, false, false, true);
+        await Func.setMessage("「命」を「運」んでくると書いて", "「運命」！", 8, false, false, true);
         for (let cnt1 = 0; cnt1 < 16; ++cnt1) {
             Gvar.var_300 = 0;
             await Func.func337(); // メッセージ表示処理(自動)
@@ -35,7 +35,7 @@ async function func590(this: any) {
         Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1583 = 0;
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-        await Func.setMessage1("……フフ", "よくぞ言ったものだ", 8, false, false, true);
+        await Func.setMessage("……フフ", "よくぞ言ったものだ", 8, false, false, true);
         return;
 }
 

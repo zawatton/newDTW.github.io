@@ -24,7 +24,7 @@ async function func895(this: any) {
         if (Gvar.stat) {
             Adap.gsel( Gvar.window_id = 33, Gvar.window_mode = -1);
             Adap.gsel(0, 1);
-            await Func.setMessage1("接続に失敗した。", "", 7, false, false, false);
+            await Func.setMessage("接続に失敗した。", "", 7, false, false, false);
             await Func.AutoDraw(5);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
@@ -39,7 +39,7 @@ async function func895(this: any) {
         if (Gvar.stat != 1) {
             Adap.gsel( Gvar.window_id = 33, Gvar.window_mode = -1);
             Adap.gsel(0, 1);
-            await Func.setMessage1("接続に失敗した。", "", 7, false, false, false);
+            await Func.setMessage("接続に失敗した。", "", 7, false, false, false);
             await Func.AutoDraw(5);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
@@ -78,7 +78,7 @@ async function func895(this: any) {
             Adap.gsel( Gvar.window_id = 33, Gvar.window_mode = -1);
             Adap.gsel( Gvar.window_id = 30, Gvar.window_mode = -1);
             Adap.gsel(0, 1);
-            await Func.setMessage1("ここは満員だ・・・", "", 7, false, false, false);
+            await Func.setMessage("ここは満員だ・・・", "", 7, false, false, false);
             await Func.AutoDraw(5);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;

@@ -8,19 +8,19 @@ async function item570(this: any) {
         Gvar.var_1264 = 0;
         Gvar.var_1073 = Adap.rnd(4);
         if (Gvar.var_1073 == 0) {
-            await Func.setMessage1("「ふるえるぞハート！",
+            await Func.setMessage("「ふるえるぞハート！",
                                    "  燃え尽きるほどヒ―――ト！！」", 7, false, false, true);
         }
         if (Gvar.var_1073 == 1) {
-            await Func.setMessage1("「刻むぞ  血液のビート！」",
+            await Func.setMessage("「刻むぞ  血液のビート！」",
                                    "", 7, false, false, true);
         }
         if (Gvar.var_1073 == 2) {
-            await Func.setMessage1("「浄めてやるッ",
+            await Func.setMessage("「浄めてやるッ",
                                    "  その穢れたる野望！」", 7, false, false, true);
         }
         if (Gvar.var_1073 == 3) {
-            await Func.setMessage1("「たっぷり波紋を流し込んでやるッ！」",
+            await Func.setMessage("「たっぷり波紋を流し込んでやるッ！」",
                                    "", 7, false, false, true);
         }
         await Func.AutoDraw(12);
@@ -42,9 +42,9 @@ async function item570(this: any) {
             Gvar.var_747 = 1;
             Adap.DSPLAY(105);
             await Func.AutoDraw(10);
-            await Func.setMessage1("吸血鬼体質で波紋呼吸をしてしまった！",
+            await Func.setMessage("吸血鬼体質で波紋呼吸をしてしまった！",
                                    "", 7, false, false, false);
-            await Func.setMessage1("酷いダメージを受けて回復しない！",
+            await Func.setMessage("酷いダメージを受けて回復しない！",
                                    "", 7, false, false, false);
             await Func.AutoDraw(15);
             Gvar.var_389 = 0;

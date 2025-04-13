@@ -11,10 +11,10 @@ async function enemy9999(this: any) {
             if (Gvar.nouryoku_disc_id != 116 && Gvar.var_125 == 0) {
                 Gvar.var_134 = 1;
             }
-            await Func.setMessage1("オーバードライブ！", "", 8, false, false, false);
+            await Func.setMessage("オーバードライブ！", "", 8, false, false, false);
             await Func.AutoDraw(9);
             if (Gvar.nouryoku_disc_id == 116 || Gvar.var_125 >= 1) {
-                await Func.setMessage1("しかし波紋に強くなっていて平気だった", "", 8, true, false, false);
+                await Func.setMessage("しかし波紋に強くなっていて平気だった", "", 8, true, false, false);
             }
             await Func.func619();
             Gvar.var_2197 = 1;

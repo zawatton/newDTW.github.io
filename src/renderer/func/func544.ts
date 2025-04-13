@@ -11,7 +11,7 @@ async function func544(this: any) {
             Gvar.var_211 = 0;
             Gvar.var_356 = 235;
         }
-        await Func.setMessage1("自分の撃った弾丸が脳天に命中！", "" + Gvar.var_2478 + "のダメージを喰らった。", 10, false, false, false);
+        await Func.setMessage("自分の撃った弾丸が脳天に命中！", "" + Gvar.var_2478 + "のダメージを喰らった。", 10, false, false, false);
         Gvar.var_108 = 1;
         Gvar.var_747 = 1;
         Adap.DSPLAY(105);

@@ -17,7 +17,7 @@ async function item203(this: any) {
         if (Gvar.var_570 == 3) {
             Gvar.bufferid_stand_disc = 29; // Adap.buffer(29)は"img_stand3.gif"
         }
-        await Func.setMessage1("「アッフォオオ―――――ン！」",
+        await Func.setMessage("「アッフォオオ―――――ン！」",
                                "", 7, false, false, true);
         Gvar.var_374 = 1;
         Gvar.var_1575 = 1;
@@ -123,7 +123,7 @@ async function item203(this: any) {
         }
         if (Gvar.var_2265 == 1) {
             Adap.DSPLAY(153);
-            await Func.setMessage1("周りの敵は目に砂が入って",
+            await Func.setMessage("周りの敵は目に砂が入って",
                                    "盲目になってしまった！", 7, true, true, false);
         }
         Gvar.var_374 = 0;

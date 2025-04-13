@@ -16,23 +16,23 @@ async function func513(this: any) {
         Gvar.var_1254 = 0;
         Gvar.var_2358 = Adap.rnd(5);
         if (Gvar.var_2358 == 0) {
-            await Func.setMessage1("よし。",
+            await Func.setMessage("よし。",
                                     "「今起こったことはすべて忘れる」…と。", 7, true, false, true);
         }
         if (Gvar.var_2358 == 1) {
-            await Func.setMessage1("最低なヤツだな……",
+            await Func.setMessage("最低なヤツだな……",
                                     "おまえは使えんな…", 7, true, false, true);
         }
         if (Gvar.var_2358 == 2) {
-            await Func.setMessage1("実にいいッ！",
+            await Func.setMessage("実にいいッ！",
                                     "実に気に入ったよ！", 7, true, false, true);
         }
         if (Gvar.var_2358 == 3) {
-            await Func.setMessage1("君の性格……",
+            await Func.setMessage("君の性格……",
                                     "読者からもきっと好かれると思うよ", 7, true, false, true);
         }
         if (Gvar.var_2358 == 4) {
-            await Func.setMessage1("たとえ平凡でも",
+            await Func.setMessage("たとえ平凡でも",
                                     "人の人生を見るのはおもしろい……", 7, true, false, true);
         }
         Gvar.var_83[Gvar.var_2231].Var8 = 0;

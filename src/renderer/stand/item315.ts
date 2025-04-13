@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 315 エピタフの発動処理
 async function item315(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        await Func.setMessage1("「エピタフ！」",
+        await Func.setMessage("「エピタフ！」",
                                "", 7, false, false, false);
         Gvar.var_119 = 1;
         Gvar.var_121 = 1; // Gvar.var_121 罠が見えるようになるフラグON
@@ -25,9 +25,9 @@ async function item315(this: any) {
             Gvar.var_300 = 0;
         }
         Gvar.var_312 = 0;
-        await Func.setMessage1("「迫り来る危険を感知できる…！」",
+        await Func.setMessage("「迫り来る危険を感知できる…！」",
                                "", 7, true, true, false);
-        await Func.setMessage1("見えないものが見えるようになった！",
+        await Func.setMessage("見えないものが見えるようになった！",
                                "", 7, false, true, false);
         await Func.AutoDraw(10);
         if (Gvar.var_2254 == 1) {

@@ -77,7 +77,7 @@ async function func606(this: any) {
         Gvar.var_389 = 2;
 
         Adap.DSPLAY(104);
-        await Func.setMessage1("ﾏﾝﾊｯﾀﾝﾄﾗﾝｽﾌｧｰの弾丸を喰らった！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+        await Func.setMessage("ﾏﾝﾊｯﾀﾝﾄﾗﾝｽﾌｧｰの弾丸を喰らった！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

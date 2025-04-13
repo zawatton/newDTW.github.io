@@ -7,27 +7,27 @@ async function item584(this: any) {
         await Func.AutoDraw(12);
         Gvar.var_1264 = 0;
         Gvar.var_601 = Adap.rnd(5);
-        await Func.setMessage1("嫌な記憶がよみがえってきた…",
+        await Func.setMessage("嫌な記憶がよみがえってきた…",
                                "", 7, true, false, false);
 
         if (Gvar.var_601 == 0) {
-            await Func.setMessage1("「黙って引っ込んでろよ  いいな…」",
+            await Func.setMessage("「黙って引っ込んでろよ  いいな…」",
                                    "", 7, true, true, true);
         }
         if (Gvar.var_601 == 1) {
-            await Func.setMessage1("「よけいなことをしてみろ",
+            await Func.setMessage("「よけいなことをしてみろ",
                                    "おれたちが てめーを殺すぜ」", 7, true, true, true);
         }
         if (Gvar.var_601 == 2) {
-            await Func.setMessage1("「おとなしく補欠してろヌケサク」",
+            await Func.setMessage("「おとなしく補欠してろヌケサク」",
                                    "", 7, true, true, true);
         }
         if (Gvar.var_601 == 3) {
-            await Func.setMessage1("「きさまの能力では",
+            await Func.setMessage("「きさまの能力では",
                                    "ジョースターたちを倒すのは無理だ」", 7, true, true, true);
         }
         if (Gvar.var_601 == 4) {
-            await Func.setMessage1("「しょせんきさまはただの吸血鬼」",
+            await Func.setMessage("「しょせんきさまはただの吸血鬼」",
                                    "", 7, true, true, true);
         }
         Adap.DSPLAY(151);

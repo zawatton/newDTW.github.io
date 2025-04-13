@@ -7,7 +7,7 @@ async function func533(this: any) {
         Adap.dbgprt(533);
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
         if (Gvar.var_233[Gvar.var_225].Var0 >= 800 && Gvar.var_233[Gvar.var_225].Var0 < 900 && Gvar.var_233[Gvar.var_225].Var8 != 0) {
-            await Func.setMessage1("中に何か入っているアイテムは", "送ることができない。", 7, true, false, false);
+            await Func.setMessage("中に何か入っているアイテムは", "送ることができない。", 7, true, false, false);
             await Func.func051(); // キー入力待ち処理
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
@@ -15,7 +15,7 @@ async function func533(this: any) {
         }
         if (Gvar.var_2301 == 0) {
             if (Gvar.var_225 == Gvar.var_2300) {
-                await Func.setMessage1("それを送ることはできない。", "", 7, true, false, false);
+                await Func.setMessage("それを送ることはできない。", "", 7, true, false, false);
                 await Func.func051(); // キー入力待ち処理
                 Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                 await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
@@ -36,7 +36,7 @@ async function func533(this: any) {
             Gvar.var_2116 = 1;
         }
         if (Gvar.var_2116 == 1) {
-            await Func.setMessage1("呪われていて外せない！", "", 7, true, false, false);
+            await Func.setMessage("呪われていて外せない！", "", 7, true, false, false);
             await Func.func051(); // キー入力待ち処理
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
@@ -66,7 +66,7 @@ async function func533(this: any) {
             Gvar.var_2402 = 1;
         }
         if (Gvar.var_2402 == 1) {
-            await Func.setMessage1("倉庫にはもう置ける場所がないようだ", "", 7, true, false, false);
+            await Func.setMessage("倉庫にはもう置ける場所がないようだ", "", 7, true, false, false);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
@@ -238,10 +238,10 @@ async function func533(this: any) {
             Gvar.var_449 = Gvar.var_449 + 1;
         }
         if (Gvar.var_2401 == 1) {
-            await Func.setMessage1("ﾑｰﾃﾞｨｰﾌﾞﾙｰｽの手はアイテムを持って", "飛び去っていった。", 7, true, false, false);
+            await Func.setMessage("ﾑｰﾃﾞｨｰﾌﾞﾙｰｽの手はアイテムを持って", "飛び去っていった。", 7, true, false, false);
         }
         if (Gvar.var_2401 == 0) {
-            await Func.setMessage1("倉庫にはもう置ける場所がないようだ", "", 7, true, false, false);
+            await Func.setMessage("倉庫にはもう置ける場所がないようだ", "", 7, true, false, false);
         }
         if (Gvar.var_2401 == 1) {
             Gvar.var_1457 = Gvar.var_66;

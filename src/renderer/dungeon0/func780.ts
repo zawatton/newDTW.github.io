@@ -5,19 +5,19 @@ import * as Func from '../func/index'
 async function func780(this: any) {
         Adap.dbgprt(780);
 
-        await Func.setMessage1("この岸部露伴が頭下げて",
+        await Func.setMessage("この岸部露伴が頭下げて",
                                "頼んでるのに…", 7, true, true, true);
 
-        await Func.setMessage1("ふぅ～～ん",
+        await Func.setMessage("ふぅ～～ん",
                                "そうかい！", 7, true, true, true);
 
-        await Func.setMessage1("君は、ちょいと深い所まで行って",
+        await Func.setMessage("君は、ちょいと深い所まで行って",
                                "帰ってくるだけのことを断るのか…", 7, true, true, true);
 
-        await Func.setMessage1("念のためもう一度聞くが、",
+        await Func.setMessage("念のためもう一度聞くが、",
                                "", 7, true, true, false);
 
-        await Func.setMessage1("どうだろう、代わりに取ってきて",
+        await Func.setMessage("どうだろう、代わりに取ってきて",
                                "もらえないかな？", 7, true, false, true);
 
         await Func.func051(); // キー入力待ち処理

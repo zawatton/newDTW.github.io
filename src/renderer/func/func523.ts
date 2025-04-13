@@ -9,7 +9,7 @@ async function func523(this: any) {
         await Func.func427();
         await Func.func428();
         if (Gvar.var_553 == Gvar.var_225 || Gvar.var_554 == Gvar.var_225 || Gvar.var_555 == Gvar.var_225) {
-            await Func.setMessage1("装備しているDISCは", "はずさないと合成できません。", 7, true, false, false);
+            await Func.setMessage("装備しているDISCは", "はずさないと合成できません。", 7, true, false, false);
             await Func.AutoDraw(4);
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             await Func.func051(); // キー入力待ち処理
@@ -17,14 +17,14 @@ async function func523(this: any) {
             return;
         }
         if (Gvar.var_225 == Gvar.var_2286 && Gvar.var_2287 == 0 && Gvar.var_234 == 0) {
-            await Func.setMessage1("そのDISCは合成するために使用中です", "", 7, true, false, false);
+            await Func.setMessage("そのDISCは合成するために使用中です", "", 7, true, false, false);
             await Func.AutoDraw(4);
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
             return;
         }
         if (Gvar.var_225 == Gvar.var_2090) {
-            await Func.setMessage1("それはベースに選んだアイテムです。", "", 7, true, false, false);
+            await Func.setMessage("それはベースに選んだアイテムです。", "", 7, true, false, false);
             await Func.AutoDraw(4);
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             await Func.func051(); // キー入力待ち処理
@@ -32,7 +32,7 @@ async function func523(this: any) {
             return;
         }
         if (Gvar.var_233[Gvar.var_225].Var0 < 100 || Gvar.var_233[Gvar.var_225].Var0 >= 400) {
-            await Func.setMessage1("それを合成することはできません。", "", 7, true, false, false);
+            await Func.setMessage("それを合成することはできません。", "", 7, true, false, false);
             await Func.AutoDraw(4);
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             await Func.func051(); // キー入力待ち処理
@@ -42,7 +42,7 @@ async function func523(this: any) {
         // ベースオンリーのDiscをベースとして合成しない時の処理
         if (Gvar.var_233[Gvar.var_225].Var0 == 100 || Gvar.var_233[Gvar.var_225].Var0 == 398 || Gvar.var_233[Gvar.var_225].Var0 == 108 || Gvar.var_233[Gvar.var_225].Var0 == 110 || Gvar.var_233[Gvar.var_225].Var0 == 113 || Gvar.var_233[Gvar.var_225].Var0 == 118 || Gvar.var_233[Gvar.var_225].Var0 == 123) {
         // if (Gvar.var_233[Gvar.var_225].Var0 == 398 || Gvar.var_233[Gvar.var_225].Var0 == 108 || Gvar.var_233[Gvar.var_225].Var0 == 110 || Gvar.var_233[Gvar.var_225].Var0 == 113 || Gvar.var_233[Gvar.var_225].Var0 == 118 || Gvar.var_233[Gvar.var_225].Var0 == 123) { // デバッグ用 ベースオンリーのdiscも合成できる
-            await Func.setMessage1("そのDISCはベースにしかできません", "", 7, true, false, false);
+            await Func.setMessage("そのDISCはベースにしかできません", "", 7, true, false, false);
             await Func.AutoDraw(4);
             await Func.func340(); // キー入力による選択処理
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
@@ -181,45 +181,45 @@ async function func523(this: any) {
         }
         Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1443 = 0;
-        await Func.setMessage1("" + Gvar.var_2366 + "と", "" + Gvar.var_2367 + "を合成した", 7, true, false, false);
+        await Func.setMessage("" + Gvar.var_2366 + "と", "" + Gvar.var_2367 + "を合成した", 7, true, false, false);
         await Func.AutoDraw(4);
         if (Gvar.var_2097 == 1) {
             if (Gvar.var_2365 != 1) {
-                await Func.setMessage1("なんと！  ｽﾀｰ･ﾌﾟﾗﾁﾅのDISCは", "ｽﾀﾌﾟﾗｻﾞﾜｰﾙﾄﾞのDISCになった！", 7, true, false, false);
+                await Func.setMessage("なんと！  ｽﾀｰ･ﾌﾟﾗﾁﾅのDISCは", "ｽﾀﾌﾟﾗｻﾞﾜｰﾙﾄﾞのDISCになった！", 7, true, false, false);
             }
             if (Gvar.var_2365 == 1) {
-                await Func.setMessage1("なんと！  ☆ｽﾀｰ･ﾌﾟﾗﾁﾅのDISCは", "☆ｽﾀﾌﾟﾗｻﾞﾜｰﾙﾄﾞのDISCになった！", 7, true, false, false);
+                await Func.setMessage("なんと！  ☆ｽﾀｰ･ﾌﾟﾗﾁﾅのDISCは", "☆ｽﾀﾌﾟﾗｻﾞﾜｰﾙﾄﾞのDISCになった！", 7, true, false, false);
             }
             await Func.AutoDraw(4);
         }
         if (Gvar.var_2097 == 2) {
             if (Gvar.var_2365 != 1) {
-                await Func.setMessage1("なんと！  ｷﾗｰ･ｸｨｰﾝのDISCは", "ﾊﾞｲﾂｧ･ﾀﾞｽﾄのDISCになった！", 7, true, false, false);
+                await Func.setMessage("なんと！  ｷﾗｰ･ｸｨｰﾝのDISCは", "ﾊﾞｲﾂｧ･ﾀﾞｽﾄのDISCになった！", 7, true, false, false);
             }
             if (Gvar.var_2365 == 1) {
-                await Func.setMessage1("なんと！  ☆ｷﾗｰ･ｸｨｰﾝのDISCは", "☆ﾊﾞｲﾂｧ･ﾀﾞｽﾄのDISCになった！", 7, true, false, false);
+                await Func.setMessage("なんと！  ☆ｷﾗｰ･ｸｨｰﾝのDISCは", "☆ﾊﾞｲﾂｧ･ﾀﾞｽﾄのDISCになった！", 7, true, false, false);
             }
             await Func.AutoDraw(4);
         }
         if (Gvar.var_2097 == 3) {
             if (Gvar.var_2365 != 1) {
-                await Func.setMessage1("なんと！  ｷﾗｰ･ｸｨｰﾝのDISCは", "ｷﾗｰﾀｲｶﾞｰｸｨｰﾝのDISCになった！", 7, true, false, false);
+                await Func.setMessage("なんと！  ｷﾗｰ･ｸｨｰﾝのDISCは", "ｷﾗｰﾀｲｶﾞｰｸｨｰﾝのDISCになった！", 7, true, false, false);
             }
             if (Gvar.var_2365 == 1) {
-                await Func.setMessage1("なんと！  ☆ｷﾗｰ･ｸｨｰﾝのDISCは", "☆ｷﾗｰﾀｲｶﾞｰｸｨｰﾝのDISCになった！", 7, true, false, false);
+                await Func.setMessage("なんと！  ☆ｷﾗｰ･ｸｨｰﾝのDISCは", "☆ｷﾗｰﾀｲｶﾞｰｸｨｰﾝのDISCになった！", 7, true, false, false);
             }
             await Func.AutoDraw(4);
         }
         if (Gvar.var_2097 == 4) {
             if (Gvar.var_2365 != 1) {
-                await Func.setMessage1("なんと！  ｳｪｻﾞｰ･ﾘﾎﾟｰﾄのDISCは", "ﾍﾋﾞｰ･ｳｪｻﾞｰのDISCになった！", 7, true, false, false);
+                await Func.setMessage("なんと！  ｳｪｻﾞｰ･ﾘﾎﾟｰﾄのDISCは", "ﾍﾋﾞｰ･ｳｪｻﾞｰのDISCになった！", 7, true, false, false);
             }
             if (Gvar.var_2365 == 1) {
-                await Func.setMessage1("なんと！  ☆ｳｪｻﾞｰ･ﾘﾎﾟｰﾄのDISCは", "☆ﾍﾋﾞｰ･ｳｪｻﾞｰのDISCになった！", 7, true, false, false);
+                await Func.setMessage("なんと！  ☆ｳｪｻﾞｰ･ﾘﾎﾟｰﾄのDISCは", "☆ﾍﾋﾞｰ･ｳｪｻﾞｰのDISCになった！", 7, true, false, false);
             }
             await Func.AutoDraw(4);
         }
-        await Func.setMessage1("ｸﾚｲｼﾞｰ･DのDISCは、合成によって", "スタンドパワーを失い 消滅した。", 7, false, false, false);
+        await Func.setMessage("ｸﾚｲｼﾞｰ･DのDISCは、合成によって", "スタンドパワーを失い 消滅した。", 7, false, false, false);
         await Func.AutoDraw(10);
         if (Gvar.var_2287 == 0 && Gvar.var_234 == 0) {
             if (Gvar.var_2286 > Gvar.var_2091) {

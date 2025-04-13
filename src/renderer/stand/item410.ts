@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 410 不明disc(没ハイウェイスター。かつては射撃discだった?)の発動処理
 async function item410(this: any) {
         if (Gvar.var_73[Gvar.var_66][Gvar.var_67] != 0 || Gvar.var_80[Gvar.var_66][Gvar.var_67] != 0 || Gvar.var_77[Gvar.var_66][Gvar.var_67] != 0) {
-            await Func.setMessage1("ここには潜ませられない。",
+            await Func.setMessage("ここには潜ませられない。",
                                    "", 7, false, false, false);
             await Func.AutoDraw(5);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
@@ -21,7 +21,7 @@ async function item410(this: any) {
         Gvar.var_81[Gvar.var_2330][5] = Gvar.var_201;
 
         Adap.DSPLAY(165);
-        await Func.setMessage1("ﾊｲｳｪｲ･ｽﾀｰを潜ませた。",
+        await Func.setMessage("ﾊｲｳｪｲ･ｽﾀｰを潜ませた。",
                                "", 7, false, false, false);
         await Func.AutoDraw(5);
         Gvar.belongings_item_list = Gvar.activated_disc_id;

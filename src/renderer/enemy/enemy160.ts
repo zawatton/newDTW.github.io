@@ -21,7 +21,7 @@ async function enemy160(this: any) {
             Gvar.var_463 = Gvar.var_83[Gvar.var_673].Var1;
             Gvar.var_464 = Gvar.var_83[Gvar.var_673].Var2;
             Gvar.var_114 = Gvar.var_673;
-            await Func.setMessage1("ｳｴｽﾄｳｯﾄﾞ看守「完全に【ロック】したぜ」", "", 8, false, false, false);
+            await Func.setMessage("ｳｴｽﾄｳｯﾄﾞ看守「完全に【ロック】したぜ」", "", 8, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_83[Gvar.var_673].Var7 = 0;
             Gvar.var_461 = Gvar.var_66;
@@ -34,26 +34,26 @@ async function enemy160(this: any) {
             Gvar.var_601 = Adap.rnd(5);
             await Func.AutoDraw(12);
             if (Gvar.var_601 == 0) {
-                await Func.setMessage1("「スカッとキレまくって  はらしてやる！！」", "", 8, true, false, true);
+                await Func.setMessage("「スカッとキレまくって  はらしてやる！！」", "", 8, true, false, true);
             }
             if (Gvar.var_601 == 1) {
-                await Func.setMessage1("「カスのくせによォォ～～", "  ええ！  ナメやがって  てめえ」", 8, true, false, true);
+                await Func.setMessage("「カスのくせによォォ～～", "  ええ！  ナメやがって  てめえ」", 8, true, false, true);
             }
             if (Gvar.var_601 == 2) {
-                await Func.setMessage1("「オレは最強だ！はらしてやる！」", "", 8, true, false, true);
+                await Func.setMessage("「オレは最強だ！はらしてやる！」", "", 8, true, false, true);
             }
             if (Gvar.var_601 == 3) {
-                await Func.setMessage1("「お前はもう戦闘不能なんだあああ」", "", 8, true, false, true);
+                await Func.setMessage("「お前はもう戦闘不能なんだあああ」", "", 8, true, false, true);
             }
             if (Gvar.var_601 == 4) {
-                await Func.setMessage1("「とどめが来たぞォ―――ッ！」", "", 8, true, false, true);
+                await Func.setMessage("「とどめが来たぞォ―――ッ！」", "", 8, true, false, true);
             }
             Gvar.var_601 = Adap.rnd(20);
             if (Gvar.var_601 == 0) {
-                await Func.setMessage1("「ｱｰｽ･ｳｨﾝﾄﾞ･ｱﾝﾄﾞ･ﾌｧｲﾔｰ」！！", "", 8, true, false, false);
+                await Func.setMessage("「ｱｰｽ･ｳｨﾝﾄﾞ･ｱﾝﾄﾞ･ﾌｧｲﾔｰ」！！", "", 8, true, false, false);
             }
             if (Gvar.var_601 >= 1) {
-                await Func.setMessage1("「プラネット・ウェイブス」！！", "", 8, true, false, false);
+                await Func.setMessage("「プラネット・ウェイブス」！！", "", 8, true, false, false);
             }
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1440 = 1;
@@ -113,7 +113,7 @@ async function enemy160(this: any) {
                 Gvar.var_211 = 0;
                 Gvar.var_356 = 257;
             }
-            await Func.setMessage1("隕石が直撃した！", "" + Gvar.var_209 + "のダメージを喰らった！", 8, false, false, false);
+            await Func.setMessage("隕石が直撃した！", "" + Gvar.var_209 + "のダメージを喰らった！", 8, false, false, false);
             for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                 Gvar.var_585 = 3;
                 await Func.func337(); // メッセージ表示処理(自動)

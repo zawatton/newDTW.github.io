@@ -22,7 +22,7 @@ async function enemy119(this: any) {
         Gvar.var_464 = Gvar.var_83[Gvar.var_673].Var2;
         Gvar.var_114 = Gvar.var_673;
         Adap.DSPLAY(127);
-        await Func.setMessage1("ハーミットパープルが絡みついた！", "", 8, false, false, false);
+        await Func.setMessage("ハーミットパープルが絡みついた！", "", 8, false, false, false);
         await Func.AutoDraw(3);
         Adap.DSPLAY(136);
         Gvar.var_1381 = 1;

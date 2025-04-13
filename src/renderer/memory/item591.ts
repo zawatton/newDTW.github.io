@@ -8,19 +8,19 @@ async function item591(this: any) {
         Gvar.var_1264 = 0;
         Gvar.var_1073 = Adap.rnd(4);
         if (Gvar.var_1073 == 0) {
-            await Func.setMessage1("驚きだよォォ",
+            await Func.setMessage("驚きだよォォ",
                                   "YEEEEHAAHHHッ！", 7, false, false, true);
         }
         if (Gvar.var_1073 == 1) {
-            await Func.setMessage1("驚きだよォォ",
+            await Func.setMessage("驚きだよォォ",
                                    "YEEEEHAAHHHッ！", 7, false, false, true);
         }
         if (Gvar.var_1073 == 2) {
-            await Func.setMessage1("驚きだよォォ",
+            await Func.setMessage("驚きだよォォ",
                                    "YEEEEHAAHHHッ！", 7, false, false, true);
         }
         if (Gvar.var_1073 == 3) {
-            await Func.setMessage1("驚きだよォォ",
+            await Func.setMessage("驚きだよォォ",
                                    "YEEEEHAAHHHッ！", 7, false, false, true);
         }
         await Func.AutoDraw(12);

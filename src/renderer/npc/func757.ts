@@ -6,10 +6,10 @@ import * as Func from '../func/index'
 async function func757(this: any) {
         Adap.dbgprt(757);
         Gvar.var_243 = 0;
-        await Func.setMessage1("「……」",
+        await Func.setMessage("「……」",
                                 "", 7, true, false, true);
 
-        await Func.setMessage1("「……」",
+        await Func.setMessage("「……」",
                                 "", 7, true, false, true);
 
         await Func.func051(); // キー入力待ち処理

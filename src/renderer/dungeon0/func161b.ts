@@ -6,7 +6,7 @@ import * as Music from '../music/index'
 async function func161b(this: any) {
         Adap.dbgprt(161);
         Gvar.var_243 = 0;
-        await Func.setMessage1("部屋に戻った",
+        await Func.setMessage("部屋に戻った",
                                "", 7, false, false, false);
         await Func.AutoDraw(5);
         await Music.func113(); // ヴェネチアホテルのBGMを選曲

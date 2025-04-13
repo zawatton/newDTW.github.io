@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 414 タスクact2の発動処理
 async function item414(this: any) {
         if (Gvar.var_73[Gvar.var_66][Gvar.var_67] != 0 || Gvar.var_80[Gvar.var_66][Gvar.var_67] != 0 || Gvar.var_77[Gvar.var_66][Gvar.var_67] != 0) {
-            await Func.setMessage1("ここには撃てない。",
+            await Func.setMessage("ここには撃てない。",
                                    "", 7, false, false, false);
             await Func.AutoDraw(5);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
@@ -33,7 +33,7 @@ async function item414(this: any) {
         Gvar.var_81[Gvar.var_2330][4] = 1;
         Gvar.var_81[Gvar.var_2330][5] = Gvar.var_201;
 
-        await Func.setMessage1("地面に穴を開けた。",
+        await Func.setMessage("地面に穴を開けた。",
                                "", 7, false, false, false);
         await Func.AutoDraw(5);
         await Func.AutoDraw(5);

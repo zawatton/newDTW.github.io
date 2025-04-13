@@ -7,23 +7,23 @@ async function func728(this: any) {
         Gvar.var_243 = 0;
         Gvar.var_3125 = Adap.rnd(5);
         if (Gvar.var_3125 == 0) {
-            await Func.setMessage1("こんなところ  はやく出よう･･･",
+            await Func.setMessage("こんなところ  はやく出よう･･･",
                                    "", 7, false, false, true);
         }
         if (Gvar.var_3125 == 1) {
-            await Func.setMessage1("こんなところ  はやく出よう･･･",
+            await Func.setMessage("こんなところ  はやく出よう･･･",
                                    "", 7, false, false, true);
         }
         if (Gvar.var_3125 == 2) {
-            await Func.setMessage1("こんなところ  はやく出よう･･･",
+            await Func.setMessage("こんなところ  はやく出よう･･･",
                                    "", 7, false, false, true);
         }
         if (Gvar.var_3125 == 3) {
-            await Func.setMessage1("こんなところ  はやく出よう･･･",
+            await Func.setMessage("こんなところ  はやく出よう･･･",
                                    "", 7, false, false, true);
         }
         if (Gvar.var_3125 == 4) {
-            await Func.setMessage1("こんなところ  はやく出よう･･･",
+            await Func.setMessage("こんなところ  はやく出よう･･･",
                                    "", 7, false, false, true);
         }
         await Func.AutoDraw(5);

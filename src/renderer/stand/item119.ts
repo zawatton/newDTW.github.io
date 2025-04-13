@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item119(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         Adap.DSPLAY(152);
-        await Func.setMessage1("体にゴムのような弾力がついた！",
+        await Func.setMessage("体にゴムのような弾力がついた！",
                                "", 7, false, false, false);
         Gvar.var_150 = 1;
         await Func.AutoDraw(10);

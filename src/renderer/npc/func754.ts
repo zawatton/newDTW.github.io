@@ -192,7 +192,7 @@ async function func754(this: any) {
             }
         }
         await Func.AutoDraw(5);
-        await Func.setMessage1("ﾍﾟｯｼ「ビーチ・ボーイッ」！！",
+        await Func.setMessage("ﾍﾟｯｼ「ビーチ・ボーイッ」！！",
                                 "", 7, false, false, true);
         await Func.AutoDraw(10);
         Gvar.var_83[Gvar.var_3072].Var21 = 1;
@@ -239,7 +239,7 @@ async function func754(this: any) {
             Gvar.var_83[Gvar.var_2171].Var12 = 0;
             Gvar.var_83[Gvar.var_2171].Var13 = 0;
         }
-        await Func.setMessage1("ﾍﾟｯｼ「きたッ！」",
+        await Func.setMessage("ﾍﾟｯｼ「きたッ！」",
                                "", 7, false, false, true);
         await Func.AutoDraw(10);
         Gvar.var_83[Gvar.var_3072].Var21 = 1;
@@ -267,17 +267,17 @@ async function func754(this: any) {
             Gvar.var_1500 = 0;
             Gvar.var_411 = 0;
             Gvar.var_83[Gvar.var_3072].Var21 = 0;
-            await Func.setMessage1("ﾍﾟｯｼ「ちっ！  おしい…」",
+            await Func.setMessage("ﾍﾟｯｼ「ちっ！  おしい…」",
                                    "", 7, false, false, true);
             await Func.AutoDraw(10);
             Gvar.var_217 = 1;
             await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
             return;
         }
-        await Func.setMessage1("ﾍﾟｯｼ「かかったァ――ッ！」",
+        await Func.setMessage("ﾍﾟｯｼ「かかったァ――ッ！」",
                                "", 7, false, false, true);
         if (Gvar.var_1505 == 2) {
-            await Func.setMessage1("ﾍﾟｯｼ「大物釣り上げたァ――――ッ！！」",
+            await Func.setMessage("ﾍﾟｯｼ「大物釣り上げたァ――――ッ！！」",
                                    "", 7, false, false, true);
         }
         await Func.AutoDraw(10);

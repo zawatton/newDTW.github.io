@@ -5,10 +5,10 @@ import * as Func from '../func/index'
 // ダンジョンに長居し過ぎた際の神砂嵐
 async function func072(this: any) {
         Adap.dbgprt(72);
-        await Func.setMessage1("神砂嵐だ！！", "", 7, false, false, false);
+        await Func.setMessage("神砂嵐だ！！", "", 7, false, false, false);
         if (Gvar.var_112 == 1000) {
             await Func.AutoDraw(10);
-            await Func.setMessage1("真空状態の圧倒的破壊空間は", 
+            await Func.setMessage("真空状態の圧倒的破壊空間は", 
                                     "まさに歯車的砂嵐の小宇宙！", 7, false, false, false);
         }
         Gvar.var_582 = 1;
@@ -78,10 +78,10 @@ async function func072(this: any) {
         }
         if (Gvar.var_112 == 700 || Gvar.var_112 == 850) {
             if (Gvar.var_112 == 700) {
-                await Func.setMessage1("…風は収まったようだ", "", 7, false, false, false);
+                await Func.setMessage("…風は収まったようだ", "", 7, false, false, false);
             }
             if (Gvar.var_112 == 850) {
-                await Func.setMessage1("…さっきより強いぞ", "", 7, false, false, false);
+                await Func.setMessage("…さっきより強いぞ", "", 7, false, false, false);
             }
             await Func.AutoDraw(10);
         }

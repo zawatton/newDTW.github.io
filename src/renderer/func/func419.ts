@@ -22,13 +22,13 @@ async function func419(this: any) {
                     Gvar.var_1923 = Gvar.var_1922;
                     await Func.func490();
                     if (Gvar.var_1924 != "") {
-                        await Func.setMessage1("" + Gvar.disp_item_name + "に乗った",
+                        await Func.setMessage("" + Gvar.disp_item_name + "に乗った",
                                                 "【" + Gvar.var_1924 + "】", 7, false, false, false);
                     }
                 }
             }
             else
-                await Func.setMessage1("" + Gvar.disp_item_name + "に乗った",
+                await Func.setMessage("" + Gvar.disp_item_name + "に乗った",
                                         "", 7, false, false, false);
         }
 
@@ -60,7 +60,7 @@ async function func419(this: any) {
                     Gvar.var_484 = Gvar.var_484 + 1;
                 }
             }
-            await Func.setMessage1("" + Gvar.disp_item_name,
+            await Func.setMessage("" + Gvar.disp_item_name,
                                     "値段 " + Gvar.var_1925 + " G", 7, false, false, false);
         }
         await Func.AutoDraw(5);

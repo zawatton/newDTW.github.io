@@ -9,7 +9,7 @@ async function func522(this: any) {
         await Func.func427();
         await Func.func428();
         if (Gvar.var_553 == Gvar.var_225 || Gvar.var_554 == Gvar.var_225 || Gvar.var_555 == Gvar.var_225) {
-            await Func.setMessage1("装備しているDISCは",
+            await Func.setMessage("装備しているDISCは",
                                     "はずさないと合成できません。", 7, true, false, false);
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
                 await Func.func337(); // メッセージ表示処理(自動)
@@ -20,7 +20,7 @@ async function func522(this: any) {
             return;
         }
         if (Gvar.var_225 == Gvar.var_2286 && Gvar.var_2287 == 0 && Gvar.var_234 == 0) {
-            await Func.setMessage1("そのDISCは合成するために使用中です",
+            await Func.setMessage("そのDISCは合成するために使用中です",
                                     "", 7, true, false, false);
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
                 await Func.func337(); // メッセージ表示処理(自動)
@@ -31,7 +31,7 @@ async function func522(this: any) {
             return;
         }
         if (Gvar.var_233[Gvar.var_225].Var0 < 100 || Gvar.var_233[Gvar.var_225].Var0 >= 400) {
-            await Func.setMessage1("それを合成することはできません。",
+            await Func.setMessage("それを合成することはできません。",
                                     "", 7, true, false, false);
             for (let cnt2 = 0; cnt2 < 4; ++cnt2) {
                 await Func.func337(); // メッセージ表示処理(自動)
@@ -43,7 +43,7 @@ async function func522(this: any) {
         }
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
         Gvar.var_2090 = Gvar.var_225;
-        await Func.setMessage1("合成させるアイテムを選んでください",
+        await Func.setMessage("合成させるアイテムを選んでください",
                                 "", 7, true, false, false);
         await Func.AutoDraw(4);
         Gvar.var_1240 = 2; 

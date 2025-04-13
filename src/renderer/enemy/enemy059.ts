@@ -114,7 +114,7 @@ async function enemy059(this: any) {
                 await Func.func023();
             }
             if (Gvar.equip_disc[361] == 1) {
-                await Func.setMessage1("装備スタンドの効果のおかげで",
+                await Func.setMessage("装備スタンドの効果のおかげで",
                                        "DISCを抜き取られなかった。", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_2197 = 1;
@@ -240,7 +240,7 @@ async function enemy059(this: any) {
             Gvar.var_78[Gvar.var_419].Var29 = Gvar.var_233[Gvar.var_475].Var29;
             Gvar.var_225 = Gvar.var_475;
             await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-            await Func.setMessage1("装備中の" + Gvar.target_item_name + "を",
+            await Func.setMessage("装備中の" + Gvar.target_item_name + "を",
                                    "抜き取られてしまった！", 8, false, false, false);
             await Func.func619();
             await Func.AutoDraw(10);

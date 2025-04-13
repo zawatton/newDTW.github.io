@@ -13,7 +13,7 @@ async function item587(this: any) {
         if (Gvar.var_233[Gvar.var_2206].Var15 == 2) {
             Gvar.var_233[Gvar.var_2206].Var15 = 0;
             Gvar.var_2207 = 1;
-            await Func.setMessage1("爆弾が解除された。", "", 7, true, true, true);
+            await Func.setMessage("爆弾が解除された。", "", 7, true, true, true);
         }
         Gvar.var_2206 = Gvar.var_2206 + 1;
     }
@@ -34,8 +34,8 @@ async function item587(this: any) {
         if (Gvar.var_474 == 1) {
             Gvar.var_233[Gvar.var_475].Var15 = 2;
         }
-        await Func.setMessage1("何かのｱｲﾃﾑが爆弾になったかも…", "", 7, true, true, true);
-        await Func.setMessage1("う～む  どうだったかな……？", "自信がない…", 7, false, false, false);
+        await Func.setMessage("何かのｱｲﾃﾑが爆弾になったかも…", "", 7, true, true, true);
+        await Func.setMessage("う～む  どうだったかな……？", "自信がない…", 7, false, false, false);
     }
     return;
 }

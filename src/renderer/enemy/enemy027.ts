@@ -17,7 +17,7 @@ async function enemy027(this: any) {
             Gvar.var_83[Gvar.var_673].Var7 = 1;
             Gvar.var_389 = 2;
             Gvar.var_199 = 2;
-            await Func.setMessage1("目を切り裂かれた！",
+            await Func.setMessage("目を切り裂かれた！",
                                    "", 8, false, false, false);
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1499 = 1;
@@ -45,7 +45,7 @@ async function enemy027(this: any) {
         Gvar.var_463 = Gvar.var_83[Gvar.var_673].Var1;
         Gvar.var_464 = Gvar.var_83[Gvar.var_673].Var2;
         Gvar.var_114 = Gvar.var_673;
-        await Func.setMessage1("ｹﾞﾌﾞ神に足をつかまれた！",
+        await Func.setMessage("ｹﾞﾌﾞ神に足をつかまれた！",
                                "", 8, false, false, false);
         await Func.AutoDraw(10);
 

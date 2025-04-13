@@ -25,13 +25,13 @@ async function func813(this: any) {
         await Func.AutoDraw(1);
         Gvar.var_783 = 15;
         if (Gvar.var_830 == 0) {
-            await Func.setMessage1("「はい…こちらはSPW財団です」",
+            await Func.setMessage("「はい…こちらはSPW財団です」",
                                     "", 7, true, false, true);
 
-            await Func.setMessage1("「前回の冒険でやられた敵の",
+            await Func.setMessage("「前回の冒険でやられた敵の",
                                     "  能力を調べることができます」", 7, true, false, true);
 
-            await Func.setMessage1("「調査費用は1000Gです」",
+            await Func.setMessage("「調査費用は1000Gです」",
                                     "", 7, true, false, true);
             await Func.func817();
             return;
@@ -40,13 +40,13 @@ async function func813(this: any) {
         await Func.func626();
         Gvar.var_3194 = "" + Gvar.enemy_name;
 
-        await Func.setMessage1("「はい…こちらはSPW財団です」",
+        await Func.setMessage("「はい…こちらはSPW財団です」",
                                 "", 7, true, false, true);
 
-        await Func.setMessage1("「" + Gvar.var_3194 + "に",
+        await Func.setMessage("「" + Gvar.var_3194 + "に",
                                 "  やられてしまったようですね？」", 7, true, false, true);
 
-        await Func.setMessage1("「1000Gの調査費で",
+        await Func.setMessage("「1000Gの調査費で",
                                 "  敵の能力を調べられます」", 7, true, false, true);
 
         await Func.func051(); // キー入力待ち処理

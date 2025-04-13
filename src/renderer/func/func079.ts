@@ -14,32 +14,32 @@ async function func079(this: any) {
         if (Gvar.var_139 == 10 || Gvar.var_139 == 20 || Gvar.var_139 == 30 || Gvar.var_139 == 40) {
             if (Gvar.var_139 == 10) {
                 if (Gvar.var_601 == 0) {
-                    await Func.setMessage1("「このヘアースタイルが",
+                    await Func.setMessage("「このヘアースタイルが",
                                             "  チンケな髪だとォ？」", 7, false, false, true);
                 }
                 if (Gvar.var_601 == 1) {
-                    await Func.setMessage1("「このヘアースタイルが",
+                    await Func.setMessage("「このヘアースタイルが",
                                             "  サザエさんみてェーだとォ？」", 7, false, false, true);
                 }
                 if (Gvar.var_601 == 2) {
-                    await Func.setMessage1("「このヘアースタイルが",
+                    await Func.setMessage("「このヘアースタイルが",
                                             "  くだらねーだとォ？」", 7, false, false, true);
                 }
                 if (Gvar.var_601 == 3) {
-                    await Func.setMessage1("「このヘアースタイルが",
+                    await Func.setMessage("「このヘアースタイルが",
                                             "  古くさいセンスだとォ？」", 7, false, false, true);
                 }
             }
             if (Gvar.var_139 == 20) {
-                await Func.setMessage1("「たしかに聞いたぞ",
+                await Func.setMessage("「たしかに聞いたぞ",
                                         "  コラ―――――――ッ！」", 7, false, false, true);
             }
             if (Gvar.var_139 == 30) {
-                await Func.setMessage1("「どこ隠れやがったあ――――",
+                await Func.setMessage("「どこ隠れやがったあ――――",
                                         "  スッタコがぁ～～～～ッ」", 7, false, false, true);
             }
             if (Gvar.var_139 == 40) {
-                await Func.setMessage1("「けなすやつあ  ゆるさねえ～～～～",
+                await Func.setMessage("「けなすやつあ  ゆるさねえ～～～～",
                                         "  何者ﾝだろーと黙っちゃあいねえッ！」", 7, false, false, true);
             }
             Gvar.var_198 = 1; // メッセージウィンドウ開く
@@ -49,35 +49,35 @@ async function func079(this: any) {
         // ドッピオのdiscを使用した際のランダム動作処理
         if (Gvar.var_144 == 10 || Gvar.var_144 == 15 || Gvar.var_144 == 20 || Gvar.var_144 == 25 || Gvar.var_144 == 30 || Gvar.var_144 == 35 || Gvar.var_144 == 40 || Gvar.var_144 == 45) {
             if (Gvar.var_144 == 10) {
-                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「今 ボスから電話があったんだ…",
+                await Func.setMessage("ﾄﾞｯﾋﾟｵ「今 ボスから電話があったんだ…",
                                         "        僕の任務は…」", 7, false, false, true);
             }
             if (Gvar.var_144 == 15) {
-                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「えーと…  なんだっけ…」",
+                await Func.setMessage("ﾄﾞｯﾋﾟｵ「えーと…  なんだっけ…」",
                                         "", 7, false, false, true);
             }
             if (Gvar.var_144 == 20) {
-                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「…やばい…！ このままここに",
+                await Func.setMessage("ﾄﾞｯﾋﾟｵ「…やばい…！ このままここに",
                                         "        ボケッとしてるのはやばいぞッ！」", 7, false, false, true);
             }
             if (Gvar.var_144 == 25) {
-                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「すぐにも襲われそうだッ！」",
+                await Func.setMessage("ﾄﾞｯﾋﾟｵ「すぐにも襲われそうだッ！」",
                                         "", 7, false, false, true);
             }
             if (Gvar.var_144 == 30) {
-                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「ど…どこにいるんですか？",
+                await Func.setMessage("ﾄﾞｯﾋﾟｵ「ど…どこにいるんですか？",
                                         "        ボス！！」", 7, false, false, true);
             }
             if (Gvar.var_144 == 35) {
-                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「オレの近くにいるのですかッ？」",
+                await Func.setMessage("ﾄﾞｯﾋﾟｵ「オレの近くにいるのですかッ？」",
                                         "", 7, false, false, true);
             }
             if (Gvar.var_144 == 40) {
-                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「いるならすぐに来て下さい！」",
+                await Func.setMessage("ﾄﾞｯﾋﾟｵ「いるならすぐに来て下さい！」",
                                         "", 7, false, false, true);
             }
             if (Gvar.var_144 == 45) {
-                await Func.setMessage1("ﾄﾞｯﾋﾟｵ「足に力が入らないんです…」",
+                await Func.setMessage("ﾄﾞｯﾋﾟｵ「足に力が入らないんです…」",
                                         "", 7, false, false, true);
             }
         }

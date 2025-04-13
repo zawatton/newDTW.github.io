@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 301 ハーヴェストの発動処理
 async function item301(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        await Func.setMessage1("アイテムを取って来いッ！",
+        await Func.setMessage("アイテムを取って来いッ！",
                                "", 7, false, false, false);
         Gvar.var_1483 = 1;
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
@@ -103,11 +103,11 @@ async function item301(this: any) {
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
 
         if (Gvar.var_2279 == 0) {
-            await Func.setMessage1("１個も拾ってこなかったど！",
+            await Func.setMessage("１個も拾ってこなかったど！",
                                    "", 7, false, false, false);
         }
         if (Gvar.var_2279 >= 1) {
-            await Func.setMessage1("" + Gvar.var_2279 + "個  拾ってきた。",
+            await Func.setMessage("" + Gvar.var_2279 + "個  拾ってきた。",
                                    "", 7, false, false, false);
         }
         if (Gvar.var_2279 >= 1) {

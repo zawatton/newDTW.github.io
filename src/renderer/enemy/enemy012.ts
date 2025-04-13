@@ -12,7 +12,7 @@ async function enemy012(this: any) {
             if (Gvar.enemy_list == 145 || Gvar.enemy_list == 150) {
                 Gvar.var_743 = 1; //スタンド像付与フラグON
             }
-            await Func.setMessage1("「エコーズ ３ FREEZE ！」", "", 8, true, false, false);
+            await Func.setMessage("「エコーズ ３ FREEZE ！」", "", 8, true, false, false);
             await Func.AutoDraw(10);
 
             Gvar.var_743 = 0; //スタンド像付与フラグOFF
@@ -31,10 +31,10 @@ async function enemy012(this: any) {
             }
             await Func.func619();
             Adap.DSPLAY(162);
-            await Func.setMessage1("体が重くなってしまった！", "", 7, true, true, false);
+            await Func.setMessage("体が重くなってしまった！", "", 7, true, true, false);
             
             if (Gvar.equip_disc[396] == 1) {
-                await Func.setMessage1("しかし装備スタンドの効果で",
+                await Func.setMessage("しかし装備スタンドの効果で",
                                        "速度は遅くならない！", 7, false, true, true);
             }
             await Func.AutoDraw(10);

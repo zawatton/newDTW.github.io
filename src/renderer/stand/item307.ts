@@ -18,7 +18,7 @@ async function item307(this: any) {
             Gvar.bufferid_stand_disc = 29; // Adap.buffer(29)は"img_stand3.gif"
         }
         Gvar.var_1283 = 1;
-        await Func.setMessage1("お前は敗北を認めた！",
+        await Func.setMessage("お前は敗北を認めた！",
                                "", 7, false, false, true);
         Gvar.var_2261 = Gvar.kougeki_disc_id ;
         Gvar.kougeki_disc_id  = 307;

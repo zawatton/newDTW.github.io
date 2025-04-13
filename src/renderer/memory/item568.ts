@@ -8,19 +8,19 @@ async function item568(this: any) {
         Gvar.var_1264 = 0;
         Gvar.var_1073 = Adap.rnd(4);
         if (Gvar.var_1073 == 0) {
-            await Func.setMessage1("「【筋肉】は信用できない",
+            await Func.setMessage("「【筋肉】は信用できない",
                                    "  ライフルは【骨】でささえる」", 7, false, false, true);
         }
         if (Gvar.var_1073 == 1) {
-            await Func.setMessage1("「風が【蝿】の動きだ」",
+            await Func.setMessage("「風が【蝿】の動きだ」",
                                    "", 7, false, false, true);
         }
         if (Gvar.var_1073 == 2) {
-            await Func.setMessage1("「我が【心】のささえを奪った復讐には",
+            await Func.setMessage("「我が【心】のささえを奪った復讐には",
                                   "決着をつけなくてはならないッ!!」", 7, false, false, true);
         }
         if (Gvar.var_1073 == 3) {
-            await Func.setMessage1("「15秒以内に仕留めるッ！」",
+            await Func.setMessage("「15秒以内に仕留めるッ！」",
                                   "", 7, false, false, true);
         }
         await Func.AutoDraw(12);

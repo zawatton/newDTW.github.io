@@ -12,7 +12,7 @@ async function func926(this: any) {
             Adap.gsel( Gvar.window_id = 30, Gvar.window_mode = -1);
             Adap.gsel( Gvar.window_id = 0, Gvar.window_mode = 1);           
             Adap.onkey(0);
-            await Func.setMessage1("接続が切断された。", "", 7, false, false, false);
+            await Func.setMessage("接続が切断された。", "", 7, false, false, false);
             await Func.AutoDraw(5);
             return;
         }

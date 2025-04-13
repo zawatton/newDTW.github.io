@@ -7,10 +7,10 @@ async function func769(this: any) {
         Adap.dbgprt(769);
         Gvar.var_243 = 0;
         Gvar.var_3148 = Gvar.var_314;
-        await Func.setMessage1("サヴェジガーデン作戦だ！",
+        await Func.setMessage("サヴェジガーデン作戦だ！",
                                "", 7, true, false, false);
 
-        await Func.setMessage1("アイテムを倉庫に送りますか？",
+        await Func.setMessage("アイテムを倉庫に送りますか？",
                                "", 7, true, false, false);
         
         await Func.func051(); // キー入力待ち処理

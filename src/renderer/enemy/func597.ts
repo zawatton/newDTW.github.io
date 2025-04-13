@@ -43,7 +43,7 @@ async function func597(this: any) {
         Gvar.var_747 = 1;
 
         Adap.DSPLAY(104);
-        await Func.setMessage1("道連れにされている！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+        await Func.setMessage("道連れにされている！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

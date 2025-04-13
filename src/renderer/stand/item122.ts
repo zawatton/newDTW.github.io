@@ -7,7 +7,7 @@ async function item122(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         Gvar.var_2267 = Adap.dim(10);
         Gvar.var_143 = 1;
-        await Func.setMessage1("「どの程度の ふみ込みまで",
+        await Func.setMessage("「どの程度の ふみ込みまで",
                                "  耐えられるか 憶えるゼ！」", 7, false, false, true);
         await Func.AutoDraw(10);
 

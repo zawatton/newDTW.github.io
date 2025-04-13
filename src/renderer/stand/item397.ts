@@ -15,7 +15,7 @@ async function item397(this: any) {
         }
         Gvar.var_768 = 0;
         Gvar.var_2327 = 0;
-        await Func.setMessage1("「悪魔の虹」が大量にあらわれた！！",
+        await Func.setMessage("「悪魔の虹」が大量にあらわれた！！",
                                "", 7, false, false, false);
         await Func.AutoDraw(10);
         if (Gvar.var_2254 == 1) {

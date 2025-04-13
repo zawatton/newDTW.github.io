@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 // No = 412 ヘブンズドアーの発動処理
 async function item412(this: any) {
-        await Func.setMessage1("「ヘブンズドアーッ」！！",
+        await Func.setMessage("「ヘブンズドアーッ」！！",
                                "", 7, false, false, true);
         Gvar.var_2261 = Gvar.kougeki_disc_id ;
         Gvar.kougeki_disc_id  = 0;
@@ -101,7 +101,7 @@ async function item412(this: any) {
                 await Func.AutoDraw(20);
                 Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                 Gvar.var_1323 = 0;
-                await Func.setMessage1("見えてなくて効かなかった…",
+                await Func.setMessage("見えてなくて効かなかった…",
                                        "", 7, false, true, false);
             }
         }

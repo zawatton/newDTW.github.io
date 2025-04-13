@@ -37,7 +37,7 @@ async function func599(this: any) {
             Gvar.var_211 = 0;
             Gvar.var_356 = 262;
         }
-        await Func.setMessage1("「ズームパンチ！」", "" + Gvar.var_209 + "のダメージをうけた。", 8, false, false, false);
+        await Func.setMessage("「ズームパンチ！」", "" + Gvar.var_209 + "のダメージをうけた。", 8, false, false, false);
         await Func.AutoDraw(6);
         Gvar.var_389 = 0;
         // No = 115 G・エクスペリエンスのDISCを装備している場合

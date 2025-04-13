@@ -12,27 +12,27 @@ async function func733(this: any) {
         }
         if (Gvar.var_3125 == 0) {
             if (Gvar.var_1332 < 10) {
-                await Func.setMessage1("うう…このキズは…急所だ…！",
+                await Func.setMessage("うう…このキズは…急所だ…！",
                                        "", 7, true, false, true);
             }
             if (Gvar.var_1332 >= 10 && Gvar.var_1332 < 30) {
-                await Func.setMessage1("やめりゃあよかった!こんなﾀﾌｶﾞｲに",
+                await Func.setMessage("やめりゃあよかった!こんなﾀﾌｶﾞｲに",
                                        "ケンカふっかけるのはよォ！", 7, true, false, true);
             }
             if (Gvar.var_1332 >= 30 && Gvar.var_1332 < 60) {
-                await Func.setMessage1("こんなもんカスリ傷だぜッ！",
+                await Func.setMessage("こんなもんカスリ傷だぜッ！",
                                        "…イ、イデーイデー！つ…杖！", 7, true, false, true);
             }
             if (Gvar.var_1332 >= 60 && Gvar.var_1332 < 80) {
-                await Func.setMessage1("ここまで首をつっこんだんだ！",
+                await Func.setMessage("ここまで首をつっこんだんだ！",
                                        "黙っているのは性分じゃねえからな", 7, true, false, true);
             }
             if (Gvar.var_1332 >= 80 && Gvar.var_1332 < 100) {
-                await Func.setMessage1("俺は物を盗むが",
+                await Func.setMessage("俺は物を盗むが",
                                        "こいつらは命を盗む！許せねえ！", 7, true, false, true);
             }
             if (Gvar.var_1332 >= 100) {
-                await Func.setMessage1("この紳士に手を出すことは…",
+                await Func.setMessage("この紳士に手を出すことは…",
                                        "このスピードワゴンが許さねえ！", 7, true, false, true);
             }
         }
@@ -41,11 +41,11 @@ async function func733(this: any) {
             Gvar.var_3089 = Gvar.var_83[Gvar.var_3072].Var39;
             await Func.func682();
             if (Gvar.var_3073 < 99999) {
-                await Func.setMessage1("あと" + Gvar.var_3073 + "くらいで",
+                await Func.setMessage("あと" + Gvar.var_3073 + "くらいで",
                                        "もっと強くなれる気がするぜ！", 7, true, false, true);
             }
             if (Gvar.var_3073 >= 99999) {
-                await Func.setMessage1("おれの強さはこれが限界だ！",
+                await Func.setMessage("おれの強さはこれが限界だ！",
                                        "", 7, true, false, true);
             }
             await Music.func125();
@@ -55,20 +55,20 @@ async function func733(this: any) {
             await Func.func626();
             Gvar.var_3125 = Adap.rnd(3);
             if (Gvar.var_3125 == 0) {
-                await Func.setMessage1("" + Gvar.enemy_name + "は死んだッ！",
+                await Func.setMessage("" + Gvar.enemy_name + "は死んだッ！",
                                        "大げさかもしれんが世界は救われたッ！", 7, true, false, true);
             }
             if (Gvar.var_3125 == 1) {
-                await Func.setMessage1("" + Gvar.enemy_name + "は臭えーッ！",
+                await Func.setMessage("" + Gvar.enemy_name + "は臭えーッ！",
                                        "ゲロ以下のニオイがﾌﾟﾝﾌﾟﾝするぜーッ！", 7, true, false, true);
             }
             if (Gvar.var_3125 == 2) {
-                await Func.setMessage1("気をつけな！",
+                await Func.setMessage("気をつけな！",
                                        "" + Gvar.enemy_name + "はこすずるいぜ！", 7, true, false, true);
             }
         }
         if (Gvar.var_83[Gvar.var_3072].Var3 == 1) {
-            await Func.setMessage1("礼は  戦いが終わって",
+            await Func.setMessage("礼は  戦いが終わって",
                                    "生きのびてから言えってんだ…", 7, true, false, true);
         }
 

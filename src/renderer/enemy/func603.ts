@@ -81,10 +81,10 @@ async function func603(this: any) {
             if (Gvar.var_2740 >= Gvar.var_2742 && Gvar.var_2740 <= Gvar.var_2743 && Gvar.var_2741 >= Gvar.var_2745 && Gvar.var_2741 <= Gvar.var_2744) {
                 Gvar.var_240 = 0;
                 if (Gvar.var_2858 == 164) {
-                    await Func.setMessage1("ｴｼﾃﾞｨｼの脳は", "恨みに震えている。", 8, false, false, false);
+                    await Func.setMessage("ｴｼﾃﾞｨｼの脳は", "恨みに震えている。", 8, false, false, false);
                 }
                 if (Gvar.var_2858 == 165) {
-                    await Func.setMessage1("ｴﾎﾞﾆｰﾃﾞﾋﾞﾙは", "恨みに震えている。", 8, false, false, false);
+                    await Func.setMessage("ｴﾎﾞﾆｰﾃﾞﾋﾞﾙは", "恨みに震えている。", 8, false, false, false);
                 }
                 Gvar.var_83[Gvar.var_673].Var21 = 1;
                 for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
@@ -128,13 +128,13 @@ async function func603(this: any) {
         }
         Gvar.var_2861 = Gvar.enemy_name;
         if (Gvar.var_2858 == 164) {
-            await Func.setMessage1("ｴｼﾃﾞｨｼの脳は", "" + Gvar.var_2861 + "に取り憑いた！", 8, true, false, false);
+            await Func.setMessage("ｴｼﾃﾞｨｼの脳は", "" + Gvar.var_2861 + "に取り憑いた！", 8, true, false, false);
         }
         if (Gvar.var_2858 == 165) {
-            await Func.setMessage1("ｴﾎﾞﾆｰﾃﾞﾋﾞﾙは", "" + Gvar.var_2861 + "に取り憑いた！", 8, true, false, false);
+            await Func.setMessage("ｴﾎﾞﾆｰﾃﾞﾋﾞﾙは", "" + Gvar.var_2861 + "に取り憑いた！", 8, true, false, false);
         }
         Adap.DSPLAY(198);
-        await Func.setMessage1("" + Gvar.var_2861 + "は", "レベル " + Gvar.var_83[Gvar.var_2749].Var39 + " になった！", 8, false, false, false);
+        await Func.setMessage("" + Gvar.var_2861 + "は", "レベル " + Gvar.var_83[Gvar.var_2749].Var39 + " になった！", 8, false, false, false);
         await Func.AutoDraw(5);
         return;
 }

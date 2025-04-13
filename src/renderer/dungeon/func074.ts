@@ -19,39 +19,39 @@ async function func074(this: any) {
     Adap.DSPLAY(150);
     
     if (Gvar.var_96 == 1) {
-        await Func.setMessage1("モンスターハウスだ！", "", 7, false, false, false);
+        await Func.setMessage("モンスターハウスだ！", "", 7, false, false, false);
         await Music.func132(); // 効果音
     }
     if (Gvar.var_96 == 2) {
-        await Func.setMessage1("ﾊﾞｯﾄﾞ･ｶﾝﾊﾟﾆｰ･ﾊｳｽ だ！", "", 7, false, false, false);
+        await Func.setMessage("ﾊﾞｯﾄﾞ･ｶﾝﾊﾟﾆｰ･ﾊｳｽ だ！", "", 7, false, false, false);
         await Music.func130(); // 効果音
     }
     if (Gvar.var_96 == 3) {
-        await Func.setMessage1("ﾊｲｳｪｲｽﾀｰ･ﾙｰﾑ だ！", "", 7, false, false, false);
+        await Func.setMessage("ﾊｲｳｪｲｽﾀｰ･ﾙｰﾑ だ！", "", 7, false, false, false);
         await Music.func131(); // 効果音
     }
     if (Gvar.var_96 == 4) {
-        await Func.setMessage1("吸血鬼ハウスだ！", "", 7, false, false, false);
+        await Func.setMessage("吸血鬼ハウスだ！", "", 7, false, false, false);
         await Music.func132(); // 効果音
     }
     if (Gvar.var_96 == 5) {
-        await Func.setMessage1("スタンドハウスだ！", "", 7, false, false, false);
+        await Func.setMessage("スタンドハウスだ！", "", 7, false, false, false);
         await Music.func132(); // 効果音
     }
     if (Gvar.var_96 == 6) {
-        await Func.setMessage1("杜王町ハウスだ！", "", 7, false, false, false);
+        await Func.setMessage("杜王町ハウスだ！", "", 7, false, false, false);
         await Music.func129(); // 効果音
     }
     if (Gvar.var_96 == 7) {
-        await Func.setMessage1("水族館だ！", "", 7, false, false, false);
+        await Func.setMessage("水族館だ！", "", 7, false, false, false);
         await Music.func133(); // 効果音
     }
     if (Gvar.var_96 == 8) {
-        await Func.setMessage1("ファイトクラブだッ！", "", 7, false, false, false);
+        await Func.setMessage("ファイトクラブだッ！", "", 7, false, false, false);
         await Music.func134(); // 効果音
     }
     if (Gvar.var_96 == 9) {
-        await Func.setMessage1("西戸ハウスだ！", "", 7, false, false, false);
+        await Func.setMessage("西戸ハウスだ！", "", 7, false, false, false);
         await Music.func132(); // 効果音
     }
     await Func.AutoDraw(25);

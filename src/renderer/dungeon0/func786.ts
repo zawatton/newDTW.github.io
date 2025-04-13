@@ -8,12 +8,12 @@ async function func786(this: any) {
         Gvar.var_243 = 0;
         Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
 
-        await Func.setMessage1("【亀の倉庫  使い方】", "", 7, true, false, false);
-        await Func.setMessage1("この部屋にはアイテムを保管することが", "できます。", 7, true, true, false);
-        await Func.setMessage1("部屋から出たい時は、テーブルの上に", "乗ると出ることができます。", 7, true, true, false);
-        await Func.setMessage1("いらないアイテムは、左にあるジッパー", "から捨てることができます。", 7, true, true, false);
-        await Func.setMessage1("ジッパーの上で「足元」コマンドを選ぶと", "持ち物全てを捨てられます。", 7, true, true, false);
-        await Func.setMessage1("たぶん亀は平気でしょう。", "けっこう栄養にするかも。", 7, true, true, false);
+        await Func.setMessage("【亀の倉庫  使い方】", "", 7, true, false, false);
+        await Func.setMessage("この部屋にはアイテムを保管することが", "できます。", 7, true, true, false);
+        await Func.setMessage("部屋から出たい時は、テーブルの上に", "乗ると出ることができます。", 7, true, true, false);
+        await Func.setMessage("いらないアイテムは、左にあるジッパー", "から捨てることができます。", 7, true, true, false);
+        await Func.setMessage("ジッパーの上で「足元」コマンドを選ぶと", "持ち物全てを捨てられます。", 7, true, true, false);
+        await Func.setMessage("たぶん亀は平気でしょう。", "けっこう栄養にするかも。", 7, true, true, false);
 
         // 最後にキー入力待ち + 後処理
         await Func.func051();  // キー入力待ち処理

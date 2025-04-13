@@ -18,7 +18,7 @@ async function item633(this: any) {
         if (Gvar.var_350 > Gvar.var_567) {
             Gvar.var_350 = Gvar.var_567;
         }
-        await Func.setMessage1("最大満腹度が上がった！", "", 7, false, false, false);
+        await Func.setMessage("最大満腹度が上がった！", "", 7, false, false, false);
         Gvar.var_1579 = 1;
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
         for (let cnt2 = 0; cnt2 < 30; ++cnt2) {

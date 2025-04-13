@@ -5,10 +5,10 @@ import * as Func from '../func/index'
 async function func792(this: any) {
         Adap.dbgprt(792);
 
-        await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「うっ！」",
+        await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「うっ！」",
                                "", 7, true, true, true);
 
-        await Func.setMessage1("しかし G･ｴｸｽﾍﾟﾘｴﾝｽの能力で",
+        await Func.setMessage("しかし G･ｴｸｽﾍﾟﾘｴﾝｽの能力で",
                                "歯を一本 クラゲに変えて吸い取らせた", 7, true, true, false);
 
         await Func.func051(); // キー入力待ち処理

@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item396(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         Adap.DSPLAY(154);
-        await Func.setMessage1("自分だけ速く動けるようになった！",
+        await Func.setMessage("自分だけ速く動けるようになった！",
                                "", 7, false, false, false);
         if (Gvar.var_133 == 0) {
             Gvar.var_157 = 1; // Gvar.var_157 倍速移動フラグON

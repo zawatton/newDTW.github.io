@@ -247,7 +247,7 @@ async function func411(this: any) {
             Gvar.belongings_item_list = Gvar.var_1846;
             Gvar.var_321 = Gvar.var_854;
             await Func.func398(); // 道具(メニュー画面/道具)へ直接表示されるアイテム表示
-            await Func.setMessage1("" + Gvar.disp_item_name + " は落ちた", "", 7, false, false, false);
+            await Func.setMessage("" + Gvar.disp_item_name + " は落ちた", "", 7, false, false, false);
         }
         if (Gvar.var_446 == 0) { // 投げて落ちた先が水面等おけない床であれば
             Gvar.var_78[Gvar.var_854].Var0 = Gvar.var_1846;
@@ -286,7 +286,7 @@ async function func411(this: any) {
             for (let cnt2 = 0; cnt2 < 30; ++cnt2) {
                 Gvar.var_78[Gvar.var_854]["Var" + cnt2] = 0;
             }
-            await Func.setMessage1("" + Gvar.disp_item_name + " は",
+            await Func.setMessage("" + Gvar.disp_item_name + " は",
                                     "地面に落ちて使い物にならなくなった", 7, false, false, false);
         }
         if (Gvar.var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態

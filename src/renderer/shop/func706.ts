@@ -49,7 +49,7 @@ async function func706(this: any) {
             if (Gvar.var_83[Gvar.var_286].Var2 > Gvar.var_67) {
                 Gvar.var_83[Gvar.var_286].Var5 = 8;
             }
-            await Func.setMessage1("レストラン・トラサルディーへようこそ！",
+            await Func.setMessage("レストラン・トラサルディーへようこそ！",
                                    "", 7, false, false, true);
             await Music.func136();
             await Func.AutoDraw(10);

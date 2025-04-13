@@ -9,11 +9,11 @@ async function func425(this: any) {
         await Func.func492(); // アイテムリスト呼び出し
         Gvar.var_1253 = Gvar.belongings_item_list;
         Gvar.var_1254 = 1;
-        await Func.setMessage1("こいつに" + Gvar.item_name + "を",
+        await Func.setMessage("こいつに" + Gvar.item_name + "を",
                                 "喰わせてやりたいんですが", 7, true, false, false);
         await Func.AutoDraw(5);
         await Func.func340(); // キー入力による選択処理
-        await Func.setMessage1("かまいませんねッ！",
+        await Func.setMessage("かまいませんねッ！",
                                 "", 7, true, false, false);
         await Func.AutoDraw(5);
         Gvar.var_1254 = 0;

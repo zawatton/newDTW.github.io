@@ -7,7 +7,7 @@ import * as Music from '../music/index'
 async function func161(this: any) {
         Adap.dbgprt(161);
         Gvar.var_243 = 0;
-        await Func.setMessage1("亀の中に入った",
+        await Func.setMessage("亀の中に入った",
                               "", 7, false, false, false);
         await Func.AutoDraw(5);
         await Music.func114(); // 亀の中の選曲(BGM "20th Century Boy")

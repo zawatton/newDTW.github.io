@@ -10,7 +10,7 @@ async function item105(this: any) {
         Adap.boxf(Gvar.left = 0, Gvar.top1 = 0, Gvar.right = 680, Gvar.bottom = 680);
         Adap.gsel(0);
         Gvar.var_311 = 255;
-        await Func.setMessage1("限界なく明るくなるッ！！", "", 7, false, false, false);
+        await Func.setMessage("限界なく明るくなるッ！！", "", 7, false, false, false);
         Adap.DSPLAY(161);
         Gvar.var_312 = 1;
         for (let cnt2 = 0; cnt2 < 51; ++cnt2) {

@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 // No = 402 エンペラーの発動処理
 async function item402(this: any) {
-        await Func.setMessage1("「エンペラー」！！",
+        await Func.setMessage("「エンペラー」！！",
                                "", 7, false, false, false);
         await Func.AutoDraw(10);
         Gvar.belongings_item_list = Gvar.activated_disc_id;

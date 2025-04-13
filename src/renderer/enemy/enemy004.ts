@@ -34,20 +34,20 @@ async function enemy004(this: any) {
             await Func.func619();
 
             if (Gvar.var_120 == 0) {
-                await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは眠ってしまった！", "", 8, false, false, false);
+                await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは眠ってしまった！", "", 8, false, false, false);
                 Adap.DSPLAY(132);
                 Gvar.var_219 = 1;
             }
             if (Gvar.var_120 == 1) {
-                await Func.setMessage1("10時間熟睡した気分になっていて", "眠くならなかった！", 7, false, false, false);
+                await Func.setMessage("10時間熟睡した気分になっていて", "眠くならなかった！", 7, false, false, false);
                 Gvar.var_219 = 0;
             }
             if (Gvar.equip_disc[351] == 1) {
-                await Func.setMessage1("装備DISCの効果によって", "眠くならなかった！", 7, false, false, false);
+                await Func.setMessage("装備DISCの効果によって", "眠くならなかった！", 7, false, false, false);
                 Gvar.var_219 = 0;
             }
             if (Gvar.shageki_disc_id == 400 || Gvar.shageki_disc_id == 407) {
-                await Func.setMessage1("装備DISCの効果によって", "眠らずにすんだ！", 7, false, false, false);
+                await Func.setMessage("装備DISCの効果によって", "眠らずにすんだ！", 7, false, false, false);
                 Gvar.var_219 = 0;
             }
             await Func.AutoDraw(10);

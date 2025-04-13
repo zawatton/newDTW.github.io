@@ -9,7 +9,7 @@ async function func450(this: any) {
             return;
         }
         Gvar.var_1207 = 0;
-        await Func.setMessage1("「Ｈａｉｌ  ２  Ｕ ！」",
+        await Func.setMessage("「Ｈａｉｌ  ２  Ｕ ！」",
                                 "    （君に幸あれ！）", 7, false, false, false);
         await Func.AutoDraw(6);
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON

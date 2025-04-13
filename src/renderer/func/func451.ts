@@ -5,9 +5,9 @@ import * as Func from '../func/index'
 async function func451(this: any) {
         Adap.dbgprt(451);
         Gvar.var_1207 = 0;
-        await Func.setMessage1("「きさま」",
+        await Func.setMessage("「きさま」",
                                 "", 7, true, false, true);
-        await Func.setMessage1("「そういう冗談は・・・！」",
+        await Func.setMessage("「そういう冗談は・・・！」",
                                 "", 7, true, false, true);
         Gvar.var_199 = 8;
         for (let cnt1 = 0; cnt1 < 10; ++cnt1) {

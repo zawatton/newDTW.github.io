@@ -44,34 +44,34 @@ async function func778(this: any) {
             await Func.func783(); // ディアボロの試練解放後、岸辺露伴に話しかけた時のメッセージ処理
             return;
         }
-        await Func.setMessage1("さて、どうしたものかな…",
+        await Func.setMessage("さて、どうしたものかな…",
                                 "", 7, true, false, true);
 
-        await Func.setMessage1("ん？何か用かい？",
+        await Func.setMessage("ん？何か用かい？",
                                 "用も無いのに話しかけないで欲しいな…", 7, true, false, true);
 
-        await Func.setMessage1("いやまてよ、ひょっとして君も",
+        await Func.setMessage("いやまてよ、ひょっとして君も",
                                 "奇妙なﾀﾞﾝｼﾞｮﾝを探索してるのかい？", 7, true, false, true);
 
-        await Func.setMessage1("それはちょうど良かった！",
+        await Func.setMessage("それはちょうど良かった！",
                                 "ひとつ頼まれてくれないかな。", 7, true, false, true);
 
-        await Func.setMessage1("このﾀﾞﾝｼﾞｮﾝのどこかに、",
+        await Func.setMessage("このﾀﾞﾝｼﾞｮﾝのどこかに、",
                                 "ﾎﾞﾍﾐｱﾝﾗﾌﾟｿﾃﾞｨｰっていう", 7, true, false, true);
 
-        await Func.setMessage1("マンガを現実にするスタンドが",
+        await Func.setMessage("マンガを現実にするスタンドが",
                                 "あるそうなんだ。", 7, true, false, true);
 
-        await Func.setMessage1("僕はそのスタンドをずっと",
+        await Func.setMessage("僕はそのスタンドをずっと",
                                 "探していてね。", 7, true, false, true);
 
-        await Func.setMessage1("さっきのヤギが怪しいんだが、",
+        await Func.setMessage("さっきのヤギが怪しいんだが、",
                                 "いつも良いところで逃げられてしまう。", 7, true, false, true);
 
-        await Func.setMessage1("どうやらそこの壁の穴が、",
+        await Func.setMessage("どうやらそこの壁の穴が、",
                                 "やつらの住処のようだが…", 7, true, false, true);
 
-        await Func.setMessage1("どうだろう、代わりに取ってきて",
+        await Func.setMessage("どうだろう、代わりに取ってきて",
                                 "もらえないかな？", 7, true, false, true);
 
         await Func.func051(); // キー入力待ち処理

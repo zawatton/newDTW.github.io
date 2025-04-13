@@ -15,11 +15,11 @@ async function item401(this: any) {
         }
 
         if (Gvar.var_120 == 1 || Gvar.var_174 == 1) {
-            await Func.setMessage1("傷口にプランクトンを詰めた。",
+            await Func.setMessage("傷口にプランクトンを詰めた。",
                                    "いつもより多く回復した。", 7, false, false, false);
         }
         if (Gvar.var_2341 == 1) {
-            await Func.setMessage1("傷口にプランクトンを詰めた。",
+            await Func.setMessage("傷口にプランクトンを詰めた。",
                                    "体力が完全に回復した。", 7, false, false, false);
         }
         Adap.DSPLAY(143);

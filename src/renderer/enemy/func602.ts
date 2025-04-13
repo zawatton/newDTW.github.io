@@ -92,19 +92,19 @@ async function func602(this: any) {
         }
         if (Gvar.var_2857 == 0) {
             if (Gvar.var_2856 == 134) {
-                await Func.setMessage1("ｼﾞｮﾘｰﾝは仲間を心配している。", "", 8, false, false, false);
+                await Func.setMessage("ｼﾞｮﾘｰﾝは仲間を心配している。", "", 8, false, false, false);
             }
             if (Gvar.var_2856 == 35) {
-                await Func.setMessage1("仗助は仲間を心配している。", "", 8, false, false, false);
+                await Func.setMessage("仗助は仲間を心配している。", "", 8, false, false, false);
             }
             await Func.AutoDraw(10);
             return;
         }
         if (Gvar.var_2856 == 134) {
-            await Func.setMessage1("「ストーンフリー」！！", "", 8, false, false, false);
+            await Func.setMessage("「ストーンフリー」！！", "", 8, false, false, false);
         }
         if (Gvar.var_2856 == 35) {
-            await Func.setMessage1("「クレイジー・ダイヤモンド」！！", "", 8, false, false, false);
+            await Func.setMessage("「クレイジー・ダイヤモンド」！！", "", 8, false, false, false);
         }
         if (Gvar.var_2856 == 134) {
             Gvar.var_1558 = (Gvar.var_83[Gvar.var_2749].Var1 - Gvar.var_66 + 4) * 40;
@@ -169,7 +169,7 @@ async function func602(this: any) {
         if (Gvar.var_83[Gvar.var_2749].Var3 > Gvar.var_2792) {
             Gvar.var_83[Gvar.var_2749].Var3 = Gvar.var_2792;
         }
-        await Func.setMessage1("" + Gvar.enemy_name + "の", "傷がふさがった。", 7, false, false, false);
+        await Func.setMessage("" + Gvar.enemy_name + "の", "傷がふさがった。", 7, false, false, false);
         await Func.AutoDraw(10);
         return;
 }

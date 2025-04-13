@@ -7,7 +7,7 @@ async function func442(this: any) {
         Adap.dbgprt(442);
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
         if (Gvar.var_225 == Gvar.var_1967 && Gvar.var_1965 == 0) {
-            await Func.setMessage1("それは今使っているDISCです。", "", 7, true, false, false);
+            await Func.setMessage("それは今使っているDISCです。", "", 7, true, false, false);
             await Func.AutoDraw(4);
             await Func.func051(); // キー入力待ち処理
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
@@ -24,40 +24,40 @@ async function func442(this: any) {
         if (Gvar.var_862[565][0] == 0 && Gvar.var_375 == 0) {
             Gvar.var_862[565][0] = 1;
             await Func.func492(); // アイテムリスト呼び出し
-            await Func.setMessage1("なんと" + Gvar.var_1938 + "は", "ﾌﾟｯﾁ神父のDISCだった！", 7, true, false, false);
+            await Func.setMessage("なんと" + Gvar.var_1938 + "は", "ﾌﾟｯﾁ神父のDISCだった！", 7, true, false, false);
         }
         Gvar.var_225 = Gvar.var_1966;
         if (Gvar.var_233[Gvar.var_225].Var12 != 1) {
             Gvar.var_1073 = Adap.rnd(6);
             if (Gvar.var_1073 == 0) {
-                await Func.setMessage1("「呪われるべきは このわたしだッ！」",
+                await Func.setMessage("「呪われるべきは このわたしだッ！」",
                                         "", 7, true, false, true);
             }
             if (Gvar.var_1073 == 1) {
-                await Func.setMessage1("    ドミネ・クオ・ヴァディス",
+                await Func.setMessage("    ドミネ・クオ・ヴァディス",
                                         "「どこへ行かれるのですか？」", 7, true, false, true);
             }
             if (Gvar.var_1073 == 2) {
-                await Func.setMessage1("「君の質問に付き合わなきゃあ",
+                await Func.setMessage("「君の質問に付き合わなきゃあ",
                                         "  いけないのか？」", 7, true, false, true);
             }
             if (Gvar.var_1073 == 3) {
-                await Func.setMessage1("「ヒマつぶしなら他でやれ」",
+                await Func.setMessage("「ヒマつぶしなら他でやれ」",
                                         "", 7, true, false, true);
             }
             if (Gvar.var_1073 == 4) {
-                await Func.setMessage1("「落ちつくんだ…",
+                await Func.setMessage("「落ちつくんだ…",
                                         "  素数を数えて落ちつくんだ…」", 7, true, false, true);
             }
             if (Gvar.var_1073 == 5) {
-                await Func.setMessage1("「聖なるものを犬にやるな」",
+                await Func.setMessage("「聖なるものを犬にやるな」",
                                         "", 7, true, false, true);
             }
-            await Func.setMessage1("何も起こらなかった…",
+            await Func.setMessage("何も起こらなかった…",
                                     "", 7, false, false, false);
         }
         if (Gvar.var_233[Gvar.var_225].Var12 == 1) {
-            await Func.setMessage1("「神の御命においてしりぞけるッ！」",
+            await Func.setMessage("「神の御命においてしりぞけるッ！」",
                                     "", 7, true, false, true);
             Adap.DSPLAY(192);
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
@@ -71,7 +71,7 @@ async function func442(this: any) {
             }
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1355 = 0;
-            await Func.setMessage1("" + Gvar.var_1969 + "に",
+            await Func.setMessage("" + Gvar.var_1969 + "に",
                                     "かけられていた呪いが解けた。", 7, false, false, false);
             Gvar.var_233[Gvar.var_225].Var12 = 0;
             await Func.func426();

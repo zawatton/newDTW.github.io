@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item100(this: any) {
     await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
     Gvar.var_155 = 1;
-    await Func.setMessage1("射撃攻撃を防げるようになった！", "", 7, false, false, false);
+    await Func.setMessage("射撃攻撃を防げるようになった！", "", 7, false, false, false);
     Adap.DSPLAY(182);
     Gvar.var_1299 = 8;
     Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON

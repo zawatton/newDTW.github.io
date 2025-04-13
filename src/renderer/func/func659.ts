@@ -32,7 +32,7 @@ async function func659(this: any) {
         }
         // No = 132 レクイエムジョルノの状態異常無効化能力
         if (Gvar.var_83[Gvar.var_314].Var0 == 132) {  // No = 132 レクイエムジョルノ
-            await Func.setMessage1("「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ！！」", "", 8, true, false, true);
+            await Func.setMessage("「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ！！」", "", 8, true, false, true);
             if (Gvar.var_2712 == 1) {
                 Gvar.var_421 = 1;
                 for (let cnt3 = 0; cnt3 < Gvar.var_97; ++cnt3) {
@@ -95,20 +95,20 @@ async function func659(this: any) {
             Gvar.var_83[Gvar.var_314].Var25 = 0;
             Gvar.var_83[Gvar.var_314].Var4 = 3;
             if (Gvar.var_3055 == 1 && Gvar.var_2712 == 0) {
-                await Func.setMessage1("ｼﾞｮﾙﾉの状態異常が治った！", "", 8, false, false, false);
+                await Func.setMessage("ｼﾞｮﾙﾉの状態異常が治った！", "", 8, false, false, false);
             }
             if (Gvar.var_3055 == 0 && Gvar.var_2712 == 1) {
-                await Func.setMessage1("サーフィスが人形に戻された！", "", 8, false, false, false);
+                await Func.setMessage("サーフィスが人形に戻された！", "", 8, false, false, false);
             }
             if (Gvar.var_3055 == 1 && Gvar.var_2712 == 1) {
-                await Func.setMessage1("ｼﾞｮﾙﾉの状態異常が治った！", "サーフィスが人形に戻された！", 8, false, false, false);
+                await Func.setMessage("ｼﾞｮﾙﾉの状態異常が治った！", "サーフィスが人形に戻された！", 8, false, false, false);
             }
             await Func.AutoDraw(10);
             return;
         }
         // No = 143 ウンガロの状態異常無効化能力
         if (Gvar.var_83[Gvar.var_314].Var0 == 143) { // No = 143 ウンガロ
-            await Func.setMessage1("「ボヘミアン・ラプソディ」！！", "", 8, true, false, true);
+            await Func.setMessage("「ボヘミアン・ラプソディ」！！", "", 8, true, false, true);
             Adap.gsel(19);
             Adap.color(255, 255, 255);
             Adap.boxf(0, 0, 680, 680);
@@ -133,13 +133,13 @@ async function func659(this: any) {
             Gvar.var_83[Gvar.var_314].Var19 = 0;
             Gvar.var_83[Gvar.var_314].Var25 = 0;
             Gvar.var_83[Gvar.var_314].Var4 = 3;
-            await Func.setMessage1("精神と肉体は分離され…", "スタンド能力は無効となる！", 8, false, false, true);
+            await Func.setMessage("精神と肉体は分離され…", "スタンド能力は無効となる！", 8, false, false, true);
             await Func.AutoDraw(10);
             return;
         }
         // Ver0.1403にて追加。No = 171 離婚した承太郎の状態異常無効化能力
         if (Gvar.var_83[Gvar.var_314].Var0 == 171) { // No = 171 離婚した承太郎
-            await Func.setMessage1("「スタープラチナ・ザ・ワールド」！！", "", 8, true, false, true);
+            await Func.setMessage("「スタープラチナ・ザ・ワールド」！！", "", 8, true, false, true);
             Adap.gsel(19);
             Adap.color(255, 255, 255);
             Adap.boxf(0, 0, 680, 680);
@@ -164,7 +164,7 @@ async function func659(this: any) {
             Gvar.var_83[Gvar.var_314].Var19 = 0;
             Gvar.var_83[Gvar.var_314].Var25 = 0;
             Gvar.var_83[Gvar.var_314].Var4 = 3;
-            await Func.setMessage1("承太郎は時止めにより", "ギリギリで見切った！", 8, false, false, true);
+            await Func.setMessage("承太郎は時止めにより", "ギリギリで見切った！", 8, false, false, true);
             await Func.AutoDraw(10);
             return;
         }

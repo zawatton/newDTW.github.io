@@ -174,7 +174,7 @@ async function func529(this: any) {
             }
         }
         if (Gvar.var_2383 == 1) {
-            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは5のダメージ！", "", 8, false, false, false);
+            await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは5のダメージ！", "", 8, false, false, false);
             Gvar.var_211 = Gvar.var_211 - 5;
             Gvar.var_208 = Gvar.var_208 + 5;
             if (Gvar.var_211 <= 0) {

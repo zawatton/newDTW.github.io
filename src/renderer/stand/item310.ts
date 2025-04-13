@@ -18,7 +18,7 @@ async function item310(this: any) {
                 await Func.func556();
                 Gvar.var_1845 = 0;
             }
-            await Func.setMessage1("敵が集まってしまった！",
+            await Func.setMessage("敵が集まってしまった！",
                                    "", 7, false, true, false);
         }
         await Func.AutoDraw(15);

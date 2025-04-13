@@ -16,15 +16,15 @@ async function func919(this: any) {
         if (Gvar.current_floor == Gvar.var_3573) {
             Gvar.var_3572 = 0;
         }
-        await Func.setMessage1("遠くから声が聞こえる。", "", 7, true, false, false);
+        await Func.setMessage("遠くから声が聞こえる。", "", 7, true, false, false);
         if (Gvar.var_3572 >= 4) {
-            await Func.setMessage1("しかしよく聞こえなかった…", "", 7, false, false, false);
+            await Func.setMessage("しかしよく聞こえなかった…", "", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_1046 = 0;
             Gvar.var_1058 = Adap.dim(30, 30);
             return;
         }
-        await Func.setMessage1("「ディアボロはここよッ！", "  ここにいるわよォ～～ッ！」", 7, true, false, true);
+        await Func.setMessage("「ディアボロはここよッ！", "  ここにいるわよォ～～ッ！」", 7, true, false, true);
         Gvar.var_3584 = 0;
         Gvar.var_2194 = 1;
         for (let cnt1 = 0; cnt1 < Gvar.var_97; ++cnt1) {
@@ -112,11 +112,11 @@ async function func919(this: any) {
         }
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         if (Gvar.var_3584 == 1) {
-            await Func.setMessage1("周囲の敵は声に誘われて", "去っていった", 7, false, false, false);
+            await Func.setMessage("周囲の敵は声に誘われて", "去っていった", 7, false, false, false);
             await Func.AutoDraw(10);
         }
         if (Gvar.var_3584 == 0) {
-            await Func.setMessage1("しかし何も起こらなかった", "", 7, false, false, false);
+            await Func.setMessage("しかし何も起こらなかった", "", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_1046 = 0;
             Gvar.var_1058 = Adap.dim(30, 30);

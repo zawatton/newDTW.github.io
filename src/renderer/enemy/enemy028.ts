@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function enemy028(this: any) {
         Gvar.var_2830 = Adap.rnd(3);
         if (Gvar.var_2830 == 0) {
-            await Func.setMessage1("HAIL 2 U !!",
+            await Func.setMessage("HAIL 2 U !!",
                                    "", 8, false, false, true);
             for (let cnt3 = 0; cnt3 < 16; ++cnt3) {
                 Gvar.var_300 = 0;
@@ -20,7 +20,7 @@ async function enemy028(this: any) {
             Gvar.var_2524 = 0;
             Gvar.var_1845 = 0;
             if (Gvar.var_2110 == 0) {
-                await Func.setMessage1("お前の願いを言え！",
+                await Func.setMessage("お前の願いを言え！",
                                        "", 8, false, true, true);
                 Gvar.var_2197 = 1;
                 return;
@@ -52,7 +52,7 @@ async function enemy028(this: any) {
             Gvar.var_83[Gvar.var_2273].Var21 = 0;
             Gvar.var_83[Gvar.var_2273].Var5 = 2;
             await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-            await Func.setMessage1("地面から 土人形 が現れた！",
+            await Func.setMessage("地面から 土人形 が現れた！",
                                    "", 8, false, true, false);
             Gvar.var_2197 = 1;
         }

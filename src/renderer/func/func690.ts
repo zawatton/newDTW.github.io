@@ -56,19 +56,19 @@ async function func690(this: any) {
             Gvar.var_1845 = 0;
             Gvar.var_673 = Gvar.var_3096;
             if (Gvar.var_2957 == 1) {
-                await Func.setMessage1("", "ｴｺｰｽﾞの卵はｴｺｰｽﾞACT1に成長した！", 8, true, false, false);
+                await Func.setMessage("", "ｴｺｰｽﾞの卵はｴｺｰｽﾞACT1に成長した！", 8, true, false, false);
             }
             if (Gvar.var_2957 == 2) {
-                await Func.setMessage1("", "ｴｺｰｽﾞはACT2に成長した！", 8, true, false, false);
+                await Func.setMessage("", "ｴｺｰｽﾞはACT2に成長した！", 8, true, false, false);
             }
             if (Gvar.var_2957 == 3) {
-                await Func.setMessage1("", "ｴｺｰｽﾞはACT3に成長した！", 8, true, false, false);
+                await Func.setMessage("", "ｴｺｰｽﾞはACT3に成長した！", 8, true, false, false);
             }
             if (Gvar.var_2957 == 4) {
-                await Func.setMessage1("", "ｴｺｰｽﾞACT1はさなぎになった！", 8, true, false, false);
+                await Func.setMessage("", "ｴｺｰｽﾞACT1はさなぎになった！", 8, true, false, false);
             }
             if (Gvar.var_2957 == 5) {
-                await Func.setMessage1("", "ｴｺｰｽﾞACT2はさなぎになった！", 8, true, false, false);
+                await Func.setMessage("", "ｴｺｰｽﾞACT2はさなぎになった！", 8, true, false, false);
             }
             await Func.AutoDraw(10);
         }

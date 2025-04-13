@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 async function func742(this: any) {
         Adap.dbgprt(742);
         Gvar.var_180 = 1;
-        await Func.setMessage1("ｲｷﾞｰは足元に砂のDIOを潜ませた。",
+        await Func.setMessage("ｲｷﾞｰは足元に砂のDIOを潜ませた。",
                                "", 7, false, false, false);
         Gvar.var_768 = 1;
         Gvar.var_1550 = Gvar.var_3128;

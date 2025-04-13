@@ -13,7 +13,7 @@ async function func691(this: any) {
         Gvar.var_2531 = 0;
         Gvar.var_1845 = 0;
         Gvar.var_673 = Gvar.var_3096;
-        await Func.setMessage1("中からﾌﾞﾁｬﾗﾃｨが現れた！", "", 8, false, false, false);
+        await Func.setMessage("中からﾌﾞﾁｬﾗﾃｨが現れた！", "", 8, false, false, false);
         Gvar.var_2538 = 0;
         await Func.AutoDraw(10);
         return;

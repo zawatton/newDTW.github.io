@@ -9,7 +9,7 @@ async function enemy127(this: any) {
             Gvar.var_742 = 1;
             Gvar.var_83[Gvar.var_673].Var7 = 1;
             Adap.DSPLAY(147);
-            await Func.setMessage1("C-MOONの裏返り攻撃！", "", 8, false, false, false);
+            await Func.setMessage("C-MOONの裏返り攻撃！", "", 8, false, false, false);
             await Func.AutoDraw(9);
             await Func.func619();
             if (Gvar.nouryoku_disc_id != 120) {
@@ -18,10 +18,10 @@ async function enemy127(this: any) {
                 if (Gvar.var_211 == 0) {
                     Gvar.var_211 = 1;
                 }
-                await Func.setMessage1("体力が逆転してしまった！！", "", 7, false, false, false);
+                await Func.setMessage("体力が逆転してしまった！！", "", 7, false, false, false);
             }
             if (Gvar.nouryoku_disc_id == 120) {
-                await Func.setMessage1("しかしメビウスの輪を作って", "裏返り攻撃を防いだ！", 7, false, false, false);
+                await Func.setMessage("しかしメビウスの輪を作って", "裏返り攻撃を防いだ！", 7, false, false, false);
             }
             Gvar.var_2197 = 1;
         }

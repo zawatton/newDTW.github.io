@@ -173,7 +173,7 @@ async function func015(this: any) {
                 Gvar.var_67 = Gvar.var_148;
                 Gvar.var_236 = Gvar.var_66;
                 Gvar.var_237 = Gvar.var_67;
-                await Func.setMessage1("鉄塔からは出られない！", "", 7, false, false, false);
+                await Func.setMessage("鉄塔からは出られない！", "", 7, false, false, false);
                 Adap.DSPLAY(188);
                 await Func.AutoDraw(9);
                 await Func.func009(); // ディアボロ側ターン処理(ループ処理)
@@ -250,7 +250,7 @@ async function func015(this: any) {
                             Gvar.var_312 = 1;
                             await Func.func337(); // メッセージ表示処理(自動)
                             Gvar.var_312 = 0;
-                            await Func.setMessage1("吉良の親父がいるため",
+                            await Func.setMessage("吉良の親父がいるため",
                                                     "この部屋から出ることができない！", 7, false, false, false);
                             await Func.AutoDraw(9);
                         }

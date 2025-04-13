@@ -133,7 +133,7 @@ async function func588(this: any) {
         }
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         await Func.AutoDraw(10);
-        await Func.setMessage1("億泰に引き寄せられた！", "「【瞬間移動】ってやつさあ～～っ」", 8, false, false, false);
+        await Func.setMessage("億泰に引き寄せられた！", "「【瞬間移動】ってやつさあ～～っ」", 8, false, false, false);
         Gvar.var_389 = 0;
         Gvar.var_240 = 0;
         Gvar.var_2392 = 1;

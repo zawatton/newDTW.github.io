@@ -9,7 +9,7 @@ async function func665(this: any) {
         }
         Gvar.var_83[Gvar.var_314].Var13 = 0;
         Adap.DSPLAY(175);
-        await Func.setMessage1("ウェザーに届く寸前で燃え尽きた。", "", 8, false, false, false);
+        await Func.setMessage("ウェザーに届く寸前で燃え尽きた。", "", 8, false, false, false);
         Gvar.var_1584 = (Gvar.var_83[Gvar.var_314].Var1 - Gvar.var_66 + 4) * 40;
         Gvar.var_1585 = (Gvar.var_83[Gvar.var_314].Var2 - Gvar.var_67 + 4) * 40 - 10;
         Gvar.var_1583 = 1;

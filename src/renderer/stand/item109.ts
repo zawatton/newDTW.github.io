@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item109(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (Gvar.var_172 == 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-            await Func.setMessage1("発動能力がパワーアップしている！",
+            await Func.setMessage("発動能力がパワーアップしている！",
                                    "", 7, true, false, false);
         }
         Gvar.var_199 = 2;
@@ -22,7 +22,7 @@ async function item109(this: any) {
         Gvar.var_1545 = 4;
         await Func.AutoDraw(10);
 
-        await Func.setMessage1("クロスファイヤーハリケーンスペシャル！",
+        await Func.setMessage("クロスファイヤーハリケーンスペシャル！",
                                "", 7, false, false, false);
         Adap.gsel(19);
         Adap.color(255, 0, 0);

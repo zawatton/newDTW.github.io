@@ -6,7 +6,7 @@ async function func584(this: any) {
         Adap.dbgprt(584);
         Gvar.var_2803 = 0;
         if (Gvar.var_155 == 1) {
-            await Func.setMessage1("弾丸を止めた！", "", 7, false, false, false);
+            await Func.setMessage("弾丸を止めた！", "", 7, false, false, false);
             await Func.AutoDraw(6);
             Gvar.var_240 = 0;
             Gvar.var_2803 = 1;
@@ -17,7 +17,7 @@ async function func584(this: any) {
             Gvar.var_2805 = Adap.rnd(2);
             if (Gvar.var_2805 == 0) {
                 Adap.DSPLAY(175);
-                await Func.setMessage1("弾丸は燃え尽きて届かなかった", "", 7, false, false, false);
+                await Func.setMessage("弾丸は燃え尽きて届かなかった", "", 7, false, false, false);
                 Gvar.var_1584 = 160;
                 Gvar.var_1585 = 150;
                 Gvar.var_1583 = 1;
@@ -38,7 +38,7 @@ async function func584(this: any) {
             Gvar.var_2805 = Adap.rnd(4);
             if (Gvar.var_2805 == 0) {
                 Adap.DSPLAY(175);
-                await Func.setMessage1("弾丸は燃え尽きて届かなかった", "", 7, false, false, false);
+                await Func.setMessage("弾丸は燃え尽きて届かなかった", "", 7, false, false, false);
                 Gvar.var_1584 = 160;
                 Gvar.var_1585 = 150;
                 Gvar.var_1583 = 1;

@@ -10,7 +10,7 @@ async function func791(this: any) {
             return;
         }
 
-        await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「★※○■¶◆ЖΘ！！！」",
+        await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「★※○■¶◆ЖΘ！！！」",
                                "", 7, true, true, true);
 
         if (Gvar.var_211 <= 1) {
@@ -24,7 +24,7 @@ async function func791(this: any) {
         Gvar.var_389 = 2;
 
         Adap.DSPLAY(103); // 殴った時の効果音
-        await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは酷いダメージを受けた！",
+        await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは酷いダメージを受けた！",
                                "", 7, true, true, false);
 
         await Func.func051(); // キー入力待ち処理

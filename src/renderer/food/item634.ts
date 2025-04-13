@@ -15,10 +15,10 @@ async function item634(this: any) {
             }
         }
         if (Gvar.var_133 == 0 && Gvar.var_126 == 0) {
-            await Func.setMessage1("お腹がちょっと膨れた", "", 7, false, false, false);
+            await Func.setMessage("お腹がちょっと膨れた", "", 7, false, false, false);
             // Gvar.item_message1 = "お腹がちょっと膨れた";
         }
-        await Func.setMessage1("思うように動けるようになった。", "", 7, false, false, false);
+        await Func.setMessage("思うように動けるようになった。", "", 7, false, false, false);
         Gvar.var_133 = 0;
         Gvar.var_126 = 0;
         Gvar.var_350 = Gvar.var_350 + 10;
@@ -41,9 +41,9 @@ async function item634(this: any) {
         if (Gvar.var_350 > Gvar.var_567) {
             Gvar.var_350 = Gvar.var_567;
         }
-        await Func.setMessage1("「デザートはプリン～～～？", "ケッ！  おれは不良だよ…！」", 7, true, false, false);
-        await Func.setMessage1("「プリンなんて女子供の食う物なんて", "チャンチャラおかしくて…」", 7, true, false, false);
-        await Func.setMessage1("「ンまぁ～～い！」", "", 7, true, false, false);
+        await Func.setMessage("「デザートはプリン～～～？", "ケッ！  おれは不良だよ…！」", 7, true, false, false);
+        await Func.setMessage("「プリンなんて女子供の食う物なんて", "チャンチャラおかしくて…」", 7, true, false, false);
+        await Func.setMessage("「ンまぁ～～い！」", "", 7, true, false, false);
         Gvar.var_1214 = 0;
         for (let cnt3 = 0; cnt3 < 5; ++cnt3) {
             Gvar.var_1256 = 1;
@@ -54,7 +54,7 @@ async function item634(this: any) {
             await Func.func337(); // メッセージ表示処理(自動)
         }
         Gvar.var_1256 = 0;
-        await Func.setMessage1("このフロアでお腹が減らなくなった！", "", 7, false, false, false);
+        await Func.setMessage("このフロアでお腹が減らなくなった！", "", 7, false, false, false);
         // Gvar.item_message1 = "このフロアでお腹が減らなくなった！";
         Gvar.var_193 = 1;
         return;

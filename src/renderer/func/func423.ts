@@ -13,7 +13,7 @@ async function func423(this: any) {
             await Func.AutoDraw(10);
             Gvar.belongings_item_list = Gvar.var_486[Gvar.var_682][Gvar.var_225][0];
             await Func.func492(); // アイテムリスト呼び出し
-            await Func.setMessage1("" + Gvar.item_name + "は",
+            await Func.setMessage("" + Gvar.item_name + "は",
                                     "ｽﾀﾝﾄﾞﾊﾟﾜｰが尽きて消滅した", 7, false, false, false);
             if (Gvar.var_486[Gvar.var_682][Gvar.var_225][11] == 1) {
                 Gvar.var_106 = 1;

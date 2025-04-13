@@ -13,14 +13,14 @@ async function item631(this: any) {
         }
     }
     if (Gvar.var_565 == Gvar.var_566) {
-        await Func.setMessage1("お腹が膨れた", "", 7, false, false, false);
+        await Func.setMessage("お腹が膨れた", "", 7, false, false, false);
     }
     Gvar.var_565 = Gvar.var_566;
     Gvar.var_350 = Gvar.var_350 + 10;
     if (Gvar.var_350 > Gvar.var_567) {
         Gvar.var_350 = Gvar.var_567;
     }
-    await Func.setMessage1("元通り強くなった気がする。", "", 7, false, false, false);
+    await Func.setMessage("元通り強くなった気がする。", "", 7, false, false, false);
     return;
 }
 

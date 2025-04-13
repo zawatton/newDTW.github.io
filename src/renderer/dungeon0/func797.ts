@@ -16,7 +16,7 @@ async function func797(this: any) {
         Gvar.var_3178 = 0;
         Gvar.var_3179 = 1;
         Gvar.var_3180 = 95;
-        await Func.setMessage1("" + Gvar.var_1032 + "G 入っています。", "何G 口座から出しますか？", 7, false, false, false);
+        await Func.setMessage("" + Gvar.var_1032 + "G 入っています。", "何G 口座から出しますか？", 7, false, false, false);
         await Func.AutoDraw(2);
         await Func.func798();
         return;

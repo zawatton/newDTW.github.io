@@ -13,7 +13,7 @@ async function func899(this: any) {
     
             Adap.gsel(0, 1);
             Adap.onkey(0);
-            await Func.setMessage1("接続が切断された。", "", 7, false, false, false);
+            await Func.setMessage("接続が切断された。", "", 7, false, false, false);
             await Func.AutoDraw(5);
             return;
         }

@@ -40,7 +40,7 @@ async function enemy999(this: any) {
                 await Func.func337(); // メッセージ表示処理(自動)
                 Gvar.var_742 = 1;
             }
-            await Func.setMessage1("『プ…』", "", 8, false, false, false);
+            await Func.setMessage("『プ…』", "", 8, false, false, false);
             Gvar.var_389 = 2;
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_458 = 1;
@@ -58,7 +58,7 @@ async function enemy999(this: any) {
             if (Gvar.var_565 <= 0) {
                 Gvar.var_565 = 0;
             }
-            await Func.setMessage1("精神力が下がってしまった！", "", 8, false, false, false);
+            await Func.setMessage("精神力が下がってしまった！", "", 8, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_2197 = 1;
         }

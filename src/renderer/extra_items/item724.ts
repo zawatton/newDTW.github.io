@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 724 石仮面を使用した時の効果
 async function item724(this: any) {
         Gvar.var_1251 = 1;
-        await Func.setMessage1("「俺は人間をやめるぞォ――！」", "", 7, true, false, true);
+        await Func.setMessage("「俺は人間をやめるぞォ――！」", "", 7, true, false, true);
         Gvar.var_1251 = 2;
         await Func.AutoDraw(10);
         Gvar.var_1251 = 4;
@@ -42,7 +42,7 @@ async function item724(this: any) {
         Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         await Func.AutoDraw(10);
         Gvar.var_130 = 1;
-        await Func.setMessage1("吸血鬼体質になった！", "", 7, false, false, false);
+        await Func.setMessage("吸血鬼体質になった！", "", 7, false, false, false);
         Gvar.var_1251 = 0;
         if (Gvar.var_125 != 0) {
             Gvar.var_389 = 2;
@@ -51,8 +51,8 @@ async function item724(this: any) {
             Gvar.var_747 = 1;
             Adap.DSPLAY(105);
             await Func.AutoDraw(10);
-            await Func.setMessage1("吸血鬼体質で波紋呼吸をしてしまった！", "", 7, false, true, false);
-            await Func.setMessage1("酷いダメージを受けて回復しない！", "", 7, false, false, false);
+            await Func.setMessage("吸血鬼体質で波紋呼吸をしてしまった！", "", 7, false, true, false);
+            await Func.setMessage("酷いダメージを受けて回復しない！", "", 7, false, false, false);
             await Func.AutoDraw(15);
             Gvar.var_389 = 0;
         }

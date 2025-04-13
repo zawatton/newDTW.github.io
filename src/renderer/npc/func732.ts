@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 async function func732(this: any) {
         Adap.dbgprt(732);
-        await Func.setMessage1("ｽﾋﾟｰﾄﾞﾜｺﾞﾝはｸｰﾙに去るぜ",
+        await Func.setMessage("ｽﾋﾟｰﾄﾞﾜｺﾞﾝはｸｰﾙに去るぜ",
                                 "", 7, false, false, true);
         await Func.AutoDraw(5);
         Gvar.var_217 = 1;

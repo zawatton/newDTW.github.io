@@ -213,7 +213,7 @@ async function func009(this: any) {
                     }
                     Gvar.var_225 = Gvar.var_225 + 1; // Ver0.1402にて追加。ループの最後に1プラスする。
                 }
-                await Func.setMessage1("ﾌｰ･ﾌｧｲﾀｰｽﾞを持っていないぞ", "", 7, false, false, false);
+                await Func.setMessage("ﾌｰ･ﾌｧｲﾀｰｽﾞを持っていないぞ", "", 7, false, false, false);
                 Gvar.var_234 = 0;
                 Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                 Gvar.var_217 = 1;
@@ -221,7 +221,7 @@ async function func009(this: any) {
                 return;
             }
             if (Gvar.var_224 == 0) {
-                await Func.setMessage1("ﾌｰ･ﾌｧｲﾀｰｽﾞを持っていないぞ", "", 7, false, false, false);
+                await Func.setMessage("ﾌｰ･ﾌｧｲﾀｰｽﾞを持っていないぞ", "", 7, false, false, false);
                 Gvar.var_234 = 0;
                 Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
                 Gvar.var_217 = 1;

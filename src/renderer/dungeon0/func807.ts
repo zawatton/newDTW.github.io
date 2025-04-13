@@ -36,7 +36,7 @@ async function func807(this: any) {
         Gvar.var_1013 = Gvar.var_1013 - 1;
 
         Adap.DSPLAY(207);
-        await Func.setMessage1("" + Gvar.var_3188 + "ですね…",
+        await Func.setMessage("" + Gvar.var_3188 + "ですね…",
                                 "ﾚｸｲｴﾑの大迷宮１階に必ず届けます。", 7, false, false, true);
         await Func.AutoDraw(10);
         await Func.func801();

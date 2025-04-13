@@ -15,10 +15,10 @@ async function func748(this: any) {
             await Func.func752(); // ダンジョン内で仲間になったペッシに話しかけた時のメッセージ処理
             return;
         }
-        await Func.setMessage1("あっ！兄貴ィ！",
+        await Func.setMessage("あっ！兄貴ィ！",
                                "", 7, true, false, true);
 
-        await Func.setMessage1("おれも連れてってくれよ！",
+        await Func.setMessage("おれも連れてってくれよ！",
                                "", 7, true, false, true);
 
         await Func.func051(); // キー入力待ち処理

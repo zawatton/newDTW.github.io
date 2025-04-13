@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 102 キングクリムゾンの発動処理
 async function item102(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        await Func.setMessage1("「キング・クリムゾン」！！", "我以外の時間は消し飛ぶ！", 7, true, false, false);
+        await Func.setMessage("「キング・クリムゾン」！！", "我以外の時間は消し飛ぶ！", 7, true, false, false);
         Gvar.var_393 = Adap.dim(10, 10);
         if (Gvar.var_123 == 0) {
             Gvar.var_396 = Gvar.y_axis_map_image; // map.gifのy軸座標指定。gcopy(5)

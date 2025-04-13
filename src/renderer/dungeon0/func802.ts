@@ -30,19 +30,19 @@ async function func802(this: any) {
         await Func.AutoDraw(1);
         Gvar.var_783 = 9;
         if (Gvar.var_1014 == 0) {
-            await Func.setMessage1("ﾍﾟﾘｰｺﾛ「ボス…  私です。ﾍﾟﾘｰｺﾛです」",
+            await Func.setMessage("ﾍﾟﾘｰｺﾛ「ボス…  私です。ﾍﾟﾘｰｺﾛです」",
                                     "", 7, true, false, true);
 
-            await Func.setMessage1("「私ならば、今のボスのお力に",
+            await Func.setMessage("「私ならば、今のボスのお力に",
                                     "  なれるでしょう…", 7, true, false, true);
 
-            await Func.setMessage1("「私が手に入れられるｱｲﾃﾑの情報を",
+            await Func.setMessage("「私が手に入れられるｱｲﾃﾑの情報を",
                                     "  そのパソコンに送信します。", 7, true, false, true);
 
-            await Func.setMessage1("「少々費用はかかりますが、",
+            await Func.setMessage("「少々費用はかかりますが、",
                                     "  必ず手に入れてみせます。", 7, true, false, true);
 
-            await Func.setMessage1("「ｱｲﾃﾑはダンジョンの１階に",
+            await Func.setMessage("「ｱｲﾃﾑはダンジョンの１階に",
                                     "  届けておきましょう」", 7, true, false, true);
             Gvar.var_1014 = 1;
         }
@@ -51,11 +51,11 @@ async function func802(this: any) {
         }
 
         if (Gvar.var_1013 != 0) {
-            await Func.setMessage1("ﾍﾟﾘｰｺﾛ「ボス…何を仕入れてきましょう」",
+            await Func.setMessage("ﾍﾟﾘｰｺﾛ「ボス…何を仕入れてきましょう」",
                                     "", 7, true, false, true);
         }
         if (Gvar.var_1013 == 0) {
-            await Func.setMessage1("ﾍﾟﾘｰｺﾛ「ボス…まだ何も手に入りません」",
+            await Func.setMessage("ﾍﾟﾘｰｺﾛ「ボス…まだ何も手に入りません」",
                                     "", 7, true, false, true);
         }
         await Func.AutoDraw(5);

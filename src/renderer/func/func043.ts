@@ -64,7 +64,7 @@ async function func043(this: any) {
         Gvar.var_225 = Gvar.var_475;
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
         await Music.func100(); // 効果音
-        await Func.setMessage1("" + Gvar.target_item_name + "は", "朽ち果ててしまった…", 7, false, false, false);
+        await Func.setMessage("" + Gvar.target_item_name + "は", "朽ち果ててしまった…", 7, false, false, false);
         await Func.AutoDraw(9);
         return;
 }

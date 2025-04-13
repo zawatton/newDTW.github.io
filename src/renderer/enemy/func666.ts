@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 async function func666(this: any) {
         Adap.dbgprt(666);
         Adap.DSPLAY(126);
-        await Func.setMessage1("ジェントリー・ウィープス！", "", 8, false, false, false);
+        await Func.setMessage("ジェントリー・ウィープス！", "", 8, false, false, false);
         Adap.gsel(19);
         Adap.color(255, 255, 255);
         Adap.boxf(0, 0, 680, 680);
@@ -75,7 +75,7 @@ async function func666(this: any) {
             Gvar.var_211 = 0;
             Gvar.var_356 = 223;
         }
-        await Func.setMessage1("氷の塊を喰らった！", "" + Gvar.var_209 + "のダメージ！", 8, false, false, false);
+        await Func.setMessage("氷の塊を喰らった！", "" + Gvar.var_209 + "のダメージ！", 8, false, false, false);
         await Func.AutoDraw(10);
         Gvar.var_389 = 0;
         Gvar.var_747 = 0;

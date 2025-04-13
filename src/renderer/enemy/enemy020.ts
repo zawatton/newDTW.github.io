@@ -20,7 +20,7 @@ async function enemy020(this: any) {
             Gvar.var_673 = Gvar.var_2353;
             Gvar.var_2521 = 0;
             Gvar.var_1845 = 0;
-            await Func.setMessage1("ｴﾝﾔ婆は 死体 を呼び寄せた！",
+            await Func.setMessage("ｴﾝﾔ婆は 死体 を呼び寄せた！",
                                    "", 8, false, false, false);
             await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
             await Func.AutoDraw(16);

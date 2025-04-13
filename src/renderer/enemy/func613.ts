@@ -18,7 +18,7 @@ async function func613(this: any) {
         Gvar.var_83[Gvar.var_673].Var18 = 0;
         Gvar.var_1165 = 1;
         Gvar.var_389 = 2;
-        await Func.setMessage1("ｸﾞﾚｲﾄﾌﾙﾃﾞｯﾄﾞの老化攻撃だ！", "", 7, false, false, false);
+        await Func.setMessage("ｸﾞﾚｲﾄﾌﾙﾃﾞｯﾄﾞの老化攻撃だ！", "", 7, false, false, false);
         for (let cnt1 = 0; cnt1 < 30; ++cnt1) {
             if (Gvar.var_1392 == 11) {
                 Adap.DSPLAY(161);
@@ -34,7 +34,7 @@ async function func613(this: any) {
             await Func.func023();
         }
         if (Gvar.equip_disc[207] == 1) {
-            await Func.setMessage1("しかし 装備中のDISCによって", "老化攻撃を防いだ！", 7, false, false, false);
+            await Func.setMessage("しかし 装備中のDISCによって", "老化攻撃を防いだ！", 7, false, false, false);
             await Func.func047(); // メッセージ履歴追加処理
             Gvar.var_1165 = 0;
             Gvar.var_240 = 0;
@@ -45,7 +45,7 @@ async function func613(this: any) {
             return;
         }
         if (Gvar.nouryoku_disc_id == 202 || Gvar.shageki_disc_id == 404) {
-            await Func.setMessage1("しかし 装備中のDISCによって", "体が冷やされ 無事だった！", 7, false, false, false);
+            await Func.setMessage("しかし 装備中のDISCによって", "体が冷やされ 無事だった！", 7, false, false, false);
             Gvar.var_1165 = 0;
             Gvar.var_240 = 0;
             Gvar.var_83[Gvar.var_1393].Var6 = 1;
@@ -55,7 +55,7 @@ async function func613(this: any) {
             return;
         }
         Adap.DSPLAY(164);
-        await Func.setMessage1("精神力が下がってしまった！", "", 8, false, false, false);
+        await Func.setMessage("精神力が下がってしまった！", "", 8, false, false, false);
         Gvar.var_565 = Gvar.var_565 - 1;
         if (Gvar.var_565 < 0) {
             Gvar.var_565 = 0;

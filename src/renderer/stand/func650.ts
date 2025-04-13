@@ -153,7 +153,7 @@ async function func650(this: any) {
         Gvar.var_2999 = 0;
         Gvar.var_1195 = 0;
         if (Gvar.var_2994 == 0) {
-            await Func.setMessage1("ﾋﾟｽﾄﾙｽﾞ「ウェエエエ――ン", "        当テル相手ガ ミツカラナイヨ―ッ」", 7, false, false, true);
+            await Func.setMessage("ﾋﾟｽﾄﾙｽﾞ「ウェエエエ――ン", "        当テル相手ガ ミツカラナイヨ―ッ」", 7, false, false, true);
             await Func.AutoDraw(10);
         }
         return;

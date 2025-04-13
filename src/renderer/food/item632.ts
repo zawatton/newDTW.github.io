@@ -17,7 +17,7 @@ async function item632(this: any) {
         Gvar.var_1256 = 2;
         await Func.func337(); // メッセージ表示処理(自動)
     }
-    await Func.setMessage1("目がすっきりした！", "", 7, false, false, false);
+    await Func.setMessage("目がすっきりした！", "", 7, false, false, false);
     Gvar.var_1256 = 0;
     Gvar.var_127 = 0;  // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグOFF
     Gvar.var_132 = 0;
@@ -27,14 +27,14 @@ async function item632(this: any) {
     if (Gvar.shageki_disc_id == 401) {
         await Func.func429();
         if (Gvar.var_233[Gvar.var_556].Var3 == 99) {
-        await Func.setMessage1("", "ﾌｰ･ﾌｧｲﾀｰｽﾞのパワーは全開だ！", 7, false, false, false);
+        await Func.setMessage("", "ﾌｰ･ﾌｧｲﾀｰｽﾞのパワーは全開だ！", 7, false, false, false);
         }
         if (Gvar.var_233[Gvar.var_556].Var3 <= 98) {
             Gvar.var_233[Gvar.var_556].Var3 = Gvar.var_233[Gvar.var_556].Var3 + 5;
             if (Gvar.var_233[Gvar.var_556].Var3 >= 99) {
                 Gvar.var_233[Gvar.var_556].Var3 = 99;
             }
-            await Func.setMessage1("", "ﾌｰ･ﾌｧｲﾀｰｽﾞのｴﾈﾙｷﾞｰが増加した！", 7, false, false, false);
+            await Func.setMessage("", "ﾌｰ･ﾌｧｲﾀｰｽﾞのｴﾈﾙｷﾞｰが増加した！", 7, false, false, false);
         }
     }
     return;

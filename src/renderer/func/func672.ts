@@ -38,14 +38,14 @@ async function func672(this: any) {
             Gvar.var_374 = 1;
         }
         if (Gvar.var_1061 == 0) {
-            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ  再起不能", "", 9, false, false, false);
+            await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ  再起不能", "", 9, false, false, false);
         }
         if (Gvar.var_1061 == 3) {
             if (Gvar.var_144 == 0) {
-                await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは考えるのをやめた。", "", 7, false, false, false);
+                await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは考えるのをやめた。", "", 7, false, false, false);
             }
             if (Gvar.var_144 != 0) {
-                await Func.setMessage1("さびしいよォォォォ……ボス", "電話ください………", 7, false, false, false);
+                await Func.setMessage("さびしいよォォォォ……ボス", "電話ください………", 7, false, false, false);
             }
         }
         await Func.AutoDraw(40);

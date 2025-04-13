@@ -5,9 +5,9 @@ import * as Music from '../music/index'
 
 async function func923(this: any) {
         Adap.dbgprt(923);
-        await Func.setMessage1("「おまたせしましたァ――ッ", "  デリバリーピッザですーっ」", 7, true, false, true);
-        await Func.setMessage1("「こんにちは――っ", "  どちらですかーっ」", 7, true, false, true);
-        await Func.setMessage1("「どちらへ運びましょうか――ッ！？」", "", 7, true, false, true);
+        await Func.setMessage("「おまたせしましたァ――ッ", "  デリバリーピッザですーっ」", 7, true, false, true);
+        await Func.setMessage("「こんにちは――っ", "  どちらですかーっ」", 7, true, false, true);
+        await Func.setMessage("「どちらへ運びましょうか――ッ！？」", "", 7, true, false, true);
         Adap.DSPLAY(133); // アイテムを置いた時の効果音
         Gvar.var_1756 = 1;
         Gvar.var_452 = 1;
@@ -17,7 +17,7 @@ async function func923(this: any) {
         Gvar.var_1756 = 0;
         Gvar.var_452 = 0;
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-        await Func.setMessage1("ピザ屋はその辺に置いて帰ったようだ。", "", 7, false, false, false);
+        await Func.setMessage("ピザ屋はその辺に置いて帰ったようだ。", "", 7, false, false, false);
         await Func.AutoDraw(10);
         return;
 }

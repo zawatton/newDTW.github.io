@@ -7,7 +7,7 @@ async function func777(this: any) {
         Adap.dbgprt(777);
         // 所持アイテム数が20個以上になる場合
         if (Gvar.var_224 >= 20) {
-            await Func.setMessage1("持ち物がいっぱいで出せない。",
+            await Func.setMessage("持ち物がいっぱいで出せない。",
                                     "", 7, true, false, false);
 
             await Func.func051(); // キー入力待ち処理
@@ -86,7 +86,7 @@ async function func777(this: any) {
         Gvar.var_233[Gvar.var_224].Var29 = Gvar.var_987[29];
         Gvar.var_987[0] = 0;
 
-        await Func.setMessage1("" + Gvar.var_3153 + "を出した。",
+        await Func.setMessage("" + Gvar.var_3153 + "を出した。",
                                "", 7, true, false, false);
 
         await Func.func051(); // キー入力待ち処理

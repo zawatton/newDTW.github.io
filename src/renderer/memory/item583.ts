@@ -8,12 +8,12 @@ async function item583(this: any) {
     await Func.AutoDraw(12);
     Gvar.var_1264 = 0;
     if (Gvar.var_262 == 1) { // Gvar.var_262 == 1 なので、Gvar.dungeon_number = 0 であれば
-        await Func.setMessage1("しかし何も起こらなかった…", "", 7, false, false, false);
+        await Func.setMessage("しかし何も起こらなかった…", "", 7, false, false, false);
         return;
     }
-    await Func.setMessage1("ここは「退く」のだ……………", "", 7, true, false, true);
-    await Func.setMessage1("ここで一時「退く」のは", "敗北ではない……………！", 7, true, true, true);
-    await Func.setMessage1("オレは頂点に返り咲ける能力があるッ！", "", 7, false, false, false);
+    await Func.setMessage("ここは「退く」のだ……………", "", 7, true, false, true);
+    await Func.setMessage("ここで一時「退く」のは", "敗北ではない……………！", 7, true, true, true);
+    await Func.setMessage("オレは頂点に返り咲ける能力があるッ！", "", 7, false, false, false);
     Gvar.var_1951 = 1;
     return;
 }

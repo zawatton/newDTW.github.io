@@ -26,13 +26,13 @@ async function func067(this: any) {
         }
         // アイテムを持っているが、装備している状態で捨てられない場合
         if (Gvar.var_551 == 0) {
-            await Func.setMessage1("捨てられるものがない。",
+            await Func.setMessage("捨てられるものがない。",
                                    "", 7, false, false, false);
             await Func.AutoDraw(5);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
             return;
         }
-        await Func.setMessage1("全て捨てた。",
+        await Func.setMessage("全て捨てた。",
                                "", 7, false, false, false);
         Adap.DSPLAY(148);
 
@@ -85,10 +85,10 @@ async function func067(this: any) {
                 await Func.func292(); // ヴェネチアホテル+亀マップ配置処理(亀の成長4)
             }
             await Func.func248();
-            await Func.setMessage1("亀はアイテムを養分として",
+            await Func.setMessage("亀はアイテムを養分として",
                                    "成長したようだ。", 7, false, false, false);
             if (Gvar.var_559 == 4) {
-                await Func.setMessage1("亀はアイテムを養分として",
+                await Func.setMessage("亀はアイテムを養分として",
                                        "最大まで成長したようだ。", 7, false, false, false);
             }
             await Func.AutoDraw(5);

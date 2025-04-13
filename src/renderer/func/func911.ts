@@ -126,7 +126,7 @@ async function func911(this: any) {
         }
         await Func.func430();
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-        await Func.setMessage1("「" + Gvar.var_3580 + "」は", "ﾑｰﾃﾞｨｰﾌﾞﾙｰｽの手で運ばれていった", 7, false, false, false);
+        await Func.setMessage("「" + Gvar.var_3580 + "」は", "ﾑｰﾃﾞｨｰﾌﾞﾙｰｽの手で運ばれていった", 7, false, false, false);
         Adap.tcpput(Gvar.var_3579, Gvar.var_1050);
         Adap.tcpput("\n", Gvar.var_1050);
         Gvar.var_1457 = Gvar.var_66;

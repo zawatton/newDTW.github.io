@@ -129,7 +129,7 @@ async function func707(this: any) {
         Gvar.payment_amount = Gvar.payment_amount + Gvar.count_buying_price;
         Gvar.var_3116 = Gvar.var_82[Gvar.var_1000][Gvar.var_1001];
         if (Gvar.var_83[Gvar.var_3116].Var12 == 1 || Gvar.var_83[Gvar.var_3116].Var13 == 1) {
-            await Func.setMessage1("・・・・・・・・",
+            await Func.setMessage("・・・・・・・・",
                                    "", 7, false, false, false);
             await Func.AutoDraw(6);
             Gvar.var_217 = 1;
@@ -144,7 +144,7 @@ async function func707(this: any) {
             await Func.func709(); // トニオさんに話しかけてアイテムを購入する際のメッセージ処理
             return;
         }
-        await Func.setMessage1("レストラン・トラサルディーへようこそ！",
+        await Func.setMessage("レストラン・トラサルディーへようこそ！",
                                "", 7, false, false, true);
         await Func.AutoDraw(6);
         Gvar.var_217 = 1;

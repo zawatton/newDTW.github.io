@@ -11,7 +11,7 @@ async function func033(this: any) {
         Gvar.var_471 = 2;
         await Func.AutoDraw(5);
         Gvar.var_471 = 1;
-        await Func.setMessage1("元通りくっついた", "", 7, false, false, false);
+        await Func.setMessage("元通りくっついた", "", 7, false, false, false);
         await Func.AutoDraw(9);
         Gvar.var_471 = 0;
         return;

@@ -19,7 +19,7 @@ async function item113(this: any) {
         }
         Gvar.var_1283 = 1;
 
-        await Func.setMessage1("「クラッシュ！くらいつけッ！」",
+        await Func.setMessage("「クラッシュ！くらいつけッ！」",
                                "", 7, false, false, false);
 
         Gvar.var_2261 = Gvar.kougeki_disc_id ;

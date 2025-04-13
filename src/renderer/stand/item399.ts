@@ -21,7 +21,7 @@ async function item399(this: any) {
         }
         Gvar.var_199 = 2;
         await Func.AutoDraw(10);
-        await Func.setMessage1("「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ」！！",  "", 7, false, false, false);
+        await Func.setMessage("「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ」！！",  "", 7, false, false, false);
         await Music.func108(); // BGM用mp3ファイル再生停止
         Gvar.var_1599 = 1;
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
@@ -42,7 +42,7 @@ async function item399(this: any) {
             await Func.func508(); // スタンドパワーが力尽きて消滅した時の表示2
             await Func.AutoDraw(10);
         }
-        await Func.setMessage1("死に続ける能力が解除された！",  "", 7, true, false, false);
+        await Func.setMessage("死に続ける能力が解除された！",  "", 7, true, false, false);
         Gvar.var_389 = 0;
         Gvar.var_103 = 1;
         Gvar.var_311 = 255;

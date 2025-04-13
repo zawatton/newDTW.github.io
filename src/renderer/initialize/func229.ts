@@ -441,7 +441,7 @@ async function func229(this: any) {
         }
         Adap.notesel(Gvar.var_754);
         await Adap.noteload(Gvar.var_752);
-        // await Func.setMessage1("", "", 7, false, false, false); // ← いらない？
+        // await Func.setMessage("", "", 7, false, false, false); // ← いらない？
         Gvar.var_765 = 0;
         Gvar.var_374 = 0;
         Gvar.var_755 = 0;

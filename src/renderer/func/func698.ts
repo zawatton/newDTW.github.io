@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 async function func698(this: any) {
         Adap.dbgprt(698);
         Adap.DSPLAY(165);
-        await Func.setMessage1("カチリ", "", 8, false, false, false);
+        await Func.setMessage("カチリ", "", 8, false, false, false);
         Gvar.var_1343 = Gvar.var_83[Gvar.var_2890].Var1;
         Gvar.var_1344 = Gvar.var_83[Gvar.var_2890].Var2;
         Gvar.var_1342 = 1;
@@ -27,7 +27,7 @@ async function func698(this: any) {
         Gvar.var_83[Gvar.var_2890].Var19 = 0;
         Gvar.var_83[Gvar.var_2890].Var27 = 0;
         Gvar.var_83[Gvar.var_2890].Var28 = 0;
-        await Func.setMessage1("ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！", "", 8, false, false, false);
+        await Func.setMessage("ｼｱｰﾊｰﾄｱﾀｯｸが爆発した！", "", 8, false, false, false);
         Gvar.var_1993 = Gvar.var_1389 - 1;
         if (Gvar.var_1993 < 0) {
             Gvar.var_1993 = 0;

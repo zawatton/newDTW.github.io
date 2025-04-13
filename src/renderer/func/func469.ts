@@ -9,7 +9,7 @@ async function func469(this: any) {
         if (Gvar.var_233[Gvar.var_225].Var0 >= 800 && Gvar.var_233[Gvar.var_225].Var0 < 900) {
             Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             Gvar.var_1866 = 0;
-            await Func.setMessage1("これを入れることはできない",
+            await Func.setMessage("これを入れることはできない",
                                     "", 7, false, false, false);
             await Func.AutoDraw(3);
             Gvar.var_231 = 0;
@@ -30,7 +30,7 @@ async function func469(this: any) {
             if (Gvar.var_2084 == 1) {
                 Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                 Gvar.var_1866 = 0;
-                await Func.setMessage1("DISCしか入れることはできない",
+                await Func.setMessage("DISCしか入れることはできない",
                                         "", 7, false, false, false);
                 await Func.AutoDraw(3);
                 Gvar.var_231 = 0;
@@ -48,7 +48,7 @@ async function func469(this: any) {
             if (Gvar.var_2084 == 1) {
                 Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                 Gvar.var_1866 = 0;
-                await Func.setMessage1("食べ物しか入れることはできない",
+                await Func.setMessage("食べ物しか入れることはできない",
                                         "", 7, false, false, false);
                 await Func.AutoDraw(3);
                 Gvar.var_231 = 0;
@@ -69,7 +69,7 @@ async function func469(this: any) {
             if (Gvar.var_2084 == 1) {
                 Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                 Gvar.var_1866 = 0;
-                await Func.setMessage1("本しか入れることはできない",
+                await Func.setMessage("本しか入れることはできない",
                                         "", 7, false, false, false);
                 await Func.AutoDraw(3);
                 Gvar.var_231 = 0;
@@ -82,7 +82,7 @@ async function func469(this: any) {
         if (Gvar.var_233[Gvar.var_1876].Var7 == 0) {
             Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             Gvar.var_1866 = 0;
-            await Func.setMessage1("これ以上入れられない",
+            await Func.setMessage("これ以上入れられない",
                                     "", 7, false, false, false);
             await Func.AutoDraw(3);
             Gvar.var_231 = 0;
@@ -113,7 +113,7 @@ async function func469(this: any) {
         if (Gvar.var_2084 == 1) {
             Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             Gvar.var_1866 = 0;
-            await Func.setMessage1("" + Gvar.item_name + "を",
+            await Func.setMessage("" + Gvar.item_name + "を",
                                     "", 7, false, false, false);
             await Func.AutoDraw(3);
             Gvar.var_231 = 0;
@@ -200,65 +200,65 @@ async function func469(this: any) {
         Adap.DSPLAY(130);
         Gvar.var_1866 = 0;
         if (Gvar.yabaimono_id == 801) {
-            await Func.setMessage1("" + Gvar.item_name + "を",
+            await Func.setMessage("" + Gvar.item_name + "を",
                                     "形兆のDISCｹｰｽに入れた", 7, false, false, false);
         }
         if (Gvar.yabaimono_id == 802) {
-            await Func.setMessage1("" + Gvar.item_name + "を",
+            await Func.setMessage("" + Gvar.item_name + "を",
                                     "ﾄﾗｸﾀｰのﾀｲﾔに入れた", 7, false, false, false);
         }
         if (Gvar.yabaimono_id == 803) {
-            await Func.setMessage1("" + Gvar.item_name + "を",
+            await Func.setMessage("" + Gvar.item_name + "を",
                                     "ｻﾝｼﾞｪﾙﾏﾝの紙袋に入れた", 7, false, false, false);
         }
         if (Gvar.yabaimono_id == 804) {
-            await Func.setMessage1("" + Gvar.item_name + "を",
+            await Func.setMessage("" + Gvar.item_name + "を",
                                     "露伴のｶﾊﾞﾝに入れた", 7, false, false, false);
         }
         if (Gvar.yabaimono_id >= 805 || Gvar.yabaimono_id == 800) {
             if (Gvar.var_862[Gvar.yabaimono_id][0] == 0) {
-                await Func.setMessage1("" + Gvar.item_name + "を",
+                await Func.setMessage("" + Gvar.item_name + "を",
                                         "ヤバイものに入れた", 7, false, false, false);
             }
             if (Gvar.var_862[Gvar.yabaimono_id][0] == 1) {
                 if (Gvar.yabaimono_id == 800) {
-                    await Func.setMessage1("" + Gvar.item_name + "を",
+                    await Func.setMessage("" + Gvar.item_name + "を",
                                             "紙の中に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 805) {
-                    await Func.setMessage1("" + Gvar.item_name + "を",
+                    await Func.setMessage("" + Gvar.item_name + "を",
                                             "ｸﾞｯﾁｮの死体に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 806) {
-                    await Func.setMessage1("" + Gvar.item_name + "を",
+                    await Func.setMessage("" + Gvar.item_name + "を",
                                             "ｶﾙﾈの死体に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 807) {
-                    await Func.setMessage1("" + Gvar.item_name + "を",
+                    await Func.setMessage("" + Gvar.item_name + "を",
                                             "DIOの骨に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 808) {
-                    await Func.setMessage1("" + Gvar.item_name + "を",
+                    await Func.setMessage("" + Gvar.item_name + "を",
                                             "聖人の眼球に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 809) {
-                    await Func.setMessage1("" + Gvar.item_name + "を",
+                    await Func.setMessage("" + Gvar.item_name + "を",
                                             "聖人の左腕に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 815) {
-                    await Func.setMessage1("" + Gvar.item_name + "を",
+                    await Func.setMessage("" + Gvar.item_name + "を",
                                             "ｴﾙﾒｪｽのｱﾚに入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 816) {
-                    await Func.setMessage1("" + Gvar.item_name + "を",
+                    await Func.setMessage("" + Gvar.item_name + "を",
                                             "ﾐｷﾀｶのｶﾊﾞﾝに入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 817) {
-                    await Func.setMessage1("" + Gvar.item_name + "を",
+                    await Func.setMessage("" + Gvar.item_name + "を",
                                             "乳母車に入れた", 7, false, false, false);
                 }
                 if (Gvar.yabaimono_id == 818) {
-                    await Func.setMessage1("" + Gvar.item_name + "を",
+                    await Func.setMessage("" + Gvar.item_name + "を",
                                             "送信壷に入れた", 7, false, false, false);
                 }
             }

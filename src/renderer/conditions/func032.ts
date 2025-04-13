@@ -12,7 +12,7 @@ async function func032(this: any) {
             return;
         }
         if (Gvar.var_218 == 51) {
-            await Func.setMessage1("意識が…  ヤバクなって来た…", "", 7, true, false, false);
+            await Func.setMessage("意識が…  ヤバクなって来た…", "", 7, true, false, false);
             await Func.AutoDraw(5);
             await Func.func051(); // キー入力待ち処理
         }
@@ -35,7 +35,7 @@ async function func032(this: any) {
             }
         }
         if (Gvar.var_218 >= 51 && Gvar.shageki_disc_id == 403 && Gvar.var_211 == 2) {
-            await Func.setMessage1("ﾋﾟｽﾄﾙｽﾞ「早く【ジッパー】デ",
+            await Func.setMessage("ﾋﾟｽﾄﾙｽﾞ「早く【ジッパー】デ",
                                     "        体ヲ元ニ戻スンダ――――ッ！」", 7, true, false, false);
             await Func.AutoDraw(5);
             await Func.func051(); // キー入力待ち処理

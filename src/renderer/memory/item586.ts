@@ -10,7 +10,7 @@ async function item586(this: any) {
             await Func.AutoDraw(6);
             Gvar.var_1264 = 0;
             Gvar.var_389 = 2;
-            await Func.setMessage1("兄貴ィ～～  もう駄目だァ～～",
+            await Func.setMessage("兄貴ィ～～  もう駄目だァ～～",
                                    "", 7, false, false, true);
             await Func.AutoDraw(2);
             Adap.DSPLAY(151);
@@ -39,7 +39,7 @@ async function item586(this: any) {
         if (Gvar.current_level == 1) {
             await Func.AutoDraw(6);
             Gvar.var_1264 = 0;
-            await Func.setMessage1("おれはもう「マンモーニ」じゃねえッ！",
+            await Func.setMessage("おれはもう「マンモーニ」じゃねえッ！",
                                    "", 7, false, false, true);
             await Func.AutoDraw(10);
             Adap.DSPLAY(142); // レベルアップした時の効果音
@@ -55,7 +55,7 @@ async function item586(this: any) {
             Gvar.var_568 = Gvar.var_948[Gvar.current_level];
             await Func.func681();
             Gvar.var_2201 = 0;
-            await Func.setMessage1("ディアボロはレベルが上がった！",
+            await Func.setMessage("ディアボロはレベルが上がった！",
                                     "", 7, false, false, false);
             return;
         }

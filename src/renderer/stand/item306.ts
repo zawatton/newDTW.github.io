@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 306 マンハッタン・トランスファーの発動処理
 async function item306(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
-        await Func.setMessage1("「気流……」",
+        await Func.setMessage("「気流……」",
                                "", 7, false, false, false);
         Adap.gsel(19);
         Adap.color(10, 10, 10);
@@ -19,7 +19,7 @@ async function item306(this: any) {
             Gvar.var_198 = 1; // メッセージウィンドウ開く
             Gvar.var_300 = 0;
         }
-        await Func.setMessage1("「このフロアの空気の流れを読む…！」",
+        await Func.setMessage("「このフロアの空気の流れを読む…！」",
                                "", 7, true, true, false);
         Adap.DSPLAY(184);
         Gvar.var_119 = 1;
@@ -33,7 +33,7 @@ async function item306(this: any) {
             Gvar.var_300 = 0;
         }
         Gvar.var_312 = 0;
-        await Func.setMessage1("敵の行動がわかるようになった！",
+        await Func.setMessage("敵の行動がわかるようになった！",
                                "", 7, false, true, false);
         await Func.AutoDraw(10);
         if (Gvar.var_2254 == 1) {

@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item588(this: any) {
         await Func.AutoDraw(12);
         Gvar.var_1264 = 0;
-        await Func.setMessage1("Ｊガイルの気分になって大声で叫んだ。",
+        await Func.setMessage("Ｊガイルの気分になって大声で叫んだ。",
                                "", 7, true, false, true);
         Gvar.var_2208 = Adap.rnd(3);
         Gvar.enemy_list = Gvar.var_1034;
@@ -17,30 +17,30 @@ async function item588(this: any) {
         Gvar.var_2209 = Gvar.enemy_name;
 
         if (Gvar.var_2208 == 0) {
-            await Func.setMessage1("「" + Gvar.var_2209 + "は",
+            await Func.setMessage("「" + Gvar.var_2209 + "は",
                                    "  おまえらのために死んだ」", 7, true, true, true);
         }
         if (Gvar.var_2208 == 1) {
-            await Func.setMessage1("「青春を犠牲にして俺を追い続けたのに",
+            await Func.setMessage("「青春を犠牲にして俺を追い続けたのに",
                                    "  途中で挫折するとは」", 7, true, true, true);
         }
         if (Gvar.var_2208 == 2) {
-            await Func.setMessage1("「お前らの仲間にあの世であったら",
+            await Func.setMessage("「お前らの仲間にあの世であったら",
                                    "  聞かせてもらうといい…」", 7, true, true, true);
         }
         if (Gvar.var_2208 == 0) {
-            await Func.setMessage1("「おまえらが いなけりゃ",
+            await Func.setMessage("「おまえらが いなけりゃ",
                                    "  死ななかったかもなぁ！」", 7, true, true, true);
         }
         if (Gvar.var_2208 == 1) {
-            await Func.setMessage1("「なんとつまらない・・・",
+            await Func.setMessage("「なんとつまらない・・・",
                                    "  さびしい人生よ！！！」", 7, true, true, true);
         }
         if (Gvar.var_2208 == 2) {
-            await Func.setMessage1("「どーやってオレに",
+            await Func.setMessage("「どーやってオレに",
                                    "  殺してもらったかをなぁああ～ッ！」", 7, true, true, true);
         }
-        await Func.setMessage1("全ての敵が目を覚ました！",
+        await Func.setMessage("全ての敵が目を覚ました！",
                                "", 7, true, true, false);
         Gvar.var_2210 = 1;
         for (let cnt2 = 0; cnt2 < Gvar.var_97; ++cnt2) {

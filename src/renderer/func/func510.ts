@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 async function func510(this: any) {
         Adap.dbgprt(510);
-        await Func.setMessage1("呪われていて発動できない！",
+        await Func.setMessage("呪われていて発動できない！",
                                 "", 7, false, false, false);
         Gvar.var_747 = 1;
         Gvar.var_1212 = 1;

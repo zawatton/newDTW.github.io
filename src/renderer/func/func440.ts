@@ -8,9 +8,9 @@ async function func440(this: any) {
         Gvar.var_1966 = 0;
         Gvar.var_1971 = Gvar.var_199;
         Gvar.var_199 = 2;
-        await Func.setMessage1("「YES！ I am！」",
+        await Func.setMessage("「YES！ I am！」",
                                 "", 7, true, false, true);
-        await Func.setMessage1("持ち物すべてが識別された！",
+        await Func.setMessage("持ち物すべてが識別された！",
                                 "", 7, false, false, false);
         Gvar.var_1972 = 1;
         for (let cnt1 = 0; cnt1 < Gvar.var_224; ++cnt1) {

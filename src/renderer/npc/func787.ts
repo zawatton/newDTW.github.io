@@ -7,13 +7,13 @@ async function func787(this: any) {
         Adap.dbgprt(787);
         Gvar.var_243 = 0;
 
-        await Func.setMessage1("ｱﾊﾞｯｷｫ「おれのｽﾀﾝﾄﾞ【ﾑｰﾃﾞｨｰﾌﾞﾙｰｽ】",
+        await Func.setMessage("ｱﾊﾞｯｷｫ「おれのｽﾀﾝﾄﾞ【ﾑｰﾃﾞｨｰﾌﾞﾙｰｽ】",
                               "          のﾘﾌﾟﾚｲ能力を使えば、」", 7, true, false, true);
 
-        await Func.setMessage1("ｱﾊﾞｯｷｫ「このﾀﾞﾝｼﾞｮﾝから脱出も可能だ」",
+        await Func.setMessage("ｱﾊﾞｯｷｫ「このﾀﾞﾝｼﾞｮﾝから脱出も可能だ」",
                                "", 7, true, false, true);
 
-        await Func.setMessage1("ｱﾊﾞｯｷｫ「地上まで帰還するか？」",
+        await Func.setMessage("ｱﾊﾞｯｷｫ「地上まで帰還するか？」",
                                "", 7, true, false, true);
 
         await Func.func051(); // キー入力待ち処理

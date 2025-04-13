@@ -21,7 +21,7 @@ async function func447(this: any) {
         }
         Gvar.var_1586 = 0;
         await Func.AutoDraw(10);
-        await Func.setMessage1("「願い事を ひとつ言え！」",
+        await Func.setMessage("「願い事を ひとつ言え！」",
                                 "", 7, true, false, false);
         await Func.func051(); // キー入力待ち処理
         Gvar.var_1207 = 1;

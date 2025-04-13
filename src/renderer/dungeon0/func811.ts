@@ -8,7 +8,7 @@ async function func811(this: any) {
         Gvar.var_1032 = Gvar.var_1032 - Gvar.var_3190;
         Gvar.var_1040 = 1;
         Adap.DSPLAY(207);
-        await Func.setMessage1("「わかりました…。手の空いている者を",
+        await Func.setMessage("「わかりました…。手の空いている者を",
                                 "  ﾚｸｲｴﾑの大迷宮１階に呼んでおきます」", 7, true, false, true);
         await Func.func812();
         return;

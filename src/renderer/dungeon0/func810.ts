@@ -9,17 +9,17 @@ async function func810(this: any) {
             Adap.DSPLAY(207);
             Gvar.wallet = Gvar.wallet - 2000;
             Gvar.var_1040 = 1;
-            await Func.setMessage1("「わかりました…。手の空いている者を",
+            await Func.setMessage("「わかりました…。手の空いている者を",
                                     "  ﾚｸｲｴﾑの大迷宮１階に呼んでおきます」", 7, true, false, true);
             await Func.func812();
             return;
         }
         if (Gvar.wallet < 2000) {
-            await Func.setMessage1("「おっと…",
+            await Func.setMessage("「おっと…",
                                     "  お金が足りないようですな」", 7, true, false, true);
             Gvar.var_3190 = 2000 - Gvar.wallet;
             if (Gvar.var_3190 <= Gvar.var_1032) {
-                await Func.setMessage1("「口座のお金を足しますか？」",
+                await Func.setMessage("「口座のお金を足しますか？」",
                                         "", 7, false, false, true);
                 Gvar.var_245 = 19;
                 Gvar.var_246 = 45;

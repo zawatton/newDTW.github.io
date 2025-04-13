@@ -99,7 +99,7 @@ async function func573(this: any) {
                     Gvar.disc_rarity = Gvar.var_78[Gvar.var_419].Var13;
                     await Func.func492(); // アイテムリスト呼び出し
                     Gvar.target_item_name = Gvar.item_name;
-                    await Func.setMessage1("" + Gvar.target_item_name + "が", "爆発した！", 7, false, false, false);
+                    await Func.setMessage("" + Gvar.target_item_name + "が", "爆発した！", 7, false, false, false);
                     Gvar.var_455 = Gvar.var_83[Gvar.var_2694].Var1;
                     Gvar.var_456 = Gvar.var_83[Gvar.var_2694].Var2;
                     Gvar.var_83[Gvar.var_2694].Var8 = 1;

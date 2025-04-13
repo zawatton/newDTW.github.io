@@ -23,11 +23,11 @@ async function item715(this: any) {
             Gvar.var_350 = Gvar.var_567;
         }
         if (Gvar.var_350 == Gvar.var_567) {
-            await Func.setMessage1("「栄養補給させてもらったぜ！」",
+            await Func.setMessage("「栄養補給させてもらったぜ！」",
                                    "", 7, false, false, false);
         }
         if (Gvar.var_2211 == 1) {
-            await Func.setMessage1("最大満腹度が" + Gvar.var_567 + "になった。",
+            await Func.setMessage("最大満腹度が" + Gvar.var_567 + "になった。",
                                    "", 7, false, false, false);
         }
         return;

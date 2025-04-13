@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item313(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (Gvar.var_172 == 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-            await Func.setMessage1("発動能力がパワーアップしている！",
+            await Func.setMessage("発動能力がパワーアップしている！",
                                    "", 7, true, false, false);
         }
         Gvar.var_2307 = 0;
@@ -198,11 +198,11 @@ async function item313(this: any) {
                 Gvar.var_350 = Gvar.var_567;
             }
             if (Gvar.var_350 == Gvar.var_567) {
-                await Func.setMessage1("合計 " + Gvar.var_2307 + " の養分を吸収した。",
+                await Func.setMessage("合計 " + Gvar.var_2307 + " の養分を吸収した。",
                                        "満腹度が完全回復した。", 7, false, false, false);
             }
             if (Gvar.var_350 < Gvar.var_567) {
-                await Func.setMessage1("合計 " + Gvar.var_2307 + " の養分を吸収した。",
+                await Func.setMessage("合計 " + Gvar.var_2307 + " の養分を吸収した。",
                                        "満腹度が回復した。", 7, false, false, false);
             }
             await Func.AutoDraw(12);

@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 317 キッスの発動処理
 async function item317(this: any) {
         if (Gvar.var_73[Gvar.var_66][Gvar.var_67] != 0 || Gvar.var_80[Gvar.var_66][Gvar.var_67] != 0 || Gvar.var_77[Gvar.var_66][Gvar.var_67] != 0) {
-            await Func.setMessage1("ここには貼れない。",
+            await Func.setMessage("ここには貼れない。",
                                    "", 7, false, false, false);
             await Func.AutoDraw(5);
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)
@@ -19,7 +19,7 @@ async function item317(this: any) {
         Gvar.var_81[Gvar.var_2330][2] = Gvar.var_67;
         Gvar.var_81[Gvar.var_2330][4] = 1;
         Gvar.var_81[Gvar.var_2330][5] = Gvar.var_201;
-        await Func.setMessage1("シールを貼った。",
+        await Func.setMessage("シールを貼った。",
                                "", 7, false, false, false);
         Adap.DSPLAY(165);
         await Func.AutoDraw(5);

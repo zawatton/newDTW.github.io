@@ -17,7 +17,7 @@ async function item630(this: any) {
         Gvar.var_350 = Gvar.var_567;
     }
     Gvar.var_1223 = 1;
-    await Func.setMessage1("虫歯が飛び出した！", "", 7, false, false, false);
+    await Func.setMessage("虫歯が飛び出した！", "", 7, false, false, false);
     return;
 }
 

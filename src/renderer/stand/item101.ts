@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 // No = 101 シルバーチャリオッツの発動処理
 async function item101(this: any) {
         if (Gvar.var_420 != 0) {
-            await Func.setMessage1("チャリオッツは分身中だ。",
+            await Func.setMessage("チャリオッツは分身中だ。",
                                    "", 7, false, false, false);
             await Func.AutoDraw(5);
 
@@ -21,7 +21,7 @@ async function item101(this: any) {
         Gvar.var_2299 = 0;
         Gvar.var_1845 = 0;
         if (Gvar.var_2110 == 0) {
-            await Func.setMessage1("チャリオッツを出せる場所が無いぞ。",
+            await Func.setMessage("チャリオッツを出せる場所が無いぞ。",
                                    "", 7, false, false, false);
             await Func.AutoDraw(5);
 
@@ -41,7 +41,7 @@ async function item101(this: any) {
         }
         Gvar.var_420 = 7;
 
-        await Func.setMessage1("ブラボー！",
+        await Func.setMessage("ブラボー！",
                                "おお…  ブラボー！！", 7, false, false, true);
 
         for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
@@ -63,7 +63,7 @@ async function item101(this: any) {
             // await Func.func337(); // メッセージ表示処理(自動)
             await Func.func337(); // メッセージ表示処理(自動)
         }
-        await Func.setMessage1("フフフ･･･",
+        await Func.setMessage("フフフ･･･",
                                "感覚の目でよーく見てろ！", 7, false, true, true);
 
         for (let cnt2 = 0; cnt2 < 2; ++cnt2) {
@@ -94,7 +94,7 @@ async function item101(this: any) {
             }
         }
         Adap.DSPLAY(112); // 刀の切れる音 or 強化した時のシャキーン 効果音
-        await Func.setMessage1("これだ！  甲冑を外したスタンド",
+        await Func.setMessage("これだ！  甲冑を外したスタンド",
                                "「シルバー・チャリオッツ」！", 7, false, true, false);
 
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理

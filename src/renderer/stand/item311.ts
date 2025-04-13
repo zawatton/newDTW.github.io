@@ -15,40 +15,40 @@ async function item311(this: any) {
             await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1321 = Gvar.var_1321 + 1;
         }
-        await Func.setMessage1("「おんぶして」  「ねっ！」",
+        await Func.setMessage("「おんぶして」  「ねっ！」",
                                "        「おんぶして…」", 7, false, false, true);
         await Func.AutoDraw(10);
 
-        await Func.setMessage1("「あなたが今のぼくの本体なんです！」",
+        await Func.setMessage("「あなたが今のぼくの本体なんです！」",
                                "  「わかる？」  「ね？」", 7, false, true, true);
         await Func.AutoDraw(10);
 
-        await Func.setMessage1("「ぼくの能力は人に囁くだけ」",
+        await Func.setMessage("「ぼくの能力は人に囁くだけ」",
                                "    「ね？」「誰か助け呼ぶの？」", 7, false, true, true);
         await Func.AutoDraw(10);
 
-        await Func.setMessage1("「イヒヒ！」  「ねっ！」",
+        await Func.setMessage("「イヒヒ！」  「ねっ！」",
                                "      「イヒヒヒヒ」", 7, false, true, true);
         await Func.AutoDraw(10);
 
-        await Func.setMessage1("「ポコチンまで干からびさせて",
+        await Func.setMessage("「ポコチンまで干からびさせて",
                                "    死ぬのはおまえだッ！」", 7, false, true, true);
         await Func.AutoDraw(10);
 
-        await Func.setMessage1("「どこへ行こうとも…",
+        await Func.setMessage("「どこへ行こうとも…",
                                "    疲れるだけだよ」」", 7, false, true, true);
         await Func.AutoDraw(10);
 
-        await Func.setMessage1("「疲労とダメージで",
+        await Func.setMessage("「疲労とダメージで",
                                "    ぶっ倒れるのが先か」", 7, false, true, true);
         await Func.AutoDraw(10);
 
-        await Func.setMessage1("「精神がまいっちまって",
+        await Func.setMessage("「精神がまいっちまって",
                                "    自滅するのが先か…」", 7, false, true, true);
         await Func.AutoDraw(10);
 
         Adap.DSPLAY(164);
-        await Func.setMessage1("最大精神力が１下がってしまった！",
+        await Func.setMessage("最大精神力が１下がってしまった！",
                                "", 7, false, true, false);
         await Func.AutoDraw(10);
 

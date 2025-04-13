@@ -11,16 +11,16 @@ async function func750(this: any) {
         Gvar.var_83[Gvar.var_3072].Var14 = 0;
         Gvar.var_1033 = 1;
 
-        await Func.setMessage1("な！？",
+        await Func.setMessage("な！？",
                                "なんでイキナリ殴るんだよォ――", 7, true, false, true);
 
-        await Func.setMessage1("はッ！",
+        await Func.setMessage("はッ！",
                                "・・・そ、そうか！", 7, true, true, true);
 
-        await Func.setMessage1("兄貴はオレの事を思って殴ったんだね？",
+        await Func.setMessage("兄貴はオレの事を思って殴ったんだね？",
                                "", 7, true, true, true);
 
-        await Func.setMessage1("さすが兄貴だあッ！",
+        await Func.setMessage("さすが兄貴だあッ！",
                                "どこまでも ついてきますぜッ！", 7, true, false, true);
 
         await Music.func126();

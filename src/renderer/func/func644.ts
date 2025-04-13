@@ -50,10 +50,10 @@ async function func644(this: any) {
             return;
         }
         if (Gvar.var_2938 != 1) { // ヒラリ回避発動フラグOFF
-            await Func.setMessage1("「オラオララオラオラオラオオラオラ」", "ﾃﾞｨｱﾎﾞﾛの攻撃は外れた", 7, false, false, false);
+            await Func.setMessage("「オラオララオラオラオラオオラオラ」", "ﾃﾞｨｱﾎﾞﾛの攻撃は外れた", 7, false, false, false);
         }
         if (Gvar.var_2938 == 1) { // ヒラリ回避発動フラグON
-            await Func.setMessage1("「オラオララオラオラオラオオラオラ」", "ヒラリと攻撃をかわされた", 7, false, false, false);
+            await Func.setMessage("「オラオララオラオラオラオオラオラ」", "ヒラリと攻撃をかわされた", 7, false, false, false);
         }
         Gvar.var_2939 = 1;
         if (Gvar.equip_disc[105] == 1) {

@@ -20,10 +20,10 @@ async function func663(this: any) {
         }
         Adap.DSPLAY(123);
         if (Gvar.var_83[Gvar.var_314].Var0 == 9) {
-            await Func.setMessage1("「" + Gvar.item_name + "喰って", "  パワーアップッ！」", 8, false, false, false);
+            await Func.setMessage("「" + Gvar.item_name + "喰って", "  パワーアップッ！」", 8, false, false, false);
         }
         if (Gvar.var_83[Gvar.var_314].Var0 == 10) {
-            await Func.setMessage1("" + Gvar.item_name + "を", "吸収している！！", 8, false, false, false);
+            await Func.setMessage("" + Gvar.item_name + "を", "吸収している！！", 8, false, false, false);
         }
         Gvar.var_411 = 1;
         for (let cnt1 = 0; cnt1 < 16; ++cnt1) {
@@ -40,10 +40,10 @@ async function func663(this: any) {
         Gvar.var_83[Gvar.var_314].Var21 = 0;
         Adap.DSPLAY(142); // レベルアップした時の効果音
         if (Gvar.var_83[Gvar.var_314].Var0 == 9) {
-            await Func.setMessage1("ﾗﾊﾞｰｿｳﾙはレベルが上がった！", "", 8, false, false, false);
+            await Func.setMessage("ﾗﾊﾞｰｿｳﾙはレベルが上がった！", "", 8, false, false, false);
         }
         if (Gvar.var_83[Gvar.var_314].Var0 == 10) {
-            await Func.setMessage1("ﾉﾄｰﾘｱｽBIGはレベルが上がった！", "", 8, false, false, false);
+            await Func.setMessage("ﾉﾄｰﾘｱｽBIGはレベルが上がった！", "", 8, false, false, false);
         }
         Gvar.var_83[Gvar.var_314].Var39 = Gvar.var_83[Gvar.var_314].Var39 + 1;
         if (Gvar.var_83[Gvar.var_314].Var39 == 1) {

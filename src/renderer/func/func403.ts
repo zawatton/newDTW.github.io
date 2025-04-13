@@ -43,7 +43,7 @@ async function func403(this: any) {
                 Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
                 Gvar.var_1866 = 0;
                 Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-                await Func.setMessage1("呪われていて外せない！", "", 7, false, false, false);
+                await Func.setMessage("呪われていて外せない！", "", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_217 = 1;
                 await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)

@@ -27,10 +27,10 @@ async function func150(this: any) {
     Gvar.var_271 = 0;
     Gvar.var_594 = 0;
     await Func.func335();
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「おまえには 死んだことを", 
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「おまえには 死んだことを", 
                             "      後悔する時間をも…", 7, true, false, true);
 
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「与えんッ！！」", "", 7, false, false, true);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「与えんッ！！」", "", 7, false, false, true);
 
     await Func.AutoDraw(3);
     // 以下、画面移動・マップ配置処理
@@ -105,7 +105,7 @@ async function func150(this: any) {
     Gvar.var_744 = 1;
     Gvar.var_745 = 5 * 40 + 20;
     Gvar.var_746 = 3 * 40 - 10;
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「えっ」", "", 7, false, false, false);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「えっ」", "", 7, false, false, false);
     for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
         Gvar.var_744++;
         await Func.func337(); // メッセージ関係呼び出し
@@ -119,7 +119,7 @@ async function func150(this: any) {
     Gvar.var_744 = 1;
     Gvar.var_745 = 4 * 40 + 20;
     Gvar.var_746 = 3 * 40 - 10;
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「えっ」", "", 7, false, false, false);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「えっ」", "", 7, false, false, false);
     for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
         Gvar.var_744++;
         await Func.func337(); // メッセージ関係呼び出し
@@ -133,7 +133,7 @@ async function func150(this: any) {
     Gvar.var_744 = 1;
     Gvar.var_745 = 3 * 40 + 20;
     Gvar.var_746 = 3 * 40 - 10;
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「えっ」", "", 7, false, false, false);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「えっ」", "", 7, false, false, false);
     for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
         Gvar.var_744++;
         await Func.func337(); // メッセージ関係呼び出し
@@ -160,7 +160,7 @@ async function func150(this: any) {
     Gvar.var_82[28][10] = 1;
     Gvar.var_83[1].Var5 = 6;
 
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「オッ…オレはッ！", 
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「オッ…オレはッ！", 
                             "初めから何も動いていないッ！！」", 7, true, false, true);
     
     Gvar.var_83[2].Var6 = 1;
@@ -205,7 +205,7 @@ async function func150(this: any) {
     await Func.func337(); // メッセージ関係呼び出し
     Gvar.var_83[2].Var6 = 0;
 
-    await Func.setMessage1("ｼﾞｮﾙﾉ「無駄アァァァァ！！」", "", 7, false, false, false);
+    await Func.setMessage("ｼﾞｮﾙﾉ「無駄アァァァァ！！」", "", 7, false, false, false);
 
     Gvar.var_742 = 1;
     Gvar.var_83[2].Var7 = 1;
@@ -327,7 +327,7 @@ async function func150(this: any) {
     await Func.func337(); // メッセージ関係呼び出し
     Gvar.var_83[3].Var6 = 0;
 
-    await Func.setMessage1("ﾐｽﾀ「や…  やったぞッ  ついにッ！」",
+    await Func.setMessage("ﾐｽﾀ「や…  やったぞッ  ついにッ！」",
                             "      ついにッ！  倒したぞ！」", 7, false, false, true);
 
     await Func.AutoDraw(20);
@@ -390,10 +390,10 @@ async function func150(this: any) {
     await Func.func337(); // メッセージ関係呼び出し
     Gvar.var_83[4].Var6 = 0;
 
-    await Func.setMessage1("ﾄﾘｯｼｭ「でも…  ちょっと待って",
+    await Func.setMessage("ﾄﾘｯｼｭ「でも…  ちょっと待って",
                             "        どこかに浮かんできてる！？」", 7, true, false, true);
 
-    await Func.setMessage1("ﾄﾘｯｼｭ「どこよッ！",
+    await Func.setMessage("ﾄﾘｯｼｭ「どこよッ！",
                             "        探してジョルノッ！」", 7, false, false, true);
 
     for (let cnt1 = 0; cnt1 < 2; ++cnt1) {
@@ -446,16 +446,16 @@ async function func150(this: any) {
     await Func.func337(); // メッセージ関係呼び出し
     Gvar.var_83[2].Var6 = 0;
 
-    await Func.setMessage1("ｼﾞｮﾙﾉ「いや…  探す必要はない",
+    await Func.setMessage("ｼﾞｮﾙﾉ「いや…  探す必要はない",
                             "        全てはもう終わっている…」", 7, true, false, true);
 
-    await Func.setMessage1("ｼﾞｮﾙﾉ「ヤツはもう",
+    await Func.setMessage("ｼﾞｮﾙﾉ「ヤツはもう",
                             "        どこへも向かうことはない」", 7, true, false, true);
 
-    await Func.setMessage1("ｼﾞｮﾙﾉ「終わりが無いのが【終わり】」",
+    await Func.setMessage("ｼﾞｮﾙﾉ「終わりが無いのが【終わり】」",
                             "        ", 7, true, false, true);
 
-    await Func.setMessage1("ｼﾞｮﾙﾉ「それが",
+    await Func.setMessage("ｼﾞｮﾙﾉ「それが",
                             "      【ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ】」  ", 7, false, false, true);
 
     await Func.AutoDraw(30);
@@ -473,12 +473,12 @@ async function func150(this: any) {
     }
     await Func.AutoDraw(20);
 
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛはＧ･Ｅ･レクイエムの能力により", 
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛはＧ･Ｅ･レクイエムの能力により", 
                             "永遠に死に続けることとなった。", 7, true, false, false);
 
-    await Func.setMessage1("何百回……いや何千回死んだだろうか？", "", 7, true, false, false);
+    await Func.setMessage("何百回……いや何千回死んだだろうか？", "", 7, true, false, false);
 
-    await Func.setMessage1("しかしある時、転機が訪れた…", "", 7, false, false, false);
+    await Func.setMessage("しかしある時、転機が訪れた…", "", 7, false, false, false);
 
     if (Gvar.var_726 == 1) {
         Gvar.var_735 = "01.dat";

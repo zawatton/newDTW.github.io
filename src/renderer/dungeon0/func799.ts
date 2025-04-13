@@ -8,12 +8,12 @@ async function func799(this: any) {
         if (Gvar.var_1205 != 0) {
             Adap.DSPLAY(207);
             if (Gvar.var_1205 == 1) {
-                await Func.setMessage1("" + Gvar.var_3176 + "G 口座に入れた。",
+                await Func.setMessage("" + Gvar.var_3176 + "G 口座に入れた。",
                                        "        ", 7, false, false, false);
                 Gvar.var_1205 = 0;
             }
             if (Gvar.var_1205 == 2) {
-                await Func.setMessage1("" + Gvar.var_3176 + "G 口座から出した。",
+                await Func.setMessage("" + Gvar.var_3176 + "G 口座から出した。",
                                        "        ", 7, false, false, false);
                 Gvar.var_1205 = 0;
             }

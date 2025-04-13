@@ -25,7 +25,7 @@ async function func608(this: any) {
             Gvar.var_1490 = 0;
             Gvar.var_389 = 0;
             Gvar.var_2852 = Gvar.var_1022;
-            await Func.setMessage1("太陽から発射されたレーザーで", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+            await Func.setMessage("太陽から発射されたレーザーで", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
             if (Gvar.var_128 >= 1) {
                 await Func.func023();
             }
@@ -50,7 +50,7 @@ async function func608(this: any) {
             Gvar.var_2875 = Adap.rnd(2);
             Gvar.var_2875 = Gvar.var_2875 + 1;
             Gvar.var_1022 = Gvar.var_1022 + Gvar.var_2875;
-            await Func.setMessage1("周りの気温が" + Gvar.var_2875 + "度 上がった！", "太陽のエネルギーがアップした！", 8, false, false, false);
+            await Func.setMessage("周りの気温が" + Gvar.var_2875 + "度 上がった！", "太陽のエネルギーがアップした！", 8, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_1165 = 0;
             Gvar.var_240 = 0;

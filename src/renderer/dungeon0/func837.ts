@@ -40,7 +40,7 @@ async function func837(this: any) {
         }
         if (Gvar.var_3204 == 1) {
             Gvar.var_3204 = 0;
-            await Func.setMessage1("ﾏﾘﾘﾝﾏﾝｿﾝ「また 会オウ！」", "", 7, true, false, true);
+            await Func.setMessage("ﾏﾘﾘﾝﾏﾝｿﾝ「また 会オウ！」", "", 7, true, false, true);
             Gvar.var_1470 = 5;
             await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1470 = 6;

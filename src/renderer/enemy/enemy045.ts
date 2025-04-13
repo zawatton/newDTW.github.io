@@ -104,29 +104,29 @@ async function enemy045(this: any) {
         Gvar.var_411 = 0;
         Gvar.var_83[Gvar.var_412].Var21 = 0;
         Gvar.var_389 = 0;
-        await Func.setMessage1("" + Gvar.var_2886 + "が",
+        await Func.setMessage("" + Gvar.var_2886 + "が",
                                "呪われた！", 8, true, false, false);
         if (Gvar.var_2887 == 1) {
-            await Func.setMessage1("･･･と思ったが、",
+            await Func.setMessage("･･･と思ったが、",
                                    "漆黒のオーラに守られて無事だった。", 7, false, false, false);
         }
         if (Gvar.var_2887 == 2) {
-            await Func.setMessage1("･･･と思ったが、",
+            await Func.setMessage("･･･と思ったが、",
                                    "装備DISCの効果によって呪いを防いだ！", 7, true, true, false);
             Gvar.var_1073 = Adap.rnd(4);
             if (Gvar.var_1073 == 0) {
-                await Func.setMessage1("君はもう「エコーズact2」の能力に",
+                await Func.setMessage("君はもう「エコーズact2」の能力に",
                                        "勝つことはできない！", 7, false, false, false);
             }
             if (Gvar.var_1073 == 1) {
-                await Func.setMessage1("「大嫌い」だ！", "", 7, false, false, false);
+                await Func.setMessage("「大嫌い」だ！", "", 7, false, false, false);
             }
             if (Gvar.var_1073 == 2) {
-                await Func.setMessage1("言ったってわからないから",
+                await Func.setMessage("言ったってわからないから",
                                        "こんな目に遭ったんだよ！", 7, false, false, false);
             }
             if (Gvar.var_1073 == 3) {
-                await Func.setMessage1("僕を捕まえることはできない…！", "", 7, false, false, false);
+                await Func.setMessage("僕を捕まえることはできない…！", "", 7, false, false, false);
             }
         }
         await Func.AutoDraw(10);

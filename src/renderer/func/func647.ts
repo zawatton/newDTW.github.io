@@ -7,7 +7,7 @@ import * as Stand from '../stand/index'
 async function func647(this: any) {
         Adap.dbgprt(647);
         if (Gvar.var_251 == 1 && Gvar.shageki_disc_id == 0) {
-            await Func.setMessage1("射撃DISCを装備していないぞ", "", 7, false, false, false);
+            await Func.setMessage("射撃DISCを装備していないぞ", "", 7, false, false, false);
             await Func.AutoDraw(3);
             Gvar.var_251 = 0;
             await Func.func009(); // ディアボロ側ターン処理(ループ処理)

@@ -16,17 +16,17 @@ async function func498(this: any) {
             if (Gvar.belongings_item_list == 567 || Gvar.belongings_item_list == 590 || Gvar.belongings_item_list == 565) {
                 Gvar.var_862[Gvar.belongings_item_list][0] = 1;
                 if (Gvar.belongings_item_list == 567) {
-                    await Func.setMessage1("なんと" + Gvar.item_name + "は", 
+                    await Func.setMessage("なんと" + Gvar.item_name + "は", 
                                             "ｱｳﾞﾄﾞｩﾙのDISCだった！", 7, false, false, false);
                     Gvar.var_2188 = "ｱｳﾞﾄﾞｩﾙのDISC";
                 }
                 if (Gvar.belongings_item_list == 590) {
-                    await Func.setMessage1("なんと" + Gvar.item_name + "は", 
+                    await Func.setMessage("なんと" + Gvar.item_name + "は", 
                                             "ｷﾞｱｯﾁｮのDISCだった！", 7, false, false, false);
                     Gvar.var_2188 = "ｷﾞｱｯﾁｮのDISC";
                 }
                 if (Gvar.belongings_item_list == 565) {
-                    await Func.setMessage1("なんと" + Gvar.item_name + "は", 
+                    await Func.setMessage("なんと" + Gvar.item_name + "は", 
                                             "ﾌﾟｯﾁ神父のDISCだった！", 7, false, false, false);
                     Gvar.var_2188 = "ﾌﾟｯﾁ神父のDISC";
                 }
@@ -43,7 +43,7 @@ async function func498(this: any) {
         Gvar.var_1252 = 0;
         Gvar.var_1389 = Gvar.var_66;
         Gvar.var_1390 = Gvar.var_67;
-        await Func.setMessage1("" + Gvar.var_2188 + "が", 
+        await Func.setMessage("" + Gvar.var_2188 + "が", 
                                 "爆発した！", 8, false, false, false);
         Gvar.var_1993 = Gvar.var_1389 - 1;
         if (Gvar.var_1993 < 0) {
@@ -655,7 +655,7 @@ async function func498(this: any) {
     if (Gvar.belongings_item_list == 900) {
         Adap.DSPLAY(118);
         await Func.AutoDraw(12);
-        await Func.setMessage1("チェッ！", 
+        await Func.setMessage("チェッ！", 
                                 "やっぱりセナは速ェや…", 7, false, false, false);
         return;
     }
@@ -889,8 +889,8 @@ async function func498(this: any) {
         Gvar.var_1252 = 0;
         Gvar.var_1253 = 995;
         Gvar.var_1254 = 1;
-        await Func.setMessage1("「ﾋﾟﾝｸﾀﾞｰｸの少年」を目の前にかざした。", "", 7, true, false, true);
-        await Func.setMessage1("『天国の扉』によって…", "心の扉は開かれる", 7, true, false, false);
+        await Func.setMessage("「ﾋﾟﾝｸﾀﾞｰｸの少年」を目の前にかざした。", "", 7, true, false, true);
+        await Func.setMessage("『天国の扉』によって…", "心の扉は開かれる", 7, true, false, false);
         Gvar.var_347 = Gvar.var_66;
         Gvar.var_348 = Gvar.var_67;
         if (Gvar.var_199 == 4) {
@@ -988,7 +988,7 @@ async function func498(this: any) {
                 }
                 Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                 Gvar.var_1323 = 0;
-                await Func.setMessage1("見えてなくて効かなかった…", 
+                await Func.setMessage("見えてなくて効かなかった…", 
                                         "", 7, false, false, false);
             }
         }

@@ -7,44 +7,44 @@ async function item569(this: any) {
         await Func.AutoDraw(12);
         Gvar.var_601 = Adap.rnd(5);
         if (Gvar.var_601 == 0) {
-            await Func.setMessage1("ｱﾌﾞﾄﾞｩﾙが死んだ時の事を思い出した。",
+            await Func.setMessage("ｱﾌﾞﾄﾞｩﾙが死んだ時の事を思い出した。",
                                   "", 7, true, false, true);
         }
         if (Gvar.var_601 == 1) {
-            await Func.setMessage1("ｲｷﾞｰが死んだ時の事を思い出した。",
+            await Func.setMessage("ｲｷﾞｰが死んだ時の事を思い出した。",
                                    "", 7, true, false, true);
         }
         if (Gvar.var_601 == 2) {
-            await Func.setMessage1("ｼｪﾘｰが死んだ時の事を思い出した。",
+            await Func.setMessage("ｼｪﾘｰが死んだ時の事を思い出した。",
                                   "", 7, true, false, true);
         }
         if (Gvar.var_601 == 3) {
-            await Func.setMessage1("ｱﾌﾞﾄﾞｩﾙが死んだ時の事を思い出した。",
+            await Func.setMessage("ｱﾌﾞﾄﾞｩﾙが死んだ時の事を思い出した。",
                                   "", 7, true, false, true);
         }
         if (Gvar.var_601 == 4) {
-            await Func.setMessage1("階段でDIOに会った時の事を思い出した。",
+            await Func.setMessage("階段でDIOに会った時の事を思い出した。",
                                    "", 7, true, false, true);
         }
 
         if (Gvar.var_601 == 0) {
-            await Func.setMessage1("「このドグサレがァァ――――ッ!!」",
+            await Func.setMessage("「このドグサレがァァ――――ッ!!」",
                                   "", 7, true, true, true);
         }
         if (Gvar.var_601 == 1) {
-            await Func.setMessage1("「今のおれには…",
+            await Func.setMessage("「今のおれには…",
                                    "悲しみで泣いている時間なんかないぜ」", 7, true, true, true);
         }
         if (Gvar.var_601 == 2) {
-            await Func.setMessage1("「しかるべき報いを与えてやるッ！」",
+            await Func.setMessage("「しかるべき報いを与えてやるッ！」",
                                    "", 7, true, true, true);
         }
         if (Gvar.var_601 == 3) {
-            await Func.setMessage1("「やつの気持ちを無駄にはしない",
+            await Func.setMessage("「やつの気持ちを無駄にはしない",
                                    "  生きるために戦う……！」", 7, true, true, true);
         }
         if (Gvar.var_601 == 4) {
-            await Func.setMessage1("このままではまずい…はね返さなくてな…",
+            await Func.setMessage("このままではまずい…はね返さなくてな…",
                                    "おれに勇気をくれッ！", 7, true, true, true);
         }
         Adap.DSPLAY(182);

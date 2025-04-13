@@ -24,7 +24,7 @@ async function func670(this: any) {
         Gvar.var_83[Gvar.var_314].Var1 = 0;
         Gvar.var_83[Gvar.var_314].Var2 = 0;
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-        await Func.setMessage1("ﾁﾘﾍﾟｯﾊﾟｰは海水に散って消えた…", "", 7, false, false, false);
+        await Func.setMessage("ﾁﾘﾍﾟｯﾊﾟｰは海水に散って消えた…", "", 7, false, false, false);
         Gvar.var_3071 = 1;
         await Func.AutoDraw(10);
         return;

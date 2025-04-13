@@ -13,7 +13,7 @@ async function func457(this: any) {
             Gvar.var_126 = 0;
             Gvar.var_132 = 0;
             Gvar.var_127 = 0;  // 瞼が落ちるや目を切り裂かれるなどで視界が見えななくなった時のフラグOFF
-            await Func.setMessage1("状態異常が治った！", "", 7, true, false, false);
+            await Func.setMessage("状態異常が治った！", "", 7, true, false, false);
             await Func.AutoDraw(3);
         }
         return;

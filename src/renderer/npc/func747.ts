@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 async function func747(this: any) {
         Adap.dbgprt(747);
-        await Func.setMessage1("パウッ！",
+        await Func.setMessage("パウッ！",
                                 "", 7, true, false, true);
         Gvar.var_742 = 1;
         Gvar.var_83[Gvar.var_3072].Var7 = 1;
@@ -28,12 +28,12 @@ async function func747(this: any) {
         Gvar.var_3135 = Adap.rnd(2);
 
         if (Gvar.var_3135 == 0) {
-            await Func.setMessage1("ちょいとミスった",
+            await Func.setMessage("ちょいとミスった",
                                     "指がスベっちゃった  いやごめん！", 7, true, false, true);
             Gvar.var_211 = Math.floor(Gvar.var_211 / 2) + 1;
         }
         if (Gvar.var_3135 == 1) {
-            await Func.setMessage1("しばらく呼吸はできん……",
+            await Func.setMessage("しばらく呼吸はできん……",
                                     "が……心配はいらん", 7, true, false, true);
             Gvar.var_125 = 1;
         }

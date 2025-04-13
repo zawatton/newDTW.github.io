@@ -8,7 +8,7 @@ async function item573(this: any) {
         Gvar.var_1264 = 0;
         if (Gvar.var_262 == 1) { // Gvar.var_262 == 1 なので、Gvar.dungeon_number = 0 であれば
             // Gvar.var_262 = 1でなければ "ｱｲﾃﾑの場所がわかった！"
-            await Func.setMessage1("しかし何も起こらなかった…",
+            await Func.setMessage("しかし何も起こらなかった…",
                                    "", 7, false, false, false);
             return;
         }

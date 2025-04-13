@@ -11,20 +11,20 @@ async function func657(this: any) {
         Gvar.var_412 = Gvar.var_314;
         Gvar.var_83[Gvar.var_314].Var8 = 1;
         await Func.AutoDraw(10);
-        await Func.setMessage1("玉美「イイイイイデェ～～～～ッ", "      前歯がハァァ―――――ッ」", 8, true, false, true);
+        await Func.setMessage("玉美「イイイイイデェ～～～～ッ", "      前歯がハァァ―――――ッ」", 8, true, false, true);
         if (Gvar.shageki_disc_id == 406) {
             Gvar.var_1073 = Adap.rnd(4);
             if (Gvar.var_1073 == 0) {
-                await Func.setMessage1("ちっとも罪悪感を感じなかった。", "", 7, false, false, false);
+                await Func.setMessage("ちっとも罪悪感を感じなかった。", "", 7, false, false, false);
             }
             if (Gvar.var_1073 == 1) {
-                await Func.setMessage1("「かあさんとお姉ちゃんに手を出すことは", "決してさせないぞッ！」", 7, false, false, false);
+                await Func.setMessage("「かあさんとお姉ちゃんに手を出すことは", "決してさせないぞッ！」", 7, false, false, false);
             }
             if (Gvar.var_1073 == 2) {
-                await Func.setMessage1("「閑けさや岩にしみ入る蝉の声」", "", 7, false, false, false);
+                await Func.setMessage("「閑けさや岩にしみ入る蝉の声」", "", 7, false, false, false);
             }
             if (Gvar.var_1073 == 3) {
-                await Func.setMessage1("「よし！それじゃあ明日までにキッチリ", "５０万持って来い！」", 7, false, false, false);
+                await Func.setMessage("「よし！それじゃあ明日までにキッチリ", "５０万持って来い！」", 7, false, false, false);
             }
             await Func.AutoDraw(20);
             Gvar.var_83[Gvar.var_314].Var8 = 0;
@@ -56,9 +56,9 @@ async function func657(this: any) {
                 }
             }
             Adap.DSPLAY(162);
-            await Func.setMessage1("罪悪感で体が重くなった！", "", 8, true, false, false);
+            await Func.setMessage("罪悪感で体が重くなった！", "", 8, true, false, false);
             if (Gvar.equip_disc[396] == 1) {
-                await Func.setMessage1("しかし装備スタンドの効果で", "速度は遅くならない！", 8, false, false, true);
+                await Func.setMessage("しかし装備スタンドの効果で", "速度は遅くならない！", 8, false, false, true);
             }
             await Func.AutoDraw(20);
             Gvar.var_199 = Gvar.var_413;
@@ -113,7 +113,7 @@ async function func657(this: any) {
             Gvar.var_78[Gvar.var_419].Var27 = 0;
             Gvar.var_78[Gvar.var_419].Var28 = 0;
             Gvar.var_78[Gvar.var_419].Var29 = 0;
-            await Func.setMessage1("罪悪感で" + Gvar.target_item_name + " 奪われた！", "", 8, false, false, false);
+            await Func.setMessage("罪悪感で" + Gvar.target_item_name + " 奪われた！", "", 8, false, false, false);
             await Func.AutoDraw(20);
             Gvar.var_199 = Gvar.var_413;
         }

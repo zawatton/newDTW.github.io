@@ -12,31 +12,31 @@ async function item393(this: any) {
         Adap.DSPLAY(118);
 
         if (Gvar.var_2352 == 0) {
-            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは",
+            await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは",
                                    "「ﾌｧﾝﾄﾑ･ﾌﾞﾗｯﾄﾞ」を読んだ", 7, false, false, false);
         }
         if (Gvar.var_2352 == 1) {
-            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは",
+            await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは",
                                    "「戦闘潮流」を読んだ", 7, false, false, false);
         }
         if (Gvar.var_2352 == 2) {
-            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは",
+            await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは",
                                    "「ｽﾀｰﾀﾞｽﾄ･ｸﾙｾｲﾀﾞｰｽ」を読んだ", 7, false, false, false);
         }
         if (Gvar.var_2352 == 3) {
-            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは",
+            await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは",
                                    "「ダイヤモンドは砕けない」を読んだ", 7, false, false, false);
         }
         if (Gvar.var_2352 == 4) {
-            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは",
+            await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは",
                                    "「黄金の風」を読んだ", 7, false, false, false);
         }
         if (Gvar.var_2352 == 5) {
-            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛは",
+            await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは",
                                    "「ｽﾄｰﾝ･ｵｰｼｬﾝ」を読んだ", 7, false, false, false);
         }
         if (Gvar.var_2352 == 6) {
-            await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「これからはおれの時代だッ！」",
+            await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「これからはおれの時代だッ！」",
                                    "", 7, false, false, false);
         }
         await Func.func047(); // メッセージ履歴追加処理
@@ -70,7 +70,7 @@ async function item393(this: any) {
         Gvar.var_673 = Gvar.var_2353;
         Gvar.var_1845 = 0;
         if (Gvar.var_2110 == 0) {
-            await Func.setMessage1("しかし何も起こらなかった…",
+            await Func.setMessage("しかし何も起こらなかった…",
                                    "", 7, false, true, false);
             for (let cnt3 = 0; cnt3 < 10; ++cnt3) {
                 Gvar.var_300 = 0;
@@ -114,7 +114,7 @@ async function item393(this: any) {
         Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1586 = 0;
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
-        await Func.setMessage1("マンガのキャラクターが現れた！",
+        await Func.setMessage("マンガのキャラクターが現れた！",
                                "", 7, false, true, false);
         for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
             Gvar.var_300 = 0;

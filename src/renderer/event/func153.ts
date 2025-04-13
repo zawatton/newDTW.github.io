@@ -25,7 +25,7 @@ async function func153(this: any) {
     Gvar.var_756 = 0;
     Gvar.var_374 = 0;
 
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「いたたた…」", "", 7, false, false, true);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「いたたた…」", "", 7, false, false, true);
 
     for (let cnt1 = 0; cnt1 < 10; ++cnt1) {
         Gvar.var_758 = 1;
@@ -39,7 +39,7 @@ async function func153(this: any) {
     }
     Gvar.var_758 = 0;
 
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「ここはいつもの…」", "", 7, true, false, true);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「ここはいつもの…」", "", 7, true, false, true);
 
     Gvar.var_199 = 1;
     await Func.AutoDraw(2);
@@ -58,12 +58,12 @@ async function func153(this: any) {
     Gvar.var_199 = 2;
     await Func.AutoDraw(5);
 
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「さっきのホテル、いや墓場にも", "  手がかりになるものはなかった」", 7, true, false, true);
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「そして、結局はこの場所へ", "  戻ってきてしまう…」", 7, true, false, true);
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「あの老婆は別の場所を探せと", "  言っていたが、他に行ける場所は…」", 7, true, false, true);
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「ハッ？！", "", 7, true, false, true);
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「そこの階段は…", "  いつからそこにあった？？」", 7, true, false, true);
-    await Func.setMessage1("ﾃﾞｨｱﾎﾞﾛ「怪しいのは その中か？」", "", 7, false, false, true);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「さっきのホテル、いや墓場にも", "  手がかりになるものはなかった」", 7, true, false, true);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「そして、結局はこの場所へ", "  戻ってきてしまう…」", 7, true, false, true);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「あの老婆は別の場所を探せと", "  言っていたが、他に行ける場所は…」", 7, true, false, true);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「ハッ？！", "", 7, true, false, true);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「そこの階段は…", "  いつからそこにあった？？」", 7, true, false, true);
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「怪しいのは その中か？」", "", 7, false, false, true);
 
     await Func.AutoDraw(20);
     await Func.func336();

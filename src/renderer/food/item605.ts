@@ -14,17 +14,17 @@ async function item605(this: any) {
             Gvar.var_567 = 999;
         }
     }
-    await Func.setMessage1("焦げてて食べられる部分が無い…", "", 7, false, false, false);
+    await Func.setMessage("焦げてて食べられる部分が無い…", "", 7, false, false, false);
     Gvar.var_350 = Gvar.var_350 + 10;
     if (Gvar.var_350 > Gvar.var_567) {
         Gvar.var_350 = Gvar.var_567;
     }
     if (Gvar.var_350 == Gvar.var_567) {
-        await Func.setMessage1("お腹がいっぱいになった。", "", 7, false, false, false);
+        await Func.setMessage("お腹がいっぱいになった。", "", 7, false, false, false);
         //Gvar.item_message1 = "お腹がいっぱいになった。";
     }
     if (Gvar.var_2211 == 1) {
-        await Func.setMessage1("最大満腹度が" + Gvar.var_567 + "になった。", "", 7, false, false, false);
+        await Func.setMessage("最大満腹度が" + Gvar.var_567 + "になった。", "", 7, false, false, false);
         //Gvar.item_message1 = "最大満腹度が" + Gvar.var_567 + "になった。";
     }
     return;

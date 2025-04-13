@@ -15,7 +15,7 @@ async function func785(this: any) {
         await Music.func123(); // 効果音
 
         Adap.DSPLAY(192);
-        await Func.setMessage1("「ボヘミアン・ラプソディ！」",
+        await Func.setMessage("「ボヘミアン・ラプソディ！」",
                                "", 7, false, false, false);
         Adap.gsel(19);
         Adap.color(255, 255, 255);
@@ -39,13 +39,13 @@ async function func785(this: any) {
         }
         await Func.AutoDraw(50);
         await Func.func336();
-        await Func.setMessage1("こうしてﾃﾞｨｱﾎﾞﾛは、露伴の描いた漫画を",
+        await Func.setMessage("こうしてﾃﾞｨｱﾎﾞﾛは、露伴の描いた漫画を",
                                "ﾎﾞﾍﾐｱﾝﾗﾌﾟｿﾃﾞｨの能力で現実化させ", 7, true, false, false);
 
-        await Func.setMessage1("かつての絶頂の日々に",
+        await Func.setMessage("かつての絶頂の日々に",
                                "戻ることができたのです…", 7, true, true, false);
 
-        await Func.setMessage1("          【ディアボロの大冒険】",
+        await Func.setMessage("          【ディアボロの大冒険】",
                                "                      完", 7, false, true, false);
         for (let cnt1 = 0; true; ++cnt1) {
             await Func.func337(); // メッセージ表示処理(自動)

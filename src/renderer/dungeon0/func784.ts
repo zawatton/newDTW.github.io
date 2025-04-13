@@ -4,9 +4,9 @@ import * as Func from '../func/index'
 
 async function func784(this: any) {
         Adap.dbgprt(784);
-        await Func.setMessage1("おやっ？君が持っているのは", "僕のマンガじゃあないか。", 7, true, false, true);
+        await Func.setMessage("おやっ？君が持っているのは", "僕のマンガじゃあないか。", 7, true, false, true);
 
-        await Func.setMessage1("僕のマンガが好きなのかい？", "【波調が合う】…ってことかな。", 7, true, true, true);
+        await Func.setMessage("僕のマンガが好きなのかい？", "【波調が合う】…ってことかな。", 7, true, true, true);
 
         Gvar.var_1261 = 1;
 
@@ -23,7 +23,7 @@ async function func784(this: any) {
         Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1542 = 0;
 
-        await Func.setMessage1("冗談！冗談だよ", "嫌だなあ～", 7, true, false, true);
+        await Func.setMessage("冗談！冗談だよ", "嫌だなあ～", 7, true, false, true);
 
         await Func.func051(); // キー入力待ち処理
         Gvar.var_198 = 0; // メッセージウィンドウ閉じる

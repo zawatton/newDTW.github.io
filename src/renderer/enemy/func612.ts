@@ -11,7 +11,7 @@ async function func612(this: any) {
         }
         Gvar.var_1393 = Gvar.var_673;
         Gvar.var_178 = 1;
-        await Func.setMessage1("ウワハハハハハハーッ！！", "", 8, false, false, true);
+        await Func.setMessage("ウワハハハハハハーッ！！", "", 8, false, false, true);
         Gvar.var_1399 = (Gvar.var_83[Gvar.var_1393].Var1 - Gvar.var_66 + 4) * 40;
         Gvar.var_1400 = (Gvar.var_83[Gvar.var_1393].Var2 - Gvar.var_67 + 4) * 40 - 10;
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
@@ -44,8 +44,8 @@ async function func612(this: any) {
         Gvar.var_1401 = 0;
         Gvar.var_1402 = 0;
         Gvar.var_1403 = 0;
-        await Func.setMessage1("西戸の嘲笑は", "ﾃﾞｨｱﾎﾞﾛを恐怖で呪縛した！", 7, true, false, false);
-        await Func.setMessage1("ぼくをチェーンで殴る気だッ！", "", 7, false, false, false);
+        await Func.setMessage("西戸の嘲笑は", "ﾃﾞｨｱﾎﾞﾛを恐怖で呪縛した！", 7, true, false, false);
+        await Func.setMessage("ぼくをチェーンで殴る気だッ！", "", 7, false, false, false);
         Gvar.var_240 = 0;
         Gvar.var_83[Gvar.var_1393].Var6 = 1;
         Gvar.var_83[Gvar.var_1393].Var18 = 0;

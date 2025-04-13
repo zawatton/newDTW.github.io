@@ -8,11 +8,11 @@ async function item589(this: any) {
         Gvar.var_1264 = 0;
         Gvar.var_1073 = Adap.rnd(2);
         if (Gvar.var_1073 == 0) {
-            await Func.setMessage1("「ブッ殺す」と心の中で思ったならッ！",
+            await Func.setMessage("「ブッ殺す」と心の中で思ったならッ！",
                                    "スデに行動は終わっているんだッ！", 7, false, false, true);
         }
         if (Gvar.var_1073 == 1) {
-            await Func.setMessage1("いったん食らい付いたら決して…",
+            await Func.setMessage("いったん食らい付いたら決して…",
                                    "スタンド能力を解除したりはしねえッ！", 7, false, false, true);
         }
         await Func.AutoDraw(12);

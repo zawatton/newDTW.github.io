@@ -6,10 +6,10 @@ import * as Func from '../func/index'
 async function item302(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (Gvar.var_172 == 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-            await Func.setMessage1("発動能力がパワーアップしている！",
+            await Func.setMessage("発動能力がパワーアップしている！",
                                    "", 7, true, false, false);
         }
-        await Func.setMessage1("オレって情けねえよなあ～～～。",
+        await Func.setMessage("オレって情けねえよなあ～～～。",
                                "死にたくなった･･･", 7, false, false, true);
         await Func.AutoDraw(20);
 

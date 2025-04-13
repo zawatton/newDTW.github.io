@@ -4,7 +4,7 @@ import * as Func from '../func/index'
 
 async function func689(this: any) {
         Adap.dbgprt(689);
-        await Func.setMessage1("このダンジョンを制覇した！", "", 12, true, false, false);
+        await Func.setMessage("このダンジョンを制覇した！", "", 12, true, false, false);
         for (let cnt1 = 0; true; ++cnt1) {
             Gvar.var_491 = Adap.rnd(Gvar.var_33);
             Gvar.var_492 = Adap.rnd(Gvar.var_34);
@@ -20,7 +20,7 @@ async function func689(this: any) {
         }
         Gvar.var_73[Gvar.var_491][Gvar.var_492] = 1;
         Gvar.var_200 = Gvar.var_71[Gvar.var_491][Gvar.var_492];
-        await Func.setMessage1("どこかに階段が現れたようだ…", "", 7, true, false, false);
+        await Func.setMessage("どこかに階段が現れたようだ…", "", 7, true, false, false);
         return;
 }
 

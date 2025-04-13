@@ -18,11 +18,11 @@ async function item719(this: any) {
     Gvar.var_2228 = 1;
     await Func.func531();
     if (Gvar.var_2228 == 0) {
-        await Func.setMessage1("" + Gvar.target_item_name + "に",
+        await Func.setMessage("" + Gvar.target_item_name + "に",
                                "新たな装備効果が発現した！", 7, false, false, false);
     }
     if (Gvar.var_2228 == 1) {
-        await Func.setMessage1("しかしﾃﾞｨｱﾎﾞﾛは",
+        await Func.setMessage("しかしﾃﾞｨｱﾎﾞﾛは",
                                "矢に選ばれなかった…", 7, false, false, false);
     }
     return;

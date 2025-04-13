@@ -9,7 +9,7 @@ async function enemy132(this: any) {
             Gvar.var_83[Gvar.var_673].Var7 = 1;
             Gvar.var_743 = 1; //スタンド像付与フラグON
             Adap.DSPLAY(121);
-            await Func.setMessage1("「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ」！", "", 8, true, false, false);
+            await Func.setMessage("「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ」！", "", 8, true, false, false);
             await Func.AutoDraw(10);
             Gvar.var_743 = 0; //スタンド像付与フラグOFF
             Gvar.var_146 = 0;
@@ -52,7 +52,7 @@ async function enemy132(this: any) {
                 Gvar.var_78[Gvar.var_854].Var10 = 1;
             }
             await Func.func018();
-            await Func.setMessage1("鉄塔がカエルに変化した！", "", 7, false, false, false);
+            await Func.setMessage("鉄塔がカエルに変化した！", "", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.var_389 = 0;
             Gvar.var_2197 = 1;

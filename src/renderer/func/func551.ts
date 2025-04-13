@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 async function func551(this: any) {
         Adap.dbgprt(551);
         Gvar.var_371 = 0;
-        await Func.setMessage1("特別な敵の棲家に入りますか？", "", 7, true, false, false);
+        await Func.setMessage("特別な敵の棲家に入りますか？", "", 7, true, false, false);
         await Func.AutoDraw(2);
         Gvar.var_245 = 19;
         Gvar.var_246 = 45;

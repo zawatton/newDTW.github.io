@@ -103,31 +103,31 @@ async function func623(this: any) {
             Gvar.var_1371 = 0;
             Gvar.var_2915 = Adap.rnd(9);
             if (Gvar.var_2915 == 0) {
-                await Func.setMessage1("マギ――――ッ！", "", 8, false, false, false);
+                await Func.setMessage("マギ――――ッ！", "", 8, false, false, false);
             }
             if (Gvar.var_2915 == 1) {
-                await Func.setMessage1("やっぱりわたし！", "わたし  わたし  わたし  わたし", 8, false, false, false);
+                await Func.setMessage("やっぱりわたし！", "わたし  わたし  わたし  わたし", 8, false, false, false);
             }
             if (Gvar.var_2915 == 2) {
-                await Func.setMessage1("ムギ―――ッ！", "", 8, false, false, false);
+                await Func.setMessage("ムギ―――ッ！", "", 8, false, false, false);
             }
             if (Gvar.var_2915 == 3) {
-                await Func.setMessage1("ハアァアアアアアア―――", "", 8, false, false, false);
+                await Func.setMessage("ハアァアアアアアア―――", "", 8, false, false, false);
             }
             if (Gvar.var_2915 == 4) {
-                await Func.setMessage1("まんまとだまされおったな", "このバカタレがァーッ", 8, false, false, false);
+                await Func.setMessage("まんまとだまされおったな", "このバカタレがァーッ", 8, false, false, false);
             }
             if (Gvar.var_2915 == 5) {
-                await Func.setMessage1("ウジュル        ウジュ", "        ウジュル", 8, false, false, false);
+                await Func.setMessage("ウジュル        ウジュ", "        ウジュル", 8, false, false, false);
             }
             if (Gvar.var_2915 == 6) {
-                await Func.setMessage1("おしい！おしい！", "その隣のわたしだったな", 8, false, false, false);
+                await Func.setMessage("おしい！おしい！", "その隣のわたしだったな", 8, false, false, false);
             }
             if (Gvar.var_2915 == 7) {
-                await Func.setMessage1("わたあああ～～～～～～しｨｨｨｨｨ", "だよ～～～～～～～～～～～オン！！", 8, false, false, false);
+                await Func.setMessage("わたあああ～～～～～～しｨｨｨｨｨ", "だよ～～～～～～～～～～～オン！！", 8, false, false, false);
             }
             if (Gvar.var_2915 == 8) {
-                await Func.setMessage1("史上最弱が最も最も最も最も最も最も", "最も最も最も最も最も最も  恐ろしィィ", 8, false, false, false);
+                await Func.setMessage("史上最弱が最も最も最も最も最も最も", "最も最も最も最も最も最も  恐ろしィィ", 8, false, false, false);
             }
             await Func.AutoDraw(15);
         }

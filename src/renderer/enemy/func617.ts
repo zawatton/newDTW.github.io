@@ -32,7 +32,7 @@ async function func617(this: any) {
         }
         Gvar.var_768 = 0;
         Gvar.var_2418 = 0;
-        await Func.setMessage1("ケンゾーはドラゴンに手を入れた！", "周囲の危険が増えた気がする…", 8, false, false, false);
+        await Func.setMessage("ケンゾーはドラゴンに手を入れた！", "周囲の危険が増えた気がする…", 8, false, false, false);
         await Func.AutoDraw(10);
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
         return;

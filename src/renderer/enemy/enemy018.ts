@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function enemy018(this: any) {
         Gvar.var_2830 = Adap.rnd(8);
         if (Gvar.var_2830 == 0) {
-            await Func.setMessage1("「チャンスをやろう…",
+            await Func.setMessage("「チャンスをやろう…",
                                    "  向かうべき『２つの道』を……！」", 8, true, false, true);
             await Func.AutoDraw(15);
             Gvar.var_742 = 1;
@@ -22,11 +22,11 @@ async function enemy018(this: any) {
             Gvar.var_2228 = 1;
             await Func.func531();
             if (Gvar.var_2228 == 0) {
-                await Func.setMessage1("" + Gvar.target_item_name + "に",
+                await Func.setMessage("" + Gvar.target_item_name + "に",
                                        "新たな装備効果が発現した！", 7, true, true, false);
             }
             if (Gvar.var_2228 == 1) {
-                await Func.setMessage1("「この【魂】  選ばれるものでは…」",
+                await Func.setMessage("「この【魂】  選ばれるものでは…」",
                                        "", 7, true, true, true);
 
                 Gvar.var_2891 = Math.floor(Gvar.var_211 / 2);
@@ -35,10 +35,10 @@ async function enemy018(this: any) {
                     Gvar.var_211 = 1;
                 }
                 Gvar.var_208 = Gvar.var_208 + Gvar.var_2891;
-                await Func.setMessage1("「なかった！」",
+                await Func.setMessage("「なかった！」",
                                        "", 7, true, true, true);
 
-                await Func.setMessage1("HPが半分になった。",
+                await Func.setMessage("HPが半分になった。",
                                         "", 7, false, true, false);
             }
             Gvar.var_389 = 0;

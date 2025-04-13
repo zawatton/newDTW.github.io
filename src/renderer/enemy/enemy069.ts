@@ -21,7 +21,7 @@ async function enemy069(this: any) {
             Gvar.var_463 = Gvar.var_83[Gvar.var_673].Var1;
             Gvar.var_464 = Gvar.var_83[Gvar.var_673].Var2;
             Gvar.var_114 = Gvar.var_673;
-            await Func.setMessage1("ﾌﾞﾗﾌｫｰﾄﾞに髪の毛で掴まれた！", "", 8, false, false, false);
+            await Func.setMessage("ﾌﾞﾗﾌｫｰﾄﾞに髪の毛で掴まれた！", "", 8, false, false, false);
             await Func.AutoDraw(3);
             Adap.DSPLAY(136);
             Gvar.var_1382 = 1;
@@ -43,7 +43,7 @@ async function enemy069(this: any) {
             if (Gvar.var_2893 == 0) {
                 return;
             }
-            await Func.setMessage1("髪の毛から血を吸い取られている！", "", 8, false, false, false);
+            await Func.setMessage("髪の毛から血を吸い取られている！", "", 8, false, false, false);
             Adap.DSPLAY(123);
             Gvar.var_389 = 2;
             for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
@@ -59,7 +59,7 @@ async function enemy069(this: any) {
             Gvar.var_1273 = 0;
             Adap.DSPLAY(129);
             if (Gvar.equip_disc[352] == 0) {
-                await Func.setMessage1("満腹度が急激に下がった！", "", 8, false, false, false);
+                await Func.setMessage("満腹度が急激に下がった！", "", 8, false, false, false);
                 Adap.DSPLAY(129);
                 Gvar.var_350 = Gvar.var_350 - 20;
                 if (Gvar.var_350 < 0) {
@@ -67,7 +67,7 @@ async function enemy069(this: any) {
                 }
             }
             if (Gvar.equip_disc[352] == 1) {
-                await Func.setMessage1("しかし装備DISCの効果によって", "腹ヘリを防いだ！", 8, false, false, false);
+                await Func.setMessage("しかし装備DISCの効果によって", "腹ヘリを防いだ！", 8, false, false, false);
             }
             await Func.AutoDraw(10);
             Gvar.var_389 = 0;

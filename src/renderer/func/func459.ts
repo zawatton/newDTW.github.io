@@ -7,7 +7,7 @@ async function func459(this: any) {
         Gvar.var_195 = 0;
         Gvar.var_196 = 0;
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
-        await Func.setMessage1("道具をひとつも持っていないぞ",
+        await Func.setMessage("道具をひとつも持っていないぞ",
                                 "", 7, false, false, false);
         await Func.AutoDraw(3);
         Gvar.var_1240 = 0;

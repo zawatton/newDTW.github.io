@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item723(this: any) {
         await Func.AutoDraw(12);
         if (Gvar.var_262 == 1) { // Gvar.var_262 == 1 なので、Gvar.dungeon_number = 0 であれば
-            await Func.setMessage1("しかし何も起こらなかった…",
+            await Func.setMessage("しかし何も起こらなかった…",
                                   "", 7, false, false, false);
             return;
         }

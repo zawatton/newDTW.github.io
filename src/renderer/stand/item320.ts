@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item320(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         Gvar.var_131 = 1;
-        await Func.setMessage1("砂鉄を吸い寄せて透明になった。",
+        await Func.setMessage("砂鉄を吸い寄せて透明になった。",
                                "", 7, false, false, false);
         await Func.AutoDraw(5);
         if (Gvar.var_2254 == 1) {

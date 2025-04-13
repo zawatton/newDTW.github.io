@@ -19,7 +19,7 @@ async function item114(this: any) {
         }
         Gvar.var_1283 = 1;
 
-        await Func.setMessage1("「一手」 遅カッタ…ナ…！",
+        await Func.setMessage("「一手」 遅カッタ…ナ…！",
                                "", 7, false, false, true);
 
         Gvar.var_2261 = Gvar.kougeki_disc_id ;

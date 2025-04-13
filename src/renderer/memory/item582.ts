@@ -27,10 +27,10 @@ async function item582(this: any) {
             }
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1583 = 0;
-            await Func.setMessage1("ﾌｰ･ﾌｧｲﾀｰｽﾞのDISCの回数が", "残り １ になってしまった！！", 7, false, false, false);
+            await Func.setMessage("ﾌｰ･ﾌｧｲﾀｰｽﾞのDISCの回数が", "残り １ になってしまった！！", 7, false, false, false);
         }
         if (Gvar.var_2204 != 1) {
-            await Func.setMessage1("しかし何も起こらなかった…", "", 7, false, false, false);
+            await Func.setMessage("しかし何も起こらなかった…", "", 7, false, false, false);
         }
         return;
 }

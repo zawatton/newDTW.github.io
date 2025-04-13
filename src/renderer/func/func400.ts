@@ -26,14 +26,14 @@ async function func400(this: any) {
         // Gvar.var_224 は持っているアイテム数と思われる。アイテムは20個まで持てる。
         // 所持アイテム数が20個以上になる場合
         if (Gvar.var_224 >= 20) {
-            await Func.setMessage1("" + Gvar.disp_item_name + "に乗った",
+            await Func.setMessage("" + Gvar.disp_item_name + "に乗った",
                                     "持ち物が多くて拾えない", 7, false, false, false);
             await Func.func047(); // メッセージ履歴追加処理
             await Func.AutoDraw(5);
             return;
         }
         // 所持アイテムが20個未満の場合'
-        await Func.setMessage1("" + Gvar.disp_item_name + "を拾った", "", 7, false, false, false);
+        await Func.setMessage("" + Gvar.disp_item_name + "を拾った", "", 7, false, false, false);
         await Func.func047(); // メッセージ履歴追加処理
         if (Gvar.belongings_item_list >= 900 && Gvar.belongings_item_list < 1000) {
             Gvar.var_1840 = Gvar.belongings_item_list - 900;

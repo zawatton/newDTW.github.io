@@ -11,10 +11,10 @@ async function func743(this: any) {
             await Func.func746();
             return;
         }
-        await Func.setMessage1("わたしはツェペリ男爵だ。",
+        await Func.setMessage("わたしはツェペリ男爵だ。",
                                "勇気だけでは勝てんよォ――", 7, true, false, true);
                                
-        await Func.setMessage1("そして私は味方だ。",
+        await Func.setMessage("そして私は味方だ。",
                                "ディアボロ君。", 7, true, false, true);
 
         await Func.func051(); // キー入力待ち処理

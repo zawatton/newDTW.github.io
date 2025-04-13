@@ -10,7 +10,7 @@ async function func543(this: any) {
         Gvar.var_140 = Gvar.var_140 + 1;
         Gvar.var_141 = 1;
         Adap.DSPLAY(120);
-        await Func.setMessage1("磁力がさらに強くなったようだ…", "", 10, false, false, false);
+        await Func.setMessage("磁力がさらに強くなったようだ…", "", 10, false, false, false);
         return;
 }
 

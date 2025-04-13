@@ -196,37 +196,37 @@ async function func702(this: any) {
                 await Func.AutoDraw(10);
                 if (Gvar.var_3102[1] == 1) {
                     Gvar.var_3104 = "おれの名は";
-                    await Func.setMessage1("「" + Gvar.var_3104 + "ペイジ」", "", 8, false, false, true);
+                    await Func.setMessage("「" + Gvar.var_3104 + "ペイジ」", "", 8, false, false, true);
                 }
                 if (Gvar.var_3102[2] == 1) {
                     if (Gvar.var_3104 == "") {
                         Gvar.var_3104 = "おれの名は";
-                        await Func.setMessage1("「" + Gvar.var_3104 + "ジョーンズ」", "", 8, false, false, true);
+                        await Func.setMessage("「" + Gvar.var_3104 + "ジョーンズ」", "", 8, false, false, true);
                     }
                     else {
-                        await Func.setMessage1("「ジョーンズ」", "", 8, false, false, true);
+                        await Func.setMessage("「ジョーンズ」", "", 8, false, false, true);
                     }
                 }
                 if (Gvar.var_3102[3] == 1) {
                     if (Gvar.var_3104 == "") {
                         Gvar.var_3104 = "おれの名は";
-                        await Func.setMessage1("「" + Gvar.var_3104 + "プラント」", "", 8, false, false, true);
+                        await Func.setMessage("「" + Gvar.var_3104 + "プラント」", "", 8, false, false, true);
                     }
                     else {
-                        await Func.setMessage1("「プラント」", "", 8, false, false, true);
+                        await Func.setMessage("「プラント」", "", 8, false, false, true);
                     }
                 }
                 if (Gvar.var_3102[4] == 1) {
                     if (Gvar.var_3104 == "") {
                         Gvar.var_3104 = "おれの名は";
-                        await Func.setMessage1("「" + Gvar.var_3104 + "ボーンナム」", "", 8, false, false, true);
+                        await Func.setMessage("「" + Gvar.var_3104 + "ボーンナム」", "", 8, false, false, true);
                     }
                     else {
-                        await Func.setMessage1("「ボーンナム」", "", 8, false, false, true);
+                        await Func.setMessage("「ボーンナム」", "", 8, false, false, true);
                     }
                 }
                 await Func.AutoDraw(10);
-                await Func.setMessage1("「血管針攻撃！！！」", "", 8, false, false, true);
+                await Func.setMessage("「血管針攻撃！！！」", "", 8, false, false, true);
                 await Func.AutoDraw(10);
             }
         }

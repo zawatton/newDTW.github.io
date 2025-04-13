@@ -19,7 +19,7 @@ async function item103(this: any) {
         }
         Gvar.var_1283 = 1;
 
-        await Func.setMessage1("ACT ３ FREEZE  ！！",
+        await Func.setMessage("ACT ３ FREEZE  ！！",
                                "", 7, false, false, false);
         
         Gvar.var_2261 = Gvar.kougeki_disc_id ;

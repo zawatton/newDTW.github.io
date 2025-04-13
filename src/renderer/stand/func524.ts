@@ -7,7 +7,7 @@ async function func524(this: any) {
         Adap.dbgprt(524);
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
         if (Gvar.var_233[Gvar.var_225].Var0 != 600 && Gvar.var_233[Gvar.var_225].Var0 != 602 && Gvar.var_233[Gvar.var_225].Var0 != 604 && Gvar.var_233[Gvar.var_225].Var0 != 630 && Gvar.var_233[Gvar.var_225].Var0 != 631 && Gvar.var_233[Gvar.var_225].Var0 != 632 && Gvar.var_233[Gvar.var_225].Var0 != 633 && Gvar.var_233[Gvar.var_225].Var0 != 634 && Gvar.var_233[Gvar.var_225].Var0 != 636 && Gvar.var_233[Gvar.var_225].Var0 != 639) {
-            await Func.setMessage1("「コンナモン食エネーヨッ！」", "", 7, true, false, true);
+            await Func.setMessage("「コンナモン食エネーヨッ！」", "", 7, true, false, true);
             Gvar.open_item_menue = 1; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
             await Func.func051(); // キー入力待ち処理
             await Func.func461(); // 道具画面(メニュー画面/道具)での動作処理 (アイテム表示の並び等)
@@ -69,7 +69,7 @@ async function func524(this: any) {
         }
         await Func.func430();
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-        await Func.setMessage1("アギャギャ――――！", "クレクレ―――ッ！！", 7, true, false, true);
+        await Func.setMessage("アギャギャ――――！", "クレクレ―――ッ！！", 7, true, false, true);
         if (Gvar.var_2301 == 0) {
             Gvar.var_233[Gvar.var_2300].Var3 = Gvar.var_233[Gvar.var_2300].Var3 + Gvar.var_2371;
             if (Gvar.var_233[Gvar.var_2300].Var3 >= 99) {
@@ -103,10 +103,10 @@ async function func524(this: any) {
         Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1570 = 0;
         if (Gvar.var_233[Gvar.var_2300].Var3 < 99) {
-            await Func.setMessage1("エネルギーが " + Gvar.var_2371 + "増えた！", "", 7, false, false, false);
+            await Func.setMessage("エネルギーが " + Gvar.var_2371 + "増えた！", "", 7, false, false, false);
         }
         if (Gvar.var_233[Gvar.var_2300].Var3 >= 99) {
-            await Func.setMessage1("エネルギーが満タンになった！", "", 7, false, false, false);
+            await Func.setMessage("エネルギーが満タンになった！", "", 7, false, false, false);
         }
         await Func.AutoDraw(10);
         Gvar.var_217 = 1;

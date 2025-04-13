@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item115(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
 
-        await Func.setMessage1("生まれろ…  新しい生命…",
+        await Func.setMessage("生まれろ…  新しい生命…",
                                "", 7, false, false, true);
 
         for (let cnt2 = 0; cnt2 < 16; ++cnt2) {

@@ -15,11 +15,11 @@ async function func805(this: any) {
         Gvar.var_1925 = Gvar.var_1925 * Gvar.var_1036;
         Gvar.var_3189 = Gvar.var_1925;
         if (Gvar.wallet < Gvar.var_3189) {
-            await Func.setMessage1("それを買うには お金が足りません。",
+            await Func.setMessage("それを買うには お金が足りません。",
                                     "", 7, true, false, true);
             Gvar.var_3190 = Gvar.var_3189 - Gvar.wallet;
             if (Gvar.var_3190 <= Gvar.var_1032) {
-                await Func.setMessage1("口座のお金を足して買いますか？",
+                await Func.setMessage("口座のお金を足して買いますか？",
                                         "", 7, true, false, true);
                 Gvar.var_245 = 19;
                 Gvar.var_246 = 45;
@@ -35,7 +35,7 @@ async function func805(this: any) {
             await Func.func803();
             return;
         }
-        await Func.setMessage1("【" + Gvar.var_3188 + "】は",
+        await Func.setMessage("【" + Gvar.var_3188 + "】は",
                                 "" + Gvar.var_3189 + "G です。", 7, false, false, true);
         await Func.func051(); // キー入力待ち処理
         Gvar.var_245 = 19;

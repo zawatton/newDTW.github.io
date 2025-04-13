@@ -7,10 +7,10 @@ async function func755(this: any) {
         Adap.dbgprt(755);
         Gvar.var_243 = 0;
 
-        await Func.setMessage1("SPW財団の男「ひとつ情報があります」",
+        await Func.setMessage("SPW財団の男「ひとつ情報があります」",
                                "", 7, true, false, true);
 
-        await Func.setMessage1("「SPW財団の調査によると、次の階では",
+        await Func.setMessage("「SPW財団の調査によると、次の階では",
                                 "", 7, true, false, true);
 
         Gvar.var_3142 = Adap.sdim(50, 20, null); 
@@ -30,11 +30,11 @@ async function func755(this: any) {
         Gvar.current_floor = Gvar.var_3143;
         Gvar.var_3145 = 0;
         for (let cnt1 = 0; cnt1 < Gvar.var_3144; ++cnt1) {
-            await Func.setMessage1("" + Gvar.var_3142[Gvar.var_3145],
+            await Func.setMessage("" + Gvar.var_3142[Gvar.var_3145],
                                     "", 7, true, false, true);
             Gvar.var_3145 = Gvar.var_3145 + 1;
         }
-        await Func.setMessage1("が出現するようです。",
+        await Func.setMessage("が出現するようです。",
                                 "お気をつけて」", 7, true, false, true);
 
         await Func.AutoDraw(5);

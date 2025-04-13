@@ -8,7 +8,7 @@ async function func775(this: any) {
         Gvar.var_2001 = 0;
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
         if (Gvar.var_233[Gvar.var_225].Var0 >= 800 && Gvar.var_233[Gvar.var_225].Var0 < 900 && Gvar.var_233[Gvar.var_225].Var8 != 0) {
-            await Func.setMessage1("中に何か入っているアイテムは",
+            await Func.setMessage("中に何か入っているアイテムは",
                                    "送ることはできない。", 7, true, false, false);
 
             await Func.func051(); // キー入力待ち処理
@@ -37,7 +37,7 @@ async function func775(this: any) {
             Gvar.var_2116 = 1;
         }
         if (Gvar.var_2116 == 1) {
-            await Func.setMessage1("呪われていて外せない！",
+            await Func.setMessage("呪われていて外せない！",
                                    "", 7, true, false, false);
 
             await Func.func051(); // キー入力待ち処理

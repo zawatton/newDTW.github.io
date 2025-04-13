@@ -7,11 +7,11 @@ async function func727(this: any) {
         Gvar.var_243 = 0;
         Gvar.var_3125 = Adap.rnd(2);
         if (Gvar.var_3125 == 0) {
-            await Func.setMessage1("キュルキュルキュルキュル",
+            await Func.setMessage("キュルキュルキュルキュル",
                                    "", 7, false, false, true);
         }
         if (Gvar.var_3125 == 1) {
-            await Func.setMessage1("ギャルギャルギャルギャル",
+            await Func.setMessage("ギャルギャルギャルギャル",
                                    "", 7, false, false, true);
         }
         await Func.AutoDraw(5);

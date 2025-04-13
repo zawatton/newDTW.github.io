@@ -15,7 +15,7 @@ async function func746(this: any) {
         }
         if (Gvar.var_3125 == 0) {
             if (Gvar.var_130 == 0) {
-                await Func.setMessage1("軽い波紋を作れるようにしてやろうか？",
+                await Func.setMessage("軽い波紋を作れるようにしてやろうか？",
                                         "", 7, true, false, true);
                 Gvar.var_3133 = 1;
             }
@@ -29,27 +29,27 @@ async function func746(this: any) {
         }
         if (Gvar.var_3125 == 1) {
             if (Gvar.var_1332 < 10) {
-                await Func.setMessage1("ま…まるで親友と息子を同時に",
+                await Func.setMessage("ま…まるで親友と息子を同時に",
                                         "持ったような気持ちだぞ…", 7, true, false, true);
             }
             if (Gvar.var_1332 >= 10 && Gvar.var_1332 < 30) {
-                await Func.setMessage1("ついに  ついにきたか",
+                await Func.setMessage("ついに  ついにきたか",
                                         "あの予言の時が…", 7, true, false, true);
             }
             if (Gvar.var_1332 >= 30 && Gvar.var_1332 < 60) {
-                await Func.setMessage1("やれやれ…こいつらの魂を",
+                await Func.setMessage("やれやれ…こいつらの魂を",
                                         "解き放つのは骨が折れそうじゃわい", 7, true, false, true);
             }
             if (Gvar.var_1332 >= 60 && Gvar.var_1332 < 80) {
-                await Func.setMessage1("戦いの思考２！勇気とは怖さを知る事！",
+                await Func.setMessage("戦いの思考２！勇気とは怖さを知る事！",
                                         "恐怖を我が物とすることじゃあッ！", 7, true, false, true);
             }
             if (Gvar.var_1332 >= 80 && Gvar.var_1332 < 100) {
-                await Func.setMessage1("戦いの思考１！相手の立場になって",
+                await Func.setMessage("戦いの思考１！相手の立場になって",
                                         "考える…これは大事じゃぞ！", 7, true, false, true);
             }
             if (Gvar.var_1332 >= 100) {
-                await Func.setMessage1("ゆくぞディアボロ君！",
+                await Func.setMessage("ゆくぞディアボロ君！",
                                         "ところでコルク抜きもってなぁい？", 7, true, false, true);
             }
         }
@@ -58,11 +58,11 @@ async function func746(this: any) {
             Gvar.var_3089 = Gvar.var_83[Gvar.var_3072].Var39;
             await Func.func682();
             if (Gvar.var_3073 < 99999) {
-                await Func.setMessage1("あと" + Gvar.var_3073 + "くらいで",
+                await Func.setMessage("あと" + Gvar.var_3073 + "くらいで",
                                         "もっと強くなれるだろう", 7, true, false, true);
             }
             if (Gvar.var_3073 >= 99999) {
-                await Func.setMessage1("私の強さはこれが限界のようだ。",
+                await Func.setMessage("私の強さはこれが限界のようだ。",
                                         "", 7, true, false, true);
             }
             await Music.func124();
@@ -72,15 +72,15 @@ async function func746(this: any) {
             await Func.func626();
             Gvar.var_3125 = Adap.rnd(3);
             if (Gvar.var_3125 == 0) {
-                await Func.setMessage1("" + Gvar.enemy_name + "なんぞ",
+                await Func.setMessage("" + Gvar.enemy_name + "なんぞ",
                                         "ノミと同類よォー！", 7, true, false, true);
             }
             if (Gvar.var_3125 == 1) {
-                await Func.setMessage1("波紋エネルギーをぶつければ",
+                await Func.setMessage("波紋エネルギーをぶつければ",
                                         "吸血鬼どもは砕け散るッ！！", 7, true, false, true);
             }
             if (Gvar.var_3125 == 2) {
-                await Func.setMessage1("どうだディアボロ君",
+                await Func.setMessage("どうだディアボロ君",
                                         "これが「仙道」だ！", 7, true, false, true);
             }
         }

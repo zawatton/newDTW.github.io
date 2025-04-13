@@ -25,40 +25,40 @@ async function func809(this: any) {
         await Func.AutoDraw(1);
         Gvar.var_783 = 13;
         if (Gvar.var_1039 == 0) {
-            await Func.setMessage1("ﾎﾟﾙﾎﾟ「ブフゥ～～～～…」",
+            await Func.setMessage("ﾎﾟﾙﾎﾟ「ブフゥ～～～～…」",
                                   "", 7, true, false, true);
       
-            await Func.setMessage1("「ボス…ダンジョンの一人旅は危険です」",
+            await Func.setMessage("「ボス…ダンジョンの一人旅は危険です」",
                                   "", 7, true, false, true);
   
-            await Func.setMessage1("「ダンジョン内で仲間と出会えれば",
+            await Func.setMessage("「ダンジョン内で仲間と出会えれば",
                                   "  冒険がグッと楽になるでしょう…」", 7, true, false, true);
     
-            await Func.setMessage1("「ブフゥ～～～…」",
+            await Func.setMessage("「ブフゥ～～～…」",
                                   "", 7, true, false, true);
     
-            await Func.setMessage1("「しかし問題は、",
+            await Func.setMessage("「しかし問題は、",
                                   "  毎回必ず出会えるわけではないところ」", 7, true, false, true);
     
-            await Func.setMessage1("「私ならば、有能な人材を",
+            await Func.setMessage("「私ならば、有能な人材を",
                                   "  あらかじめ１階に呼ぶことが可能です」", 7, true, false, true);
     
-            await Func.setMessage1("「そのための費用として",
+            await Func.setMessage("「そのための費用として",
                                   "  2000Gかかってしまいますが…」", 7, true, false, true);
     
-            await Func.setMessage1("「ブフゥ～～～…」",
+            await Func.setMessage("「ブフゥ～～～…」",
                                   "", 7, true, false, true);
 
             Gvar.var_1039 = 1;
         }
         if (Gvar.var_1040 == 1) {    
-            await Func.setMessage1("ﾎﾟﾙﾎﾟ「ﾚｸｲｴﾑの大迷宮１階に",
+            await Func.setMessage("ﾎﾟﾙﾎﾟ「ﾚｸｲｴﾑの大迷宮１階に",
                                   "      ヒマなやつを呼んであります」", 7, true, false, true);
             await Func.func812();
             return;
         }
 
-        await Func.setMessage1("ﾎﾟﾙﾎﾟ「ボス…  2000Gで",
+        await Func.setMessage("ﾎﾟﾙﾎﾟ「ボス…  2000Gで",
                               "      仲間を１階に呼んでおきますか？」", 7, true, false, true);
 
         await Func.func051(); // キー入力待ち処理

@@ -6,7 +6,7 @@ import * as Music from '../music/index'
 async function func161a(this: any) {
         Adap.dbgprt(161);
         Gvar.var_243 = 0;
-        await Func.setMessage1("酒場に入った",
+        await Func.setMessage("酒場に入った",
                                "", 7, false, false, false);
         await Func.AutoDraw(5);
         await Music.func114b(); // 酒場の選曲(BGM "")

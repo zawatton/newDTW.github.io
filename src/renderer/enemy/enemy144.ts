@@ -78,10 +78,10 @@ async function enemy144(this: any) {
         Gvar.var_78[Gvar.var_419].Var28 = 0;
         Gvar.var_78[Gvar.var_419].Var29 = 0;
         if (Gvar.var_127 == 1 || Gvar.var_132 >= 1) {
-            await Func.setMessage1("何者かに", "" + Gvar.target_item_name + "を盗まれた！", 8, false, false, false);
+            await Func.setMessage("何者かに", "" + Gvar.target_item_name + "を盗まれた！", 8, false, false, false);
         }
         else
-            await Func.setMessage1("川尻浩作に", "" + Gvar.target_item_name + "を盗まれた！", 8, false, false, false);
+            await Func.setMessage("川尻浩作に", "" + Gvar.target_item_name + "を盗まれた！", 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

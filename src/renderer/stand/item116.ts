@@ -45,19 +45,19 @@ async function item116(this: any) {
         }
         if (Gvar.var_2268 == 0 && Gvar.var_2269 == 0) {
             Adap.DSPLAY(184);
-            await Func.setMessage1("この階の地図を念写した！",
+            await Func.setMessage("この階の地図を念写した！",
                                    "", 7, false, false, false);
             Gvar.var_102 = 1;
         }
         if (Gvar.var_2269 >= 1) {
-            await Func.setMessage1("「きさま、見ているなッ！！」",
+            await Func.setMessage("「きさま、見ているなッ！！」",
                                    "", 7, true, false, true);
             Gvar.var_176 = Gvar.var_2269;
             Gvar.var_198 = 0; // メッセージウィンドウ閉じる
         }
         if (Gvar.var_2268 >= 1) {
             Adap.DSPLAY(184);
-            await Func.setMessage1("この階のｱｸｱ･ﾈｯｸﾚｽを念写した！",
+            await Func.setMessage("この階のｱｸｱ･ﾈｯｸﾚｽを念写した！",
                                    "", 7, true, false, false);
             Gvar.var_175 = Gvar.var_2268;
             Gvar.var_198 = 0; // メッセージウィンドウ閉じる

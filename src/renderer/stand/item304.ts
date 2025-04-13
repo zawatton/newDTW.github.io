@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item304(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (Gvar.var_172 == 1) { // Gvar.var_172 発動効果が向上するフラグがONであれば
-            await Func.setMessage1("発動能力がパワーアップしている！",
+            await Func.setMessage("発動能力がパワーアップしている！",
                                    "", 7, true, false, false);
         }
         Adap.gsel(19);
@@ -21,7 +21,7 @@ async function item304(this: any) {
             Gvar.var_311 = Gvar.var_311 + 5;
         }
         Gvar.var_174 = 1;
-        await Func.setMessage1("雨が降ってきた。",
+        await Func.setMessage("雨が降ってきた。",
                                "", 7, false, false, false);
         Gvar.var_1594 = 1;
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
@@ -186,7 +186,7 @@ async function item304(this: any) {
         }
         await Func.AutoDraw(10);
         Gvar.var_2217 = 0;
-        await Func.setMessage1("",
+        await Func.setMessage("",
                                "  ――――  雨があがった  ――――", 7, true, false, false);
         Gvar.var_1594 = 0;
         Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
@@ -196,7 +196,7 @@ async function item304(this: any) {
         }
         Gvar.var_311 = 0;
         Gvar.var_312 = 0;
-        await Func.setMessage1("地面が洗い流され、",
+        await Func.setMessage("地面が洗い流され、",
                                "罠が見えるようになった。", 7, true, true, false);
         Gvar.var_121 = 1; // Gvar.var_121 罠が見えるようになるフラグON
         await Func.func331(); // 装備 or 消費アイテムを装備または使用した際の効果においてエフェクトを伴う処理
@@ -240,15 +240,15 @@ async function item304(this: any) {
             Gvar.var_2205++;
         }
         if (Gvar.var_2304 == 1) {
-            await Func.setMessage1("フー・ファイターズの威力がアップした！",
+            await Func.setMessage("フー・ファイターズの威力がアップした！",
                                    "", 7, true, true, false);
         }
         if (Gvar.var_2303 == 1) {
-            await Func.setMessage1("地面のカエルが成長したようだ。",
+            await Func.setMessage("地面のカエルが成長したようだ。",
                                    "", 7, true, true, false);
         }
         if (Gvar.var_2305 == 1) {
-            await Func.setMessage1("パワーアップした敵がいるようだ…",
+            await Func.setMessage("パワーアップした敵がいるようだ…",
                                    "", 7, true, true, false);
         }
         if (Gvar.var_2254 == 1) {

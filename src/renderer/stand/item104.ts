@@ -27,7 +27,7 @@ async function item104(this: any) {
 
         await Func.AutoDraw(15);
 
-        await Func.setMessage1("空間をけずりとる！ ",
+        await Func.setMessage("空間をけずりとる！ ",
                                "……するとお～～～～っ！", 7, true, false, false);
         
         await Func.AutoDraw(5);

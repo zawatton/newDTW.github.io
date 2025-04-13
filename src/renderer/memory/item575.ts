@@ -7,12 +7,12 @@ async function item575(this: any) {
         await Func.AutoDraw(12);
         Gvar.var_1264 = 0;
         if (Gvar.equip_disc[351] == 1) {
-            await Func.setMessage1("装備DISCの効果によって",
+            await Func.setMessage("装備DISCの効果によって",
                                    "眠くならなかった！", 7, false, false, false);
             return;
         }
         if (Gvar.var_120 == 1) {
-            await Func.setMessage1("10時間熟睡した気分になっていて",
+            await Func.setMessage("10時間熟睡した気分になっていて",
                                    "眠くならなかった！", 7, false, false, false);
             return;
         }

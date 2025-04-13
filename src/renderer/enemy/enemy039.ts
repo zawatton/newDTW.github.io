@@ -43,7 +43,7 @@ async function enemy039(this: any) {
             Gvar.var_1481 = 0;
             Gvar.var_389 = 0;
             if (Gvar.equip_disc[352] == 0) {
-                await Func.setMessage1("養分を吸われて満腹度が下がった！", "", 8, false, false, false);
+                await Func.setMessage("養分を吸われて満腹度が下がった！", "", 8, false, false, false);
                 Adap.DSPLAY(129);
                 Gvar.var_350 = Gvar.var_350 - 10;
                 if (Gvar.var_350 < 0) {
@@ -51,7 +51,7 @@ async function enemy039(this: any) {
                 }
             }
             if (Gvar.equip_disc[352] == 1) {
-                await Func.setMessage1("しかし装備DISCの効果によって", "腹ヘリを防いだ！", 8, false, false, false);
+                await Func.setMessage("しかし装備DISCの効果によって", "腹ヘリを防いだ！", 8, false, false, false);
             }
             if (Gvar.var_128 >= 1) {
                 await Func.func023();
