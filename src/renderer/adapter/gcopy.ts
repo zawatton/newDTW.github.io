@@ -1,4 +1,5 @@
 import { Gvar } from '../variable';
+import { spriteManager } from './SpriteManager';
 
 function gcopy(
     org_buffer_id: any,
@@ -9,6 +10,11 @@ function gcopy(
     dest_width?: number, // 描画先の幅（任意指定）
     dest_height?: number // 描画先の高さ（任意指定）
 ) {
+    // 個別スプライトがあればそちらを使用
+    if (spriteManager.drawLegacy(org_buffer_id, x, y, img_width, img_height, dest_width, dest_height)) {
+        return;
+    }
+
     const sourceCanvas = Gvar.canvases[org_buffer_id];
     if (!sourceCanvas || sourceCanvas.width === 0 || sourceCanvas.height === 0) {
         console.error('Source canvas is not initialized or has a size of 0.');

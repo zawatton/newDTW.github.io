@@ -32,3 +32,4 @@ Thumbs.db
 node_modules/*
 dist/*
 build/*
+assets/sprites/
