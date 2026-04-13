@@ -559,6 +559,7 @@ async function func543(this: any) {
             await Func.func019();
             return;
         }
+        }
         // === DISC No.207: グレイトフル・デッド ===
         if (Gvar.var_2494 == 207) {
             await Func.func538();
@@ -733,6 +734,7 @@ async function func543(this: any) {
             Gvar.var_242 = 1;
             await Func.func019();
             return;
+        }
         }
         // === DISC No.122: エニグマ ===
         if (Gvar.var_2494 == 122) {
@@ -1108,6 +1110,9 @@ async function func543(this: any) {
             Gvar.var_242 = 1;
             await Func.func019();
             return;
+        }
+        }
+        }
         }
         // === DISC No.107: デス13(ラリホー) ===
         if (Gvar.var_2494 == 107) {
@@ -2007,6 +2012,7 @@ async function func543(this: any) {
             await Func.func019();
             return;
         }
+        }
         // === DISC No.310: 敵召集 ===
         if (Gvar.var_2494 == 310) {
             await Func.func538();
@@ -2052,6 +2058,7 @@ async function func543(this: any) {
             Gvar.var_242 = 1;
             await Func.func019();
             return;
+        }
         }
         // === DISC No.403: 食べるDISC選択 ===
         if (Gvar.var_2494 == 403) {
@@ -2118,6 +2125,7 @@ async function func543(this: any) {
             Gvar.var_242 = 1;
             await Func.func019();
             return;
+        }
         }
         // === DISC No.126: C-MOON(重力変化) ===
         if (Gvar.var_2494 == 126) {
@@ -2733,6 +2741,7 @@ async function func543(this: any) {
             Gvar.var_242 = 1;
             await Func.func019();
             return;
+        }
         }
         // === DISC No.102: キング・クリムゾン ===
         if (Gvar.var_2494 == 102) {
@@ -3482,6 +3491,7 @@ async function func543(this: any) {
             await Func.func019();
             return;
         }
+        }
         // === DISC No.112/394: シアーハートアタック召喚 ===
         if (Gvar.var_2494 == 112 || Gvar.var_2494 == 394) {
             // 出せない場合
@@ -3940,7 +3950,6 @@ async function func543(this: any) {
             if (Gvar.var_652 == 2) { Gvar.var_475 = 16; }
             if (Gvar.var_652 == 3) { Gvar.var_475 = 29; }
             if (Gvar.var_652 == 4) { Gvar.var_475 = 40; }
-            }
             Adap.DSPLAY(123);
             Adap.gsel(19);
             Adap.color(255, 255, 255);
@@ -3962,268 +3971,241 @@ async function func543(this: any) {
             Gvar.var_2424 = 1;
             for (let cnt = 0; cnt < Gvar.var_107; ++cnt) {
                 Gvar.var_2507 = 0;
-                if ( Gvar.var_83[Gvar.var_2424].Var0 != 0 ) {
+                if (Gvar.var_83[Gvar.var_2424].Var0 != 0) {
                     Gvar.var_2221 = Gvar.var_74 - 1;
-                    if ( Gvar.var_2221 < 0 ) {
-                        Gvar.var_2221 = 0;
-                    }
+                    if (Gvar.var_2221 < 0) { Gvar.var_2221 = 0; }
                     Gvar.var_2222 = Gvar.var_74 + 1;
-                    if ( Gvar.var_2222 > Gvar.var_32 ) {
-                        Gvar.var_2222 = Gvar.var_32;
-                    }
+                    if (Gvar.var_2222 > Gvar.var_32) { Gvar.var_2222 = Gvar.var_32; }
                     Gvar.var_2223 = Gvar.var_75 + 1;
-                    if ( Gvar.var_2223 > Gvar.var_33 ) {
-                        Gvar.var_2223 = Gvar.var_33;
-                    }
+                    if (Gvar.var_2223 > Gvar.var_33) { Gvar.var_2223 = Gvar.var_33; }
                     Gvar.var_2224 = Gvar.var_75 - 1;
-                    if ( Gvar.var_2224 < 0 ) {
-                        Gvar.var_2224 = 0;
-                    }
-                    if ( Gvar.var_2507 == 0  &&  Gvar.var_2424 != Gvar.var_141  &&  Gvar.var_83[Gvar.var_2424].Var10 == Gvar.var_226  &&  Gvar.var_226 > 0  &&  Gvar.var_226 <= 12  &&  Gvar.var_193 == 1 ) {
+                    if (Gvar.var_2224 < 0) { Gvar.var_2224 = 0; }
+                    if (Gvar.var_2507 == 0 && Gvar.var_2424 != Gvar.var_141 && Gvar.var_83[Gvar.var_2424].Var10 == Gvar.var_226 && Gvar.var_226 > 0 && Gvar.var_226 <= 12 && Gvar.var_193 == 1) {
                         await Func.func552();
                         Gvar.var_2564 = Adap.rnd(3);
                         Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
                         await Func.func658();
-                        if ( Gvar.var_2497 == 0 ) {
-                            if ( Gvar.var_2506 == 0 ) {
+                        if (Gvar.var_2497 == 0) {
+                            if (Gvar.var_2506 == 0) {
                                 Gvar.var_2563 = Gvar.var_2424;
                             }
                         } else {
-                            if ( Gvar.var_2564 == 0 ) {
+                            if (Gvar.var_2564 == 0) {
                                 Gvar.var_2563 = Gvar.var_2424;
                             }
                         }
+                        Gvar.var_2507 = 1;
                     }
-                    Gvar.var_2507 = 1;
-                }
-                if ( Gvar.var_2507 == 0  &&  Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_74  &&  Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223 ) {
-                    await Func.func552();
-                    Gvar.var_2564 = Adap.rnd(3);
-                    Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
-                    await Func.func658();
-                    if ( Gvar.var_2497 == 0 ) {
-                        if ( Gvar.var_2506 == 0 ) {
-                            Gvar.var_2563 = Gvar.var_2424;
+                    if (Gvar.var_2507 == 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_74 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223) {
+                        await Func.func552();
+                        Gvar.var_2564 = Adap.rnd(3);
+                        Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
+                        await Func.func658();
+                        if (Gvar.var_2497 == 0) {
+                            if (Gvar.var_2506 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        } else {
+                            if (Gvar.var_2564 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
                         }
-                    } else {
-                        if ( Gvar.var_2564 == 0 ) {
-                            Gvar.var_2563 = Gvar.var_2424;
+                        Gvar.var_2507 = 1;
+                    }
+                    if (Gvar.var_2507 == 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_74 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224) {
+                        await Func.func552();
+                        Gvar.var_2564 = Adap.rnd(3);
+                        Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
+                        await Func.func658();
+                        if (Gvar.var_2497 == 0) {
+                            if (Gvar.var_2506 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        } else {
+                            if (Gvar.var_2564 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        }
+                        Gvar.var_2507 = 1;
+                    }
+                    if (Gvar.var_2507 == 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_75) {
+                        await Func.func552();
+                        Gvar.var_2564 = Adap.rnd(3);
+                        Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
+                        await Func.func658();
+                        if (Gvar.var_2497 == 0) {
+                            if (Gvar.var_2506 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        } else {
+                            if (Gvar.var_2564 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        }
+                        Gvar.var_2507 = 1;
+                    }
+                    if (Gvar.var_2507 == 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_75) {
+                        await Func.func552();
+                        Gvar.var_2564 = Adap.rnd(3);
+                        Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
+                        await Func.func658();
+                        if (Gvar.var_2497 == 0) {
+                            if (Gvar.var_2506 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        } else {
+                            if (Gvar.var_2564 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        }
+                        Gvar.var_2507 = 1;
+                    }
+                    if (Gvar.var_2507 == 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223) {
+                        await Func.func552();
+                        Gvar.var_2564 = Adap.rnd(3);
+                        Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
+                        await Func.func658();
+                        if (Gvar.var_2497 == 0) {
+                            if (Gvar.var_2506 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        } else {
+                            if (Gvar.var_2564 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        }
+                        Gvar.var_2507 = 1;
+                    }
+                    if (Gvar.var_2507 == 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223) {
+                        await Func.func552();
+                        Gvar.var_2564 = Adap.rnd(3);
+                        Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
+                        await Func.func658();
+                        if (Gvar.var_2497 == 0) {
+                            if (Gvar.var_2506 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        } else {
+                            if (Gvar.var_2564 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        }
+                        Gvar.var_2507 = 1;
+                    }
+                    if (Gvar.var_2507 == 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224) {
+                        await Func.func552();
+                        Gvar.var_2564 = Adap.rnd(3);
+                        Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
+                        await Func.func658();
+                        if (Gvar.var_2497 == 0) {
+                            if (Gvar.var_2506 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        } else {
+                            if (Gvar.var_2564 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        }
+                        Gvar.var_2507 = 1;
+                    }
+                    if (Gvar.var_2507 == 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224) {
+                        await Func.func552();
+                        Gvar.var_2564 = Adap.rnd(3);
+                        Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
+                        await Func.func658();
+                        if (Gvar.var_2497 == 0) {
+                            if (Gvar.var_2506 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        } else {
+                            if (Gvar.var_2564 == 0) {
+                                Gvar.var_2563 = Gvar.var_2424;
+                            }
+                        }
+                        Gvar.var_2507 = 1;
+                    }
+                    if (Gvar.var_226 <= 12 && Gvar.var_226 != 0) {
+                        Gvar.var_2459 = Gvar.var_83[Gvar.var_2424].Var1;
+                        Gvar.var_2460 = Gvar.var_83[Gvar.var_2424].Var2;
+                        Gvar.var_2461 = Gvar.var_83[Gvar.var_2424].Var1 - 1;
+                        if (Gvar.var_2461 < 0) { Gvar.var_2461 = 0; }
+                        Gvar.var_2462 = Gvar.var_83[Gvar.var_2424].Var1 + 1;
+                        if (Gvar.var_2462 > Gvar.var_32) { Gvar.var_2462 = Gvar.var_32; }
+                        Gvar.var_2463 = Gvar.var_83[Gvar.var_2424].Var2 + 1;
+                        if (Gvar.var_2463 > Gvar.var_33) { Gvar.var_2463 = Gvar.var_33; }
+                        Gvar.var_2464 = Gvar.var_83[Gvar.var_2424].Var2 - 1;
+                        if (Gvar.var_2464 < 0) { Gvar.var_2464 = 0; }
+                        if (Gvar.var_2507 == 0 && Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2461][Gvar.var_2460] == Gvar.var_226) {
+                            await Func.func552();
+                            Gvar.var_2564 = Adap.rnd(3);
+                            Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
+                            await Func.func658();
+                            if (Gvar.var_2497 == 0) {
+                                if (Gvar.var_2506 == 0) {
+                                    Gvar.var_2563 = Gvar.var_2424;
+                                }
+                            } else {
+                                if (Gvar.var_2564 == 0) {
+                                    Gvar.var_2563 = Gvar.var_2424;
+                                }
+                            }
+                            Gvar.var_2507 = 1;
+                        }
+                        if (Gvar.var_2507 == 0 && Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2462][Gvar.var_2460] == Gvar.var_226) {
+                            await Func.func552();
+                            Gvar.var_2564 = Adap.rnd(3);
+                            Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
+                            await Func.func658();
+                            if (Gvar.var_2497 == 0) {
+                                if (Gvar.var_2506 == 0) {
+                                    Gvar.var_2563 = Gvar.var_2424;
+                                }
+                            } else {
+                                if (Gvar.var_2564 == 0) {
+                                    Gvar.var_2563 = Gvar.var_2424;
+                                }
+                            }
+                            Gvar.var_2507 = 1;
+                        }
+                        if (Gvar.var_2507 == 0 && Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2459][Gvar.var_2463] == Gvar.var_226) {
+                            await Func.func552();
+                            Gvar.var_2564 = Adap.rnd(3);
+                            Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
+                            await Func.func658();
+                            if (Gvar.var_2497 == 0) {
+                                if (Gvar.var_2506 == 0) {
+                                    Gvar.var_2563 = Gvar.var_2424;
+                                }
+                            } else {
+                                if (Gvar.var_2564 == 0) {
+                                    Gvar.var_2563 = Gvar.var_2424;
+                                }
+                            }
+                            Gvar.var_2507 = 1;
+                        }
+                        if (Gvar.var_2507 == 0 && Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2459][Gvar.var_2464] == Gvar.var_226) {
+                            await Func.func552();
+                            Gvar.var_2564 = Adap.rnd(3);
+                            Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
+                            await Func.func658();
+                            if (Gvar.var_2497 == 0) {
+                                if (Gvar.var_2506 == 0) {
+                                    Gvar.var_2563 = Gvar.var_2424;
+                                }
+                            } else {
+                                if (Gvar.var_2564 == 0) {
+                                    Gvar.var_2563 = Gvar.var_2424;
+                                }
+                            }
+                            Gvar.var_2507 = 1;
                         }
                     }
                 }
-                Gvar.var_2507 = 1;
-            }
-            if ( Gvar.var_2507 == 0  &&  Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_74  &&  Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224 ) {
-                await Func.func552();
-                Gvar.var_2564 = Adap.rnd(3);
-                Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
-                await Func.func658();
-                if ( Gvar.var_2497 == 0 ) {
-                    if ( Gvar.var_2506 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                } else {
-                    if ( Gvar.var_2564 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
+                if (Gvar.var_2507 == 1) {
+                    Gvar.var_2506 = 1;
                 }
+                Gvar.var_2424 = Gvar.var_2424 + 1;
             }
-            Gvar.var_2507 = 1;
-            }
-            if ( Gvar.var_2507 == 0  &&  Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221  &&  Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_75 ) {
-                await Func.func552();
-                Gvar.var_2564 = Adap.rnd(3);
-                Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
-                await Func.func658();
-                if ( Gvar.var_2497 == 0 ) {
-                    if ( Gvar.var_2506 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                } else {
-                    if ( Gvar.var_2564 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                }
-            }
-            Gvar.var_2507 = 1;
-            }
-            if ( Gvar.var_2507 == 0  &&  Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222  &&  Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_75 ) {
-                await Func.func552();
-                Gvar.var_2564 = Adap.rnd(3);
-                Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
-                await Func.func658();
-                if ( Gvar.var_2497 == 0 ) {
-                    if ( Gvar.var_2506 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                } else {
-                    if ( Gvar.var_2564 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                }
-            }
-            Gvar.var_2507 = 1;
-            }
-            if ( Gvar.var_2507 == 0  &&  Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221  &&  Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223 ) {
-                await Func.func552();
-                Gvar.var_2564 = Adap.rnd(3);
-                Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
-                await Func.func658();
-                if ( Gvar.var_2497 == 0 ) {
-                    if ( Gvar.var_2506 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                } else {
-                    if ( Gvar.var_2564 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                }
-            }
-            Gvar.var_2507 = 1;
-            }
-            if ( Gvar.var_2507 == 0  &&  Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222  &&  Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223 ) {
-                await Func.func552();
-                Gvar.var_2564 = Adap.rnd(3);
-                Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
-                await Func.func658();
-                if ( Gvar.var_2497 == 0 ) {
-                    if ( Gvar.var_2506 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                } else {
-                    if ( Gvar.var_2564 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                }
-            }
-            Gvar.var_2507 = 1;
-            }
-            if ( Gvar.var_2507 == 0  &&  Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221  &&  Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224 ) {
-                await Func.func552();
-                Gvar.var_2564 = Adap.rnd(3);
-                Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
-                await Func.func658();
-                if ( Gvar.var_2497 == 0 ) {
-                    if ( Gvar.var_2506 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                } else {
-                    if ( Gvar.var_2564 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                }
-            }
-            Gvar.var_2507 = 1;
-            }
-            if ( Gvar.var_2507 == 0  &&  Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222  &&  Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224 ) {
-                await Func.func552();
-                Gvar.var_2564 = Adap.rnd(3);
-                Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
-                await Func.func658();
-                if ( Gvar.var_2497 == 0 ) {
-                    if ( Gvar.var_2506 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                } else {
-                    if ( Gvar.var_2564 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                }
-            }
-            Gvar.var_2507 = 1;
-            }
-            if ( Gvar.var_226 <= 12  &&  Gvar.var_226 != 0 ) {
-                Gvar.var_2459 = Gvar.var_83[Gvar.var_2424].Var1;
-                Gvar.var_2460 = Gvar.var_83[Gvar.var_2424].Var2;
-                Gvar.var_2461 = Gvar.var_83[Gvar.var_2424].Var1 - 1;
-                if ( Gvar.var_2461 < 0 ) {
-                    Gvar.var_2461 = 0;
-                }
-                Gvar.var_2462 = Gvar.var_83[Gvar.var_2424].Var1 + 1;
-                if ( Gvar.var_2462 > Gvar.var_32 ) {
-                    Gvar.var_2462 = Gvar.var_32;
-                }
-                Gvar.var_2463 = Gvar.var_83[Gvar.var_2424].Var2 + 1;
-                if ( Gvar.var_2463 > Gvar.var_33 ) {
-                    Gvar.var_2463 = Gvar.var_33;
-                }
-                Gvar.var_2464 = Gvar.var_83[Gvar.var_2424].Var2 - 1;
-                if ( Gvar.var_2464 < 0 ) {
-                    Gvar.var_2464 = 0;
-                }
-                if ( Gvar.var_2507 == 0  &&  Gvar.var_83[Gvar.var_2424].Var0 != 0  &&  Gvar.var_82[Gvar.var_2461][Gvar.var_2460] == Gvar.var_226 ) {
-                    await Func.func552();
-                    Gvar.var_2564 = Adap.rnd(3);
-                    Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
-                    await Func.func658();
-                    if ( Gvar.var_2497 == 0 ) {
-                        if ( Gvar.var_2506 == 0 ) {
-                            Gvar.var_2563 = Gvar.var_2424;
-                        }
-                    } else {
-                        if ( Gvar.var_2564 == 0 ) {
-                            Gvar.var_2563 = Gvar.var_2424;
-                        }
-                    }
-                }
-                Gvar.var_2507 = 1;
-            }
-            if ( Gvar.var_2507 == 0  &&  Gvar.var_83[Gvar.var_2424].Var0 != 0  &&  Gvar.var_82[Gvar.var_2462][Gvar.var_2460] == Gvar.var_226 ) {
-                await Func.func552();
-                Gvar.var_2564 = Adap.rnd(3);
-                Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
-                await Func.func658();
-                if ( Gvar.var_2497 == 0 ) {
-                    if ( Gvar.var_2506 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                } else {
-                    if ( Gvar.var_2564 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                }
-            }
-            Gvar.var_2507 = 1;
-            }
-            if ( Gvar.var_2507 == 0  &&  Gvar.var_83[Gvar.var_2424].Var0 != 0  &&  Gvar.var_82[Gvar.var_2459][Gvar.var_2463] == Gvar.var_226 ) {
-                await Func.func552();
-                Gvar.var_2564 = Adap.rnd(3);
-                Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
-                await Func.func658();
-                if ( Gvar.var_2497 == 0 ) {
-                    if ( Gvar.var_2506 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                } else {
-                    if ( Gvar.var_2564 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                }
-            }
-            Gvar.var_2507 = 1;
-            }
-            if ( Gvar.var_2507 == 0  &&  Gvar.var_83[Gvar.var_2424].Var0 != 0  &&  Gvar.var_82[Gvar.var_2459][Gvar.var_2464] == Gvar.var_226 ) {
-                await Func.func552();
-                Gvar.var_2564 = Adap.rnd(3);
-                Gvar.var_268 = Gvar.var_83[Gvar.var_2424].Var0;
-                await Func.func658();
-                if ( Gvar.var_2497 == 0 ) {
-                    if ( Gvar.var_2506 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                } else {
-                    if ( Gvar.var_2564 == 0 ) {
-                        Gvar.var_2563 = Gvar.var_2424;
-                    }
-                }
-            }
-            Gvar.var_2507 = 1;
-            }
-            }
-            if ( Gvar.var_2507 == 1 ) {
-                Gvar.var_2506 = 1;
-            }
-            Gvar.var_2424 = Gvar.var_2424 + 1;
             Gvar.var_131 = 0;
             Gvar.var_244 = 1;
             if ( Gvar.var_2563 != 0 ) {
@@ -4271,6 +4253,8 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
+        }
+            return;
         // === DISC No.202: ホワイトアルバム(全凍結) ===
         if (Gvar.var_2494 == 202) {
             await Func.func538();
@@ -4310,6 +4294,10 @@ async function func543(this: any) {
             Gvar.var_242 = 1;
             await Func.func019();
         }
+        }
+        }
+        }
+            return;
         // === DISC No.395: キラークイーン第3の爆弾 BITE THE DUST ===
         if (Gvar.var_2494 == 395) {
             await Func.func538();
@@ -4475,6 +4463,8 @@ async function func543(this: any) {
             Gvar.var_242 = 1;
             await Func.func019();
         }
+        }
+            return;
         // === DISC No.302: チープトリック(道連れ) ===
         if (Gvar.var_2494 == 302) {
             await Func.func538();
@@ -4952,6 +4942,8 @@ async function func543(this: any) {
             Gvar.var_242 = 1;
             await Func.func019();
         }
+        }
+            return;
         // === DISC No.222: 運命固定 ===
         if (Gvar.var_2494 == 222) {
             await Func.func538();
@@ -5011,7 +5003,6 @@ async function func543(this: any) {
                 Gvar.var_259 = 0;
                 Gvar.var_245 = 0;
                 await Func.func009();
-                // @ts-ignore
                 return;
             }
             await Func.func538();
@@ -5029,7 +5020,6 @@ async function func543(this: any) {
             Gvar.var_83[Gvar.var_506].Var11 = 0;
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
             return;
         }
         // === DISC No.320: メタリカ(透明化) ===
@@ -5382,7 +5372,6 @@ async function func543(this: any) {
                     await Func.func054();
                     Gvar.var_222 = 1;
                     await Func.func493();
-                    // @ts-ignore
                     return;
                 }
             }
@@ -5405,7 +5394,6 @@ async function func543(this: any) {
                 await Func.func054();
                 Gvar.var_222 = 1;
                 await Func.func493();
-                // @ts-ignore
                 return;
             }
             await Func.setMessage("どれを倉庫に送りますか？", "", 10, false, false, false);
@@ -5427,7 +5415,6 @@ async function func543(this: any) {
             await Func.func054();
             Gvar.var_222 = 1;
             await Func.func493();
-            // @ts-ignore
             return;
         }
         // === DISC No.311: チープトリック(おんぶ) ===
@@ -5570,6 +5557,8 @@ async function func543(this: any) {
             Gvar.var_242 = 1;
             await Func.func019();
         }
+        }
+            return;
         // === DISC No.314: ストレイキャット ===
         if (Gvar.var_2494 == 314) {
             await Func.func538();
@@ -5605,7 +5594,6 @@ async function func543(this: any) {
                     await Func.func337();
                 }
                 await Func.func009();
-                // @ts-ignore
                 return;
             }
             if (Gvar.var_2494 == 414) {
@@ -5803,7 +5791,6 @@ async function func543(this: any) {
                     await Func.func337();
                 }
                 await Func.func009();
-                // @ts-ignore
                 return;
             }
             Adap.DSPLAY(165);
@@ -5853,7 +5840,6 @@ async function func543(this: any) {
             await Func.func538();
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
             return;
         }
         // === DISC No.402: エンペラー ===
@@ -5936,7 +5922,6 @@ async function func543(this: any) {
             await Func.func538();
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
             return;
         }
         // === DISC No.412: ヘブンズドアー ===
@@ -6297,6 +6282,8 @@ async function func543(this: any) {
             Gvar.var_242 = 1;
             await Func.func019();
         }
+        }
+            return;
         // === DISC No.306: ウェザーリポート(気流) ===
         if (Gvar.var_2494 == 306) {
             await Func.func538();
@@ -6383,6 +6370,9 @@ async function func543(this: any) {
             Gvar.var_242 = 1;
             await Func.func019();
         }
+        }
+        }
+            return;
         // === DISC No.315: エピタフ(未来予知) ===
         if (Gvar.var_2494 == 315) {
             await Func.func538();
@@ -6441,6 +6431,8 @@ async function func543(this: any) {
             Gvar.var_242 = 1;
             await Func.func019();
         }
+        }
+            return;
         // === DISC No.393: ジョジョ読み(敵召喚) ===
         if (Gvar.var_2494 == 393) {
             await Func.func538();
@@ -6478,7 +6470,6 @@ async function func543(this: any) {
                 }
                 Gvar.var_242 = 1;
                 await Func.func019();
-                // @ts-ignore
                 return;
             }
             Gvar.var_466 = 0;
@@ -6519,7 +6510,6 @@ async function func543(this: any) {
                 }
                 Gvar.var_242 = 1;
                 await Func.func019();
-                // @ts-ignore
                 return;
             }
             await Func.func657();
@@ -6576,7 +6566,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
             return;
         }
         // === DISC No.399: ゴールドエクスペリエンスレクイエム ===
@@ -6640,7 +6629,6 @@ async function func543(this: any) {
                 Gvar.var_1778 = Gvar.var_1778 + 2;
             }
             await Func.func564();
-            }
             await Func.setMessage("しかし何も起こらなかった", "", 10, false, false, false);
             Gvar.var_259 = 0;
             Gvar.var_245 = 0;
@@ -6670,7 +6658,6 @@ async function func543(this: any) {
                 Gvar.var_1778 = Gvar.var_1778 + 2;
             }
             await Func.func564();
-            }
             await Func.setMessage("しかし何も起こらなかった", "", 10, false, false, false);
             Gvar.var_259 = 0;
             Gvar.var_245 = 0;
@@ -6681,13 +6668,5 @@ async function func543(this: any) {
         Gvar.var_245 = 0;
         Gvar.var_242 = 1;
         await Func.func019();
-}
-
-}
-}
-}
-}
-}
-}
 }
 export {func543}
