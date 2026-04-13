@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // キー入力待ち処理
+// 旧 func051
 async function func051(this: any) {
         Adap.dbgprt(51);
         for (let cnt1 = 0; cnt1 < 50; ++cnt1) {
