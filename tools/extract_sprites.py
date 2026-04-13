@@ -38,6 +38,10 @@ SHEETS = {
     (20, "img_enemy4b.gif.png", "enemy4b", 40),
     (34, "img_syageki.gif.png", "syageki", 40),
     (35, "img_effect.gif.png",  "effect",  40),
+    (5,  "img_map.gif.png",     "map",     40),
+    (3,  "img_mychara.gif.png", "mychara", 40),
+    (8,  "img1.gif.png",        "ui",      40),
+    (18, "img4.gif.png",        "ui2",     40),
 }
 
 def is_empty_cell(img_array):
