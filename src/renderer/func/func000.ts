@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { t } from '../i18n'
 
 async function makepal() {
     Gvar.var_0 = 0;
@@ -74,9 +75,9 @@ async function setMessage(
     Gvar.var_298 = "";
     Gvar.animationStep = 0;
   
-    // テキストセット
-    Gvar.comments_row1 = row1;
-    Gvar.comments_row2 = row2;
+    // テキストセット (i18n翻訳レイヤー)
+    Gvar.comments_row1 = t(row1);
+    Gvar.comments_row2 = t(row2);
   
     // 表示に必要な変数
     Gvar.var_198 = 1; // メッセージウィンドウ開く  // メッセージウィンドウON

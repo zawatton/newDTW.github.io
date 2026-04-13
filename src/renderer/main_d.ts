@@ -1,6 +1,8 @@
 import { Gvar } from './variable'
 import * as Adap from './adapter/index'
 import * as Func from './func/index'
+import { initI18n } from './i18n'
+import './debug'
 
 import { ipcRenderer } from 'electron';
 
@@ -23,6 +25,7 @@ Adap.InitInput();
 //window.onload = Func.func001;
 window.addEventListener('load', async function(){
     Adap.dbgprt(1);
+    await initI18n();
     Func.func004();
     return;
 })

@@ -342,8 +342,8 @@ async function func004(this: any) {
 
         Adap.buffer(32, 200, 200);
         await Func.func183(); // デバックウィンドウ呼び出し？
-        // スプライト個別ファイルの読み込み
-        await Adap.spriteManager.init('../assets');
+        // スプライト個別ファイルの読み込み (TODO: drawLegacy有効化時に復活)
+        // await Adap.spriteManager.init('../assets');
 
         await Music.preloadAllSoundEffects();
         // await Music.func081(); // 効果音を呼び出す関数(効果音リスト1)
