@@ -1,3 +1,4 @@
+import * as path from 'path';
 import * as Adap from '../adapter/index'
 
 // ファイルシステムへのアクセスを提供するために使用。ファイルの読み書きやディレクトリの操作など、ファイルシステム関連の機能を利用する。

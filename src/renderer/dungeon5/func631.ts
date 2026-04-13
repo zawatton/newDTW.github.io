@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // 鉄の牢獄のボス以外の出現敵設定
+// 旧 func631
 async function func631(this: any) {
         Adap.dbgprt(631);
         Gvar.var_2918 = Gvar.current_floor;

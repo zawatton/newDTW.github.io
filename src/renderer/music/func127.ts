@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 
+// 旧 func127
 async function func127(this: any) {
         Adap.dbgprt(127);
         if (Gvar.receive_bgm_id == 992) {

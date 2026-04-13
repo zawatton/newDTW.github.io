@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 
+// 旧 func533
 async function func533(this: any) {
         Adap.dbgprt(533);
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
@@ -44,7 +45,7 @@ async function func533(this: any) {
         }
         Gvar.var_2007 = 0;
         if (Gvar.var_407 >= 1 && Gvar.var_2008 == 0) {
-            await Func.func911();
+            await Func.func0970();
             return;
         }
         Gvar.var_2008 = 0;

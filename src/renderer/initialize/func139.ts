@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Title from '../title/index'
 
 // データ読込み処理(00.datファル、01 ~ 03.datセーブデータ解析処理)
+// 旧 func139
 async function func139(this: any) {
         Adap.dbgprt(139);
         Adap.onexit(0);

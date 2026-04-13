@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 
 // ヴェネチアホテル読込処理
+// 旧 func162
 async function func162(this: any) {
         Adap.dbgprt(162);
         Gvar.var_775 = Gvar.var_83[Gvar.var_771].Var1;

@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func066
 async function func066(this: any) {
         Adap.dbgprt(66);
         // 持っているアイテムの数が0の時
@@ -19,7 +20,7 @@ async function func066(this: any) {
         Gvar.var_546 = 1;
         Gvar.var_547 = 1; // 亀のジッパーで捨てるフラグON
         Gvar.var_548 = 1; // 選択肢処理フラグON
-        await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        await Func.func0898(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
 }
 

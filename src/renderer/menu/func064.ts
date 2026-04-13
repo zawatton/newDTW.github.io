@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // 足元確認呼び出し
+// 旧 func064
 async function func064(this: any) {
         Adap.dbgprt(64);
         Gvar.var_544 = 0;
@@ -13,7 +14,7 @@ async function func064(this: any) {
         }
         // No = 0 なので、拠点(ホテル、亀、)
         if (Gvar.dungeon_number == 0 && Gvar.var_404 >= 1 && Gvar.var_66 == 17 && Gvar.var_67 == 9) {
-            await Func.func826(); // レクイエムの大迷宮の入り口へ入ろうとした際のメッセージ処理
+            await Func.func0885(); // レクイエムの大迷宮の入り口へ入ろうとした際のメッセージ処理
             return;
         }
         if (Gvar.var_77[Gvar.var_66][Gvar.var_67] > 0) {

@@ -3,13 +3,14 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ディアボロの試練の入り口(フラグ前は壁)へ話しかけた時の動作処理
+// 旧 func767
 async function func767(this: any) {
         Adap.dbgprt(767);
         Gvar.var_243 = 0;
         // Gvar.var_526 >= 1 ディアボロの試練解放フラグがON
         if (Gvar.var_526 >= 1 && Gvar.var_993 >= 1) { // Gvar.var_993 >= 1 ディアボロの試練解放フラグがONなら
             await Func.func051(); // キー入力待ち処理
-            await Func.func828(); // ディアボロの試練の入り口へ入ろうとした際のメッセージ処理
+            await Func.func0887(); // ディアボロの試練の入り口へ入ろうとした際のメッセージ処理
             return;
         }
         Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音

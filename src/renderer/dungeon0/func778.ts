@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // 岸辺露伴に話しかけた時のメッセージ処理
+// 旧 func778
 async function func778(this: any) {
         Adap.dbgprt(778);
         Gvar.var_243 = 0;
@@ -80,7 +81,7 @@ async function func778(this: any) {
         Gvar.var_546 = 1;
         Gvar.var_3156 = 1;
         Gvar.var_548 = 1; // 選択肢処理フラグON
-        await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        await Func.func0898(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
 }
 

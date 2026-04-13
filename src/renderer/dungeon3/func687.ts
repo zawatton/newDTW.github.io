@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ウンガロを倒した時のメッセージ処理
+// 旧 func687
 async function func687(this: any) {
     Adap.dbgprt(687);
     await Func.setMessage("ｳﾝｶﾞﾛ「ウッガァ―――ッ！！」", "", 8, true, false, true);

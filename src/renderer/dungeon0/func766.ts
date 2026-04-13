@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ヴェネチアホテルのベッドの上の本に話しかけた時のメッセージ処理
+// 旧 func766
 async function func766(this: any) {
         Adap.dbgprt(766);
         Gvar.var_243 = 0;

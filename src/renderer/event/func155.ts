@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func155
 async function func155(this: any) {
         Adap.dbgprt(155);
         Gvar.ivents_flag = 0; // イベントフラグ初期化

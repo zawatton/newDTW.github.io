@@ -5,6 +5,7 @@ import * as Class from '../classes'
 import * as Music from '../music/index'
 
 // ヴェネチアホテルでのイベントフラグ管理処理
+// 旧 func159
 async function func159(this: any) {
         Adap.dbgprt(159);
         Gvar.var_767 = 0;
@@ -120,7 +121,7 @@ async function func159(this: any) {
             Gvar.ivents_flag = 0; // イベントフラグ初期化
             await Func.func155(); // ディアボロの試練開放イベント(岸辺露伴がヤギを追いかけるイベント)
         }
-        await Func.func837(); // 店のアイテムを購入せずに帰還した際、NPC マリリン・マンソンの登場処理
+        await Func.func0896(); // 店のアイテムを購入せずに帰還した際、NPC マリリン・マンソンの登場処理
         Gvar.var_205 = 1;
         await Func.func231(); // プレイデータを保存するセーブ機能
         await Func.func009(); // ディアボロ側ターン処理(ループ処理)

@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // 特別な階層到達時のメッセージ処理
+// 旧 func075
 async function func075(this: any) {
         Adap.dbgprt(75);
         Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON

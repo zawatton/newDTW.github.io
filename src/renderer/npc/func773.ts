@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // 鮮血のシャボンへ話しかけた時のメッセージ処理
+// 旧 func773
 async function func773(this: any) {
         Adap.dbgprt(773);
         Gvar.var_243 = 0;
@@ -20,7 +21,7 @@ async function func773(this: any) {
             Gvar.var_546 = 1;
             Gvar.var_3151 = 1;
             Gvar.var_548 = 1; // 選択肢処理フラグON
-            await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+            await Func.func0898(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
             return;
         }
         if (Gvar.var_987[0] != 0) {
@@ -38,7 +39,7 @@ async function func773(this: any) {
             Gvar.var_546 = 1;
             Gvar.var_3152 = 1;
             Gvar.var_548 = 1; // 選択肢処理フラグON
-            await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+            await Func.func0898(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
             return;
         }
         await Func.func774();

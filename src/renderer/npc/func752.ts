@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 
 // ダンジョン内で仲間になったペッシに話しかけた時のメッセージ処理
+// 旧 func752
 async function func752(this: any) {
         Adap.dbgprt(752);
         await Func.func729();
@@ -89,7 +90,7 @@ async function func752(this: any) {
         Gvar.var_546 = 1;
         Gvar.var_3137 = 1;
         Gvar.var_548 = 1; // 選択肢処理フラグON
-        await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        await Func.func0898(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
 }
 

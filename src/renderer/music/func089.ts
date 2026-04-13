@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 
 
 // スタンドを装備した状態での攻撃時の効果音設定
+// 旧 func089
 async function func089(this: any) {
         Adap.dbgprt(89);
         Gvar.se_file_name = 102;

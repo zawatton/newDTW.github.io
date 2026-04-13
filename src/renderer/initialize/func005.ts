@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 
 // セーブデータを読み込む前のフラグ確認処理(ホテルのイベントフラグ、BGM再生曲、マップ背景画像)
+// 旧 func005
 async function func005(this: any) {
         Adap.dbgprt(5);
         Adap.onexit(1);

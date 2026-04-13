@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func717
 async function func717(this: any) {
         Adap.dbgprt(717);
         Gvar.var_198 = 0; // メッセージウィンドウ閉じる

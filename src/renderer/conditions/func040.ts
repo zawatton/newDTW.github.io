@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func040
 async function func040(this: any) {
         Adap.dbgprt(40);
         await Func.setMessage("鉄塔が消滅した。", "", 7, false, false, false);

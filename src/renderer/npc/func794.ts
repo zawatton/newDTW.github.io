@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ヤク中の少年
+// 旧 func794
 async function func794(this: any) {
         Adap.dbgprt(794);
         Gvar.var_243 = 0;
@@ -15,7 +16,7 @@ async function func794(this: any) {
         Gvar.var_546 = 1;
         Gvar.var_3147 = 1;
         Gvar.var_548 = 1; // 選択肢処理フラグON
-        await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        await Func.func0898(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
 }
 

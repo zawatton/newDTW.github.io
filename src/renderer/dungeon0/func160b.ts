@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// 旧 func160b
 async function func160b(this: any) {
         //var_97 = 0; 常時OFF。ONにすると亀が消える。おそらくキャラ配置配列初期化?
         // ここから下はオリジナルには無いロッコ・バロッコ所長をヴェネチアホテルへ追加する要素。

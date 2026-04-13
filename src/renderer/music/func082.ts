@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// 旧 func082
 async function func082(this: any) {
         Adap.dbgprt(82);
 

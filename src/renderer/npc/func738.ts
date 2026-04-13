@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func738
 async function func738(this: any) {
         Adap.dbgprt(738);
         Gvar.var_243 = 0;
@@ -22,7 +23,7 @@ async function func738(this: any) {
         Gvar.var_546 = 1;
         Gvar.var_3127 = 1;
         Gvar.var_548 = 1; // 選択肢処理フラグON
-        await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        await Func.func0898(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
 }
 

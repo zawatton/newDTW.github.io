@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// 旧 func104
 async function func104(this: any) {
         Adap.dbgprt(104);
         await Adap.exist(Gvar.bgm_file_name);

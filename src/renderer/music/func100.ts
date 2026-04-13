@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// 旧 func100
 async function func100(this: any) {
         Adap.dbgprt(100);
         Gvar.se_file_name = 171;

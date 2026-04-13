@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // ホテルの外の最終フロア、エンヤホテル以外確定処理
+// 旧 func059
 async function func059(this: any) {
         Adap.dbgprt(59);
         // No = 1 なので、ホテルの外

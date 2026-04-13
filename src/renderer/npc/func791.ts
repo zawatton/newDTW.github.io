@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // アバッキオ茶のダメージセリフ
+// 旧 func791
 async function func791(this: any) {
         Adap.dbgprt(791);
         if (Gvar.nouryoku_disc_id == 115) {

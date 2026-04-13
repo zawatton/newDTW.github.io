@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 
+// 旧 func534
 async function func534(this: any) {
         Adap.dbgprt(534);
         await Func.setMessage("オレって情けねえよなあ～～～。", "死にたくなった･･･", 7, false, false, true);

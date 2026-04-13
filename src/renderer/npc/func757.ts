@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // キャラに話しかけた時のメッセージ(コメントなし)
+// 旧 func757
 async function func757(this: any) {
         Adap.dbgprt(757);
         Gvar.var_243 = 0;

@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 
 // トニオさんの店 レストラン・トラサルディーへ入店した時のメッセージ表示
+// 旧 func706
 async function func706(this: any) {
         Adap.dbgprt(706);
         Gvar.var_281 = Gvar.var_66 - 1;

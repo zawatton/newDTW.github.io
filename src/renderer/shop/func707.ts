@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // トニオさんに話しかけた際の処理
+// 旧 func707
 async function func707(this: any) {
         Adap.dbgprt(707);
         Gvar.var_243 = 0;

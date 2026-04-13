@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // メニュー画面 "システム" 設定処理
+// 旧 func193
 async function func193(this: any) {
         Adap.dbgprt(193);
         await Func.func337(); // メッセージ表示処理(自動)
@@ -48,7 +49,7 @@ async function func193(this: any) {
             }
             if (Gvar.var_899 == 6 && Gvar.dungeon_number != 99 && Gvar.var_637 == 0) {
                 await Func.func051(); // キー入力待ち処理
-                await Func.func925();
+                await Func.func0984();
                 return;
             }
         }

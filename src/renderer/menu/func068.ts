@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // メニュー画面各コンディション表示
+// 旧 func068
 async function func068(this: any) {
         Adap.dbgprt(68);
         Gvar.var_564 = 50;

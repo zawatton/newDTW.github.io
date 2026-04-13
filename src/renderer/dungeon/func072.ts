@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ダンジョンに長居し過ぎた際の神砂嵐
+// 旧 func072
 async function func072(this: any) {
         Adap.dbgprt(72);
         await Func.setMessage("神砂嵐だ！！", "", 7, false, false, false);

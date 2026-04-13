@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // 仲間でない状態のツェッペリさんへ話しかけた際の処理
+// 旧 func743
 async function func743(this: any) {
         Adap.dbgprt(743);
         Gvar.var_243 = 0;
@@ -23,7 +24,7 @@ async function func743(this: any) {
         Gvar.var_546 = 1;
         Gvar.var_3132 = 1;
         Gvar.var_548 = 1; // 選択肢処理フラグON
-        await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        await Func.func0898(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
 }
 

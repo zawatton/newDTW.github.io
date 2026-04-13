@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Class from '../classes'
 
 // 配列初期化処理
+// 旧 func007
 async function func007(this: any) {
         Adap.dbgprt(7);
         Gvar.var_71 = Adap.dim(70, 70, null, null);

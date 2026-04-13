@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // 亀の中の幽霊のポルナレフに話しかけた時のメッセージ処理
+// 旧 func756
 async function func756(this: any) {
         Adap.dbgprt(756);
         Gvar.var_243 = 0;

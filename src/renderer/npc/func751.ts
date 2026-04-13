@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ペッシに話しかけて仲間にするのを拒んだ際の動作処理
+// 旧 func751
 async function func751(this: any) {
         Adap.dbgprt(751);
         await Func.setMessage("そッ！  そんなッ！",

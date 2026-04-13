@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // ヴェネチアホテルのアイテム配置
+// 旧 func163
 async function func163(this: any) {
         Adap.dbgprt(163);
         if (Gvar.var_409 == 0) {

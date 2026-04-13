@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 
+// 旧 func746
 async function func746(this: any) {
         Adap.dbgprt(746);
         await Func.func729();
@@ -95,7 +96,7 @@ async function func746(this: any) {
         Gvar.var_546 = 1;
         Gvar.var_3134 = 1;
         Gvar.var_548 = 1; // 選択肢処理フラグON
-        await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        await Func.func0898(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
 }
 

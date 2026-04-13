@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // ホテルの外のボス以外の出現敵設定
+// 旧 func628
 async function func628(this: any) {
         Adap.dbgprt(628);
         if (Gvar.current_floor == 1) {

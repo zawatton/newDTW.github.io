@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Class from '../classes'
 
 // ダンジョンへ入った際の全ステータス初期化処理
+// 旧 func233
 async function func233(this: any) {
         Adap.dbgprt(233);
 

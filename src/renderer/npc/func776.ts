@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 
 // ヤバいものへアイテムを入れた時の動作処理
+// 旧 func776
 async function func776(this: any) {
         Adap.dbgprt(776);
         Gvar.belongings_item_list = Gvar.var_233[Gvar.var_225].Var0;

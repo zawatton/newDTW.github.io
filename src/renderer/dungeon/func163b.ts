@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
  // 酒場の配置(マップ読み込み)
+ // 旧 func163b
 async function func163b(this: any) {
         if (Gvar.var_409 == 0) {
             Gvar.var_778 = 0;

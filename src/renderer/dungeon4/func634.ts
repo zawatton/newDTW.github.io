@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // 一巡後の世界のボス以外の出現敵設定
+// 旧 func634
 async function func634(this: any) {
         Adap.dbgprt(634);
         if (Gvar.current_floor == 1) {

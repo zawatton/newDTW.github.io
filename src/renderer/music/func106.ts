@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 
+// 旧 func106
 async function func106(this: any) {
         Adap.dbgprt(106);
         if (Gvar.dungeon_number == 99) {

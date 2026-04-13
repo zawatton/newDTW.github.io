@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 
 // ゲーム初期化処理
+// 旧 func004
 async function func004(this: any) {
         Adap.dbgprt(4);
         Adap.HMMINIT(3);
@@ -36,7 +37,7 @@ async function func004(this: any) {
         Adap.screen_(2, 1, 1, 2, -100, -100);
 
         Adap.title(Gvar.game_title);
-        Adap.oncmd_gosub(Func.func897, 161);
+        Adap.oncmd_gosub(Func.func0956, 161);
     
         Adap.GetWindowLongA(Gvar.hwnd, -16);
     
@@ -61,7 +62,7 @@ async function func004(this: any) {
         }
         Adap.screen_(0, 340, 340, 2, Gvar.var_8, Gvar.var_9);
         Adap.title(Gvar.game_title);
-        Adap.oncmd_gosub(Func.func897, 161);
+        Adap.oncmd_gosub(Func.func0956, 161);
     
         Adap.SetWindowLongA(Gvar.hwnd, -8, Gvar.var_15);
 

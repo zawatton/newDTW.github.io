@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func046
 async function func046(this: any) {
         Adap.dbgprt(46);
         for (let cnt1 = 0; true; ++cnt1) {

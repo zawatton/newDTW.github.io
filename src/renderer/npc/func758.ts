@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ボインゴに話しかけた時のメッセージ処理
+// 旧 func758
 async function func758(this: any) {
         Adap.dbgprt(758);
         Gvar.var_243 = 0;

@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // メニュー画面呼び出し
+// 旧 func053
 async function func053(this: any) {
         Adap.dbgprt(53);
         await Func.func337(); // メッセージ表示処理(自動)

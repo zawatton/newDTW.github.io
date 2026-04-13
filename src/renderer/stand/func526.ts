@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ボーイ・II・マン
+// 旧 func526
 async function func526(this: any) {
         Adap.dbgprt(526);
         Gvar.var_2375 = Gvar.var_2375 + 19;

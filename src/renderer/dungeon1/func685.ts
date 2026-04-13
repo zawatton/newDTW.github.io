@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // エンヤ婆を倒した時のメッセージ処理
+// 旧 func685
 async function func685(this: any) {
     Adap.dbgprt(685);
     await Func.setMessage("ｴﾝﾔ婆「うぽわあ―――ッ！！」", "", 8, true, false, true);

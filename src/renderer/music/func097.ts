@@ -1,6 +1,8 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
 // 射撃攻撃時の効果音設定
+// 旧 func097
 async function func097(this: any) {
         Adap.dbgprt(97);
         Gvar.se_file_name = 109;

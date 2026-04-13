@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // レクイエムの大迷宮の出現敵設定
+// 旧 func629
 async function func629(this: any) {
         Adap.dbgprt(629);
         if (Gvar.current_floor == 1) {

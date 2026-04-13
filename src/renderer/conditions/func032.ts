@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func032
 async function func032(this: any) {
         Adap.dbgprt(32);
         await Func.func080(); // 各キー入力確認

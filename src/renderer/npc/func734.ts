@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func734
 async function func734(this: any) {
         Adap.dbgprt(734);
         Gvar.var_243 = 0;

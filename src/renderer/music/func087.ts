@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// 旧 func087
 async function func087(this: any) {
         Adap.dbgprt(87);
         Gvar.bgm_volume = Gvar.bgm_volume + 1;

@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // ディアボロの試練の出現敵設定
+// 旧 func630
 async function func630(this: any) {
         Adap.dbgprt(630);
         if (Gvar.current_floor == 1) {

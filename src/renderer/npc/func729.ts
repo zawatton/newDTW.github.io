@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func729
 async function func729(this: any) {
         Adap.dbgprt(729);
         Gvar.enemy_list = Gvar.var_83[Gvar.var_3072].Var0;

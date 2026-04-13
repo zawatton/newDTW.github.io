@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 
+// 旧 func772
 async function func772(this: any) {
         Adap.dbgprt(772);
         Gvar.var_2000 = 0;

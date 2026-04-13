@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // 設定画面(メニュー画面)呼び出し
+// 旧 func055
 async function func055(this: any) {
         Adap.dbgprt(55);
         await Func.func337(); // メッセージ表示処理(自動)
@@ -157,7 +158,7 @@ async function func055(this: any) {
                 Gvar.var_499 = 0; // Mフラグ:設定画面 Func.func056
                 await Func.func051(); // キー入力待ち処理
                 await Func.func233(); // ダンジョンへ入った際の全ステータス初期化処理
-                await Func.func880();
+                await Func.func0939();
                 return;
             }
         }

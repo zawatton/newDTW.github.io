@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // プレイデータを保存するセーブ機能
+// 旧 func231
 async function func231(this: any) {
         Adap.dbgprt(231);
         Gvar.var_8 = await Adap.ginfo(4);

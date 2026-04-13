@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 
+// 旧 func134
 async function func134(this: any) {
         Adap.dbgprt(134);
         Gvar.bgm_list_id = 980;

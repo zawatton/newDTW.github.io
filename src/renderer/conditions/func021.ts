@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func021
 async function func021(this: any) {
         Adap.dbgprt(21);
         // 初期化されていない場合の対策

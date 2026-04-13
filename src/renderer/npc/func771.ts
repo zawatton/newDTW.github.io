@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
  // ムーディーブルース以外でアイテムを送る手段(サウェッジガーデン？アバッキオ？)
+ // 旧 func771
 async function func771(this: any) {
         Adap.dbgprt(771);
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460

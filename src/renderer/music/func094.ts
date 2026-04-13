@@ -1,6 +1,8 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
 // メッセージ送りの際の効果音
+// 旧 func094
 async function func094(this: any) {
         Adap.dbgprt(94);
         Adap.DSPLAY(173);

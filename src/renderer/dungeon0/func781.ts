@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func781
 async function func781(this: any) {
         Adap.dbgprt(781);
         Adap.DSPLAY(212); // メニュー画面を開く or 各設定項目を開く時の効果音
@@ -14,7 +15,7 @@ async function func781(this: any) {
         Gvar.var_546 = 1;
         Gvar.var_3157 = 1;
         Gvar.var_548 = 1; // 選択肢処理フラグON
-        await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        await Func.func0898(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
 }
 

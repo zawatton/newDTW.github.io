@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // ダンジョン関係
+// 旧 func243
 async function func243(this: any) {
         Adap.dbgprt(243);
         Gvar.var_86 = Adap.rnd(12);

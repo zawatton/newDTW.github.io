@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // 効果音呼び出し関数1
+// 旧 func081
 async function func081(this: any) {
         Adap.dbgprt(81);
 

@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 
+// 旧 func150
 async function func150(this: any) {
     Adap.dbgprt(150);
     await Func.func233(); // ダンジョンへ入った際の全ステータス初期化処理

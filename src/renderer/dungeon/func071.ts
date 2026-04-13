@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // 満腹度減少時のメッセージ処理
+// 旧 func071
 async function func071(this: any) {
     Adap.dbgprt(71);
     if (Gvar.var_361 <= 3) {

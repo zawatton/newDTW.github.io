@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 
 // グッチョの死体へDISCを入れた際のプレイ処理
+// 旧 func115
 async function func115(this: any) {
         Adap.dbgprt(115);
         Gvar.var_678 = 0;

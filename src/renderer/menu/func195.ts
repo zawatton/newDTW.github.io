@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ゲームスピード設定項目動作処理
+// 旧 func195
 async function func195(this: any) {
         Adap.dbgprt(195);
         await Func.func337(); // メッセージ表示処理(自動)

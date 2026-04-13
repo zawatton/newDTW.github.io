@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ダンジョンマップ初期化処理(+ヴェネチアホテル)
+// 旧 func293
 async function func293(this: any) {
         Adap.dbgprt(293);
         Gvar.var_983 = Adap.sdim(3000);

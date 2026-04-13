@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 
 // 亀の中に入った時の表示
+// 旧 func161
 async function func161(this: any) {
         Adap.dbgprt(161);
         Gvar.var_243 = 0;

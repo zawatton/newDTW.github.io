@@ -1,6 +1,8 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
  // 没特殊階層「ビンの中」ボスは毒グモのダンジョンマップ
+ // 旧 func314
 async function func314(this: any) {
         Adap.dbgprt(314);
         Gvar.var_983 = Adap.sdim(3000);

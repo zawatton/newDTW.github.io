@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // 現在装備しているdisc表示欄の設定？
+// 旧 func069
 async function func069(this: any) {
         Adap.dbgprt(69);
         Gvar.var_569 = 0;

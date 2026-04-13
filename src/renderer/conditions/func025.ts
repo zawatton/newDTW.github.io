@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // 寝ている時の動作処理
+// 旧 func025
 async function func025(this: any) {
     Adap.dbgprt(25);
     

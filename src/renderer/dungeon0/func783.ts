@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ディアボロの試練解放後、岸辺露伴に話しかけた時のメッセージ処理
+// 旧 func783
 async function func783(this: any) {
         Adap.dbgprt(783);
 

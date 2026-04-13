@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ダンジョン内のSPW財団の男に話しかけた時のメッセージ処理
+// 旧 func755
 async function func755(this: any) {
         Adap.dbgprt(755);
         Gvar.var_243 = 0;

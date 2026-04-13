@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 
 // ペッシを仲間にする為に殴った後に話し掛けた際の処理
+// 旧 func750
 async function func750(this: any) {
         Adap.dbgprt(750);
         Gvar.var_181 = 0;

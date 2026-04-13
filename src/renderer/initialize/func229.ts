@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Class from '../classes'
 
 // セーブファイルからデータ読み出し関数
+// 旧 func229
 async function func229(this: any) {
         Adap.dbgprt(229);
         Gvar.var_77 = Adap.dim(70, 70, null, null);

@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// 旧 func101
 async function func101(this: any) {
         Adap.dbgprt(101);
         if (Gvar.bgm_list_id == 0) {

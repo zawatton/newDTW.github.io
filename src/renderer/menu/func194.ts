@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ゲームスピード設定フラグ
+// 旧 func194
 async function func194(this: any) {
         Adap.dbgprt(194);
         if (Gvar.animationDelay == 30) {

@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // 承太郎を倒した時のメッセージ処理 (仕掛中)
+// 旧 func633
 async function func633(this: any) {
         Adap.dbgprt(633);
         Gvar.var_1720 = 1;

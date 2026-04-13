@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain } = require('electron'); 
+const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
 
 let colorPickerWindow: any; // カラーピッカーウィンドウの参照用
@@ -72,7 +72,8 @@ const createWindow = () => {
     });
   });
 
-  ipcMain.on('color-selected', (event, color) => {
+  // イベントリスナーの型指定
+  ipcMain.on('color-selected', (event: Electron.IpcMainEvent, color: string) => {
     if (mainWindow && !mainWindow.isDestroyed()) {
       mainWindow.webContents.send('color-changed', color);
     }

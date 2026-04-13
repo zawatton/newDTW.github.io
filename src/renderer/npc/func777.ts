@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ヤバいものからアイテムを取り出す時の動作処理
+// 旧 func777
 async function func777(this: any) {
         Adap.dbgprt(777);
         // 所持アイテム数が20個以上になる場合

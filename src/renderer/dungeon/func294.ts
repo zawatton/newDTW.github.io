@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// 旧 func294
 async function func294(this: any) {
         Adap.dbgprt(294);
         Gvar.var_1136 = Adap.sdim(3000);

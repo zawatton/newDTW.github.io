@@ -5,6 +5,7 @@ import * as Music from '../music/index'
 
 // 各ダンジョン読み込み処理
 // 処理が多すぎるので分割したい
+// 旧 func008
 async function func008(this: any) {
         Adap.dbgprt(8);
         if (Gvar.var_86 != 0) {

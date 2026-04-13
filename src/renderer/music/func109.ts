@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// 旧 func109
 async function func109(this: any) {
         Adap.dbgprt(109);
         Adap.DMINIT();

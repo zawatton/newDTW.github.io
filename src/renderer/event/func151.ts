@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func151
 async function func151(this: any) {
     Adap.dbgprt(151);
     Gvar.ivents_flag = 2; // 初めてダンジョンを訪れた際のディアボロの呟きフラグ

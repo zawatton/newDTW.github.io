@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func715
 async function func715(this: any) {
         Adap.dbgprt(715);
         Gvar.wallet = Gvar.wallet + Gvar.var_1009;

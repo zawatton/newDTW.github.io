@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// 旧 func102
 async function func102(this: any) {
         Adap.dbgprt(102);
         if (Gvar.var_632 >= 1) {

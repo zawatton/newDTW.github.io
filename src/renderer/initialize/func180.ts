@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // ロード中の黒画面処理?
+// 旧 func180
 async function func180(this: any) {
         Adap.dbgprt(180);
         if (Gvar.var_599 == 0) {

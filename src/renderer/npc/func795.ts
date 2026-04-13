@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 
+// 旧 func795
 async function func795(this: any) {
         Adap.dbgprt(795);
         Gvar.var_198 = 0; // メッセージウィンドウ閉じる

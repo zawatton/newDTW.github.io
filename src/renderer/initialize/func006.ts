@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // 一巡後の世界のみのフラグ処理
+// 旧 func006
 async function func006(this: any) {
         Adap.dbgprt(6);
         // No = 4 なので、一巡後の世界

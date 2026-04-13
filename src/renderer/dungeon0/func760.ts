@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // マリリンマンソン関係
+// 旧 func760
 async function func760(this: any) {
         Adap.dbgprt(760);
         Gvar.var_243 = 0;

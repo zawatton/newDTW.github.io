@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // メニュー画面の"資料"の処理 (ハイスコア、コミックス、死因リスト、敵図鑑)
+// 旧 func057
 async function func057(this: any) {
         Adap.dbgprt(57);
         await Func.func337(); // メッセージ表示処理(自動)
@@ -80,7 +81,7 @@ async function func057(this: any) {
                 Gvar.var_514 = 0;
                 Gvar.var_515 = 131;
                 Gvar.var_516 = 88;
-                await Func.func820();
+                await Func.func0875();
                 return;
             }
             if (Gvar.var_505 == 1 && Gvar.var_375 == 0) {

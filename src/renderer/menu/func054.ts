@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // メニュー画面を開いた時の表示(道具、足元、状態、設定)
+// 旧 func054
 async function func054(this: any) {
         Adap.dbgprt(54);
         Adap.color(0, 0, 0);

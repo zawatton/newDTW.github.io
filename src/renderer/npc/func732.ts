@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func732
 async function func732(this: any) {
         Adap.dbgprt(732);
         await Func.setMessage("ｽﾋﾟｰﾄﾞﾜｺﾞﾝはｸｰﾙに去るぜ",

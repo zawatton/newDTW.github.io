@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // メニュー画面の"資料"の表示 (ハイスコア、コミックス、死因リスト、敵図鑑)
+// 旧 func058
 async function func058(this: any) {
         Adap.dbgprt(58);
         Gvar.var_510 = 45;

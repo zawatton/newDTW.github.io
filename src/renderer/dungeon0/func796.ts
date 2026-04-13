@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // 銀行口座の設定
+// 旧 func796
 async function func796(this: any) {
         Adap.dbgprt(796);
         Gvar.var_1205 = 1;

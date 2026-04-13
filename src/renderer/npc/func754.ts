@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ペッシに話しかけて釣りするを選んだ際の動作処理
+// 旧 func754
 async function func754(this: any) {
         Adap.dbgprt(754);
         Gvar.var_191 = 1;

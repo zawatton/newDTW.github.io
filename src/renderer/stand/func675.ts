@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 
+// 旧 func675
 async function func675(this: any) {
         Adap.dbgprt(675);
         Gvar.belongings_item_list = Gvar.nouryoku_disc_id;

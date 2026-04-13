@@ -1,6 +1,8 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
  // エンヤホテルのダンジョンマップ
+ // 旧 func309
 async function func309(this: any) {
         Adap.dbgprt(309);
         Gvar.var_983 = Adap.sdim(3000);

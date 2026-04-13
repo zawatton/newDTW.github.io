@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // メニュー画面の"設定"の表示 (マップON、履歴、資料、システム、終了)
+// 旧 func056
 async function func056(this: any) {
         Adap.dbgprt(56);
         Gvar.var_510 = 25;

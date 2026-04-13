@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 
 // モンスターハウス時のメッセージ処理
+// 旧 func074
 async function func074(this: any) {
     Adap.dbgprt(74);
     Gvar.var_101 = 1;

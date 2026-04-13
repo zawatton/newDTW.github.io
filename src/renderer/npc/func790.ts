@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // アバッキオセリフ
+// 旧 func790
 async function func790(this: any) {
         Adap.dbgprt(790);
 
@@ -15,7 +16,7 @@ async function func790(this: any) {
         Gvar.var_546 = 1;
         Gvar.var_3163 = 3;
         Gvar.var_548 = 1; // 選択肢処理フラグON
-        await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        await Func.func0898(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
 }
 

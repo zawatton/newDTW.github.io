@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func039
 async function func039(this: any) {
         Adap.dbgprt(39);
         await Func.AutoDraw(9);

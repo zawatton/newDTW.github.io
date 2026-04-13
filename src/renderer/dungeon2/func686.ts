@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // レクイエムジョルノを倒した時のメッセージ処理
+// 旧 func686
 async function func686(this: any) {
     Adap.dbgprt(686);
     await Func.setMessage("ｼﾞｮﾙﾉ「うぐッ！！」", "", 8, true, false, true);

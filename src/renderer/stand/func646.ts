@@ -4,6 +4,7 @@ import * as Func from '../func/index'
 import * as Music from '../music/index'
 
 // ザ・ハンド
+// 旧 func646
 async function func646(this: any) {
         Adap.dbgprt(646);
         await Func.func426();

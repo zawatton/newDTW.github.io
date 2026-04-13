@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // 店での購入時のメッセージ表示
+// 旧 func714
 async function func714(this: any) {
         Adap.dbgprt(714);
         Adap.color(0, 0, 0);

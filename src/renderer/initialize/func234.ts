@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+// 旧 func234
 async function func234(this: any) {
     Adap.dbgprt(234);
     // セーブを実行すると何故かフーファイターズが実行される

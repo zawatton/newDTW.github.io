@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 
 // ゲームスピード設定項目表示
+// 旧 func196
 async function func196(this: any) {
         Adap.dbgprt(196);
         Adap.color(0, 0, 0);

@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // ムーディーブルース以外でアイテムを送る手段(サウェッジガーデン？)
+// 旧 func775
 async function func775(this: any) {
         Adap.dbgprt(775);
         Gvar.var_2001 = 0;

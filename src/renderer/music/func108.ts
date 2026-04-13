@@ -1,5 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+
+// 旧 func108
 async function func108(this: any) {
         Adap.dbgprt(108);
         Adap.DMSTOP(); // BGM停止関数
