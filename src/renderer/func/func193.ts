@@ -47,7 +47,7 @@ async function func193(this: any) {
             }
             if (Gvar.var_899 == 6 && Gvar.dungeon_number != 99 && Gvar.var_637 == 0) {
                 await Func.func051();
-                await Func.func925();
+                await Func.func0984();
                 return;
             }
         }

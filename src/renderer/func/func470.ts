@@ -36,7 +36,7 @@ async function func470(this: any) {
         // No = 818 は無い。なんの機能？？
         if (Gvar.yabaimono_id == 818) {
             if (Gvar.var_407 == 1 && Gvar.var_536 == 1) {
-                await Func.func912();
+                await Func.func0971();
                 if (Gvar.var_233[Gvar.var_225].Var11 == 1) {
                     Gvar.belongings_item_list = Gvar.var_233[Gvar.var_225].Var0;
                     await Func.func492(); // アイテムリスト呼び出し

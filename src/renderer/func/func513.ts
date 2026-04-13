@@ -5,7 +5,7 @@ import * as Func from '../func/index'
 async function func513(this: any) {
         Adap.dbgprt(513);
         if (Gvar.var_2357 == 1) {
-            await Func.func817();
+            await Func.func0872();
             return;
         }
         if (Gvar.var_1949 == 0) {

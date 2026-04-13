@@ -130,16 +130,16 @@ async function func337(this: any) {
             await Func.func063(); // ダンジョン内の階段機能
         }
         if (Gvar.var_548 == 1) { // 選択肢処理フラグONであれば
-            await Func.func840(); // 選択肢処理(はい、いいえ & 買う、やめる等)
+            await Func.func0899(); // 選択肢処理(はい、いいえ & 買う、やめる等)
         }
         if (Gvar.var_1204 == 1) {
-            await Func.func823();
+            await Func.func0878();
         }
         if (Gvar.var_1205 >= 1) {
-            await Func.func800();
+            await Func.func0855();
         }
         if (Gvar.var_1206 == 1) {
-            await Func.func804();
+            await Func.func0859();
         }
         if (Gvar.var_499 == 1) { // Mフラグ:設定画面 Func.func056
             await Func.func056(); // メニュー画面の"設定"の表示 (マップON、履歴、資料、システム、終了)
@@ -211,7 +211,7 @@ async function func337(this: any) {
             await Func.func228();
         }
         if (Gvar.var_1210 == 1) {
-            await Func.func935();
+            await Func.func0994();
         }
         if (Gvar.var_10 >= 1) {
             await Func.func338();
@@ -424,10 +424,10 @@ async function func337(this: any) {
         if (Gvar.var_407 >= 1) {
             Gvar.var_1230 = await Adap.ginfo(3);
             if (Gvar.var_407 == 1) {
-                await Func.func899();
+                await Func.func0958();
             }
             if (Gvar.var_407 == 2) {
-                await Func.func926();
+                await Func.func0985();
             }
             Adap.gsel(Gvar.var_1230);
         }

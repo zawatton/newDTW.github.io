@@ -353,6 +353,30 @@ async function func492(this: any) {
             Gvar.var_2174 = 1;
             Gvar.var_2039 = "ギュルギュル";
         }
+        if (Gvar.belongings_item_list == 125) {
+            Gvar.buying_price = 2600;
+            Gvar.item_name = "ﾘﾄﾙ･ﾌｨｰﾄのDISC";
+            Gvar.item_description1 = "攻撃:1  防御:1";
+            Gvar.effects_message = "[発動]ビンから敵を取り出せるぞ";
+            Gvar.item_ability_description = "時々敵を小さくするぞ";
+            Gvar.var_812 = 1;
+            Gvar.var_1984 = 5;
+            Gvar.var_2173 = "小";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "ｱﾊﾞﾚるなって";
+        }
+        if (Gvar.belongings_item_list == 126) {
+            Gvar.buying_price = 9600;
+            Gvar.item_name = "C-MOONのDISC";
+            Gvar.item_description1 = "攻撃:1  防御:0";
+            Gvar.effects_message = "[発動]隣接した敵を全部吹っ飛ばすぞ";
+            Gvar.item_ability_description = "稀に殴った相手を瀕死にするぞ";
+            Gvar.var_812 = 1;
+            Gvar.var_1984 = 6;
+            Gvar.var_2173 = "裏";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "重力の反転";
+        }
         if (Gvar.belongings_item_list == 200) {
             Gvar.buying_price = 1800;
             Gvar.item_name = "ｽｰﾊﾟｰﾌﾗｲのDISC";
@@ -458,6 +482,114 @@ async function func492(this: any) {
                 Gvar.effects_message = "[★発動]フロア内全ての敵の攻撃力を下げるぞ";
             }
         }
+        if (Gvar.belongings_item_list == 210) {
+            Gvar.buying_price = 1800;
+            Gvar.item_name = "ﾊｲﾌﾟﾘｴｽﾃｽのDISC";
+            Gvar.item_description1 = "攻撃:2  防御:3";
+            Gvar.effects_message = "[発動]前方の敵の持ち物に化けるぞ";
+            Gvar.item_ability_description = "攻撃されると時々剃刀に化けるぞ";
+            Gvar.var_812 = 2;
+            Gvar.var_1984 = 99;
+            Gvar.var_2173 = "女";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "ハイプリエステス！";
+        }
+        if (Gvar.belongings_item_list == 211) {
+            Gvar.buying_price = 1600;
+            Gvar.item_name = "ﾄﾞｷﾞｰ･ｽﾀｲﾙのDISC";
+            Gvar.item_description1 = "攻撃:0  防御:2";
+            Gvar.effects_message = "[発動]即死ダメージをこらえるぞ";
+            Gvar.item_ability_description = "全体攻撃のダメージを抑えるぞ";
+            Gvar.var_812 = 2;
+            Gvar.var_1984 = 99;
+            Gvar.var_2173 = "伸";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "生きててよかった...";
+        }
+        if (Gvar.belongings_item_list == 212) {
+            Gvar.buying_price = 20000;
+            Gvar.item_name = "ﾄﾞｩｰﾋﾞｰ･ﾜｩ!のDISC";
+            Gvar.item_description1 = "攻撃:3  防御:1";
+            Gvar.effects_message = "[発動]部屋内全員にダメージＢ";
+            Gvar.item_ability_description = "８方向に攻撃できるぞ";
+            Gvar.var_812 = 1;
+            Gvar.var_1984 = 99;
+            Gvar.var_2173 = "風";
+            Gvar.var_2174 = 0;
+            Gvar.var_2039 = "自動追跡";
+        }
+        if (Gvar.belongings_item_list == 213) {
+            Gvar.buying_price = 8000;
+            Gvar.item_name = "ﾋﾞﾀﾐﾝCのDISC";
+            Gvar.item_description1 = "攻撃:2  防御:8";
+            Gvar.effects_message = "[発動]周囲をﾋﾞﾀﾐﾝCで覆うぞ";
+            Gvar.item_ability_description = "投げたアイテムが壁で曲がるぞ";
+            Gvar.var_812 = 3;
+            Gvar.var_1984 = 99;
+            Gvar.var_2173 = "柔";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "指紋設置";
+        }
+        if (Gvar.belongings_item_list == 214) {
+            Gvar.buying_price = 2500;
+            Gvar.item_name = "ﾏﾘﾘﾝ･ﾏﾝｿﾝのDISC";
+            Gvar.item_description1 = "攻撃:3  防御:1";
+            Gvar.effects_message = "[発動]敵が必ずお金を落とすぞ";
+            Gvar.item_ability_description = "アイテムの値打ちがわかるぞ";
+            Gvar.var_812 = 4;
+            Gvar.var_1984 = 6;
+            Gvar.var_2173 = "管";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "取り立て人";
+        }
+        if (Gvar.belongings_item_list == 215) {
+            Gvar.buying_price = 1000;
+            Gvar.item_name = "ﾎﾜｲﾄｽﾈｲｸのDISC";
+            Gvar.item_description1 = "攻撃:0  防御:0";
+            Gvar.effects_message = "[発動]目の前の敵を倒しDISCにするぞ";
+            Gvar.item_ability_description = "攻撃する代わりに敵をDISCにするぞ";
+            Gvar.var_812 = 3;
+            Gvar.var_1984 = 99;
+            Gvar.var_2173 = "蛇";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "ＤＩＳＣ化";
+        }
+        if (Gvar.belongings_item_list == 216) {
+            Gvar.buying_price = 4000;
+            Gvar.item_name = "ｽﾑｰｽ･ｵﾍﾟﾚｲﾀｰｽﾞのDISC";
+            Gvar.item_description1 = "攻撃:1  防御:1";
+            Gvar.effects_message = "[発動]なにかの数字を偽造するぞ";
+            Gvar.item_ability_description = "時々敵の攻撃方向を狂わせるぞ";
+            Gvar.var_812 = 2;
+            Gvar.var_1984 = 99;
+            Gvar.var_2173 = "示";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "偽造";
+        }
+        if (Gvar.belongings_item_list == 217) {
+            Gvar.buying_price = 1000;
+            Gvar.item_name = "ｵｼﾘｽ神のDISC";
+            Gvar.item_description1 = "攻撃:3  防御:1";
+            Gvar.effects_message = "[発動]敵を倒してコインにするぞ";
+            Gvar.item_ability_description = "敵がコインを落とすようになるぞ";
+            Gvar.var_812 = 1;
+            Gvar.var_1984 = 3;
+            Gvar.var_2173 = "賭";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "コイン化";
+        }
+        if (Gvar.belongings_item_list == 218) {
+            Gvar.buying_price = 1000;
+            Gvar.item_name = "ｱﾝﾀﾞｰ･ﾜｰﾙﾄﾞのDISC";
+            Gvar.item_description1 = "攻撃:1  防御:1";
+            Gvar.effects_message = "[発動]罠が増えるぞ";
+            Gvar.item_ability_description = "罠を利用できるぞ";
+            Gvar.var_812 = 4;
+            Gvar.var_1984 = 6;
+            Gvar.var_2173 = "罠";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "掘り起こす";
+        }
         if (Gvar.belongings_item_list == 208) { // Ver0.1401にて追加。
             Gvar.buying_price = 2700;
             Gvar.item_name = "C-MOONのDISC";
@@ -469,6 +601,42 @@ async function func492(this: any) {
             Gvar.var_2173 = "月";
             Gvar.var_2174 = 4; // 合成の空き容量
             Gvar.var_2039 = "重力の反転";
+        }
+        if (Gvar.belongings_item_list == 222) {
+            Gvar.buying_price = 8000;
+            Gvar.item_name = "ﾁｹｯﾄ･ｩ･ﾗｲﾄﾞのDISC";
+            Gvar.item_description1 = "攻撃:1  防御:0";
+            Gvar.effects_message = "[発動]7ﾀｰﾝの間攻撃が致命的になるぞ";
+            Gvar.item_ability_description = "攻撃が必ず命中するぞ";
+            Gvar.var_812 = 1;
+            Gvar.var_1984 = 11;
+            Gvar.var_2173 = "涙";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "涙の乗車券";
+        }
+        if (Gvar.belongings_item_list == 223) {
+            Gvar.buying_price = 10000;
+            Gvar.item_name = "D4CのDISC";
+            Gvar.item_description1 = "攻撃:6  防御:3";
+            Gvar.effects_message = "[発動]同じ階の隣の世界に移動するぞ";
+            Gvar.item_ability_description = "SBR参加者に大ダメージを与えるぞ";
+            Gvar.var_812 = 1;
+            Gvar.var_1984 = 99;
+            Gvar.var_2173 = "米";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "国旗に挟まる";
+        }
+        if (Gvar.belongings_item_list == 224) {
+            Gvar.buying_price = 1000;
+            Gvar.item_name = "S･C･ﾚｸｲｴﾑのDISC";
+            Gvar.item_description1 = "攻撃:1  防御:3";
+            Gvar.effects_message = "[発動]部屋中の生物の精神を入れ替えるぞ";
+            Gvar.item_ability_description = "背面の敵に大ダメージを与えるぞ";
+            Gvar.var_812 = 1;
+            Gvar.var_1984 = 5;
+            Gvar.var_2173 = "魂";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "鎮魂歌の暴走";
         }
         if (Gvar.belongings_item_list == 250) { // Ver0.1401にて追加。
             Gvar.buying_price = 800;
@@ -907,6 +1075,18 @@ async function func492(this: any) {
             Gvar.var_2173 = "磁";
             Gvar.var_2174 = 1;
             Gvar.var_2039 = "透明化";
+        }
+        if (Gvar.belongings_item_list == 321) {
+            Gvar.buying_price = 8200;
+            Gvar.item_name = "B･D･ｻﾞ･ﾊｳｽのDISC";
+            Gvar.item_description1 = "攻撃:0  防御:0";
+            Gvar.effects_message = "[発動]次の階を部屋の幽霊にするぞ";
+            Gvar.item_ability_description = "稀に消費アイテムが2度使えるぞ";
+            Gvar.var_812 = 4;
+            Gvar.var_1984 = 6;
+            Gvar.var_2173 = "幽";
+            Gvar.var_2174 = 1;
+            Gvar.var_2039 = "部屋の幽霊";
         }
         if (Gvar.belongings_item_list == 350) {
             Gvar.buying_price = 1000;
@@ -1448,6 +1628,16 @@ async function func492(this: any) {
             Gvar.var_2174 = 0;
             Gvar.var_2039 = "追跡する世界です";
         }
+        if (Gvar.belongings_item_list == 425) {
+            Gvar.buying_price = 1100;
+            Gvar.item_name = "ﾉｰﾍﾞﾝﾊﾞｰ･ﾚｲﾝのDISC";
+            Gvar.item_description1 = "[遠距離ｽﾀﾝﾄﾞ]  攻撃力:11";
+            Gvar.effects_message = "ダメージを与えて一歩押し出すぞ";
+            Gvar.item_ability_description = "[発動]周囲を水浸しにして敵にダメージＤ";
+            Gvar.var_1984 = 14;
+            Gvar.var_2174 = 0;
+            Gvar.var_2039 = "雨";
+        }
         if (Gvar.belongings_item_list == 560) {
             Gvar.buying_price = 400;
             Gvar.item_name = "仗助のDISC";
@@ -1713,6 +1903,22 @@ async function func492(this: any) {
             Gvar.item_ability_description = "";
             Gvar.item_message1 = "どのアイテムに使いますか？";
         }
+        if (Gvar.belongings_item_list == 598) {
+            Gvar.buying_price = 100;
+            Gvar.item_name = "ｳｪｻﾞｰのDISC";
+            Gvar.item_description1 = "[記憶DISC]";
+            Gvar.effects_message = "無意識に悪魔の虹を発現させるぞ";
+            Gvar.item_ability_description = "ｳｪｻﾞｰに投げると記憶を取り戻すぞ";
+            Gvar.item_message1 = "「悪魔の虹」が大量にあらわれた！！";
+        }
+        if (Gvar.belongings_item_list == 599) {
+            Gvar.buying_price = 100;
+            Gvar.item_name = "汐華初流乃のDISC";
+            Gvar.item_description1 = "[記憶DISC]";
+            Gvar.effects_message = "汐華初流乃の記憶DISCだ";
+            Gvar.item_ability_description = "承太郎のところへ持っていこう";
+            Gvar.item_message1 = "致命的にDISCとの相性が悪いようだ･･･";
+        }
         if (Gvar.belongings_item_list == 600) {
             Gvar.buying_price = 100;
             Gvar.item_name = "ﾋﾟｯﾂｧ";
@@ -1923,13 +2129,45 @@ async function func492(this: any) {
         }
 
         
-        if (Gvar.belongings_item_list == 701) { // Ver0.1401にて追加。没アイテム(ソフト・マシーンの発動で罠にした敵?)
+        if (Gvar.belongings_item_list == 700) {
+            // 動的アイテム: var_1872(敵名)を使ってアイテム名を組み立てる
+            // HSP: var_268 = var_555; gosub *label_0658 で var_1872 に敵名をセット
+            Gvar.buying_price = 100;
+            Gvar.item_name = "" + Gvar.var_1872 + "のｺｲﾝ";
+            Gvar.item_description1 = "[魂のｺｲﾝ]";
+            Gvar.effects_message = "" + Gvar.var_1872 + "の魂が入ったｺｲﾝだ";
+            Gvar.item_ability_description = "" + Gvar.var_1872 + "の魂を取り込む事ができるぞ";
+            Gvar.item_message1 = "" + Gvar.var_1872 + "の魂を取り込んだ！";
+        }
+        if (Gvar.belongings_item_list == 701) {
+            // 動的アイテム: var_1872(敵名)を使ってアイテム名を組み立てる
+            // HSP: var_268 = var_555; gosub *label_0658 で var_1872 に敵名をセット
+            Gvar.buying_price = 100;
+            Gvar.item_name = "" + Gvar.var_1872 + "の罠";
+            Gvar.item_description1 = "[人質の罠]";
+            Gvar.effects_message = "" + Gvar.var_1872 + "がﾍﾟﾗﾍﾟﾗになった姿だ";
+            Gvar.item_ability_description = "使うと" + Gvar.var_1872 + "が近づくぞ";
+            Gvar.item_message1 = "" + Gvar.var_1872 + "の罠だ！";
+        }
+        if (Gvar.belongings_item_list == 702) {
+            // 動的アイテム: var_991(罠名)を使ってアイテム名を組み立てる
+            // HSP: var_990 = var_555; gosub *label_0586 で var_991 に罠名をセット
             Gvar.buying_price = 0;
-            Gvar.item_name = "";
-            Gvar.item_description1 = "";
-            Gvar.effects_message = "";
+            Gvar.item_name = "" + Gvar.var_991;
+            Gvar.item_description1 = "[罠]";
+            Gvar.effects_message = "" + Gvar.var_2176;
             Gvar.item_ability_description = "";
-            // Gvar.item_message1 = "";
+            Gvar.item_message1 = "" + Gvar.var_991 + "を設置した！";
+        }
+        if (Gvar.belongings_item_list == 703) {
+            // 動的アイテム: var_991(罠名)を使ってアイテム名を組み立てる
+            // HSP: var_990 = var_555; gosub *label_0586 で var_991 に罠名をセット
+            Gvar.buying_price = 100;
+            Gvar.item_name = "" + Gvar.var_991 + "の記憶";
+            Gvar.item_description1 = "[罠の記憶]";
+            Gvar.effects_message = "掘り起こした" + Gvar.var_991 + "の記憶だ";
+            Gvar.item_ability_description = "" + Gvar.var_2177;
+            Gvar.item_message1 = "";
         }
         if (Gvar.belongings_item_list == 712) {
             Gvar.buying_price = 10000;
@@ -2264,6 +2502,14 @@ async function func492(this: any) {
             Gvar.effects_message = "聖人の遺体の一部分だ";
             Gvar.item_ability_description = "ｱｲﾃﾑの呪縛や爆弾化を解除するぞ";
             Gvar.var_1984 = 11;
+        }
+        if (Gvar.belongings_item_list == 810) {
+            Gvar.buying_price = 400;
+            Gvar.item_name = "ﾀﾞｰﾋﾞｰのｺｲﾝｹｰｽ";
+            Gvar.item_description1 = "[保管ｱｲﾃﾑ]";
+            Gvar.effects_message = "ﾀﾞｰﾋﾞｰのｺｲﾝｹｰｽだ";
+            Gvar.item_ability_description = "魂のｺｲﾝを入れることができるぞ";
+            Gvar.var_1984 = 3;
         }
         if (Gvar.belongings_item_list == 815) {
             Gvar.buying_price = 4600;

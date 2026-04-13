@@ -77,10 +77,10 @@ async function func047(this: any) {
             Gvar.var_495++;
         }
         if (Gvar.var_407 == 1) {
-            await Func.func902();
+            await Func.func0961();
         }
         if (Gvar.var_407 == 2) {
-            await Func.func930();
+            await Func.func0989();
         }
         return;
 }

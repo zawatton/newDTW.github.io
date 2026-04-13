@@ -175,6 +175,7 @@ async function func012(this: any) {
             await Func.func051(); // キー入力待ち処理
             if (Gvar.var_224 >= 1) {
                 Gvar.var_225 = 0; // Ver0.1402にて追加。必ず0からスタートすることで漏れが無くなる。
+                let found = false;
                 for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
                     // Gvar.var_225 = Adap.rnd(Gvar.var_224); // Gvar.var_225 = 0; の方が良くない？
                     // Gvar.var_225 = Gvar.var_225 + 1;
@@ -185,23 +186,25 @@ async function func012(this: any) {
                     if (Gvar.var_233[Gvar.var_225].Var0 == 401) {
                         Gvar.activated_disc_id = Gvar.var_233[Gvar.var_225].Var0
                         await item401(); // No = 401 フー・ファイターズの発動処理
+                        found = true;
                         break;
                     }
                     Gvar.var_225 = Gvar.var_225 + 1; // Ver0.1402にて追加。ループの最後に1プラスする。
                 }
+                if (!found) {
+                    await Func.setMessage("ﾌｰ･ﾌｧｲﾀｰｽﾞを持っていないぞ", "", 7, false, false, false);
+                    Gvar.var_234 = 0;
+                    Gvar.var_220 = 0;
+                    Gvar.var_217 = 1;
+                    await Func.func019();
+                    return;
+                }
+            } else {
                 await Func.setMessage("ﾌｰ･ﾌｧｲﾀｰｽﾞを持っていないぞ", "", 7, false, false, false);
                 Gvar.var_234 = 0;
-                Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
+                Gvar.var_220 = 0;
                 Gvar.var_217 = 1;
-                await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
-                return;
-            }
-            if (Gvar.var_224 == 0) {
-                await Func.setMessage("ﾌｰ･ﾌｧｲﾀｰｽﾞを持っていないぞ", "", 7, false, false, false);
-                Gvar.var_234 = 0;
-                Gvar.var_220 = 0; // 道具画面(メニュー画面/道具)呼び出し確認変数？
-                Gvar.var_217 = 1;
-                await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
+                await Func.func019();
                 return;
             }
             return;

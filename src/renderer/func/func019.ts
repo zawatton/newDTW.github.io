@@ -614,7 +614,7 @@ async function func019(this: any) {
                 if (Gvar.var_375 == 1) {
                     Gvar.var_372 = 0;
                     await Func.func233(); // ダンジョンへ入った際の全ステータス初期化処理
-                    await Func.func880();
+                    await Func.func0939();
                     return;
                 }
                 Gvar.current_floor = Gvar.current_floor + 1;
@@ -987,10 +987,10 @@ async function func019(this: any) {
                 if (Gvar.var_66 != Gvar.var_236 || Gvar.var_67 != Gvar.var_237) {
                     // Ver0.1403にて修正。ヴェネチアホテルのイベントフラグに応じて酒場へ行けるように。
                     if (Gvar.var_759 == 0) {
-                        await Func.func824a(); // ホテルの外の入り口へ入ろうとした際のメッセージ処理
+                        await Func.func0881(); // ホテルの外の入り口へ入ろうとした際のメッセージ処理
                     }
                     if (Gvar.var_759 >= 1) {
-                        await Func.func824b(); // 酒場 or ホテルの外の入り口へ入ろうとした際のメッセージ処理
+                        await Func.func0880(); // 酒場 or ホテルの外の入り口へ入ろうとした際のメッセージ処理
                     }
                     return;
                 }
@@ -998,14 +998,14 @@ async function func019(this: any) {
             // Ver0.1403にて追加。酒場からホテルの部屋 or ホテルの外へ出ようとした際のフラグ
             if (Gvar.dungeon_number == 0 && Gvar.var_66 == 25 && Gvar.var_67 == 32) {
                 if (Gvar.var_66 != Gvar.var_236 || Gvar.var_67 != Gvar.var_237) {
-                    await Func.func824c(); // ホテルの部屋 or ホテルの外の入り口へ入ろうとした際のメッセージ処理
+                    await Func.func0879(); // ホテルの部屋 or ホテルの外の入り口へ入ろうとした際のメッセージ処理
                     return;
                 }
             }
             // No = 0 なので、拠点(ホテル、亀、)
             if (Gvar.dungeon_number == 0 && Gvar.var_404 >= 1 && Gvar.var_66 == 17 && Gvar.var_67 == 9) {
                 if (Gvar.var_66 != Gvar.var_236 || Gvar.var_67 != Gvar.var_237) {
-                    await Func.func826(); // レクイエムの大迷宮の入り口へ入ろうとした際のメッセージ処理
+                    await Func.func0885(); // レクイエムの大迷宮の入り口へ入ろうとした際のメッセージ処理
                     return;
                 }
             }
@@ -1036,13 +1036,13 @@ async function func019(this: any) {
         Gvar.var_217 = 0;
         if (Gvar.var_407 >= 1) {
             if (Gvar.var_407 == 1) {
-                await Func.func907();
-                await Func.func906();
+                await Func.func0966();
+                await Func.func0965();
             }
             if (Gvar.var_407 == 2) {
-                await Func.func929();
+                await Func.func0988();
                 if (Gvar.var_408 >= 1) {
-                    await Func.func909();
+                    await Func.func0968();
                 }
             }
         }

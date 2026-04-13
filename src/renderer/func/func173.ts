@@ -53,7 +53,7 @@ async function func173(this: any) {
         await Func.func176();
         Gvar.var_836 = Gvar.dungeon_number;
         Gvar.var_837 = Gvar.current_floor;
-        await Func.func808();
+        await Func.func0863();
         Gvar.var_356 = 0;
         await Func.func233(); // ダンジョンへ入った際の全ステータス初期化処理
         Gvar.var_205 = 1;

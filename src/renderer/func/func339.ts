@@ -8,10 +8,10 @@ async function func339(this: any) {
         if (Gvar.var_407 >= 1) {
             Gvar.var_1230 = await Adap.ginfo(3);
             if (Gvar.var_407 == 1) {
-                await Func.func899();
+                await Func.func0958();
             }
             if (Gvar.var_407 == 2) {
-                await Func.func926();
+                await Func.func0985();
             }
             Adap.gsel(Gvar.var_1230);
         }

@@ -3,6 +3,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
 // プッチ神父のdisc効果
+// 旧 func442
 async function func442(this: any) {
         Adap.dbgprt(442);
         Gvar.open_item_menue = 0; // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460

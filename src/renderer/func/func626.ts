@@ -1055,12 +1055,12 @@ async function func626(this: any) {
             Gvar.enemy_power = 0;
             Gvar.enemy_defence = 0;
             Gvar.enemy_exp_point = 0;
-            Gvar.enemy_hp = 0;
-            Gvar.var_1637 = 0;
-            Gvar.var_1654 = 0;
-            Gvar.var_972 = 0;
-            Gvar.var_1619 = 0;
-            Gvar.enemy_description = "";
+            Gvar.enemy_hp = 10;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 999;
+            Gvar.var_972 = 4; // 味方
+            Gvar.var_1619 = 341;
+            Gvar.enemy_description = "・イカサマをするぞ";
             Gvar.var_1656 = "";
             Gvar.var_1657 = "";
             Gvar.var_1658 = "";
@@ -1232,15 +1232,15 @@ async function func626(this: any) {
         }
         if (Gvar.enemy_list == 82) { // Ver0.1401にて追加。
             Gvar.enemy_name = "バーテンダー";
-            Gvar.enemy_power = 0;
-            Gvar.enemy_defence = 0;
+            Gvar.enemy_power = 1;
+            Gvar.enemy_defence = 1;
             Gvar.enemy_exp_point = 0;
-            Gvar.enemy_hp = 0;
-            Gvar.var_1637 = 0;
-            Gvar.var_1654 = 0;
-            Gvar.var_972 = 0;
-            Gvar.var_1619 = 0;
-            Gvar.enemy_description = "";
+            Gvar.enemy_hp = 10;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 999;
+            Gvar.var_972 = 4; // 味方
+            Gvar.var_1619 = 341;
+            Gvar.enemy_description = "・バーの店員だ";
             Gvar.var_1656 = "";
             Gvar.var_1657 = "";
             Gvar.var_1658 = "";
@@ -2236,17 +2236,17 @@ async function func626(this: any) {
             Gvar.var_1658 = "";
         }
         if (Gvar.enemy_list == 149) {
-            Gvar.enemy_name = "";
-            Gvar.enemy_power = 0;
-            Gvar.enemy_defence = 0;
+            Gvar.enemy_name = "幽霊ﾎﾟﾙﾅﾚﾌ";
+            Gvar.enemy_power = 1;
+            Gvar.enemy_defence = 1;
             Gvar.enemy_exp_point = 0;
-            Gvar.enemy_hp = 0;
-            Gvar.var_1637 = 0;
-            Gvar.var_1654 = 0;
-            Gvar.var_972 = 0;
-            Gvar.var_1619 = 0;
-            Gvar.enemy_description = "";
-            Gvar.var_1656 = "";
+            Gvar.enemy_hp = 10;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 999;
+            Gvar.var_972 = 4; // 味方
+            Gvar.var_1619 = 341;
+            Gvar.enemy_description = "・亀の中にしがみついてるぞ";
+            Gvar.var_1656 = "・この亀のスタンドは結構スゴイぞ";
             Gvar.var_1657 = "";
             Gvar.var_1658 = "";
         }
@@ -2558,24 +2558,24 @@ async function func626(this: any) {
             Gvar.var_1654 = 999;
             Gvar.var_972 = 0;
             Gvar.var_1619 = 622;
-            Gvar.enemy_description = "・触られると鈍足になってしまうぞ。";
+            Gvar.enemy_description = "・触られるとｶﾀﾂﾑﾘになってしまうぞ。";
             Gvar.var_1656 = "・見えなければ大丈夫だぞ。";
             Gvar.var_1657 = "";
             Gvar.var_1658 = "";
         }
         if (Gvar.enemy_list == 171) { // Ver0.1401にて追加。
             Gvar.enemy_name = "離婚した承太郎";
-            Gvar.enemy_power = 80;
+            Gvar.enemy_power = 90;
             Gvar.enemy_defence = 40;
             Gvar.enemy_exp_point = 1000;
             Gvar.enemy_hp = 500;
             Gvar.var_1637 = 1; // 攻撃モーションにスタンド像を付与するフラグON
-            Gvar.var_1654 = 1; // 1 = 必ず落とす
+            Gvar.var_1654 = 3;
             Gvar.var_972 = 1; // 人間
-            Gvar.var_1619 = 626; // 626はエンポリオ(ウェザー付)敵図鑑の並び
-            Gvar.enemy_description = "";
-            Gvar.var_1656 = "";
-            Gvar.var_1657 = "";
+            Gvar.var_1619 = 604;
+            Gvar.enemy_description = "・時をとめることが出来るぞ。";
+            Gvar.var_1656 = "・矢を投げるぞ。";
+            Gvar.var_1657 = "やれやれだ・・・";
             Gvar.var_1658 = "・ダンジョンの主だぞ。";
         }
         if (Gvar.enemy_list == 172) {
@@ -2594,16 +2594,16 @@ async function func626(this: any) {
             Gvar.var_1658 = "・移動しないぞ。";
         }
         if (Gvar.enemy_list == 173) { // Ver0.1401にて追加。
-            Gvar.enemy_name = "ロッコ・バロッコ所長";
-            Gvar.enemy_power = 0;
-            Gvar.enemy_defence = 0;
+            Gvar.enemy_name = "ﾛｯｺ･ﾊﾞﾛｯｺ";
+            Gvar.enemy_power = 1;
+            Gvar.enemy_defence = 1;
             Gvar.enemy_exp_point = 0;
-            Gvar.enemy_hp = 0;
-            Gvar.var_1637 = 0;
-            Gvar.var_1654 = 0;
-            Gvar.var_972 = 0;
-            Gvar.var_1619 = 0;
-            Gvar.enemy_description = "";
+            Gvar.enemy_hp = 10;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 999;
+            Gvar.var_972 = 4; // 味方
+            Gvar.var_1619 = 341;
+            Gvar.enemy_description = "・ｸﾞﾘｰﾝﾄﾞﾙﾌｨﾝ刑務所の所長だ";
             Gvar.var_1656 = "";
             Gvar.var_1657 = "";
             Gvar.var_1658 = "";
@@ -2625,75 +2625,75 @@ async function func626(this: any) {
         }
         if (Gvar.enemy_list == 175) { // Ver0.1401にて追加。
             Gvar.enemy_name = "涙目のルカ";
-            Gvar.enemy_power = 0;
-            Gvar.enemy_defence = 0;
-            Gvar.enemy_exp_point = 0;
-            Gvar.enemy_hp = 0;
+            Gvar.enemy_power = 10;
+            Gvar.enemy_defence = 10;
+            Gvar.enemy_exp_point = 100;
+            Gvar.enemy_hp = 21;
             Gvar.var_1637 = 0;
-            Gvar.var_1654 = 0;
-            Gvar.var_972 = 0;
-            Gvar.var_1619 = 0;
-            Gvar.enemy_description = "";
-            Gvar.var_1656 = "";
-            Gvar.var_1657 = "";
-            Gvar.var_1658 = "";
+            Gvar.var_1654 = 999;
+            Gvar.var_972 = 1; // 人間
+            Gvar.var_1619 = 535;
+            Gvar.enemy_description = "・スコップで殴るぞ。";
+            Gvar.var_1656 = "・『うそをつかない』";
+            Gvar.var_1657 = "・『うらまない』";
+            Gvar.var_1658 = "・『敬う』";
         }
         if (Gvar.enemy_list == 176) {
             Gvar.enemy_name = "杉本鈴美";
-            Gvar.enemy_power = 0;
-            Gvar.enemy_defence = 0;
+            Gvar.enemy_power = 1;
+            Gvar.enemy_defence = 1;
             Gvar.enemy_exp_point = 0;
-            Gvar.enemy_hp = 0;
-            Gvar.var_1637 = 0;
-            Gvar.var_1654 = 0;
-            Gvar.var_972 = 0;
-            Gvar.var_1619 = 0;
-            Gvar.enemy_description = "";
-            Gvar.var_1656 = "";
-            Gvar.var_1657 = "";
-            Gvar.var_1658 = "";
+            Gvar.enemy_hp = 10;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 999;
+            Gvar.var_972 = 4; // 味方
+            Gvar.var_1619 = 341;
+            Gvar.enemy_description = "・住所は杜王町匂当台3の12";
+            Gvar.var_1656 = "・彼氏はいない";
+            Gvar.var_1657 = "・ｽﾘｰｻｲｽﾞは82 57 84";
+            Gvar.var_1658 = "・左乳首の横にほくろがある";
         }
         if (Gvar.enemy_list == 177) { // Ver0.1401にて追加。
             Gvar.enemy_name = "スクアーロ"; // クラッシュの本体
-            Gvar.enemy_power = 0;
-            Gvar.enemy_defence = 0;
+            Gvar.enemy_power = 1;
+            Gvar.enemy_defence = 1;
             Gvar.enemy_exp_point = 0;
-            Gvar.enemy_hp = 0;
-            Gvar.var_1637 = 0;
-            Gvar.var_1654 = 0;
-            Gvar.var_972 = 0;
-            Gvar.var_1619 = 0;
-            Gvar.enemy_description = "";
+            Gvar.enemy_hp = 10;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 999;
+            Gvar.var_972 = 4; // 味方
+            Gvar.var_1619 = 341;
+            Gvar.enemy_description = "・水場を通して攻撃してくるぞ";
             Gvar.var_1656 = "";
             Gvar.var_1657 = "";
             Gvar.var_1658 = "";
         }
         if (Gvar.enemy_list == 178) { // Ver0.1401にて追加。
             Gvar.enemy_name = "ティッツァーノ"; // トーキング・ヘッドの本体
-            Gvar.enemy_power = 0;
-            Gvar.enemy_defence = 0;
+            Gvar.enemy_power = 1;
+            Gvar.enemy_defence = 1;
             Gvar.enemy_exp_point = 0;
-            Gvar.enemy_hp = 0;
-            Gvar.var_1637 = 0;
-            Gvar.var_1654 = 0;
-            Gvar.var_972 = 0;
-            Gvar.var_1619 = 0;
-            Gvar.enemy_description = "";
+            Gvar.enemy_hp = 10;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 999;
+            Gvar.var_972 = 4; // 味方
+            Gvar.var_1619 = 341;
+            Gvar.enemy_description = "・ﾄｰｷﾝｸﾞﾍｯﾄﾞの罠を仕掛けるぞ";
             Gvar.var_1656 = "";
             Gvar.var_1657 = "";
             Gvar.var_1658 = "";
         }
         if (Gvar.enemy_list == 179) { // Ver0.1401にて追加。
             Gvar.enemy_name = "ﾎﾙﾏｼﾞｵ";
-            Gvar.enemy_power = 0;
-            Gvar.enemy_defence = 0;
-            Gvar.enemy_exp_point = 0;
-            Gvar.enemy_hp = 0;
-            Gvar.var_1637 = 0;
-            Gvar.var_1654 = 0;
-            Gvar.var_972 = 0;
-            Gvar.var_1619 = 0;
-            Gvar.enemy_description = "";
+            Gvar.enemy_power = 19;
+            Gvar.enemy_defence = 18;
+            Gvar.enemy_exp_point = 300;
+            Gvar.enemy_hp = 45;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 20;
+            Gvar.var_972 = 1; // 人間
+            Gvar.var_1619 = 341;
+            Gvar.enemy_description = "・小さくしてくるぞ";
             Gvar.var_1656 = "";
             Gvar.var_1657 = "";
             Gvar.var_1658 = "";
@@ -2999,17 +2999,92 @@ async function func626(this: any) {
             Gvar.var_1658 = "";
         }
         if (Gvar.enemy_list == 200) {
-            Gvar.enemy_name = "";
-            Gvar.enemy_power = 0;
-            Gvar.enemy_defence = 0;
-            Gvar.enemy_exp_point = 0;
-            Gvar.enemy_hp = 0;
+            Gvar.enemy_name = "ｼﾞｮﾆｨ";
+            Gvar.enemy_power = 1;
+            Gvar.enemy_defence = 2;
+            Gvar.enemy_exp_point = 3;
+            Gvar.enemy_hp = 6;
             Gvar.var_1637 = 0;
-            Gvar.var_1654 = 0;
-            Gvar.var_972 = 0;
-            Gvar.var_1619 = 0;
-            Gvar.enemy_description = "";
+            Gvar.var_1654 = 20;
+            Gvar.var_972 = 7; // 味方
+            Gvar.var_1619 = 738;
+            Gvar.enemy_description = "・フラフラと動く。";
+            Gvar.var_1656 = "・攻撃してこないぞ。";
+            Gvar.var_1657 = "・鉄球に興味を持っているぞ";
+            Gvar.var_1658 = "";
+        }
+        if (Gvar.enemy_list == 203) {
+            Gvar.enemy_name = "ｱﾝﾀﾞｰ･ﾜｰﾙﾄﾞ";
+            Gvar.enemy_power = 1;
+            Gvar.enemy_defence = 1;
+            Gvar.enemy_exp_point = 0;
+            Gvar.enemy_hp = 10;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 999;
+            Gvar.var_972 = 4; // 味方
+            Gvar.var_1619 = 341;
+            Gvar.enemy_description = "・罠を掘り起こすぞ";
+            Gvar.var_1656 = "・なにか困っているようだ･･･";
+            Gvar.var_1657 = "";
+            Gvar.var_1658 = "";
+        }
+        if (Gvar.enemy_list == 204) {
+            Gvar.enemy_name = "絶頂のディアボロ";
+            Gvar.enemy_power = 90;
+            Gvar.enemy_defence = 40;
+            Gvar.enemy_exp_point = 1000;
+            Gvar.enemy_hp = 500;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 20;
+            Gvar.var_972 = 1; // 人間
+            Gvar.var_1619 = 599;
+            Gvar.enemy_description = "・平行世界のディアボロだ。";
+            Gvar.var_1656 = "・時を飛ばすことが出来るぞ。";
+            Gvar.var_1657 = "運命はこの俺を『頂点』に選んでくれたのだッ！";
+            Gvar.var_1658 = "・ダンジョンの主だぞ。";
+        }
+        if (Gvar.enemy_list == 205) {
+            Gvar.enemy_name = "汐華初流乃";
+            Gvar.enemy_power = 1;
+            Gvar.enemy_defence = 2;
+            Gvar.enemy_exp_point = 3;
+            Gvar.enemy_hp = 1;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 1;
+            Gvar.var_972 = 1; // 人間
+            Gvar.var_1619 = 541;
+            Gvar.enemy_description = "・ギャングスターに憧れているぞ";
             Gvar.var_1656 = "";
+            Gvar.var_1657 = "";
+            Gvar.var_1658 = "";
+        }
+        if (Gvar.enemy_list == 206) {
+            Gvar.enemy_name = "ムーディ・ブルース";
+            Gvar.enemy_power = 1;
+            Gvar.enemy_defence = 1;
+            Gvar.enemy_exp_point = 1;
+            Gvar.enemy_hp = 1;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 999;
+            Gvar.var_972 = 1; // 人間
+            Gvar.var_1619 = 598;
+            Gvar.enemy_description = "・ｱﾊﾞｯｷｵのスタンドだ。";
+            Gvar.var_1656 = "・使用したDISCをﾘﾌﾟﾚｲしてくれるぞ。";
+            Gvar.var_1657 = "";
+            Gvar.var_1658 = "";
+        }
+        if (Gvar.enemy_list == 207) {
+            Gvar.enemy_name = "ﾃﾞｨｱﾎﾞﾛ";
+            Gvar.enemy_power = Gvar.var_430 + Gvar.var_647;
+            Gvar.enemy_defence = Gvar.var_430;
+            Gvar.enemy_exp_point = 1;
+            Gvar.enemy_hp = Gvar.var_383;
+            Gvar.var_1637 = 1;
+            Gvar.var_1654 = 999;
+            Gvar.var_972 = 5;
+            Gvar.var_1619 = 588;
+            Gvar.enemy_description = "・誰かの精神が入ったﾃﾞｨｱﾎﾞﾛだ。";
+            Gvar.var_1656 = "・敵が優先して攻撃するぞ。";
             Gvar.var_1657 = "";
             Gvar.var_1658 = "";
         }

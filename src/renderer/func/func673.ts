@@ -40,7 +40,7 @@ async function func673(this: any) {
             if (Gvar.var_375 == 1) {
                 await Func.func233(); // ダンジョンへ入った際の全ステータス初期化処理
                 Gvar.var_539 = 0;
-                await Func.func880();
+                await Func.func0939();
                 return;
             }
         }

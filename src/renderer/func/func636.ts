@@ -167,7 +167,7 @@ async function func636(this: any) {
                 return;
             }
             if (Gvar.var_66 == 17 && Gvar.var_67 == 7 && Gvar.var_199 == 8) {
-                await Func.func818(); // ヴェネチアホテルのPCへ話しかけた時のメッセージ処理
+                await Func.func0873(); // ヴェネチアホテルのPCへ話しかけた時のメッセージ処理
                 return;
             }
             if (Gvar.var_66 == 16 && Gvar.var_67 == 7 && Gvar.var_199 == 8) {
@@ -204,12 +204,12 @@ async function func636(this: any) {
             }
             // Gvar.var_526 >= 1 ディアボロの試練解放フラグがON
             if (Gvar.var_526 >= 1 && Gvar.var_66 == 12 && Gvar.var_67 == 8 && Gvar.var_199 == 8 && Gvar.var_759 >= 2) {
-                await Func.func832(); // NPC プッチ神父との会話メッセージ
+                await Func.func0891(); // NPC プッチ神父との会話メッセージ
                 return;
             }
             // Gvar.var_526 >= 1 ディアボロの試練解放フラグがON
             if (Gvar.var_526 >= 1 && Gvar.var_66 == 13 && Gvar.var_67 == 8 && Gvar.var_199 == 8 && Gvar.var_759 >= 2) {
-                await Func.func833(); // NPC DIOとの会話メッセージ
+                await Func.func0892(); // NPC DIOとの会話メッセージ
                 return;
             }
         }
@@ -238,7 +238,7 @@ async function func636(this: any) {
             // Gvar.enemy_list = 173 NPC ロッコ・バロッコ所長
             if (Gvar.var_83[Gvar.var_314].Var0 == 173) {
                 await Func.func640();
-                await Func.func835(); // NPC ロッコ・バロッコ所長に話しかけた時のメッセージ処理
+                await Func.func0894(); // NPC ロッコ・バロッコ所長に話しかけた時のメッセージ処理
                 return;
             }
             if (Gvar.var_83[Gvar.var_314].Var0 == 169) { // Gvar.enemy_list = 169 なのでヤク中の少年。Gvar.enemy_list = 163にもいるので没キャラ?

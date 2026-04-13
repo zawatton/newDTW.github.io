@@ -7,6 +7,7 @@ const myResizeBtn = document.getElementById('resizeBtn');
 import { updateBufferResolution } from '../util/updateBufferResolution';
 
 // キーボード入力設定処理
+// 旧 func080
 async function func080(this: any, is_Key_reset = true) {
     Adap.dbgprt(80);
     Gvar.conf_keyon = 0;
@@ -49,64 +50,64 @@ async function func080(this: any, is_Key_reset = true) {
             if (Gvar.var_623 == 1) {
                 Gvar.var_624 = 0;
                 Gvar.var_625 = 0;
-                await Func.func934();
-                await Func.func929();
+                await Func.func0993();
+                await Func.func0988();
             }
             Gvar.var_623 = Adap.getkey(49); // キー1入力確認
             if (Gvar.var_623 == 1 && Gvar.var_624 != 1) {
                 Gvar.var_624 = 1;
                 Gvar.var_625 = 1;
-                await Func.func934();
-                await Func.func929();
+                await Func.func0993();
+                await Func.func0988();
             }
             Gvar.var_623 = Adap.getkey(50); // キー2入力確認
             if (Gvar.var_623 == 1 && Gvar.var_624 != 2) {
                 Gvar.var_624 = 2;
                 Gvar.var_625 = 1;
-                await Func.func934();
-                await Func.func929();
+                await Func.func0993();
+                await Func.func0988();
             }
             Gvar.var_623 = Adap.getkey(51);
             if (Gvar.var_623 == 1 && Gvar.var_624 != 3) {
                 Gvar.var_624 = 3;
                 Gvar.var_625 = 1;
-                await Func.func934();
-                await Func.func929();
+                await Func.func0993();
+                await Func.func0988();
             }
             Gvar.var_623 = Adap.getkey(52); // キー3入力確認
             if (Gvar.var_623 == 1 && Gvar.var_624 != 4) {
                 Gvar.var_624 = 4;
                 Gvar.var_625 = 1;
-                await Func.func934();
-                await Func.func929();
+                await Func.func0993();
+                await Func.func0988();
             }
             Gvar.var_623 = Adap.getkey(53); // キー4入力確認
             if (Gvar.var_623 == 1 && Gvar.var_624 != 5) {
                 Gvar.var_624 = 5;
                 Gvar.var_625 = 1;
-                await Func.func934();
-                await Func.func929();
+                await Func.func0993();
+                await Func.func0988();
             }
             Gvar.var_623 = Adap.getkey(54); // キー5入力確認
             if (Gvar.var_623 == 1 && Gvar.var_624 != 6) {
                 Gvar.var_624 = 6;
                 Gvar.var_625 = 1;
-                await Func.func934();
-                await Func.func929();
+                await Func.func0993();
+                await Func.func0988();
             }
             Gvar.var_623 = Adap.getkey(55); // キー6入力確認
             if (Gvar.var_623 == 1 && Gvar.var_624 != 7) {
                 Gvar.var_624 = 7;
                 Gvar.var_625 = 1;
-                await Func.func934();
-                await Func.func929();
+                await Func.func0993();
+                await Func.func0988();
             }
             Gvar.var_623 = Adap.getkey(56); // キー7入力確認
             if (Gvar.var_623 == 1 && Gvar.var_624 != 8) {
                 Gvar.var_624 = 8;
                 Gvar.var_625 = 1;
-                await Func.func934();
-                await Func.func929();
+                await Func.func0993();
+                await Func.func0988();
             }
         }
     }

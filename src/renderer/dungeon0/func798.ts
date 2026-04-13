@@ -2,13 +2,14 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 
+
+// 旧 func798
 async function func798(this: any) {
-        Adap.dbgprt(798);
         await Func.func337(); // メッセージ表示処理(自動)
         await Func.func080(); // 各キー入力確認
         if (Gvar.key_X_on == 1) {
             Gvar.var_1205 = 0;
-            await Func.func799(); // 口座へ入金、口座から出金した時の表示
+            await Func.func0854(); // 口座へ入金、口座から出金した時の表示
         }
         if (Gvar.var_254 == 1 && Gvar.var_3179 != 6) {
 
@@ -210,7 +211,7 @@ async function func798(this: any) {
             if (Gvar.var_1205 == 1) {
                 Gvar.var_1032 = Gvar.var_1032 + Gvar.var_3176;
                 Gvar.wallet = Gvar.wallet - Gvar.var_3176;
-                await Func.func799(); // 口座へ入金、口座から出金した時の表示
+                await Func.func0854(); // 口座へ入金、口座から出金した時の表示
                 return;
             }
             if (Gvar.var_1205 == 2) {
@@ -219,7 +220,7 @@ async function func798(this: any) {
                 if (Gvar.wallet > 999999) {
                     Gvar.wallet = 999999;
                 }
-                await Func.func799(); // 口座へ入金、口座から出金した時の表示
+                await Func.func0854(); // 口座へ入金、口座から出金した時の表示
                 return;
             }
         }

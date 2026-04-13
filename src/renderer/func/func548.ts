@@ -12,7 +12,7 @@ async function func548(this: any) {
         Gvar.var_546 = 1;
         Gvar.var_2494 = 1;
         Gvar.var_548 = 1; // 選択肢処理フラグON
-        await Func.func839(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
+        await Func.func0898(); // ダンジョン内での動作フラグ処理 (ダンジョンへ侵入)
         return;
 }
 

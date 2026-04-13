@@ -183,7 +183,7 @@ async function func060(this: any) {
                     }
                     if (Gvar.var_407 == 2) {
                         Gvar.var_534++;
-                        await Func.func929();
+                        await Func.func0988();
                     }
                     await Func.func173();
                     return;
@@ -221,7 +221,7 @@ async function func060(this: any) {
                     }
                     if (Gvar.var_407 == 2) {
                         Gvar.var_534++;
-                        await Func.func929();
+                        await Func.func0988();
                     }
                     await Func.func173();
                     return;
@@ -248,7 +248,7 @@ async function func060(this: any) {
                     }
                     if (Gvar.var_407 == 2) {
                         Gvar.var_534++;
-                        await Func.func929();
+                        await Func.func0988();
                     }
                     await Func.func173();
                     return;
@@ -276,7 +276,7 @@ async function func060(this: any) {
                     }
                     if (Gvar.var_407 == 2) {
                         Gvar.var_534++;
-                        await Func.func929();
+                        await Func.func0988();
                     }
                     await Func.func173();
                     return;
@@ -297,7 +297,7 @@ async function func060(this: any) {
                     Gvar.special_floor = 0;
                     Gvar.var_539 = 1;
                     await Func.func233(); // ダンジョンへ入った際の全ステータス初期化処理
-                    await Func.func880();
+                    await Func.func0939();
                     return;
                 }
                 await Func.func061();
@@ -346,10 +346,10 @@ async function func060(this: any) {
                 Gvar.var_205 = 1;
                 await Func.func231(); // プレイデータを保存するセーブ機能
                 if (Gvar.var_407 == 1) {
-                    await Func.func904();
+                    await Func.func0963();
                 }
                 if (Gvar.var_407 == 2) {
-                    await Func.func932();
+                    await Func.func0991();
                 }
                 await Func.func076(); // 各ダンジョンの絵文字読込処理
                 for (let cnt3 = 0; cnt3 < 80; ++cnt3) {

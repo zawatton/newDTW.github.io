@@ -23,7 +23,7 @@ async function func147(this: any) {
         if (Gvar.var_64 == 2) {
             await Func.func178(); // 処理確認タイマー(3m秒)
             Adap.onexit(0);
-            await Func.func882();
+            await Func.func0941();
             return;
         }
         if (Gvar.var_64 == 4) {

@@ -51,10 +51,10 @@ async function func166(this: any) {
             if (Gvar.key_X_on == 1) {
                 Gvar.var_790 = 0;
                 Gvar.var_791 = 0;
-                await Func.func822();
+                await Func.func0877();
                 Gvar.var_629 = 0;
                 await Func.func051(); // キー入力待ち処理
-                await Func.func820();
+                await Func.func0875();
                 return;
             }
             if (Gvar.var_257 == 1 && Gvar.var_785 == 1) {

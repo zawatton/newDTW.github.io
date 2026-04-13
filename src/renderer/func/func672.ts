@@ -16,7 +16,7 @@ async function func672(this: any) {
         }
         if (Gvar.var_407 == 2) {
             Gvar.var_3079++;
-            await Func.func929();
+            await Func.func0988();
         }
         await Func.AutoDraw(10);
         if (Gvar.var_1061 == 0) {

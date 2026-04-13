@@ -6,7 +6,7 @@ import * as Func from '../func/index'
 async function item310(this: any) {
         await Func.func506(); // discの発動をした際に、修正値を減少させる(0の時はdisc消滅させる)関数
         if (Gvar.var_407 == 1 && Gvar.var_536 == 1 && Gvar.dungeon_number == Adap.int(Gvar.var_1068[12])) {
-            await Func.func915();
+            await Func.func0974();
             return;
         }
         Gvar.var_1845 = 1;
