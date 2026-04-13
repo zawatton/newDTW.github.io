@@ -11,23 +11,23 @@ async function func0411(this: any) {
     Gvar.var_1919 = 100;
     for (let cnt0 = 0; cnt0 < 300; ++cnt0) {
         if (Gvar.var_177[Gvar.var_1919] == 1) {
-            Gvar.var_257 = Gvar.var_1919;
-            await Func.func0524();
+            Gvar.belongings_item_list = Gvar.var_1919;
+            await Func.func492();
             if (Gvar.var_1919 == 204) {
-                Gvar.var_932 = "最大HPが" + Gvar.var_1147 + "上がっているぞ";
+                Gvar.item_ability_description = "最大HPが" + Gvar.var_1147 + "上がっているぞ";
             }
             Gvar.var_1917[Gvar.var_1918] = Gvar.var_1917[Gvar.var_1918] || [];
-            Gvar.var_1917[Gvar.var_1918][1] = "" + Gvar.var_932;
-            if (Gvar.var_916 == 1) {
+            Gvar.var_1917[Gvar.var_1918][1] = "" + Gvar.item_ability_description;
+            if (Gvar.var_812 == 1) {
                 Gvar.var_1917[Gvar.var_1918][2] = "1";
             }
-            if (Gvar.var_916 == 2) {
+            if (Gvar.var_812 == 2) {
                 Gvar.var_1917[Gvar.var_1918][2] = "2";
             }
-            if (Gvar.var_916 == 3) {
+            if (Gvar.var_812 == 3) {
                 Gvar.var_1917[Gvar.var_1918][2] = "3";
             }
-            if (Gvar.var_916 == 4) {
+            if (Gvar.var_812 == 4) {
                 Gvar.var_1917[Gvar.var_1918][2] = "4";
             }
             Gvar.var_1918++;
@@ -36,16 +36,16 @@ async function func0411(this: any) {
     }
     Gvar.var_1896 = 0;
     if (Gvar.var_176 != 0) {
-        Gvar.var_268 = Gvar.var_176;
-        await Func.func0658();
+        Gvar.enemy_list = Gvar.var_176;
+        await Func.func626();
         Gvar.var_1917[Gvar.var_1918] = Gvar.var_1917[Gvar.var_1918] || [];
         Gvar.var_1917[Gvar.var_1918][2] = "0";
-        Gvar.var_1917[Gvar.var_1918][1] = "" + Gvar.var_1872 + "だぞ";
+        Gvar.var_1917[Gvar.var_1918][1] = "" + Gvar.enemy_name + "だぞ";
         Gvar.var_1918++;
     }
     if (Gvar.var_176 == 64 || Gvar.var_176 == 15 || Gvar.var_176 == 12 || Gvar.var_176 == 160 || Gvar.var_176 == 4 || Gvar.var_176 == 125 || Gvar.var_176 == 148 || Gvar.var_176 == 137 || Gvar.var_176 == 32 || Gvar.var_176 == 72 || Gvar.var_176 == 109 || Gvar.var_176 == 150 || Gvar.var_176 == 145 || Gvar.var_176 == 65) {
-        Gvar.var_268 = Gvar.var_176;
-        await Func.func0658();
+        Gvar.enemy_list = Gvar.var_176;
+        await Func.func626();
         Gvar.var_1917[Gvar.var_1918] = Gvar.var_1917[Gvar.var_1918] || [];
         Gvar.var_1917[Gvar.var_1918][2] = "0";
         Gvar.var_1917[Gvar.var_1918][1] = "特技をあと" + Gvar.var_120 + "回使えるぞ";
@@ -396,11 +396,11 @@ async function func0411(this: any) {
         Gvar.var_1918++;
     }
     if (Gvar.var_177[308] == 1 && Gvar.var_935 != 0) {
-        Gvar.var_268 = Gvar.var_935;
-        await Func.func0658();
+        Gvar.enemy_list = Gvar.var_935;
+        await Func.func626();
         Gvar.var_1917[Gvar.var_1918] = Gvar.var_1917[Gvar.var_1918] || [];
         Gvar.var_1917[Gvar.var_1918][2] = "0";
-        Gvar.var_1917[Gvar.var_1918][1] = "" + Gvar.var_1872 + "に恨みがあるぞ";
+        Gvar.var_1917[Gvar.var_1918][1] = "" + Gvar.enemy_name + "に恨みがあるぞ";
         Gvar.var_1918++;
     }
     if (Gvar.var_177[117] == 1) {
