@@ -1941,6 +1941,70 @@ async function func541(this: any) {
             await Func.setMessage("", "" + Gvar.var_2455 + "のダメージをうけた！", 7, false, false, false);
             await Func.AutoDraw(11);
         }
+        // No = 36 スピード・キングの罠を踏んだ時の動作処理（気絶）
+        if (Gvar.var_81[Gvar.var_2442][0] == 36) {
+            await Func.func050();
+            Gvar.var_108 = 1;
+            Gvar.var_81[Gvar.var_2442][3] = 1;
+            Gvar.var_283 = "";
+            await Func.func050();
+            Gvar.var_290 = 0;
+            Adap.DSPLAY(161);
+            Gvar.var_310 = 1;
+            // 火災アニメーション
+            Gvar.var_1759 = 1;
+            Gvar.var_1760 = 0;
+            for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
+                await Func.func354();
+                Gvar.var_1760++;
+            }
+            await Func.setMessage("「あああ！？何！？", "　あ･･･熱い･･･」", 7, false, false, false);
+            await Func.func050();
+            Gvar.var_223 = 1;
+            Gvar.var_290 = 0;
+            Adap.DSPLAY(123);
+            // HP減少ループ
+            Gvar.var_2712 = 1;
+            for (let cnt2 = 0; cnt2 < 5; ++cnt2) {
+                Gvar.var_1759 = 2;
+                await Func.func354();
+                Gvar.var_236 = Gvar.var_236 - Gvar.var_2712;
+                if (Gvar.var_236 <= 0) { Gvar.var_236 = 1; }
+                await Func.func354();
+                Gvar.var_236 = Gvar.var_236 - Gvar.var_2712;
+                if (Gvar.var_236 <= 0) { Gvar.var_236 = 1; }
+                Gvar.var_1759 = 3;
+                await Func.func354();
+                Gvar.var_236 = Gvar.var_236 - Gvar.var_2712;
+                if (Gvar.var_236 <= 0) { Gvar.var_236 = 1; }
+                await Func.func354();
+                Gvar.var_236 = Gvar.var_236 - Gvar.var_2712;
+                if (Gvar.var_236 <= 0) { Gvar.var_236 = 1; }
+            }
+            Gvar.var_1759 = 0;
+            Gvar.var_81[Gvar.var_2442][3] = 0;
+            // 気絶メッセージ
+            Gvar.var_283 = Gvar.var_286;
+            Gvar.var_284 = Gvar.var_287;
+            Gvar.var_286 = "ﾃﾞｨｱﾎﾞﾛは気絶した！";
+            Gvar.var_287 = "";
+            Gvar.var_223 = 1;
+            Gvar.var_290 = 0;
+            await Func.func050();
+            await Func.func053();
+            await Func.func358();
+            // 気絶状態設定
+            Gvar.var_108 = 0;
+            Gvar.var_310 = 0;
+            Gvar.var_1704 = 0;
+            Gvar.var_1397 = 0;
+            Gvar.var_219 = 1; // 行動不能状態
+            Gvar.var_223 = 1;
+            Gvar.var_290 = 0;
+            Gvar.var_529 = 1; // 気絶フラグON
+            Gvar.var_1760 = 0;
+            Adap.DSPLAY(132);
+        }
         // No = 77 ディアボロが仕掛けた罠を踏んだ時の動作処理
         if (Gvar.var_81[Gvar.var_2442][0] == 77) {
             await Func.setMessage("", "" + Gvar.var_889 + "がいるぞ。", 7, false, false, false);
