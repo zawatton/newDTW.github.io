@@ -42,6 +42,12 @@ SHEETS = {
     (3,  "img_mychara.gif.png", "mychara", 40),
     (8,  "img1.gif.png",        "ui",      40),
     (18, "img4.gif.png",        "ui2",     40),
+    # α版で追加されたシート
+    (36, "img_enemy5a.gif.png", "enemy5a", 40),
+    (37, "img_enemy5b.gif.png", "enemy5b", 40),
+    (38, "img4_2.gif.png",      "ui3",     40),
+    (39, "img4_3.gif.png",      "ui4",     40),
+    (40, "img_card.gif.png",    "card",    40),
 }
 
 def is_empty_cell(img_array):

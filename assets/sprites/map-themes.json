@@ -3,68 +3,157 @@
   "description": "マップテーマ定義: y_axis_map_image (行番号) → テーマ名のマッピング",
   "cellSize": 40,
   "tileColumns": {
-    "0":   "floor_basic",
-    "1":   "floor_var1",
-    "2":   "floor_var2",
-    "3":   "floor_special",
-    "4":   "floor_special_var1",
-    "5":   "floor_special_var2",
-    "6":   "wall_top",
-    "7":   "wall_top_var1",
-    "8":   "wall_top_var2",
-    "9":   "wall_edge1",
-    "10":  "wall_edge2",
-    "11":  "wall_edge3",
-    "12":  "stairs_down",
-    "13":  "stairs_up",
-    "14":  "passage",
-    "15":  "water",
-    "16":  "water_var",
-    "17":  "water_var2",
-    "18":  "wall_bottom1",
-    "19":  "wall_edge_L",
-    "20":  "wall_edge_R",
-    "21":  "wall_edge_T",
-    "22":  "wall_edge_B",
-    "25":  "shop_floor",
-    "26":  "door",
-    "27":  "door_var",
-    "28":  "door_var2",
-    "30":  "lava",
-    "31":  "bridge",
-    "35":  "wall_border_h",
-    "36":  "wall_border_v",
-    "37":  "corner_dots",
-    "38":  "special_floor"
+    "0": "floor_basic",
+    "1": "floor_var1",
+    "2": "floor_var2",
+    "3": "floor_special",
+    "4": "floor_special_var1",
+    "5": "floor_special_var2",
+    "6": "wall_top",
+    "7": "wall_top_var1",
+    "8": "wall_top_var2",
+    "9": "wall_edge1",
+    "10": "wall_edge2",
+    "11": "wall_edge3",
+    "12": "stairs_down",
+    "13": "stairs_up",
+    "14": "passage",
+    "15": "water",
+    "16": "water_var",
+    "17": "water_var2",
+    "18": "wall_bottom1",
+    "19": "wall_edge_L",
+    "20": "wall_edge_R",
+    "21": "wall_edge_T",
+    "22": "wall_edge_B",
+    "25": "shop_floor",
+    "26": "door",
+    "27": "door_var",
+    "28": "door_var2",
+    "30": "lava",
+    "31": "bridge",
+    "35": "wall_border_h",
+    "36": "wall_border_v",
+    "37": "corner_dots",
+    "38": "special_floor"
   },
   "themes": {
-    "0":  { "name": "デフォルト",           "row": 0 },
-    "1":  { "name": "拠点 (亀の甲羅内)",    "row": 1 },
-    "2":  { "name": "試練の塔",             "row": 2 },
-    "3":  { "name": "遺跡ダンジョン",       "row": 3 },
-    "4":  { "name": "洞窟ダンジョン",       "row": 4 },
-    "5":  { "name": "森林ダンジョン",       "row": 5 },
-    "6":  { "name": "砂漠ダンジョン",       "row": 6 },
-    "7":  { "name": "氷結ダンジョン",       "row": 7 },
-    "8":  { "name": "火山ダンジョン",       "row": 8 },
-    "9":  { "name": "海底ダンジョン",       "row": 9 },
-    "10": { "name": "刑務所ダンジョン",     "row": 10 },
-    "11": { "name": "暗黒空間",             "row": 11 },
-    "12": { "name": "街エリア1",            "row": 12 },
-    "13": { "name": "街エリア2",            "row": 13 },
-    "14": { "name": "ホテル",               "row": 14 },
-    "15": { "name": "コロッセオ",           "row": 15 },
-    "16": { "name": "闘技場",               "row": 16 },
-    "17": { "name": "スタンド発現部屋",     "row": 17 },
-    "18": { "name": "地下水路",             "row": 18 },
-    "19": { "name": "レクイエム迷宮",       "row": 19 },
-    "20": { "name": "監獄塔",               "row": 20 },
-    "21": { "name": "研究所",               "row": 21 },
-    "22": { "name": "骸骨ダンジョン",       "row": 22 },
-    "23": { "name": "深淵",                 "row": 23 },
-    "24": { "name": "天国ダンジョン",       "row": 24 },
-    "25": { "name": "カジノ",               "row": 25 },
-    "26": { "name": "汎用テーマ (Ver0.14)", "row": 26 }
+    "0": {
+      "name": "デフォルト",
+      "row": 0
+    },
+    "1": {
+      "name": "拠点 (亀の甲羅内)",
+      "row": 1
+    },
+    "2": {
+      "name": "試練の塔",
+      "row": 2
+    },
+    "3": {
+      "name": "遺跡ダンジョン",
+      "row": 3
+    },
+    "4": {
+      "name": "洞窟ダンジョン",
+      "row": 4
+    },
+    "5": {
+      "name": "森林ダンジョン",
+      "row": 5
+    },
+    "6": {
+      "name": "砂漠ダンジョン",
+      "row": 6
+    },
+    "7": {
+      "name": "氷結ダンジョン",
+      "row": 7
+    },
+    "8": {
+      "name": "火山ダンジョン",
+      "row": 8
+    },
+    "9": {
+      "name": "海底ダンジョン",
+      "row": 9
+    },
+    "10": {
+      "name": "刑務所ダンジョン",
+      "row": 10
+    },
+    "11": {
+      "name": "暗黒空間",
+      "row": 11
+    },
+    "12": {
+      "name": "街エリア1",
+      "row": 12
+    },
+    "13": {
+      "name": "街エリア2",
+      "row": 13
+    },
+    "14": {
+      "name": "ホテル",
+      "row": 14
+    },
+    "15": {
+      "name": "コロッセオ",
+      "row": 15
+    },
+    "16": {
+      "name": "闘技場",
+      "row": 16
+    },
+    "17": {
+      "name": "スタンド発現部屋",
+      "row": 17
+    },
+    "18": {
+      "name": "地下水路",
+      "row": 18
+    },
+    "19": {
+      "name": "レクイエム迷宮",
+      "row": 19
+    },
+    "20": {
+      "name": "監獄塔",
+      "row": 20
+    },
+    "21": {
+      "name": "研究所",
+      "row": 21
+    },
+    "22": {
+      "name": "骸骨ダンジョン",
+      "row": 22
+    },
+    "23": {
+      "name": "深淵",
+      "row": 23
+    },
+    "24": {
+      "name": "天国ダンジョン",
+      "row": 24
+    },
+    "25": {
+      "name": "カジノ",
+      "row": 25
+    },
+    "26": {
+      "name": "汎用テーマ (Ver0.14)",
+      "row": 26
+    },
+    "27": {
+      "name": "α版テーマ (行27)",
+      "row": 27
+    },
+    "28": {
+      "name": "α版テーマ (行28)",
+      "row": 28
+    }
   },
   "howToAddNewTheme": [
     "1. assets/sprites/map/ に新テーマの行タイルPNGを配置",

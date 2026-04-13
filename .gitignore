@@ -32,4 +32,6 @@ Thumbs.db
 node_modules/*
 dist/*
 build/*
-assets/sprites/
+assets/sprites/**
+!assets/sprites/manifest.json
+!assets/sprites/map-themes.json
