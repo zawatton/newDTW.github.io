@@ -129,6 +129,8 @@ export interface GlobalVars {
     var_58 :any,
     var_59 :any,
     var_60 :any,
+    var_61 :any,
+    var_62 :any,
     bgm_volume :number, // BGMの現在ボリューム
     dungeon_number :number, // 各ダンジョンに割り振られた識別用ID
     var_63 :any,
@@ -317,6 +319,7 @@ export interface GlobalVars {
     var_241 :any,
     key_Z_on :number, // キーZ入力確認
     var_243 :any,
+    var_244 :any,
     key_A_on :number, // キーA入力確認
     var_245 :any,
     var_246 :any,
@@ -450,6 +453,8 @@ export interface GlobalVars {
     var_374 :any,
     var_375 :any,
     var_376 :any,
+    var_377 :any,
+    var_380 :any,
     dungeon1_floor :number, // current_floor ホテルの外の階層
     dungeon2_floor :number, // current_floor レクイエムの大迷宮の階層
     dungeon3_floor :number, // current_floor ディアボロの試練の階層
@@ -483,6 +488,7 @@ export interface GlobalVars {
     var_407 :any,
     var_408 :any,
     var_409 :any,
+    var_410 :any,
     shageki_disc_id :number, // 射撃disc専用ID。
     var_411 :any,
     var_412 :any,
@@ -562,6 +568,7 @@ export interface GlobalVars {
     var_486 :any,
     disc_rarity :number, // 0より大きければレアdisc(色違い)
     var_488 :any,
+    var_489 :any,
     item_name :string,
     var_490 :any,
     var_491 :any,
@@ -3960,6 +3967,8 @@ export let Gvar: GlobalVars = {
     var_58: 0,
     var_59: 0,
     var_60: 0,
+    var_61: 0,
+    var_62: 0,
     bgm_volume: 0, // BGMの現在ボリューム
     dungeon_number: 0, // 各ダンジョンに割り振られた識別用ID
     var_63: 0,
@@ -4148,6 +4157,7 @@ export let Gvar: GlobalVars = {
     var_241: 0,
     key_Z_on: 0, // キーZ入力確認
     var_243: 0,
+    var_244: 0,
     key_A_on: 0, // キーA入力確認
     var_245: 0,
     var_246: 0,
@@ -4281,6 +4291,8 @@ export let Gvar: GlobalVars = {
     var_374: 0,
     var_375: 0,
     var_376: 0,
+    var_377: [],
+    var_380: 0,
     dungeon1_floor: 0, // current_floor ホテルの外の階層
     dungeon2_floor: 0, // current_floor レクイエムの大迷宮の階層
     dungeon3_floor: 0, // current_floor ディアボロの試練の階層
@@ -4314,6 +4326,7 @@ export let Gvar: GlobalVars = {
     var_407: 0,
     var_408: 0,
     var_409: 0,
+    var_410: 0,
     shageki_disc_id: 0, // 射撃disc専用ID。
     var_411: 0,
     var_412: 0,
@@ -4393,6 +4406,7 @@ export let Gvar: GlobalVars = {
     var_486: 0,
     disc_rarity: 0, // 0より大きければレアdisc(色違い)
     var_488: 0,
+    var_489: 0,
     item_name: null,
     var_490: 0,
     var_491: 0,

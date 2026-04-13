@@ -354,8 +354,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             Gvar.var_476 = 0;
             if (Gvar.var_2444 == 1) {
@@ -364,8 +362,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.217: 言ってやるゥゥゥゥ / お前は敗北を認めた！ ===
         if (Gvar.var_2494 == 217) {
             await Func.func538();
@@ -394,8 +390,6 @@ async function func543(this: any) {
                 await Func.func337();
                 Gvar.var_242 = 1;
                 await Func.func019();
-                // @ts-ignore
-                return;
             }
             Gvar.var_476 = 1;
             await Func.func099();
@@ -442,9 +436,7 @@ async function func543(this: any) {
                 Gvar.var_468 = 0;
                 Gvar.var_2503 = 0;
                 Gvar.var_265 = 0;
-                // @ts-ignore
                 Gvar.var_506 = Gvar.var_83[Gvar.var_489].Var0;
-                // @ts-ignore
                 Gvar.var_83[Gvar.var_489].Var5 = 2;
                 Gvar.var_453 = Gvar.var_2501;
                 Gvar.var_454 = Gvar.var_2502;
@@ -478,8 +470,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             Gvar.var_476 = 0;
             if (Gvar.var_2444 == 1) {
@@ -488,8 +478,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.218: 地面の記憶を呼び出した！ ===
         if (Gvar.var_2494 == 218) {
             await Func.func538();
@@ -591,8 +579,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.207: グレイトフル・デッド ===
         if (Gvar.var_2494 == 207) {
@@ -747,8 +733,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             Gvar.var_283 = Gvar.var_286;
             Gvar.var_284 = Gvar.var_287;
@@ -773,8 +757,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.122: エニグマ ===
         if (Gvar.var_2494 == 122) {
@@ -795,8 +777,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.113: クラッシュ ===
         if (Gvar.var_2494 == 113) {
@@ -863,8 +843,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             Gvar.var_476 = 0;
             if (Gvar.var_2444 == 1) {
@@ -873,8 +851,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.105: 限界なく明るくなる ===
         if (Gvar.var_2494 == 105) {
             await Func.func538();
@@ -1097,8 +1073,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.116: ハーミットパープル(念写) ===
         if (Gvar.var_2494 == 116) {
@@ -1167,8 +1141,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             if (Gvar.var_2509 == 0 && Gvar.var_2510 == 0) {
                 Adap.DSPLAY(184);
@@ -1199,8 +1171,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.107: デス13(ラリホー) ===
         if (Gvar.var_2494 == 107) {
             await Func.func538();
@@ -1331,8 +1301,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.115: ゴールドエクスペリエンス(生命付与) ===
         if (Gvar.var_2494 == 115) {
@@ -1378,8 +1346,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
@@ -1387,8 +1353,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.109: クロスファイヤーハリケーンスペシャル ===
         if (Gvar.var_2494 == 109) {
             await Func.func538();
@@ -1422,7 +1386,6 @@ async function func543(this: any) {
                     Gvar.var_1714 = Adap.rnd(Gvar.var_32);
                     Gvar.var_255 = Adap.rnd(Gvar.var_33);
                     if ( Gvar.var_82[Gvar.var_1714][Gvar.var_255] == Gvar.var_226  &&  Gvar.var_93[Gvar.var_1714][Gvar.var_255] != 0  &&  Gvar.var_82[Gvar.var_1714][Gvar.var_255] != 14 ) {
-                        // @ts-ignore
                         Gvar.var_489 = Gvar.var_93[Gvar.var_1714][Gvar.var_255];
                         Gvar.var_310 = 1;
                         Gvar.var_1713 = 1;
@@ -1432,12 +1395,9 @@ async function func543(this: any) {
                         }
                         Gvar.var_1713 = 0;
                         Gvar.var_457 = "クロスファイヤーハリケーンスペシャル！";
-                        // @ts-ignore
                         Gvar.var_268 = Gvar.var_83[Gvar.var_489].Var0;
                         await Func.func658();
-                        // @ts-ignore
                         Gvar.var_456 = Gvar.var_489;
-                        // @ts-ignore
                         Gvar.var_345 = Gvar.var_489;
                         Gvar.var_234 = Gvar.var_647 * 5;
                         Gvar.var_2457 = Adap.rnd(3);
@@ -1491,8 +1451,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
@@ -1500,8 +1458,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.301: アイテム回収 ===
         if (Gvar.var_2494 == 301) {
             await Func.func538();
@@ -1546,8 +1502,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.106: パールジャム(合成) ===
         if (Gvar.var_2494 == 106) {
@@ -1569,11 +1523,7 @@ async function func543(this: any) {
             await Func.func054();
             Gvar.var_222 = 1;
             await Func.func493();
-            // @ts-ignore
-            return;
             }
-            // @ts-ignore
-            return;
         // === DISC No.300: パールジャム(食べる) ===
         if (Gvar.var_2494 == 300) {
             await Func.func538();
@@ -1602,8 +1552,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.108: マンインザミラー ===
         if (Gvar.var_2494 == 108) {
@@ -1623,8 +1571,6 @@ async function func543(this: any) {
             // ここにジッパーはつけられない
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.104: ザ・ハンド(空間削り) ===
         if (Gvar.var_2494 == 104) {
@@ -1869,8 +1815,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             Gvar.var_476 = 0;
             if (Gvar.var_2444 == 1) {
@@ -1879,8 +1823,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.101: シルバーチャリオッツ(分身) ===
         if (Gvar.var_2494 == 101) {
             if (Gvar.var_488 != 0) {
@@ -1890,8 +1832,6 @@ async function func543(this: any) {
                 }
                 Gvar.var_259 = 0;
                 Gvar.var_245 = 0;
-                // @ts-ignore
-                return;
             }
             // 分身出現判定
             // チャリオッツを出せる場所が無いぞ。
@@ -1914,8 +1854,6 @@ async function func543(this: any) {
             Gvar.var_259 = 0;
             Gvar.var_245 = 0;
             await Func.func009();
-            // @ts-ignore
-            return;
             }
             Gvar.var_2540 = 1;
             Gvar.var_443 = 1;
@@ -1931,8 +1869,6 @@ async function func543(this: any) {
                 Gvar.var_259 = 0;
                 Gvar.var_245 = 0;
                 await Func.func009();
-                // @ts-ignore
-                return;
             }
             await Func.func538();
             for (let cnt = 0; cnt < 7; ++cnt) {
@@ -2014,8 +1950,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             Gvar.var_283 = Gvar.var_286;
             Gvar.var_284 = Gvar.var_287;
             Gvar.var_286 = "これだ！　甲冑を外したスタンド";
@@ -2034,8 +1968,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.319: 能力消去DISC選択 ===
         if (Gvar.var_2494 == 319) {
             await Func.setMessage("能力を消すDISCを選んでください", "", 10, false, false, false);
@@ -2060,11 +1992,7 @@ async function func543(this: any) {
             await Func.func054();
             Gvar.var_222 = 1;
             await Func.func493();
-            // @ts-ignore
-            return;
             }
-            // @ts-ignore
-            return;
         // === DISC No.111/398: ザ・ワールド / スタープラチナ・ザ・ワールド ===
         if (Gvar.var_2494 == 111 || Gvar.var_2494 == 398) {
             await Func.func538();
@@ -2094,8 +2022,6 @@ async function func543(this: any) {
                 Gvar.var_2444 = 0;
                 await Func.func540();
             }
-            // @ts-ignore
-            return;
         }
         // === DISC No.201: イエローテンパランス ===
         if (Gvar.var_2494 == 201) {
@@ -2136,8 +2062,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             Gvar.var_283 = Gvar.var_286;
             Gvar.var_284 = Gvar.var_287;
@@ -2156,17 +2080,11 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.310: 敵召集 ===
         if (Gvar.var_2494 == 310) {
             await Func.func538();
-            // @ts-ignore
-            if ( Gvar.var_463 == 1  &&  Gvar.var_611 == 1  &&  Gvar.var_70 == int(Gvar.var_1170[12]) ) {
-                // @ts-ignore
-                await Func.func974();
-                // @ts-ignore
-                return;
+            if ( Gvar.var_463 == 1  &&  Gvar.var_611 == 1  &&  Gvar.var_70 == Math.floor(Gvar.var_1170[12]) ) {
+                await Func.func0974();
             }
             Gvar.var_443 = 1;
             await Func.func588();
@@ -2194,8 +2112,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.403: 食べるDISC選択 ===
         if (Gvar.var_2494 == 403) {
@@ -2218,11 +2134,7 @@ async function func543(this: any) {
             await Func.func054();
             Gvar.var_222 = 1;
             await Func.func493();
-            // @ts-ignore
-            return;
             }
-            // @ts-ignore
-            return;
         }
         // === DISC No.120: ストーンフリー ===
         if (Gvar.var_2494 == 120) {
@@ -2256,8 +2168,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.126: C-MOON(重力変化) ===
         if (Gvar.var_2494 == 126) {
@@ -2432,8 +2342,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             if (Gvar.var_2543 == 1) {
                 Gvar.var_283 = "重力はわたしの肉体に対し";
@@ -2454,8 +2362,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.200: スーパーフライ(鉄塔) ===
         if (Gvar.var_2494 == 200) {
             if (Gvar.var_84[Gvar.var_74][Gvar.var_75] != 0) {
@@ -2463,8 +2369,6 @@ async function func543(this: any) {
                 for (let cnt = 0; cnt < 5; ++cnt) {
                     await Func.func337();
                 }
-                // @ts-ignore
-                return;
             }
             await Func.func538();
             await Func.setMessage("「スーパーフライ！」", "", 10, false, false, false);
@@ -2488,8 +2392,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.205: ペットショップ(氷固定) ===
         if (Gvar.var_2494 == 205) {
@@ -2635,8 +2537,6 @@ async function func543(this: any) {
                 }
                 Gvar.var_242 = 1;
                 await Func.func019();
-                // @ts-ignore
-                return;
             }
             if (Gvar.var_2543 == 1) {
                 Gvar.var_283 = "その場所に固定するッ！";
@@ -2657,8 +2557,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.206: オアシス(ドロドロ) ===
         if (Gvar.var_2494 == 206) {
@@ -2689,9 +2587,7 @@ async function func543(this: any) {
                 Gvar.var_379 = Gvar.var_75;
                 await Func.func654();
                 Gvar.var_376 = 1;
-                // @ts-ignore
                 Gvar.var_377[0][1] = Gvar.var_378;
-                // @ts-ignore
                 Gvar.var_377[0][2] = Gvar.var_379;
             }
             if ( Gvar.var_82[Gvar.var_328][Gvar.var_75] == 0 ) {
@@ -2699,9 +2595,7 @@ async function func543(this: any) {
                 Gvar.var_379 = Gvar.var_75;
                 await Func.func654();
                 Gvar.var_376 = 1;
-                // @ts-ignore
                 Gvar.var_377[4][1] = Gvar.var_378;
-                // @ts-ignore
                 Gvar.var_377[4][2] = Gvar.var_379;
             }
             if ( Gvar.var_82[Gvar.var_329][Gvar.var_75] == 0 ) {
@@ -2709,9 +2603,7 @@ async function func543(this: any) {
                 Gvar.var_379 = Gvar.var_75;
                 await Func.func654();
                 Gvar.var_376 = 1;
-                // @ts-ignore
                 Gvar.var_377[6][1] = Gvar.var_378;
-                // @ts-ignore
                 Gvar.var_377[6][2] = Gvar.var_379;
             }
             if ( Gvar.var_82[Gvar.var_74][Gvar.var_330] == 0 ) {
@@ -2719,9 +2611,7 @@ async function func543(this: any) {
                 Gvar.var_379 = Gvar.var_330;
                 await Func.func654();
                 Gvar.var_376 = 1;
-                // @ts-ignore
                 Gvar.var_377[2][1] = Gvar.var_378;
-                // @ts-ignore
                 Gvar.var_377[2][2] = Gvar.var_379;
             }
             if ( Gvar.var_82[Gvar.var_74][Gvar.var_331] == 0 ) {
@@ -2729,9 +2619,7 @@ async function func543(this: any) {
                 Gvar.var_379 = Gvar.var_331;
                 await Func.func654();
                 Gvar.var_376 = 1;
-                // @ts-ignore
                 Gvar.var_377[8][1] = Gvar.var_378;
-                // @ts-ignore
                 Gvar.var_377[8][2] = Gvar.var_379;
             }
             if ( Gvar.var_82[Gvar.var_328][Gvar.var_330] == 0 ) {
@@ -2739,9 +2627,7 @@ async function func543(this: any) {
                 Gvar.var_379 = Gvar.var_330;
                 await Func.func654();
                 Gvar.var_376 = 1;
-                // @ts-ignore
                 Gvar.var_377[1][1] = Gvar.var_378;
-                // @ts-ignore
                 Gvar.var_377[1][2] = Gvar.var_379;
             }
             if ( Gvar.var_82[Gvar.var_329][Gvar.var_330] == 0 ) {
@@ -2749,9 +2635,7 @@ async function func543(this: any) {
                 Gvar.var_379 = Gvar.var_330;
                 await Func.func654();
                 Gvar.var_376 = 1;
-                // @ts-ignore
                 Gvar.var_377[3][1] = Gvar.var_378;
-                // @ts-ignore
                 Gvar.var_377[3][2] = Gvar.var_379;
             }
             if ( Gvar.var_82[Gvar.var_328][Gvar.var_331] == 0 ) {
@@ -2759,9 +2643,7 @@ async function func543(this: any) {
                 Gvar.var_379 = Gvar.var_331;
                 await Func.func654();
                 Gvar.var_376 = 1;
-                // @ts-ignore
                 Gvar.var_377[7][1] = Gvar.var_378;
-                // @ts-ignore
                 Gvar.var_377[7][2] = Gvar.var_379;
             }
             if ( Gvar.var_82[Gvar.var_329][Gvar.var_331] == 0 ) {
@@ -2769,20 +2651,16 @@ async function func543(this: any) {
                 Gvar.var_379 = Gvar.var_331;
                 await Func.func654();
                 Gvar.var_376 = 1;
-                // @ts-ignore
                 Gvar.var_377[9][1] = Gvar.var_378;
-                // @ts-ignore
                 Gvar.var_377[9][2] = Gvar.var_379;
             }
             if ( Gvar.var_376 == 1 ) {
                 Adap.DSPLAY(123);
                 for (let cnt = 0; cnt < 5; ++cnt) {
-                    // @ts-ignore
                     Gvar.var_380++;
                     await Func.func337();
                     await Func.func337();
                 }
-                // @ts-ignore
                 Gvar.var_380 = 0;
                 // dim var_377, 10, 10 — already initialized
             }
@@ -2792,8 +2670,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
@@ -2801,8 +2677,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.304: ウェザーリポート(雨) ===
         if (Gvar.var_2494 == 304) {
             await Func.func538();
@@ -3088,8 +2962,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             await Func.setMessage("", "　――――　雨があがった　――――", 10, false, false, false);
             // 雨後の処理
@@ -3115,8 +2987,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.102: キング・クリムゾン ===
         if (Gvar.var_2494 == 102) {
             await Func.func538();
@@ -3144,8 +3014,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.121: パープルヘイズ(ウイルス) ===
         if (Gvar.var_2494 == 121) {
@@ -3359,8 +3227,6 @@ async function func543(this: any) {
                 }
                 Gvar.var_242 = 1;
                 await Func.func019();
-                // @ts-ignore
-                return;
             }
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
@@ -3368,8 +3234,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.318: エネルギー吸収 ===
         if (Gvar.var_2494 == 318) {
@@ -3583,18 +3447,14 @@ async function func543(this: any) {
                 }
                 Gvar.var_242 = 1;
                 await Func.func019();
-                // @ts-ignore
-                return;
             }
-            // "合計 " + var_2557 + " のエネルギーを吸収した。"
+            // "合計 " + Gvar.var_2557 + " のエネルギーを吸収した。"
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
                 await Func.func540();
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.117: 養分吸収 ===
         if (Gvar.var_2494 == 117) {
@@ -3830,8 +3690,7 @@ async function func543(this: any) {
                     if ( Gvar.var_236 > Gvar.var_383 ) {
                         Gvar.var_236 = Gvar.var_383;
                     }
-                    // @ts-ignore
-                    await Func.setMessage("合計 " + var_2557 + " のエネルギーを吸収した。", "", 10, false, false, false);
+                    await Func.setMessage("合計 " + Gvar.var_2557 + " のエネルギーを吸収した。", "", 10, false, false, false);
                     for (let cnt = 0; cnt < 10; ++cnt) {
                         await Func.func337();
                     }
@@ -3843,10 +3702,8 @@ async function func543(this: any) {
                 }
                 Gvar.var_242 = 1;
                 await Func.func019();
-                // @ts-ignore
-                return;
             }
-            // "合計 " + var_2557 + " の養分を吸収した。"
+            // "合計 " + Gvar.var_2557 + " の養分を吸収した。"
             // "満腹度が完全回復した。"
             // "満腹度が回復した。"
             if (Gvar.var_2444 == 1) {
@@ -3855,8 +3712,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.313: 養分吸収2 ===
         if (Gvar.var_2494 == 313) {
@@ -3865,15 +3720,13 @@ async function func543(this: any) {
                 await Func.setMessage("発動能力がパワーアップしている！", "", 10, false, false, false);
                 await Func.func358();
             }
-            // "合計 " + var_2557 + " の養分を吸収した。"
+            // "合計 " + Gvar.var_2557 + " の養分を吸収した。"
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
                 await Func.func540();
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.308: 人形設置 ===
         if (Gvar.var_2494 == 308) {
@@ -3888,8 +3741,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
@@ -3897,8 +3748,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.203: ザ・フール(砂嵐) ===
         if (Gvar.var_2494 == 203) {
             await Func.func538();
@@ -4045,8 +3894,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             // "周りの敵は目に砂が入って"
             // "盲目になってしまった！"
@@ -4056,8 +3903,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.112/394: シアーハートアタック召喚 ===
         if (Gvar.var_2494 == 112 || Gvar.var_2494 == 394) {
             // 出せない場合
@@ -4074,8 +3919,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.204: シアーハートアタック爆発 ===
         if (Gvar.var_2494 == 204) {
@@ -4259,8 +4102,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
@@ -4268,8 +4109,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.312: 電気攻撃(伝達力) ===
         if (Gvar.var_2494 == 312) {
             await Func.func538();
@@ -4284,8 +4123,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.316: ファイトクラブ ===
         if (Gvar.var_2494 == 316) {
@@ -4421,8 +4258,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.223: D4C(ドジャアア～～ン) ===
         if (Gvar.var_2494 == 223) {
@@ -4477,9 +4312,7 @@ async function func543(this: any) {
                 if ( Gvar.var_70 == 1  &&  Gvar.var_79 > Gvar.var_409 ) {
                     Gvar.var_409 = Gvar.var_79;
                 }
-                // @ts-ignore
                 if ( Gvar.var_70 == 2  &&  Gvar.var_79 > Gvar.var_410 ) {
-                    // @ts-ignore
                     Gvar.var_410 = Gvar.var_79;
                 }
                 if ( Gvar.var_70 == 3  &&  Gvar.var_79 > Gvar.var_411 ) {
@@ -4509,23 +4342,17 @@ async function func543(this: any) {
             Gvar.var_230 = 1;
             await Func.func244();
             if ( Gvar.var_463 == 1 ) {
-                // @ts-ignore
-                await Func.func963();
+                await Func.func0963();
             }
             if ( Gvar.var_463 == 2 ) {
-                // @ts-ignore
-                await Func.func991();
+                await Func.func0991();
             }
             await Func.func080();
             for (let cnt = 0; cnt < 80; ++cnt) {
                 await Func.func357();
             }
             await Func.func006();
-            // @ts-ignore
-            return;
             }
-            // @ts-ignore
-            return;
         // === DISC No.224: ホワイトアルバム(白い凍結) ===
         if (Gvar.var_2494 == 224) {
             await Func.func538();
@@ -4808,7 +4635,6 @@ async function func543(this: any) {
             }
             Gvar.var_2424 = Gvar.var_2424 + 1;
             Gvar.var_131 = 0;
-            // @ts-ignore
             Gvar.var_244 = 1;
             if ( Gvar.var_2563 != 0 ) {
                 Gvar.var_176 = Gvar.var_83[Gvar.var_2563].Var0;
@@ -4855,8 +4681,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.202: ホワイトアルバム(全凍結) ===
         if (Gvar.var_2494 == 202) {
             await Func.func538();
@@ -4894,8 +4718,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.395: キラークイーン第3の爆弾 BITE THE DUST ===
         if (Gvar.var_2494 == 395) {
@@ -5056,8 +4878,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             // "すでに「瞳」の中に入っている！"
             // "しかし何もおこらなかった…"
@@ -5067,8 +4887,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.302: チープトリック(道連れ) ===
         if (Gvar.var_2494 == 302) {
@@ -5103,12 +4921,10 @@ async function func543(this: any) {
                     await Func.func337();
                 }
                 await Func.func009();
-                // @ts-ignore
-                return;
             }
             if ( Gvar.var_236 > 1 ) {
                 Gvar.var_236 = Gvar.var_236 / 2;
-                // @ts-ignore
+                // @ts-ignore HSP: var_233 は数値として使用
                 Gvar.var_233 = Gvar.var_236 / 2 + Gvar.var_233;
             }
             for (let cnt = 0; cnt < 20; ++cnt) {
@@ -5309,8 +5125,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
@@ -5318,8 +5132,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.216: ボーイ・II・マン(ナンバー変更) ===
         if (Gvar.var_2494 == 216) {
@@ -5348,7 +5160,6 @@ async function func543(this: any) {
                         Gvar.var_2572 = Gvar.var_60 - 1;
                     }
                     if ( Gvar.var_70 == 3 ) {
-                        // @ts-ignore
                         Gvar.var_2572 = Gvar.var_61 - 1;
                     }
                     if ( Gvar.var_70 == 4 ) {
@@ -5356,7 +5167,6 @@ async function func543(this: any) {
                         Gvar.var_1765 = Gvar.var_2573 + 1;
                     }
                     if ( Gvar.var_70 == 5 ) {
-                        // @ts-ignore
                         Gvar.var_2572 = Gvar.var_62 - 1;
                     }
                     if ( Gvar.var_70 == 6 ) {
@@ -5489,8 +5299,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
@@ -5498,8 +5306,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.222: 運命固定 ===
         if (Gvar.var_2494 == 222) {
             await Func.func538();
@@ -5521,8 +5327,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.303: 回避力アップ ===
         if (Gvar.var_2494 == 303) {
@@ -5545,8 +5349,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.413: 人形設置2 ===
         if (Gvar.var_2494 == 413) {
@@ -5565,8 +5367,6 @@ async function func543(this: any) {
                     Gvar.var_259 = 0;
                     Gvar.var_245 = 0;
                     await Func.func009();
-                    // @ts-ignore
-                    return;
                 }
                 await Func.func538();
                 Gvar.var_506 = Gvar.var_445;
@@ -5583,8 +5383,6 @@ async function func543(this: any) {
                 Gvar.var_83[Gvar.var_506].Var11 = 0;
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.320: メタリカ(透明化) ===
         if (Gvar.var_2494 == 320) {
@@ -5600,8 +5398,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.321: 幽霊部屋 ===
         if (Gvar.var_2494 == 321) {
@@ -5622,8 +5418,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.305: シンデレラ(幸運メイク) ===
         if (Gvar.var_2494 == 305) {
@@ -5648,8 +5442,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.396: メイドインヘブン(高速移動) ===
         if (Gvar.var_2494 == 396) {
@@ -5672,8 +5464,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.119: スパイスガール(ゴム弾力) ===
         if (Gvar.var_2494 == 119) {
@@ -5690,8 +5480,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.123: クリーム(空間移動) ===
         if (Gvar.var_2494 == 123) {
@@ -5845,8 +5633,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
@@ -5854,8 +5640,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.124: ボーイズマンマン(送る) ===
         if (Gvar.var_2494 == 124) {
@@ -5966,12 +5750,9 @@ async function func543(this: any) {
                         await Func.func054();
                         Gvar.var_222 = 1;
                         await Func.func493();
-                        // @ts-ignore
-                        return;
                     }
                 }
-                // @ts-ignore
-                if ( Gvar.var_463 == 1  &&  Gvar.var_611 == 1  &&  Gvar.var_70 == int(Gvar.var_1170[12]) ) {
+                if ( Gvar.var_463 == 1  &&  Gvar.var_611 == 1  &&  Gvar.var_70 == Math.floor(Gvar.var_1170[12]) ) {
                     await Func.setMessage("どれを相手に送りますか？", "", 10, false, false, false);
                     for (let cnt = 0; cnt < 4; ++cnt) {
                         await Func.func337();
@@ -5994,8 +5775,6 @@ async function func543(this: any) {
                     await Func.func054();
                     Gvar.var_222 = 1;
                     await Func.func493();
-                    // @ts-ignore
-                    return;
                 }
                 await Func.setMessage("どれを倉庫に送りますか？", "", 10, false, false, false);
                 for (let cnt = 0; cnt < 4; ++cnt) {
@@ -6020,11 +5799,7 @@ async function func543(this: any) {
                 await Func.func054();
                 Gvar.var_222 = 1;
                 await Func.func493();
-                // @ts-ignore
-                return;
             }
-            // @ts-ignore
-            return;
         }
         // === DISC No.311: チープトリック(おんぶ) ===
         if (Gvar.var_2494 == 311) {
@@ -6134,8 +5909,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.397: 悪魔の虹(罠大量出現) ===
         if (Gvar.var_2494 == 397) {
@@ -6161,8 +5934,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.314: ストレイキャット ===
         if (Gvar.var_2494 == 314) {
@@ -6179,8 +5950,6 @@ async function func543(this: any) {
             for (let cnt = 0; cnt < 10; ++cnt) {
                 await Func.func337();
             }
-            // @ts-ignore
-            return;
         }
         // === DISC No.405/406/408/409/410/404/400/317/414/309: 罠設置系 ===
         if (Gvar.var_2494 == 405 || Gvar.var_2494 == 406 || Gvar.var_2494 == 408 || Gvar.var_2494 == 409 || Gvar.var_2494 == 410 || Gvar.var_2494 == 404 || Gvar.var_2494 == 400 || Gvar.var_2494 == 317 || Gvar.var_2494 == 414 || Gvar.var_2494 == 309) {
@@ -6200,8 +5969,6 @@ async function func543(this: any) {
                 for (let cnt = 0; cnt < 5; ++cnt) {
                     await Func.func337();
                 }
-                // @ts-ignore
-                return;
             }
             if ( Gvar.var_2494 == 414 ) {
                 Gvar.var_283 = "ここには撃てない。";
@@ -6210,8 +5977,6 @@ async function func543(this: any) {
                 await Func.func337();
             }
             await Func.func009();
-            // @ts-ignore
-            return;
             }
             if (Gvar.var_2494 == 309) { await Func.setMessage("地面にｿﾌﾄ･ﾏｼｰﾝを潜ませた。", "", 10, false, false, false); }
             if (Gvar.var_2494 == 406) { await Func.setMessage("地面に文字を貼り付けた。", "", 10, false, false, false); }
@@ -6234,8 +5999,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.118/407: ダイバーダウン/法王の結界(周囲設置) ===
         if (Gvar.var_2494 == 118 || Gvar.var_2494 == 407) {
             if ( Gvar.var_2494 == 118  ||  Gvar.var_2494 == 407 ) {
@@ -6275,8 +6038,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.401: フー・ファイターズ(体力回復) ===
         if (Gvar.var_2494 == 401) {
@@ -6321,8 +6082,6 @@ async function func543(this: any) {
                 await Func.func538();
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.402: エンペラー ===
         if (Gvar.var_2494 == 402) {
@@ -6332,8 +6091,6 @@ async function func543(this: any) {
             }
             Gvar.var_257 = Gvar.var_2494;
             await Func.func538();
-            // @ts-ignore
-            return;
         }
         // === DISC No.411: テレポート ===
         if (Gvar.var_2494 == 411) {
@@ -6415,8 +6172,6 @@ async function func543(this: any) {
             await Func.func538();
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.412: ヘブンズドアー ===
         if (Gvar.var_2494 == 412) {
@@ -6506,8 +6261,6 @@ async function func543(this: any) {
                     Gvar.var_574 = 1;
                     Adap.DSPLAY(118);
                     await Func.func378();
-                    // @ts-ignore
-                    return;
                 }
                 if ( Gvar.var_2469 == 2 ) {
                     Gvar.var_1472 = (Gvar.var_83[Gvar.var_1638].Var1 - Gvar.var_74 + 4) * 40;
@@ -6533,16 +6286,12 @@ async function func543(this: any) {
             await Func.func538();
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             // "見えてなくて効かなかった…"
             Gvar.var_257 = Gvar.var_2494;
             await Func.func538();
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.425: 重い雨 ===
         if (Gvar.var_2494 == 425) {
@@ -6770,8 +6519,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             await Func.setMessage("", "　――――　雨があがった　――――", 10, false, false, false);
             // 雨後処理
@@ -6790,8 +6537,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.306: ウェザーリポート(気流) ===
         if (Gvar.var_2494 == 306) {
@@ -6837,8 +6582,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             Gvar.var_283 = Gvar.var_286;
             Gvar.var_284 = Gvar.var_287;
@@ -6872,8 +6615,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             Gvar.var_283 = Gvar.var_286;
             Gvar.var_284 = Gvar.var_287;
@@ -6890,8 +6631,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.315: エピタフ(未来予知) ===
         if (Gvar.var_2494 == 315) {
             await Func.func538();
@@ -6930,8 +6669,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
             }
             Gvar.var_283 = Gvar.var_286;
             Gvar.var_284 = Gvar.var_287;
@@ -6955,8 +6692,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         // === DISC No.393: ジョジョ読み(敵召喚) ===
         if (Gvar.var_2494 == 393) {
             await Func.func538();
@@ -6994,8 +6729,6 @@ async function func543(this: any) {
                 }
                 Gvar.var_242 = 1;
                 await Func.func019();
-                // @ts-ignore
-                return;
             }
             if ( Gvar.var_2494 == 393 ) {
                 await Func.func538();
@@ -7018,8 +6751,6 @@ async function func543(this: any) {
                     }
                     Gvar.var_242 = 1;
                     await Func.func019();
-                    // @ts-ignore
-                    return;
                     // @ts-ignore HSP: return
                 }
                 Gvar.var_466 = 0;
@@ -7028,8 +6759,7 @@ async function func543(this: any) {
                 Gvar.var_1753 = 0;
                 Gvar.var_1754 = 0;
                 Gvar.var_1755 = 0;
-                // @ts-ignore
-                await Func.func657();
+                await Func.func0657();
                 Gvar.var_443 = 1;
                 Gvar.var_444 = Gvar.var_445;
                 await Func.func588();
@@ -7056,11 +6786,8 @@ async function func543(this: any) {
                     }
                     Gvar.var_242 = 1;
                     await Func.func019();
-                    // @ts-ignore
-                    return;
                 }
-                // @ts-ignore
-                await Func.func657();
+                await Func.func0657();
                 Gvar.var_443 = 1;
                 Gvar.var_444 = Gvar.var_445;
                 await Func.func588();
@@ -7069,8 +6796,7 @@ async function func543(this: any) {
                 Gvar.var_1753 = (Gvar.var_83[Gvar.var_445].Var2 - Gvar.var_75 + 4) * 40;
                 Gvar.var_445 = Gvar.var_444;
                 Gvar.var_443 = 0;
-                // @ts-ignore
-                await Func.func657();
+                await Func.func0657();
                 Gvar.var_443 = 1;
                 Gvar.var_444 = Gvar.var_445;
                 await Func.func588();
@@ -7106,8 +6832,6 @@ async function func543(this: any) {
                 }
                 Gvar.var_242 = 1;
                 await Func.func019();
-                // @ts-ignore
-                return;
             }
             // "しかし何も起こらなかった…"
             // "マンガのキャラクターが現れた！"
@@ -7117,8 +6841,6 @@ async function func543(this: any) {
             }
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
         }
         // === DISC No.399: ゴールドエクスペリエンスレクイエム ===
         if (Gvar.var_2494 == 399) {
@@ -7133,8 +6855,7 @@ async function func543(this: any) {
                 await Func.func337();
             }
             await Func.setMessage("「ｺﾞｰﾙﾄﾞ･ｴｸｽﾍﾟﾘｴﾝｽ･ﾚｸｲｴﾑ」！！", "", 10, false, false, false);
-            // @ts-ignore
-            await Func.func114();
+            await Func.func0114();
             Gvar.var_1776 = 1;
             Gvar.var_310 = 1;
             for (let cnt = 0; cnt < 30; ++cnt) {
@@ -7177,32 +6898,23 @@ async function func543(this: any) {
                 Gvar.var_1778 = Gvar.var_1778 + 2;
             }
             Gvar.var_343 = 0;
-            // @ts-ignore
-            await Func.func131();
+            await Func.func0131();
             for (let cnt = 0; cnt < 100; ++cnt) {
                 await Func.func337();
                 Gvar.var_1778 = Gvar.var_1778 + 2;
             }
             await Func.func564();
-            // @ts-ignore
-            return;
             }
             await Func.setMessage("しかし何も起こらなかった", "", 10, false, false, false);
             Gvar.var_259 = 0;
             Gvar.var_245 = 0;
             Gvar.var_242 = 1;
             await Func.func019();
-            // @ts-ignore
-            return;
-            // @ts-ignore
-            return;
         // === デフォルト: 何も起こらなかった ===
         await Func.setMessage("しかし何も起こらなかった", "", 10, false, false, false);
         Gvar.var_259 = 0;
         Gvar.var_245 = 0;
         Gvar.var_242 = 1;
         await Func.func019();
-        // @ts-ignore
-        return;
 
 export {func543}
