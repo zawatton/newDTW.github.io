@@ -2205,7 +2205,92 @@ async function func543(this: any) {
                 await Func.setMessage("発動能力がパワーアップしている！", "", 10, false, false, false);
                 await Func.func358();
             }
-            // 敵固定処理 (省略)
+            for (let cnt = 0; cnt < 10; ++cnt) {
+                await Func.func337();
+            }
+            Gvar.var_2220 = 1;
+            Gvar.var_2543 = 0;
+            Gvar.var_2221 = Gvar.var_74 - 1;
+            Gvar.var_2222 = Gvar.var_74 + 1;
+            Gvar.var_2223 = Gvar.var_75 + 1;
+            Gvar.var_2224 = Gvar.var_75 - 1;
+            for (let cnt = 0; cnt < Gvar.var_107; ++cnt) {
+                if (Gvar.var_83[Gvar.var_2220].Var1 == Gvar.var_74 && Gvar.var_83[Gvar.var_2220].Var2 == Gvar.var_2223) {
+                    Gvar.var_83[Gvar.var_2220].Var12 = 0;
+                    Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                    Gvar.var_2543 = 1;
+                }
+                if (Gvar.var_83[Gvar.var_2220].Var1 == Gvar.var_74 && Gvar.var_83[Gvar.var_2220].Var2 == Gvar.var_2224) {
+                    Gvar.var_83[Gvar.var_2220].Var12 = 0;
+                    Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                    Gvar.var_2543 = 1;
+                }
+                if (Gvar.var_83[Gvar.var_2220].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2220].Var2 == Gvar.var_75) {
+                    Gvar.var_83[Gvar.var_2220].Var12 = 0;
+                    Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                    Gvar.var_2543 = 1;
+                }
+                if (Gvar.var_83[Gvar.var_2220].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2220].Var2 == Gvar.var_75) {
+                    Gvar.var_83[Gvar.var_2220].Var12 = 0;
+                    Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                    Gvar.var_2543 = 1;
+                }
+                if (Gvar.var_83[Gvar.var_2220].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2220].Var2 == Gvar.var_2223) {
+                    Gvar.var_83[Gvar.var_2220].Var12 = 0;
+                    Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                    Gvar.var_2543 = 1;
+                }
+                if (Gvar.var_83[Gvar.var_2220].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2220].Var2 == Gvar.var_2223) {
+                    Gvar.var_83[Gvar.var_2220].Var12 = 0;
+                    Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                    Gvar.var_2543 = 1;
+                }
+                if (Gvar.var_83[Gvar.var_2220].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2220].Var2 == Gvar.var_2224) {
+                    Gvar.var_83[Gvar.var_2220].Var12 = 0;
+                    Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                    Gvar.var_2543 = 1;
+                }
+                if (Gvar.var_83[Gvar.var_2220].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2220].Var2 == Gvar.var_2224) {
+                    Gvar.var_83[Gvar.var_2220].Var12 = 0;
+                    Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                    Gvar.var_2543 = 1;
+                }
+                if (Gvar.var_193 >= 1) {
+                    if (Gvar.var_83[Gvar.var_2220].Var10 == Gvar.var_226 && Gvar.var_226 != 14) {
+                        Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                        Gvar.var_2543 = 1;
+                    }
+                    if (Gvar.var_226 <= 12 && Gvar.var_226 != 0) {
+                        Gvar.var_2459 = Gvar.var_83[Gvar.var_2220].Var1;
+                        Gvar.var_2460 = Gvar.var_83[Gvar.var_2220].Var2;
+                        Gvar.var_2461 = Gvar.var_83[Gvar.var_2220].Var1 - 1;
+                        if (Gvar.var_2461 < 0) { Gvar.var_2461 = 0; }
+                        Gvar.var_2462 = Gvar.var_83[Gvar.var_2220].Var1 + 1;
+                        if (Gvar.var_2462 > Gvar.var_32) { Gvar.var_2462 = Gvar.var_32; }
+                        Gvar.var_2463 = Gvar.var_83[Gvar.var_2220].Var2 + 1;
+                        if (Gvar.var_2463 > Gvar.var_33) { Gvar.var_2463 = Gvar.var_33; }
+                        Gvar.var_2464 = Gvar.var_83[Gvar.var_2220].Var2 - 1;
+                        if (Gvar.var_2464 < 0) { Gvar.var_2464 = 0; }
+                        if (Gvar.var_83[Gvar.var_2220].Var0 != 0 && Gvar.var_82[Gvar.var_2461][Gvar.var_2460] == Gvar.var_226) {
+                            Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                            Gvar.var_2543 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2220].Var0 != 0 && Gvar.var_82[Gvar.var_2462][Gvar.var_2460] == Gvar.var_226) {
+                            Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                            Gvar.var_2543 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2220].Var0 != 0 && Gvar.var_82[Gvar.var_2459][Gvar.var_2463] == Gvar.var_226) {
+                            Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                            Gvar.var_2543 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2220].Var0 != 0 && Gvar.var_82[Gvar.var_2459][Gvar.var_2464] == Gvar.var_226) {
+                            Gvar.var_83[Gvar.var_2220].Var13 = 99;
+                            Gvar.var_2543 = 1;
+                        }
+                    }
+                }
+                Gvar.var_2220 = Gvar.var_2220 + 1;
+            }
             if (Gvar.var_2543 == 1) {
                 Gvar.var_283 = "その場所に固定するッ！";
                 Adap.DSPLAY(126);
@@ -2685,7 +2770,157 @@ async function func543(this: any) {
                 await Func.setMessage("発動能力がパワーアップしている！", "", 10, false, false, false);
                 await Func.func358();
             }
-            // ウイルス攻撃処理 (省略)
+            Adap.gsel(19);
+            Adap.color(150, 0, 150);
+            Adap.boxf(0, 0, 340, 340);
+            Adap.gsel(0);
+            Gvar.var_604 = 1;
+            Gvar.var_457 = "ウイルスが敵の体を蝕んでいる！";
+            Gvar.var_2455 = 1;
+            Gvar.var_2424 = 1;
+            for (let cnt = 0; cnt < Gvar.var_107; ++cnt) {
+                Gvar.var_2456 = Gvar.var_647 * 4;
+                Gvar.var_2457 = Adap.rnd(3);
+                Gvar.var_2456 = Gvar.var_2456 + Gvar.var_2457;
+                if (Gvar.var_193 >= 1) {
+                    Gvar.var_2456 = Gvar.var_2456 * 2;
+                }
+                if (Gvar.var_2424 != Gvar.var_141) {
+                    Gvar.var_2458 = 0;
+                    if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var10 == Gvar.var_226 && Gvar.var_226 > 0 && Gvar.var_226 <= 12) {
+                        Gvar.var_456 = Gvar.var_2424;
+                        Gvar.var_234 = Gvar.var_2456;
+                        await Func.func548();
+                        await Func.func745();
+                        for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                        Gvar.var_2458 = 1;
+                    }
+                    if (Gvar.var_2458 == 0) {
+                        Gvar.var_2221 = Gvar.var_74 - 1;
+                        if (Gvar.var_2221 < 0) { Gvar.var_2221 = 0; }
+                        Gvar.var_2222 = Gvar.var_74 + 1;
+                        if (Gvar.var_2222 > Gvar.var_32) { Gvar.var_2222 = Gvar.var_32; }
+                        Gvar.var_2223 = Gvar.var_75 + 1;
+                        if (Gvar.var_2223 > Gvar.var_33) { Gvar.var_2223 = Gvar.var_33; }
+                        Gvar.var_2224 = Gvar.var_75 - 1;
+                        if (Gvar.var_2224 < 0) { Gvar.var_2224 = 0; }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_74 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func548();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_74 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func548();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_75) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func548();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_75) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func548();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func548();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func548();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func548();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func548();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                    }
+                    if (Gvar.var_2458 == 0 && Gvar.var_226 <= 12 && Gvar.var_226 != 0) {
+                        Gvar.var_2459 = Gvar.var_83[Gvar.var_2424].Var1;
+                        Gvar.var_2460 = Gvar.var_83[Gvar.var_2424].Var2;
+                        Gvar.var_2461 = Gvar.var_83[Gvar.var_2424].Var1 - 1;
+                        if (Gvar.var_2461 < 0) { Gvar.var_2461 = 0; }
+                        Gvar.var_2462 = Gvar.var_83[Gvar.var_2424].Var1 + 1;
+                        if (Gvar.var_2462 > Gvar.var_32) { Gvar.var_2462 = Gvar.var_32; }
+                        Gvar.var_2463 = Gvar.var_83[Gvar.var_2424].Var2 + 1;
+                        if (Gvar.var_2463 > Gvar.var_33) { Gvar.var_2463 = Gvar.var_33; }
+                        Gvar.var_2464 = Gvar.var_83[Gvar.var_2424].Var2 - 1;
+                        if (Gvar.var_2464 < 0) { Gvar.var_2464 = 0; }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2461][Gvar.var_2460] == Gvar.var_226) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func548();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2462][Gvar.var_2460] == Gvar.var_226) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func548();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2459][Gvar.var_2463] == Gvar.var_226) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func548();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2459][Gvar.var_2464] == Gvar.var_226) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func548();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                    }
+                }
+                Gvar.var_2424 = Gvar.var_2424 + 1;
+            }
+            for (let cnt = 0; cnt < 10; ++cnt) {
+                await Func.func337();
+            }
+            Gvar.var_604 = 0;
+            Gvar.var_2455 = 0;
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
                 await Func.func540();
@@ -2701,8 +2936,157 @@ async function func543(this: any) {
                 await Func.setMessage("発動能力がパワーアップしている！", "", 10, false, false, false);
                 await Func.func358();
             }
-            // エネルギー吸収処理 (省略)
-            // "合計 " + Gvar.var_2557 + " のエネルギーを吸収した。"
+            Adap.gsel(19);
+            Adap.color(250, 250, 250);
+            Adap.boxf(0, 0, 340, 340);
+            Adap.gsel(0);
+            Gvar.var_604 = 1;
+            Gvar.var_457 = "血液が沸騰している！";
+            Gvar.var_2455 = 1;
+            Gvar.var_2424 = 1;
+            for (let cnt = 0; cnt < Gvar.var_107; ++cnt) {
+                Gvar.var_2456 = Gvar.var_647 * 3;
+                Gvar.var_2457 = Adap.rnd(3);
+                Gvar.var_2456 = Gvar.var_2456 + Gvar.var_2457;
+                if (Gvar.var_193 >= 1) {
+                    Gvar.var_2456 = Gvar.var_2456 * 2;
+                }
+                if (Gvar.var_2424 != Gvar.var_141) {
+                    Gvar.var_2458 = 0;
+                    if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var10 == Gvar.var_226 && Gvar.var_226 > 0 && Gvar.var_226 <= 12) {
+                        Gvar.var_456 = Gvar.var_2424;
+                        Gvar.var_234 = Gvar.var_2456;
+                        await Func.func549();
+                        await Func.func745();
+                        for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                        Gvar.var_2458 = 1;
+                    }
+                    if (Gvar.var_2458 == 0) {
+                        Gvar.var_2221 = Gvar.var_74 - 1;
+                        if (Gvar.var_2221 < 0) { Gvar.var_2221 = 0; }
+                        Gvar.var_2222 = Gvar.var_74 + 1;
+                        if (Gvar.var_2222 > Gvar.var_32) { Gvar.var_2222 = Gvar.var_32; }
+                        Gvar.var_2223 = Gvar.var_75 + 1;
+                        if (Gvar.var_2223 > Gvar.var_33) { Gvar.var_2223 = Gvar.var_33; }
+                        Gvar.var_2224 = Gvar.var_75 - 1;
+                        if (Gvar.var_2224 < 0) { Gvar.var_2224 = 0; }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_74 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func549();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_74 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func549();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_75) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func549();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_75) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func549();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func549();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func549();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func549();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func549();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                    }
+                    if (Gvar.var_2458 == 0 && Gvar.var_226 <= 12 && Gvar.var_226 != 0) {
+                        Gvar.var_2459 = Gvar.var_83[Gvar.var_2424].Var1;
+                        Gvar.var_2460 = Gvar.var_83[Gvar.var_2424].Var2;
+                        Gvar.var_2461 = Gvar.var_83[Gvar.var_2424].Var1 - 1;
+                        if (Gvar.var_2461 < 0) { Gvar.var_2461 = 0; }
+                        Gvar.var_2462 = Gvar.var_83[Gvar.var_2424].Var1 + 1;
+                        if (Gvar.var_2462 > Gvar.var_32) { Gvar.var_2462 = Gvar.var_32; }
+                        Gvar.var_2463 = Gvar.var_83[Gvar.var_2424].Var2 + 1;
+                        if (Gvar.var_2463 > Gvar.var_33) { Gvar.var_2463 = Gvar.var_33; }
+                        Gvar.var_2464 = Gvar.var_83[Gvar.var_2424].Var2 - 1;
+                        if (Gvar.var_2464 < 0) { Gvar.var_2464 = 0; }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2461][Gvar.var_2460] == Gvar.var_226) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func549();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2462][Gvar.var_2460] == Gvar.var_226) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func549();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2459][Gvar.var_2463] == Gvar.var_226) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func549();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2459][Gvar.var_2464] == Gvar.var_226) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2456;
+                            await Func.func549();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                    }
+                }
+                Gvar.var_2424 = Gvar.var_2424 + 1;
+            }
+            for (let cnt = 0; cnt < 10; ++cnt) {
+                await Func.func337();
+            }
+            Gvar.var_604 = 0;
+            Gvar.var_2455 = 0;
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
                 await Func.func540();
@@ -2718,10 +3102,194 @@ async function func543(this: any) {
                 await Func.setMessage("発動能力がパワーアップしている！", "", 10, false, false, false);
                 await Func.func358();
             }
-            // 養分吸収処理 (省略)
-            // "合計 " + Gvar.var_2557 + " の養分を吸収した。"
-            // "満腹度が完全回復した。"
-            // "満腹度が回復した。"
+            Adap.gsel(19);
+            Adap.color(0, 0, 150);
+            Adap.boxf(0, 0, 340, 340);
+            Adap.gsel(0);
+            Gvar.var_2557 = 0;
+            Gvar.var_604 = 1;
+            Gvar.var_457 = "フジツボでエネルギーを吸い取っている！";
+            Gvar.var_2455 = 1;
+            Gvar.var_2424 = 1;
+            for (let cnt = 0; cnt < Gvar.var_107; ++cnt) {
+                Gvar.var_2558 = Gvar.var_647 * 2;
+                Gvar.var_2457 = Adap.rnd(3);
+                Gvar.var_2558 = Gvar.var_2558 + Gvar.var_2457;
+                if (Gvar.var_193 >= 1) {
+                    Gvar.var_2558 = Gvar.var_2558 * 2;
+                }
+                if (Gvar.var_2424 != Gvar.var_141) {
+                    Gvar.var_2458 = 0;
+                    if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var10 == Gvar.var_226 && Gvar.var_226 > 0 && Gvar.var_226 <= 12) {
+                        Gvar.var_456 = Gvar.var_2424;
+                        Gvar.var_234 = Gvar.var_2558;
+                        Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                        await Func.func547();
+                        await Func.func745();
+                        for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                        Gvar.var_2458 = 1;
+                    }
+                    if (Gvar.var_2458 == 0) {
+                        Gvar.var_2221 = Gvar.var_74 - 1;
+                        if (Gvar.var_2221 < 0) { Gvar.var_2221 = 0; }
+                        Gvar.var_2222 = Gvar.var_74 + 1;
+                        if (Gvar.var_2222 > Gvar.var_32) { Gvar.var_2222 = Gvar.var_32; }
+                        Gvar.var_2223 = Gvar.var_75 + 1;
+                        if (Gvar.var_2223 > Gvar.var_33) { Gvar.var_2223 = Gvar.var_33; }
+                        Gvar.var_2224 = Gvar.var_75 - 1;
+                        if (Gvar.var_2224 < 0) { Gvar.var_2224 = 0; }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_74 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2558;
+                            Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                            await Func.func547();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_74 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2558;
+                            Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                            await Func.func547();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_75) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2558;
+                            Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                            await Func.func547();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_75) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2558;
+                            Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                            await Func.func547();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2558;
+                            Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                            await Func.func547();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2223) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2558;
+                            Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                            await Func.func547();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2221 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2558;
+                            Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                            await Func.func547();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_83[Gvar.var_2424].Var1 == Gvar.var_2222 && Gvar.var_83[Gvar.var_2424].Var2 == Gvar.var_2224) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2558;
+                            Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                            await Func.func547();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                    }
+                    if (Gvar.var_2458 == 0 && Gvar.var_226 <= 12 && Gvar.var_226 != 0) {
+                        Gvar.var_2459 = Gvar.var_83[Gvar.var_2424].Var1;
+                        Gvar.var_2460 = Gvar.var_83[Gvar.var_2424].Var2;
+                        Gvar.var_2461 = Gvar.var_83[Gvar.var_2424].Var1 - 1;
+                        if (Gvar.var_2461 < 0) { Gvar.var_2461 = 0; }
+                        Gvar.var_2462 = Gvar.var_83[Gvar.var_2424].Var1 + 1;
+                        if (Gvar.var_2462 > Gvar.var_32) { Gvar.var_2462 = Gvar.var_32; }
+                        Gvar.var_2463 = Gvar.var_83[Gvar.var_2424].Var2 + 1;
+                        if (Gvar.var_2463 > Gvar.var_33) { Gvar.var_2463 = Gvar.var_33; }
+                        Gvar.var_2464 = Gvar.var_83[Gvar.var_2424].Var2 - 1;
+                        if (Gvar.var_2464 < 0) { Gvar.var_2464 = 0; }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2461][Gvar.var_2460] == Gvar.var_226) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2558;
+                            Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                            await Func.func547();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2462][Gvar.var_2460] == Gvar.var_226) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2558;
+                            Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                            await Func.func547();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2459][Gvar.var_2463] == Gvar.var_226) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2558;
+                            Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                            await Func.func547();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                        if (Gvar.var_83[Gvar.var_2424].Var0 != 0 && Gvar.var_82[Gvar.var_2459][Gvar.var_2464] == Gvar.var_226) {
+                            Gvar.var_456 = Gvar.var_2424;
+                            Gvar.var_234 = Gvar.var_2558;
+                            Gvar.var_2557 = Gvar.var_2557 + Gvar.var_2558;
+                            await Func.func547();
+                            await Func.func745();
+                            for (let cnt = 0; cnt < 2; ++cnt) { await Func.func337(); }
+                            Gvar.var_2458 = 1;
+                        }
+                    }
+                }
+                Gvar.var_2424 = Gvar.var_2424 + 1;
+            }
+            for (let cnt = 0; cnt < 10; ++cnt) {
+                await Func.func337();
+            }
+            Gvar.var_604 = 0;
+            if (Gvar.var_2557 != 0) {
+                Adap.DSPLAY(143);
+                Gvar.var_1444 = 0;
+                Gvar.var_310 = 1;
+                Gvar.var_1442 = 1;
+                for (let cnt = 0; cnt < 20; ++cnt) {
+                    await Func.func337();
+                    Gvar.var_1442++;
+                }
+                Gvar.var_310 = 0;
+                Gvar.var_1442 = 0;
+                Gvar.var_236 = Gvar.var_236 + Gvar.var_2557;
+                if (Gvar.var_236 > Gvar.var_383) {
+                    Gvar.var_236 = Gvar.var_383;
+                }
+                Gvar.var_283 = "合計 " + Gvar.var_2557 + " のエネルギーを吸収した。";
+                Gvar.var_223 = 1;
+                Gvar.var_290 = 0;
+                await Func.func050();
+                for (let cnt = 0; cnt < 10; ++cnt) {
+                    await Func.func337();
+                }
+            }
+            Gvar.var_2455 = 0;
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
                 await Func.func540();
@@ -4430,10 +4998,39 @@ async function func543(this: any) {
         }
         // === DISC No.413: 人形設置2 ===
         if (Gvar.var_2494 == 413) {
-            // "人形を置く場所が無いぞ。"
-            // 人形設置処理 (省略)
+            Gvar.var_2338 = 1;
+            Gvar.var_443 = 1;
+            await Func.func588();
+            Gvar.var_2338 = 0;
+            Gvar.var_443 = 0;
+            if (Gvar.var_2339 == 0) {
+                await Func.setMessage("人形を置く場所が無いぞ。", "", 10, false, false, false);
+                for (let cnt = 0; cnt < 5; ++cnt) {
+                    await Func.func337();
+                }
+                Gvar.var_259 = 0;
+                Gvar.var_245 = 0;
+                await Func.func009();
+                // @ts-ignore
+                return;
+            }
+            await Func.func538();
+            Gvar.var_506 = Gvar.var_445;
+            Gvar.var_83[Gvar.var_506].Var11 = 1;
+            Gvar.var_83[Gvar.var_506].Var5 = 2;
+            Gvar.var_310 = 1;
+            Gvar.var_511 = 1;
+            for (let cnt = 0; cnt < 25; ++cnt) {
+                await Func.func337();
+                Gvar.var_511 = Gvar.var_511 + 1;
+            }
+            Gvar.var_310 = 0;
+            Gvar.var_511 = 0;
+            Gvar.var_83[Gvar.var_506].Var11 = 0;
             Gvar.var_242 = 1;
             await Func.func019();
+            // @ts-ignore
+            return;
         }
         // === DISC No.320: メタリカ(透明化) ===
         if (Gvar.var_2494 == 320) {
@@ -4687,11 +5284,151 @@ async function func543(this: any) {
         }
         // === DISC No.124: ボーイズマンマン(送る) ===
         if (Gvar.var_2494 == 124) {
-            // "誰に送りますか？"
-            // "どれを送りますか？"
-            // "どれを相手に送りますか？"
-            // "どれを倉庫に送りますか？"
-            // メニュー選択処理 (省略)
+            if (Gvar.var_463 == 2) {
+                Gvar.var_2584 = 0;
+                Gvar.var_2585 = [];
+                for (let cnt = 0; cnt < 8; ++cnt) {
+                    Gvar.var_2585[cnt] = "" + Gvar.var_1172[cnt];
+                    if (Gvar.var_1171[cnt][4] == 0) {
+                        Gvar.var_2585[cnt] = "(no entry)";
+                    }
+                    if (Gvar.var_1171[cnt][4] != 0) {
+                        Gvar.var_2584++;
+                    }
+                }
+                await Func.setMessage("誰に送りますか？", "", 10, false, false, false);
+                for (let cnt = 0; cnt < 4; ++cnt) {
+                    await Func.func337();
+                }
+                await Func.func358();
+                await Func.func054();
+                Gvar.var_2586 = 0;
+                Gvar.var_1327 = 1;
+                Gvar.var_2587 = 0;
+                Gvar.var_2588 = 8;
+                Gvar.var_2589 = Gvar.var_2588 - 1;
+                Gvar.var_2590 = Gvar.var_2588 * 20 + 37 + 30;
+                Gvar.var_253 = 45;
+                for (let cnt = 0; cnt < 9999; ++cnt) {
+                    await Func.func337();
+                    await Func.func084();
+                    if (Gvar.var_264 == 1) {
+                        Adap.DSPLAY(212);
+                        Gvar.var_2586 = 1;
+                        break;
+                    }
+                    if (Gvar.var_267 == 1 || Gvar.var_272 == 1) {
+                        if (Gvar.var_2585[Gvar.var_2587] != "(no entry)") {
+                            if (Gvar.var_2585[Gvar.var_2587] != Gvar.var_39) {
+                                Adap.DSPLAY(212);
+                                break;
+                            }
+                        }
+                    }
+                    if (Gvar.var_297 == 1) {
+                        if (Gvar.var_2587 != 7) {
+                            Gvar.var_253 = Gvar.var_253 + 22;
+                            Gvar.var_2587 = Gvar.var_2587 + 1;
+                            Adap.DSPLAY(100);
+                            await Func.func337();
+                            await Func.func337();
+                            continue;
+                        }
+                        if (Gvar.var_2587 == 7) {
+                            Gvar.var_253 = 45;
+                            Gvar.var_2587 = 0;
+                            Adap.DSPLAY(100);
+                            await Func.func337();
+                            await Func.func337();
+                            continue;
+                        }
+                    }
+                    if (Gvar.var_293 == 1) {
+                        if (Gvar.var_2587 != 0) {
+                            Gvar.var_253 = Gvar.var_253 - 22;
+                            Gvar.var_2587 = Gvar.var_2587 - 1;
+                            Adap.DSPLAY(100);
+                            await Func.func337();
+                            await Func.func337();
+                            continue;
+                        }
+                        if (Gvar.var_2587 == 0) {
+                            Gvar.var_253 = 45 + 7 * 22;
+                            Gvar.var_2587 = 7;
+                            Adap.DSPLAY(100);
+                            await Func.func337();
+                            await Func.func337();
+                            continue;
+                        }
+                    }
+                }
+                Gvar.var_1327 = 0;
+                if (Gvar.var_2586 == 0) {
+                    await Func.setMessage("どれを送りますか？", "", 10, false, false, false);
+                    for (let cnt = 0; cnt < 4; ++cnt) {
+                        await Func.func337();
+                    }
+                    await Func.func358();
+                    Gvar.var_2541 = Gvar.var_250;
+                    Gvar.var_2542 = 0;
+                    if (Gvar.var_245 != 0) { Gvar.var_2542 = 1; }
+                    if (Gvar.var_259 != 0) { Gvar.var_2542 = 2; }
+                    Gvar.var_2235 = 1;
+                    Gvar.var_252 = 1;
+                    Gvar.var_253 = 45;
+                    Gvar.var_250 = 1;
+                    Gvar.var_248 = Gvar.var_249 + 10;
+                    Gvar.var_245 = 0;
+                    await Func.func054();
+                    Gvar.var_222 = 1;
+                    await Func.func493();
+                    // @ts-ignore
+                    return;
+                }
+            }
+            if (Gvar.var_463 == 1 && Gvar.var_611 == 1 && Gvar.var_70 == Math.floor(Gvar.var_1170[12])) {
+                await Func.setMessage("どれを相手に送りますか？", "", 10, false, false, false);
+                for (let cnt = 0; cnt < 4; ++cnt) {
+                    await Func.func337();
+                }
+                await Func.func358();
+                Gvar.var_2541 = Gvar.var_250;
+                Gvar.var_2542 = 0;
+                if (Gvar.var_245 != 0) { Gvar.var_2542 = 1; }
+                if (Gvar.var_259 != 0) { Gvar.var_2542 = 2; }
+                Gvar.var_2235 = 1;
+                Gvar.var_252 = 1;
+                Gvar.var_253 = 45;
+                Gvar.var_250 = 1;
+                Gvar.var_248 = Gvar.var_249 + 10;
+                Gvar.var_245 = 0;
+                await Func.func054();
+                Gvar.var_222 = 1;
+                await Func.func493();
+                // @ts-ignore
+                return;
+            }
+            await Func.setMessage("どれを倉庫に送りますか？", "", 10, false, false, false);
+            for (let cnt = 0; cnt < 4; ++cnt) {
+                await Func.func337();
+            }
+            await Func.func358();
+            Gvar.var_2236 = 1;
+            Gvar.var_2541 = Gvar.var_250;
+            Gvar.var_2542 = 0;
+            if (Gvar.var_245 != 0) { Gvar.var_2542 = 1; }
+            if (Gvar.var_259 != 0) { Gvar.var_2542 = 2; }
+            Gvar.var_2235 = 1;
+            Gvar.var_252 = 1;
+            Gvar.var_253 = 45;
+            Gvar.var_250 = 1;
+            Gvar.var_248 = Gvar.var_249 + 10;
+            Gvar.var_245 = 0;
+            await Func.func054();
+            Gvar.var_222 = 1;
+            await Func.func493();
+            // @ts-ignore
+            return;
         }
         // === DISC No.311: チープトリック(おんぶ) ===
         if (Gvar.var_2494 == 311) {
@@ -4867,8 +5604,43 @@ async function func543(this: any) {
                 for (let cnt = 0; cnt < 5; ++cnt) {
                     await Func.func337();
                 }
+                await Func.func009();
+                // @ts-ignore
+                return;
             }
-            // 罠設置処理 (省略)
+            if (Gvar.var_2494 == 414) {
+                Gvar.var_310 = 1;
+                Gvar.var_1655 = 1;
+                for (let cnt = 0; cnt < 25; ++cnt) {
+                    await Func.func337();
+                    Gvar.var_1655++;
+                }
+                Gvar.var_310 = 0;
+                Gvar.var_1655 = 0;
+                Gvar.var_2201 = Gvar.var_224;
+                Gvar.var_224 = 2;
+                Gvar.var_1310 = 1;
+                Gvar.var_1339 = 1;
+                Adap.DSPLAY(109);
+            }
+            Gvar.var_368 = Gvar.var_368 + 1;
+            Gvar.var_2592 = Gvar.var_368;
+            Gvar.var_91[Gvar.var_74][Gvar.var_75] = Gvar.var_2592;
+            if (Gvar.var_2494 == 309) { Gvar.var_92[Gvar.var_2592][0] = 78; }
+            if (Gvar.var_2494 == 410) { Gvar.var_92[Gvar.var_2592][0] = 89; }
+            if (Gvar.var_2494 == 406) { Gvar.var_92[Gvar.var_2592][0] = 87; }
+            if (Gvar.var_2494 == 408) { Gvar.var_92[Gvar.var_2592][0] = 88; }
+            if (Gvar.var_2494 == 405) { Gvar.var_92[Gvar.var_2592][0] = 90; }
+            if (Gvar.var_2494 == 409) { Gvar.var_92[Gvar.var_2592][0] = 91; }
+            if (Gvar.var_2494 == 404) { Gvar.var_92[Gvar.var_2592][0] = 93; }
+            if (Gvar.var_2494 == 400) { Gvar.var_92[Gvar.var_2592][0] = 92; }
+            if (Gvar.var_2494 == 317) { Gvar.var_92[Gvar.var_2592][0] = 81; }
+            if (Gvar.var_2494 == 414) { Gvar.var_92[Gvar.var_2592][0] = 79; }
+            Gvar.var_92[Gvar.var_2592][1] = Gvar.var_74;
+            Gvar.var_92[Gvar.var_2592][2] = Gvar.var_75;
+            Gvar.var_92[Gvar.var_2592][4] = 1;
+            Gvar.var_92[Gvar.var_2592][5] = Gvar.var_226;
+            if (Gvar.var_2494 != 414) { Adap.DSPLAY(165); }
             if (Gvar.var_2494 == 309) { await Func.setMessage("地面にｿﾌﾄ･ﾏｼｰﾝを潜ませた。", "", 10, false, false, false); }
             if (Gvar.var_2494 == 406) { await Func.setMessage("地面に文字を貼り付けた。", "", 10, false, false, false); }
             if (Gvar.var_2494 == 408) { await Func.setMessage("足元に鏡を仕掛けた。", "", 10, false, false, false); }
@@ -4882,6 +5654,14 @@ async function func543(this: any) {
             for (let cnt = 0; cnt < 5; ++cnt) {
                 await Func.func337();
             }
+            if (Gvar.var_2494 == 414) {
+                for (let cnt = 0; cnt < 5; ++cnt) {
+                    await Func.func337();
+                }
+                Gvar.var_224 = Gvar.var_2201;
+                Gvar.var_1339 = 0;
+                Gvar.var_1310 = 0;
+            }
             Gvar.var_257 = Gvar.var_2494;
             await Func.func538();
             if (Gvar.var_2444 == 1) {
@@ -4893,11 +5673,140 @@ async function func543(this: any) {
         }
         // === DISC No.118/407: ダイバーダウン/法王の結界(周囲設置) ===
         if (Gvar.var_2494 == 118 || Gvar.var_2494 == 407) {
-            // 周囲罠設置処理 (省略)
-            // 設置不可の場合
-            // "この辺りには潜ませられない。"
-            // "この辺りには仕掛けられない。"
-            // 設置成功の場合
+            Gvar.var_2593 = 0;
+            Gvar.var_2594 = Gvar.var_74;
+            Gvar.var_2595 = Gvar.var_75;
+            Gvar.var_2596 = Gvar.var_74 - 1;
+            if (Gvar.var_2596 <= 0) { Gvar.var_2596 = 0; }
+            Gvar.var_2597 = Gvar.var_74 + 1;
+            if (Gvar.var_2597 >= Gvar.var_32) { Gvar.var_2597 = Gvar.var_32; }
+            Gvar.var_2598 = Gvar.var_75 - 1;
+            if (Gvar.var_2598 <= 0) { Gvar.var_2598 = 0; }
+            Gvar.var_2599 = Gvar.var_75 + 1;
+            if (Gvar.var_2599 >= Gvar.var_33) { Gvar.var_2599 = Gvar.var_33; }
+            if (Gvar.var_2494 == 118) { Gvar.var_2600 = 94; }
+            if (Gvar.var_2494 == 407) { Gvar.var_2600 = 92; }
+            if (Gvar.var_82[Gvar.var_2594][Gvar.var_2595] != 0 && Gvar.var_82[Gvar.var_2594][Gvar.var_2595] != 13 && Gvar.var_84[Gvar.var_2594][Gvar.var_2595] == 0 && Gvar.var_88[Gvar.var_2594][Gvar.var_2595] == 0 && Gvar.var_91[Gvar.var_2594][Gvar.var_2595] == 0) {
+                Gvar.var_368 = Gvar.var_368 + 1;
+                Gvar.var_91[Gvar.var_2594][Gvar.var_2595] = Gvar.var_368;
+                Gvar.var_92[Gvar.var_368][0] = Gvar.var_2600;
+                Gvar.var_92[Gvar.var_368][1] = Gvar.var_2594;
+                Gvar.var_92[Gvar.var_368][2] = Gvar.var_2595;
+                Gvar.var_92[Gvar.var_368][4] = 1;
+                Gvar.var_92[Gvar.var_368][5] = Gvar.var_82[Gvar.var_2594][Gvar.var_2595];
+                Gvar.var_2593 = 1;
+            }
+            if (Gvar.var_82[Gvar.var_2596][Gvar.var_2595] != 0 && Gvar.var_82[Gvar.var_2596][Gvar.var_2595] != 13 && Gvar.var_84[Gvar.var_2596][Gvar.var_2595] == 0 && Gvar.var_88[Gvar.var_2596][Gvar.var_2595] == 0 && Gvar.var_91[Gvar.var_2596][Gvar.var_2595] == 0) {
+                Gvar.var_2601 = Gvar.var_2596;
+                Gvar.var_2602 = Gvar.var_2595;
+                Gvar.var_368 = Gvar.var_368 + 1;
+                Gvar.var_91[Gvar.var_2601][Gvar.var_2602] = Gvar.var_368;
+                Gvar.var_92[Gvar.var_368][0] = Gvar.var_2600;
+                Gvar.var_92[Gvar.var_368][1] = Gvar.var_2601;
+                Gvar.var_92[Gvar.var_368][2] = Gvar.var_2602;
+                Gvar.var_92[Gvar.var_368][4] = 1;
+                Gvar.var_92[Gvar.var_368][5] = Gvar.var_82[Gvar.var_2601][Gvar.var_2602];
+                Gvar.var_2593 = 1;
+            }
+            if (Gvar.var_82[Gvar.var_2597][Gvar.var_2595] != 0 && Gvar.var_82[Gvar.var_2597][Gvar.var_2595] != 13 && Gvar.var_84[Gvar.var_2597][Gvar.var_2595] == 0 && Gvar.var_88[Gvar.var_2597][Gvar.var_2595] == 0 && Gvar.var_91[Gvar.var_2597][Gvar.var_2595] == 0) {
+                Gvar.var_2601 = Gvar.var_2597;
+                Gvar.var_2602 = Gvar.var_2595;
+                Gvar.var_368 = Gvar.var_368 + 1;
+                Gvar.var_91[Gvar.var_2601][Gvar.var_2602] = Gvar.var_368;
+                Gvar.var_92[Gvar.var_368][0] = Gvar.var_2600;
+                Gvar.var_92[Gvar.var_368][1] = Gvar.var_2601;
+                Gvar.var_92[Gvar.var_368][2] = Gvar.var_2602;
+                Gvar.var_92[Gvar.var_368][4] = 1;
+                Gvar.var_92[Gvar.var_368][5] = Gvar.var_82[Gvar.var_2601][Gvar.var_2602];
+                Gvar.var_2593 = 1;
+            }
+            if (Gvar.var_82[Gvar.var_2594][Gvar.var_2599] != 0 && Gvar.var_82[Gvar.var_2594][Gvar.var_2599] != 13 && Gvar.var_84[Gvar.var_2594][Gvar.var_2599] == 0 && Gvar.var_88[Gvar.var_2594][Gvar.var_2599] == 0 && Gvar.var_91[Gvar.var_2594][Gvar.var_2599] == 0) {
+                Gvar.var_2601 = Gvar.var_2594;
+                Gvar.var_2602 = Gvar.var_2599;
+                Gvar.var_368 = Gvar.var_368 + 1;
+                Gvar.var_91[Gvar.var_2601][Gvar.var_2602] = Gvar.var_368;
+                Gvar.var_92[Gvar.var_368][0] = Gvar.var_2600;
+                Gvar.var_92[Gvar.var_368][1] = Gvar.var_2601;
+                Gvar.var_92[Gvar.var_368][2] = Gvar.var_2602;
+                Gvar.var_92[Gvar.var_368][4] = 1;
+                Gvar.var_92[Gvar.var_368][5] = Gvar.var_82[Gvar.var_2601][Gvar.var_2602];
+                Gvar.var_2593 = 1;
+            }
+            if (Gvar.var_82[Gvar.var_2594][Gvar.var_2598] != 0 && Gvar.var_82[Gvar.var_2594][Gvar.var_2598] != 13 && Gvar.var_84[Gvar.var_2594][Gvar.var_2598] == 0 && Gvar.var_88[Gvar.var_2594][Gvar.var_2598] == 0 && Gvar.var_91[Gvar.var_2594][Gvar.var_2598] == 0) {
+                Gvar.var_2601 = Gvar.var_2594;
+                Gvar.var_2602 = Gvar.var_2598;
+                Gvar.var_368 = Gvar.var_368 + 1;
+                Gvar.var_91[Gvar.var_2601][Gvar.var_2602] = Gvar.var_368;
+                Gvar.var_92[Gvar.var_368][0] = Gvar.var_2600;
+                Gvar.var_92[Gvar.var_368][1] = Gvar.var_2601;
+                Gvar.var_92[Gvar.var_368][2] = Gvar.var_2602;
+                Gvar.var_92[Gvar.var_368][4] = 1;
+                Gvar.var_92[Gvar.var_368][5] = Gvar.var_82[Gvar.var_2601][Gvar.var_2602];
+                Gvar.var_2593 = 1;
+            }
+            if (Gvar.var_82[Gvar.var_2596][Gvar.var_2599] != 0 && Gvar.var_82[Gvar.var_2596][Gvar.var_2599] != 13 && Gvar.var_84[Gvar.var_2596][Gvar.var_2599] == 0 && Gvar.var_88[Gvar.var_2596][Gvar.var_2599] == 0 && Gvar.var_91[Gvar.var_2596][Gvar.var_2599] == 0) {
+                Gvar.var_2601 = Gvar.var_2596;
+                Gvar.var_2602 = Gvar.var_2599;
+                Gvar.var_368 = Gvar.var_368 + 1;
+                Gvar.var_91[Gvar.var_2601][Gvar.var_2602] = Gvar.var_368;
+                Gvar.var_92[Gvar.var_368][0] = Gvar.var_2600;
+                Gvar.var_92[Gvar.var_368][1] = Gvar.var_2601;
+                Gvar.var_92[Gvar.var_368][2] = Gvar.var_2602;
+                Gvar.var_92[Gvar.var_368][4] = 1;
+                Gvar.var_92[Gvar.var_368][5] = Gvar.var_82[Gvar.var_2601][Gvar.var_2602];
+                Gvar.var_2593 = 1;
+            }
+            if (Gvar.var_82[Gvar.var_2596][Gvar.var_2598] != 0 && Gvar.var_82[Gvar.var_2596][Gvar.var_2598] != 13 && Gvar.var_84[Gvar.var_2596][Gvar.var_2598] == 0 && Gvar.var_88[Gvar.var_2596][Gvar.var_2598] == 0 && Gvar.var_91[Gvar.var_2596][Gvar.var_2598] == 0) {
+                Gvar.var_2601 = Gvar.var_2596;
+                Gvar.var_2602 = Gvar.var_2598;
+                Gvar.var_368 = Gvar.var_368 + 1;
+                Gvar.var_91[Gvar.var_2601][Gvar.var_2602] = Gvar.var_368;
+                Gvar.var_92[Gvar.var_368][0] = Gvar.var_2600;
+                Gvar.var_92[Gvar.var_368][1] = Gvar.var_2601;
+                Gvar.var_92[Gvar.var_368][2] = Gvar.var_2602;
+                Gvar.var_92[Gvar.var_368][4] = 1;
+                Gvar.var_92[Gvar.var_368][5] = Gvar.var_82[Gvar.var_2601][Gvar.var_2602];
+                Gvar.var_2593 = 1;
+            }
+            if (Gvar.var_82[Gvar.var_2597][Gvar.var_2599] != 0 && Gvar.var_82[Gvar.var_2597][Gvar.var_2599] != 13 && Gvar.var_84[Gvar.var_2597][Gvar.var_2599] == 0 && Gvar.var_88[Gvar.var_2597][Gvar.var_2599] == 0 && Gvar.var_91[Gvar.var_2597][Gvar.var_2599] == 0) {
+                Gvar.var_2601 = Gvar.var_2597;
+                Gvar.var_2602 = Gvar.var_2599;
+                Gvar.var_368 = Gvar.var_368 + 1;
+                Gvar.var_91[Gvar.var_2601][Gvar.var_2602] = Gvar.var_368;
+                Gvar.var_92[Gvar.var_368][0] = Gvar.var_2600;
+                Gvar.var_92[Gvar.var_368][1] = Gvar.var_2601;
+                Gvar.var_92[Gvar.var_368][2] = Gvar.var_2602;
+                Gvar.var_92[Gvar.var_368][4] = 1;
+                Gvar.var_92[Gvar.var_368][5] = Gvar.var_82[Gvar.var_2601][Gvar.var_2602];
+                Gvar.var_2593 = 1;
+            }
+            if (Gvar.var_82[Gvar.var_2597][Gvar.var_2598] != 0 && Gvar.var_82[Gvar.var_2597][Gvar.var_2598] != 13 && Gvar.var_84[Gvar.var_2597][Gvar.var_2598] == 0 && Gvar.var_88[Gvar.var_2597][Gvar.var_2598] == 0 && Gvar.var_91[Gvar.var_2597][Gvar.var_2598] == 0) {
+                Gvar.var_2601 = Gvar.var_2597;
+                Gvar.var_2602 = Gvar.var_2598;
+                Gvar.var_368 = Gvar.var_368 + 1;
+                Gvar.var_91[Gvar.var_2601][Gvar.var_2602] = Gvar.var_368;
+                Gvar.var_92[Gvar.var_368][0] = Gvar.var_2600;
+                Gvar.var_92[Gvar.var_368][1] = Gvar.var_2601;
+                Gvar.var_92[Gvar.var_368][2] = Gvar.var_2602;
+                Gvar.var_92[Gvar.var_368][4] = 1;
+                Gvar.var_92[Gvar.var_368][5] = Gvar.var_82[Gvar.var_2601][Gvar.var_2602];
+                Gvar.var_2593 = 1;
+            }
+            if (Gvar.var_2593 == 0) {
+                if (Gvar.var_2494 == 118) {
+                    await Func.setMessage("この辺りには潜ませられない。", "", 10, false, false, false);
+                }
+                if (Gvar.var_2494 == 407) {
+                    await Func.setMessage("この辺りには仕掛けられない。", "", 10, false, false, false);
+                }
+                for (let cnt = 0; cnt < 5; ++cnt) {
+                    await Func.func337();
+                }
+                await Func.func009();
+                // @ts-ignore
+                return;
+            }
+            Adap.DSPLAY(165);
             if (Gvar.var_2494 == 118) { await Func.setMessage("地面にダイバーダウンを潜ませた。", "", 10, false, false, false); }
             if (Gvar.var_2494 == 407) { await Func.setMessage("法王の結界を仕掛けた。", "", 10, false, false, false); }
             for (let cnt = 0; cnt < 5; ++cnt) {
@@ -4930,9 +5839,22 @@ async function func543(this: any) {
             if (Gvar.var_2603 == 1) {
                 Gvar.var_284 = "体力が完全に回復した。";
             }
-            // 消費処理 (省略)
+            Adap.DSPLAY(143);
+            Gvar.var_1444 = 5;
+            Gvar.var_310 = 1;
+            Gvar.var_1442 = 1;
+            for (let cnt = 0; cnt < 20; ++cnt) {
+                await Func.func337();
+                Gvar.var_1442++;
+            }
+            Gvar.var_310 = 0;
+            Gvar.var_1442 = 0;
+            Gvar.var_257 = Gvar.var_2494;
+            await Func.func538();
             Gvar.var_242 = 1;
             await Func.func019();
+            // @ts-ignore
+            return;
         }
         // === DISC No.402: エンペラー ===
         if (Gvar.var_2494 == 402) {
@@ -4945,11 +5867,77 @@ async function func543(this: any) {
         }
         // === DISC No.411: テレポート ===
         if (Gvar.var_2494 == 411) {
-            // テレポート処理 (省略)
+            for (let cnt = 0; cnt < 10; ++cnt) {
+                await Func.func337();
+            }
+            Gvar.var_131 = 0;
+            Gvar.var_532 = 0;
+            Gvar.var_533 = 0;
+            Gvar.var_530 = 0;
+            Gvar.var_531 = 0;
+            Gvar.var_2605 = Gvar.var_74;
+            Gvar.var_2606 = Gvar.var_75;
+            Gvar.var_2607 = Gvar.var_74 - 5;
+            if (Gvar.var_2607 < 0) { Gvar.var_2607 = 0; }
+            Gvar.var_2608 = Gvar.var_74 + 5;
+            if (Gvar.var_2608 > Gvar.var_32) { Gvar.var_2608 = Gvar.var_32; }
+            Gvar.var_2609 = Gvar.var_75 + 5;
+            if (Gvar.var_2609 > Gvar.var_33) { Gvar.var_2609 = Gvar.var_33; }
+            Gvar.var_2610 = Gvar.var_75 - 5;
+            if (Gvar.var_2610 < 0) { Gvar.var_2610 = 0; }
+            Gvar.var_2611 = 0;
+            for (let cnt = 0; cnt < 10000; ++cnt) {
+                Gvar.var_2612 = Adap.rnd(Gvar.var_32);
+                Gvar.var_2613 = Adap.rnd(Gvar.var_33);
+                if (Gvar.var_2612 == Gvar.var_2605 && Gvar.var_2613 == Gvar.var_2606) {
+                    continue;
+                }
+                if (Gvar.var_2612 > Gvar.var_2607 && Gvar.var_2612 < Gvar.var_2608 && Gvar.var_2613 > Gvar.var_2610 && Gvar.var_2613 < Gvar.var_2609 && Gvar.var_93[Gvar.var_2612][Gvar.var_2613] == 0 && Gvar.var_82[Gvar.var_2612][Gvar.var_2613] != 0 && Gvar.var_82[Gvar.var_2612][Gvar.var_2613] != 13) {
+                    Gvar.var_2611 = 1;
+                    break;
+                }
+            }
+            Gvar.var_224 = 2;
+            if (Gvar.var_2611 == 1) {
+                Gvar.var_74 = Gvar.var_2612;
+                Gvar.var_75 = Gvar.var_2613;
+                await Func.func016();
+                if (Gvar.var_226 != 14) {
+                    await Func.func017();
+                }
+                await Func.func018();
+                if (Gvar.var_225 == Gvar.var_226 && Gvar.var_104 != 8) {
+                    Gvar.var_109 = 1;
+                }
+                if (Gvar.var_227 == Gvar.var_226 && Gvar.var_104 != 8) {
+                    Gvar.var_110 = 1;
+                }
+                await Func.func348();
+            }
+            if (Gvar.var_2611 == 0) {
+                Gvar.var_74 = Gvar.var_261;
+                Gvar.var_75 = Gvar.var_262;
+            }
+            Gvar.var_1431 = 170;
+            Gvar.var_1432 = 140;
+            Gvar.var_310 = 1;
+            Gvar.var_1451 = 1;
+            Adap.DSPLAY(190);
+            for (let cnt = 0; cnt < 5; ++cnt) {
+                await Func.func337();
+                Gvar.var_1451++;
+            }
+            Gvar.var_310 = 0;
+            Gvar.var_1451 = 0;
+            for (let cnt = 0; cnt < 10; ++cnt) {
+                await Func.func337();
+            }
             Gvar.var_257 = Gvar.var_2494;
             await Func.func538();
             Gvar.var_242 = 1;
             await Func.func019();
+            // @ts-ignore
+            return;
         }
         // === DISC No.412: ヘブンズドアー ===
         if (Gvar.var_2494 == 412) {
@@ -5490,16 +6478,106 @@ async function func543(this: any) {
                 }
                 Gvar.var_242 = 1;
                 await Func.func019();
+                // @ts-ignore
+                return;
             }
-            // 敵召喚処理 (省略)
-            // "しかし何も起こらなかった…"
-            // "マンガのキャラクターが現れた！"
+            Gvar.var_466 = 0;
+            Gvar.var_467 = 0;
+            Gvar.var_1752 = 0;
+            Gvar.var_1753 = 0;
+            Gvar.var_1754 = 0;
+            Gvar.var_1755 = 0;
+            await Func.func657();
+            Gvar.var_443 = 1;
+            Gvar.var_444 = Gvar.var_445;
+            await Func.func588();
+            Gvar.var_2617 = 0;
+            Gvar.var_466 = (Gvar.var_83[Gvar.var_445].Var1 - Gvar.var_74 + 4) * 40;
+            Gvar.var_467 = (Gvar.var_83[Gvar.var_445].Var2 - Gvar.var_75 + 4) * 40;
+            Gvar.var_445 = Gvar.var_444;
+            Gvar.var_443 = 0;
+            if (Gvar.var_2339 == 0) {
+                Gvar.var_283 = Gvar.var_286;
+                Gvar.var_284 = Gvar.var_287;
+                Gvar.var_286 = "しかし何も起こらなかった…";
+                Gvar.var_287 = "";
+                Gvar.var_24 = Gvar.var_24[2];
+                Gvar.var_25 = Gvar.var_25[2];
+                Gvar.var_26 = Gvar.var_26[2];
+                await Func.func053();
+                Gvar.var_223 = 1;
+                Gvar.var_290 = 0;
+                await Func.func050();
+                for (let cnt = 0; cnt < 10; ++cnt) {
+                    Gvar.var_290 = 0;
+                    await Func.func337();
+                }
+                Gvar.var_2618 = 0;
+                if (Gvar.var_2444 == 1) {
+                    Gvar.var_2444 = 0;
+                    await Func.func540();
+                }
+                Gvar.var_242 = 1;
+                await Func.func019();
+                // @ts-ignore
+                return;
+            }
+            await Func.func657();
+            Gvar.var_443 = 1;
+            Gvar.var_444 = Gvar.var_445;
+            await Func.func588();
+            Gvar.var_2617 = 0;
+            Gvar.var_1752 = (Gvar.var_83[Gvar.var_445].Var1 - Gvar.var_74 + 4) * 40;
+            Gvar.var_1753 = (Gvar.var_83[Gvar.var_445].Var2 - Gvar.var_75 + 4) * 40;
+            Gvar.var_445 = Gvar.var_444;
+            Gvar.var_443 = 0;
+            await Func.func657();
+            Gvar.var_443 = 1;
+            Gvar.var_444 = Gvar.var_445;
+            await Func.func588();
+            Gvar.var_2617 = 0;
+            Gvar.var_1754 = (Gvar.var_83[Gvar.var_445].Var1 - Gvar.var_74 + 4) * 40;
+            Gvar.var_1755 = (Gvar.var_83[Gvar.var_445].Var2 - Gvar.var_75 + 4) * 40;
+            Gvar.var_445 = Gvar.var_444;
+            Gvar.var_443 = 0;
+            Adap.DSPLAY(168);
+            Gvar.var_310 = 1;
+            Gvar.var_1751 = 1;
+            for (let cnt = 0; cnt < 10; ++cnt) {
+                Gvar.var_290 = 0;
+                await Func.func337();
+                Gvar.var_1751++;
+            }
+            Gvar.var_310 = 0;
+            Gvar.var_1751 = 0;
+            await Func.func348();
+            Gvar.var_283 = Gvar.var_286;
+            Gvar.var_284 = Gvar.var_287;
+            Gvar.var_286 = "マンガのキャラクターが現れた！";
+            Gvar.var_287 = "";
+            Gvar.var_24 = Gvar.var_24[1];
+            Gvar.var_25 = Gvar.var_25[1];
+            Gvar.var_26 = Gvar.var_26[1];
+            await Func.func053();
+            Gvar.var_223 = 1;
+            Gvar.var_290 = 0;
+            await Func.func050();
+            for (let cnt = 0; cnt < 10; ++cnt) {
+                Gvar.var_290 = 0;
+                await Func.func337();
+                Gvar.var_2618 = 0;
+            }
+            for (let cnt = 0; cnt < 10; ++cnt) {
+                await Func.func337();
+            }
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
                 await Func.func540();
             }
             Gvar.var_242 = 1;
             await Func.func019();
+            // @ts-ignore
+            return;
         }
         // === DISC No.399: ゴールドエクスペリエンスレクイエム ===
         if (Gvar.var_2494 == 399) {

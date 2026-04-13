@@ -1735,6 +1735,7 @@ export interface GlobalVars {
     var_1652 :any,
     var_1653 :any,
     var_1654 :any,
+    var_1655 :any,
     enemy_description :string, // 敵の説明。敵図鑑用コメント
     var_1656 :any,
     var_1657 :any,
@@ -5573,6 +5574,7 @@ export let Gvar: GlobalVars = {
     var_1652: 0,
     var_1653: 0,
     var_1654: 0,
+    var_1655: 0,
     enemy_description: null, // 敵の説明。敵図鑑用コメント
     var_1656: 0,
     var_1657: 0,
