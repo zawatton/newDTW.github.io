@@ -1,173 +1,146 @@
-# new Diabolo The Wanderer
+# newDTW — Diavolo The Wanderer (Open Source)
 
+> A fan-made, open-source browser roguelike inspired by JoJo's Bizarre Adventure.
+> Originally created by KMQ SOFT, now rebuilt in TypeScript + Electron.
+
+<a href="https://newdtw.github.io/"><img src="https://img.shields.io/badge/Play_Now_%F0%9F%8E%AE-in_your_browser-blueviolet?style=for-the-badge" alt="Play Now"></a>
+<a href="https://github.com/sponsors/zawatton21"><img src="https://img.shields.io/badge/Sponsor_%E2%9D%A4_Support_this_project-pink?style=for-the-badge" alt="Sponsor"></a>
+
+## What is this?
+
+**Diavolo The Wanderer** (ディアボロの大冒険) is a mystery dungeon roguelike set in the JoJo's Bizarre Adventure universe. The original game, created by KMQ SOFT using HSP (Hot Soup Processor), became a cult classic in Japan before development ended in 2008.
+
+**newDTW** is a ground-up rebuild of the game:
+- **HSP &rarr; TypeScript** — 100K+ lines of HSP source ported to modern TypeScript
+- **Browser-playable** — no download needed, runs at [newdtw.github.io](https://newdtw.github.io/)
+- **Electron desktop** — optional native app via `npm start`
+- **Open source** — all game logic, sprites, and tools are in this repo
+
+## Features
+
+- Classic mystery dungeon gameplay with Stand abilities and items from JoJo Parts 1-6
+- 1,050+ game functions fully ported from original HSP source
+- 28,000+ sprite cells with per-pixel rendering via SpriteManager
+- Map theme system for custom dungeon tilesets
+- Backwards-compatible `gcopy` adapter — original rendering calls work alongside new sprite API
+
+## Quick Start
+
+### Play in Browser
+
+Visit **[newdtw.github.io](https://newdtw.github.io/)** — no installation required.
+
+### Run Locally
+
+```bash
+git clone https://github.com/zawatton21/newDTW.github.io.git
+cd newDTW.github.io
+npm install
+npm run build
+npm start          # launches Electron app
+```
+
+**Requirements:** Node.js 18+, Python 3.10+ (for tools; needs Pillow + numpy)
+
+## Project Structure
+
+```
+src/
+  renderer/
+    adapter/        HSP-to-TS adapter layer (gcopy, picload, SpriteManager)
+    func/           Main game logic (func000 - func1056)
+    enemy/          Enemy AI and data
+    stand/          Stand DISCs and items
+    dungeon/        Dungeon generation and processing
+    ...
+assets/
+  sprites/          Individual sprite PNGs + manifest.json
+  img/              Legacy sprite sheets
+tools/              Dev tools (sprite extraction, map themes, diff analysis)
+```
+
+## Contributing
+
+Contributions welcome — code, pixel art, translations, bug reports.
+
+Join the development on Discord: DM **Zawa-TON** to get started.
+
+### Adding Content
+
+**Stand DISCs / Items:**
+1. Place 40x40 PNG in `assets/sprites/`
+2. Register in `manifest.json`
+3. Use `Adap.spriteManager.draw("category/name")` to render
+
+**Map Themes:**
+```bash
+python tools/add_map_theme.py my_tiles/ 27 "New Dungeon"
+```
+
+## Roadmap
+
+- [ ] Custom version content (v0.14-0.16 features)
+- [ ] Parts 7 & 8 characters and Stands
+- [ ] Internationalization (English, Chinese, etc.)
+- [ ] Original BGM to resolve copyright
+
+## Credits
+
+### Original Game
+- **KMQ SOFT** (Clive, Munier, qra) — original Diavolo The Wanderer (v0.13)
+
+### Custom Versions
+- Anonymous contributors — v0.14-0.16
+
+### Open Source Version
+- **Zawatton21 (Zawa-TON)** — TypeScript rebuild, SpriteManager, tooling
+
+### Pixel Art Contributors
+Many anonymous artists contributed enemy sprites, Stand DISCs, and items. See the full credits in the Japanese section below.
+
+---
+
+## License
+
+See [LICENSE.md](LICENSE.md).
+
+---
+
+<details>
+<summary><strong>日本語README (Japanese)</strong></summary>
 
 ## はじめに
+
 こちらは、ディアボロの大冒険の二次創作版 (自称オープンソース化プロジェクト)です。
 
-KMQ SOFT が作成した「ジョジョの奇妙な冒険」の二次創作ローグライクゲーム「ディアボロの大冒険」。かつて一世を風靡?したディアボロの大冒険ですが、その原作版の開発は2008年9月30日を持って終了しました。
+KMQ SOFT が作成した「ジョジョの奇妙な冒険」の二次創作ローグライクゲーム「ディアボロの大冒険」。かつて一世を風靡したディアボロの大冒険ですが、その原作版の開発は2008年9月30日を持って終了しました。
 
-こちらはファンの一人が作成した[ブラウザ版ディアボロの大冒険](https://github.com/newDTW/newDTW.github.io) (ブラウザ版のプレイは[こちら](https://newdtw.github.io/))のソースコードをフォークし、ディアボロの大冒険のオープンソース化を目指して開発を続けています。
+こちらはファンの一人が作成した[ブラウザ版ディアボロの大冒険](https://github.com/newDTW/newDTW.github.io)のソースコードをフォークし、ディアボロの大冒険のオープンソース化を目指して開発を続けています。
 
 ## 構想
-この newDTW は原作 Ver 0.13 を踏襲したブラウザ版から出発しています。今後の開発構想としては以下の通りです。並びの順番に特に意味はありません。
+
+この newDTW は原作 Ver 0.13 を踏襲したブラウザ版から出発しています。今後の開発構想としては以下の通りです。
 
 - 原作の開発が終了した後にファンによって開発されたカスタム版である Ver 0.14 ~ 0.16 の要素を追加
 - 「ジョジョの奇妙な冒険」の第7部、第8部の要素を追加
 - 日本語だけでなく英語や中国語など海外のプレイヤーを意識した多言語化
 - BGMなどの著作権問題のクリア
 
-
-**※ゲームの開発に携わりたい方は、SNSサービスDiscordで開発者「Zawa-TON」までDMしてください。**
-
-
-## 開発環境セットアップ
-
-```bash
-npm install
-npm run build    # TypeScript コンパイル + Webpack バンドル
-npm start        # Electron 起動
-```
-
-### 必要な環境
-- Node.js 18+
-- Python 3.10+ (ツール用、Pillow / numpy が必要)
-
-```bash
-pip install Pillow numpy
-```
-
-## プロジェクト構成
-
-```
-src/
-  main/             Electron メインプロセス
-  renderer/
-    adapter/         HSP→TS アダプタ層 (gcopy, picload, SpriteManager 等)
-    conditions/      状態判定 (func021-042)
-    dungeon/         ダンジョン共通処理
-    dungeon0-5/      各ダンジョン固有処理
-    enemy/           敵AI・敵データ
-    event/           イベント処理
-    extra_items/     特殊アイテム
-    food/            食料アイテム
-    func/            メイン関数群 (func000-func1056)
-    initialize/      ゲーム初期化
-    keyconf/         キー設定
-    memory/          メモリーDISC
-    menu/            メニュー画面
-    mondai/          問題・クイズ
-    music/           BGM・効果音
-    npc/             NPC会話
-    shop/            ショップ
-    stand/           スタンドDISC・アイテム
-    title/           タイトル画面
-assets/
-  img/               スプライトシート (従来形式)
-  sprites/           個別スプライトPNG (SpriteManager用)
-    manifest.json    スプライト定義・逆引きインデックス
-    map-themes.json  マップテーマ定義
-tools/               開発支援ツール
-α版ソースコード分解/  HSP α版ソースコード (移植元)
-```
-
-## コンテンツ追加ガイド
-
-### スタンドDISC / アイテムの追加
-
-1. **ドット絵**: 40x40 PNG を `assets/sprites/` の適切なカテゴリに配置
-2. **マニフェスト登録**: `assets/sprites/manifest.json` にエントリ追加
-3. **アイテム定義**: `src/renderer/func/func492.ts` にアイテム説明を追加
-4. **描画**: `Adap.spriteManager.draw("カテゴリ/名前")` で名前参照
-
-```typescript
-// 新しいスタンドDISCの描画例
-Adap.spriteManager.draw("stand0/r050_c000");  // 名前で参照
-```
-
-### マップテーマの追加
-
-```bash
-# 方法1: 個別タイルPNGから追加
-python tools/add_map_theme.py my_tiles/ 27 "新ダンジョン"
-
-# 方法2: 横1列のストリップ画像から追加
-python tools/add_map_theme.py strip.png 27 "新ダンジョン"
-```
-
-タイルPNGのファイル名規約:
-- 列番号直指定: `c00.png`, `c06.png` ...
-- 名前指定: `floor.png`, `wall.png`, `stairs.png`, `water.png` ...
-
-ツール実行で `manifest.json` と `map-themes.json` が自動更新されます。
-コードでは `Gvar.y_axis_map_image = 27;` でテーマを適用します。
-
-### スプライトシート再抽出
-
-スプライトシートを更新した場合:
-
-```bash
-python tools/extract_sprites.py
-# → assets/sprites/ に全スプライトを再抽出 + manifest.json 再生成
-```
-
-## スプライト管理システム
-
-従来の `gcopy(bufferID, x, y, w, h)` による座標ハードコードに加え、
-個別PNG + 名前参照の `SpriteManager` を導入しています。
-
-- **既存コードとの互換性**: `gcopy` 呼び出し時に自動で個別PNGを検索、あればそちらを使用
-- **新規コード**: `Adap.spriteManager.draw("名前")` で名前参照
-- **段階的移行**: 既存2,500+箇所の `gcopy` コード変更不要
-
-
 ## スタッフクレジット
-名前の分からない方については、便宜上「名も無き波紋使い」「名も無きスタンド使い」とさせて頂いています。採用していただいたプログラムやドット絵等の要素が増えるごとに追加していきます。
 
 ### Special Thanks
-#### 1. ゲーム開発
-- 原作者 (ver0.13まで)
-	クライブ さま・ムニエル さま・qra さま (KMQ SOFTの御三方))
-- カスタム版ver0.14~0.16の開発
-	名も無き波紋使い
-- 本オープンソース版
-	Zawatton21(Zawa-TON)
 
-#### 2. ドット絵開発
-ドット絵を作成していただいた方々、本当にありがとうございます。心より感謝申し上げます。自分が作成したドット絵だという方は、連絡頂ければ名前やSNSのアカウント、ブログのURLを記載します。
-- ゲーム全体 (by クライブ さま・ムニエル さま・qra さま (KMQ SOFTの御三方))
-- 敵キャラドット絵
-	- ドット絵修正 (正面ドット絵しかない敵キャラに正面ドット絵以外も追加)
-		- ツェペリさん (by「名も無きスタンド使い」)
-		- ダイアーさん (by「名も無きスタンド使い」)
-		- ディオ・ブランドー (by「名も無きスタンド使い」)
-		- サンタナ (by「名も無きスタンド使い」)
-		- カーズ (by「名も無きスタンド使い」)
-		- 究極カーズ (by「名も無きスタンド使い」)
-		- 承太郎(3部) (by「名も無きスタンド使い」)
-		- 花京院 (by「名も無きスタンド使い」)
-		- 退院した花京院 (by「名も無きスタンド使い」)
-		- ポルナレフ (by「名も無きスタンド使い」)
-		- アヌビスポルナレフ (by「名も無きスタンド使い」)
-		- ヴァニラ・アイス (by「名も無きスタンド使い」)
-		- 仗助 (by「名も無きスタンド使い」)
-		- 承太郎(4部) (by「名も無きスタンド使い」)
-		- 虹村形兆 (by「名も無きスタンド使い」)
-		- 億泰 (by「名も無きスタンド使い」)
-		- ブチギレた億泰 (by「名も無きスタンド使い」)
-		- ジョルノ (by「名も無きスタンド使い」)
-		- ジョルノレクイエム (by「名も無きスタンド使い」)
-		- アバッキオ (by「名も無きスタンド使い」)
-		- ベビィフェイス (by「名も無きスタンド使い」)
-		- ペッシ (by「名も無きスタンド使い」)
-		- 成長したペッシ (by「名も無きスタンド使い」)
-		- ギアッチョ (by「名も無きスタンド使い」)
-		- リゾット (by「名も無きスタンド使い」)
-		- ウェストウッド看守 (by「名も無きスタンド使い」)
-		- C-MOON (by「名も無きスタンド使い」)
-- スタンドdisc
-	- アイテム欄のドット絵
-		- タスクact1 (by「名も無きスタンド使い」)
-	- 攻撃モーション
-		- 今の所まだ採用実績なし
-- その他アイテム
-	- ベルトのバックル (by 「名も無きスタンド使い」)
+#### ゲーム開発
+- 原作者 (ver0.13まで): クライブ さま・ムニエル さま・qra さま (KMQ SOFTの御三方)
+- カスタム版 ver0.14~0.16 の開発: 名も無き波紋使い
+- 本オープンソース版: Zawatton21 (Zawa-TON)
+
+#### ドット絵開発
+ドット絵を作成していただいた方々、本当にありがとうございます。
+
+- ゲーム全体: KMQ SOFT の御三方
+- 敵キャラドット絵修正: 「名も無きスタンド使い」(30+ characters)
+- スタンドDISC: 「名も無きスタンド使い」
+- その他アイテム: 「名も無きスタンド使い」
+
+</details>
