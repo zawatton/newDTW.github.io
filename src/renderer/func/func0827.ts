@@ -1,3 +1,9 @@
+/**
+ * func0827 — func827 ダンジョン「レクイエムの大迷宮」へ入った時の初期化処理
+ *
+ * (org原典: newDTW_dungeon2 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

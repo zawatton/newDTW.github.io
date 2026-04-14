@@ -1,3 +1,9 @@
+/**
+ * func0830 — func830 ダンジョンへ侵入した時に必ず一番はじめに読み込まれる処理
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

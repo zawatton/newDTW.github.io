@@ -1,3 +1,11 @@
+/**
+ * func0828 — func828 ディアボロの試練の入り口へ入ろうとした際のメッセージ処理
+ *
+ * ヴェネチアホテルや亀、酒場の設定
+ *
+ * (org原典: newDTW_dungeon0 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

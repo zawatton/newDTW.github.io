@@ -1,3 +1,11 @@
+/**
+ * func0822 — func822 不明
+ *
+ * ヴェネチアホテルや亀、酒場の設定
+ *
+ * (org原典: newDTW_dungeon0 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'

@@ -1,3 +1,11 @@
+/**
+ * func0840 — func840 選択肢処理(はい、いいえ & 買う、やめる等)
+ *
+ * newDTW のゲームの根幹となる処理
+ *
+ * (org原典: newDTW_mainframe)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

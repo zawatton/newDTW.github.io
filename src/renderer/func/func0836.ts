@@ -1,3 +1,9 @@
+/**
+ * func0836 — func836 ダンジョン「鉄獄(鉄の牢獄)」へ入った時の初期化処理
+ *
+ * (org原典: newDTW_dungeon5 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func0878 — func878 不明
+ *
+ * (org原典: newDTW_func8)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

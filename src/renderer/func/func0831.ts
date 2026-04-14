@@ -1,3 +1,9 @@
+/**
+ * func0831 — func831 持ち込み不可ダンジョン侵入忠告メッセージ処理
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func0834 — func834 ダンジョン「一巡後の世界」へ入った時の初期化処理
+ *
+ * (org原典: newDTW_dungeon4 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

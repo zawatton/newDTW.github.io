@@ -1,3 +1,11 @@
+/**
+ * func0832 — func832 NPC プッチ神父との会話メッセージ
+ *
+ * ヴェネチアホテルや亀、酒場の設定
+ *
+ * (org原典: newDTW_dungeon0 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

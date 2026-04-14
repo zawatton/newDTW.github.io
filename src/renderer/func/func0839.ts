@@ -1,3 +1,11 @@
+/**
+ * func0839 — func839 マップ移動やイベント発生フラグ処理
+ *
+ * newDTW のゲームの根幹となる処理
+ *
+ * (org原典: newDTW_mainframe)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

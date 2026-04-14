@@ -1,3 +1,11 @@
+/**
+ * func0799 — func799 口座へ入金、口座から出金した時の表示
+ *
+ * ヴェネチアホテルや亀、酒場の設定
+ *
+ * (org原典: newDTW_dungeon0 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'

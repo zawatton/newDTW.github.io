@@ -1,3 +1,11 @@
+/**
+ * func0823 — func823 ヴェネチアホテルのPC を起動した時のメッセージフレーム
+ *
+ * ヴェネチアホテルや亀、酒場の設定
+ *
+ * (org原典: newDTW_dungeon0 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'

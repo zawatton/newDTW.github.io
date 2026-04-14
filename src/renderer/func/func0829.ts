@@ -1,3 +1,9 @@
+/**
+ * func0829 — func829 ダンジョン「ディアボロの試練」へ入った時の初期化処理
+ *
+ * (org原典: newDTW_dungeon3 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
