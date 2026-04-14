@@ -1,0 +1,35 @@
+{
+  "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
+  "productName": "newDTW",
+  "version": "1.0.0",
+  "identifier": "io.github.zawatton.newdtw",
+  "build": {
+    "frontendDist": ".."
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "Diavolo The Wanderer",
+        "url": "public/index.html",
+        "width": 680,
+        "height": 680,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ]
+  }
+}

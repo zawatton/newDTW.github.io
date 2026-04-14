@@ -23,6 +23,9 @@
 !*.md
 !new_deploy.py
 !*.cjs
+!*.rs
+!*.toml
+!Cargo.lock
 
 
 # 【3】 最後に常に除外するファイルやフォルダを禁止
@@ -35,3 +38,10 @@ build/*
 assets/sprites/**
 !assets/sprites/manifest.json
 !assets/sprites/map-themes.json
+CLAUDE.md
+
+# Tauri build artifacts (Rust target/ + Tauri dev webview bridge log outside repo)
+src-tauri/target/**
+src-tauri/gen/**
+# Tauri dev-only: junction under public/ that was replaced by frontendDist=".."
+public/assets

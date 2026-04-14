@@ -43,7 +43,10 @@ async function exist(file_name) {
         const stats = await stat1(filePath);
         Gvar.strsize = stats.size;
     } catch (err) {
-        console.error(`Error in exist function: ${err.message}`);
+        // ENOENT is the normal "file absent" signal — don't flood the console.
+        if (err && err.code !== 'ENOENT') {
+            console.error(`Error in exist function: ${err.message}`);
+        }
         Gvar.strsize = -1;
     }
 }
