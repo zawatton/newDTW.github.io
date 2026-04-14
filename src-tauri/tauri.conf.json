@@ -4,13 +4,14 @@
   "version": "1.0.0",
   "identifier": "io.github.zawatton.newdtw",
   "build": {
-    "frontendDist": ".."
+    "frontendDist": "../tauri-dist",
+    "beforeDevCommand": "node tools/stage_tauri.js",
+    "beforeBuildCommand": "npm run build:browser && node tools/stage_tauri.js"
   },
   "app": {
     "windows": [
       {
         "title": "Diavolo The Wanderer",
-        "url": "public/index.html",
         "width": 680,
         "height": 680,
         "resizable": true,

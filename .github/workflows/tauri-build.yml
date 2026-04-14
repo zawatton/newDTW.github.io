@@ -1,0 +1,97 @@
+# Build newDTW cross-platform binaries via Tauri.
+#
+# Triggers:
+#   - Git tag push matching `v*` — creates a draft GitHub Release with the
+#     artifacts attached.
+#   - Manual `workflow_dispatch` — useful for validating CI without cutting
+#     a release; artifacts are uploaded as workflow artifacts only.
+#
+# What gets produced (per matrix entry):
+#   - Windows (windows-latest): NSIS installer (.exe) + portable exe
+#   - macOS (macos-latest):     universal .app + .dmg (Intel + Apple Silicon)
+#   - Linux (ubuntu-22.04):     .deb + .AppImage
+#
+# Known gap: assets/bgm/ (~359 MiB) and assets/se/ (~4 MiB) are not tracked
+# in this repo, so CI-built binaries will be silent. Fix later by hosting
+# audio on a CDN or fetching from a separate release asset during build.
+name: Tauri Build
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: macos-latest
+            args: --target universal-apple-darwin
+          - platform: ubuntu-22.04
+            args: ''
+          - platform: windows-latest
+            args: ''
+
+    runs-on: ${{ matrix.platform }}
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Set up Rust (stable)
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+
+      - name: Rust cache
+        uses: swatinem/rust-cache@v2
+        with:
+          workspaces: src-tauri
+
+      - name: Install Linux Tauri dependencies
+        if: matrix.platform == 'ubuntu-22.04'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libgtk-3-dev \
+            libwebkit2gtk-4.1-dev \
+            libayatana-appindicator3-dev \
+            librsvg2-dev \
+            libsoup-3.0-dev
+
+      - name: Install npm dependencies
+        run: npm ci
+
+      - name: Build Tauri bundles
+        uses: tauri-apps/tauri-action@v0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          # On tag push: create/update a draft release. Manual runs skip the
+          # release step (no tagName set → artifacts only).
+          tagName: ${{ github.event_name == 'push' && github.ref_name || '' }}
+          releaseName: ${{ github.event_name == 'push' && format('newDTW {0}', github.ref_name) || '' }}
+          releaseBody: |
+            Auto-generated from tag ${{ github.ref_name }}.
+            See release notes for highlights.
+          releaseDraft: true
+          prerelease: false
+          args: ${{ matrix.args }}
+
+      - name: Upload artifacts (manual runs)
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/upload-artifact@v4
+        with:
+          name: newdtw-${{ matrix.platform }}
+          path: |
+            src-tauri/target/release/bundle/**/*
+            src-tauri/target/universal-apple-darwin/release/bundle/**/*
+          if-no-files-found: warn

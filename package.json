@@ -5,6 +5,10 @@
   "main": "public/main/main.js",
   "scripts": {
     "build": "tsc && webpack",
+    "build:browser": "webpack --config webpack.browser.cjs",
+    "tauri": "tauri",
+    "tauri:dev": "tauri dev",
+    "tauri:build": "tauri build",
     "watch": "webpack -w",
     "lint": "eslint -c .eslintrc --ext .ts ./src",
     "start": "npm run build && electron public/main/main.js",
