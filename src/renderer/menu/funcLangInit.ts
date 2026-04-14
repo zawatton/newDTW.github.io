@@ -1,22 +1,14 @@
 /**
- * funcLangInit — 言語設定サブメニュー初期化
+ * funcLangInit — 言語設定: 初期化処理
  *
- * 現在の言語設定からカーソル位置を設定し、入力処理(funcLangConfig)へ遷移する。
- * パターン: func194 (ゲームスピード初期化) と同じ構造。
- * HSP原本にない新規追加関数。
+ * ※ MenuController + menuConfigs.language に統合済み。
+ *   func193.ts からの呼び出し互換性のための薄いラッパー。
  */
-import { Gvar } from '../variable'
-import * as Func from '../func/index'
-import { getLanguage } from '../i18n'
+import * as Menu from './MenuController'
+import * as Configs from './menuConfigs'
 
 async function funcLangInit(this: any) {
-    const lang = getLanguage();
-    if (lang === 'ja') {
-        Gvar.lang_cursor = 0;
-    } else {
-        Gvar.lang_cursor = 1; // 'en' またはその他
-    }
-    await Func.funcLangConfig();
+    await Menu.run(Configs.language);
 }
 
 export { funcLangInit }

@@ -1,27 +1,15 @@
-import { Gvar } from '../variable'
-import * as Adap from '../adapter/index'
-import * as Func from '../func/index'
+/**
+ * func194 — ゲームスピード設定: 初期化処理
+ *
+ * ※ 旧実装は init/input/display を3ファイルに分けていたが、
+ *   現在は MenuController + menuConfigs.gameSpeed に統合済み。
+ *   このファイルは func193.ts からの呼び出し互換性のための薄いラッパー。
+ */
+import * as Menu from './MenuController'
+import * as Configs from './menuConfigs'
 
-// ゲームスピード設定フラグ
-// 旧 func194
 async function func194(this: any) {
-        Adap.dbgprt(194);
-        if (Gvar.animationDelay == 30) {
-            Gvar.var_906 = 0;
-        }
-        if (Gvar.animationDelay == 40) {
-            Gvar.var_906 = 1;
-        }
-        if (Gvar.animationDelay == 50) {
-            Gvar.var_906 = 2;
-        }
-        if (Gvar.animationDelay == 60) {
-            Gvar.var_906 = 3;
-        }
-        if (Gvar.animationDelay == 70) {
-            Gvar.var_906 = 4;
-        }
-        await Func.func195(); // ゲームスピード設定項目動作処理
+    await Menu.run(Configs.gameSpeed);
 }
 
-export {func194}
+export { func194 }
