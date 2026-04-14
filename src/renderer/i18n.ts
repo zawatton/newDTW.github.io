@@ -116,3 +116,29 @@ export async function initI18n(): Promise<void> {
 }
 
 export function isReady(): boolean { return ready; }
+
+/**
+ * オブジェクトの指定プロパティに自動翻訳フックを設定する。
+ *
+ * - 代入時: 原文(日本語)を内部に保存
+ * - 取得時: 現在の言語で翻訳した結果を返す
+ *
+ * 使い所: 大量の `Gvar.effects_message = "[発動]..."` のような
+ *   代入箇所が散らばっているプロパティを、ソース変更なしで一括i18n化する。
+ *
+ * 言語切替後も get() で常に最新言語に翻訳されるため、動的反映に対応。
+ *
+ * @param target 対象オブジェクト (例: Gvar)
+ * @param key プロパティ名 (例: 'effects_message')
+ */
+export function installAutoTranslate(target: any, key: string): void {
+    let _original: string = target[key] ?? "";
+    Object.defineProperty(target, key, {
+        get() {
+            return typeof _original === 'string' ? t(_original) : _original;
+        },
+        set(v: any) { _original = v; }, // 原文を保存 (翻訳は get 時に実施)
+        configurable: true,
+        enumerable: true,
+    });
+}

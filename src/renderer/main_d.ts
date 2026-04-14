@@ -1,7 +1,7 @@
 import { Gvar } from './variable'
 import * as Adap from './adapter/index'
 import * as Func from './func/index'
-import { initI18n } from './i18n'
+import { initI18n, installAutoTranslate } from './i18n'
 import './debug'
 
 import { ipcRenderer } from 'electron';
@@ -26,6 +26,12 @@ Adap.InitInput();
 window.addEventListener('load', async function(){
     Adap.dbgprt(1);
     await initI18n();
+    // 大量の代入箇所を持つメッセージプロパティに自動翻訳フックを設定。
+    // これにより `Gvar.effects_message = "[発動]..."` 等が自動で t() でラップされる。
+    // 直接代入(setMessageを経由しないもの)も含めて全部対象になる。
+    installAutoTranslate(Gvar, 'effects_message');
+    installAutoTranslate(Gvar, 'comments_row1');
+    installAutoTranslate(Gvar, 'comments_row2');
     Func.func004();
     return;
 })

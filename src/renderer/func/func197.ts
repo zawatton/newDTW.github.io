@@ -1,6 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
-import { getLanguage } from '../i18n'
+import { getLanguage, t } from '../i18n'
 async function func197(this: any) {
         Adap.dbgprt(197);
         Gvar.var_907 = 40; // var_907: システムメニューボックスの高さ拡張量 (元:20, 言語項目追加で40に変更)
@@ -49,7 +49,7 @@ async function func197(this: any) {
             Adap.color(150, 150, 150); //灰色
         }
         Adap.pos(145, 230);
-        Adap.mes("言語");
+        Adap.mes(t("言語"));
         Adap.color(255, 255, 255);
         if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1 || Gvar.lang_menu_open == 1) {
             Adap.color(150, 150, 150); //灰色
@@ -89,11 +89,12 @@ async function func197(this: any) {
         if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1 || Gvar.lang_menu_open == 1) {
             Adap.color(150, 150, 150); //灰色
         }
+        // 言語の現在値: 日本語の場合は「日本語」、英語の場合は「EN」(短縮形)
         Adap.pos(265, 230);
         if (getLanguage() === 'ja') {
             Adap.mes("日本語");
         } else {
-            Adap.mes("EN");
+            Adap.mes(t("EN"));
         }
         Adap.color(255, 255, 255);
         if (Gvar.var_899 == 0) {

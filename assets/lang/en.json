@@ -195,5 +195,8 @@
   "★睡眠よけ": "★Sleep Resistance",
   "★盗まれ防止": "★Theft Prevention",
   "★抜き取り防止": "★Extraction Prevention",
-  "データの読み込みに失敗しました。": "Failed to load data."
+  "データの読み込みに失敗しました。": "Failed to load data.",
+  "言語": "Language",
+  "日本語": "Japanese",
+  "EN": "EN"
 }

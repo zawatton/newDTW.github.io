@@ -14,6 +14,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { t } from '../i18n'
 
 export interface SimpleMenuConfig {
     /** デバッグ識別用のID */
@@ -139,7 +140,8 @@ export function render(config: SimpleMenuConfig): void {
     Adap.color(255, 255, 255);
     for (let i = 0; i < config.options.length; i++) {
         Adap.pos(config.textX, config.textStartY + i * spacing);
-        Adap.mes(config.options[i]);
+        // i18n対応: ラベルが翻訳キーとしてen.jsonにあれば翻訳、なければ原文表示
+        Adap.mes(t(config.options[i]));
     }
 
     // カーソル位置
