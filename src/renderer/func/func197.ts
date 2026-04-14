@@ -1,15 +1,16 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import { getLanguage } from '../i18n'
 async function func197(this: any) {
         Adap.dbgprt(197);
-        Gvar.var_907 = 20;
+        Gvar.var_907 = 40; // var_907: システムメニューボックスの高さ拡張量 (元:20, 言語項目追加で40に変更)
         Adap.color(0, 0, 0);
 
         Adap.gmode(4, null, null, 100);
         Adap.pos(107, 70);
         Adap.gcopy(12, 0, 0, 200, 153 + Gvar.var_907);
         Adap.color(255, 255, 255);
-        if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1) {
+        if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1 || Gvar.lang_menu_open == 1) {
             Adap.color(150, 150, 150);
         }
         Adap.line(110, 71, 303, 71);
@@ -23,7 +24,7 @@ async function func197(this: any) {
 
         Adap.font(Gvar.font_type, 16, 1);
         Adap.color(255, 255, 255);
-        if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1) {
+        if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1 || Gvar.lang_menu_open == 1) {
             Adap.color(150, 150, 150);
         }
         Adap.pos(145, 90);
@@ -44,7 +45,13 @@ async function func197(this: any) {
         Adap.pos(145, 210);
         Adap.mes("通信モード");
         Adap.color(255, 255, 255);
-        if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1) {
+        if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1 || Gvar.lang_menu_open == 1) {
+            Adap.color(150, 150, 150); //灰色
+        }
+        Adap.pos(145, 230);
+        Adap.mes("言語");
+        Adap.color(255, 255, 255);
+        if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1 || Gvar.lang_menu_open == 1) {
             Adap.color(150, 150, 150); //灰色
         }
         Adap.pos(265, 90);
@@ -67,7 +74,7 @@ async function func197(this: any) {
         if (Gvar.dungeon_number == 99) {
             Adap.color(150, 150, 150); //灰色
         }
-        if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1) {
+        if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1 || Gvar.lang_menu_open == 1) {
             Adap.color(150, 150, 150); //灰色
         }
         Adap.pos(265, 210);
@@ -76,6 +83,17 @@ async function func197(this: any) {
         }
         if (Gvar.var_407 == 1) {
             Adap.mes("ON");
+        }
+        // 言語の現在値を表示
+        Adap.color(255, 255, 255);
+        if (Gvar.var_900 == 1 || Gvar.var_901 == 1 || Gvar.var_902 == 1 || Gvar.var_903 == 1 || Gvar.var_904 == 1 || Gvar.var_905 == 1 || Gvar.lang_menu_open == 1) {
+            Adap.color(150, 150, 150); //灰色
+        }
+        Adap.pos(265, 230);
+        if (getLanguage() === 'ja') {
+            Adap.mes("日本語");
+        } else {
+            Adap.mes("EN");
         }
         Adap.color(255, 255, 255);
         if (Gvar.var_899 == 0) {
@@ -99,8 +117,11 @@ async function func197(this: any) {
         if (Gvar.var_899 == 6) {
             Adap.pos(112, 207);
         }
+        if (Gvar.var_899 == 7) {
+            Adap.pos(112, 227);
+        }
         Adap.gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
-        if (Gvar.var_900 == 0) {
+        if (Gvar.var_900 == 0 && Gvar.lang_menu_open == 0) {
             // Adap.buffer(8)は"img1.gif"。X座標70、Y座標50から切り取り長さ X方向25、Y方向20
             // 絵:カーソルアイコン(鏃)
             Adap.gcopy(8, 70, 50, 25, 20);

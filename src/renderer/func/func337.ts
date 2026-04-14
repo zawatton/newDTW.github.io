@@ -207,6 +207,9 @@ async function func337(this: any) {
         if (Gvar.var_903 == 1) {
             await Func.func219();
         }
+        if (Gvar.lang_menu_open == 1) {
+            await Func.funcLangDisplay(); // 言語設定サブメニュー描画
+        }
         if (Gvar.var_630 >= 1) {
             await Func.func228();
         }

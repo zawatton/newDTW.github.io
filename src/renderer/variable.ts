@@ -3835,6 +3835,9 @@ export interface GlobalVars {
     var_3952 :any,
     var_3953 :any,
     var_3954 :any,
+    // === i18n言語設定メニュー用 (新規追加: HSP原本にない変数) ===
+    lang_menu_open :number, // 言語設定サブメニュー表示フラグ (0:非表示, 1:表示)
+    lang_cursor :number, // 言語設定カーソル位置 (0:日本語, 1:English)
 };
 
 export let Gvar: GlobalVars = {
@@ -7674,4 +7677,7 @@ export let Gvar: GlobalVars = {
     var_3952: 0,
     var_3953: 0,
     var_3954: 0,
+    // === i18n言語設定メニュー用 (新規追加: HSP原本にない変数) ===
+    lang_menu_open: 0, // 言語設定サブメニュー表示フラグ (0:非表示, 1:表示)
+    lang_cursor: 0, // 言語設定カーソル位置 (0:日本語, 1:English)
 }

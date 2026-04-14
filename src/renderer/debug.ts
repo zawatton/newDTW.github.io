@@ -6,6 +6,7 @@
  */
 import { Gvar } from './variable'
 import { setLanguage, loadLanguage, getLanguage } from './i18n'
+import * as Func from './func/index'
 
 const debug = {
     // ========== Player Stats ==========
@@ -203,6 +204,45 @@ const debug = {
         const v = (Gvar as any)[`var_${num}`];
         console.log(`[debug] var_${num} = ${v}`);
         return v;
+    },
+
+    // ========== UI Render Helpers (for testing) ==========
+
+    /** Open system settings menu inside game loop. cursor: 0-7 (var_899) */
+    openSystemMenu(cursor: number = 0) {
+        Gvar.var_899 = cursor;
+        Gvar.var_900 = 0; Gvar.var_901 = 0; Gvar.var_902 = 0;
+        Gvar.var_903 = 0; Gvar.var_904 = 0; Gvar.var_905 = 0;
+        Gvar.lang_menu_open = 0;
+        Gvar.var_509 = 1;
+        // Fire-and-forget: jump into func193 which is the menu input loop
+        Func.func193().catch(e => console.error('[debug] func193 error:', e));
+        console.log(`[debug] system settings menu opened, cursor=${cursor}`);
+    },
+
+    /** Set the system menu cursor (var_899) directly while menu is open. */
+    setMenuCursor(cursor: number) {
+        Gvar.var_899 = cursor;
+        console.log(`[debug] var_899 = ${cursor}`);
+    },
+
+    /** Open language sub-menu directly. cursor: 0=ja, 1=en */
+    openLangMenu(cursor: number = 0) {
+        Gvar.var_509 = 1;
+        Gvar.var_899 = 7;
+        Gvar.lang_menu_open = 1;
+        Gvar.lang_cursor = cursor;
+        Func.funcLangConfig().catch(e => console.error('[debug] funcLangConfig error:', e));
+        console.log(`[debug] lang sub-menu opened, cursor=${cursor}`);
+    },
+
+    /** Close any open menu (back to game). */
+    closeMenu() {
+        Gvar.var_509 = 0;
+        Gvar.lang_menu_open = 0;
+        Gvar.var_900 = 0; Gvar.var_901 = 0; Gvar.var_902 = 0;
+        Gvar.var_903 = 0; Gvar.var_904 = 0; Gvar.var_905 = 0;
+        console.log(`[debug] menu closed`);
     },
 
     // ========== Help ==========
