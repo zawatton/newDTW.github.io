@@ -42,21 +42,75 @@ npm start          # launches Electron app
 
 **Requirements:** Node.js 18+, Python 3.10+ (for tools; needs Pillow + numpy)
 
+### Development Workflow
+
+For active development, use the hot-reload mode — webpack watches source files
+and Electron auto-reloads the window on bundle updates.
+
+```bash
+npm run dev        # webpack -w + Electron with hot reload
+```
+
+**Automated test scenarios** (Electron-based, takes screenshots to `tools/screenshots/`):
+
+```bash
+npm run test:smoke    # quick startup verification
+npm run test:menu     # system settings menu (cursor positions 0-7)
+npm run test:lang     # language submenu (Japanese/English)
+npm run test:i18n     # i18n rendering check (both languages)
+```
+
+**Generated documentation:**
+
+```bash
+npm run docs:vars     # → docs/variable_dictionary.md
+```
+
+### Debug API
+
+A runtime debug API is exposed at `window.debug` in the renderer process.
+Use DevTools or test scenarios to manipulate game state:
+
+```javascript
+debug.setLang('en')           // switch language
+debug.openSystemMenu(0)       // jump into system settings
+debug.godMode(true)           // invincibility
+debug.teleport(x, y)          // move player
+debug.help()                  // full API list
+```
+
+### Internationalization (i18n)
+
+newDTW supports multilingual UI through a lightweight i18n layer (`src/renderer/i18n.ts`):
+
+- Translation dictionaries live in `assets/lang/<code>.json` (currently `en.json`)
+- The `installAutoTranslate(Gvar, key)` hook auto-translates large message
+  properties (e.g., `effects_message` with 350+ assignments) without code changes
+- `Adap.dialog()` and the menu system pass strings through `t()` automatically
+
 ## Project Structure
 
 ```
 src/
+  main/
+    main.ts         Electron main process (window management, IPC, hot reload)
   renderer/
     adapter/        HSP-to-TS adapter layer (gcopy, picload, SpriteManager)
     func/           Main game logic (func000 - func1056)
+    menu/           Menu system (MenuController + per-menu configs)
     enemy/          Enemy AI and data
     stand/          Stand DISCs and items
     dungeon/        Dungeon generation and processing
+    i18n.ts         Internationalization core
+    debug.ts        Runtime debug API (window.debug.*)
+    variable.ts     Global game state (Gvar) — 7,600+ lines of HSP-derived state
     ...
 assets/
   sprites/          Individual sprite PNGs + manifest.json
   img/              Legacy sprite sheets
-tools/              Dev tools (sprite extraction, map themes, diff analysis)
+  lang/             i18n translation dictionaries (en.json, ...)
+tools/              Dev tools — see "Development Workflow" above
+docs/               Auto-generated documentation (variable dictionary, etc.)
 ```
 
 ## Contributing
@@ -81,7 +135,9 @@ python tools/add_map_theme.py my_tiles/ 27 "New Dungeon"
 
 - [ ] Custom version content (v0.14-0.16 features)
 - [ ] Parts 7 & 8 characters and Stands
-- [ ] Internationalization (English, Chinese, etc.)
+- [x] Internationalization scaffolding — Japanese / English (in-game language switcher)
+- [ ] Translation dictionary expansion (effects messages, dialogs)
+- [ ] Internationalization (Chinese, others)
 - [ ] Original BGM to resolve copyright
 
 ## Credits
