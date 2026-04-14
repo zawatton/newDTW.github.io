@@ -1,7 +1,33 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+const fs = require('fs');
+// 開発モード: 環境変数 NEWDTW_DEV=1 で有効化
+// public/bundle/main.js の変更を監視し、ウィンドウを自動リロードする
+const DEV_MODE = process.env.NEWDTW_DEV === '1';
 let colorPickerWindow; // カラーピッカーウィンドウの参照用
 let mainWindow; // ウィンドウオブジェクトをグローバルに保持
+/** 開発モード時のホットリロード設定: bundle変更でウィンドウ再ロード */
+function setupHotReload(win) {
+    const bundlePath = path.join(__dirname, '..', 'bundle', 'main.js');
+    let lastReload = 0;
+    fs.watch(bundlePath, { persistent: false }, (eventType) => {
+        if (eventType !== 'change')
+            return;
+        // 連続変更デバウンス (webpackは複数回書き込むことがある)
+        const now = Date.now();
+        if (now - lastReload < 1000)
+            return;
+        lastReload = now;
+        // 短い遅延で書き込み完了を待つ
+        setTimeout(() => {
+            if (win && !win.isDestroyed()) {
+                console.log('[DEV] bundle changed, reloading window');
+                win.webContents.reload();
+            }
+        }, 200);
+    });
+    console.log('[DEV] hot reload enabled (watching public/bundle/main.js)');
+}
 const createWindow = () => {
     const DESIGN_WIDTH = 340;
     const DESIGN_HEIGHT = 340;
@@ -24,8 +50,9 @@ const createWindow = () => {
     mainWindow.setMenuBarVisibility(false);
     mainWindow.once('ready-to-show', () => {
         mainWindow.show();
-        mainWindow.webContents.openDevTools({ mode: 'detach' });
         mainWindow.webContents.send('electron-ready-to-show');
+        if (DEV_MODE)
+            setupHotReload(mainWindow);
     });
     // ウィンドウの閉じるボタンが押された場合の処理
     mainWindow.on('close', (e) => {
