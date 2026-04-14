@@ -1,3 +1,9 @@
+/**
+ * enemy999 — No = 999 没敵の特殊能力
+ *
+ * (org原典: newDTW_enemy / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

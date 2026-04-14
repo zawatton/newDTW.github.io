@@ -1,3 +1,9 @@
+/**
+ * func120 — func120 BGM(ID978)選曲(吉良屋敷)
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

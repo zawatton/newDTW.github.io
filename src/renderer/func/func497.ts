@@ -1,3 +1,9 @@
+/**
+ * func497 — func497 スタンドの共鳴発動時のメッセージ表示
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

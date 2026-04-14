@@ -1,3 +1,9 @@
+/**
+ * func347 — func347 不明
+ *
+ * (org原典: newDTW_func3)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func347(this: any) {

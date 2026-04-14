@@ -1,3 +1,9 @@
+/**
+ * func636 — func636 ディアボロが攻撃or話しかけた時の動作処理
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

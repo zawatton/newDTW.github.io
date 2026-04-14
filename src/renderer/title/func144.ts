@@ -1,3 +1,9 @@
+/**
+ * func144 — func144 ログイン画面(タイトル画面/ログイン)動作処理
+ *
+ * (org原典: newDTW_login / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

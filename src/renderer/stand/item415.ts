@@ -1,3 +1,11 @@
+/**
+ * item415 — No = 415 タスクact1の発動処理
+ *
+ * Ver0.1401にて追加
+ *
+ * (org原典: newDTW_item(スタンドdisc))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

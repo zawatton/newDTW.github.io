@@ -1,3 +1,9 @@
+/**
+ * func532 — func532 GER 発動動作処理
+ *
+ * (org原典: newDTW_func5 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

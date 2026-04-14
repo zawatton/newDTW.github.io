@@ -1,3 +1,9 @@
+/**
+ * func386 — func386  床に落ちているアイテムを「消し炭」にする
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func386(this: any) {

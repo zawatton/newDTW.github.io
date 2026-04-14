@@ -1,3 +1,9 @@
+/**
+ * func103 — func103 ダンジョン内のテーマソング "0.mp3" 設定
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

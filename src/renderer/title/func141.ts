@@ -1,3 +1,9 @@
+/**
+ * func141 — func141 不明
+ *
+ * (org原典: newDTW_login / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

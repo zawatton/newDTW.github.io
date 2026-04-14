@@ -1,3 +1,9 @@
+/**
+ * func142 — func142 タイトル画面キー操作処理
+ *
+ * (org原典: newDTW_login / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

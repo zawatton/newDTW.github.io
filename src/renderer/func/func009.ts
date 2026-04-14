@@ -1,3 +1,11 @@
+/**
+ * func009 — func009 ゲーム基本動作フレーム処理
+ *
+ * newDTW のゲームの根幹となる処理
+ *
+ * (org原典: newDTW_mainframe / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func054 — func054 メニュー画面を開いた時の表示(道具、足元、状態、設定)
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

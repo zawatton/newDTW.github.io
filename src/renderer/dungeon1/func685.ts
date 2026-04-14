@@ -1,3 +1,11 @@
+/**
+ * func685 — func685 エンヤ婆を倒した時のメッセージ処理
+ *
+ * ダンジョン「ホテルの外」の各種設定
+ *
+ * (org原典: newDTW_dungeon1 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

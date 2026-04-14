@@ -1,3 +1,9 @@
+/**
+ * func630 — func630 ディアボロの試練の出現敵設定
+ *
+ * (org原典: newDTW_dungeon3 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

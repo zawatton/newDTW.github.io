@@ -1,3 +1,9 @@
+/**
+ * func324 — func324 不明
+ *
+ * (org原典: newDTW_func3)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'

@@ -1,3 +1,9 @@
+/**
+ * func064 — func064 足元確認呼び出し
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

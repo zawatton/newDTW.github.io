@@ -1,3 +1,9 @@
+/**
+ * func389 — func389 おそらくレアdiscの出現確率設定2 ??
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func389(this: any) {

@@ -1,3 +1,9 @@
+/**
+ * func420 — func420 各アイテムを使った際、item_listのIDに応じて効果を割り振り
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

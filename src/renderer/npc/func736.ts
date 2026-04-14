@@ -1,3 +1,9 @@
+/**
+ * func736 — func736 岸辺露伴に話しかけた時の初期化処理
+ *
+ * (org原典: newDTW_func7)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

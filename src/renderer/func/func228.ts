@@ -1,3 +1,9 @@
+/**
+ * func228 — func228 装備データ出力完了
+ *
+ * (org原典: newDTW_func2)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func228(this: any) {

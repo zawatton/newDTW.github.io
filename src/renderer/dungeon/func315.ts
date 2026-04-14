@@ -1,3 +1,11 @@
+/**
+ * func315 — func315 没特殊階層「ナチス実験施設」ボスはサンタナのダンジョンマップ
+ *
+ * ダンジョンで読み込まれるランダムマップ。
+ *
+ * (org原典: newDTW_dungeon_map)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

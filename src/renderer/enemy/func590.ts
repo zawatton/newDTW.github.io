@@ -1,3 +1,9 @@
+/**
+ * func590 — func590 不明
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

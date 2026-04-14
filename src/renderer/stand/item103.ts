@@ -1,3 +1,11 @@
+/**
+ * item103 — No = 103 エコーズAct3の発動能力
+ *
+ * 各スタンドの発動能力設定。
+ *
+ * (org原典: newDTW_item(スタンドdisc))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

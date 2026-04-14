@@ -1,3 +1,9 @@
+/**
+ * func247 — func247 ダンジョン関係
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

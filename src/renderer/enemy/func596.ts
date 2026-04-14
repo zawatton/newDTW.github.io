@@ -1,3 +1,9 @@
+/**
+ * func596 — func596 リゾットの刃物生成動作処理
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func434 — func434 アイテムリストを開いている時の配列初期化
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

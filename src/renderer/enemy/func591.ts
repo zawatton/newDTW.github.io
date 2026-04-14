@@ -1,3 +1,9 @@
+/**
+ * func591 — func591 記憶が戻ったウェザーの発動能力「鈍足のカタツムリの召喚」動作処理
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

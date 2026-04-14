@@ -1,3 +1,9 @@
+/**
+ * func082 — func082 効果音呼び出し関数2
+ *
+ * (org原典: newDTW_list_SE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

@@ -1,3 +1,9 @@
+/**
+ * func109 — func109 タイトル画面でのオープニング曲再生
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

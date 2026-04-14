@@ -1,3 +1,11 @@
+/**
+ * item410 — No = 410 不明disc(没ハイウェイスター。かつては射撃discだった?)の発動処理
+ *
+ * 各スタンドの発動能力設定。
+ *
+ * (org原典: newDTW_item(スタンドdisc))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

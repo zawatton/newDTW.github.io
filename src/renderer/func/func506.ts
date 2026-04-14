@@ -1,3 +1,9 @@
+/**
+ * func506 — func506 discの発動をした際に、修正値の減少させる(0の時はdisc消滅させる)関数
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

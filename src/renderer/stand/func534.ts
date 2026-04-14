@@ -1,3 +1,9 @@
+/**
+ * func534 — func534 ハイウェイ・トゥ・ヘルの発動処理(移動中の自動発動)
+ *
+ * (org原典: newDTW_func5 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

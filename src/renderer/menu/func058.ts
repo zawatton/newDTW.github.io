@@ -1,3 +1,9 @@
+/**
+ * func058 — func058 メニュー画面の設定からいける"資料"の表示
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

@@ -1,3 +1,9 @@
+/**
+ * func772 — func772 ムーディーブルース以外でアイテムを送る手段(サウェッジガーデン？アバッキオ？)
+ *
+ * (org原典: newDTW_func7)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

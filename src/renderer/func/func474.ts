@@ -1,3 +1,9 @@
+/**
+ * func474 — func474 不明
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

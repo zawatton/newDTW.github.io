@@ -1,3 +1,9 @@
+/**
+ * func099 — func099 SE(ID142)選曲
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

@@ -1,3 +1,9 @@
+/**
+ * func401 — func401 射撃discを拾った際、同じものを既に所持していた時にまとめる動作処理
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

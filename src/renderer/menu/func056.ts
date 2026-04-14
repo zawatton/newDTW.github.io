@@ -1,3 +1,9 @@
+/**
+ * func056 — func056 メニュー画面の"設定"の表示 (マップON、履歴、資料、システム、終了)
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

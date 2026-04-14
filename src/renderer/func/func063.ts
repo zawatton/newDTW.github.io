@@ -1,3 +1,9 @@
+/**
+ * func063 — func063 ダンジョン内の階段機能
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

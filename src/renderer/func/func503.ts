@@ -1,3 +1,9 @@
+/**
+ * func503 — func503 未識別状態のアイテムの説明を見た時のメッセージ処理
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func503(this: any) {

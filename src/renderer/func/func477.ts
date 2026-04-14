@@ -1,3 +1,9 @@
+/**
+ * func477 — func477 アイテムを "拾う" を選択した時に所持アイテムが20個以上になる際の処理
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

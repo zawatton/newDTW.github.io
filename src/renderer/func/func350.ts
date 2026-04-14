@@ -1,3 +1,9 @@
+/**
+ * func350 — func350 おそらく射撃攻撃のモーション設定
+ *
+ * (org原典: newDTW_func3)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

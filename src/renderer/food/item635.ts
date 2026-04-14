@@ -1,3 +1,9 @@
+/**
+ * item635 — No = 635 アイテム「焦げた料理」を使用した時の効果
+ *
+ * (org原典: newDTW_item(食料))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

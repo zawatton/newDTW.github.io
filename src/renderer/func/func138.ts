@@ -1,3 +1,11 @@
+/**
+ * func138 — func138 読み込んだ"img_3.gif"ファイルからロード時の"石仮面"、"進行バー"の座標指定処理
+ *
+ * newDTW のゲームの根幹となる処理
+ *
+ * (org原典: newDTW_mainframe)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

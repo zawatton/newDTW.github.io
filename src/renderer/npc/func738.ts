@@ -1,3 +1,9 @@
+/**
+ * func738 — func738 ダンジョンをうろついているイギーに話しかけた際のメッセージ処理
+ *
+ * (org原典: newDTW_func7)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func638 — func638 敵を攻撃した時のダメージ計算
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

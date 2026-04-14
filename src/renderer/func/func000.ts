@@ -1,3 +1,12 @@
+/**
+ * func000 — IPC Renderer
+ *
+ * Electronアプリケーションで使用されるIPC Renderer という API を利用するためにインポート宣言。
+ * IPC Renderer は、 Electron アプリケーションのメインプロセスとの通信を行うために使用される。
+ *
+ * (org原典: newDTW_mainframe)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

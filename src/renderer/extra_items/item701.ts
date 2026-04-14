@@ -1,3 +1,9 @@
+/**
+ * item701 — No = 701 没アイテム「ソフト・マシーンの発動によって罠にした敵」を使用した時の効果
+ *
+ * (org原典: newDTW_item(その他))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

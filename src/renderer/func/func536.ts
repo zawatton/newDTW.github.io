@@ -1,3 +1,9 @@
+/**
+ * func536 — func536 不明
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func536(this: any) {

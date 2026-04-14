@@ -1,3 +1,9 @@
+/**
+ * func072 — func072 ダンジョンに長居し過ぎた際の神砂嵐
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

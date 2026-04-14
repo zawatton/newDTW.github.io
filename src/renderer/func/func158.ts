@@ -1,3 +1,9 @@
+/**
+ * func158 — func158 オープニング戦キャラ配置処理
+ *
+ * (org原典: newDTW_events / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

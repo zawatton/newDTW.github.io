@@ -1,3 +1,9 @@
+/**
+ * func060 — func060 ダンジョンの階段を先に進んだ時の動作処理
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

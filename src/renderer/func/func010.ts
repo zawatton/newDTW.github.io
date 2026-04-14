@@ -1,3 +1,9 @@
+/**
+ * func010 — func010 Cキーを押した際のその場所での旋回処理
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

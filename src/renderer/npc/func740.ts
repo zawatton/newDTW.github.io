@@ -1,3 +1,9 @@
+/**
+ * func740 — func740 イギー関係
+ *
+ * (org原典: newDTW_func7)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

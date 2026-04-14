@@ -1,3 +1,9 @@
+/**
+ * func639 — func639 敵の回避処理
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func639(this: any) {

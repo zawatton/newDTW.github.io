@@ -1,3 +1,12 @@
+/**
+ * classes — classes
+ *
+ * クラスはオブジェクト指向言語において重要な概念である。
+ * しかし、言語によってはクラスという概念が無い事がある。例えば [[id:018697f2-9d28-74a8-af6d-151c19a4ea32][HSP言語]]
+ *
+ * (org原典: newDTW_classes)
+ * // @org-injected
+ */
 class CharactorInfo {
     Var0: any;  // belongings_item_list:所持アイテムを格納する配列
     Var1: any;

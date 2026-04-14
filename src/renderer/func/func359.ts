@@ -1,3 +1,9 @@
+/**
+ * func359 — fun359 敵図鑑の並び処理
+ *
+ * (org原典: newDTW_func3)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

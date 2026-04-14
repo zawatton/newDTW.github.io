@@ -1,3 +1,9 @@
+/**
+ * func584 — func584 射撃攻撃を受けた時の回避動作処理(弾丸を止める、燃え尽きる等)
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

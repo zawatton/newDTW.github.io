@@ -1,3 +1,9 @@
+/**
+ * func062 — func062 ダンジョン開始時にアイテム欄へ「ネアポリスのピッツァ」を追加
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

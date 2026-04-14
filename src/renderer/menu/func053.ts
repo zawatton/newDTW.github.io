@@ -1,3 +1,9 @@
+/**
+ * func053 — func053 メニュー画面呼び出し
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

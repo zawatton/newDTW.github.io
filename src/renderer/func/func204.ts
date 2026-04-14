@@ -1,3 +1,9 @@
+/**
+ * func204 — func204 メッセージ色(メニュー/設定/システム)の設定表示
+ *
+ * (org原典: newDTW_func2)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

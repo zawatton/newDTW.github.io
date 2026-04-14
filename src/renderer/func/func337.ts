@@ -1,3 +1,9 @@
+/**
+ * func337 — func337 メッセージ処理関係呼び出し
+ *
+ * (org原典: newDTW_func3)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

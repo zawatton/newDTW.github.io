@@ -1,3 +1,11 @@
+/**
+ * func292 — func292 ヴェネチアホテル+亀マップ配置処理(亀の成長4)
+ *
+ * ヴェネチアホテルや亀、酒場の設定
+ *
+ * (org原典: newDTW_dungeon0 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

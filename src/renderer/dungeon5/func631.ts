@@ -1,3 +1,9 @@
+/**
+ * func631 — func631 鉄の牢獄のボス以外の出現敵設定
+ *
+ * (org原典: newDTW_dungeon5 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

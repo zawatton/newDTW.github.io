@@ -1,3 +1,11 @@
+/**
+ * func633 — func633 承太郎を倒した時のメッセージ処理 (仕掛中)
+ *
+ * まだ何も設定していない。
+ *
+ * (org原典: newDTW_dungeon5 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

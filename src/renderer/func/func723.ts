@@ -1,3 +1,9 @@
+/**
+ * func723 — func723 不明
+ *
+ * (org原典: newDTW_func7)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func723(this: any) {

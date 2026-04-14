@@ -1,3 +1,9 @@
+/**
+ * func432 — func432 装備disc、射撃discの合成数や修正値、数などの為の配列か?
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func234 — func234 セーブして終了処理
+ *
+ * (org原典: newDTW_func2)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

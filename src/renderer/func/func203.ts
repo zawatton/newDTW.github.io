@@ -1,3 +1,9 @@
+/**
+ * func203 — func203 メッセージ色(メニュー/設定/システム)の設定動作処理
+ *
+ * (org原典: newDTW_func2)
+ * // @org-injected
+ */
 const { ipcRenderer } = require('electron');
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'

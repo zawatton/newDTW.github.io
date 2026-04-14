@@ -1,3 +1,9 @@
+/**
+ * func379 — func379 不明
+ *
+ * (org原典: newDTW_func3)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func379(this: any) {

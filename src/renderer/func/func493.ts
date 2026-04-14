@@ -1,3 +1,9 @@
+/**
+ * func493 — func493 装備disc能力値の設定
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func493(this: any) {

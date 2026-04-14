@@ -1,3 +1,9 @@
+/**
+ * func475 — func475 ペットショップのdisc??
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func475(this: any) {

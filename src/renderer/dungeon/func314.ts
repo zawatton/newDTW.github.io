@@ -1,3 +1,11 @@
+/**
+ * func314 — func314 没特殊階層「ビンの中」ボスは毒グモのダンジョンマップ
+ *
+ * ダンジョンで読み込まれるランダムマップ。
+ *
+ * (org原典: newDTW_dungeon_map)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

@@ -1,3 +1,9 @@
+/**
+ * func741 — func741 イギー関係(砂DIOを仕込む)
+ *
+ * (org原典: newDTW_func7)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

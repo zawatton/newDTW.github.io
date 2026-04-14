@@ -1,3 +1,9 @@
+/**
+ * func457 — func457 体力を回復させてくれと選択した時、体力回復後の状態異常回復の動作処理
+ *
+ * (org原典: newDTW_item(その他))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

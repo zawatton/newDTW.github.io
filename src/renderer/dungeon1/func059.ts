@@ -1,3 +1,11 @@
+/**
+ * func059 — func059 ホテルの外の最終フロア、エンヤホテル以外確定処理
+ *
+ * ダンジョン「ホテルの外」の各種設定
+ *
+ * (org原典: newDTW_dungeon1 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

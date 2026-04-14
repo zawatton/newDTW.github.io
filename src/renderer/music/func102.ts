@@ -1,3 +1,9 @@
+/**
+ * func102 — func102 各ボリューム調整キーを押した時の表示
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

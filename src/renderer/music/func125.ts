@@ -1,3 +1,9 @@
+/**
+ * func125 — func125 BGM(ID993)選曲
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

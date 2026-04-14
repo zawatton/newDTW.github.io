@@ -1,3 +1,9 @@
+/**
+ * func327 — func327 スーパーフライの鉄塔描写処理
+ *
+ * (org原典: newDTW_func3)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

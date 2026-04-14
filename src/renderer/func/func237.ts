@@ -1,3 +1,9 @@
+/**
+ * func237 — func237 ダンジョン攻略中に冒険を諦める関数2
+ *
+ * (org原典: newDTW_func2)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

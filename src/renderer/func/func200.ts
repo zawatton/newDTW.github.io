@@ -1,3 +1,9 @@
+/**
+ * func200 — func200 マップの色設定
+ *
+ * (org原典: newDTW_func2)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func200(this: any) {

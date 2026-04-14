@@ -1,3 +1,9 @@
+/**
+ * func088 — func088 BGM下限設定処理
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

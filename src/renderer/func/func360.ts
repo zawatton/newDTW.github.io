@@ -1,3 +1,9 @@
+/**
+ * func360 — func360 敵図鑑機能
+ *
+ * (org原典: newDTW_func3)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func360(this: any) {

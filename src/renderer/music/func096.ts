@@ -1,3 +1,9 @@
+/**
+ * func096 — func096 効果音設定?
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

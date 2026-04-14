@@ -1,3 +1,9 @@
+/**
+ * func070 — func070 アイテムの表示用アイコン座標指定
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

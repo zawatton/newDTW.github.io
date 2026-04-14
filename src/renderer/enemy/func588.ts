@@ -1,3 +1,9 @@
+/**
+ * func588 — func588 億泰の空間移動動作処理
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

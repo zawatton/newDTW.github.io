@@ -1,3 +1,9 @@
+/**
+ * func086 — func086 BGM上限設定処理 (最大値:150)
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

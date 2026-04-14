@@ -1,3 +1,11 @@
+/**
+ * variable — variable
+ *
+ * これはTypeScriptのコードで、__awaiterという関数を定義しています。この関数はPromiseを生成し、非同期のコードを同期的に扱うことができます。
+ *
+ * (org原典: newDTW_variable)
+ * // @org-injected
+ */
 export interface GlobalVars {
     isColorPickerShown: boolean, // カラーピッカーが表示されているかどうかのフラグ
     desiredWidth?: number, // index.html に記述。F12でスケール変更

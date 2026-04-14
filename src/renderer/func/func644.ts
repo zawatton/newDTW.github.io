@@ -1,3 +1,9 @@
+/**
+ * func644 — func644 No = 100 スタープラチナ、No = 398 スタープラチナ・ザ・ワールドのDISCを攻撃装備して攻撃した際、敵に回避された時の動作処理
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,11 @@
+/**
+ * func296 — func296 不明
+ *
+ * ダンジョンで読み込まれるランダムマップ。
+ *
+ * (org原典: newDTW_dungeon_map)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

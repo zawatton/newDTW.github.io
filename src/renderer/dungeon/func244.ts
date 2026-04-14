@@ -1,3 +1,9 @@
+/**
+ * func244 — func244 ダンジョンマップ選択関数(IDによって割り振り)
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

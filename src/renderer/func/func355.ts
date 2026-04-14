@@ -1,3 +1,9 @@
+/**
+ * func355 — func355 不明
+ *
+ * (org原典: newDTW_func3)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func355(this: any) {

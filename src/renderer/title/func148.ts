@@ -1,3 +1,9 @@
+/**
+ * func148 — func148 ボス日記選択画面(タイトル画面/ログイン画面/ボス日記選択画面)の表示
+ *
+ * (org原典: newDTW_login / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

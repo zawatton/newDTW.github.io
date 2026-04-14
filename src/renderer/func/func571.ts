@@ -1,3 +1,9 @@
+/**
+ * func571 — func571 不明
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func571(this: any) {

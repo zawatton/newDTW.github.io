@@ -1,3 +1,9 @@
+/**
+ * func576 — func576 敵特殊行動発動フラグ処理
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

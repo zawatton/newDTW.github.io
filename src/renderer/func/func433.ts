@@ -1,3 +1,9 @@
+/**
+ * func433 — func433 アイテム配列の "数" 増減？関数
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

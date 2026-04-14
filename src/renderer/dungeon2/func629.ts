@@ -1,3 +1,9 @@
+/**
+ * func629 — func629 レクイエムの大迷宮の出現敵設定
+ *
+ * (org原典: newDTW_dungeon2 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

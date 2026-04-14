@@ -1,3 +1,9 @@
+/**
+ * func121 — func121 BGM(ID977)選曲(杜王町埠頭)
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

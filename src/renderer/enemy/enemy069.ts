@@ -1,3 +1,9 @@
+/**
+ * enemy069 — No = 69 ブラフォードの特殊能力
+ *
+ * (org原典: newDTW_enemy / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

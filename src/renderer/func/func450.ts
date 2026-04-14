@@ -1,3 +1,9 @@
+/**
+ * func450 — func450 ジャッジメントの問に答え、ジャッジメントが去る時の動作処理
+ *
+ * (org原典: newDTW_item(その他))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func325 — func325 幻覚の迷宮でハーミットパープルを発動したときの処理
+ *
+ * (org原典: newDTW_func3 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

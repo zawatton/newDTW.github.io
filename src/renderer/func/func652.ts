@@ -1,3 +1,9 @@
+/**
+ * func652 — func652 No = 113 クラッシュのDISCを攻撃装備している時の水属性媒体から遠隔攻撃処理
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

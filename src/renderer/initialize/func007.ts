@@ -1,3 +1,11 @@
+/**
+ * func007 — func007 配列初期化処理
+ *
+ * newDTW のゲームの根幹となる処理
+ *
+ * (org原典: newDTW_mainframe / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func113 — func113 ヴェネチアホテルのBGMを選曲
+ *
+ * (org原典: newDTW_audio / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

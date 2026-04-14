@@ -1,3 +1,9 @@
+/**
+ * func114b — func114b 酒場の選曲(BGM "")
+ *
+ * (org原典: newDTW_audio / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

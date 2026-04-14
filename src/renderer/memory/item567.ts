@@ -1,3 +1,9 @@
+/**
+ * item567 — No = 567 アヴドゥルのdiscの効果
+ *
+ * (org原典: newDTW_item(記憶disc))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 // No = 567 アヴドゥルのdiscの効果

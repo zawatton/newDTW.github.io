@@ -1,3 +1,9 @@
+/**
+ * item578 — No = 578 サンドマンのdiscの効果
+ *
+ * (org原典: newDTW_item(記憶disc))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

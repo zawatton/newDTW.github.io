@@ -1,3 +1,9 @@
+/**
+ * func431 — func431 BGM選曲関数呼び出し
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

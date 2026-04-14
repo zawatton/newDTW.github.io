@@ -1,3 +1,9 @@
+/**
+ * func583 — func583 敵の射撃攻撃モーション処理(ドット絵座標設定等)
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func583(this: any) {

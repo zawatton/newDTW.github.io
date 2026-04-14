@@ -1,3 +1,9 @@
+/**
+ * func523 — func523 disc同士の合成関数(クレイジーDの発動能力)2
+ *
+ * (org原典: newDTW_func5 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

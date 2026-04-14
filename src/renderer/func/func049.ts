@@ -1,3 +1,9 @@
+/**
+ * func049 — func049 メッセージBOXへメッセージ設定処理
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

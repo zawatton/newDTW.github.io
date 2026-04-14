@@ -1,3 +1,9 @@
+/**
+ * func513 — func513 射撃discヘブンズドアーの発動時メッセージ
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

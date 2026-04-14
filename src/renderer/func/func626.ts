@@ -1,3 +1,9 @@
+/**
+ * func626 — func626 敵リスト
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func626(this: any) {

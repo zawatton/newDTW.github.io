@@ -1,3 +1,9 @@
+/**
+ * func459 — func459 道具画面(所持数0)の表示(メニュー画面/道具)
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

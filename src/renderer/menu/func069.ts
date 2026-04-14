@@ -1,3 +1,9 @@
+/**
+ * func069 — func069 現在装備しているdisc表示欄の設定？
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

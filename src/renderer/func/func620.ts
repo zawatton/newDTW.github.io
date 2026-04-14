@@ -1,3 +1,9 @@
+/**
+ * func620 — func620 各敵の特殊能力(ディアボロへの攻撃)割り振り処理
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Enemy from '../enemy/index'

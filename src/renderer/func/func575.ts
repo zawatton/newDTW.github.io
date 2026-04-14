@@ -1,3 +1,11 @@
+/**
+ * func575 — func575 ディアボロと敵のターン交代処理?(敵の位置座標処理)
+ *
+ * ここがおかしくなると、ディアボロの行動時に敵が攻撃してくる。敵が瞬間移動する(敵の位置座標の処理をしている?)
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

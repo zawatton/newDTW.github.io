@@ -1,3 +1,9 @@
+/**
+ * func385 — func385 各ダンジョンごとの出現アイテム&出現確率管理(合成の空き容量もここで設定している)
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

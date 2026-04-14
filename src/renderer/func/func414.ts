@@ -1,3 +1,9 @@
+/**
+ * func414 — func414 ヤバいもの関係の容量設定？？
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

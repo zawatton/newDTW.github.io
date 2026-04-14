@@ -1,3 +1,9 @@
+/**
+ * func015 — func015 ディアボロの移動処理(座標計算処理)
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

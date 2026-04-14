@@ -1,3 +1,9 @@
+/**
+ * func670 — func670 敵チリペッパーが水上へ移動したときの消滅処理
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

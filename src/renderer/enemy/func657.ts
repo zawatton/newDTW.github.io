@@ -1,3 +1,9 @@
+/**
+ * func657 — func657 敵 玉美へ攻撃した時の罪悪感処理
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

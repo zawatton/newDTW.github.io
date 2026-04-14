@@ -1,3 +1,9 @@
+/**
+ * func246 — func246 ダンジョンごとのモンスターハウス発生率設定処理
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

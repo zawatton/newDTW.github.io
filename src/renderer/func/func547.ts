@@ -1,3 +1,9 @@
+/**
+ * func547 — func547 敵が罠(キッスのシール、ソフトマシーンの仕込み)を踏んだ時の動作処理
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

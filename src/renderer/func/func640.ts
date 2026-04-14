@@ -1,3 +1,9 @@
+/**
+ * func640 — func640 不明
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func640(this: any) {

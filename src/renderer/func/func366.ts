@@ -1,3 +1,9 @@
+/**
+ * func366 — func366 敵図鑑(各敵の分類)
+ *
+ * (org原典: newDTW_func3)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

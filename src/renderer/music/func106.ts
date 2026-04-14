@@ -1,3 +1,9 @@
+/**
+ * func106 — func106 BGM選曲呼び出し割り振り
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

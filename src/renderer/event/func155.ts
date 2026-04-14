@@ -1,3 +1,9 @@
+/**
+ * func155 — func155 ディアボロの試練開放イベント(岸辺露伴がヤギを追いかけるイベント)
+ *
+ * (org原典: newDTW_events / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

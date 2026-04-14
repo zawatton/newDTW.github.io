@@ -1,3 +1,9 @@
+/**
+ * func076 — func076 各ダンジョンの絵文字読込処理
+ *
+ * (org原典: newDTW_dungeon_main / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

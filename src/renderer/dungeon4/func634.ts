@@ -1,3 +1,9 @@
+/**
+ * func634 — func634 一巡後の世界のボス以外の出現敵設定
+ *
+ * (org原典: newDTW_dungeon4 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

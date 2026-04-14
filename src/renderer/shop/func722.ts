@@ -1,3 +1,9 @@
+/**
+ * func722 — func722 アイテムを所持した状態で店から出た際の動作処理(泥棒状態認定)
+ *
+ * (org原典: newDTW_func7)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

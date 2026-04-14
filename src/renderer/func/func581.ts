@@ -1,3 +1,9 @@
+/**
+ * func581 — func581 各敵の能力動作処理設定
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

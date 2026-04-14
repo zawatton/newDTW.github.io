@@ -1,3 +1,11 @@
+/**
+ * func628 — func628 ホテルの外のボス以外の出現敵設定
+ *
+ * ダンジョン「ホテルの外」の各種設定
+ *
+ * (org原典: newDTW_dungeon1 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

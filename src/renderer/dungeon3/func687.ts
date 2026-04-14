@@ -1,3 +1,9 @@
+/**
+ * func687 — func687 ウンガロを倒した時のメッセージ処理
+ *
+ * (org原典: newDTW_dungeon3 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

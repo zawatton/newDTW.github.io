@@ -1,3 +1,9 @@
+/**
+ * func149 — func149 ボス日記消去選択時の表示
+ *
+ * (org原典: newDTW_login / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

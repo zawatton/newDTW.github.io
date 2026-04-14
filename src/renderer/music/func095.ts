@@ -1,3 +1,9 @@
+/**
+ * func095 — func095 敵の攻撃時効果音設定
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

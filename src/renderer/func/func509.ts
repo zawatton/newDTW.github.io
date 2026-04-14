@@ -1,3 +1,9 @@
+/**
+ * func509 — func509 discの発動をしようとして、発動できない場所の時の動作処理
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

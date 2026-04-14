@@ -1,3 +1,11 @@
+/**
+ * func067 — func067 亀のジッパーでアイテムを捨てる動作処理
+ *
+ * ヴェネチアホテルや亀、酒場の設定
+ *
+ * (org原典: newDTW_dungeon0 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

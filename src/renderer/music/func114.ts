@@ -1,3 +1,9 @@
+/**
+ * func114 — func114 亀の中の選曲(BGM "20th Century Boy")
+ *
+ * (org原典: newDTW_audio / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func653 — func653 No = 118 ダイバーダウンのDISCを攻撃装備している時の壁属性媒体から遠隔装備
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

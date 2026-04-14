@@ -1,3 +1,9 @@
+/**
+ * item634 — No = 634 アイテム「プリン」を使用した時の効果
+ *
+ * (org原典: newDTW_item(食料))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

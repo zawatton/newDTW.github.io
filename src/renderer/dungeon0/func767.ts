@@ -1,3 +1,9 @@
+/**
+ * func767 — func767 ディアボロの試練の入り口(フラグ前は壁)へ話しかけた時の動作処理
+ *
+ * (org原典: newDTW_func7)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func048 — func048 メッセージBOX生成処理
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

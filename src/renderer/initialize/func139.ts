@@ -1,3 +1,11 @@
+/**
+ * func139 — func139 データ読込み処理(00.datファル、01 ~ 03.datセーブデータ解析処理)
+ *
+ * newDTW のゲームの根幹となる処理
+ *
+ * (org原典: newDTW_mainframe)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

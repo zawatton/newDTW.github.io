@@ -1,3 +1,9 @@
+/**
+ * func447 — func447 魔法のランプを使用した際の動作処理
+ *
+ * (org原典: newDTW_item(その他))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

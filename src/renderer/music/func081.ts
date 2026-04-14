@@ -1,3 +1,9 @@
+/**
+ * func081 — 関数宣言
+ *
+ * (org原典: newDTW_list_SE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

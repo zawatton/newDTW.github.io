@@ -1,3 +1,9 @@
+/**
+ * func083 — func083 効果音上限設定処理 (最大値:137)
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func451 — func451 願いの数を増やしてくれと選択した時の動作処理
+ *
+ * (org原典: newDTW_item(その他))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

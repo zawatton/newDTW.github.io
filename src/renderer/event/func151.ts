@@ -1,3 +1,9 @@
+/**
+ * func151 — func151 初めてヴェネチアホテルへ訪れた際のディアボロの呟き
+ *
+ * (org原典: newDTW_events / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

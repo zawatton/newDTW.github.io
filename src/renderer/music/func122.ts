@@ -1,3 +1,9 @@
+/**
+ * func122 — func122 BGM(ID999)選曲(GERの発動で帰還する際のBGM)
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

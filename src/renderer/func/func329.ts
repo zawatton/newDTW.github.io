@@ -1,3 +1,9 @@
+/**
+ * func329 — func329 画面全体に黒いブラインドをかける処理
+ *
+ * (org原典: newDTW_func3)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 // 画面全体に黒いブラインドをかける処理

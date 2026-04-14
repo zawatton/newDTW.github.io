@@ -1,3 +1,9 @@
+/**
+ * func533 — func533 ムーディーブルースの発動によってアイテムを倉庫に送る動作処理
+ *
+ * (org原典: newDTW_func5 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

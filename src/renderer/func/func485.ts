@@ -1,3 +1,9 @@
+/**
+ * func485 — func485 未識別アイテムの名前入力機能？
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func485(this: any) {

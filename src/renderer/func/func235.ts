@@ -1,3 +1,9 @@
+/**
+ * func235 — func235 不明
+ *
+ * (org原典: newDTW_func2)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Class from '../classes'

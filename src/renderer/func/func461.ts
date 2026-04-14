@@ -1,3 +1,9 @@
+/**
+ * func461 — func461 道具画面での動作処理 (アイテム表示の並び等)
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

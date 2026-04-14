@@ -1,3 +1,9 @@
+/**
+ * func084 — func084 効果音デフォルト音量設定
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

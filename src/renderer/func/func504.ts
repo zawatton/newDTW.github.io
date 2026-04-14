@@ -1,3 +1,9 @@
+/**
+ * func504 — func504 n.datファイルへ書き込む内容
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func504(this: any) {

@@ -1,3 +1,9 @@
+/**
+ * func467 — func467 Shiftキーを押してアイテムを整理する時の関数
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

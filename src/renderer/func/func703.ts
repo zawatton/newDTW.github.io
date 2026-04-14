@@ -1,3 +1,9 @@
+/**
+ * func703 — func703 ハーミットパープルを発動後、地図作成を防がれた相手を倒した時の処理
+ *
+ * (org原典: newDTW_func7 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'

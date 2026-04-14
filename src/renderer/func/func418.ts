@@ -1,3 +1,9 @@
+/**
+ * func418 — func418 遠投状態(アヌビス神装備)でアイテムを投げた時の動作処理
+ *
+ * (org原典: newDTW_func4 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,11 @@
+/**
+ * func160b — func160b 酒場へ追加するNPCの設定処理(ロッコ・バロッコ所長)
+ *
+ * ヴェネチアホテルや亀、酒場の設定
+ *
+ * (org原典: newDTW_dungeon0 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 

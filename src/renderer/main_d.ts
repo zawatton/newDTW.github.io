@@ -1,3 +1,11 @@
+/**
+ * main_d — ゲームメイン処理読み込み
+ *
+ * 最後に、ページが完全に読み込まれた後にfunc004関数を呼び出している。
+ *
+ * (org原典: newDTW_main_d)
+ * // @org-injected
+ */
 import { Gvar } from './variable'
 import * as Adap from './adapter/index'
 import * as Func from './func/index'

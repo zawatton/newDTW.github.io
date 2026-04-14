@@ -1,3 +1,9 @@
+/**
+ * func507 — func507 スタンドパワーが力尽きて消滅した時の表示
+ *
+ * (org原典: newDTW_func5)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

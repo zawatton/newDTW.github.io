@@ -1,3 +1,9 @@
+/**
+ * func526 — func526 ボーイⅡマンの発動能力2
+ *
+ * (org原典: newDTW_func5 / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func651 — func651 攻撃動作処理
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

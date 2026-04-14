@@ -1,3 +1,9 @@
+/**
+ * func396 — func396 床のアイテム表示処理
+ *
+ * (org原典: newDTW_func3)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

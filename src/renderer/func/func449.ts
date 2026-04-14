@@ -1,3 +1,9 @@
+/**
+ * func449 — func449 魔法のランプでジャッジメントを召喚した時のメッセージ
+ *
+ * (org原典: newDTW_item(その他))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func449(this: any) {

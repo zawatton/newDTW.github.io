@@ -1,3 +1,9 @@
+/**
+ * func468 — func468 アイテムを整理した時の配列入れ替え関数
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func468(this: any) {

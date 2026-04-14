@@ -1,3 +1,11 @@
+/**
+ * func293 — func293 ダンジョンマップ初期化処理(+ヴェネチアホテル)
+ *
+ * ダンジョンで読み込まれるランダムマップ。
+ *
+ * (org原典: newDTW_dungeon_map)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

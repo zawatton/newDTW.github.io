@@ -1,3 +1,9 @@
+/**
+ * func622 — func622 不明
+ *
+ * (org原典: newDTW_func6)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func622(this: any) {

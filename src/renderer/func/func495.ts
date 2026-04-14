@@ -1,3 +1,9 @@
+/**
+ * func495 — func495 装備disc関係??
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func495(this: any) {

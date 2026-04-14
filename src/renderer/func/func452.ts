@@ -1,3 +1,9 @@
+/**
+ * func452 — func452 お金持ちになりたいと選択した時の動作処理
+ *
+ * (org原典: newDTW_item(その他))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

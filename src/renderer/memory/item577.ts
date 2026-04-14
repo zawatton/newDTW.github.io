@@ -1,3 +1,9 @@
+/**
+ * item577 — No = 577 ミキタカのdiscの効果
+ *
+ * (org原典: newDTW_item(記憶disc))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

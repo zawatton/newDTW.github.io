@@ -1,3 +1,9 @@
+/**
+ * func458 — func458 恐竜の化石に関するもの(一巡後の世界のみで効果があるようになっている)
+ *
+ * (org原典: newDTW_item(その他))
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func458(this: any) {

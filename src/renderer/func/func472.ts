@@ -1,3 +1,9 @@
+/**
+ * func472 — func472 グッチョの死体にピッツァ&トマトチーズのサラダを入れた時の動作処理
+ *
+ * (org原典: newDTW_func4)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

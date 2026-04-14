@@ -1,3 +1,9 @@
+/**
+ * enemy9999 — No = 9999 没敵(ジョナサン,ジョセフ等の波紋使い?)の特殊能力
+ *
+ * (org原典: newDTW_enemy / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

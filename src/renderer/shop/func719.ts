@@ -1,3 +1,9 @@
+/**
+ * func719 — func719 トニオさんの店で購入する際に、所持金が足らない時のメッセージ処理
+ *
+ * (org原典: newDTW_func7)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

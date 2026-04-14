@@ -1,3 +1,9 @@
+/**
+ * func150 — func150 オープニング (5部最終決戦 ジョルノ達との戦いの場面)
+ *
+ * (org原典: newDTW_events / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

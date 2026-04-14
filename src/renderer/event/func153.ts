@@ -1,3 +1,9 @@
+/**
+ * func153 — func153 ホテルの外初クリア後(エンヤホテル)、ヴェネチアホテルに戻った際のイベント
+ *
+ * (org原典: newDTW_events / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

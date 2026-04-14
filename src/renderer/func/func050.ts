@@ -1,3 +1,9 @@
+/**
+ * func050 — func050 メッセージを上へゆっくりとスクロール (ページ切り替え) なくても切り替えはできるが、文面の切り替えが急になる。
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

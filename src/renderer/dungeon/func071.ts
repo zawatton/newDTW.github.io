@@ -1,3 +1,9 @@
+/**
+ * func071 — func071 満腹度減少時のメッセージ処理
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

@@ -1,3 +1,9 @@
+/**
+ * func073 — func073 不明 配列格納
+ *
+ * (org原典: newDTW_func0)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 async function func073(this: any) {

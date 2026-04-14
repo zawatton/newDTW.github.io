@@ -1,3 +1,9 @@
+/**
+ * func105 — func105 discを装備した際のBGM選曲
+ *
+ * (org原典: newDTW_audio)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'

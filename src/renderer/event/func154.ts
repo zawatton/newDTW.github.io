@@ -1,3 +1,9 @@
+/**
+ * func154 — func154 レクイエムの大迷宮初クリア後、ヴェネチアホテルに戻った際のイベント
+ *
+ * (org原典: newDTW_events / DONE)
+ * // @org-injected
+ */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
