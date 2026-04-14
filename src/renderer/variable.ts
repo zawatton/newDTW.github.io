@@ -144,24 +144,24 @@ export interface GlobalVars {
     var_63 :any,
     var_64 :any,
     var_65 :any,
-    var_66 :any,
-    var_67 :any,
+    var_66 :any, // ディアボロ(プレイヤー)の現在位置 X座標 (マップグリッド単位)
+    var_67 :any, // ディアボロ(プレイヤー)の現在位置 Y座標 (マップグリッド単位)
     var_68 :any,
     var_69 :any,
     var_70 :any,
-    var_71 :any,
+    var_71 :any, // マップグリッド[X][Y] = セル内容 (壁/床/罠/階段等の地形種別)
     var_72 :any,
     var_73 :any,
     var_74 :any,
     var_75 :any,
     var_76 :any,
     var_77 :any,
-    var_78 :any,
+    var_78 :any, // 床上アイテムデータ配列 (位置と種類)
     var_79 :any,
     var_80 :any,
     var_81 :any,
-    var_82 :any,
-    var_83 :any,
+    var_82 :any, // 敵占有グリッド[X][Y] = 0:空き / 1以上:敵あり (衝突判定用)
+    var_83 :any, // 敵キャラデータ配列 [敵ID].VarN: Var0=種類, Var1=X座標, Var2=Y座標, Var10=部屋ID, Var11=向き等
     var_84 :any,
     var_85 :any,
     var_86 :any,
@@ -277,9 +277,9 @@ export interface GlobalVars {
     var_196 :number, // Mフラグ:メニュー画面 Func.func054
     open_item_menue :number, // Mフラグ:道具画面(アイテムを1つでも所持している)の表示(メニュー画面/道具) Func.func460
     var_198 :any,
-    var_199 :any,
+    var_199 :any, // ディアボロの向き (1=↑, 3=←, 5=↓, 7=→ などテンキー方向)
     var_200 :any,
-    var_201 :any,
+    var_201 :any, // 現在の部屋ID (var_71 と一致する場合は部屋内, 通路の場合は別値)
     var_202 :any,
     var_203 :number, // ホテルの外12Fの特殊階層の選択フラグ。4つの中から選択
     var_204 :any,
@@ -303,7 +303,7 @@ export interface GlobalVars {
     var_222 :any,
     var_223 :any,
     var_224 :any,
-    var_225 :any,
+    var_225 :any, // ディアボロの行動方向 (攻撃・移動先決定用、var_199 と関連)
     var_226 :any,
     item_page_number :number, // アイテム個数 var_225 が10以下であれば 1、アイテム個数 var_225 が10より多ければ 2、アイテム個数 var_225 が0であれば 3、
     Y_axis_item_position :number, // アイテムを道具一覧で表示する際のY座標ポジション 
@@ -398,7 +398,7 @@ export interface GlobalVars {
     var_311 :any,
     var_312 :any,
     var_313 :any,
-    var_314 :any,
+    var_314 :any, // 敵処理時のループカウンタ (var_83[var_314] で現在処理中の敵を参照)
     var_315 :any,
     var_316 :any,
     var_317 :any,
@@ -761,7 +761,7 @@ export interface GlobalVars {
     var_670 :any,
     se_file_name :number, // 効果音ID。DSPLAYで効果音を指定する際に使用する。
     var_672 :any,
-    var_673 :any,
+    var_673 :any, // 敵の特殊能力発動制御 (敵カテゴリごとの判定フラグ)
     var_674 :any,
     bgm_list_id :number,
     bgm_title :string,
@@ -1071,7 +1071,7 @@ export interface GlobalVars {
     var_980 :any,
     var_981 :any,
     var_982 :any,
-    var_983 :any,
+    var_983 :any, // 敵の追加状態データ配列 (詳細は使用箇所により異なる)
     var_984 :any,
     var_985 :any,
     var_986 :any,

@@ -1,12 +1,12 @@
 # newDTW 変数辞書
 
 変数定義ファイル: `src/renderer/variable.ts`
-生成日時: 2026-04-14T01:18:32.095Z
+生成日時: 2026-04-14T01:44:01.596Z
 
 このファイルは `tools/extract_var_dict.js` で自動生成。
 HSP由来の `var_XXX` 変数のうち、コメントが付与されているものを一覧化。
 
-- 番号付き変数 (`var_XXX`): 102 / 約3,900 件 (2.6%)
+- 番号付き変数 (`var_XXX`): 114 / 約3,900 件 (2.9%)
 - 名前付き変数: 79 件
 
 ## 番号付き変数 (var_XXX)
@@ -16,6 +16,12 @@ HSP由来の `var_XXX` 変数のうち、コメントが付与されているも
 | `var_12` | `any` | デバッグフラグ？？ |
 | `var_20` | `number` | 鉄の牢獄の最終階層 |
 | `var_21` | `string` | dungeon_number 5 の名称 「鉄の牢獄」 |
+| `var_66` | `number` | ディアボロ(プレイヤー)の現在位置 X座標 (マップグリッド単位) |
+| `var_67` | `number` | ディアボロ(プレイヤー)の現在位置 Y座標 (マップグリッド単位) |
+| `var_71` | `any` | マップグリッド[X][Y] = セル内容 (壁/床/罠/階段等の地形種別) |
+| `var_78` | `any` | 床上アイテムデータ配列 (位置と種類) |
+| `var_82` | `any` | 敵占有グリッド[X][Y] = 0:空き / 1以上:敵あり (衝突判定用) |
+| `var_83` | `any` | 敵キャラデータ配列 [敵ID].VarN: Var0=種類, Var1=X座標, Var2=Y座標, Var10=部屋ID, Var11=向き等 |
 | `var_104` | `number` | 攻撃力が上がるフラグ。1 = ON |
 | `var_105` | `number` | 攻撃を躱わしやすくなるフラグ。1 = ON |
 | `var_111` | `number` | 命中率を上げるフラグ。1 = ONなので投げたアイテムが必中になる |
@@ -29,13 +35,17 @@ HSP由来の `var_XXX` 変数のうち、コメントが付与されているも
 | `var_170` | `number` | 罠が見えるようになるフラグ(あくまでMAP上に見えるだけ。噴上裕也のDISC限定)。1 = ON |
 | `var_172` | `number` | 発動効果が向上するフラグ。1 = ON |
 | `var_196` | `number` | Mフラグ:メニュー画面 Func.func054 |
+| `var_199` | `number` | ディアボロの向き (1=↑, 3=←, 5=↓, 7=→ などテンキー方向) |
+| `var_201` | `number` | 現在の部屋ID (var_71 と一致する場合は部屋内, 通路の場合は別値) |
 | `var_203` | `number` | ホテルの外12Fの特殊階層の選択フラグ。4つの中から選択 |
 | `var_220` | `number` | 道具画面(メニュー画面/道具)呼び出し確認変数？ |
+| `var_225` | `number` | ディアボロの行動方向 (攻撃・移動先決定用、var_199 と関連) |
 | `var_233` | `any[]` | 所持アイテム用配列 |
 | `var_255` | `number` | 入力判定[↑] |
 | `var_259` | `number` | 入力判定[↓] |
 | `var_262` | `number` | dangeon_numberであるかどうかの確認フラグ。1 = 確定 |
 | `var_271` | `number` | エフェクト "キラキラ" 表示フラグ |
+| `var_314` | `number` | 敵処理時のループカウンタ (var_83[var_314] で現在処理中の敵を参照) |
 | `var_340` | `number` | belongings_item_list |
 | `var_356` | `number` | 死因要因メッセージID選択 |
 | `var_417` | `number` | belongings_item_list |
@@ -53,6 +63,7 @@ HSP由来の `var_XXX` 変数のうち、コメントが付与されているも
 | `var_595` | `number` | dungeon_number での場所確認。0 = ヴェネチアホテル、1 = 亀の中、3 == ローマ・ティベレ河 |
 | `var_637` | `number` | ウィンドウサイズの大きさ 0 = 340X340, 1 = 680X680 |
 | `var_668` | `any` | 効果音上限設定処理 (最大値:137) |
+| `var_673` | `any` | 敵の特殊能力発動制御 (敵カテゴリごとの判定フラグ) |
 | `var_708` | `number` | エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ |
 | `var_709` | `number` | エンブレム(ダンジョン(レクイエムの大迷宮？)クリア時)解放フラグ |
 | `var_715` | `number` | エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ |
@@ -69,6 +80,7 @@ HSP由来の `var_XXX` 変数のうち、コメントが付与されているも
 | `var_906` | `number` | カーソル位置 (ゲームスピード, 0 = 超速, 1 = 速い, 2 = 普通, 3 = 遅い, 4 = 超遅) |
 | `var_933` | `number` | ディアボロのレベル変数 |
 | `var_965` | `number` | 敵の画像読み込み専用buffer ID。6, 13, 21, 27。 |
+| `var_983` | `any` | 敵の追加状態データ配列 (詳細は使用箇所により異なる) |
 | `var_993` | `number` | ディアボロの試練解放フラグ |
 | `var_1024` | `number` | 次の階の出現アイテム数＋6個するフラグ。1 = ON |
 | `var_1163` | `number` | 敵エンヤ婆の能力発動フラグ |
@@ -115,6 +127,67 @@ HSP由来の `var_XXX` 変数のうち、コメントが付与されているも
 | `var_2938` | `number` | 敵のヒラリ回避発動フラグ |
 | `var_3081` | `number` | belongings_item_list nouryoku_disc_id の橋渡し |
 | `var_3198` | `number` | ホテルの外へ向かう際のメッセージフラグ |
+
+## 未コメント変数 TOP 50 (優先コメント候補)
+
+総 `var_XXX` 数: 3624
+コメント済み: 114
+未コメント: 50+
+
+使用回数が多い順に未コメント変数を表示。コメントを付けると効果が大きい順。
+
+| 変数名 | 出現回数 | 使用ファイル数 | 主な使用箇所 (上位3件) |
+|--------|----------|----------------|------------------------|
+| `var_2194` | 1203 | 37 | `enemy\func609.ts`, `enemy\func610.ts`, `extra_items\item714.ts` |
+| `var_2611` | 1050 | 8 | `enemy\func604.ts`, `func\func1046.ts`, `func\func543.ts` |
+| `var_2424` | 958 | 8 | `enemy\func604.ts`, `func\func1012.ts`, `func\func1021.ts` |
+| `var_1918` | 947 | 5 | `func\func0411.ts`, `func\func414.ts`, `func\func473.ts` |
+| `var_35` | 935 | 24 | `dungeon\func163.ts`, `dungeon\func163b.ts`, `func\func0914.ts` |
+| `var_36` | 891 | 22 | `dungeon\func163.ts`, `dungeon\func163b.ts`, `func\func0914.ts` |
+| `var_423` | 889 | 10 | `func\func020.ts`, `func\func079.ts`, `func\func1012.ts` |
+| `var_424` | 885 | 9 | `func\func020.ts`, `func\func079.ts`, `func\func546.ts` |
+| `var_308` | 845 | 36 | `func\func015.ts`, `func\func016.ts`, `func\func0826.ts` |
+| `var_866` | 772 | 16 | `dungeon0\func0863.ts`, `func\func0938.ts`, `func\func384.ts` |
+| `var_764` | 759 | 22 | `dungeon\func244.ts`, `func\func0914.ts`, `func\func0929.ts` |
+| `var_1917` | 758 | 3 | `func\func0411.ts`, `func\func414.ts`, `func\func541.ts` |
+| `var_486` | 707 | 56 | `dungeon0\func0892.ts`, `dungeon0\func0896.ts`, `dungeon0\func0897.ts` |
+| `var_704` | 630 | 6 | `adapter\data_update_for_debug.ts`, `func\func242.ts`, `initialize\func139.ts` |
+| `var_286` | 608 | 97 | `conditions\func022.ts`, `func\func014.ts`, `func\func061.ts` |
+| `var_447` | 592 | 39 | `dungeon0\func0862.ts`, `event\func150.ts`, `func\func020.ts` |
+| `var_3812` | 592 | 3 | `func\func0948.ts`, `func\func0950.ts`, `func\func0952.ts` |
+| `var_610` | 590 | 5 | `func\func079.ts`, `func\func546.ts`, `func\func569.ts` |
+| `var_81` | 585 | 46 | `extra_items\item701.ts`, `func\func014.ts`, `func\func018.ts` |
+| `var_402` | 578 | 30 | `enemy\func609.ts`, `enemy\func610.ts`, `extra_items\item714.ts` |
+| `var_449` | 574 | 34 | `dungeon0\func0862.ts`, `func\func020.ts`, `func\func0913.ts` |
+| `var_953` | 570 | 12 | `dungeon1\func628.ts`, `dungeon2\func629.ts`, `dungeon3\func630.ts` |
+| `var_763` | 560 | 13 | `func\func0914.ts`, `func\func157.ts`, `func\func324.ts` |
+| `var_224` | 554 | 93 | `debug.ts`, `dungeon\func0889.ts`, `dungeon0\func066.ts` |
+| `var_2917` | 534 | 6 | `dungeon1\func628.ts`, `dungeon2\func629.ts`, `dungeon3\func630.ts` |
+| `var_211` | 532 | 92 | `conditions\func032.ts`, `dungeon\func072.ts`, `dungeon\func0889.ts` |
+| `var_283` | 529 | 97 | `conditions\func022.ts`, `func\func014.ts`, `func\func061.ts` |
+| `var_287` | 523 | 94 | `func\func014.ts`, `func\func0799.ts`, `func\func0800.ts` |
+| `var_2135` | 521 | 4 | `func\func483.ts`, `func\func484.ts`, `func\func486.ts` |
+| `var_2577` | 506 | 4 | `func\func543.ts`, `func\func565.ts`, `func\func566.ts` |
+| `var_284` | 497 | 97 | `conditions\func022.ts`, `func\func014.ts`, `func\func061.ts` |
+| `var_2133` | 491 | 8 | `func\func483.ts`, `func\func484.ts`, `func\func485.ts` |
+| `var_77` | 485 | 104 | `dungeon\func045.ts`, `dungeon0\func159.ts`, `enemy\enemy132.ts` |
+| `var_1707` | 477 | 4 | `func\func1012.ts`, `func\func380.ts`, `func\func381.ts` |
+| `var_1136` | 460 | 8 | `dungeon\func294.ts`, `dungeon\func295.ts`, `dungeon\func296.ts` |
+| `var_25` | 458 | 100 | `func\func000.ts`, `func\func019.ts`, `func\func0799.ts` |
+| `var_493` | 457 | 35 | `dungeon\func046.ts`, `dungeon\func300.ts`, `dungeon\func301.ts` |
+| `var_682` | 456 | 24 | `dungeon0\func0896.ts`, `func\func368.ts`, `func\func369.ts` |
+| `var_26` | 453 | 99 | `func\func000.ts`, `func\func019.ts`, `func\func0799.ts` |
+| `var_456` | 437 | 36 | `enemy\enemy026.ts`, `enemy\enemy078.ts`, `enemy\enemy087.ts` |
+| `var_977` | 434 | 12 | `dungeon1\func628.ts`, `dungeon2\func629.ts`, `dungeon3\func630.ts` |
+| `var_33` | 416 | 104 | `conditions\func022.ts`, `dungeon\func045.ts`, `dungeon\func046.ts` |
+| `var_176` | 414 | 28 | `func\func0411.ts`, `func\func0846.ts`, `func\func0997.ts` |
+| `var_666` | 414 | 3 | `music\func081.ts`, `music\func082.ts`, `music\preloadAllSoundEffects.ts` |
+| `var_667` | 414 | 3 | `music\func081.ts`, `music\func082.ts`, `music\preloadAllSoundEffects.ts` |
+| `var_2131` | 401 | 6 | `func\func1012.ts`, `func\func483.ts`, `func\func484.ts` |
+| `var_475` | 393 | 23 | `enemy\enemy026.ts`, `enemy\enemy032.ts`, `enemy\enemy045.ts` |
+| `var_290` | 390 | 98 | `func\func015.ts`, `func\func019.ts`, `func\func0799.ts` |
+| `var_428` | 389 | 13 | `func\func020.ts`, `func\func079.ts`, `func\func0825.ts` |
+| `var_223` | 387 | 111 | `func\func009.ts`, `func\func0799.ts`, `func\func0800.ts` |
 
 ## 名前付き変数
 
