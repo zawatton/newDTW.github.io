@@ -20,7 +20,7 @@
     "docs:vars": "node tools/extract_var_dict.js",
     "dist": "electron-builder"
   },
-  "repository": "https://github.com/zawatton21/newDTW.git",
+  "repository": "https://github.com/zawatton/newDTW.github.io.git",
   "keywords": [
     "Electron",
     "quick",

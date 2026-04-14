@@ -3,8 +3,7 @@
 > A fan-made, open-source browser roguelike inspired by JoJo's Bizarre Adventure.
 > Originally created by KMQ SOFT, now rebuilt in TypeScript + Electron.
 
-<a href="https://newdtw.github.io/"><img src="https://img.shields.io/badge/Play_Now_%F0%9F%8E%AE-in_your_browser-blueviolet?style=for-the-badge" alt="Play Now"></a>
-<a href="https://github.com/sponsors/zawatton21"><img src="https://img.shields.io/badge/Sponsor_%E2%9D%A4_Support_this_project-pink?style=for-the-badge" alt="Sponsor"></a>
+<a href="https://github.com/sponsors/zawatton"><img src="https://img.shields.io/badge/Sponsor_%E2%9D%A4_Support_this_project-pink?style=for-the-badge" alt="Sponsor"></a>
 
 <p align="center">
   <img src="assets/screenshots/title.png" alt="Title screen — JOJO 20th Anniversary ディアボロの大冒険" width="340">
@@ -16,8 +15,8 @@
 
 **newDTW** is a ground-up rebuild of the game:
 - **HSP &rarr; TypeScript** — 100K+ lines of HSP source ported to modern TypeScript
-- **Browser-playable** — no download needed, runs at [newdtw.github.io](https://newdtw.github.io/)
-- **Electron desktop** — optional native app via `npm start`
+- **Browser-playable** — GitHub Pages deployment in progress (see Roadmap)
+- **Electron desktop** — runnable today via `npm start`
 - **Open source** — all game logic, sprites, and tools are in this repo
 
 ## Features
@@ -30,18 +29,24 @@
 
 ## Quick Start
 
-### Play in Browser
-
-Visit **[newdtw.github.io](https://newdtw.github.io/)** — no installation required.
-
-### Run Locally
+### Run Locally (Electron)
 
 ```bash
-git clone https://github.com/zawatton21/newDTW.github.io.git
+git clone https://github.com/zawatton/newDTW.github.io.git
 cd newDTW.github.io
 npm install
 npm run build
 npm start          # launches Electron app
+```
+
+### Play in Browser
+
+Hosted GitHub Pages build is **planned but not yet deployed** — see Roadmap below.
+For now, after `npm install` you can produce a browser bundle locally:
+
+```bash
+npx webpack --config webpack.browser.cjs   # writes public/bundle/main.js
+# then open public/index.html via any local web server
 ```
 
 **Requirements:** Node.js 18+, Python 3.10+ (for tools; needs Pillow + numpy)
@@ -137,12 +142,12 @@ python tools/add_map_theme.py my_tiles/ 27 "New Dungeon"
 
 ## Roadmap
 
-- [ ] **GitHub Pages deploy** — make the game playable at `newdtw.github.io` without local install
+- [ ] **GitHub Pages deploy** — make the game playable in-browser without local install
   - Browser webpack config (`webpack.browser.cjs`) builds a 15 MiB `main.js` that runs in the browser today
   - Blockers before public deploy:
     - Asset hosting strategy — `assets/bgm/` (359 MiB) and `assets/sprites/` (104 MiB) currently live outside git; needs CDN or compressed sprite bundle
     - GitHub Actions workflow (`actions/deploy-pages@v4`) to build + publish on push
-    - URL/path settings — repo is `zawatton21/newDTW.github.io`, so paths in `index.html` need adjusting if served as project page
+    - URL/path settings — repo is `zawatton/newDTW.github.io` (project page), so paths in `index.html` need adjusting
   - Current state: local browser build verified (`npx webpack --config webpack.browser.cjs`); deployment pipeline TBD
 - [ ] Custom version content (v0.14-0.16 features)
 - [ ] Parts 7 & 8 characters and Stands
@@ -160,7 +165,7 @@ python tools/add_map_theme.py my_tiles/ 27 "New Dungeon"
 - Anonymous contributors — v0.14-0.16
 
 ### Open Source Version
-- **Zawatton21 (Zawa-TON)** — TypeScript rebuild, SpriteManager, tooling
+- **Zawatton (Zawa-TON)** — TypeScript rebuild, SpriteManager, tooling
 
 ### Pixel Art Contributors
 Many anonymous artists contributed enemy sprites, Stand DISCs, and items. See the full credits in the Japanese section below.
@@ -188,7 +193,7 @@ KMQ SOFT が作成した「ジョジョの奇妙な冒険」の二次創作ロ�
 
 この newDTW は原作 Ver 0.13 を踏襲したブラウザ版から出発しています。今後の開発構想としては以下の通りです。
 
-- **GitHub Pages へのデプロイ** — `newdtw.github.io` でインストール不要プレイ化
+- **GitHub Pages へのデプロイ** — ブラウザでインストール不要プレイ化
   - ブラウザビルド (`webpack.browser.cjs`) は既に通る (約15 MiB)。残作業はアセット配信 (BGM 359 MiB / sprites 104 MiB) と CI ワークフロー
 - 原作の開発が終了した後にファンによって開発されたカスタム版である Ver 0.14 ~ 0.16 の要素を追加
 - 「ジョジョの奇妙な冒険」の第7部、第8部の要素を追加
@@ -202,7 +207,7 @@ KMQ SOFT が作成した「ジョジョの奇妙な冒険」の二次創作ロ�
 #### ゲーム開発
 - 原作者 (ver0.13まで): クライブ さま・ムニエル さま・qra さま (KMQ SOFTの御三方)
 - カスタム版 ver0.14~0.16 の開発: 名も無き波紋使い
-- 本オープンソース版: Zawatton21 (Zawa-TON)
+- 本オープンソース版: Zawatton (Zawa-TON)
 
 #### ドット絵開発
 ドット絵を作成していただいた方々、本当にありがとうございます。
