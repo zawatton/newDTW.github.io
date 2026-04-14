@@ -13,6 +13,10 @@
     "test:menu": "electron tools/test_scenarios.js menu",
     "test:lang": "electron tools/test_scenarios.js lang",
     "test:i18n": "electron tools/test_scenarios.js i18n",
+    "test:main": "electron tools/test_scenarios.js main",
+    "test:settings": "electron tools/test_scenarios.js settings",
+    "test:library": "electron tools/test_scenarios.js library",
+    "test:all": "electron tools/test_scenarios.js all",
     "docs:vars": "node tools/extract_var_dict.js",
     "dist": "electron-builder"
   },

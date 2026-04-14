@@ -239,10 +239,57 @@ const debug = {
     /** Close any open menu (back to game). */
     closeMenu() {
         Gvar.var_509 = 0;
+        Gvar.var_499 = 0;
+        Gvar.var_508 = 0;
+        Gvar.var_195 = 0;
+        Gvar.var_196 = 0;
         Gvar.lang_menu_open = 0;
         Gvar.var_900 = 0; Gvar.var_901 = 0; Gvar.var_902 = 0;
         Gvar.var_903 = 0; Gvar.var_904 = 0; Gvar.var_905 = 0;
         console.log(`[debug] menu closed`);
+    },
+
+    /**
+     * Open main menu (2x2: 道具/足元/状態/設定).
+     * itemId: 1=道具, 2=足元, 3=状態, 4=設定
+     */
+    openMainMenu(itemId: number = 1) {
+        Gvar.var_195 = 1;
+        Gvar.var_196 = 1; // Mフラグ:メニュー画面 Func.func054
+        // itemId → (col, row) 逆算
+        Gvar.var_247 = itemId <= 2 ? 1 : 2;  // 1,2:左 / 3,4:右
+        Gvar.var_248 = itemId % 2 === 1 ? 1 : 2;  // 1,3:上 / 2,4:下
+        Gvar.var_245 = Gvar.var_247 === 1 ? 19 : 19 + 48;
+        Gvar.var_246 = Gvar.var_248 === 1 ? 45 : 45 + 18;
+        Gvar.var_497 = itemId;
+        Func.func053().catch(e => console.error('[debug] func053 error:', e));
+        console.log(`[debug] main menu opened, item=${itemId}`);
+    },
+
+    /**
+     * Open settings sub-menu (5項目: マップ/履歴/資料/システム/終了).
+     * cursor: 0-4
+     */
+    openSettingsMenu(cursor: number = 0) {
+        Gvar.var_499 = 1;
+        Gvar.var_500 = cursor;
+        Gvar.var_245 = 19;
+        Gvar.var_246 = 45 + cursor * 16;
+        Func.func055().catch(e => console.error('[debug] func055 error:', e));
+        console.log(`[debug] settings menu opened, cursor=${cursor}`);
+    },
+
+    /**
+     * Open library sub-menu (4項目: ハイスコア/コミックス/死因リスト/敵図鑑).
+     * cursor: 0-3
+     */
+    openLibraryMenu(cursor: number = 0) {
+        Gvar.var_508 = 1;
+        Gvar.var_505 = cursor;
+        Gvar.var_506 = 19;
+        Gvar.var_507 = 45 + cursor * 16;
+        Func.func057().catch(e => console.error('[debug] func057 error:', e));
+        console.log(`[debug] library menu opened, cursor=${cursor}`);
     },
 
     // ========== Help ==========
