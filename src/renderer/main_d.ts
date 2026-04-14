@@ -40,6 +40,7 @@ window.addEventListener('load', async function(){
     installAutoTranslate(Gvar, 'effects_message');
     installAutoTranslate(Gvar, 'comments_row1');
     installAutoTranslate(Gvar, 'comments_row2');
+    installAutoTranslate(Gvar, 'var_286'); // メッセージ表示テキスト (キャラ台詞等)
     Func.func004();
     return;
 })

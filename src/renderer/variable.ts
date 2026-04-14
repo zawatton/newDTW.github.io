@@ -111,8 +111,8 @@ export interface GlobalVars {
     var_32 :any,
     var_33 :any,
     var_34 :any,
-    var_35 :any,
-    var_36 :any,
+    var_35 :any, // マップグリッド幅 (X方向のセル数)
+    var_36 :any, // マップグリッド高さ (Y方向のセル数)
     var_37 :any,
     var_38 :any,
     var_39 :any,
@@ -159,7 +159,7 @@ export interface GlobalVars {
     var_78 :any, // 床上アイテムデータ配列 (位置と種類)
     var_79 :any,
     var_80 :any,
-    var_81 :any,
+    var_81 :any, // マップグリッド[X][Y] の追加属性配列 (罠/隠し通路等の状態フラグ)
     var_82 :any, // 敵占有グリッド[X][Y] = 0:空き / 1以上:敵あり (衝突判定用)
     var_83 :any, // 敵キャラデータ配列 [敵ID].VarN: Var0=種類, Var1=X座標, Var2=Y座標, Var10=部屋ID, Var11=向き等
     var_84 :any,
@@ -370,7 +370,7 @@ export interface GlobalVars {
     var_283 :any,
     var_284 :any,
     var_285 :any,
-    var_286 :any,
+    var_286 :any, // メッセージウィンドウに表示するテキスト (キャラの台詞等)。i18n自動翻訳対象
     var_287 :any,
     var_288 :any,
     var_289 :any,
@@ -392,7 +392,7 @@ export interface GlobalVars {
     var_305 :any,
     var_306 :any,
     var_307 :any,
-    var_308 :any,
+    var_308 :any, // ディアボロ周辺セルの座標範囲計算用 (var_67 - 1 等の範囲計算結果)
     var_309 :any,
     var_310 :any,
     var_311 :any,
@@ -488,7 +488,7 @@ export interface GlobalVars {
     var_399 :any,
     var_400 :any,
     var_401 :any,
-    var_402 :any,
+    var_402 :any, // 占有グリッド値の一時退避先 (var_82[X][Y] から取得した値)
     var_403 :any,
     var_404 :any,
     var_405 :any,
@@ -534,9 +534,9 @@ export interface GlobalVars {
     var_444 :any,
     var_445 :any,
     var_446 :number, // 投げて落ちた先が地面、水面かどうかの判別？ 1 = 地面、0 = 水面
-    var_447 :any,
+    var_447 :any, // マップ描画ループ用のセル X座標 (boxf 描画時のループカウンタ)
     var_448 :any,
-    var_449 :any,
+    var_449 :any, // マップ描画ループ用のセル Y座標 (boxf 描画時のループカウンタ)
     var_450 :any,
     var_451 :any,
     var_452 :any,
@@ -792,7 +792,7 @@ export interface GlobalVars {
     var_701 :any,
     var_702 :any,
     var_703 :any,
-    var_704 :any,
+    var_704 :any, // 300要素の動的確保配列 (Adap.dim(300)で初期化、用途は呼び出し箇所により異なる)
     var_705 :any,
     var_706 :any,
     var_707 :any,
@@ -851,8 +851,8 @@ export interface GlobalVars {
     var_760 :any,
     var_761 :any,
     var_762 :any,
-    var_763 :any,
-    var_764 :any,
+    var_763 :any, // 描画用座標オフセット Y方向 (var_36 と乗算してピクセル位置算出)
+    var_764 :any, // 描画用座標オフセット X方向 (var_35 と乗算してピクセル位置算出)
     var_765 :number, // メッセージ自動送りキャンセルフラグ
     var_766 :any,
     var_767 :any,
@@ -954,7 +954,7 @@ export interface GlobalVars {
     var_863 :any,
     var_864 :any,
     var_865 :any,
-    var_866 :any,
+    var_866 :any, // 床上アイテム配列(var_78)のスロットID (新規アイテム配置時のインデックス)
     var_867 :any,
     var_868 :any,
     var_869 :any,
@@ -1041,7 +1041,7 @@ export interface GlobalVars {
     var_950 :any,
     var_951 :any,
     var_952 :any,
-    var_953 :any,
+    var_953 :any, // 現在処理中の敵キャラID (enemy_list 値と同期、ダンジョン処理で使用)
     enemy_exp_point :number, // 敵を倒した時にもらえる経験値
     var_955 :any,
     var_956 :any,
@@ -2006,8 +2006,8 @@ export interface GlobalVars {
     var_1914 :any,
     var_1915 :any,
     var_1916 :any,
-    var_1917 :any,
-    var_1918 :any,
+    var_1917 :any, // 2次元データ配列 (var_1917[var_1918] でアクセス、func0411等のアイテム関連)
+    var_1918 :any, // var_1917[] のインデックス (主にアイテム選択処理で使用)
     var_1919 :any,
     var_1920 :any,
     var_1921 :any,
@@ -2718,7 +2718,7 @@ export interface GlobalVars {
     var_2608 :any,
     var_2609 :any,
     var_2610 :any,
-    var_2611 :any,
+    var_2611 :any, // 汎用ON/OFFフラグ (func543/1046等で使用、文脈ごとに役割が異なる)
     var_2612 :any,
     var_2613 :any,
     var_2614 :any,
