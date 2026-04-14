@@ -13,6 +13,7 @@
     "test:menu": "electron tools/test_scenarios.js menu",
     "test:lang": "electron tools/test_scenarios.js lang",
     "test:i18n": "electron tools/test_scenarios.js i18n",
+    "docs:vars": "node tools/extract_var_dict.js",
     "dist": "electron-builder"
   },
   "repository": "https://github.com/zawatton21/newDTW.git",
