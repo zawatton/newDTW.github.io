@@ -126,7 +126,7 @@ docs/               Auto-generated documentation (variable dictionary, etc.)
 
 Contributions welcome — code, pixel art, translations, bug reports.
 
-Join the development on Discord: DM **Zawa-TON** to get started.
+Join the development on Discord: DM **zawatton** to get started.
 
 ### Adding Content
 
