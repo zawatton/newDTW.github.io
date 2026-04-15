@@ -1,0 +1,76 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build browser bundle
+        run: npx webpack --config webpack.browser.cjs
+
+      - name: Stage site (public/ + assets/ without audio)
+        run: |
+          set -eu
+          mkdir -p _site/public _site/assets
+
+          cp -r public/. _site/public/
+
+          for d in img sprites lang; do
+            if [ -d "assets/$d" ]; then
+              cp -r "assets/$d" "_site/assets/"
+            fi
+          done
+
+          cat > _site/index.html <<'EOF'
+          <!DOCTYPE html>
+          <html lang="ja">
+          <head>
+            <meta charset="utf-8">
+            <meta http-equiv="refresh" content="0; url=public/">
+            <link rel="canonical" href="public/">
+            <title>newDTW</title>
+          </head>
+          <body>
+            <p><a href="public/">Redirecting to newDTW…</a></p>
+          </body>
+          </html>
+          EOF
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

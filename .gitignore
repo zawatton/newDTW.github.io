@@ -38,9 +38,6 @@ Thumbs.db
 node_modules/*
 dist/*
 build/*
-assets/sprites/**
-!assets/sprites/manifest.json
-!assets/sprites/map-themes.json
 # Audio assets: redistribution not permitted (see assets/bgm/README.md, assets/se/README.md).
 # Keep out of version control; only the README stays committed as a license ledger.
 assets/bgm/**
