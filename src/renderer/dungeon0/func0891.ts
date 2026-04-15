@@ -1,5 +1,5 @@
 /**
- * func0891 — func891 不明
+ * func0891 — NPC プッチ神父: 一巡後の世界ゲート (メイド・イン・ヘブンのDISC所持時に解放)
  *
  * (org原典: newDTW_func8)
  * // @org-injected

@@ -1,5 +1,5 @@
 /**
- * func0854 — func854 不明
+ * func0854 — 口座入出金の結果表示
  *
  * (org原典: newDTW_func8)
  * // @org-injected

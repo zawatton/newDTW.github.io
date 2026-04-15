@@ -1,5 +1,5 @@
 /**
- * func0880 — func880 不明
+ * func0880 — ホテルロビー: 酒場 or ホテル外への選択プロンプト
  *
  * (org原典: newDTW_func8)
  * // @org-injected

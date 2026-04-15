@@ -1,5 +1,5 @@
 /**
- * func0885 — func885 不明
+ * func0885 — レクイエムの大迷宮入口プロンプト
  *
  * (org原典: newDTW_func8)
  * // @org-injected

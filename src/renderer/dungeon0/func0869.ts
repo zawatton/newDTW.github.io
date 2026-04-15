@@ -1,5 +1,5 @@
 /**
- * func0869 — func869 不明
+ * func0869 — SPW財団 支払処理 (wallet ≥ 1000G で即確定)
  *
  * (org原典: newDTW_func8)
  * // @org-injected

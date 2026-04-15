@@ -1,5 +1,5 @@
 /**
- * func0866 — func866 不明
+ * func0866 — ポルポ仲間召喚 口座引落処理 (wallet 全額 + 口座から不足分)
  *
  * (org原典: newDTW_func8)
  * // @org-injected

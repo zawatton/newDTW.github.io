@@ -1,5 +1,5 @@
 /**
- * func0887 — func887 不明
+ * func0887 — ディアボロの試練入口プロンプト
  *
  * (org原典: newDTW_func8)
  * // @org-injected

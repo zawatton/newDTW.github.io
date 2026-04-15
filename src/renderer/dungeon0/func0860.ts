@@ -1,5 +1,5 @@
 /**
- * func0860 — func860 不明
+ * func0860 — ペリーコロ商品購入 (所持金不足時は口座引落確認へ分岐)
  *
  * (org原典: newDTW_func8)
  * // @org-injected

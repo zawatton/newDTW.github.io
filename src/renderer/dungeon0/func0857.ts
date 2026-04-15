@@ -1,5 +1,5 @@
 /**
- * func0857 — func857 不明
+ * func0857 — NPC ペリーコロ(Pericolo): ダンジョン１階納品サービス
  *
  * (org原典: newDTW_func8)
  * // @org-injected

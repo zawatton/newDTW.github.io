@@ -1,5 +1,5 @@
 /**
- * func0892 — func892 不明
+ * func0892 — NPC DIO: メイド・イン・ヘブンDISC受取 + 一巡後の世界ガイダンス
  *
  * (org原典: newDTW_func8)
  * // @org-injected

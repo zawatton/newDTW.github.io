@@ -1,5 +1,5 @@
 /**
- * func0894 — func894 不明
+ * func0894 — NPC ロッコ・バロッコ所長: 鉄獄(Iron Prison)解放 + 挑戦プロンプト
  *
  * (org原典: newDTW_func8)
  * // @org-injected

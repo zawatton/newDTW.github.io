@@ -1,5 +1,5 @@
 /**
- * func0865 — func865 不明
+ * func0865 — ポルポ仲間召喚 支払処理 (wallet ≥ 2000G で即確定、不足なら口座引落確認)
  *
  * (org原典: newDTW_func8)
  * // @org-injected

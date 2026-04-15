@@ -1,5 +1,5 @@
 /**
- * func0862 — func862 不明
+ * func0862 — ペリーコロ納品確定 (var_991[0] → var_991[1] 配列移動)
  *
  * (org原典: newDTW_func8)
  * // @org-injected

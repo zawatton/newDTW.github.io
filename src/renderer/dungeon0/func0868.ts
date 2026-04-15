@@ -1,5 +1,5 @@
 /**
- * func0868 — func868 不明
+ * func0868 — NPC SPW財団: 1000Gで敗因敵の能力調査サービス
  *
  * (org原典: newDTW_func8)
  * // @org-injected

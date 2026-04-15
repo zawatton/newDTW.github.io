@@ -1,5 +1,5 @@
 /**
- * func0881 — func881 不明
+ * func0881 — ホテル外出のプロンプト
  *
  * (org原典: newDTW_func8)
  * // @org-injected

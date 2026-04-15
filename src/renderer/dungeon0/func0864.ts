@@ -1,5 +1,5 @@
 /**
- * func0864 — func864 不明
+ * func0864 — NPC ポルポ(Polpo): 2000Gで仲間をレクイエムの大迷宮１階へ召喚
  *
  * (org原典: newDTW_func8)
  * // @org-injected

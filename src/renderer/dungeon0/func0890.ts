@@ -1,5 +1,5 @@
 /**
- * func0890 — func890 不明
+ * func0890 — 持ち込み不可ダンジョン侵入時の警告
  *
  * (org原典: newDTW_func8)
  * // @org-injected

@@ -1,5 +1,5 @@
 /**
- * func0896 — func896 不明
+ * func0896 — 店のアイテムを未購入で帰還した際、マリリン・マンソン登場 (func0897で奪取)
  *
  * (org原典: newDTW_func8)
  * // @org-injected

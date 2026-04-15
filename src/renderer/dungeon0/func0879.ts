@@ -1,5 +1,5 @@
 /**
- * func0879 — func879 不明
+ * func0879 — 酒場からホテルの部屋へ戻るプロンプト
  *
  * (org原典: newDTW_func8)
  * // @org-injected
