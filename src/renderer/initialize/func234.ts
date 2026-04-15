@@ -37,7 +37,7 @@ async function func234(this: any) {
     if (Gvar.var_407 == 1) {
         Adap.netclose(Gvar.var_1050);
     }
-    Adap.end();
+    location.reload(); // セーブ完了後は再読み込みでタイトル→ログイン画面へ戻す
 }
 
 export {func234}
