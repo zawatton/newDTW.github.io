@@ -142,7 +142,7 @@ export interface GlobalVars {
     bgm_volume :number, // BGMの現在ボリューム
     dungeon_number :number, // 各ダンジョンに割り振られた識別用ID
     var_63 :any,
-    var_64 :any,
+    var_64 :any, // ログイン画面(title/func146, func142, func147)のカーソル位置 (0:冒険に出る, 1:ボス日記を消す, 2:魔少年の問題[skip], 3:配布サイトへ[skip], 4:言語設定, 5:終了)。※ダンジョン処理(initialize/func005, func/func543)では別用途に再利用されているため一律リネーム不可
     var_65 :any,
     var_66 :any, // ディアボロ(プレイヤー)の現在位置 X座標 (マップグリッド単位)
     var_67 :any, // ディアボロ(プレイヤー)の現在位置 Y座標 (マップグリッド単位)

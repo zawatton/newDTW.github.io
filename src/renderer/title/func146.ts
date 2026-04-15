@@ -46,16 +46,16 @@ async function func146(this: any) {
 
         Adap.gmode(4, null, null, 150);
         Adap.pos(7, 20);
-        Adap.gcopy(12, 0, 0, 160, 130 - Gvar.var_738);
+        Adap.gcopy(12, 0, 0, 160, 150 - Gvar.var_738);
         Adap.color(255, 255, 255);
         Adap.line(10, 21, 163, 21);
-        Adap.line(10, 149 - Gvar.var_738, 163, 149 - Gvar.var_738);
-        Adap.line(9, 22, 9, 147 - Gvar.var_738);
-        Adap.line(165, 22, 165, 147 - Gvar.var_738);
+        Adap.line(10, 169 - Gvar.var_738, 163, 169 - Gvar.var_738);
+        Adap.line(9, 22, 9, 167 - Gvar.var_738);
+        Adap.line(165, 22, 165, 167 - Gvar.var_738);
         Adap.pset(10, 22);
         Adap.pset(164, 22);
-        Adap.pset(10, 148 - Gvar.var_738);
-        Adap.pset(164, 148 - Gvar.var_738);
+        Adap.pset(10, 168 - Gvar.var_738);
+        Adap.pset(164, 168 - Gvar.var_738);
 
         Adap.font(Gvar.font_type, 16, 1);
         Adap.pos(45, 40);
@@ -72,6 +72,9 @@ async function func146(this: any) {
         Adap.mes("配布サイトへ");
         Adap.pos(45, 120);
         Adap.color(255, 255, 255);
+        Adap.mes("言語設定");
+        Adap.pos(45, 140);
+        Adap.color(255, 255, 255);
         Adap.mes("終了");
         if (Gvar.var_64 == 0) {
             Adap.pos(12, 37);
@@ -87,6 +90,9 @@ async function func146(this: any) {
         }
         if (Gvar.var_64 == 4) {
             Adap.pos(12, 117);
+        }
+        if (Gvar.var_64 == 5) {
+            Adap.pos(12, 137);
         }
         Adap.gmode(2, null, null, null);
         if (Gvar.var_725 == 0 && Gvar.var_509 == 0) {

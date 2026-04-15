@@ -70,7 +70,7 @@ async function func142(this: any) {
         }
         if (Gvar.var_255 == 1) { // var_255:入力判定[↑]
             if (Gvar.var_64 == 0) {
-                Gvar.var_64 = 4;
+                Gvar.var_64 = 5;
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
                 await Func.func143();
@@ -106,9 +106,16 @@ async function func142(this: any) {
                 await Func.func143();
                 await Adap.wait(10);
             }
+            if (Gvar.var_64 == 5) {
+                Gvar.var_64 = 4;
+
+                Adap.DSPLAY(100); // アイテム選択時の効果音
+                await Func.func143();
+                await Adap.wait(10);
+            }
         }
         if (Gvar.var_259 == 1) { // var_259:入力判定[↓]
-            if (Gvar.var_64 == 4) {
+            if (Gvar.var_64 == 5) {
                 Gvar.var_64 = 0;
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
@@ -116,6 +123,13 @@ async function func142(this: any) {
                 await Adap.wait(13);
                 await Func.func142(); // タイトル画面キー操作処理
                 return;
+            }
+            if (Gvar.var_64 == 4) {
+                Gvar.var_64 = 5;
+
+                Adap.DSPLAY(100); // アイテム選択時の効果音
+                await Func.func143();
+                await Adap.wait(10);
             }
             if (Gvar.var_64 == 3) {
                 Gvar.var_64 = 4;

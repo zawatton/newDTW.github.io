@@ -60,7 +60,7 @@ async function func151(this: any) {
     await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「おかしいな…",
                             "何もおこらないぞ」", 7, true, false, true);
 
-    await Func.setMessage("ﾃﾞｱﾎﾞﾛ「何か…",
+    await Func.setMessage("ﾃﾞｨｱﾎﾞﾛ「何か…",
                             "何かいつもと違うようだぞ？」", 7, true, false, true);
 
     await Func.AutoDraw(20);

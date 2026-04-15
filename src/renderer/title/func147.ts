@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { getLanguage, setLanguage, loadLanguage } from '../i18n'
 
 async function func147(this: any) {
         Adap.dbgprt(147);
@@ -33,6 +34,15 @@ async function func147(this: any) {
             return;
         }
         if (Gvar.var_64 == 4) {
+            // 言語設定: JA ↔ EN トグル、反映のためリロード
+            await Func.func178();
+            const next = getLanguage() === 'ja' ? 'en' : 'ja';
+            if (next !== 'ja') await loadLanguage(next);
+            setLanguage(next);
+            location.reload();
+            return;
+        }
+        if (Gvar.var_64 == 5) {
             Adap.end();
         }
         await Func.func142(); // タイトル画面キー操作処理
