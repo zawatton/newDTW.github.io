@@ -8,7 +8,7 @@ function font(font_type, font_size, font_style = null) {
     // 英語は文字幅が広いためフォントサイズを85%に縮小
     let adjustedSize = font_size;
     if (getLanguage() !== 'ja') {
-        adjustedSize = Math.round(font_size * 0.65);
+        adjustedSize = Math.round(font_size * 0.85);
     }
     // Tauri (Edge WebView2) では「メイリオ」単独指定だと小書きカナ(ィ等)の
     // グリフが欠ける環境がある。Meiryo / Yu Gothic / MS Gothic を順にフォール
