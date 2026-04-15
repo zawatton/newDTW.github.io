@@ -61,6 +61,9 @@ async function loopLoginLang(): Promise<void> {
         await Adap.wait(10);
     }
 
+    // setTimeout 経由で browser に paint/input を渡す (~40 FPS)
+    // これが無いと tight loop でブラウザがフリーズする
+    await Adap.await_(25);
     await loopLoginLang();
 }
 
