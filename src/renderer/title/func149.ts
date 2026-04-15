@@ -6,6 +6,7 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import { t } from '../i18n'
 
 // ボス日記消去選択時の表示
 async function func149(this: any) {
@@ -41,19 +42,19 @@ async function func149(this: any) {
         Adap.pos(Gvar.var_739 + 15, Gvar.var_740 + 15);
         Adap.color(255, 0, 0);
         if (Gvar.var_726 == 1 && Gvar.var_703 == 0) {
-            Adap.mes("データはありません");
+            Adap.mes(t("データはありません"));
             return;
         }
         if (Gvar.var_726 == 2 && Gvar.var_711 == 0) {
-            Adap.mes("データはありません");
+            Adap.mes(t("データはありません"));
             return;
         }
         if (Gvar.var_726 == 3 && Gvar.var_718 == 0) {
-            Adap.mes("データはありません");
+            Adap.mes(t("データはありません"));
             return;
         }
-        Adap.mes("このデータを消去しますか？");
-        Adap.mes("「Y」キーを押すと消去されます。");
+        Adap.mes(t("このデータを消去しますか？"));
+        Adap.mes(t("「Y」キーを押すと消去されます。"));
         return;
 }
 

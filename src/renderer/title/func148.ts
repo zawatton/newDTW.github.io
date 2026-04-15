@@ -6,6 +6,7 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import { t } from '../i18n'
 
 // ボス日記選択画面(タイトル画面/ログイン画面/ボス日記選択画面)の表示
 async function func148(this: any) {
@@ -40,10 +41,10 @@ async function func148(this: any) {
             Adap.mes("１：" + Gvar.var_705);
             Adap.pos(150, Gvar.var_741 + 35);
             if (Gvar.var_706 > 0) {
-                Adap.mes("" + Gvar.var_706 + "階");
+                Adap.mes("" + Gvar.var_706 + t("階"));
             }
             Adap.pos(200, Gvar.var_741 + 35);
-            Adap.mes("" + Gvar.var_707 + "回死亡");
+            Adap.mes("" + Gvar.var_707 + t("回死亡"));
 
             // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグがONなら
             if (Gvar.var_708 >= 1) {
@@ -71,17 +72,17 @@ async function func148(this: any) {
         }
         if (Gvar.var_703 == 0) {
             Adap.pos(80, Gvar.var_741 + 15);
-            Adap.mes("１： ボス日記を作る");
+            Adap.mes("１： " + t("ボス日記を作る"));
         }
         if (Gvar.var_711 != 0) {
             Adap.pos(80, Gvar.var_741 + 85);
             Adap.mes("２：" + Gvar.var_712);
             Adap.pos(150, Gvar.var_741 + 105);
             if (Gvar.var_713 > 0) {
-                Adap.mes("" + Gvar.var_713 + "階");
+                Adap.mes("" + Gvar.var_713 + t("階"));
             }
             Adap.pos(200, Gvar.var_741 + 105);
-            Adap.mes("" + Gvar.var_714 + "回死亡");
+            Adap.mes("" + Gvar.var_714 + t("回死亡"));
 
             // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ
             if (Gvar.var_715 >= 1) {
@@ -109,7 +110,7 @@ async function func148(this: any) {
         }
         if (Gvar.var_711 == 0) {
             Adap.pos(80, Gvar.var_741 + 85);
-            Adap.mes("２： ボス日記を作る");
+            Adap.mes("２： " + t("ボス日記を作る"));
         }
 
 
@@ -118,10 +119,10 @@ async function func148(this: any) {
             Adap.mes("３：" + Gvar.var_719);
             Adap.pos(150, Gvar.var_741 + 175);
             if (Gvar.var_720 > 0) {
-                Adap.mes("" + Gvar.var_720 + "階");
+                Adap.mes("" + Gvar.var_720 + t("階"));
             }
             Adap.pos(200, Gvar.var_741 + 175);
-            Adap.mes("" + Gvar.var_721 + "回死亡");
+            Adap.mes("" + Gvar.var_721 + t("回死亡"));
 
             // エンブレム(ダンジョン(ホテルの外？)クリア時)解放フラグ
             if (Gvar.var_722 >= 1) {
@@ -149,7 +150,7 @@ async function func148(this: any) {
         }
         if (Gvar.var_718 == 0) {
             Adap.pos(80, Gvar.var_741 + 155);
-            Adap.mes("３： ボス日記を作る");
+            Adap.mes("３： " + t("ボス日記を作る"));
         }
         if (Gvar.var_726 == 1) {
             Adap.pos(53, Gvar.var_741 + 12);
