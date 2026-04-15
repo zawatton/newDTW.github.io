@@ -16,7 +16,7 @@ import * as Title from '../title/index'
 async function func139(this: any) {
         Adap.dbgprt(139);
         Adap.onexit(0);
-        Gvar.animationDelay = 30; // デフォルトを「超速」に (従来は 50 = 標準)
+        Gvar.animationDelay = 40; // デフォルトを「速い」に (従来は 50 = 標準、30 = 超速)
         Gvar.var_25[7] = 255;
         Gvar.var_26[7] = 255;
         Gvar.var_27[7] = 255;

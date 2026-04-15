@@ -65,7 +65,7 @@ async function func146(this: any) {
         Adap.color(255, 255, 255);
         Adap.mes("ボス日記を消す");
         Adap.pos(45, 80);
-        Adap.color(255, 255, 255);
+        Adap.color(155, 155, 155);
         Adap.mes("魔少年の問題");
         Adap.pos(45, 100);
         Adap.color(155, 155, 155);

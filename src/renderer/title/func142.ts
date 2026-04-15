@@ -100,7 +100,7 @@ async function func142(this: any) {
                 await Adap.wait(10);
             }
             if (Gvar.var_64 == 4) {
-                Gvar.var_64 = 3;
+                Gvar.var_64 = 1; // 2 (魔少年の問題) と 3 (配布サイトへ) は未解析のためスキップ
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
                 await Func.func143();
@@ -132,7 +132,7 @@ async function func142(this: any) {
                 await Adap.wait(10);
             }
             if (Gvar.var_64 == 1) {
-                Gvar.var_64 = 2;
+                Gvar.var_64 = 4; // 2 (魔少年の問題) と 3 (配布サイトへ) は未解析のためスキップ
 
                 Adap.DSPLAY(100); // アイテム選択時の効果音
                 await Func.func143();

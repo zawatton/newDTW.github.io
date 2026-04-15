@@ -36,8 +36,8 @@ async function func004(this: any) {
         }
         Gvar.var_12 = 0; // 通信サーバーフラグ？？
 
-        Gvar.version_number = "0.14"; 
-        Gvar.game_title = "newDTW (ver0.1405)";
+        Gvar.version_number = "1.0.0";
+        Gvar.game_title = "newDTW (v1.0.0)";
 
         Adap.buffer(17);
         await Adap.picload("img3.gif"); // ロード中の進行バーに関するドット

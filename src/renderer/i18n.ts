@@ -10,7 +10,7 @@
  */
 
 const translations: Record<string, Record<string, string>> = {};
-let currentLang = 'ja';
+let currentLang = 'en';
 let ready = false;
 
 /** Set the active language. */
