@@ -17,6 +17,17 @@ export const baseDir = path.join(os.homedir(), 'newDTW');
 // Ver0.1405にて追加。
 export const readFile = util.promisify(fs.readFile);
 
+// 音素材 (bgm/se) は再配布不可のためリポジトリに含まれない。ローカルに置いていない
+// 環境（CI / 新規 clone / 素材未配置時）では 404 になるため、play() の未処理
+// Promise rejection を吸収し「鳴らないだけでゲームは継続する」状態にする。
+function safeAudio(audio: HTMLAudioElement): HTMLAudioElement {
+    const origPlay = audio.play.bind(audio);
+    audio.play = function (): Promise<void> {
+        return origPlay().catch(() => { /* audio asset missing — stay silent */ });
+    };
+    return audio;
+}
+
 // Ver0.1405にて非同期関数化 (直接ファイルを確認する為)
 // @ts-ignore
 async function bload(file_name: any, data_size:any = null, offset:any = null) {
@@ -27,7 +38,7 @@ async function bload(file_name: any, data_size:any = null, offset:any = null) {
         let audio = new Audio("../assets/se/" + file_name);
         audio.autoplay = false;
         audio.loop = false;
-        return audio;
+        return safeAudio(audio);
     }
     // BGMの読み込み
     if (file_name.split(".")[1] == "mp3") {
@@ -35,7 +46,7 @@ async function bload(file_name: any, data_size:any = null, offset:any = null) {
         let audio = new Audio("../assets/bgm/" + file_name); // mp3ファイルのパスを正しく指定してください。
         audio.autoplay = false;
         audio.loop = true;
-        return audio;
+        return safeAudio(audio);
     }
 
     // LocalStorageを使用する設定

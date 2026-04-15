@@ -1,25 +1,19 @@
-# Build newDTW cross-platform binaries via Tauri.
+# Verify that the Tauri build compiles cleanly across platforms.
 #
-# Triggers:
-#   - Git tag push matching `v*` — creates a draft GitHub Release with the
-#     artifacts attached.
-#   - Manual `workflow_dispatch` — useful for validating CI without cutting
-#     a release; artifacts are uploaded as workflow artifacts only.
+# Policy: this project ships engine source only. Audio assets (assets/bgm,
+# assets/se) are licence-restricted and are NOT redistributed by this repo
+# or its CI. Therefore:
+#   - No automatic release on tag push.
+#   - No artifact upload (would expose binaries for download).
+#   - Builds run with NEWDTW_NO_AUDIO=1 so staging works without audio.
+#   - `--no-bundle` skips installer packaging (faster and avoids tempting
+#     anyone to pick up and distribute the bundles).
 #
-# What gets produced (per matrix entry):
-#   - Windows (windows-latest): NSIS installer (.exe) + portable exe
-#   - macOS (macos-latest):     universal .app + .dmg (Intel + Apple Silicon)
-#   - Linux (ubuntu-22.04):     .deb + .AppImage
-#
-# Known gap: assets/bgm/ (~359 MiB) and assets/se/ (~4 MiB) are not tracked
-# in this repo, so CI-built binaries will be silent. Fix later by hosting
-# audio on a CDN or fetching from a separate release asset during build.
-name: Tauri Build
+# Manual `workflow_dispatch` is the only trigger — use it to confirm the
+# Rust/JS side still compiles on a clean runner.
+name: Tauri Build Check
 
 on:
-  push:
-    tags:
-      - 'v*'
   workflow_dispatch:
 
 jobs:
@@ -29,13 +23,16 @@ jobs:
       matrix:
         include:
           - platform: macos-latest
-            args: --target universal-apple-darwin
+            args: --target universal-apple-darwin --no-bundle
           - platform: ubuntu-22.04
-            args: ''
+            args: --no-bundle
           - platform: windows-latest
-            args: ''
+            args: --no-bundle
 
     runs-on: ${{ matrix.platform }}
+
+    env:
+      NEWDTW_NO_AUDIO: '1'
 
     steps:
       - uses: actions/checkout@v4
@@ -70,28 +67,5 @@ jobs:
       - name: Install npm dependencies
         run: npm ci
 
-      - name: Build Tauri bundles
-        uses: tauri-apps/tauri-action@v0
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          # On tag push: create/update a draft release. Manual runs skip the
-          # release step (no tagName set → artifacts only).
-          tagName: ${{ github.event_name == 'push' && github.ref_name || '' }}
-          releaseName: ${{ github.event_name == 'push' && format('newDTW {0}', github.ref_name) || '' }}
-          releaseBody: |
-            Auto-generated from tag ${{ github.ref_name }}.
-            See release notes for highlights.
-          releaseDraft: true
-          prerelease: false
-          args: ${{ matrix.args }}
-
-      - name: Upload artifacts (manual runs)
-        if: github.event_name == 'workflow_dispatch'
-        uses: actions/upload-artifact@v4
-        with:
-          name: newdtw-${{ matrix.platform }}
-          path: |
-            src-tauri/target/release/bundle/**/*
-            src-tauri/target/universal-apple-darwin/release/bundle/**/*
-          if-no-files-found: warn
+      - name: Tauri build (verify only, no bundle, no audio)
+        run: npx tauri build ${{ matrix.args }}

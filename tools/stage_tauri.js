@@ -32,6 +32,12 @@ const ASSETS = path.join(ROOT, 'assets');
 // process / renderer build output that the webview doesn't load directly.
 const PUBLIC_SKIP = new Set(['main', 'renderer']);
 
+// --no-audio (or NEWDTW_NO_AUDIO=1): skip bgm/se staging. Used by CI and
+// any environment that lacks the (licence-restricted) audio assets.
+const NO_AUDIO = process.argv.includes('--no-audio')
+    || process.env.NEWDTW_NO_AUDIO === '1';
+const ASSETS_SKIP = NO_AUDIO ? new Set(['bgm', 'se']) : new Set();
+
 function mkdirp(p) {
     fs.mkdirSync(p, { recursive: true });
 }
@@ -65,10 +71,19 @@ function walk(src, dst, skip = new Set()) {
 function main() {
     const t0 = Date.now();
     mkdirp(DIST);
+    // When running --no-audio, drop any previously-staged audio so switching
+    // modes on the same machine doesn't leave stale hardlinks behind.
+    if (NO_AUDIO) {
+        for (const sub of ASSETS_SKIP) {
+            const stale = path.join(DIST, 'assets', sub);
+            if (fs.existsSync(stale)) fs.rmSync(stale, { recursive: true, force: true });
+        }
+    }
     walk(PUBLIC, DIST, PUBLIC_SKIP);
-    walk(ASSETS, path.join(DIST, 'assets'));
+    walk(ASSETS, path.join(DIST, 'assets'), ASSETS_SKIP);
     const elapsed = ((Date.now() - t0) / 1000).toFixed(1);
-    console.log(`stage_tauri: ready in ${elapsed}s (tauri-dist/)`);
+    const suffix = NO_AUDIO ? ' [--no-audio: bgm/se skipped]' : '';
+    console.log(`stage_tauri: ready in ${elapsed}s (tauri-dist/)${suffix}`);
 }
 
 main();

@@ -51,6 +51,8 @@ npx webpack --config webpack.browser.cjs   # writes public/bundle/main.js
 
 **Requirements:** Node.js 18+, Python 3.10+ (for tools; needs Pillow + numpy)
 
+**Audio note:** `assets/bgm/` and `assets/se/` are not included in this repository (see *Audio Assets & Distribution Policy* below). The game runs silent without them; add your own locally-sourced files to re-enable sound during development.
+
 ### Development Workflow
 
 For active development, use the hot-reload mode — webpack watches source files
@@ -172,9 +174,30 @@ Many anonymous artists contributed enemy sprites, Stand DISCs, and items. See th
 
 ---
 
+## Audio Assets & Distribution Policy
+
+This repository contains the **game engine source only**. The following are deliberately **not** included and **not distributed** by this project:
+
+- Background music tracks (`assets/bgm/`)
+- Sound effects (`assets/se/`)
+- Any pre-built binary release of the game with those assets embedded
+
+**Why:** The original audio assets were not produced with redistribution rights. The upstream *Diavolo The Wanderer* project itself halted in 2008 in part because the combined licensing obligations (source music, JoJo IP, etc.) could not be resolved. newDTW inherits the same constraint and does not attempt to work around it.
+
+**What this means in practice:**
+
+- No binaries are published to GitHub Releases. The CI workflow (`.github/workflows/tauri-build.yml`) is configured for **compile-verification only** — it does not upload artifacts and does not create releases. Tag pushes no longer trigger builds.
+- `assets/bgm/` and `assets/se/` are in `.gitignore`; only their `README.md` ledger files are tracked.
+- The runtime (`src/renderer/adapter/bload.ts`) silently tolerates missing audio so the game continues to play without sound.
+- `tools/stage_tauri.js --no-audio` (or `NEWDTW_NO_AUDIO=1`) skips audio staging for CI and clean-room builds.
+
+**Long-term goal:** replace the audio track-by-track with original, CC0, or otherwise redistributable material so a proper public release becomes possible. See Roadmap item *"Original BGM to resolve copyright"*. Contributions toward this are welcome — see `assets/bgm/README.md` and `assets/se/README.md` for the license ledger format.
+
+---
+
 ## License
 
-See [LICENSE.md](LICENSE.md).
+See [LICENSE.md](LICENSE.md). The engine source is licensed as stated there; it does not grant any rights to audio, sprite, or textual assets that may be placed into the tree locally but are not committed.
 
 ---
 
