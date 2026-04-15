@@ -40,7 +40,10 @@ window.addEventListener('load', async function(){
     installAutoTranslate(Gvar, 'effects_message');
     installAutoTranslate(Gvar, 'comments_row1');
     installAutoTranslate(Gvar, 'comments_row2');
+    installAutoTranslate(Gvar, 'var_283'); // D.ダービー等の会話行1 (scroll用)
+    installAutoTranslate(Gvar, 'var_284'); // D.ダービー等の会話行2 (scroll用)
     installAutoTranslate(Gvar, 'var_286'); // メッセージ表示テキスト (キャラ台詞等)
+    installAutoTranslate(Gvar, 'var_287'); // D.ダービー等の次メッセージ行2
     installAutoTranslate(Gvar, 'var_403'); // 戦闘効果・状態異常メッセージ (ダメージ・能力発動等)
     installAutoTranslate(Gvar, 'var_457'); // 磁力による物体飛来メッセージ
     installAutoTranslate(Gvar, 'var_849'); // 死因メッセージ (磁力・罠・スタンド攻撃等)
