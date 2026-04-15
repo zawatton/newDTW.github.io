@@ -6,6 +6,7 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import { t } from '../i18n'
 
 // ログイン画面表示(冒険に出る、ボス日記を消す、魔少年の問題、配布サイトへ、終了)
 async function func146(this: any) {
@@ -60,22 +61,22 @@ async function func146(this: any) {
         Adap.font(Gvar.font_type, 16, 1);
         Adap.pos(45, 40);
         Adap.color(255, 255, 255);
-        Adap.mes("冒険に出る");
+        Adap.mes(t("冒険に出る"));
         Adap.pos(45, 60);
         Adap.color(255, 255, 255);
-        Adap.mes("ボス日記を消す");
+        Adap.mes(t("ボス日記を消す"));
         Adap.pos(45, 80);
         Adap.color(155, 155, 155);
-        Adap.mes("魔少年の問題");
+        Adap.mes(t("魔少年の問題"));
         Adap.pos(45, 100);
         Adap.color(155, 155, 155);
-        Adap.mes("配布サイトへ");
+        Adap.mes(t("配布サイトへ"));
         Adap.pos(45, 120);
         Adap.color(255, 255, 255);
-        Adap.mes("言語設定");
+        Adap.mes(t("言語設定"));
         Adap.pos(45, 140);
         Adap.color(255, 255, 255);
-        Adap.mes("終了");
+        Adap.mes(t("終了"));
         if (Gvar.var_64 == 0) {
             Adap.pos(12, 37);
         }

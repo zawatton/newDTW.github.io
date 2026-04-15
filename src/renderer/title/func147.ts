@@ -7,7 +7,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
-import { getLanguage, setLanguage, loadLanguage } from '../i18n'
 
 async function func147(this: any) {
         Adap.dbgprt(147);
@@ -34,12 +33,11 @@ async function func147(this: any) {
             return;
         }
         if (Gvar.var_64 == 4) {
-            // 言語設定: JA ↔ EN トグル、反映のためリロード
+            // 言語設定: JA / English サブメニューを開く。確定後は次フレームの
+            // func146 描画で t() が新言語を返すので、自動で UI が切り替わる
             await Func.func178();
-            const next = getLanguage() === 'ja' ? 'en' : 'ja';
-            if (next !== 'ja') await loadLanguage(next);
-            setLanguage(next);
-            location.reload();
+            await Func.funcLoginLang();
+            await Func.func142();
             return;
         }
         if (Gvar.var_64 == 5) {
