@@ -9,6 +9,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 銀行口座の設定
 // 旧 func796
@@ -26,7 +27,7 @@ async function func796(this: any) {
         Gvar.var_3178 = 0;
         Gvar.var_3179 = 1;
         Gvar.var_3180 = 95;
-        await Func.setMessage("" + Gvar.var_1032 + "G 入っています。", "何G 口座に入れますか？", 7, false, false, false);
+        await Func.setMessage(tf("{0}G 入っています。", Gvar.var_1032), "何G 口座に入れますか？", 7, false, false, false);
         await Func.AutoDraw(2);
         await Func.func798();
         return;

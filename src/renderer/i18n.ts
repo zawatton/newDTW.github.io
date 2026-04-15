@@ -42,6 +42,22 @@ export function t(japanese: string): string {
 }
 
 /**
+ * Translate with positional {0},{1},... placeholders filled.
+ * JSONキーには "{0}G 入っています。" のように placeholder を含める。
+ * ja: キーがそのまま返るので .replace で値置換される (原文表示)。
+ * en: 翻訳値中の {0} が値に置換される。
+ *
+ * 例: tf("  残り{0} G！」", Gvar.var_169)
+ *   ja → "  残り50 G！」"
+ *   en → "  50G remaining!\""
+ */
+export function tf(key: string, ...args: (string | number)[]): string {
+    let s = t(key);
+    args.forEach((v, i) => { s = s.split(`{${i}}`).join(String(v)); });
+    return s;
+}
+
+/**
  * Load a language file from assets/lang/{code}.json.
  * The JSON file maps Japanese strings to translated strings.
  * Supports both Electron (file://) and browser (http://) environments.

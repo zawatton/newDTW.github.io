@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 店のアイテムを購入せずに帰還した際、NPC マリリン・マンソンの登場処理
 // 旧 func838
@@ -61,7 +62,7 @@ async function func0897(this: any) {
     await Func.AutoDraw(2);
     Gvar.var_1470 = 1;
 
-    await Func.setMessage("" + Gvar.var_3505 + "を奪われた", "", 8, false, false, false);
+    await Func.setMessage(tf("{0}を奪われた", Gvar.var_3505), "", 8, false, false, false);
     await Func.AutoDraw(10);
     return;
 }

@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 旧 func813
 async function func0868(this: any) {
@@ -41,7 +42,7 @@ async function func0868(this: any) {
     await Func.func626();
     Gvar.var_3194 = "" + Gvar.enemy_name;
     await Func.setMessage("「はい…こちらはSPW財団です」", "", 7, true, false, true);
-    await Func.setMessage("「" + Gvar.var_3194 + "に", "  やられてしまったようですね？」", 7, true, false, true);
+    await Func.setMessage(tf("「{0}に", Gvar.var_3194), "  やられてしまったようですね？」", 7, true, false, true);
     await Func.setMessage("「1000Gの調査費で", "  敵の能力を調べられます」", 7, true, false, true);
     await Func.func051(); // キー入力待ち処理
     Gvar.var_245 = 19;

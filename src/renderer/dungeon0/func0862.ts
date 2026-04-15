@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 旧 func807
 async function func0862(this: any) {
@@ -41,7 +42,7 @@ async function func0862(this: any) {
     }
     Gvar.var_1013 = Gvar.var_1013 - 1;
     Adap.DSPLAY(207);
-    await Func.setMessage("" + Gvar.var_3188 + "ですね…", "ﾚｸｲｴﾑの大迷宮１階に必ず届けます。", 7, false, false, true);
+    await Func.setMessage(tf("{0}ですね…", Gvar.var_3188), "ﾚｸｲｴﾑの大迷宮１階に必ず届けます。", 7, false, false, true);
     await Func.AutoDraw(10);
     await Func.func0856();
     await Func.func009(); // ディアボロ側ターン処理(ループ処理)

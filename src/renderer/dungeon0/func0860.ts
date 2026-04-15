@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 旧 func805
 async function func0860(this: any) {
@@ -39,7 +40,7 @@ async function func0860(this: any) {
         await Func.func0858();
         return;
     }
-    await Func.setMessage("【" + Gvar.var_3188 + "】は", "" + Gvar.var_3189 + "G です。", 7, false, false, true);
+    await Func.setMessage(tf("【{0}】は", Gvar.var_3188), tf("{0}G です。", Gvar.var_3189), 7, false, false, true);
     await Func.func051(); // キー入力待ち処理
     Gvar.var_245 = 19;
     Gvar.var_246 = 45;
