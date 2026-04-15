@@ -1,7 +1,8 @@
-# newDTW — Diavolo The Wanderer (Open Source)
+# newDTW — Diavolo The Wanderer (Engine Study)
 
-> A fan-made, open-source browser roguelike inspired by JoJo's Bizarre Adventure.
-> Originally created by KMQ SOFT, now rebuilt in TypeScript + Electron.
+> An engine-level rebuild of a classic fan-made mystery dungeon roguelike
+> originally created by KMQ SOFT. Maintained as a personal technical study
+> and archive; **no binaries are distributed** (see *Project Status & Provenance*).
 
 <a href="https://github.com/sponsors/zawatton"><img src="https://img.shields.io/badge/Sponsor_%E2%9D%A4_Support_this_project-pink?style=for-the-badge" alt="Sponsor"></a>
 
@@ -13,11 +14,11 @@
 
 **Diavolo The Wanderer** (ディアボロの大冒険) is a mystery dungeon roguelike set in the JoJo's Bizarre Adventure universe. The original game, created by KMQ SOFT using HSP (Hot Soup Processor), became a cult classic in Japan before development ended in 2008.
 
-**newDTW** is a ground-up rebuild of the game:
+**newDTW** is a ground-up engine rebuild:
 - **HSP &rarr; TypeScript** — 100K+ lines of HSP source ported to modern TypeScript
-- **Browser-playable** — GitHub Pages deployment in progress (see Roadmap)
-- **Electron desktop** — runnable today via `npm start`
-- **Open source** — all game logic, sprites, and tools are in this repo
+- **Browser-playable** — GitHub Pages deployment explored (see Roadmap)
+- **Electron / Tauri desktop** — runnable locally for personal use
+- **Engine source shared publicly** — game logic and tooling live in this repo; audio and other licence-restricted assets do not (see *Audio Assets & Distribution Policy*)
 
 ## Features
 
@@ -158,10 +159,32 @@ python tools/add_map_theme.py my_tiles/ 27 "New Dungeon"
 - [ ] Internationalization (Chinese, others)
 - [ ] Original BGM to resolve copyright
 
+## Project Status & Provenance
+
+This repository is a **fork** of [github.com/newDTW/newDTW.github.io](https://github.com/newDTW/newDTW.github.io), which itself ported the KMQ SOFT fan-game to TypeScript. Significant additional work in this fork (Tauri integration, SpriteManager, i18n scaffolding, tooling, ~100K lines of further TS porting) is original to this fork, but the project as a whole inherits several unresolved intellectual-property questions that potential users should understand before cloning:
+
+- **Upstream licence is unspecified.** The upstream repository does not carry a `LICENSE` file. Under GitHub's Terms of Service, public repositories without a licence permit forking and viewing, but do not grant any redistribution or re-use rights beyond that. This fork therefore cannot, and does not, claim to be cleanly "open-source" in the formal sense.
+- **Inherited subject matter.** The original game is a fan-derivative work referencing *JoJo's Bizarre Adventure* (© Hirohiko Araki / Shueisha) and uses music loosely inspired by real-world artists. None of those rights have been cleared.
+- **Why this fork still exists.** The maintainer ( [zawatton](https://github.com/zawatton) ) played the original KMQ SOFT game as a child and considers the engine and gameplay a work worth preserving as a technical study. The fork is kept public so that the TypeScript port remains visible and auditable, not as a distribution channel for the game itself.
+
+**Current policy (see the sections below for enforcement details):**
+
+1. **No binary distribution.** GitHub Releases do not carry runnable builds, and CI is configured for compile-verification only (`.github/workflows/tauri-build.yml`).
+2. **No redistribution of audio or other licence-restricted assets.** `assets/bgm/` and `assets/se/` are gitignored; only the license ledger README files are tracked.
+3. **Runtime tolerates missing assets.** The engine keeps running silently when audio is absent, so the repository alone constitutes a complete engine study without needing to ship any licence-encumbered material.
+4. **Eventual clean-room direction (aspirational).** Replace audio track-by-track with originally-authored / CC0 material and, if ever pursued for public release, rename JoJo-specific identifiers to create an independently-clearable derivative.
+
+If you are the upstream maintainer or a rights holder and you would like changes to how this fork is presented or maintained, please open an issue on this repository or contact the maintainer directly.
+
+---
+
 ## Credits
 
 ### Original Game
-- **KMQ SOFT** (Clive, Munier, qra) — original Diavolo The Wanderer (v0.13)
+- **KMQ SOFT** (Clive, Munier, qra) — original *Diavolo The Wanderer* (v0.13)
+
+### Upstream TypeScript Port
+- [github.com/newDTW/newDTW.github.io](https://github.com/newDTW/newDTW.github.io) — the initial TypeScript port that this repository forks from.
 
 ### Custom Versions
 - Anonymous contributors — v0.14-0.16
@@ -197,7 +220,13 @@ This repository contains the **game engine source only**. The following are deli
 
 ## License
 
-See [LICENSE.md](LICENSE.md). The engine source is licensed as stated there; it does not grant any rights to audio, sprite, or textual assets that may be placed into the tree locally but are not committed.
+See [LICENSE.md](LICENSE.md) for the terms this fork's maintainer applies to the code they personally wrote and contributed.
+
+**Important caveats:**
+
+- The upstream repository ([github.com/newDTW/newDTW.github.io](https://github.com/newDTW/newDTW.github.io)) does not specify a licence, so the portions of this tree inherited from upstream (and, transitively, from the original KMQ SOFT HSP source) are **not** covered by any clear grant of rights from their authors.
+- `LICENSE.md` does not grant — and cannot grant — any rights to audio, sprite, character-name, or other third-party subject matter that may appear or may once have appeared in this tree. Such material is governed by the rights of its respective owners.
+- Forking, cloning, and viewing this repository are permitted by GitHub's Terms of Service. Redistribution of the code beyond a personal fork, and any distribution of binaries built from it, are not endorsed by this repository's current policy.
 
 ---
 
