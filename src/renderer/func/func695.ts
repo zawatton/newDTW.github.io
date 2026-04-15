@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func695(this: any) {
         Adap.dbgprt(695);
@@ -37,7 +38,7 @@ async function func695(this: any) {
             }
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1552 = 0;
-            Gvar.var_403 = "" + Gvar.var_3100 + "がダメージを反射した！";
+            Gvar.var_403 = tf("{0}がダメージを反射した！", Gvar.var_3100);
             Gvar.var_3098 = 1;
             Gvar.var_402 = Gvar.var_673;
             Gvar.var_25_x = Gvar.var_25[7]; // Ver0.1310で値修正 1 → 7

@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 async function func655(this: any) {
         Adap.dbgprt(655);
@@ -62,7 +63,7 @@ async function func655(this: any) {
         if (Gvar.var_83[Gvar.var_402].Var0 == 53) {
             Gvar.var_971 = Gvar.enemy_defence;
         }
-        Gvar.var_403 = "" + Gvar.var_3040 + "は";
+        Gvar.var_403 = tf("{0}は", Gvar.var_3040);
         if (Gvar.var_83[Gvar.var_2819].Var39 >= 2) {
             Gvar.var_2820 = Math.floor(Gvar.var_2820 * (Gvar.var_83[Gvar.var_2819].Var39 * 2 + 10) / 10);
         }
