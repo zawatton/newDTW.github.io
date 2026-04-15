@@ -1,0 +1,28 @@
+# Normalize line endings across platforms so build outputs (tsc, webpack)
+# don't produce persistent CRLF-vs-LF diffs on Windows checkouts.
+#
+# * text=auto eol=lf — git stores all detected text files with LF and
+# checks them out as LF, ignoring core.autocrlf. Binary files are left
+# untouched by detection.
+* text=auto eol=lf
+
+# Explicit overrides for Windows-native scripts that really do need CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Common binary extensions in this repo — mark so Git never attempts
+# text conversion on them.
+*.png binary
+*.ico binary
+*.icns binary
+*.gif binary
+*.jpg binary
+*.jpeg binary
+*.mp3 binary
+*.wav binary
+*.ogg binary
+*.ttf binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+*.pdf binary

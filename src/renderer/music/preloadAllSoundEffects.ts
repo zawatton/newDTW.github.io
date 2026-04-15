@@ -141,6 +141,8 @@ async function preloadAllSoundEffects(this: any) {
     { file: "231.wav", id: 231 },
     { file: "232.wav", id: 232 },
     { file: "192.wav", id: 233 },
+    // IDs 234/235/236 are reserved gameplay SE slots; their wav files are not
+    // yet authored. See assets/se/README.md. Runtime tolerates absence (silent).
     { file: "234.wav", id: 234 },
     { file: "235.wav", id: 235 },
     { file: "236.wav", id: 236 },
