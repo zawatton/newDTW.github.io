@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func523(this: any) {
         Adap.dbgprt(523);
@@ -187,7 +188,7 @@ async function func523(this: any) {
         }
         Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1443 = 0;
-        await Func.setMessage("" + Gvar.var_2366 + "と", "" + Gvar.var_2367 + "を合成した", 7, true, false, false);
+        await Func.setMessage(tf("{0}と", Gvar.var_2366), tf("{0}を合成した", Gvar.var_2367), 7, true, false, false);
         await Func.AutoDraw(4);
         if (Gvar.var_2097 == 1) {
             if (Gvar.var_2365 != 1) {

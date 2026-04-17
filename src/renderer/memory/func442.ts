@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // プッチ神父のdisc効果
 // 旧 func442
@@ -31,7 +32,7 @@ async function func442(this: any) {
         if (Gvar.var_862[565][0] == 0 && Gvar.var_375 == 0) {
             Gvar.var_862[565][0] = 1;
             await Func.func492(); // アイテムリスト呼び出し
-            await Func.setMessage("なんと" + Gvar.var_1938 + "は", "ﾌﾟｯﾁ神父のDISCだった！", 7, true, false, false);
+            await Func.setMessage(tf("なんと{0}は", Gvar.var_1938), "ﾌﾟｯﾁ神父のDISCだった！", 7, true, false, false);
         }
         Gvar.var_225 = Gvar.var_1966;
         if (Gvar.var_233[Gvar.var_225].Var12 != 1) {
@@ -78,8 +79,7 @@ async function func442(this: any) {
             }
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1355 = 0;
-            await Func.setMessage("" + Gvar.var_1969 + "に",
-                                    "かけられていた呪いが解けた。", 7, false, false, false);
+            await Func.setMessage(tf("{0}に", Gvar.var_1969), "かけられていた呪いが解けた。", 7, false, false, false);
             Gvar.var_233[Gvar.var_225].Var12 = 0;
             await Func.func426();
             await Func.func427();

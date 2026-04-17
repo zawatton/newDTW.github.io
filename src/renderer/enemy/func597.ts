@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func597(this: any) {
         Adap.dbgprt(597);
@@ -49,7 +50,7 @@ async function func597(this: any) {
         Gvar.var_747 = 1;
 
         Adap.DSPLAY(104);
-        await Func.setMessage("道連れにされている！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+        await Func.setMessage("道連れにされている！", tf("{0}のダメージをうけた！", Gvar.var_2852), 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

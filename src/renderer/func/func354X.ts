@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func354X(this: any) {
         if (Gvar.var_1452 >= 1) {
@@ -164,10 +165,10 @@ async function func354X(this: any) {
             Adap.color(0, 255, 0);
             Adap.pos(176, 117);
             if (Gvar.var_1455 >= 10) {
-                Adap.mes("0" + Gvar.var_1455);
+                Adap.mes(tf("0{0}", Gvar.var_1455));
             }
             if (Gvar.var_1455 <= 9) {
-                Adap.mes("00" + Gvar.var_1455);
+                Adap.mes(tf("00{0}", Gvar.var_1455));
             }
         }
         if (Gvar.var_1456 >= 1) {

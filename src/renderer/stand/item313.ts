@@ -9,6 +9,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 313 ハイウェイスターの発動処理
 async function item313(this: any) {
@@ -206,12 +207,10 @@ async function item313(this: any) {
                 Gvar.var_350 = Gvar.var_567;
             }
             if (Gvar.var_350 == Gvar.var_567) {
-                await Func.setMessage("合計 " + Gvar.var_2307 + " の養分を吸収した。",
-                                       "満腹度が完全回復した。", 7, false, false, false);
+                await Func.setMessage(tf("合計 {0} の養分を吸収した。", Gvar.var_2307), "満腹度が完全回復した。", 7, false, false, false);
             }
             if (Gvar.var_350 < Gvar.var_567) {
-                await Func.setMessage("合計 " + Gvar.var_2307 + " の養分を吸収した。",
-                                       "満腹度が回復した。", 7, false, false, false);
+                await Func.setMessage(tf("合計 {0} の養分を吸収した。", Gvar.var_2307), "満腹度が回復した。", 7, false, false, false);
             }
             await Func.AutoDraw(12);
         }

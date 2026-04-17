@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Stand from '../stand/index'
+import { tf } from '../i18n'
 
 async function func511(this: any) {
         Adap.dbgprt(511);
@@ -51,8 +52,7 @@ async function func511(this: any) {
 
             await Func.func492(); // アイテムリスト呼び出し
             Gvar.identified_disc_name = Gvar.item_name;
-            await Func.setMessage("なんと" + Gvar.unidentified_disc_name + "は",
-                                    "" + Gvar.identified_disc_name + "だった！", 7, false, false, false);
+            await Func.setMessage(tf("なんと{0}は", Gvar.unidentified_disc_name), tf("{0}だった！", Gvar.identified_disc_name), 7, false, false, false);
             for (let cnt2 = 0; cnt2 < 20; ++cnt2) {
                 await Func.func337(); // メッセージ表示処理(自動)
             }

@@ -6,6 +6,7 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import { tf } from '../i18n'
 
 // 旧 func800
 async function func0855(this: any) {
@@ -27,17 +28,17 @@ async function func0855(this: any) {
     Adap.font(Gvar.font_type, Gvar.font_size = 20, Gvar.font_style = 1);
     Adap.color(255, 255, 255);
     Adap.pos(Gvar.var_3186 + 10, 53);
-    Adap.mes("" + Gvar.var_3175);
+    Adap.mes(tf("{0}", Gvar.var_3175));
     Adap.pos(Gvar.var_3186 + 10 + 15, 53);
-    Adap.mes("" + Gvar.var_3174);
+    Adap.mes(tf("{0}", Gvar.var_3174));
     Adap.pos(Gvar.var_3186 + 10 + 30, 53);
-    Adap.mes("" + Gvar.var_3173);
+    Adap.mes(tf("{0}", Gvar.var_3173));
     Adap.pos(Gvar.var_3186 + 10 + 45, 53);
-    Adap.mes("" + Gvar.var_3172);
+    Adap.mes(tf("{0}", Gvar.var_3172));
     Adap.pos(Gvar.var_3186 + 10 + 60, 53);
-    Adap.mes("" + Gvar.var_3171);
+    Adap.mes(tf("{0}", Gvar.var_3171));
     Adap.pos(Gvar.var_3186 + 10 + 75, 53);
-    Adap.mes("" + Gvar.var_3170);
+    Adap.mes(tf("{0}", Gvar.var_3170));
     Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
     Adap.pos(Gvar.var_3186 + 10 + 90, 55);
     Adap.mes("G");

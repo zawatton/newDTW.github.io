@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // メイド・イン・ヘブンを装備している際の「アイテムが朽ちていく効果」
 async function func043(this: any) {
@@ -64,7 +65,7 @@ async function func043(this: any) {
         Gvar.var_225 = Gvar.var_475;
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
         await Music.func100(); // 効果音
-        await Func.setMessage("" + Gvar.target_item_name + "は", "朽ち果ててしまった…", 7, false, false, false);
+        await Func.setMessage(tf("{0}は", Gvar.target_item_name), "朽ち果ててしまった…", 7, false, false, false);
         await Func.AutoDraw(9);
         return;
 }

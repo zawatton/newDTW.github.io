@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 588 J・ガイルのdiscの効果
 async function item588(this: any) {
@@ -23,8 +24,7 @@ async function item588(this: any) {
         Gvar.var_2209 = Gvar.enemy_name;
 
         if (Gvar.var_2208 == 0) {
-            await Func.setMessage("「" + Gvar.var_2209 + "は",
-                                   "  おまえらのために死んだ」", 7, true, true, true);
+            await Func.setMessage(tf("「{0}は", Gvar.var_2209), "  おまえらのために死んだ」", 7, true, true, true);
         }
         if (Gvar.var_2208 == 1) {
             await Func.setMessage("「青春を犠牲にして俺を追い続けたのに",

@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // アイテムを置く時の動作処理
 async function func404(this: any) {
@@ -24,7 +25,7 @@ async function func404(this: any) {
         // No = 0 なので、拠点(ホテル、亀、)
         if (Gvar.dungeon_number == 0 && Gvar.var_66 == 15 && Gvar.var_67 == 21) {
             Gvar.var_1867 = Gvar.belongings_item_list;
-            await Func.setMessage("" + Gvar.item_name + "を捨てた", "", 7, false, false, false);
+            await Func.setMessage(tf("{0}を捨てた", Gvar.item_name), "", 7, false, false, false);
             if (Gvar.var_220 == 0) { // 道具画面(メニュー画面/道具)が閉じている状態
                 await Func.func430();
             }
@@ -144,7 +145,7 @@ async function func404(this: any) {
             await Func.func430();
         }
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-        await Func.setMessage("" + Gvar.disp_item_name + " を置いた", "", 7, false, false, false);
+        await Func.setMessage(tf("{0} を置いた", Gvar.disp_item_name), "", 7, false, false, false);
         Gvar.var_217 = 1;
         await Func.func019(); // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
         return;

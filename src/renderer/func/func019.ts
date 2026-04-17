@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Stand from '../stand/index'
+import { tf } from '../i18n'
 
 // ディアボロ側 ⇔ 敵側へターン変更する際の処理(ターン変化する際の割り込み処理)
 // 移動or攻撃動作中の割り込み処理 (時止め、移動速度が戻る、etc)
@@ -850,7 +851,7 @@ async function func019(this: any) {
         if (Gvar.var_123 == 0) {
             if (Gvar.time_paused == 1) { // 時止め(時消し飛ばし)状態の場合
                 Adap.DSPLAY(181);
-                await Func.setMessage("「" + Gvar.var_164 + "秒経過！」", "", 7, false, false, false);
+                await Func.setMessage(tf("「{0}秒経過！」", Gvar.var_164), "", 7, false, false, false);
                 await Func.AutoDraw(10);
                 Gvar.var_164++;
                 Gvar.var_392 = 0;

@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
+import { tf } from '../i18n'
 
 // 旧 func926
 async function func0985(this: any) {
@@ -435,38 +436,38 @@ async function func0985(this: any) {
                         Gvar.var_3860 = 0;
                         Adap.color(0, 255, 0);
                         Adap.pos(10, Gvar.var_3898);
-                        Adap.mes("[" + Gvar.var_3901 + "] " + Gvar.var_1070[Gvar.var_3900]);
+                        Adap.mes(tf("[{0}] {1}", Gvar.var_3901, Gvar.var_1070[Gvar.var_3900]));
                         Adap.color(255, 255, 255);
                         Adap.pos(210, Gvar.var_3898);
                         Gvar.var_3903 = Gvar.var_1069[Gvar.var_3900][12];
                         await Func.func0987();
-                        Adap.mes("" + Gvar.var_3904);
+                        Adap.mes(tf("{0}", Gvar.var_3904));
                         Adap.pos(280, Gvar.var_3898);
                         if (Gvar.var_3903 != 0) {
-                            Adap.mes("" + Gvar.var_1069[Gvar.var_3900][10] + " 階");
+                            Adap.mes(tf("{0} 階", Gvar.var_1069[Gvar.var_3900][10]));
                         }
                         Adap.pos(10, Gvar.var_3898 + 12 + Gvar.var_3899);
-                        Adap.mes("Lv " + Gvar.var_1069[Gvar.var_3900][3]);
+                        Adap.mes(tf("Lv {0}", Gvar.var_1069[Gvar.var_3900][3]));
                         Adap.color(255, 255, 255);
                         Adap.pos(60, Gvar.var_3898 + 12 + Gvar.var_3899);
-                        Adap.mes("" + Gvar.var_1069[Gvar.var_3900][11] + " G");
+                        Adap.mes(tf("{0} G", Gvar.var_1069[Gvar.var_3900][11]));
                         Adap.pos(10, Gvar.var_3898 + 24 + Gvar.var_3899);
-                        Adap.mes("HP " + Gvar.var_1069[Gvar.var_3900][5] + "/" + Gvar.var_1069[Gvar.var_3900][4]);
+                        Adap.mes(tf("HP {0}/{1}", Gvar.var_1069[Gvar.var_3900][5], Gvar.var_1069[Gvar.var_3900][4]));
                         Adap.color(255, 255, 255);
                         Adap.pos(10, Gvar.var_3898 + 36 + Gvar.var_3899);
-                        Adap.mes("精神 " + Gvar.var_1069[Gvar.var_3900][7] + "/" + Gvar.var_1069[Gvar.var_3900][6]);
+                        Adap.mes(tf("精神 {0}/{1}", Gvar.var_1069[Gvar.var_3900][7], Gvar.var_1069[Gvar.var_3900][6]));
                         Adap.color(255, 255, 255);
                         if (Gvar.var_1069[Gvar.var_3900][8] >= 1) {
                             Adap.color(255, 0, 0);
                         }
                         Adap.pos(10, Gvar.var_3898 + 48 + Gvar.var_3899);
-                        Adap.mes("死亡 " + Gvar.var_1069[Gvar.var_3900][8]);
+                        Adap.mes(tf("死亡 {0}", Gvar.var_1069[Gvar.var_3900][8]));
                         Adap.color(255, 255, 255);
                         if (Gvar.var_1069[Gvar.var_3900][9] >= 1) {
                             Adap.color(0, 255, 255);
                         }
                         Adap.pos(60, Gvar.var_3898 + 48 + Gvar.var_3899);
-                        Adap.mes("クリア " + Gvar.var_1069[Gvar.var_3900][9]);
+                        Adap.mes(tf("クリア {0}", Gvar.var_1069[Gvar.var_3900][9]));
                         Adap.color(255, 255, 255);
                         Adap.pos(0, Gvar.var_3898 + 60 + 56);
                         Adap.mes("―――――――――――――――――――――――――――");
@@ -557,26 +558,26 @@ async function func0985(this: any) {
                             Gvar.var_3901 = Gvar.var_3900 + 1;
                             Adap.color(0, 255, 0);
                             Adap.pos(10, Gvar.var_3898);
-                            Adap.mes("[" + Gvar.var_3901 + "] " + Gvar.var_1070[Gvar.var_3900]);
+                            Adap.mes(tf("[{0}] {1}", Gvar.var_3901, Gvar.var_1070[Gvar.var_3900]));
                             Adap.color(255, 255, 255);
                             Adap.pos(210, Gvar.var_3898);
                             Gvar.var_3903 = Gvar.var_1069[Gvar.var_3900][12];
                             await Func.func0987();
-                            Adap.mes("" + Gvar.var_3904);
+                            Adap.mes(tf("{0}", Gvar.var_3904));
                             Adap.pos(280, Gvar.var_3898);
                             if (Gvar.var_3903 != 0) {
-                                Adap.mes("" + Gvar.var_1069[Gvar.var_3900][10] + " 階");
+                                Adap.mes(tf("{0} 階", Gvar.var_1069[Gvar.var_3900][10]));
                             }
                             Adap.pos(10, Gvar.var_3898 + 12);
-                            Adap.mes("Lv " + Gvar.var_1069[Gvar.var_3900][3]);
+                            Adap.mes(tf("Lv {0}", Gvar.var_1069[Gvar.var_3900][3]));
                             Adap.color(255, 255, 255);
                             Adap.pos(60, Gvar.var_3898 + 12);
-                            Adap.mes("" + Gvar.var_1069[Gvar.var_3900][11] + " G");
+                            Adap.mes(tf("{0} G", Gvar.var_1069[Gvar.var_3900][11]));
                             Adap.pos(10, Gvar.var_3898 + 24);
-                            Adap.mes("HP " + Gvar.var_1069[Gvar.var_3900][5] + "/" + Gvar.var_1069[Gvar.var_3900][4]);
+                            Adap.mes(tf("HP {0}/{1}", Gvar.var_1069[Gvar.var_3900][5], Gvar.var_1069[Gvar.var_3900][4]));
                             Adap.color(255, 255, 255);
                             Adap.pos(10, Gvar.var_3898 + 36);
-                            Adap.mes("精神 " + Gvar.var_1069[Gvar.var_3900][7] + "/" + Gvar.var_1069[Gvar.var_3900][6]);
+                            Adap.mes(tf("精神 {0}/{1}", Gvar.var_1069[Gvar.var_3900][7], Gvar.var_1069[Gvar.var_3900][6]));
                             Adap.color(255, 255, 255);
                             Adap.pos(0, Gvar.var_3898 + 46);
                             Adap.mes("―――――――――――――――――――――――――――");

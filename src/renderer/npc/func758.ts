@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // ボインゴに話しかけた時のメッセージ処理
 // 旧 func758
@@ -27,8 +28,7 @@ async function func758(this: any) {
         await Func.func177(); // 死因原因
         Gvar.current_floor = Gvar.var_3143;
 
-        await Func.setMessage("" + Gvar.var_849,
-                               "リタイアだァ―ッ！」", 7, true, true, true);         
+        await Func.setMessage(tf("{0}", Gvar.var_849), "リタイアだァ―ッ！」", 7, true, true, true);         
 
         await Func.setMessage("ｳｸｹｺ ｳﾋｺ ｳｹｹｹ ｳｹｺｹｺｹﾛｵ ",
                                 "ｳｹﾛｵｵｵﾌﾊﾎｯ！", 7, true, true, true);                                  

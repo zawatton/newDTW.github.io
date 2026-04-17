@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 701 没アイテム「ソフト・マシーンの発動によって罠にした敵」を使用した時の効果
 async function item701(this: any) {
@@ -27,10 +28,8 @@ async function item701(this: any) {
         await Func.func626(); // 敵リスト
         Gvar.var_2213 = Gvar.enemy_name;
 
-        await Func.setMessage("" + Gvar.var_2213 + "を",
-                               "地面に出して人質にした！", 7, true, false, false);
-        await Func.setMessage("この上にいれば",
-                               "" + Gvar.var_2213 + "から攻撃されないぞ", 7, false, true, false);
+        await Func.setMessage(tf("{0}を", Gvar.var_2213), "地面に出して人質にした！", 7, true, false, false);
+        await Func.setMessage("この上にいれば", tf("{0}から攻撃されないぞ", Gvar.var_2213), 7, false, true, false);
         return;
 }
 

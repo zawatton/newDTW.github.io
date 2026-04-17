@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func666(this: any) {
         Adap.dbgprt(666);
@@ -81,7 +82,7 @@ async function func666(this: any) {
             Gvar.var_211 = 0;
             Gvar.var_356 = 223;
         }
-        await Func.setMessage("氷の塊を喰らった！", "" + Gvar.var_209 + "のダメージ！", 8, false, false, false);
+        await Func.setMessage("氷の塊を喰らった！", tf("{0}のダメージ！", Gvar.var_209), 8, false, false, false);
         await Func.AutoDraw(10);
         Gvar.var_389 = 0;
         Gvar.var_747 = 0;

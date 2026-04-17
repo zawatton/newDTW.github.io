@@ -7,12 +7,12 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 旧 func709
 async function func709(this: any) {
         Adap.dbgprt(709);
-        await Func.setMessage("お買い物金額の合計は",
-                               "" + Gvar.payment_amount + "G になりマス", 7, false, false, true);
+        await Func.setMessage("お買い物金額の合計は", tf("{0}G になりマス", Gvar.payment_amount), 7, false, false, true);
         await Func.AutoDraw(6);
         Gvar.var_1202 = 1;
         Gvar.var_3117 = 2;

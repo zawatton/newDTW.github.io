@@ -41,6 +41,15 @@ async function func147(this: any) {
             return;
         }
         if (Gvar.var_64 == 5) {
+            // ブラウザ(GitHub Pages)では window.close() が効かないので、
+            // Exit 押下時はタイトル画面へ戻す。Electron は従来通り終了。
+            const isBrowserMode = typeof document !== 'undefined' &&
+                document.documentElement.classList.contains('browser-mode');
+            if (isBrowserMode) {
+                await Func.func178(); // 処理確認タイマー(3m秒)
+                await Func.func140(); // タイトル画面へ戻る
+                return;
+            }
             Adap.end();
         }
         await Func.func142(); // タイトル画面キー操作処理

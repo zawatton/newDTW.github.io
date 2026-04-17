@@ -9,6 +9,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 301 ハーヴェストの発動処理
 async function item301(this: any) {
@@ -115,8 +116,7 @@ async function item301(this: any) {
                                    "", 7, false, false, false);
         }
         if (Gvar.var_2279 >= 1) {
-            await Func.setMessage("" + Gvar.var_2279 + "個  拾ってきた。",
-                                   "", 7, false, false, false);
+            await Func.setMessage(tf("{0}個  拾ってきた。", Gvar.var_2279), "", 7, false, false, false);
         }
         if (Gvar.var_2279 >= 1) {
             Gvar.var_1489 = 1;

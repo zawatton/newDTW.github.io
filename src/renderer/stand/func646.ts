@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // ザ・ハンド
 // 旧 func646
@@ -43,7 +44,7 @@ async function func646(this: any) {
             await Func.func492(); // アイテムリスト呼び出し
             await Func.AutoDraw(10);
             Adap.DSPLAY(172);
-            await Func.setMessage("" + Gvar.item_name + "は", "使いすぎて壊れてしまった。", 7, false, false, false);
+            await Func.setMessage(tf("{0}は", Gvar.item_name), "使いすぎて壊れてしまった。", 7, false, false, false);
             await Func.AutoDraw(10);
             Gvar.belongings_item_list = Gvar.kougeki_disc_id ;
             await Music.func106(); // BGM選曲呼び出し割り振り

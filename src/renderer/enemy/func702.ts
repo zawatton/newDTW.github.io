@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 async function func702(this: any) {
         Adap.dbgprt(702);
@@ -202,12 +203,12 @@ async function func702(this: any) {
                 await Func.AutoDraw(10);
                 if (Gvar.var_3102[1] == 1) {
                     Gvar.var_3104 = "おれの名は";
-                    await Func.setMessage("「" + Gvar.var_3104 + "ペイジ」", "", 8, false, false, true);
+                    await Func.setMessage(tf("「{0}ペイジ」", Gvar.var_3104), "", 8, false, false, true);
                 }
                 if (Gvar.var_3102[2] == 1) {
                     if (Gvar.var_3104 == "") {
                         Gvar.var_3104 = "おれの名は";
-                        await Func.setMessage("「" + Gvar.var_3104 + "ジョーンズ」", "", 8, false, false, true);
+                        await Func.setMessage(tf("「{0}ジョーンズ」", Gvar.var_3104), "", 8, false, false, true);
                     }
                     else {
                         await Func.setMessage("「ジョーンズ」", "", 8, false, false, true);
@@ -216,7 +217,7 @@ async function func702(this: any) {
                 if (Gvar.var_3102[3] == 1) {
                     if (Gvar.var_3104 == "") {
                         Gvar.var_3104 = "おれの名は";
-                        await Func.setMessage("「" + Gvar.var_3104 + "プラント」", "", 8, false, false, true);
+                        await Func.setMessage(tf("「{0}プラント」", Gvar.var_3104), "", 8, false, false, true);
                     }
                     else {
                         await Func.setMessage("「プラント」", "", 8, false, false, true);
@@ -225,7 +226,7 @@ async function func702(this: any) {
                 if (Gvar.var_3102[4] == 1) {
                     if (Gvar.var_3104 == "") {
                         Gvar.var_3104 = "おれの名は";
-                        await Func.setMessage("「" + Gvar.var_3104 + "ボーンナム」", "", 8, false, false, true);
+                        await Func.setMessage(tf("「{0}ボーンナム」", Gvar.var_3104), "", 8, false, false, true);
                     }
                     else {
                         await Func.setMessage("「ボーンナム」", "", 8, false, false, true);

@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // 旧 func746
 async function func746(this: any) {
@@ -65,8 +66,7 @@ async function func746(this: any) {
             Gvar.var_3089 = Gvar.var_83[Gvar.var_3072].Var39;
             await Func.func682();
             if (Gvar.var_3073 < 99999) {
-                await Func.setMessage("あと" + Gvar.var_3073 + "くらいで",
-                                        "もっと強くなれるだろう", 7, true, false, true);
+                await Func.setMessage(tf("あと{0}くらいで", Gvar.var_3073), "もっと強くなれるだろう", 7, true, false, true);
             }
             if (Gvar.var_3073 >= 99999) {
                 await Func.setMessage("私の強さはこれが限界のようだ。",
@@ -79,8 +79,7 @@ async function func746(this: any) {
             await Func.func626();
             Gvar.var_3125 = Adap.rnd(3);
             if (Gvar.var_3125 == 0) {
-                await Func.setMessage("" + Gvar.enemy_name + "なんぞ",
-                                        "ノミと同類よォー！", 7, true, false, true);
+                await Func.setMessage(tf("{0}なんぞ", Gvar.enemy_name), "ノミと同類よォー！", 7, true, false, true);
             }
             if (Gvar.var_3125 == 1) {
                 await Func.setMessage("波紋エネルギーをぶつければ",

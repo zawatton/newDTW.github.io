@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func663(this: any) {
         Adap.dbgprt(663);
@@ -26,10 +27,10 @@ async function func663(this: any) {
         }
         Adap.DSPLAY(123);
         if (Gvar.var_83[Gvar.var_314].Var0 == 9) {
-            await Func.setMessage("「" + Gvar.item_name + "喰って", "  パワーアップッ！」", 8, false, false, false);
+            await Func.setMessage(tf("「{0}喰って", Gvar.item_name), "  パワーアップッ！」", 8, false, false, false);
         }
         if (Gvar.var_83[Gvar.var_314].Var0 == 10) {
-            await Func.setMessage("" + Gvar.item_name + "を", "吸収している！！", 8, false, false, false);
+            await Func.setMessage(tf("{0}を", Gvar.item_name), "吸収している！！", 8, false, false, false);
         }
         Gvar.var_411 = 1;
         for (let cnt1 = 0; cnt1 < 16; ++cnt1) {

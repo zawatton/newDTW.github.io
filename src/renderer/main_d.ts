@@ -47,6 +47,11 @@ window.addEventListener('load', async function(){
     installAutoTranslate(Gvar, 'var_403'); // 戦闘効果・状態異常メッセージ (ダメージ・能力発動等)
     installAutoTranslate(Gvar, 'var_457'); // 磁力による物体飛来メッセージ
     installAutoTranslate(Gvar, 'var_849'); // 死因メッセージ (磁力・罠・スタンド攻撃等)
+    installAutoTranslate(Gvar, 'enemy_name'); // 敵キャラ名 (戦闘メッセージ・敵図鑑等で使用)
+    installAutoTranslate(Gvar, 'var_705'); // セーブデータ1 ダンジョン名 (ログイン画面 save slot 1)
+    installAutoTranslate(Gvar, 'var_712'); // セーブデータ2 ダンジョン名 (ログイン画面 save slot 2)
+    installAutoTranslate(Gvar, 'var_719'); // セーブデータ3 ダンジョン名 (ログイン画面 save slot 3)
+    installAutoTranslate(Gvar, 'var_889'); // 罠名 (踏んだ時メッセージ・足元表示等で使用)
     Func.func004();
     return;
 })

@@ -7,6 +7,8 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { applyItem, postProcessItem } from '../items'
+import { tf } from '../i18n'
 
 async function func492(this: any) {
         Adap.dbgprt(492);
@@ -40,6 +42,15 @@ async function func492(this: any) {
         Gvar.var_2175 = "";
         }
         */
+
+        // registry-backed items (items/data/*.ts) take precedence over the legacy if-chain below.
+        // applyItem returns true if flatId is registered; postProcessItem handles ☆rare prefix and
+        // var_172 enhanced effects_message. For un-migrated items the legacy chain still runs.
+        const _migrated = applyItem(Gvar.belongings_item_list);
+        if (_migrated) {
+            postProcessItem(Gvar.belongings_item_list);
+        }
+        if (!_migrated) {
         if (Gvar.belongings_item_list == 1) {
             Gvar.buying_price = 0;
             Gvar.item_name = "お金";
@@ -2139,21 +2150,21 @@ async function func492(this: any) {
             // 動的アイテム: var_1872(敵名)を使ってアイテム名を組み立てる
             // HSP: var_268 = var_555; gosub *label_0658 で var_1872 に敵名をセット
             Gvar.buying_price = 100;
-            Gvar.item_name = "" + Gvar.var_1872 + "のｺｲﾝ";
+            Gvar.item_name = tf("{0}のｺｲﾝ", Gvar.var_1872);
             Gvar.item_description1 = "[魂のｺｲﾝ]";
-            Gvar.effects_message = "" + Gvar.var_1872 + "の魂が入ったｺｲﾝだ";
-            Gvar.item_ability_description = "" + Gvar.var_1872 + "の魂を取り込む事ができるぞ";
-            Gvar.item_message1 = "" + Gvar.var_1872 + "の魂を取り込んだ！";
+            Gvar.effects_message = tf("{0}の魂が入ったｺｲﾝだ", Gvar.var_1872);
+            Gvar.item_ability_description = tf("{0}の魂を取り込む事ができるぞ", Gvar.var_1872);
+            Gvar.item_message1 = tf("{0}の魂を取り込んだ！", Gvar.var_1872);
         }
         if (Gvar.belongings_item_list == 701) {
             // 動的アイテム: var_1872(敵名)を使ってアイテム名を組み立てる
             // HSP: var_268 = var_555; gosub *label_0658 で var_1872 に敵名をセット
             Gvar.buying_price = 100;
-            Gvar.item_name = "" + Gvar.var_1872 + "の罠";
+            Gvar.item_name = tf("{0}の罠", Gvar.var_1872);
             Gvar.item_description1 = "[人質の罠]";
-            Gvar.effects_message = "" + Gvar.var_1872 + "がﾍﾟﾗﾍﾟﾗになった姿だ";
-            Gvar.item_ability_description = "使うと" + Gvar.var_1872 + "が近づくぞ";
-            Gvar.item_message1 = "" + Gvar.var_1872 + "の罠だ！";
+            Gvar.effects_message = tf("{0}がﾍﾟﾗﾍﾟﾗになった姿だ", Gvar.var_1872);
+            Gvar.item_ability_description = tf("使うと{0}が近づくぞ", Gvar.var_1872);
+            Gvar.item_message1 = tf("{0}の罠だ！", Gvar.var_1872);
         }
         if (Gvar.belongings_item_list == 702) {
             // 動的アイテム: var_991(罠名)を使ってアイテム名を組み立てる
@@ -2163,15 +2174,15 @@ async function func492(this: any) {
             Gvar.item_description1 = "[罠]";
             Gvar.effects_message = "" + Gvar.var_2176;
             Gvar.item_ability_description = "";
-            Gvar.item_message1 = "" + Gvar.var_991 + "を設置した！";
+            Gvar.item_message1 = tf("{0}を設置した！", Gvar.var_991);
         }
         if (Gvar.belongings_item_list == 703) {
             // 動的アイテム: var_991(罠名)を使ってアイテム名を組み立てる
             // HSP: var_990 = var_555; gosub *label_0586 で var_991 に罠名をセット
             Gvar.buying_price = 100;
-            Gvar.item_name = "" + Gvar.var_991 + "の記憶";
+            Gvar.item_name = tf("{0}の記憶", Gvar.var_991);
             Gvar.item_description1 = "[罠の記憶]";
-            Gvar.effects_message = "掘り起こした" + Gvar.var_991 + "の記憶だ";
+            Gvar.effects_message = tf("掘り起こした{0}の記憶だ", Gvar.var_991);
             Gvar.item_ability_description = "" + Gvar.var_2177;
             Gvar.item_message1 = "";
         }
@@ -3357,6 +3368,7 @@ async function func492(this: any) {
             Gvar.item_ability_description = "レベルが一気に１０上がるぞ";
             Gvar.item_message1 = "ディアボロはレベルが上がった！";
         }
+        } // end of if (!_migrated) legacy chain
         if (Gvar.var_869 == 1 || Gvar.var_262 == 1) { // Gvar.var_262 == 1 なので、Gvar.dungeon_number = 0 であれば
             return;
         }

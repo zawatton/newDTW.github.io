@@ -6,6 +6,7 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import { tf } from '../i18n'
 
 // 旧 func102
 async function func102(this: any) {
@@ -31,21 +32,21 @@ async function func102(this: any) {
             Adap.color(255, 255, 255);
             Adap.pos(2, 320);
             Adap.font(Gvar.font_type, 12);
-            Adap.mes("♪" + Gvar.bgm_title);
+            Adap.mes(tf("♪{0}", Gvar.bgm_title));
             return;
         }
         if (Gvar.var_635 >= 1) {
             Adap.color(255, 255, 255);
             Adap.pos(2, 320);
             Adap.font(Gvar.font_type, 12);
-            Adap.mes("      効果音音量:" + Gvar.se_volume);
+            Adap.mes(tf("      効果音音量:{0}", Gvar.se_volume));
             return;
         }
         if (Gvar.var_636 >= 1) {
             Adap.color(255, 255, 255);
             Adap.pos(2, 320);
             Adap.font(Gvar.font_type, 12);
-            Adap.mes("      音量:" + Gvar.bgm_volume);
+            Adap.mes(tf("      音量:{0}", Gvar.bgm_volume));
             return;
         }
         return;

@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
+import { tf } from '../i18n'
 
 // 旧 func861
 async function func0920(this: any) {
@@ -57,10 +58,10 @@ async function func0920(this: any) {
         Adap.font(Gvar.font_type, 11);
         Adap.color(255, 255, 255);
         if (Gvar.var_3569 < 10) {
-            Adap.mes("部屋 " + Gvar.var_3569);
+            Adap.mes(tf("部屋 {0}", Gvar.var_3569));
         }
         if (Gvar.var_3569 >= 10) {
-            Adap.mes("部屋" + Gvar.var_3569);
+            Adap.mes(tf("部屋{0}", Gvar.var_3569));
         }
     }
     if (Gvar.var_3565 == 1) {

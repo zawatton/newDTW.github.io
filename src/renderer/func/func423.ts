@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func423(this: any) {
         Adap.dbgprt(423);
@@ -19,8 +20,7 @@ async function func423(this: any) {
             await Func.AutoDraw(10);
             Gvar.belongings_item_list = Gvar.var_486[Gvar.var_682][Gvar.var_225][0];
             await Func.func492(); // アイテムリスト呼び出し
-            await Func.setMessage("" + Gvar.item_name + "は",
-                                    "ｽﾀﾝﾄﾞﾊﾟﾜｰが尽きて消滅した", 7, false, false, false);
+            await Func.setMessage(tf("{0}は", Gvar.item_name), "ｽﾀﾝﾄﾞﾊﾟﾜｰが尽きて消滅した", 7, false, false, false);
             if (Gvar.var_486[Gvar.var_682][Gvar.var_225][11] == 1) {
                 Gvar.var_106 = 1;
                 Gvar.count_buying_price = Gvar.count_buying_price + Gvar.buying_price;

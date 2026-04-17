@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // 旧 func524
 async function func524(this: any) {
@@ -110,7 +111,7 @@ async function func524(this: any) {
         Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
         Gvar.var_1570 = 0;
         if (Gvar.var_233[Gvar.var_2300].Var3 < 99) {
-            await Func.setMessage("エネルギーが " + Gvar.var_2371 + "増えた！", "", 7, false, false, false);
+            await Func.setMessage(tf("エネルギーが {0}増えた！", Gvar.var_2371), "", 7, false, false, false);
         }
         if (Gvar.var_233[Gvar.var_2300].Var3 >= 99) {
             await Func.setMessage("エネルギーが満タンになった！", "", 7, false, false, false);

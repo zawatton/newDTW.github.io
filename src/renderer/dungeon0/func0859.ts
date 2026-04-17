@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 旧 func804
 async function func0859(this: any) {
@@ -61,7 +62,7 @@ async function func0859(this: any) {
             }
             if (Gvar.belongings_item_list >= 400 && Gvar.belongings_item_list < 500) {
                 Adap.color(225, 195, 145);
-                Adap.mes("" + Gvar.item_name + "(" + Gvar.var_2011 + ")");
+                Adap.mes(tf("{0}({1})", Gvar.item_name, Gvar.var_2011));
             }
             if (Gvar.belongings_item_list >= 500 && Gvar.belongings_item_list < 800) {
                 Adap.color(255, 255, 255);
@@ -69,7 +70,7 @@ async function func0859(this: any) {
             }
             if (Gvar.belongings_item_list >= 800 && Gvar.belongings_item_list < 900) {
                 Adap.color(0, 255, 255);
-                Adap.mes("" + Gvar.item_name + "(" + Gvar.var_2014 + ")");
+                Adap.mes(tf("{0}({1})", Gvar.item_name, Gvar.var_2014));
             }
             if (Gvar.belongings_item_list >= 900 && Gvar.belongings_item_list < 1000) {
                 Adap.color(255, 255, 255);
@@ -106,10 +107,10 @@ async function func0859(this: any) {
         Adap.mes(Gvar.item_description1);
     }
     if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400 && Gvar.var_2027 == 0) {
-        Adap.mes("" + Gvar.item_description1);
+        Adap.mes(tf("{0}", Gvar.item_description1));
     }
     if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400 && Gvar.var_2027 == 1) {
-        Adap.mes("" + Gvar.item_description1 + "  空き容量 " + Gvar.var_2024);
+        Adap.mes(tf("{0}  空き容量 {1}", Gvar.item_description1, Gvar.var_2024));
     }
     Adap.color(255, 255, 255);
     Adap.mes(Gvar.effects_message);

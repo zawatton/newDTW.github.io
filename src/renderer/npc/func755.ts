@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // ダンジョン内のSPW財団の男に話しかけた時のメッセージ処理
 // 旧 func755
@@ -37,8 +38,7 @@ async function func755(this: any) {
         Gvar.current_floor = Gvar.var_3143;
         Gvar.var_3145 = 0;
         for (let cnt1 = 0; cnt1 < Gvar.var_3144; ++cnt1) {
-            await Func.setMessage("" + Gvar.var_3142[Gvar.var_3145],
-                                    "", 7, true, false, true);
+            await Func.setMessage(tf("{0}", Gvar.var_3142[Gvar.var_3145]), "", 7, true, false, true);
             Gvar.var_3145 = Gvar.var_3145 + 1;
         }
         await Func.setMessage("が出現するようです。",

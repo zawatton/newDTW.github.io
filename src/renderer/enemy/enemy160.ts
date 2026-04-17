@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 160 ウェストウッド看守の特殊能力
 async function enemy160(this: any) {
@@ -119,7 +120,7 @@ async function enemy160(this: any) {
                 Gvar.var_211 = 0;
                 Gvar.var_356 = 257;
             }
-            await Func.setMessage("隕石が直撃した！", "" + Gvar.var_209 + "のダメージを喰らった！", 8, false, false, false);
+            await Func.setMessage("隕石が直撃した！", tf("{0}のダメージを喰らった！", Gvar.var_209), 8, false, false, false);
             for (let cnt3 = 0; cnt3 < 3; ++cnt3) {
                 Gvar.var_585 = 3;
                 await Func.func337(); // メッセージ表示処理(自動)

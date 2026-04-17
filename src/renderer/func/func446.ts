@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func446(this: any) {
         Adap.dbgprt(446);
@@ -45,8 +46,7 @@ async function func446(this: any) {
             Gvar.var_1989 = 1;
         }
         Adap.DSPLAY(112);  // 刀の切れる音 or 強化した時のシャキーン 効果音
-        await Func.setMessage("" + Gvar.strengthen_item_name + "の",
-                                "雰囲気がちょっと変わったようだ。", 7, false, false, false);
+        await Func.setMessage(tf("{0}の", Gvar.strengthen_item_name), "雰囲気がちょっと変わったようだ。", 7, false, false, false);
         await Func.func437();
         await Func.AutoDraw(10);
         Gvar.var_1252 = 0;

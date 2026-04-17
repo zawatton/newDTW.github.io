@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 130 敵マリリンマンソンの特殊能力
 async function enemy130(this: any) {
@@ -46,7 +47,7 @@ async function enemy130(this: any) {
         if (Gvar.wallet < 0) {
             Gvar.wallet = 0;
         }
-        await Func.setMessage("" + Gvar.var_2888 + " G奪われた！", "", 8, false, false, false);
+        await Func.setMessage(tf("{0} G奪われた！", Gvar.var_2888), "", 8, false, false, false);
         await Func.AutoDraw(15);
         Gvar.var_2197 = 1;
         return;

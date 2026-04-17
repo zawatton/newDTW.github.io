@@ -1,5 +1,6 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import { tf } from '../i18n'
 
 // 旧 func935
 async function func0994(this: any) {
@@ -57,7 +58,7 @@ async function func0994(this: any) {
         if (Gvar.var_2321[cnt1] == "(no entry)") {
             Adap.color(150, 150, 150);
         }
-        Adap.mes("" + Gvar.var_2321[cnt1]);
+        Adap.mes(tf("{0}", Gvar.var_2321[cnt1]));
         Gvar.var_230 = Gvar.var_230 + 22;
     }
     Adap.color(255, 255, 255);

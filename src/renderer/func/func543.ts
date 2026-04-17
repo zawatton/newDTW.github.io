@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // DISC使用時のイベント処理 (label_0543)
 async function func543(this: any) {
@@ -47,7 +48,7 @@ async function func543(this: any) {
             Gvar.var_621[Gvar.var_2494][0] = 1;
             await Func.func524();
             Gvar.var_2496 = Gvar.var_557;
-            await Func.setMessage("なんと" + Gvar.var_2495 + "は", "" + Gvar.var_2496 + "だった！", 10, false, false, false);
+            await Func.setMessage(tf("なんと{0}は", Gvar.var_2495), tf("{0}だった！", Gvar.var_2496), 10, false, false, false);
             for (let cnt = 0; cnt < 20; ++cnt) {
                 await Func.func337();
             }
@@ -1434,7 +1435,7 @@ async function func543(this: any) {
                 await Func.setMessage("１個も拾ってこなかったど！", "", 10, false, false, false);
             }
             if (Gvar.var_2520 >= 1) {
-                await Func.setMessage("" + Gvar.var_2520 + "個　拾ってきた。", "", 10, false, false, false);
+                await Func.setMessage(tf("{0}個　拾ってきた。", Gvar.var_2520), "", 10, false, false, false);
             }
             if (Gvar.var_2444 == 1) {
                 Gvar.var_2444 = 0;
@@ -4813,7 +4814,7 @@ async function func543(this: any) {
                 Gvar.var_1770 -= Gvar.var_483;
             }
             // @ts-ignore
-            await Func.setMessage("念のため" + var_2574 + "も", "別のナンバーに替えておくか", 10, false, false, false);
+            await Func.setMessage(tf("念のため{0}も", var_2574), "別のナンバーに替えておくか", 10, false, false, false);
             for (let cnt = 0; cnt < 5; ++cnt) {
                 await Func.func337();
             }
@@ -4880,7 +4881,7 @@ async function func543(this: any) {
             if ( Gvar.var_2444 == 1 ) {
                 Gvar.var_2444 = 0;
                 await Func.func540();
-            await Func.setMessage("念のため" + Gvar.var_2574 + "も", "別のナンバーに替えておくか", 10, false, false, false);
+            await Func.setMessage(tf("念のため{0}も", Gvar.var_2574), "別のナンバーに替えておくか", 10, false, false, false);
             Adap.DSPLAY(182);
             Gvar.var_1444 = 8;
             Gvar.var_310 = 1;

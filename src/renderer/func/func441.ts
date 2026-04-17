@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 async function func441(this: any) {
         Adap.dbgprt(441);
@@ -41,8 +42,7 @@ async function func441(this: any) {
         if (Gvar.var_862[590][0] == 0 && Gvar.var_375 == 0) {
             Gvar.var_862[590][0] = 1;
             await Func.func492(); // アイテムリスト呼び出し
-            await Func.setMessage("なんと" + Gvar.var_1938 + "は",
-                                    "ｷﾞｱｯﾁｮのDISCだった！", 7, true, false, false);
+            await Func.setMessage(tf("なんと{0}は", Gvar.var_1938), "ｷﾞｱｯﾁｮのDISCだった！", 7, true, false, false);
         }
         Gvar.var_1940 = Gvar.var_199;
         Gvar.var_199 = 2;
@@ -188,8 +188,7 @@ async function func441(this: any) {
             Gvar.var_77[Gvar.var_66][Gvar.var_67] = 0;
         }
         await Music.func100(); // 効果音
-        await Func.setMessage("" + Gvar.var_1976 + "は",
-                                "粉々に壊れた。", 7, false, false, false);
+        await Func.setMessage(tf("{0}は", Gvar.var_1976), "粉々に壊れた。", 7, false, false, false);
         await Func.AutoDraw(6);
         Gvar.var_199 = Gvar.var_1940;
         Gvar.var_1973 = 0;

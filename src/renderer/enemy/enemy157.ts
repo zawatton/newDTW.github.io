@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // No = 157 アナスイの特殊能力
 async function enemy157(this: any) {
@@ -82,7 +83,7 @@ async function enemy157(this: any) {
         Gvar.target_item_name = Gvar.item_name;
         Gvar.var_225 = Gvar.var_475;
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-        await Func.setMessage("" + Gvar.target_item_name + "は", "バラバラにされてしまった！", 8, false, false, true);
+        await Func.setMessage(tf("{0}は", Gvar.target_item_name), "バラバラにされてしまった！", 8, false, false, true);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

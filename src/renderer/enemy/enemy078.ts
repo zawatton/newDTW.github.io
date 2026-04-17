@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 78 アヴドゥルさんの特殊能力
 async function enemy078(this: any) {
@@ -124,7 +125,7 @@ async function enemy078(this: any) {
             if (Gvar.var_2473 == 1) {
                 await Func.setMessage("い・・・息が・・・", "", 7, true, false, false);
                 await Func.setMessage("熱で呼吸が苦しくなると", "スタンドは弱まってしまう！", 7, true, false, false);
-                await Func.setMessage("" + Gvar.item_name + "は", "弱くなってしまった…", 7, true, false, false);
+                await Func.setMessage(tf("{0}は", Gvar.item_name), "弱くなってしまった…", 7, true, false, false);
             }
             if (Gvar.var_2473 == 3) {
                 await Func.setMessage("スタンドが弱まりそうになったが", "漆黒のオーラに包まれていて無事だった", 7, true, false, false);
@@ -206,7 +207,7 @@ async function enemy078(this: any) {
                 Gvar.var_233[Gvar.var_475]["Var" + cnt3] = 0;
             }
             Gvar.var_233[Gvar.var_475].Var0 = 641;
-            await Func.setMessage("" + Gvar.target_item_name + "は", "消し炭になった！", 7, false, false, false);
+            await Func.setMessage(tf("{0}は", Gvar.target_item_name), "消し炭になった！", 7, false, false, false);
             if (Gvar.var_128 >= 1) {
                 await Func.func023();
             }

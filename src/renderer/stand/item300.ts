@@ -9,6 +9,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 300 パール・ジャムの発動処理
 async function item300(this: any) {
@@ -39,7 +40,7 @@ async function item300(this: any) {
                                    "", 7, false, true, false);
         }
         if (Gvar.var_2211 == 1) {
-            await Func.setMessage("最大満腹度が" + Gvar.var_567 + "になった。",
+            await Func.setMessage(tf("最大満腹度が{0}になった。", Gvar.var_567),
                                    "", 7, false, true, false);
         }
         await Func.AutoDraw(5);

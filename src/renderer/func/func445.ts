@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func445(this: any) {
         Adap.dbgprt(445);
@@ -61,11 +62,9 @@ async function func445(this: any) {
         if (Gvar.var_1950 == 7) {
             Gvar.var_1983 = 1;
         }
-        await Func.setMessage("" + Gvar.var_1937 + "を読んだ。",
-                                "", 7, true, false, false);
+        await Func.setMessage(tf("{0}を読んだ。", Gvar.var_1937), "", 7, true, false, false);
         if (Gvar.var_1983 == 0) {
-            await Func.setMessage("" + Gvar.strengthen_item_name + "の研究は",
-                                    "この単行本ではできなかった…", 7, false, false, false);
+            await Func.setMessage(tf("{0}の研究は", Gvar.strengthen_item_name), "この単行本ではできなかった…", 7, false, false, false);
             await Func.AutoDraw(10);
             await Func.func437();
             Gvar.var_1252 = 0;
@@ -79,8 +78,7 @@ async function func445(this: any) {
         Gvar.strengthen_item_name = Gvar.item_name;
         Gvar.var_1988 = Gvar.var_233[Gvar.var_225].Var7 + Gvar.var_233[Gvar.var_225].Var8;
         if (Gvar.var_1988 >= 10) {
-            await Func.setMessage("" + Gvar.strengthen_item_name + "の",
-                                    "容量は限界のようだ", 7, false, false, false);
+            await Func.setMessage(tf("{0}の", Gvar.strengthen_item_name), "容量は限界のようだ", 7, false, false, false);
             await Func.AutoDraw(10);
             await Func.func437();
             Gvar.var_1252 = 0;
@@ -103,8 +101,7 @@ async function func445(this: any) {
         Gvar.var_1297 = 0;
         Gvar.var_233[Gvar.var_225].Var7 = Gvar.var_233[Gvar.var_225].Var7 + 1;
         Adap.DSPLAY(112);  // 刀の切れる音 or 強化した時のシャキーン 効果音
-        await Func.setMessage("" + Gvar.strengthen_item_name + "の",
-                                "容量が増えた！", 7, false, false, false);
+        await Func.setMessage(tf("{0}の", Gvar.strengthen_item_name), "容量が増えた！", 7, false, false, false);
         await Func.func437();
         await Func.AutoDraw(10);
         Gvar.var_1252 = 0;

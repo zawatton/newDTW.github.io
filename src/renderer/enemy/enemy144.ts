@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 144 川尻浩作の特殊能力
 async function enemy144(this: any) {
@@ -84,10 +85,10 @@ async function enemy144(this: any) {
         Gvar.var_78[Gvar.var_419].Var28 = 0;
         Gvar.var_78[Gvar.var_419].Var29 = 0;
         if (Gvar.var_127 == 1 || Gvar.var_132 >= 1) {
-            await Func.setMessage("何者かに", "" + Gvar.target_item_name + "を盗まれた！", 8, false, false, false);
+            await Func.setMessage("何者かに", tf("{0}を盗まれた！", Gvar.target_item_name), 8, false, false, false);
         }
         else
-            await Func.setMessage("川尻浩作に", "" + Gvar.target_item_name + "を盗まれた！", 8, false, false, false);
+            await Func.setMessage("川尻浩作に", tf("{0}を盗まれた！", Gvar.target_item_name), 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

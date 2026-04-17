@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 async function func596(this: any) {
         Adap.dbgprt(596);
@@ -200,13 +201,13 @@ async function func596(this: any) {
             Gvar.var_1478 = 0;
             Gvar.var_1479 = 0;
             if (Gvar.var_2849 == 0) {
-                await Func.setMessage("床の " + Gvar.var_2848 + "から", "針が飛び出した！", 8, false, false, false);
+                await Func.setMessage(tf("床の {0}から", Gvar.var_2848), "針が飛び出した！", 8, false, false, false);
             }
             if (Gvar.var_2849 == 1) {
-                await Func.setMessage("床の " + Gvar.var_2848 + "から", "ハサミが飛び出した！", 8, false, false, false);
+                await Func.setMessage(tf("床の {0}から", Gvar.var_2848), "ハサミが飛び出した！", 8, false, false, false);
             }
             if (Gvar.var_2849 == 2) {
-                await Func.setMessage("床の " + Gvar.var_2848 + "から", "カミソリが飛び出した！", 8, false, false, false);
+                await Func.setMessage(tf("床の {0}から", Gvar.var_2848), "カミソリが飛び出した！", 8, false, false, false);
             }
             await Func.AutoDraw(6);
             return;
@@ -310,13 +311,13 @@ async function func596(this: any) {
         }
 
         if (Gvar.var_2849 == 0) {
-            await Func.setMessage("体から針が飛び出した！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+            await Func.setMessage("体から針が飛び出した！", tf("{0}のダメージをうけた！", Gvar.var_2852), 8, false, false, false);
         }
         if (Gvar.var_2849 == 1) {
-            await Func.setMessage("体からハサミが飛び出した！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+            await Func.setMessage("体からハサミが飛び出した！", tf("{0}のダメージをうけた！", Gvar.var_2852), 8, false, false, false);
         }
         if (Gvar.var_2849 == 2) {
-            await Func.setMessage("体からカミソリが飛び出した！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+            await Func.setMessage("体からカミソリが飛び出した！", tf("{0}のダメージをうけた！", Gvar.var_2852), 8, false, false, false);
         }
         if (Gvar.var_128 >= 1) {
             await Func.func023();

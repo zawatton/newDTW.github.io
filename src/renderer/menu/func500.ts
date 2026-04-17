@@ -23,6 +23,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 /**
  * 8方向 + 中央 (=0) を var_2240 1..9 に対応付け。元コードの順序を厳密保持。
@@ -85,7 +86,7 @@ async function func500(this: any): Promise<void> {
 
     Gvar.var_2245 = Adap.rnd(9);
     const msg = MESSAGES[Gvar.var_2245] ?? MESSAGES[0];
-    await Func.setMessage(msg, "" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを受けた", 11, false, false, false);
+    await Func.setMessage(msg, tf("{0}のﾀﾞﾒｰｼﾞを受けた", Gvar.var_2244), 11, false, false, false);
 
     Adap.DSPLAY(103); // 殴打音
     for (let cnt2 = 0; cnt2 < 15; ++cnt2) {

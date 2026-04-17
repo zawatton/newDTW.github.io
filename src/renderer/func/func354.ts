@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // エフェクト "キラキラ" 表示処理
 async function func354(this: any) {
@@ -916,7 +917,7 @@ async function func354(this: any) {
                     }
                     Adap.color(0, 255, 0);
                     Adap.font(Gvar.font_type, 12);
-                    Adap.mes("" + Gvar.var_1336 + " ～ " + Gvar.var_1338);
+                    Adap.mes(tf("{0} ～ {1}", Gvar.var_1336, Gvar.var_1338));
                 }
                 if (Gvar.enemy_list == 46 || Gvar.enemy_list == 30 || Gvar.enemy_list == 124 || Gvar.enemy_list == 85 || Gvar.enemy_list == 99 || Gvar.enemy_list == 153) {
                     if (Gvar.enemy_list == 46) {
@@ -958,7 +959,7 @@ async function func354(this: any) {
                     }
                     Adap.color(0, 255, 0);
                     Adap.font(Gvar.font_type, 12);
-                    Adap.mes("" + Gvar.var_1336 + " ～ " + Gvar.var_1338);
+                    Adap.mes(tf("{0} ～ {1}", Gvar.var_1336, Gvar.var_1338));
                 }
             }
         }

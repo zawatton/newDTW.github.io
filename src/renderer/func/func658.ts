@@ -9,6 +9,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import * as Enemy from '../enemy/index'
+import { tf } from '../i18n'
 
  // 敵が攻撃を受けた時の動作処理
 async function func658(this: any) {
@@ -195,7 +196,7 @@ async function func658(this: any) {
                 Gvar.var_211 = 0;
                 Gvar.var_356 = 253;
             }
-            await Func.setMessage("" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを喰らった", "", 8, false, false, false);
+            await Func.setMessage(tf("{0}のﾀﾞﾒｰｼﾞを喰らった", Gvar.var_2244), "", 8, false, false, false);
             await Func.AutoDraw(5);
             Gvar.var_389 = 0;
             Gvar.var_83[Gvar.var_3042].Var8 = 0;
@@ -215,7 +216,7 @@ async function func658(this: any) {
                 Gvar.var_211 = 0;
                 Gvar.var_356 = 252;
             }
-            await Func.setMessage("" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを喰らった", "", 8, false, false, false);
+            await Func.setMessage(tf("{0}のﾀﾞﾒｰｼﾞを喰らった", Gvar.var_2244), "", 8, false, false, false);
             await Func.AutoDraw(5);
             Gvar.var_389 = 0;
             Gvar.var_83[Gvar.var_314].Var8 = 0;

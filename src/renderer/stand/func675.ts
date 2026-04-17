@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // 旧 func675
 async function func675(this: any) {
@@ -187,7 +188,7 @@ async function func675(this: any) {
         }
         await Music.func112();
         await Func.setMessage("死の直前まで時間が戻った！", "", 7, true, false, false);
-        await Func.setMessage("" + Gvar.var_3082 + "は", "ｴﾈﾙｷﾞｰを使い果たして消滅した。", 7, false, false, false);
+        await Func.setMessage(tf("{0}は", Gvar.var_3082), "ｴﾈﾙｷﾞｰを使い果たして消滅した。", 7, false, false, false);
         await Func.AutoDraw(30);
         Gvar.var_217 = 0;
         await Func.func009(); // ディアボロ側ターン処理(ループ処理)

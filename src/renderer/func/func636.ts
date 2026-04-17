@@ -9,6 +9,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import * as Enemy from '../enemy/index'
+import { tf } from '../i18n'
 
 // ディアボロの攻撃(話しかけ)動作処理 (対象毎フラグ処理)
 // ディアボロが攻撃or話しかけた時の動作処理
@@ -570,7 +571,7 @@ async function func636(this: any) {
                     await Func.setMessage("絶っ～～～～～～～～～対に！", "負けなあああああああいィィィ", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 5) {
-                    await Func.setMessage("さすが" + Gvar.enemy_name + "…", "しかしその動き… スデに憶えた！", 7, false, false, true);
+                    await Func.setMessage(tf("さすが{0}…", Gvar.enemy_name), "しかしその動き… スデに憶えた！", 7, false, false, true);
                 }
                 if (Gvar.var_143 == 6) {
                     await Func.setMessage("さて～～～  今度の攻撃には", "\t耐えられるかな？", 7, false, false, true);
@@ -761,18 +762,18 @@ async function func636(this: any) {
         }
         if (Gvar.var_1194 != 1) {
             if (Gvar.var_209 != 999) {
-                await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "" + Gvar.var_209 + "のダメージ！", 7, false, false, false);
+                await Func.setMessage(tf("ﾃﾞｨｱﾎﾞﾛは{0}に", Gvar.enemy_name), tf("{0}のダメージ！", Gvar.var_209), 7, false, false, false);
             }
             if (Gvar.var_209 == 999) {
-                await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "致命的なダメージ！", 7, false, false, false);
+                await Func.setMessage(tf("ﾃﾞｨｱﾎﾞﾛは{0}に", Gvar.enemy_name), "致命的なダメージ！", 7, false, false, false);
             }
         }
         if (Gvar.var_1194 == 1) {
             if (Gvar.var_209 != 999) {
-                await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "" + Gvar.var_209 + "のダメージ！", 12, false, false, false);
+                await Func.setMessage(tf("ﾃﾞｨｱﾎﾞﾛは{0}に", Gvar.enemy_name), tf("{0}のダメージ！", Gvar.var_209), 12, false, false, false);
             }
             if (Gvar.var_209 == 999) {
-                await Func.setMessage("ﾃﾞｨｱﾎﾞﾛは" + Gvar.enemy_name + "に", "致命的なダメージ！", 12, false, false, false);
+                await Func.setMessage(tf("ﾃﾞｨｱﾎﾞﾛは{0}に", Gvar.enemy_name), "致命的なダメージ！", 12, false, false, false);
             }
         }
         await Func.AutoDraw(3);
@@ -808,7 +809,7 @@ async function func636(this: any) {
                 if (Gvar.var_211 >= Gvar.var_352) {
                     Gvar.var_211 = Gvar.var_352;
                 }
-                await Func.setMessage("" + Gvar.var_209 + "の養分を吸収した。", "", 7, false, false, false);
+                await Func.setMessage(tf("{0}の養分を吸収した。", Gvar.var_209), "", 7, false, false, false);
             }
         }
         // No = 61 ヨーヨーマッ
@@ -925,7 +926,7 @@ async function func636(this: any) {
             if (Gvar.var_127 != 0 || Gvar.var_132 != 0) {
                 Gvar.enemy_name = "何者か";
             }
-            await Func.setMessage("" + Gvar.enemy_name + "をやっつけた", "" + Gvar.var_2956 + "の経験値を手に入れた", 7, false, false, false);
+            await Func.setMessage(tf("{0}をやっつけた", Gvar.enemy_name), tf("{0}の経験値を手に入れた", Gvar.var_2956), 7, false, false, false);
             Gvar.var_2945 = Gvar.enemy_list;
             Gvar.var_1034 = Gvar.enemy_list;
             // No = 1 なので、ホテルの外
@@ -1070,45 +1071,45 @@ async function func636(this: any) {
             if (Gvar.var_2960 == 1 || Gvar.var_2961 == 1 || Gvar.var_2962 == 1) {
                 await Func.AutoDraw(8);
                 if (Gvar.var_2960 == 1 && Gvar.var_2961 == 0 && Gvar.var_2962 == 0) {
-                    await Func.setMessage("" + Gvar.var_2943 + "を重くした！", "", 7, false, false, false);
+                    await Func.setMessage(tf("{0}を重くした！", Gvar.var_2943), "", 7, false, false, false);
                 }
                 if (Gvar.var_2960 == 1 && Gvar.var_2961 == 1 && Gvar.var_2962 == 0) {
                     if (Gvar.var_83[Gvar.var_314].Var20 != 2) {
-                        await Func.setMessage("" + Gvar.var_2943 + "を", "重くして能力を封じた！", 7, false, false, false);
+                        await Func.setMessage(tf("{0}を", Gvar.var_2943), "重くして能力を封じた！", 7, false, false, false);
                     }
                     if (Gvar.var_83[Gvar.var_314].Var20 == 2) {
-                        await Func.setMessage("" + Gvar.var_2943 + "を", "重くして攻撃を封じた！", 7, false, false, false);
+                        await Func.setMessage(tf("{0}を", Gvar.var_2943), "重くして攻撃を封じた！", 7, false, false, false);
                     }
                 }
                 if (Gvar.var_2960 == 1 && Gvar.var_2961 == 0 && Gvar.var_2962 == 1) {
-                    await Func.setMessage("" + Gvar.var_2943 + "を", "重くして凍らせた！", 7, false, false, false);
+                    await Func.setMessage(tf("{0}を", Gvar.var_2943), "重くして凍らせた！", 7, false, false, false);
                 }
                 if (Gvar.var_2960 == 1 && Gvar.var_2961 == 1 && Gvar.var_2962 == 1) {
                     if (Gvar.var_83[Gvar.var_314].Var20 != 2) {
-                        await Func.setMessage("" + Gvar.var_2943 + "を", "重くして能力を封じて凍らせた！", 7, false, false, false);
+                        await Func.setMessage(tf("{0}を", Gvar.var_2943), "重くして能力を封じて凍らせた！", 7, false, false, false);
                     }
                     if (Gvar.var_83[Gvar.var_314].Var20 == 2) {
-                        await Func.setMessage("" + Gvar.var_2943 + "を", "重くして攻撃を封じて凍らせた！", 7, false, false, false);
+                        await Func.setMessage(tf("{0}を", Gvar.var_2943), "重くして攻撃を封じて凍らせた！", 7, false, false, false);
                     }
                 }
                 if (Gvar.var_2960 == 0 && Gvar.var_2961 == 1 && Gvar.var_2962 == 0) {
                     if (Gvar.var_83[Gvar.var_314].Var20 != 2) {
-                        await Func.setMessage("" + Gvar.var_2943 + "の能力を封じた！", "", 7, false, false, false);
+                        await Func.setMessage(tf("{0}の能力を封じた！", Gvar.var_2943), "", 7, false, false, false);
                     }
                     if (Gvar.var_83[Gvar.var_314].Var20 == 2) {
-                        await Func.setMessage("" + Gvar.var_2943 + "の攻撃を封じた！", "", 7, false, false, false);
+                        await Func.setMessage(tf("{0}の攻撃を封じた！", Gvar.var_2943), "", 7, false, false, false);
                     }
                 }
                 if (Gvar.var_2960 == 0 && Gvar.var_2961 == 1 && Gvar.var_2962 == 1) {
                     if (Gvar.var_83[Gvar.var_314].Var20 != 2) {
-                        await Func.setMessage("" + Gvar.var_2943 + "の", "能力を封じて凍らせた！", 7, false, false, false);
+                        await Func.setMessage(tf("{0}の", Gvar.var_2943), "能力を封じて凍らせた！", 7, false, false, false);
                     }
                     if (Gvar.var_83[Gvar.var_314].Var20 == 2) {
-                        await Func.setMessage("" + Gvar.var_2943 + "の", "攻撃を封じて凍らせた！", 7, false, false, false);
+                        await Func.setMessage(tf("{0}の", Gvar.var_2943), "攻撃を封じて凍らせた！", 7, false, false, false);
                     }
                 }
                 if (Gvar.var_2960 == 0 && Gvar.var_2961 == 0 && Gvar.var_2962 == 1) {
-                    await Func.setMessage("" + Gvar.var_2943 + "を凍らせた！", "", 7, false, false, false);
+                    await Func.setMessage(tf("{0}を凍らせた！", Gvar.var_2943), "", 7, false, false, false);
                 }
             }
         }

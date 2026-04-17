@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // ボーイ・II・マン
 // 旧 func526
@@ -33,7 +34,7 @@ async function func526(this: any) {
             Gvar.var_233[Gvar.var_2373].Var19 = 1;
         }
         Gvar.var_233[Gvar.var_2373].Var5 = Gvar.var_233[Gvar.var_2373].Var5 + 1;
-        await Func.setMessage("" + Gvar.strengthen_item_name + "の", "能力を１つ消去した。", 7, false, false, false);
+        await Func.setMessage(tf("{0}の", Gvar.strengthen_item_name), "能力を１つ消去した。", 7, false, false, false);
         await Func.AutoDraw(10);
         Gvar.var_225 = Gvar.var_2300;
         if (Gvar.var_2301 == 1) {

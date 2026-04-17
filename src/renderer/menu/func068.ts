@@ -6,6 +6,7 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import { tf } from '../i18n'
 
 // メニュー画面各コンディション表示
 // 旧 func068
@@ -38,26 +39,26 @@ async function func068(this: any) {
         Adap.pos(110, 255);
         Adap.color(255, 255, 255);
         Adap.mes("");
-        Adap.mes("" + Gvar.var_565 + "/" + Gvar.var_566);
+        Adap.mes(tf("{0}/{1}", Gvar.var_565, Gvar.var_566));
         // No = 1 なので、ホテルの外
         if (Gvar.dungeon_number == 1) {
-            Adap.mes("" + Gvar.dungeon1_floor + "階");
+            Adap.mes(tf("{0}階", Gvar.dungeon1_floor));
         }
         // No = 2 なので、レクイエムの大迷宮
         if (Gvar.dungeon_number == 2) {
-            Adap.mes("" + Gvar.dungeon2_floor + "階");
+            Adap.mes(tf("{0}階", Gvar.dungeon2_floor));
         }
         // No = 3 なので、ディアボロの試練
         if (Gvar.dungeon_number == 3) {
-            Adap.mes("" + Gvar.dungeon3_floor + "階");
+            Adap.mes(tf("{0}階", Gvar.dungeon3_floor));
         }
         // No = 4 なので、一巡後の世界
         if (Gvar.dungeon_number == 4) {
-            Adap.mes("" + Gvar.dungeon4_floor + "階");
+            Adap.mes(tf("{0}階", Gvar.dungeon4_floor));
         }
         // No = 5 なので、鉄獄(鉄の牢獄)
         if (Gvar.dungeon_number == 5) {
-            Adap.mes("" + Gvar.dungeon5_floor + "階");
+            Adap.mes(tf("{0}階", Gvar.dungeon5_floor));
         }
         if (Gvar.dungeon_number != 1 && Gvar.dungeon_number != 2 && Gvar.dungeon_number != 3 && Gvar.dungeon_number != 4 && Gvar.dungeon_number != 5) {
             Adap.mes("- 階");
@@ -72,7 +73,7 @@ async function func068(this: any) {
         Adap.pos(235, 255);
         Adap.color(255, 255, 255);
         Adap.mes("");
-        Adap.mes("" + Gvar.var_350 + "/" + Gvar.var_567);
+        Adap.mes(tf("{0}/{1}", Gvar.var_350, Gvar.var_567));
         Adap.mes(Gvar.var_568);
         return;
 }

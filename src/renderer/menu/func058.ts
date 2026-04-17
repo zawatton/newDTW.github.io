@@ -6,6 +6,7 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import { tf } from '../i18n'
 
 // メニュー画面の"資料"の表示 (ハイスコア、コミックス、死因リスト、敵図鑑)
 // 旧 func058
@@ -112,7 +113,7 @@ async function func058(this: any) {
                 Adap.mes("ディアボロの試練");
             }
             if (Gvar.var_524 >= 1) { // 鉄獄(鉄の牢獄)へ行けるようになった時のフラグ? ロッコ・バロッコ所長との会話が終わったフラグ
-                Adap.mes("鉄獄"); // Ver0.1403にて修正。Adap.mes("" + Gvar.var_21) → Adap.mes("鉄獄")
+                Adap.mes("鉄獄"); // Ver0.1403にて修正。Adap.mes(tf("{0}", Gvar.var_21)) → Adap.mes("鉄獄")
             }
             if (Gvar.var_523 >= 1) {  // 一巡後の世界へ行けるようになった時のフラグ? 地球儀が回転
                 Adap.mes("一巡後の世界");

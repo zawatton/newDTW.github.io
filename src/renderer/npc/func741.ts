@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // 旧 func741
 async function func741(this: any) {
@@ -58,7 +59,7 @@ async function func741(this: any) {
             Gvar.var_3089 = Gvar.var_83[Gvar.var_3072].Var39;
             await Func.func682();
             if (Gvar.var_3073 < 99999) {
-                await Func.setMessage("(あと" + Gvar.var_3073 + "くらいで", "もっと強くなれる気がするぜ！)", 7, true, false, true);
+                await Func.setMessage(tf("(あと{0}くらいで", Gvar.var_3073), "もっと強くなれる気がするぜ！)", 7, true, false, true);
             }
             if (Gvar.var_3073 >= 99999) {
                 await Func.setMessage("(おれの強さはこれが限界だ！)", "", 7, true, false, true);
@@ -70,13 +71,13 @@ async function func741(this: any) {
             await Func.func626();
             Gvar.var_3125 = Adap.rnd(3);
             if (Gvar.var_3125 == 0) {
-                await Func.setMessage("や…やった、やっつけたぞ", "" + Gvar.enemy_name + "め…", 7, true, false, true);
+                await Func.setMessage("や…やった、やっつけたぞ", tf("{0}め…", Gvar.enemy_name), 7, true, false, true);
             }
             if (Gvar.var_3125 == 1) {
-                await Func.setMessage("かかってきやがれ", "" + Gvar.enemy_name + "め！", 7, true, false, true);
+                await Func.setMessage("かかってきやがれ", tf("{0}め！", Gvar.enemy_name), 7, true, false, true);
             }
             if (Gvar.var_3125 == 2) {
-                await Func.setMessage("やり～！" + Gvar.enemy_name + "め", "頭悪いぜッ！", 7, true, false, true);
+                await Func.setMessage(tf("やり～！{0}め", Gvar.enemy_name), "頭悪いぜッ！", 7, true, false, true);
             }
         }
         await Func.func051(); // キー入力待ち処理

@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func573(this: any) {
         Adap.dbgprt(573);
@@ -105,7 +106,7 @@ async function func573(this: any) {
                     Gvar.disc_rarity = Gvar.var_78[Gvar.var_419].Var13;
                     await Func.func492(); // アイテムリスト呼び出し
                     Gvar.target_item_name = Gvar.item_name;
-                    await Func.setMessage("" + Gvar.target_item_name + "が", "爆発した！", 7, false, false, false);
+                    await Func.setMessage(tf("{0}が", Gvar.target_item_name), "爆発した！", 7, false, false, false);
                     Gvar.var_455 = Gvar.var_83[Gvar.var_2694].Var1;
                     Gvar.var_456 = Gvar.var_83[Gvar.var_2694].Var2;
                     Gvar.var_83[Gvar.var_2694].Var8 = 1;

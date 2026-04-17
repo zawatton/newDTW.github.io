@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // バステト女神の罠を蹈んで磁力化した際の処理
 async function func542(this: any) {
@@ -183,7 +184,7 @@ async function func542(this: any) {
             Gvar.var_2478 = Math.floor(Gvar.var_211 / 2);
             Gvar.var_211 = Gvar.var_211 - Gvar.var_2478;
             Gvar.var_208 = Gvar.var_2478 + Gvar.var_208;
-            await Func.setMessage("磁力で 車が飛んできた！", "" + Gvar.var_2478 + "のダメージを喰らった。", 10, false, false, false);
+            await Func.setMessage("磁力で 車が飛んできた！", tf("{0}のダメージを喰らった。", Gvar.var_2478), 10, false, false, false);
             Gvar.var_108 = 1;
             Gvar.var_271 = 1; // エフェクト "キラキラ" 表示フラグON
             Gvar.var_1409 = 1;

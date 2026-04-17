@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 旧 func885
 async function func0944(this: any) {
@@ -83,11 +84,11 @@ async function func0944(this: any) {
     Adap.font(Gvar.font_type, 16, 1);
     if (Gvar.var_3786 < 10) {
         Adap.pos(Gvar.var_1631 - Gvar.var_1635 + 150, Gvar.var_1632 + Gvar.var_1634 + Gvar.var_1636 - 8);
-        Adap.mes("" + Gvar.var_3786);
+        Adap.mes(tf("{0}", Gvar.var_3786));
     }
     if (Gvar.var_3786 >= 10) {
         Adap.pos(Gvar.var_1631 - Gvar.var_1635 + 145, Gvar.var_1632 + Gvar.var_1634 + Gvar.var_1636 - 8);
-        Adap.mes("" + Gvar.var_3786);
+        Adap.mes(tf("{0}", Gvar.var_3786));
     }
     Adap.color(255, 255, 255);
     Gvar.var_3803 = Gvar.var_3784;
@@ -110,7 +111,7 @@ async function func0944(this: any) {
         if (Gvar.var_3796[Gvar.var_3797] == 3) {
             Adap.color(0, 255, 255);
         }
-        Adap.mes("" + Gvar.var_3806);
+        Adap.mes(tf("{0}", Gvar.var_3806));
         Gvar.var_3797++;
         Gvar.var_3803 = Gvar.var_3803 + 20;
     }

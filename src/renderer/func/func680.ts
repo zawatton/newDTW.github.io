@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // ディアボロのレベルが上がる際の処理
 async function func680(this: any) {
@@ -46,7 +47,7 @@ async function func680(this: any) {
         }
         if (Gvar.var_2201 == 1) {
             await Music.func099();
-            await Func.setMessage("ﾃﾞｨｱﾎﾞﾛはﾚﾍﾞﾙ" + Gvar.current_level + "に上がった！", "", 7, true, false, false);
+            await Func.setMessage(tf("ﾃﾞｨｱﾎﾞﾛはﾚﾍﾞﾙ{0}に上がった！", Gvar.current_level), "", 7, true, false, false);
             await Func.AutoDraw(5);
         }
         Gvar.var_2201 = 0;

@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func603(this: any) {
         Adap.dbgprt(603);
@@ -134,13 +135,13 @@ async function func603(this: any) {
         }
         Gvar.var_2861 = Gvar.enemy_name;
         if (Gvar.var_2858 == 164) {
-            await Func.setMessage("ｴｼﾃﾞｨｼの脳は", "" + Gvar.var_2861 + "に取り憑いた！", 8, true, false, false);
+            await Func.setMessage("ｴｼﾃﾞｨｼの脳は", tf("{0}に取り憑いた！", Gvar.var_2861), 8, true, false, false);
         }
         if (Gvar.var_2858 == 165) {
-            await Func.setMessage("ｴﾎﾞﾆｰﾃﾞﾋﾞﾙは", "" + Gvar.var_2861 + "に取り憑いた！", 8, true, false, false);
+            await Func.setMessage("ｴﾎﾞﾆｰﾃﾞﾋﾞﾙは", tf("{0}に取り憑いた！", Gvar.var_2861), 8, true, false, false);
         }
         Adap.DSPLAY(198);
-        await Func.setMessage("" + Gvar.var_2861 + "は", "レベル " + Gvar.var_83[Gvar.var_2749].Var39 + " になった！", 8, false, false, false);
+        await Func.setMessage(tf("{0}は", Gvar.var_2861), tf("レベル {0} になった！", Gvar.var_83[Gvar.var_2749].Var39), 8, false, false, false);
         await Func.AutoDraw(5);
         return;
 }

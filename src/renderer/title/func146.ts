@@ -6,7 +6,7 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
-import { t } from '../i18n'
+import { t, tf } from '../i18n'
 
 // ログイン画面表示(冒険に出る、ボス日記を消す、魔少年の問題、配布サイトへ、終了)
 async function func146(this: any) {
@@ -107,10 +107,10 @@ async function func146(this: any) {
         
         // ログイン画面下のバージョンNo. 
         if (Gvar.var_12 == 0) { // 通信サーバーフラグ？？
-            Adap.mes("version " + Gvar.version_number);
+            Adap.mes(tf("version {0}", Gvar.version_number));
         }
         if (Gvar.var_12 == 1) { // 通信サーバーフラグ？？
-            Adap.mes("Version " + Gvar.version_number);
+            Adap.mes(tf("Version {0}", Gvar.version_number));
         }
         return;
 }

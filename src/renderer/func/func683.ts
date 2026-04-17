@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func683(this: any) {
         Adap.dbgprt(683);
@@ -76,8 +77,7 @@ async function func683(this: any) {
         }
         if (Gvar.var_2201 == 1) {
             Adap.DSPLAY(142); // レベルアップした時の効果音
-            await Func.setMessage("" + Gvar.var_3091 + "は",
-                                    "レベルが上がった！", 7, true, false, false);
+            await Func.setMessage(tf("{0}は", Gvar.var_3091), "レベルが上がった！", 7, true, false, false);
         }
         Gvar.var_2201 = 0;
         return;

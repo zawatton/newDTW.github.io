@@ -26,6 +26,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 /** var_486 ↔ var_233 で複製する Var{N} 添字一覧 (Var0/3-6/11-29) */
 const ITEM_FIELDS: ReadonlyArray<number> = [
@@ -67,7 +68,7 @@ async function func474(this: any): Promise<void> {
     await Func.func492(); // アイテムリスト呼び出し
     await Func.func433(); // アイテム配列(所持アイテム)初期化
     Gvar.var_1866 = 0;
-    await Func.setMessage("" + Gvar.item_name + "を出した", "", 7, false, false, false);
+    await Func.setMessage(tf("{0}を出した", Gvar.item_name), "", 7, false, false, false);
     await Func.AutoDraw(3);
     await Func.func051(); // キー入力待ち
     Gvar.var_213 = 1;

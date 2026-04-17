@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func363(this: any) {
         Adap.dbgprt(363);
@@ -62,31 +63,31 @@ async function func363(this: any) {
             Adap.pos(20, 43);
             if (Gvar.var_1613 == 1) {
                 Adap.mes("第一部  ﾌｧﾝﾄﾑ･ﾌﾞﾗｯﾄﾞ");
-                Adap.mes("" + Gvar.var_1614 + "/15");
+                Adap.mes(tf("{0}/15", Gvar.var_1614));
             }
             if (Gvar.var_1613 == 2) {
                 Adap.mes("第二部  戦闘潮流");
-                Adap.mes("" + Gvar.var_1614 + "/15");
+                Adap.mes(tf("{0}/15", Gvar.var_1614));
             }
             if (Gvar.var_1613 == 3) {
                 Adap.mes("第三部  ｽﾀｰﾀﾞｽﾄ･ｸﾙｾｲﾀﾞｰｽ");
-                Adap.mes("" + Gvar.var_1614 + "/41");
+                Adap.mes(tf("{0}/41", Gvar.var_1614));
             }
             if (Gvar.var_1613 == 4) {
                 Adap.mes("第四部  ﾀﾞｲﾔﾓﾝﾄﾞは砕けない");
-                Adap.mes("" + Gvar.var_1614 + "/39");
+                Adap.mes(tf("{0}/39", Gvar.var_1614));
             }
             if (Gvar.var_1613 == 5) {
                 Adap.mes("第五部  黄金の風");
-                Adap.mes("" + Gvar.var_1614 + "/24");
+                Adap.mes(tf("{0}/24", Gvar.var_1614));
             }
             if (Gvar.var_1613 == 6) {
                 Adap.mes("第六部  ｽﾄｰﾝ･ｵｰｼｬﾝ");
-                Adap.mes("" + Gvar.var_1614 + "/23");
+                Adap.mes(tf("{0}/23", Gvar.var_1614));
             }
             if (Gvar.var_1613 == 7) {
                 Adap.mes("その他");
-                Adap.mes("" + Gvar.var_1614 + "/4");
+                Adap.mes(tf("{0}/4", Gvar.var_1614));
             }
         }
         Adap.gmode(2); // 透明色付きコピー。 RGBがすべて0(完全な黒)のドットは透明色とみなされコピーされない。
@@ -127,31 +128,31 @@ async function func363(this: any) {
         Adap.color(0, 255, 0);
 
         Adap.font(Gvar.font_type, 14, 1);
-        Adap.mes("【 " + Gvar.var_1643 + " 】");
+        Adap.mes(tf("【 {0} 】", Gvar.var_1643));
         Adap.color(255, 255, 255);
 
         Adap.font("メイリオ", 12, 1);
         Adap.pos(35, 160);
-        Adap.mes("体力  ：" + Gvar.var_1644);
+        Adap.mes(tf("体力  ：{0}", Gvar.var_1644));
         Adap.pos(135, 160);
-        Adap.mes("攻撃力：" + Gvar.var_1645);
+        Adap.mes(tf("攻撃力：{0}", Gvar.var_1645));
         Adap.pos(235, 160);
-        Adap.mes("防御力：" + Gvar.var_1646);
+        Adap.mes(tf("防御力：{0}", Gvar.var_1646));
         Adap.pos(35, 180);
-        Adap.mes("経験値：" + Gvar.var_1647);
+        Adap.mes(tf("経験値：{0}", Gvar.var_1647));
         Adap.pos(135, 180);
-        Adap.mes("アイテム所持率：" + Gvar.var_1648);
+        Adap.mes(tf("アイテム所持率：{0}", Gvar.var_1648));
         Adap.pos(235, 180);
         Adap.mes("");
         Adap.pos(35, 200);
-        Adap.mes("タイプ：" + Gvar.var_1649);
+        Adap.mes(tf("タイプ：{0}", Gvar.var_1649));
         Adap.pos(35, 223);
         Adap.mes("能力");
         Adap.pos(35, 240);
-        Adap.mes("" + Gvar.var_1650);
-        Adap.mes("" + Gvar.var_1651);
-        Adap.mes("" + Gvar.var_1652);
-        Adap.mes("" + Gvar.var_1653);
+        Adap.mes(tf("{0}", Gvar.var_1650));
+        Adap.mes(tf("{0}", Gvar.var_1651));
+        Adap.mes(tf("{0}", Gvar.var_1652));
+        Adap.mes(tf("{0}", Gvar.var_1653));
         Adap.pos(25, 305);
         if (Gvar.var_1038 <= 1 || Gvar.var_1609 != 0) {
             Adap.mes("【Ｚ：攻撃】【Ａ：やられ】");

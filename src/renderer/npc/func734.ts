@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 旧 func734
 async function func734(this: any) {
@@ -15,8 +16,7 @@ async function func734(this: any) {
         Gvar.var_3072 = Gvar.var_314;
         Gvar.enemy_list = Gvar.var_83[Gvar.var_3072].Var0;
         await Func.func626();
-        await Func.setMessage("" + Gvar.enemy_name + "「・・・・」",
-                                "", 7, false, false, false);
+        await Func.setMessage(tf("{0}「・・・・」", Gvar.enemy_name), "", 7, false, false, false);
         await Func.AutoDraw(5);
         await Func.func009(); // ディアボロ側ターン処理(ループ処理)
         return;

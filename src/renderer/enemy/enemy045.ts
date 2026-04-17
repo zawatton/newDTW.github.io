@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 45 敵由花子 & No = 158 敵プッツン由花子の特殊能力
 async function enemy045(this: any) {
@@ -110,8 +111,7 @@ async function enemy045(this: any) {
         Gvar.var_411 = 0;
         Gvar.var_83[Gvar.var_412].Var21 = 0;
         Gvar.var_389 = 0;
-        await Func.setMessage("" + Gvar.var_2886 + "が",
-                               "呪われた！", 8, true, false, false);
+        await Func.setMessage(tf("{0}が", Gvar.var_2886), "呪われた！", 8, true, false, false);
         if (Gvar.var_2887 == 1) {
             await Func.setMessage("･･･と思ったが、",
                                    "漆黒のオーラに守られて無事だった。", 7, false, false, false);

@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 敵側のターン処理
 async function func020(this: any) {
@@ -180,8 +181,7 @@ async function func020(this: any) {
                 Gvar.var_78[Gvar.var_419].Var28 = 0;
                 Gvar.var_78[Gvar.var_419].Var29 = 0;
 
-                await Func.setMessage("罪悪感で" + Gvar.target_item_name + " 奪われた！",
-                                        "", 8, false, false, false);
+                await Func.setMessage(tf("罪悪感で{0} 奪われた！", Gvar.target_item_name), "", 8, false, false, false);
 
                 await Func.AutoDraw(20);
                 Gvar.var_199 = Gvar.var_413;

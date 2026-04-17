@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func602(this: any) {
         Adap.dbgprt(602);
@@ -175,7 +176,7 @@ async function func602(this: any) {
         if (Gvar.var_83[Gvar.var_2749].Var3 > Gvar.var_2792) {
             Gvar.var_83[Gvar.var_2749].Var3 = Gvar.var_2792;
         }
-        await Func.setMessage("" + Gvar.enemy_name + "の", "傷がふさがった。", 7, false, false, false);
+        await Func.setMessage(tf("{0}の", Gvar.enemy_name), "傷がふさがった。", 7, false, false, false);
         await Func.AutoDraw(10);
         return;
 }

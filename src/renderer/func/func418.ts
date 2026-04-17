@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 遠投状態(アヌビス神装備)でアイテムを投げた時の動作処理
 async function func418(this: any) {
@@ -14,8 +15,7 @@ async function func418(this: any) {
         Gvar.belongings_item_list = Gvar.var_1846;
         Gvar.disc_rarity = Gvar.var_1833;
         await Func.func399(); // 遠投状態で投げた時のアイテム表示
-        await Func.setMessage("" + Gvar.var_1832 + " は",
-                              "ナイルの川底に沈んだ。", 7, false, false, false);
+        await Func.setMessage(tf("{0} は", Gvar.var_1832), "ナイルの川底に沈んだ。", 7, false, false, false);
         Gvar.payment_amount = 0;
         if (Gvar.var_1850 == 1) {
             Gvar.belongings_item_list = Gvar.var_1846;

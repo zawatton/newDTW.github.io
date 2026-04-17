@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
+import { tf } from '../i18n'
 
 // 旧 func853
 async function func0912(this: any) {
@@ -63,14 +64,14 @@ async function func0912(this: any) {
     Adap.boxf(Gvar.var_3538 + 10, Gvar.var_3539 + Gvar.var_3541 - 20, Gvar.var_3538 + 80 + 10, Gvar.var_3539 + Gvar.var_3541 - 5);
     Adap.color(255, 255, 0);
     Adap.pos(Gvar.var_3538 + 20, Gvar.var_3539 + Gvar.var_3541 - 18);
-    Adap.mes("" + Gvar.var_3596);
+    Adap.mes(tf("{0}", Gvar.var_3596));
     Adap.pos(Gvar.var_3538 + 20 + 35, Gvar.var_3539 + Gvar.var_3541 - 18);
-    Adap.mes("" + Gvar.var_3597);
+    Adap.mes(tf("{0}", Gvar.var_3597));
     Adap.color(0, 0, 0);
     Adap.boxf(350, 10, 670, 30);
     Adap.color(255, 255, 255);
     Adap.pos(355, 15);
-    Adap.mes("" + Gvar.var_3571);
+    Adap.mes(tf("{0}", Gvar.var_3571));
     Adap.color(80, 80, 80);
     Adap.boxf(Gvar.var_3510, Gvar.var_3511, Gvar.var_3510 + 40, Gvar.var_3511 + 40);
     Adap.boxf(Gvar.var_3512, Gvar.var_3513, Gvar.var_3512 + 40, Gvar.var_3513 + 40);
@@ -122,11 +123,11 @@ async function func0912(this: any) {
     }
     if (Gvar.var_3301 < 10) {
         Adap.pos(Gvar.var_3510 + 3, Gvar.var_3511 + 25);
-        Adap.mes("部屋" + " " + Gvar.var_3301);
+        Adap.mes(tf("部屋 {0}", Gvar.var_3301));
     }
     if (Gvar.var_3301 >= 10) {
         Adap.pos(Gvar.var_3510 + 3, Gvar.var_3511 + 25);
-        Adap.mes("部屋" + "" + Gvar.var_3301);
+        Adap.mes(tf("部屋{0}", Gvar.var_3301));
     }
     Adap.pos(Gvar.var_3512 + 3, Gvar.var_3513 + 25);
     Adap.mes("通路");

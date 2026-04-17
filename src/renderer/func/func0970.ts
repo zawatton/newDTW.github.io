@@ -2,6 +2,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from './index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // 旧 func911
 async function func0970(this: any) {
@@ -126,7 +127,7 @@ async function func0970(this: any) {
     }
     await Func.func430();
     await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-    await Func.setMessage("「" + Gvar.var_3883 + "」は", "ﾑｰﾃﾞｨｰﾌﾞﾙｰｽの手で運ばれていった", 7, false, false, false);
+    await Func.setMessage(tf("「{0}」は", Gvar.var_3883), "ﾑｰﾃﾞｨｰﾌﾞﾙｰｽの手で運ばれていった", 7, false, false, false);
     Adap.tcpput(Gvar.var_3882, Gvar.var_1050);
     Adap.tcpput("\n", Gvar.var_1050);
     Gvar.var_1457 = Gvar.var_66;

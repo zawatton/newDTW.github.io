@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // ダンジョン内で仲間の成長したペッシに話しかけた時のメッセージ処理
 // 旧 func753
@@ -63,8 +64,7 @@ async function func753(this: any) {
             Gvar.var_3089 = Gvar.var_83[Gvar.var_3072].Var39;
             await Func.func682();
             if (Gvar.var_3073 < 99999) {
-                await Func.setMessage("あと" + Gvar.var_3073 + "くらいで",
-                                       "もっと強くなれるぜ！", 7, false, false, true);
+                await Func.setMessage(tf("あと{0}くらいで", Gvar.var_3073), "もっと強くなれるぜ！", 7, false, false, true);
             }
             if (Gvar.var_3073 >= 99999) {
                 await Func.setMessage("俺の強さはこれが限界だぜ！",
@@ -78,16 +78,14 @@ async function func753(this: any) {
             await Func.func626();
             Gvar.var_3125 = Adap.rnd(3);
             if (Gvar.var_3125 == 0) {
-                await Func.setMessage("" + Gvar.enemy_name + "をやっちまった～♪",
-                                       "でも思ったよりたいしたことないな", 7, false, false, true);
+                await Func.setMessage(tf("{0}をやっちまった～♪", Gvar.enemy_name), "でも思ったよりたいしたことないな", 7, false, false, true);
             }
             if (Gvar.var_3125 == 1) {
                 await Func.setMessage("これで俺に向かってマンモーニだなんて",
                                        "言えるヤツは  誰一人いねー…", 7, false, false, true);
             }
             if (Gvar.var_3125 == 2) {
-                await Func.setMessage("" + Gvar.enemy_name + "の",
-                                       "心臓えぐりとってやったぜ…", 7, false, false, true);
+                await Func.setMessage(tf("{0}の", Gvar.enemy_name), "心臓えぐりとってやったぜ…", 7, false, false, true);
             }
         }
         await Func.AutoDraw(15);

@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 87 エシディシの特殊能力
 async function enemy087(this: any) {
@@ -90,7 +91,7 @@ async function enemy087(this: any) {
             Gvar.var_233[Gvar.var_475]["Var" + cnt2] = 0;
         }
         Gvar.var_233[Gvar.var_475].Var0 = 641;
-        await Func.setMessage("" + Gvar.target_item_name + "は", "消し炭になった！", 8, false, false, false);
+        await Func.setMessage(tf("{0}は", Gvar.target_item_name), "消し炭になった！", 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

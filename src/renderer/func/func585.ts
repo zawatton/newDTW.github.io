@@ -9,6 +9,7 @@ import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
 import * as Enemy from '../enemy/index'
+import { tf } from '../i18n'
 
 async function func585(this: any) {
         Adap.dbgprt(585);
@@ -212,7 +213,7 @@ async function func585(this: any) {
                 await Func.func492(); // アイテムリスト呼び出し
                 Gvar.var_2814 = Gvar.item_name;
                 if (Gvar.var_2460 != 0) {
-                    await Func.setMessage("" + Gvar.var_2813 + "は", "" + Gvar.var_2814 + "になった！", 8, false, false, false);
+                    await Func.setMessage(tf("{0}は", Gvar.var_2813), tf("{0}になった！", Gvar.var_2814), 8, false, false, false);
                 }
                 if (Gvar.var_2460 == 0) {
                     await Func.setMessage("しかし何も起こらなかった。", "", 8, false, false, false);
@@ -470,7 +471,7 @@ async function func585(this: any) {
                 }
             }
         }
-        await Func.setMessage("" + Gvar.var_2816 + " を喰らった！", "" + Gvar.var_209 + "のダメージをうけた。", 8, false, false, false);
+        await Func.setMessage(tf("{0} を喰らった！", Gvar.var_2816), tf("{0}のダメージをうけた。", Gvar.var_209), 8, false, false, false);
         if (Gvar.var_83[Gvar.var_673].Var0 == 136 && Gvar.var_211 >= 1) {
             Gvar.var_1073 = Adap.rnd(4);
             if (Gvar.var_1073 == 0 && Gvar.var_178 == 0 && Gvar.nouryoku_disc_id != 116 && Gvar.var_125 == 0) {

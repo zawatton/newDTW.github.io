@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf, t } from '../i18n'
 
 // 射撃discを拾った際、同じものを既に所持していた時にまとめる動作処理
 async function func401(this: any) {
@@ -25,8 +26,8 @@ async function func401(this: any) {
             Gvar.var_1841 = Gvar.var_1841 + 1;
         }
         if (Gvar.var_1839 == 1) {
-            await Func.setMessage("" + Gvar.item_name + "(" + Gvar.var_78[Gvar.var_321].Var3 + ")を拾った",
-                                    "回数をまとめた", 7, false, false, false);
+            await Func.setMessage(tf("{0}({1})を拾った", Gvar.item_name, Gvar.var_78[Gvar.var_321].Var3),
+                                    t("回数をまとめた"), 7, false, false, false);
             Gvar.var_77[Gvar.var_66][Gvar.var_67] = 0;
             Gvar.var_78[Gvar.var_321].Var0 = 0;
             Gvar.var_78[Gvar.var_321].Var1 = 0;

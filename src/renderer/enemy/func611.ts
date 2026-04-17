@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func611(this: any) {
         Adap.dbgprt(611);
@@ -48,7 +49,7 @@ async function func611(this: any) {
         Gvar.var_209 = Gvar.var_2852;
         await Func.AutoDraw(10);
         Gvar.var_389 = 0;
-        await Func.setMessage("ﾖｰﾖｰﾏｯの謎の攻撃を喰らった！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+        await Func.setMessage("ﾖｰﾖｰﾏｯの謎の攻撃を喰らった！", tf("{0}のダメージをうけた！", Gvar.var_2852), 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

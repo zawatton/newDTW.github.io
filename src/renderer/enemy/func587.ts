@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func587(this: any) {
         Adap.dbgprt(587);
@@ -99,11 +100,11 @@ async function func587(this: any) {
         }
         if (Gvar.var_2473 == 1) {
             await Func.setMessage("スタンドが溶かされている！", "", 8, true, false, false);
-            await Func.setMessage("" + Gvar.var_2822 + "は", "弱くなってしまった…", 8, true, false, false);
+            await Func.setMessage(tf("{0}は", Gvar.var_2822), "弱くなってしまった…", 8, true, false, false);
         }
         if (Gvar.var_2473 == 3) {
             await Func.setMessage("スタンドが溶かされている！", "", 8, true, false, false);
-            await Func.setMessage("" + Gvar.var_2822 + "を", "守っていたオーラは消えてしまった…", 8, true, false, false);
+            await Func.setMessage(tf("{0}を", Gvar.var_2822), "守っていたオーラは消えてしまった…", 8, true, false, false);
         }
         await Func.AutoDraw(10);
         return;

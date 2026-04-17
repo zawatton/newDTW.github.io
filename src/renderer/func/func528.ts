@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func528(this: any) {
         Adap.dbgprt(528);
@@ -35,10 +36,10 @@ async function func528(this: any) {
         Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         Adap.color(0, 255, 0);
         if (Gvar.item_modified_value == 0) {
-            Adap.mes("" + Gvar.item_name + " ★" + Gvar.number_of_abilities);
+            Adap.mes(tf("{0} ★{1}", Gvar.item_name, Gvar.number_of_abilities));
         }
         if (Gvar.item_modified_value > 0) {
-            Adap.mes("" + Gvar.item_name + "+" + Gvar.item_modified_value + " ★" + Gvar.number_of_abilities);
+            Adap.mes(tf("{0}+{1} ★{2}", Gvar.item_name, Gvar.item_modified_value, Gvar.number_of_abilities));
         }
         Adap.pos(30, 90);
 
@@ -59,7 +60,7 @@ async function func528(this: any) {
             }
     
             Adap.font(Gvar.font_type, 12, 1);
-            Adap.mes("" + Gvar.track_number + "：");
+            Adap.mes(tf("{0}：", Gvar.track_number));
             Gvar.track_number = Gvar.track_number + 1;
         }
         Gvar.track_number = 1;
@@ -86,7 +87,7 @@ async function func528(this: any) {
     
             Adap.font("メイリオ", 14, 1);
             if (Gvar.var_813[Gvar.track_number] != "") {
-                Adap.mes("" + Gvar.var_813[Gvar.track_number]);
+                Adap.mes(tf("{0}", Gvar.var_813[Gvar.track_number]));
             }
             if (Gvar.var_813[Gvar.track_number] == "") {
                 Adap.mes("空き");

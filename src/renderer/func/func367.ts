@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func367(this: any) {
         Adap.dbgprt(367);
@@ -77,7 +78,7 @@ async function func367(this: any) {
         Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);
         if (Gvar.var_802 == 1) {
             Adap.color(255, 255, 255);
-            Adap.mes("" + Gvar.var_1660 + "G");
+            Adap.mes(tf("{0}G", Gvar.var_1660));
         }
         if (Gvar.var_802 >= 100 && Gvar.var_802 < 400) {
             if (Gvar.var_1661 == 0) {
@@ -90,19 +91,19 @@ async function func367(this: any) {
                     Adap.mes(Gvar.item_name);
                 }
                 if (Gvar.item_modified_value == 0 && Gvar.number_of_abilities > 1) {
-                    Adap.mes("" + Gvar.item_name + " ★" + Gvar.number_of_abilities);
+                    Adap.mes(tf("{0} ★{1}", Gvar.item_name, Gvar.number_of_abilities));
                 }
                 if (Gvar.item_modified_value > 0 && Gvar.number_of_abilities <= 1) {
-                    Adap.mes("" + Gvar.item_name + "+" + Gvar.item_modified_value);
+                    Adap.mes(tf("{0}+{1}", Gvar.item_name, Gvar.item_modified_value));
                 }
                 if (Gvar.item_modified_value > 0 && Gvar.number_of_abilities > 1) {
-                    Adap.mes("" + Gvar.item_name + "+" + Gvar.item_modified_value + " ★" + Gvar.number_of_abilities);
+                    Adap.mes(tf("{0}+{1} ★{2}", Gvar.item_name, Gvar.item_modified_value, Gvar.number_of_abilities));
                 }
             }
         }
         if (Gvar.var_802 >= 400 && Gvar.var_802 < 500) {
             Adap.color(225, 195, 145);
-            Adap.mes("" + Gvar.item_name + "(" + Gvar.var_1662 + ")");
+            Adap.mes(tf("{0}({1})", Gvar.item_name, Gvar.var_1662));
         }
         if (Gvar.var_802 >= 500 && Gvar.var_802 < 600) {
             Adap.color(255, 255, 255);
@@ -124,7 +125,7 @@ async function func367(this: any) {
             if (Gvar.var_862[Gvar.var_802][0] == 0 && Gvar.dungeon_number != 0 && Gvar.dungeon_number != 1 && Gvar.dungeon_number != 99) {
                 Adap.color(0, 170, 170);
             }
-            Adap.mes("" + Gvar.item_name + "(" + Gvar.var_1663 + ")");
+            Adap.mes(tf("{0}({1})", Gvar.item_name, Gvar.var_1663));
         }
         if (Gvar.var_802 >= 750 && Gvar.var_802 < 800) {
             Adap.color(255, 255, 255);
@@ -153,15 +154,15 @@ async function func367(this: any) {
         }
         if (Gvar.var_802 >= 100 && Gvar.var_802 < 400 && Gvar.var_862[Gvar.var_802][0] == 1) {
             if (Gvar.var_1661 == 0) {
-                Adap.mes("" + Gvar.item_description1);
+                Adap.mes(tf("{0}", Gvar.item_description1));
             }
             if (Gvar.var_1661 == 1) {
-                Adap.mes("" + Gvar.item_description1 + "  空き容量 " + Gvar.free_space_value);
+                Adap.mes(tf("{0}  空き容量 {1}", Gvar.item_description1, Gvar.free_space_value));
             }
         }
         // 装備、射撃disc
         if (Gvar.var_802 >= 100 && Gvar.var_802 < 400 && Gvar.var_862[Gvar.var_802][0] == 0) {
-            Adap.mes("" + Gvar.item_description1);
+            Adap.mes(tf("{0}", Gvar.item_description1));
         }
         Adap.pos(30, 120);
         Adap.mes(Gvar.effects_message);
@@ -183,7 +184,7 @@ async function func367(this: any) {
                 Adap.pos(30, Gvar.track_number * 20 + 120);
                 Adap.color(255, 255, 255);
                 Adap.font(Gvar.font_type, 12, 1);
-                Adap.mes("Track" + Gvar.track_number + ":");
+                Adap.mes(tf("Track{0}:", Gvar.track_number));
                 Gvar.track_number = Gvar.track_number + 1;
             }
             Gvar.track_number = 1;
@@ -230,7 +231,7 @@ async function func367(this: any) {
                 Adap.font("メイリオ", 14, 1);
                 if (Gvar.var_1664 == 0) {
                     if (Gvar.var_813[Gvar.track_number] != "") {
-                        Adap.mes("" + Gvar.var_813[Gvar.track_number]);
+                        Adap.mes(tf("{0}", Gvar.var_813[Gvar.track_number]));
                     }
                     if (Gvar.var_813[Gvar.track_number] == "") {
                         Adap.mes("空き");
@@ -238,7 +239,7 @@ async function func367(this: any) {
                 }
                 if (Gvar.var_1664 == 1) {
                     if (Gvar.track_number == 1) {
-                        Adap.mes("" + Gvar.var_813[Gvar.track_number]);
+                        Adap.mes(tf("{0}", Gvar.var_813[Gvar.track_number]));
                     }
                     if (Gvar.track_number != 1) {
                         Adap.color(255, 255, 255);

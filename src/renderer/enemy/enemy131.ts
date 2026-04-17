@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 131 ジョルノの特殊能力
 async function enemy131(this: any) {
@@ -93,7 +94,7 @@ async function enemy131(this: any) {
         Gvar.var_233[Gvar.var_475].Var0 = 650;
         Gvar.var_2892 = "ｶｴﾙ";
         Adap.DSPLAY(200);
-        await Func.setMessage("" + Gvar.target_item_name + "は", "" + Gvar.var_2892 + "に生まれ変わった！", 8, false, false, false);
+        await Func.setMessage(tf("{0}は", Gvar.target_item_name), tf("{0}に生まれ変わった！", Gvar.var_2892), 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

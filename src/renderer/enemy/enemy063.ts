@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 63 プロシュート兄貴の特殊能力
 async function enemy063(this: any) {
@@ -70,7 +71,7 @@ async function enemy063(this: any) {
         if (Gvar.var_211 > Gvar.var_352) {
             Gvar.var_211 = Gvar.var_352;
         }
-        await Func.setMessage("最大HPが " + Gvar.var_2903 + "下がった！", "", 8, false, false, false);
+        await Func.setMessage(tf("最大HPが {0}下がった！", Gvar.var_2903), "", 8, false, false, false);
         Gvar.var_2197 = 1;
     }
     return;

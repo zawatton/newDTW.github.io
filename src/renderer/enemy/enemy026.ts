@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 26 敵ハーヴェストの特殊能力
 async function enemy026(this: any) {
@@ -114,8 +115,7 @@ async function enemy026(this: any) {
         Gvar.var_78[Gvar.var_419].Var29 = Gvar.var_233[Gvar.var_475].Var29;
         Gvar.var_225 = Gvar.var_475;
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-        await Func.setMessage("" + Gvar.target_item_name + "を盗まれた！",
-                               "", 8, false, false, false);
+        await Func.setMessage(tf("{0}を盗まれた！", Gvar.target_item_name), "", 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }
@@ -138,8 +138,7 @@ async function enemy026(this: any) {
             Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
             Gvar.var_1345 = 0;
             Gvar.var_83[Gvar.var_412].Var11 = 0;
-            await Func.setMessage("なんと" + Gvar.target_item_name + "は",
-                                   "爆弾だった！", 7, false, false, false);
+            await Func.setMessage(tf("なんと{0}は", Gvar.target_item_name), "爆弾だった！", 7, false, false, false);
             Gvar.var_455 = Gvar.var_2695;
             Gvar.var_456 = Gvar.var_2696;
             Gvar.var_83[Gvar.var_412].Var8 = 1; // Gvar.var_83はCharactorInfo

@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // 旧 func733
 async function func733(this: any) {
@@ -48,8 +49,7 @@ async function func733(this: any) {
             Gvar.var_3089 = Gvar.var_83[Gvar.var_3072].Var39;
             await Func.func682();
             if (Gvar.var_3073 < 99999) {
-                await Func.setMessage("あと" + Gvar.var_3073 + "くらいで",
-                                       "もっと強くなれる気がするぜ！", 7, true, false, true);
+                await Func.setMessage(tf("あと{0}くらいで", Gvar.var_3073), "もっと強くなれる気がするぜ！", 7, true, false, true);
             }
             if (Gvar.var_3073 >= 99999) {
                 await Func.setMessage("おれの強さはこれが限界だ！",
@@ -62,16 +62,13 @@ async function func733(this: any) {
             await Func.func626();
             Gvar.var_3125 = Adap.rnd(3);
             if (Gvar.var_3125 == 0) {
-                await Func.setMessage("" + Gvar.enemy_name + "は死んだッ！",
-                                       "大げさかもしれんが世界は救われたッ！", 7, true, false, true);
+                await Func.setMessage(tf("{0}は死んだッ！", Gvar.enemy_name), "大げさかもしれんが世界は救われたッ！", 7, true, false, true);
             }
             if (Gvar.var_3125 == 1) {
-                await Func.setMessage("" + Gvar.enemy_name + "は臭えーッ！",
-                                       "ゲロ以下のニオイがﾌﾟﾝﾌﾟﾝするぜーッ！", 7, true, false, true);
+                await Func.setMessage(tf("{0}は臭えーッ！", Gvar.enemy_name), "ゲロ以下のニオイがﾌﾟﾝﾌﾟﾝするぜーッ！", 7, true, false, true);
             }
             if (Gvar.var_3125 == 2) {
-                await Func.setMessage("気をつけな！",
-                                       "" + Gvar.enemy_name + "はこすずるいぜ！", 7, true, false, true);
+                await Func.setMessage("気をつけな！", tf("{0}はこすずるいぜ！", Gvar.enemy_name), 7, true, false, true);
             }
         }
         if (Gvar.var_83[Gvar.var_3072].Var3 == 1) {

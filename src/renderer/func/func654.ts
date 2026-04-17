@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 async function func654(this: any) {
         Adap.dbgprt(654);
@@ -96,7 +97,7 @@ async function func654(this: any) {
             Gvar.enemy_list = Gvar.var_3030;
             await Func.func626(); // 敵リスト
             Gvar.var_3034 = Gvar.enemy_name;
-            await Func.setMessage("" + Gvar.var_3033 + "は", "ﾍﾟﾗﾍﾟﾗの人質を見て攻撃を躊躇した！", 8, false, false, false);
+            await Func.setMessage(tf("{0}は", Gvar.var_3033), "ﾍﾟﾗﾍﾟﾗの人質を見て攻撃を躊躇した！", 8, false, false, false);
             for (let cnt2 = 0; cnt2 < 10; ++cnt2) {
                 Gvar.var_3035 = 1;
                 Gvar.var_83[Gvar.var_673].Var32 = 99;
@@ -161,10 +162,10 @@ async function func654(this: any) {
                 Gvar.enemy_name = "何者か";
             }
             if (Gvar.var_2868 == 0) {
-                await Func.setMessage("" + Gvar.enemy_name + "の攻撃は外れた", "", 8, false, false, false);
+                await Func.setMessage(tf("{0}の攻撃は外れた", Gvar.enemy_name), "", 8, false, false, false);
             }
             if (Gvar.var_2868 == 1) {
-                await Func.setMessage("" + Gvar.enemy_name + "の攻撃を", "ヒラリとかわした", 8, false, false, false);
+                await Func.setMessage(tf("{0}の攻撃を", Gvar.enemy_name), "ヒラリとかわした", 8, false, false, false);
             }
             await Func.AutoDraw(3);
             Gvar.var_2868 = 0;
@@ -320,7 +321,7 @@ async function func654(this: any) {
         if (Gvar.var_119 == 0 && Gvar.sympathy_id != 166 && Gvar.var_83[Gvar.var_673].Var30 != 0) {
             Gvar.enemy_name = "何者か";
         }
-        await Func.setMessage("" + Gvar.enemy_name + "はﾃﾞｨｱﾎﾞﾛに", "" + Gvar.var_209 + "のダメージ！", 8, false, false, false);
+        await Func.setMessage(tf("{0}はﾃﾞｨｱﾎﾞﾛに", Gvar.enemy_name), tf("{0}のダメージ！", Gvar.var_209), 8, false, false, false);
         await Func.AutoDraw(3);
         if (Gvar.var_211 <= 0) {
             Gvar.var_356 = Gvar.var_83[Gvar.var_673].Var0;

@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func501(this: any) {
         Adap.dbgprt(501);
@@ -18,8 +19,7 @@ async function func501(this: any) {
         Gvar.var_747 = 1;
 
         Adap.DSPLAY(103); // 殴られた時の効果音
-        await Func.setMessage("電気のエネルギーが散っている！", 
-                                "" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを受けた", 11, false, false, false);
+        await Func.setMessage("電気のエネルギーが散っている！", tf("{0}のﾀﾞﾒｰｼﾞを受けた", Gvar.var_2244), 11, false, false, false);
         for (let cnt1 = 0; cnt1 < 15; ++cnt1) {
             await Func.func337(); // メッセージ表示処理(自動)
             Gvar.var_1515 = Gvar.var_1515 + 1;

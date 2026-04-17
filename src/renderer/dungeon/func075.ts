@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 特別な階層到達時のメッセージ処理
 // 旧 func075
@@ -29,7 +30,7 @@ async function func075(this: any) {
         }
         // No = 5 なので、鉄獄(鉄の牢獄)
         if (Gvar.dungeon_number == 5 && Gvar.current_floor == Gvar.var_20) {
-            await Func.setMessage("注意せよ！ この階は", "「" + Gvar.var_24 + "」によって守られている！", 7, false, false, false);
+            await Func.setMessage("注意せよ！ この階は", tf("「{0}」によって守られている！", Gvar.var_24), 7, false, false, false);
         }
         if (Gvar.special_floor == 1) { // 虹村屋敷
             await Func.setMessage("注意せよ！ この階は", "「虹村形兆」によって守られている！", 7, false, false, false);

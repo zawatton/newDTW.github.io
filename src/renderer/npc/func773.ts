@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // 鮮血のシャボンへ話しかけた時のメッセージ処理
 // 旧 func773
@@ -34,8 +35,7 @@ async function func773(this: any) {
             Gvar.belongings_item_list = Gvar.var_987[0];
             Gvar.disc_rarity = Gvar.var_987[13];
             await Func.func492(); // アイテムリスト呼び出し
-            await Func.setMessage("" + Gvar.item_name + "が",
-                                   "入っているようだ。", 7, true, true, false);
+            await Func.setMessage(tf("{0}が", Gvar.item_name), "入っているようだ。", 7, true, true, false);
             await Func.setMessage("取り出しますか？",
                                     "", 7, true, false, false);
 

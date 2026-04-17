@@ -23,9 +23,86 @@
       left: -9999px;
       top: 0;
     }
+    /* 操作キー一覧 — ブラウザモード(GitHub Pages)でのみ表示 */
+    #controls {
+      display: none;
+    }
+    /* ブラウザモード(GitHub Pages): 固定サイズでセンタリング、操作キー一覧をゲーム画面の上に配置 */
+    html.browser-mode,
+    html.browser-mode body {
+      overflow: auto;
+      height: auto;
+    }
+    html.browser-mode body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 16px 0 24px;
+      background-color: #111;
+    }
+    html.browser-mode #c0 {
+      position: static;
+      display: block;
+    }
+    html.browser-mode #pad {
+      position: static;
+      width: 680px;
+      margin-top: 6px;
+      color: #ddd;
+    }
+    html.browser-mode #controls {
+      order: -1; /* canvas の上(先頭)へ配置 */
+      display: block;
+      width: 680px;
+      margin-bottom: 12px;
+      color: #eee;
+      font-size: 14px;
+    }
+    html.browser-mode #controls h3 {
+      margin: 0 0 6px;
+      font-size: 15px;
+      color: #fff;
+    }
+    html.browser-mode #controls table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    html.browser-mode #controls th,
+    html.browser-mode #controls td {
+      padding: 4px 8px;
+      border: 1px solid #444;
+      text-align: left;
+      vertical-align: top;
+    }
+    html.browser-mode #controls th {
+      background: #222;
+      color: #fff;
+      font-weight: 600;
+    }
+    html.browser-mode #controls td:first-child {
+      font-family: ui-monospace, Consolas, "Courier New", monospace;
+      white-space: nowrap;
+      width: 120px;
+    }
   </style>
 </head>
 <body>
+  <!-- 実行環境判定 — ブラウザ(GitHub Pages)なら固定サイズ + 操作キー表示、F1無効化 -->
+  <script>
+    (function() {
+      var isElectron = navigator.userAgent.indexOf('Electron') >= 0;
+      if (!isElectron) {
+        document.documentElement.classList.add('browser-mode');
+        // F1(画面サイズ変更)はブラウザモードで無効化（固定サイズのため）
+        window.addEventListener('keydown', function(e) {
+          if (e.keyCode === 112) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }, true);
+      }
+    })();
+  </script>
   <!-- メインキャンバス -->
   <canvas id="c0"></canvas>
   <!-- オフスクリーンキャンバス（バッファID 10） -->
@@ -37,6 +114,27 @@
     <a id="bgmlink" href="" target="_blank"></a>
   </div>
   
+  <!-- 操作キー一覧（ブラウザモードでのみ表示） -->
+  <div id="controls">
+    <h3>Controls / 操作キー</h3>
+    <table>
+      <thead>
+        <tr><th>Key / キー</th><th>Action</th><th>操作</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>&uarr; &darr; &larr; &rarr;</td><td>Move</td><td>移動</td></tr>
+        <tr><td>Z</td><td>Attack / Confirm</td><td>攻撃 / 決定</td></tr>
+        <tr><td>X</td><td>Dash / Cancel</td><td>ダッシュ / キャンセル</td></tr>
+        <tr><td>A</td><td>Open command window</td><td>コマンドウィンドウ表示</td></tr>
+        <tr><td>S</td><td>Shoot</td><td>射撃</td></tr>
+        <tr><td>C</td><td>Turn in place</td><td>その場で向き変更</td></tr>
+        <tr><td>Shift</td><td>Diagonal-only movement</td><td>斜め移動固定</td></tr>
+        <tr><td>F</td><td>"Foo Fighters" shot disc (when owned)</td><td>射撃ディスク「フー・ファイターズ」（入手後）</td></tr>
+        <tr><td>F2 / F3</td><td>BGM volume down / up</td><td>BGM 音量 下げ / 上げ</td></tr>
+      </tbody>
+    </table>
+  </div>
+
   <!-- JS ファイルたち -->
   <script src="lib/jscolor.js"></script>
   <script id="return_r" value=""></script>
@@ -72,10 +170,14 @@
 
     // updateMainCanvas: メインキャンバス（ID "c0"）の更新
     const DESIGN_SIZE = 340;
+    const BROWSER_FIXED_SIZE = 680;
     function updateMainCanvas() {
       const canvas = document.getElementById("c0");
       const context = canvas.getContext("2d");
-      const userScale = document.documentElement.clientWidth / DESIGN_SIZE;
+      const isBrowserMode = document.documentElement.classList.contains("browser-mode");
+      const userScale = isBrowserMode
+        ? (BROWSER_FIXED_SIZE / DESIGN_SIZE)
+        : (document.documentElement.clientWidth / DESIGN_SIZE);
       const displayWidth = DESIGN_SIZE * userScale;
       const displayHeight = DESIGN_SIZE * userScale;
       const dpr = window.devicePixelRatio || 1;

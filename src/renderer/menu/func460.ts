@@ -17,6 +17,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 /** アイテム名にサフィックス +N (強化値) と ★M (合成段階) を結合 */
 function formatItemName(name: string, plus: number, star: number): string {
@@ -242,7 +243,7 @@ async function func460(this: any): Promise<void> {
                 if (Gvar.var_486[Gvar.var_1916][Gvar.var_1620][18] >= 2) {
                     Gvar.var_2022 = "" + Gvar.var_2022 + " Lv" + Gvar.var_486[Gvar.var_1916][Gvar.var_1620][18];
                 }
-                Adap.mes("" + Gvar.var_2022);
+                Adap.mes(tf("{0}", Gvar.var_2022));
             }
         }
 
@@ -256,7 +257,7 @@ async function func460(this: any): Promise<void> {
                 // ゴールド
                 if (Gvar.belongings_item_list == 1) {
                     Adap.color(255, 255, 255);
-                    Adap.mes("" + Gvar.var_2017 + "G");
+                    Adap.mes(tf("{0}G", Gvar.var_2017));
                 }
 
                 // 装備disc (100-399)
@@ -304,11 +305,11 @@ async function func460(this: any): Promise<void> {
                 if (Gvar.belongings_item_list >= 400 && Gvar.belongings_item_list < 500) {
                     if (Gvar.var_479[Gvar.var_1620] == 0 || Gvar.var_220 == 1) {
                         Adap.color(225, 195, 145);
-                        Adap.mes("" + Gvar.item_name + "(" + Gvar.var_2011 + ")");
+                        Adap.mes(tf("{0}({1})", Gvar.item_name, Gvar.var_2011));
                     }
                     if (Gvar.var_479[Gvar.var_1620] == 1 && Gvar.var_220 == 0) {
                         drawEquipMark(Gvar.var_230, 225, 195, 145);
-                        Adap.mes("" + Gvar.item_name + "(" + Gvar.var_2011 + ")");
+                        Adap.mes(tf("{0}({1})", Gvar.item_name, Gvar.var_2011));
                     }
                 }
 
@@ -348,7 +349,7 @@ async function func460(this: any): Promise<void> {
                         && Gvar.dungeon_number != 99) {
                         Adap.color(0, 170, 170);
                     }
-                    Adap.mes("" + Gvar.item_name + "(" + Gvar.var_2014 + ")");
+                    Adap.mes(tf("{0}({1})", Gvar.item_name, Gvar.var_2014));
                     if (Gvar.belongings_item_list == 800
                         && Gvar.var_862[800][0] == 1
                         && Gvar.var_990[Gvar.var_1922] == 1
@@ -463,10 +464,10 @@ async function func460(this: any): Promise<void> {
             Adap.mes(Gvar.item_description1);
         }
         if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400 && Gvar.var_2027 == 0) {
-            Adap.mes("" + Gvar.item_description1);
+            Adap.mes(tf("{0}", Gvar.item_description1));
         }
         if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400 && Gvar.var_2027 == 1) {
-            Adap.mes("" + Gvar.item_description1 + "  空き容量 " + Gvar.var_2024);
+            Adap.mes(tf("{0}  空き容量 {1}", Gvar.item_description1, Gvar.var_2024));
         }
         Adap.color(255, 255, 255);
         Adap.mes(Gvar.effects_message);
@@ -692,7 +693,7 @@ async function func460(this: any): Promise<void> {
         Adap.color(255, 255, 255);
         Adap.pos(277 - Gvar.var_2036, 48 + Gvar.var_2037);
         await Func.func492();
-        Adap.mes("" + Gvar.var_2039);
+        Adap.mes(tf("{0}", Gvar.var_2039));
         Adap.mes("やめる");
         Adap.color(255, 255, 255);
         Adap.font(Gvar.font_type, Gvar.font_size = 16, Gvar.font_style = 1);

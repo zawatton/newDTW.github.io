@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func225(this: any) {
         Adap.dbgprt(225);
@@ -31,7 +32,7 @@ async function func225(this: any) {
             Adap.mes("一巡後の世界");
         }
         if (Gvar.var_956 == 5) {
-            Adap.mes("" + Gvar.var_21);
+            Adap.mes(tf("{0}", Gvar.var_21));
         }
         Gvar.var_959 = 0;
         Gvar.var_960 = 0;
@@ -42,7 +43,7 @@ async function func225(this: any) {
             Adap.font("メイリオ", 14);
             Adap.color(255, 255, 255);
             Adap.pos(10, Gvar.var_963);
-            Adap.mes("" + Gvar.var_962 + " 階");
+            Adap.mes(tf("{0} 階", Gvar.var_962));
             Gvar.var_964 = 60;
             for (let cnt2 = 0; cnt2 < 9; ++cnt2) {
                 Gvar.var_961 = Gvar.var_959 + Gvar.var_960;
@@ -73,13 +74,13 @@ async function func225(this: any) {
                     if (Gvar.var_957 <= 1) {
                         Adap.pos(Gvar.var_964, Gvar.var_963 + 42);
                         Adap.color(255, 255, 255);
-                        Adap.mes("" + Gvar.enemy_hp);
+                        Adap.mes(tf("{0}", Gvar.enemy_hp));
                         Adap.pos(Gvar.var_964 + 20, Gvar.var_963 + 42);
                         Adap.color(255, 255, 0);
-                        Adap.mes("" + Gvar.enemy_power);
+                        Adap.mes(tf("{0}", Gvar.enemy_power));
                         Adap.pos(Gvar.var_964 + 40, Gvar.var_963 + 42);
                         Adap.color(255, 180, 90);
-                        Adap.mes("" + Gvar.enemy_defence);
+                        Adap.mes(tf("{0}", Gvar.enemy_defence));
                     }
                     if (Gvar.var_957 >= 2) {
                         Gvar.var_969 = Math.floor(Gvar.enemy_hp * (Gvar.var_957 + 10) / 10);
@@ -90,16 +91,16 @@ async function func225(this: any) {
                         }
                         Adap.pos(Gvar.var_964, Gvar.var_963);
                         Adap.color(255, 0, 0);
-                        Adap.mes("LV:" + Gvar.var_957);
+                        Adap.mes(tf("LV:{0}", Gvar.var_957));
                         Adap.pos(Gvar.var_964, Gvar.var_963 + 42);
                         Adap.color(255, 255, 255);
-                        Adap.mes("" + Gvar.var_969);
+                        Adap.mes(tf("{0}", Gvar.var_969));
                         Adap.pos(Gvar.var_964 + 20, Gvar.var_963 + 42);
                         Adap.color(255, 255, 0);
-                        Adap.mes("" + Gvar.var_970);
+                        Adap.mes(tf("{0}", Gvar.var_970));
                         Adap.pos(Gvar.var_964 + 40, Gvar.var_963 + 42);
                         Adap.color(255, 180, 90);
-                        Adap.mes("" + Gvar.var_971);
+                        Adap.mes(tf("{0}", Gvar.var_971));
                     }
                 }
                 Gvar.var_964 = Gvar.var_964 + 60;

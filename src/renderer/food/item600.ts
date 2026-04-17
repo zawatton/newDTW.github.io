@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 600 アイテム「ピッツァ」を使用した時の効果
 async function item600(this: any) {
@@ -32,7 +33,7 @@ async function item600(this: any) {
         await Func.setMessage("お腹が少し膨らんだ", "", 7, false, false, false);
     }
     if (Gvar.var_2211 == 1) {
-        await Func.setMessage("最大満腹度が" + Gvar.var_567 + "になった。", "", 7, false, false, false);
+        await Func.setMessage(tf("最大満腹度が{0}になった。", Gvar.var_567), "", 7, false, false, false);
         //Gvar.item_message1 = "最大満腹度が" + Gvar.var_567 + "になった。";
     }
     return;

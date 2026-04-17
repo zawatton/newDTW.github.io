@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func598(this: any) {
         Adap.dbgprt(598);
@@ -102,7 +103,7 @@ async function func598(this: any) {
             Gvar.var_211 = 0;
             Gvar.var_356 = 123;
         }
-        await Func.setMessage("ﾌﾞﾁｬﾗﾃｨの攻撃！", "" + Gvar.var_209 + "のダメージをうけた。", 8, false, false, false);
+        await Func.setMessage("ﾌﾞﾁｬﾗﾃｨの攻撃！", tf("{0}のダメージをうけた。", Gvar.var_209), 8, false, false, false);
         await Func.AutoDraw(6);
         Gvar.var_389 = 0;
         // No = 115 G・エクスペリエンスのDISCを装備している場合

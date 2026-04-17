@@ -1,6 +1,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func168(this: any) {
         Adap.dbgprt(168);
@@ -59,7 +60,7 @@ async function func168(this: any) {
         }
         if (Gvar.var_793 == 0) {
             Adap.pos(136, 5);
-            Adap.mes("" + Gvar.var_21);
+            Adap.mes(tf("{0}", Gvar.var_21));
         }
 
         Adap.font(Gvar.font_type, 12, 1);
@@ -69,7 +70,7 @@ async function func168(this: any) {
             Adap.color(150, 150, 150);
         }
         if (Gvar.var_767 == 0) {
-            Adap.mes("<<  " + Gvar.var_785 + "ページ  >>");
+            Adap.mes(tf("<<  {0}ページ  >>", Gvar.var_785));
         }
         if (Gvar.var_767 == 1) {
             Adap.color(255, 255, 255);
@@ -98,12 +99,12 @@ async function func168(this: any) {
                     Adap.color(255, 0, 0);
                 }
                 Adap.pos(30, Gvar.var_797 * 31);
-                Adap.mes("" + Gvar.var_796 + "位");
+                Adap.mes(tf("{0}位", Gvar.var_796));
                 if (Gvar.var_792[Gvar.var_793][Gvar.var_796][3] != 0) {
                     Adap.pos(70, Gvar.var_797 * 31);
-                    Adap.mes("" + Gvar.var_792[Gvar.var_793][Gvar.var_796][1] + " 階");
+                    Adap.mes(tf("{0} 階", Gvar.var_792[Gvar.var_793][Gvar.var_796][1]));
                     Adap.pos(120, Gvar.var_797 * 31);
-                    Adap.mes("スコア  " + Gvar.var_792[Gvar.var_793][Gvar.var_796][3]);
+                    Adap.mes(tf("スコア  {0}", Gvar.var_792[Gvar.var_793][Gvar.var_796][3]));
                     Adap.color(0, 255, 0);
                     if (Gvar.var_794 != 0) {
                         Adap.color(0, 190, 0);
@@ -114,7 +115,7 @@ async function func168(this: any) {
                     Adap.pos(30, Gvar.var_797 * 31 + 16);
                     Gvar.var_356 = Gvar.var_792[Gvar.var_793][Gvar.var_796][2];
                     await Func.func177(); // 死因原因
-                    Adap.mes("" + Gvar.var_798);
+                    Adap.mes(tf("{0}", Gvar.var_798));
                 }
                 if (Gvar.var_792[Gvar.var_793][Gvar.var_796][3] == 0) {
                     Adap.pos(70, Gvar.var_797 * 31);
@@ -130,12 +131,12 @@ async function func168(this: any) {
                     Adap.color(255, 0, 0);
                 }
                 Adap.pos(30, Gvar.var_797 * 31);
-                Adap.mes("" + Gvar.var_796 + "位");
+                Adap.mes(tf("{0}位", Gvar.var_796));
                 if (Gvar.var_792[Gvar.var_793][Gvar.var_796][3] != 0) {
                     Adap.pos(70, Gvar.var_797 * 31);
-                    Adap.mes("" + Gvar.var_792[Gvar.var_793][Gvar.var_796][1] + " 階");
+                    Adap.mes(tf("{0} 階", Gvar.var_792[Gvar.var_793][Gvar.var_796][1]));
                     Adap.pos(120, Gvar.var_797 * 31);
-                    Adap.mes("スコア  " + Gvar.var_792[Gvar.var_793][Gvar.var_796][3]);
+                    Adap.mes(tf("スコア  {0}", Gvar.var_792[Gvar.var_793][Gvar.var_796][3]));
                     Adap.color(0, 255, 0);
                     if (Gvar.var_794 != 0) {
                         Adap.color(0, 190, 0);
@@ -146,7 +147,7 @@ async function func168(this: any) {
                     Adap.pos(30, Gvar.var_797 * 31 + 16);
                     Gvar.var_356 = Gvar.var_792[Gvar.var_793][Gvar.var_796][2];
                     await Func.func177(); // 死因原因
-                    Adap.mes("" + Gvar.var_798);
+                    Adap.mes(tf("{0}", Gvar.var_798));
                 }
                 if (Gvar.var_792[Gvar.var_793][Gvar.var_796][3] == 0) {
                     Adap.pos(70, Gvar.var_797 * 31);
@@ -158,14 +159,14 @@ async function func168(this: any) {
                 Adap.pos(30, Gvar.var_797 * 31);
                 Adap.mes("圏外");
                 Adap.pos(70, Gvar.var_797 * 31);
-                Adap.mes("" + Gvar.var_792[Gvar.var_793][0][1] + " 階");
+                Adap.mes(tf("{0} 階", Gvar.var_792[Gvar.var_793][0][1]));
                 Adap.pos(120, Gvar.var_797 * 31);
-                Adap.mes("スコア  " + Gvar.var_792[Gvar.var_793][0][3]);
+                Adap.mes(tf("スコア  {0}", Gvar.var_792[Gvar.var_793][0][3]));
                 Adap.color(255, 0, 0);
                 Adap.pos(30, Gvar.var_797 * 31 + 16);
                 Gvar.var_356 = Gvar.var_792[Gvar.var_793][0][2];
                 await Func.func177(); // 死因原因
-                Adap.mes("" + Gvar.var_798);
+                Adap.mes(tf("{0}", Gvar.var_798));
             }
             Gvar.var_796 = Gvar.var_796 + 1;
             Gvar.var_797 = Gvar.var_797 + 1;
@@ -298,18 +299,18 @@ async function func168(this: any) {
             Adap.font(Gvar.font_type, Gvar.font_size = 14, Gvar.font_style = 1);
             Adap.color(255, 255, 255);
             Adap.pos(40, 276);
-            Adap.mes("レベル：" + Gvar.var_792[Gvar.var_793][Gvar.var_786][14]);
+            Adap.mes(tf("レベル：{0}", Gvar.var_792[Gvar.var_793][Gvar.var_786][14]));
             Adap.pos(180, 276);
-            Adap.mes("精神力：" + Gvar.var_792[Gvar.var_793][Gvar.var_786][17] + "/" + Gvar.var_792[Gvar.var_793][Gvar.var_786][16]);
+            Adap.mes(tf("精神力：{0}/{1}", Gvar.var_792[Gvar.var_793][Gvar.var_786][17], Gvar.var_792[Gvar.var_793][Gvar.var_786][16]));
             Adap.pos(40, 293);
-            Adap.mes("最大HP：" + Gvar.var_792[Gvar.var_793][Gvar.var_786][15]);
+            Adap.mes(tf("最大HP：{0}", Gvar.var_792[Gvar.var_793][Gvar.var_786][15]));
             Adap.pos(180, 293);
-            Adap.mes("満腹度：" + Gvar.var_792[Gvar.var_793][Gvar.var_786][18]);
+            Adap.mes(tf("満腹度：{0}", Gvar.var_792[Gvar.var_793][Gvar.var_786][18]));
             Adap.pos(40, 310);
-            Adap.mes("ターン：" + Gvar.var_792[Gvar.var_793][Gvar.var_786][0]);
+            Adap.mes(tf("ターン：{0}", Gvar.var_792[Gvar.var_793][Gvar.var_786][0]));
             if (Gvar.var_792[Gvar.var_793][Gvar.var_786][50] != 0) {
                 Adap.pos(180, 310);
-                Adap.mes("" + Gvar.var_792[Gvar.var_793][Gvar.var_786][50] + "年" + Gvar.var_792[Gvar.var_793][Gvar.var_786][51] + "月" + Gvar.var_792[Gvar.var_793][Gvar.var_786][52] + "日");
+                Adap.mes(tf("{0}年{1}月{2}日", Gvar.var_792[Gvar.var_793][Gvar.var_786][50], Gvar.var_792[Gvar.var_793][Gvar.var_786][51], Gvar.var_792[Gvar.var_793][Gvar.var_786][52]));
             }
             if (Gvar.var_794 >= 1) {
                 Adap.color(255, 255, 255);

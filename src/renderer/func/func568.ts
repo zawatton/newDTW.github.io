@@ -6,6 +6,7 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import { tf } from '../i18n'
 async function func568(this: any) {
         Adap.dbgprt(568);
         if (Gvar.var_83[Gvar.var_1641].Var31 == 5) {
@@ -159,16 +160,16 @@ async function func568(this: any) {
             }
             Adap.color(255, 255, 255);
             Adap.pos(Gvar.var_2609 - 1, Gvar.var_2610);
-            Adap.mes("" + Gvar.var_1276);
+            Adap.mes(tf("{0}", Gvar.var_1276));
             Adap.pos(Gvar.var_2609 + 1, Gvar.var_2610);
-            Adap.mes("" + Gvar.var_1276);
+            Adap.mes(tf("{0}", Gvar.var_1276));
             Adap.pos(Gvar.var_2609, Gvar.var_2610 - 1);
-            Adap.mes("" + Gvar.var_1276);
+            Adap.mes(tf("{0}", Gvar.var_1276));
             Adap.pos(Gvar.var_2609, Gvar.var_2610 + 1);
-            Adap.mes("" + Gvar.var_1276);
+            Adap.mes(tf("{0}", Gvar.var_1276));
             Adap.color(255, 0, 0);
             Adap.pos(Gvar.var_2609, Gvar.var_2610);
-            Adap.mes("" + Gvar.var_1276);
+            Adap.mes(tf("{0}", Gvar.var_1276));
         }
         return;
 }

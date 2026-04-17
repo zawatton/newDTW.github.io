@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // ヤバいものからアイテムを取り出す時の動作処理
 // 旧 func777
@@ -93,8 +94,7 @@ async function func777(this: any) {
         Gvar.var_233[Gvar.var_224].Var29 = Gvar.var_987[29];
         Gvar.var_987[0] = 0;
 
-        await Func.setMessage("" + Gvar.var_3153 + "を出した。",
-                               "", 7, true, false, false);
+        await Func.setMessage(tf("{0}を出した。", Gvar.var_3153), "", 7, true, false, false);
 
         await Func.func051(); // キー入力待ち処理
         Gvar.var_198 = 0; // メッセージウィンドウ閉じる

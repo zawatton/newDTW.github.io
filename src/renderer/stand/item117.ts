@@ -9,6 +9,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 117 ダークブルームーンの発動処理
 async function item117(this: any) {
@@ -210,8 +211,7 @@ async function item117(this: any) {
             if (Gvar.var_211 > Gvar.var_352) {
                 Gvar.var_211 = Gvar.var_352;
             }
-            await Func.setMessage("合計 " + Gvar.var_2307 + " のエネルギーを吸収した。",
-                                   "", 7, true, false, false);
+            await Func.setMessage(tf("合計 {0} のエネルギーを吸収した。", Gvar.var_2307), "", 7, true, false, false);
             await Func.AutoDraw(10);
         }
         Gvar.var_2217 = 0;

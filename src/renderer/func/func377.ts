@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func377(this: any) {
         Adap.dbgprt(377);
@@ -85,7 +86,7 @@ async function func377(this: any) {
         Adap.pos(140, 315);
         Gvar.var_1698 = Gvar.var_1693 + 1;
         Adap.color(255, 255, 255);
-        Adap.mes("← " + Gvar.var_1698 + " →");
+        Adap.mes(tf("← {0} →", Gvar.var_1698));
         return;
 }
 

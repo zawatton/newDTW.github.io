@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 // No = 719 アイテム「吉良の弓矢」を使用した時の効果
 async function item719(this: any) {
@@ -24,8 +25,7 @@ async function item719(this: any) {
     Gvar.var_2228 = 1;
     await Func.func531();
     if (Gvar.var_2228 == 0) {
-        await Func.setMessage("" + Gvar.target_item_name + "に",
-                               "新たな装備効果が発現した！", 7, false, false, false);
+        await Func.setMessage(tf("{0}に", Gvar.target_item_name), "新たな装備効果が発現した！", 7, false, false, false);
     }
     if (Gvar.var_2228 == 1) {
         await Func.setMessage("しかしﾃﾞｨｱﾎﾞﾛは",

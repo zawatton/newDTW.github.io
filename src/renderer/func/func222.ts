@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func222(this: any) {
         Adap.dbgprt(222);
@@ -19,39 +20,39 @@ async function func222(this: any) {
         Adap.pos(70, 20);
         Adap.mes("---ディアボロ-----");
         Adap.pos(70, 40);
-        Adap.mes("レベル  " + Gvar.var_933);
+        Adap.mes(tf("レベル  {0}", Gvar.var_933));
         Adap.pos(70, 60);
-        Adap.mes("攻撃力  " + Gvar.var_935);
+        Adap.mes(tf("攻撃力  {0}", Gvar.var_935));
         Adap.pos(70, 80);
-        Adap.mes("防御力  " + Gvar.var_936);
+        Adap.mes(tf("防御力  {0}", Gvar.var_936));
         Adap.pos(70, 100);
-        Adap.mes("精神力  " + Gvar.var_937);
+        Adap.mes(tf("精神力  {0}", Gvar.var_937));
         Adap.pos(70, 120);
-        Adap.mes("HP  " + Gvar.var_938);
+        Adap.mes(tf("HP  {0}", Gvar.var_938));
         Adap.pos(70, 140);
         Adap.mes("-------敵---------");
         Adap.pos(70, 160);
-        Adap.mes("攻撃力  " + Gvar.var_942);
+        Adap.mes(tf("攻撃力  {0}", Gvar.var_942));
         Adap.pos(70, 180);
-        Adap.mes("防御力  " + Gvar.var_943);
+        Adap.mes(tf("防御力  {0}", Gvar.var_943));
         Adap.pos(70, 200);
         Adap.mes("------------------");
         Adap.pos(70, 220);
         Adap.color(255, 255, 0);
-        Adap.mes("与えるダメージ  " + Gvar.var_944 + "  ～  " + Gvar.var_945);
+        Adap.mes(tf("与えるダメージ  {0}  ～  {1}", Gvar.var_944, Gvar.var_945));
         Adap.pos(70, 240);
         Adap.color(255, 0, 0);
-        Adap.mes("食らうダメージ  " + Gvar.var_946 + "  ～  " + Gvar.var_947);
+        Adap.mes(tf("食らうダメージ  {0}  ～  {1}", Gvar.var_946, Gvar.var_947));
         Adap.pos(70, 260);
         Adap.color(255, 255, 255);
         Adap.mes("------------------");
         Adap.pos(70, 280);
-        Adap.mes("階層  " + Gvar.var_63);
+        Adap.mes(tf("階層  {0}", Gvar.var_63));
         Adap.pos(70, 300);
-        Adap.mes("次exp  " + Gvar.var_941);
+        Adap.mes(tf("次exp  {0}", Gvar.var_941));
         Adap.pos(70, 320);
         Adap.color(0, 255, 0);
-        Adap.mes("exp：  合計  " + Gvar.var_939 + "  平均  " + Gvar.var_940);
+        Adap.mes(tf("exp：  合計  {0}  平均  {1}", Gvar.var_939, Gvar.var_940));
         if (Gvar.var_932 == 0) {
             Adap.pos(50, 40);
         }

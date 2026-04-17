@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func606(this: any) {
         Adap.dbgprt(606);
@@ -83,7 +84,7 @@ async function func606(this: any) {
         Gvar.var_389 = 2;
 
         Adap.DSPLAY(104);
-        await Func.setMessage("ﾏﾝﾊｯﾀﾝﾄﾗﾝｽﾌｧｰの弾丸を喰らった！", "" + Gvar.var_2852 + "のダメージをうけた！", 8, false, false, false);
+        await Func.setMessage("ﾏﾝﾊｯﾀﾝﾄﾗﾝｽﾌｧｰの弾丸を喰らった！", tf("{0}のダメージをうけた！", Gvar.var_2852), 8, false, false, false);
         if (Gvar.var_128 >= 1) {
             await Func.func023();
         }

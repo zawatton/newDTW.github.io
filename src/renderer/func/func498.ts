@@ -10,6 +10,7 @@ import * as Func from '../func/index'
 import * as Memory from '../memory/index'
 import * as Food from '../food/index'
 import * as Extra from '../extra_items/index'
+import { tf } from '../i18n'
 
 async function func498(this: any) {
     Adap.dbgprt(498);
@@ -22,18 +23,15 @@ async function func498(this: any) {
             if (Gvar.belongings_item_list == 567 || Gvar.belongings_item_list == 590 || Gvar.belongings_item_list == 565) {
                 Gvar.var_862[Gvar.belongings_item_list][0] = 1;
                 if (Gvar.belongings_item_list == 567) {
-                    await Func.setMessage("なんと" + Gvar.item_name + "は", 
-                                            "ｱｳﾞﾄﾞｩﾙのDISCだった！", 7, false, false, false);
+                    await Func.setMessage(tf("なんと{0}は", Gvar.item_name), "ｱｳﾞﾄﾞｩﾙのDISCだった！", 7, false, false, false);
                     Gvar.var_2188 = "ｱｳﾞﾄﾞｩﾙのDISC";
                 }
                 if (Gvar.belongings_item_list == 590) {
-                    await Func.setMessage("なんと" + Gvar.item_name + "は", 
-                                            "ｷﾞｱｯﾁｮのDISCだった！", 7, false, false, false);
+                    await Func.setMessage(tf("なんと{0}は", Gvar.item_name), "ｷﾞｱｯﾁｮのDISCだった！", 7, false, false, false);
                     Gvar.var_2188 = "ｷﾞｱｯﾁｮのDISC";
                 }
                 if (Gvar.belongings_item_list == 565) {
-                    await Func.setMessage("なんと" + Gvar.item_name + "は", 
-                                            "ﾌﾟｯﾁ神父のDISCだった！", 7, false, false, false);
+                    await Func.setMessage(tf("なんと{0}は", Gvar.item_name), "ﾌﾟｯﾁ神父のDISCだった！", 7, false, false, false);
                     Gvar.var_2188 = "ﾌﾟｯﾁ神父のDISC";
                 }
                 for (let cnt4 = 0; cnt4 < 9; ++cnt4) {
@@ -49,8 +47,7 @@ async function func498(this: any) {
         Gvar.var_1252 = 0;
         Gvar.var_1389 = Gvar.var_66;
         Gvar.var_1390 = Gvar.var_67;
-        await Func.setMessage("" + Gvar.var_2188 + "が", 
-                                "爆発した！", 8, false, false, false);
+        await Func.setMessage(tf("{0}が", Gvar.var_2188), "爆発した！", 8, false, false, false);
         Gvar.var_1993 = Gvar.var_1389 - 1;
         if (Gvar.var_1993 < 0) {
             Gvar.var_1993 = 0;

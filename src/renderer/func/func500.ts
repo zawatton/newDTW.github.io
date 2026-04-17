@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func500(this: any) {
         Adap.dbgprt(500);
@@ -90,40 +91,31 @@ async function func500(this: any) {
 
             Gvar.var_2245 = Adap.rnd(9);
             if (Gvar.var_2245 == 0) {
-                await Func.setMessage("「おんぶして。    ねっ！」", 
-                                        "" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを受けた", 11, false, false, false);
+                await Func.setMessage("「おんぶして。    ねっ！」", tf("{0}のﾀﾞﾒｰｼﾞを受けた", Gvar.var_2244), 11, false, false, false);
             }
             if (Gvar.var_2245 == 1) {
-                await Func.setMessage("「よくやるなあ～～っ！    ねッ！」", 
-                                        "" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを受けた", 11, false, false, false);
+                await Func.setMessage("「よくやるなあ～～っ！    ねッ！」", tf("{0}のﾀﾞﾒｰｼﾞを受けた", Gvar.var_2244), 11, false, false, false);
             }
             if (Gvar.var_2245 == 2) {
-                await Func.setMessage("「危ないよ  そんな風に歩いちゃあ！」", 
-                                        "" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを受けた", 11, false, false, false);
+                await Func.setMessage("「危ないよ  そんな風に歩いちゃあ！」", tf("{0}のﾀﾞﾒｰｼﾞを受けた", Gvar.var_2244), 11, false, false, false);
             }
             if (Gvar.var_2245 == 3) {
-                await Func.setMessage("「必ず背中を見られるよ。    ねっ！」", 
-                                        "" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを受けた", 11, false, false, false);
+                await Func.setMessage("「必ず背中を見られるよ。    ねっ！」", tf("{0}のﾀﾞﾒｰｼﾞを受けた", Gvar.var_2244), 11, false, false, false);
             }
             if (Gvar.var_2245 == 4) {
-                await Func.setMessage("「ﾎﾟｺﾁﾝまで干からびさせて死ぬねっ！」", 
-                                        "" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを受けた", 11, false, false, false);
+                await Func.setMessage("「ﾎﾟｺﾁﾝまで干からびさせて死ぬねっ！」", tf("{0}のﾀﾞﾒｰｼﾞを受けた", Gvar.var_2244), 11, false, false, false);
             }
             if (Gvar.var_2245 == 5) {
-                await Func.setMessage("「離れねーんだよッ！」", 
-                                        "" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを受けた", 11, false, false, false);
+                await Func.setMessage("「離れねーんだよッ！」", tf("{0}のﾀﾞﾒｰｼﾞを受けた", Gvar.var_2244), 11, false, false, false);
             }
             if (Gvar.var_2245 == 6) {
-                await Func.setMessage("「ブツブツ言っちゃって…」", 
-                                        "" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを受けた", 11, false, false, false);
+                await Func.setMessage("「ブツブツ言っちゃって…」", tf("{0}のﾀﾞﾒｰｼﾞを受けた", Gvar.var_2244), 11, false, false, false);
             }
             if (Gvar.var_2245 == 7) {
-                await Func.setMessage("「ぼくを取る方法は ないッ！」", 
-                                        "" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを受けた", 11, false, false, false);
+                await Func.setMessage("「ぼくを取る方法は ないッ！」", tf("{0}のﾀﾞﾒｰｼﾞを受けた", Gvar.var_2244), 11, false, false, false);
             }
             if (Gvar.var_2245 == 8) {
-                await Func.setMessage("「もう疲れるだけだよ。」", 
-                                        "" + Gvar.var_2244 + "のﾀﾞﾒｰｼﾞを受けた", 11, false, false, false);
+                await Func.setMessage("「もう疲れるだけだよ。」", tf("{0}のﾀﾞﾒｰｼﾞを受けた", Gvar.var_2244), 11, false, false, false);
             }
             Adap.DSPLAY(103); // 殴られた時の効果音
             for (let cnt2 = 0; cnt2 < 15; ++cnt2) {

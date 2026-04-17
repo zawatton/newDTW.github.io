@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // 敵が罠(キッスのシール、ソフトマシーンの仕込み)を踏んだ時の動作処理
 async function func547(this: any) {
@@ -31,7 +32,7 @@ async function func547(this: any) {
                     Gvar.enemy_list = Gvar.var_83[Gvar.var_421].Var31;
                 }
                 await Func.func626(); // 敵リスト
-                await Func.setMessage("" + Gvar.enemy_name + "が", "キッスのシールに触れた！", 10, false, false, false);
+                await Func.setMessage(tf("{0}が", Gvar.enemy_name), "キッスのシールに触れた！", 10, false, false, false);
                 Gvar.var_1374 = Gvar.var_83[Gvar.var_421].Var0;
                 if (Gvar.var_1374 == 19) {
                     Gvar.var_1374 = 90;
@@ -92,7 +93,7 @@ async function func547(this: any) {
                 await Func.AutoDraw(5);
                 Gvar.enemy_list = Gvar.var_83[Gvar.var_421].Var0;
                 await Func.func626(); // 敵リスト
-                await Func.setMessage("" + Gvar.enemy_name + "を", "ペラペラにした！", 10, false, false, false);
+                await Func.setMessage(tf("{0}を", Gvar.enemy_name), "ペラペラにした！", 10, false, false, false);
                 for (let cnt3 = 0; cnt3 < 2; ++cnt3) {
                     await Func.func337(); // メッセージ表示処理(自動)
                     Gvar.var_1532++;
@@ -417,7 +418,7 @@ async function func547(this: any) {
                 }
                 await Func.func626(); // 敵リスト
                 Gvar.var_2493 = Gvar.enemy_name;
-                await Func.setMessage("" + Gvar.enemy_name + "が", "ﾏﾝ･ｲﾝ･ｻﾞ･ﾐﾗｰの鏡にかかった！", 10, false, false, false);
+                await Func.setMessage(tf("{0}が", Gvar.enemy_name), "ﾏﾝ･ｲﾝ･ｻﾞ･ﾐﾗｰの鏡にかかった！", 10, false, false, false);
                 Adap.DSPLAY(103); // 殴られた時の効果音
                 Gvar.var_747 = 1;
                 Gvar.var_750 = 1;
@@ -457,7 +458,7 @@ async function func547(this: any) {
                 Gvar.var_83[Gvar.var_421].Var8 = 0;
                 Gvar.var_271 = 0; // エフェクト "キラキラ" 表示フラグOFF
                 Gvar.var_1581 = 0;
-                await Func.setMessage("" + Gvar.var_2493 + "は", "体の動きが鈍くなってしまった。", 10, false, false, false);
+                await Func.setMessage(tf("{0}は", Gvar.var_2493), "体の動きが鈍くなってしまった。", 10, false, false, false);
                 await Func.AutoDraw(5);
                 Gvar.var_80[Gvar.var_423][Gvar.var_424] = 0;
                 Gvar.var_81[Gvar.var_2488][0] = 0;

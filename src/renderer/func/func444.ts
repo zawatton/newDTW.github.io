@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
  // discに対してコミックを読んだ時の強化処理
 async function func444(this: any) {
@@ -83,13 +84,13 @@ async function func444(this: any) {
             Gvar.var_1983 = 1;
         }
         Adap.DSPLAY(118);
-        await Func.setMessage("" + Gvar.var_1937 + "を読んだ。", "", 7, true, false, false);
+        await Func.setMessage(tf("{0}を読んだ。", Gvar.var_1937), "", 7, true, false, false);
         if (Gvar.var_1950 == 20) {
             await Func.func446();
             return;
         }
         if (Gvar.var_1983 == 0) {
-            await Func.setMessage("" + Gvar.strengthen_item_name + "の研究は", "この単行本ではできなかった…", 7, true, false, false);
+            await Func.setMessage(tf("{0}の研究は", Gvar.strengthen_item_name), "この単行本ではできなかった…", 7, true, false, false);
             await Func.AutoDraw(10);
             Gvar.var_1950 = 0;
             await Func.func437();
@@ -109,7 +110,7 @@ async function func444(this: any) {
         }
         if (Gvar.var_1985 == 1) {
             Gvar.var_233[Gvar.var_225].Var14 = 1;
-            await Func.setMessage("" + Gvar.strengthen_item_name + "は", "スデに強さの限界のようだ", 7, true, false, false);
+            await Func.setMessage(tf("{0}は", Gvar.strengthen_item_name), "スデに強さの限界のようだ", 7, true, false, false);
             if (Gvar.var_233[Gvar.var_225].Var12 == 1) {
                 Gvar.var_233[Gvar.var_225].Var12 = 0;
                 await Func.func426();
@@ -129,7 +130,7 @@ async function func444(this: any) {
             if (Gvar.var_1950 == 7) {
                 await Func.func340(); // キー入力による選択処理
                 Gvar.var_233[Gvar.var_225].Var12 = 2;
-                await Func.setMessage("" + Gvar.strengthen_item_name + "は", "漆黒のオーラに包まれた！", 7, false, false, false);
+                await Func.setMessage(tf("{0}は", Gvar.strengthen_item_name), "漆黒のオーラに包まれた！", 7, false, false, false);
             }
             await Func.AutoDraw(10);
             Gvar.var_1950 = 0;
@@ -189,18 +190,18 @@ async function func444(this: any) {
         Adap.DSPLAY(112);  // 刀の切れる音 or 強化した時のシャキーン 効果音
         if (Gvar.var_1986 == 1) {
             if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400) {
-                await Func.setMessage("" + Gvar.strengthen_item_name + "が", "強くなった！", 7, false, false, false);
+                await Func.setMessage(tf("{0}が", Gvar.strengthen_item_name), "強くなった！", 7, false, false, false);
             }
             if (Gvar.belongings_item_list >= 400 && Gvar.belongings_item_list < 500) {
-                await Func.setMessage("" + Gvar.strengthen_item_name + "の", "エネルギーが増えた！", 7, false, false, false);
+                await Func.setMessage(tf("{0}の", Gvar.strengthen_item_name), "エネルギーが増えた！", 7, false, false, false);
             }
         }
         if (Gvar.var_1986 == 3) {
             if (Gvar.belongings_item_list >= 100 && Gvar.belongings_item_list < 400) {
-                await Func.setMessage("" + Gvar.strengthen_item_name + "が", "ものすごく強くなった！", 7, false, false, false);
+                await Func.setMessage(tf("{0}が", Gvar.strengthen_item_name), "ものすごく強くなった！", 7, false, false, false);
             }
             if (Gvar.belongings_item_list >= 400 && Gvar.belongings_item_list < 500) {
-                await Func.setMessage("" + Gvar.strengthen_item_name + "の", "エネルギーがたくさん増えた！", 7, false, false, false);
+                await Func.setMessage(tf("{0}の", Gvar.strengthen_item_name), "エネルギーがたくさん増えた！", 7, false, false, false);
             }
         }
         if (Gvar.var_233[Gvar.var_225].Var12 == 1) {
@@ -223,7 +224,7 @@ async function func444(this: any) {
         }
         if (Gvar.var_1950 == 7) {
             Gvar.var_233[Gvar.var_225].Var12 = 2;
-            await Func.setMessage("" + Gvar.strengthen_item_name + "は", "漆黒のオーラに包まれた！", 7, true, false, false);
+            await Func.setMessage(tf("{0}は", Gvar.strengthen_item_name), "漆黒のオーラに包まれた！", 7, true, false, false);
         }
         await Func.func437();
         await Func.AutoDraw(10);

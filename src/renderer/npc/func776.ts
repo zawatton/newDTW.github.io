@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // ヤバいものへアイテムを入れた時の動作処理
 // 旧 func776
@@ -83,8 +84,7 @@ async function func776(this: any) {
         }
         await Func.func430();
         await Func.func433(); // アイテム配列(所持アイテム)初期化関数
-        await Func.setMessage("" + Gvar.var_3153 + "を入れた。",
-                                "", 7, true, false, false);
+        await Func.setMessage(tf("{0}を入れた。", Gvar.var_3153), "", 7, true, false, false);
 
         Gvar.var_198 = 0; // メッセージウィンドウ閉じる
         await Func.func009(); // ディアボロ側ターン処理(ループ処理)

@@ -18,6 +18,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 /** スワップ対象 Var{N} 添字一覧 (Var0/3-8/11-29) — Var9/10 は除外 (HSP原典) */
 const ITEM_FIELDS: ReadonlyArray<number> = [
@@ -90,7 +91,7 @@ async function func480(this: any): Promise<void> {
     Gvar.var_2005 = 0;
     await Func.func430();
     await Func.func331(); // 装備/消費アイテム使用エフェクト
-    await Func.setMessage("足元の" + Gvar.var_2118 + "と", "" + Gvar.var_2119 + "を交換した。", 7, true, false, false);
+    await Func.setMessage(tf("足元の{0}と", Gvar.var_2118), tf("{0}を交換した。", Gvar.var_2119), 7, true, false, false);
     await Func.AutoDraw(3);
     Gvar.var_217 = 1;
     await Func.func019(); // ターン変更時の割り込み処理

@@ -25,6 +25,7 @@
  */
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
+import { tf } from '../i18n'
 
 /** ソフトキーボードレイアウト (var_2132: 0=全角カナ / 1=半角カナ / 2=全角かな) */
 const KEYBOARDS: ReadonlyArray<readonly string[]> = [
@@ -131,7 +132,7 @@ async function func485(this: any): Promise<void> {
             Gvar.var_2143 = Gvar.var_2145 + base;
             Gvar.var_2144 = Adap.noteget(Gvar.var_2143);
             Adap.pos(30, Gvar.var_2146);
-            Adap.mes("" + Gvar.var_2144);
+            Adap.mes(tf("{0}", Gvar.var_2144));
             Gvar.var_2145++;
             Gvar.var_2146 += 20;
         }

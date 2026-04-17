@@ -7,6 +7,7 @@
 import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
+import { tf } from '../i18n'
 
 async function func439(this: any) {
         Adap.dbgprt(439);
@@ -38,20 +39,17 @@ async function func439(this: any) {
         if (Gvar.var_862[567][0] == 0 && Gvar.var_375 == 0) {
             Gvar.var_862[567][0] = 1;
             await Func.func492(); // アイテムリスト呼び出し
-            await Func.setMessage("なんと" + Gvar.var_1938 + "は",
-                                    "ｱｳﾞﾄﾞｩﾙのDISCだった！", 7, true, false, false);
+            await Func.setMessage(tf("なんと{0}は", Gvar.var_1938), "ｱｳﾞﾄﾞｩﾙのDISCだった！", 7, true, false, false);
         }
         Gvar.var_1970 = Adap.rnd(30);
         if (Gvar.var_1970 == 0) {
             await Func.func440(); // アヴドゥルのdisc効果(全て識別できた場合(ランダム))
             return;
         }
-        await Func.setMessage("フーム…  このアイテムは、",
-                                "" + Gvar.var_1969 + "のようだ", 7, true, false, true);
+        await Func.setMessage("フーム…  このアイテムは、", tf("{0}のようだ", Gvar.var_1969), 7, true, false, true);
 
         if (Gvar.var_233[Gvar.var_1966].Var0 >= 100 && Gvar.var_233[Gvar.var_1966].Var0 < 400 && Gvar.var_233[Gvar.var_1966].Var4 >= 1) {
-            await Func.setMessage("しかも、このDISCは基本能力に加えて",
-                                    "＋" + Gvar.var_233[Gvar.var_1966].Var4 + "のｽﾀﾝﾄﾞﾊﾟﾜｰがついているぞ", 7, false, false, true);
+            await Func.setMessage("しかも、このDISCは基本能力に加えて", tf("＋{0}のｽﾀﾝﾄﾞﾊﾟﾜｰがついているぞ", Gvar.var_233[Gvar.var_1966].Var4), 7, false, false, true);
         }
         // おそらく爆弾化されている？ Gvar.var_233[Gvar.var_1966].Var15 == 2
         if (Gvar.var_233[Gvar.var_1966].Var15 == 2) {

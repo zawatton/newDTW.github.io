@@ -8,6 +8,7 @@ import { Gvar } from '../variable'
 import * as Adap from '../adapter/index'
 import * as Func from '../func/index'
 import * as Music from '../music/index'
+import { tf } from '../i18n'
 
 // ダンジョン内で仲間になったペッシに話しかけた時のメッセージ処理
 // 旧 func752
@@ -62,8 +63,7 @@ async function func752(this: any) {
             Gvar.var_3089 = Gvar.var_83[Gvar.var_3072].Var39;
             await Func.func682();
             if (Gvar.var_3073 < 99999) {
-                await Func.setMessage("あと" + Gvar.var_3073 + "くらいで",
-                                       "もっと強くなれるよ兄貴ィッ！", 7, false, false, true);
+                await Func.setMessage(tf("あと{0}くらいで", Gvar.var_3073), "もっと強くなれるよ兄貴ィッ！", 7, false, false, true);
             }
             if (Gvar.var_3073 >= 99999) {
                 await Func.setMessage("俺の強さはこれが限界だァ～",
@@ -76,12 +76,10 @@ async function func752(this: any) {
             await Func.func626();
             Gvar.var_3125 = Adap.rnd(2);
             if (Gvar.var_3125 == 0) {
-                await Func.setMessage("" + Gvar.enemy_name + "を",
-                                       "｢ブッ殺した｣！", 7, false, false, true);
+                await Func.setMessage(tf("{0}を", Gvar.enemy_name), "｢ブッ殺した｣！", 7, false, false, true);
             }
             if (Gvar.var_3125 == 1) {
-                await Func.setMessage("俺でも何とか",
-                                       "" + Gvar.enemy_name + "を倒せたぜ！", 7, false, false, true);
+                await Func.setMessage("俺でも何とか", tf("{0}を倒せたぜ！", Gvar.enemy_name), 7, false, false, true);
             }
         }
         await Func.AutoDraw(15);
